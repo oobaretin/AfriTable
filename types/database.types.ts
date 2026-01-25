@@ -467,6 +467,8 @@ export type Database = {
           owner_invited: boolean;
           owner_invited_at: string | null;
           owner_email: string | null;
+          verification: Json;
+          admin_notes: string | null;
           status: string;
           created_at: string;
         };
@@ -484,6 +486,8 @@ export type Database = {
           owner_invited?: boolean;
           owner_invited_at?: string | null;
           owner_email?: string | null;
+          verification?: Json;
+          admin_notes?: string | null;
           status?: string;
           created_at?: string;
         };
@@ -501,6 +505,8 @@ export type Database = {
           owner_invited?: boolean;
           owner_invited_at?: string | null;
           owner_email?: string | null;
+          verification?: Json;
+          admin_notes?: string | null;
           status?: string;
           created_at?: string;
         };
