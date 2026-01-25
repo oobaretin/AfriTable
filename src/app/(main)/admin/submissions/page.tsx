@@ -21,6 +21,9 @@ type Submission = {
   website: string | null;
   notes: string | null;
   submitted_by_email: string | null;
+  owner_invited: boolean;
+  owner_invited_at: string | null;
+  owner_email: string | null;
   status: "pending" | "approved" | "rejected" | "converted";
   created_at: string;
 };
@@ -52,7 +55,9 @@ export default async function AdminSubmissionsPage({
   const supabaseAdmin = createSupabaseAdminClient();
   const { data } = await supabaseAdmin
     .from("restaurant_submissions")
-    .select("id,name,city,state,cuisine_types,address,phone,website,notes,submitted_by_email,status,created_at")
+    .select(
+      "id,name,city,state,cuisine_types,address,phone,website,notes,submitted_by_email,owner_invited,owner_invited_at,owner_email,status,created_at",
+    )
     .eq("status", statusFilter)
     .order("created_at", { ascending: false })
     .limit(200);
@@ -129,6 +134,11 @@ export default async function AdminSubmissionsPage({
 
                   {sub.status === "pending" ? (
                     <div className="flex flex-wrap gap-2 pt-2">
+                      <form action={`/admin/submissions/${sub.id}/invite-owner`} method="post">
+                        <Button type="submit" variant="secondary" disabled={sub.owner_invited}>
+                          {sub.owner_invited ? "Owner Invited" : "Invite Owner"}
+                        </Button>
+                      </form>
                       <form action={`/admin/submissions/restaurants/${sub.id}/convert`} method="post">
                         <Button type="submit">Convert to draft listing</Button>
                       </form>
