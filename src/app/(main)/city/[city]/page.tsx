@@ -24,10 +24,10 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { city: string } }): Promise<Metadata> {
-  const cityLabel = titleCaseFromSlug(params.city);
+  const cityLabel = titleCaseFromSlug(decodeURIComponent(params.city));
   return {
-    title: `${cityLabel} Restaurants - AfriTable`,
-    description: `Book tables at top African & Caribbean restaurants in ${cityLabel}.`,
+    title: `African Restaurants in ${cityLabel} | AfriTable`,
+    description: `Discover and book the best African restaurants in ${cityLabel}. Nigerian, Ethiopian, Ghanaian, Senegalese food and more.`,
   };
 }
 
