@@ -15,8 +15,8 @@ export async function POST(request: Request, context: { params: { id: string } }
   if (profile?.role !== "admin") return NextResponse.redirect(new URL("/", request.url));
 
   const supabaseAdmin = createSupabaseAdminClient();
-  await supabaseAdmin.from("restaurant_submissions").update({ status: "rejected" }).eq("id", submissionId).eq("status", "pending");
+  await supabaseAdmin.from("restaurant_submissions").update({ status: "rejected" }).eq("id", submissionId).eq("status", "submitted");
 
-  return NextResponse.redirect(new URL("/admin/submissions?status=pending", request.url));
+  return NextResponse.redirect(new URL("/admin/submissions?status=submitted", request.url));
 }
 

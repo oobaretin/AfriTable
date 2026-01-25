@@ -58,7 +58,7 @@ export async function POST(request: Request) {
     website: parsed.data.website.trim() ? parsed.data.website.trim() : null,
     notes: parsed.data.notes.trim() ? parsed.data.notes.trim() : null,
     submitted_by_email: parsed.data.submitted_by_email.trim() ? parsed.data.submitted_by_email.trim() : null,
-    status: "pending",
+    status: "submitted",
   });
 
   if (error) return NextResponse.redirect(new URL("/submit-restaurant?error=submit_failed", request.url));

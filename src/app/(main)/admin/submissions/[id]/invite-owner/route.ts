@@ -40,7 +40,7 @@ export async function POST(request: Request, context: { params: { id: string } }
     .eq("id", submissionId)
     .maybeSingle();
 
-  if (!submission) return NextResponse.redirect(new URL("/admin/submissions?status=pending&error=not_found", request.url));
+  if (!submission) return NextResponse.redirect(new URL("/admin/submissions?status=submitted&error=not_found", request.url));
 
   // We need an email address to invite the owner.
   if (!(submission as any)?.owner_email && !(submission as any)?.submitted_by_email) {
@@ -74,6 +74,7 @@ ${body}
       owner_invited: true,
       owner_invited_at: new Date().toISOString(),
       owner_email: email || null,
+      status: "owner_invited",
     })
     .eq("id", submissionId);
 

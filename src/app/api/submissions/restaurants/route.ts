@@ -41,7 +41,7 @@ export async function POST(request: Request) {
       website: parsed.data.website ?? null,
       notes: parsed.data.notes ?? null,
       submitted_by_email: parsed.data.submitted_by_email,
-      status: "pending",
+      status: "submitted",
     })
     .select("id")
     .single();

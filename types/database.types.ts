@@ -469,7 +469,7 @@ export type Database = {
           owner_email: string | null;
           verification: Json;
           admin_notes: string | null;
-          status: string;
+          status: "submitted" | "under_review" | "owner_invited" | "verified" | "approved" | "rejected";
           created_at: string;
         };
         Insert: {
@@ -488,7 +488,7 @@ export type Database = {
           owner_email?: string | null;
           verification?: Json;
           admin_notes?: string | null;
-          status?: string;
+          status?: "submitted" | "under_review" | "owner_invited" | "verified" | "approved" | "rejected";
           created_at?: string;
         };
         Update: {
@@ -507,7 +507,7 @@ export type Database = {
           owner_email?: string | null;
           verification?: Json;
           admin_notes?: string | null;
-          status?: string;
+          status?: "submitted" | "under_review" | "owner_invited" | "verified" | "approved" | "rejected";
           created_at?: string;
         };
         Relationships: [];

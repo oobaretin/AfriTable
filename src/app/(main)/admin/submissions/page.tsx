@@ -24,13 +24,15 @@ type Submission = {
   owner_invited: boolean;
   owner_invited_at: string | null;
   owner_email: string | null;
-  status: "pending" | "approved" | "rejected" | "converted";
+  status: "submitted" | "under_review" | "owner_invited" | "verified" | "approved" | "rejected";
   created_at: string;
 };
 
 function labelForStatus(status: Submission["status"]) {
-  if (status === "pending") return { label: "Pending", variant: "secondary" as const };
-  if (status === "converted") return { label: "Converted", variant: "default" as const };
+  if (status === "submitted") return { label: "Submitted", variant: "secondary" as const };
+  if (status === "under_review") return { label: "Under review", variant: "default" as const };
+  if (status === "owner_invited") return { label: "Owner invited", variant: "default" as const };
+  if (status === "verified") return { label: "Verified", variant: "default" as const };
   if (status === "approved") return { label: "Approved", variant: "default" as const };
   return { label: "Rejected", variant: "destructive" as const };
 }
@@ -48,9 +50,9 @@ export default async function AdminSubmissionsPage({
   const { data: profile } = await supabaseSSR.from("profiles").select("role").eq("id", user.id).maybeSingle();
   if (profile?.role !== "admin") redirect("/");
 
-  const status = (searchParams.status ?? "pending") as Submission["status"];
-  const allowed = new Set(["pending", "converted", "approved", "rejected"]);
-  const statusFilter = allowed.has(status) ? status : "pending";
+  const statusFromQuery = (searchParams.status ?? "submitted") as Submission["status"];
+  const allowed = new Set(["submitted", "under_review", "owner_invited", "verified", "approved", "rejected"]);
+  const statusFilter = allowed.has(statusFromQuery) ? statusFromQuery : "submitted";
 
   const supabaseAdmin = createSupabaseAdminClient();
   const { data } = await supabaseAdmin
@@ -77,7 +79,7 @@ export default async function AdminSubmissionsPage({
       />
 
       <div className="mt-4 flex flex-wrap gap-2">
-        {(["pending", "converted", "approved", "rejected"] as const).map((s) => (
+        {(["submitted", "under_review", "owner_invited", "verified", "approved", "rejected"] as const).map((s) => (
           <Button key={s} asChild variant={s === statusFilter ? "default" : "outline"} size="sm">
             <Link href={`/admin/submissions?status=${encodeURIComponent(s)}`}>{s}</Link>
           </Button>
@@ -132,7 +134,7 @@ export default async function AdminSubmissionsPage({
                   ) : null}
                   {sub.notes ? <div className="text-muted-foreground">{sub.notes}</div> : null}
 
-                  {sub.status === "pending" ? (
+                  {sub.status === "submitted" ? (
                     <div className="flex flex-wrap gap-2 pt-2">
                       <form action={`/admin/submissions/${sub.id}/invite-owner`} method="post">
                         <Button type="submit" variant="secondary" disabled={sub.owner_invited}>

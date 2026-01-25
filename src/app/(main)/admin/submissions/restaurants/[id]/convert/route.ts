@@ -24,8 +24,8 @@ export async function POST(request: Request, context: { params: { id: string } }
     .eq("id", submissionId)
     .maybeSingle();
 
-  if (!submission || (submission as any).status !== "pending") {
-    return NextResponse.redirect(new URL("/admin/submissions?status=pending", request.url));
+  if (!submission || (submission as any).status !== "submitted") {
+    return NextResponse.redirect(new URL("/admin/submissions?status=submitted", request.url));
   }
 
   const baseSlug = slugify(`${(submission as any).name}-${(submission as any).city}-${(submission as any).state}`);
@@ -69,14 +69,14 @@ export async function POST(request: Request, context: { params: { id: string } }
   }
 
   if (!restaurant || error) {
-    return NextResponse.redirect(new URL("/admin/submissions?status=pending&error=convert_failed", request.url));
+    return NextResponse.redirect(new URL("/admin/submissions?status=submitted&error=convert_failed", request.url));
   }
 
   await supabaseAdmin
     .from("restaurant_submissions")
-    .update({ status: "converted" })
+    .update({ status: "under_review" })
     .eq("id", submissionId)
-    .eq("status", "pending");
+    .eq("status", "submitted");
 
   return NextResponse.redirect(new URL(`/admin/restaurants/${(restaurant as any).id}/review`, request.url));
 }
