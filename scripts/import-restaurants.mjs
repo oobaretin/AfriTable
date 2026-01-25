@@ -1,8 +1,13 @@
 #!/usr/bin/env node
+import nextEnv from "@next/env";
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { createClient } from "@supabase/supabase-js";
+
+// Load `.env*` files (including `.env.local`) like Next.js does.
+const { loadEnvConfig } = nextEnv;
+loadEnvConfig(process.cwd());
 
 function requireEnv(name) {
   const v = process.env[name];

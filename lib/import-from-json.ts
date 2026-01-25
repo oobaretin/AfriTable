@@ -1,7 +1,12 @@
+import nextEnv from "@next/env";
 import { createClient } from "@supabase/supabase-js";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import * as fs from "node:fs";
 import * as crypto from "node:crypto";
+
+// Load `.env*` files (including `.env.local`) like Next.js does.
+const { loadEnvConfig } = nextEnv as unknown as { loadEnvConfig: (dir: string) => void };
+loadEnvConfig(process.cwd());
 
 interface RestaurantImport {
   name: string;

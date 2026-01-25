@@ -1,14 +1,56 @@
 #!/usr/bin/env node
+import nextEnv from "@next/env";
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
 
+// Load `.env*` files (including `.env.local`) like Next.js does.
+const { loadEnvConfig } = nextEnv;
+loadEnvConfig(process.cwd());
+
 function requireEnv(name) {
   const v = process.env[name];
   if (!v) throw new Error(`Missing environment variable: ${name}`);
   return v;
+}
+
+function parseMissingColumnError(message) {
+  // PostgREST: "Could not find the 'external_avg_rating' column of 'restaurants' in the schema cache"
+  const m = String(message || "").match(/Could not find the '([^']+)' column of '([^']+)' in the schema cache/i);
+  if (!m) return null;
+  return { column: m[1], table: m[2] };
+}
+
+async function upsertWithColumnFallback(params) {
+  const { supabaseAdmin, table, payload, onConflict, select, single } = params;
+  const cleaned = { ...payload };
+
+  // Retry by stripping unknown fields until PostgREST accepts the payload.
+  // This lets seeding work even when the project's DB schema is behind.
+  for (let attempt = 0; attempt < 20; attempt++) {
+    let q = supabaseAdmin.from(table).upsert(cleaned, { onConflict });
+    if (select) q = q.select(select);
+    if (single) q = q.single();
+
+    // eslint-disable-next-line no-await-in-loop
+    const res = await q;
+    if (!res.error) return res;
+
+    const miss = parseMissingColumnError(res.error.message);
+    if (miss && miss.table === table && Object.prototype.hasOwnProperty.call(cleaned, miss.column)) {
+      // eslint-disable-next-line no-console
+      console.warn(`seed: ${table}: dropping missing column '${miss.column}' and retrying`);
+      delete cleaned[miss.column];
+      continue;
+    }
+
+    // No known fallback, propagate.
+    throw res.error;
+  }
+
+  throw new Error(`seed: ${table}: too many retries while stripping missing columns`);
 }
 
 function slugify(input) {
@@ -149,10 +191,12 @@ async function main() {
       "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1600&q=80",
     ];
 
-    const upsertRestaurant = await supabaseAdmin
-      .from("restaurants")
-      .upsert(
-        {
+    let restaurantId;
+    try {
+      const upsertRestaurant = await upsertWithColumnFallback({
+        supabaseAdmin,
+        table: "restaurants",
+        payload: {
           owner_id: ownerId,
           name,
           slug,
@@ -171,26 +215,31 @@ async function main() {
           hours: hoursArray,
           is_active: true,
         },
-        { onConflict: "slug" },
-      )
-      .select("id,slug")
-      .single();
+        onConflict: "slug",
+        select: "id,slug",
+        single: true,
+      });
 
-    if (upsertRestaurant.error) throw new Error(`Restaurant upsert failed (${name}): ${upsertRestaurant.error.message}`);
-    const restaurantId = upsertRestaurant.data.id;
+      restaurantId = upsertRestaurant.data.id;
+    } catch (e) {
+      throw new Error(`Restaurant upsert failed (${name}): ${e?.message || String(e)}`);
+    }
 
     // Availability settings (idempotent)
-    const upsertSettings = await supabaseAdmin
-      .from("availability_settings")
-      .upsert(
-        {
+    try {
+      await upsertWithColumnFallback({
+        supabaseAdmin,
+        table: "availability_settings",
+        payload: {
           restaurant_id: restaurantId,
           slot_duration_minutes: 90,
           operating_hours: hoursArray,
         },
-        { onConflict: "restaurant_id" },
-      );
-    if (upsertSettings.error) throw new Error(`availability_settings upsert failed (${name}): ${upsertSettings.error.message}`);
+        onConflict: "restaurant_id",
+      });
+    } catch (e) {
+      throw new Error(`availability_settings upsert failed (${name}): ${e?.message || String(e)}`);
+    }
 
     // Seed a few tables so availability works immediately (idempotent via delete+insert)
     await supabaseAdmin.from("restaurant_tables").delete().eq("restaurant_id", restaurantId);
