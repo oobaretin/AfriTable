@@ -4,11 +4,10 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PhotoUploader } from "@/components/admin/PhotoUploader";
-import { Button } from "@/components/ui/button";
 import { Checklist } from "@/components/admin/Checklist";
 import { RestaurantDetails } from "@/components/admin/RestaurantDetails";
+import { ApprovalActions } from "@/components/admin/ApprovalActions";
 
 export default async function AdminRestaurantReviewPage({ params }: { params: { id: string } }) {
   // Admin only (middleware should also handle)
@@ -65,44 +64,14 @@ export default async function AdminRestaurantReviewPage({ params }: { params: { 
       <RestaurantDetails restaurant={restaurant} />
 
       {/* Photo uploader */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Photos</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <PhotoUploader restaurantId={(restaurant as any).id} initialImages={images} />
-        </CardContent>
-      </Card>
+      <PhotoUploader restaurantId={(restaurant as any).id} initialImages={images} />
 
       {/* Approval actions */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Approval actions</CardTitle>
-        </CardHeader>
-        <CardContent className="flex flex-wrap gap-2">
-          <form action={`/admin/restaurants/${(restaurant as any).id}/approve`} method="post">
-            <Button type="submit" disabled={!allVerified}>
-              Approve &amp; Activate
-            </Button>
-          </form>
-          <form action={`/admin/restaurants/${(restaurant as any).id}/send-welcome`} method="post">
-            <Button type="submit" variant="secondary">
-              Send welcome email
-            </Button>
-          </form>
-          <Button asChild variant="outline">
-            <Link href={`/admin/restaurants/${(restaurant as any).id}/edit`}>Edit</Link>
-          </Button>
-          <form action={`/admin/restaurants/${(restaurant as any).id}/delete`} method="post">
-            <Button type="submit" variant="destructive">
-              Delete
-            </Button>
-          </form>
-          {!allVerified ? (
-            <div className="w-full text-xs text-muted-foreground">Complete the checklist to enable approval.</div>
-          ) : null}
-        </CardContent>
-      </Card>
+      <div className="rounded-lg border p-4 space-y-3">
+        <h2 className="font-semibold">Approval actions</h2>
+        <ApprovalActions restaurantId={(restaurant as any).id} canApprove={allVerified} />
+        {!allVerified ? <div className="text-xs text-muted-foreground">Complete the checklist to enable approval.</div> : null}
+      </div>
     </div>
   );
 }

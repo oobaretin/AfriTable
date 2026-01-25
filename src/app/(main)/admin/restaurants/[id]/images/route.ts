@@ -6,7 +6,8 @@ import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/sup
 
 const schema = z.object({
   action: z.enum(["add", "remove"]),
-  url: z.string().min(1).max(2000),
+  url: z.string().min(1).max(2000).optional(),
+  urls: z.array(z.string().min(1).max(2000)).optional(),
 });
 
 export async function POST(request: Request, context: { params: { id: string } }) {
@@ -33,12 +34,13 @@ export async function POST(request: Request, context: { params: { id: string } }
   if (readErr) return NextResponse.json({ error: "read_failed" }, { status: 500 });
 
   const existing = ((current as any)?.images ?? []) as string[];
-  const u = parsed.data.url.trim();
+  const urls = (parsed.data.urls ?? (parsed.data.url ? [parsed.data.url] : [])).map((s) => s.trim()).filter(Boolean);
+  if (!urls.length) return NextResponse.json({ error: "invalid_payload" }, { status: 400 });
 
   const next =
     parsed.data.action === "add"
-      ? Array.from(new Set([u, ...existing])).slice(0, 12)
-      : existing.filter((x) => x !== u);
+      ? Array.from(new Set([...urls, ...existing])).slice(0, 12)
+      : existing.filter((x) => !urls.includes(x));
 
   const { error: writeErr } = await supabaseAdmin.from("restaurants").update({ images: next }).eq("id", restaurantId);
   if (writeErr) return NextResponse.json({ error: "update_failed", message: writeErr.message }, { status: 400 });

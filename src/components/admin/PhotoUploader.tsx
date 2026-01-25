@@ -1,74 +1,71 @@
 "use client";
 
 import * as React from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-
+import { toast } from "sonner";
+import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 export function PhotoUploader(props: { restaurantId: string; initialImages: string[] }) {
-  const [url, setUrl] = React.useState("");
   const [images, setImages] = React.useState<string[]>(props.initialImages ?? []);
   const [saving, setSaving] = React.useState(false);
 
-  async function addUrl() {
-    const trimmed = url.trim();
-    if (!trimmed) return;
+  async function uploadFiles(files: FileList | null) {
+    if (!files?.length) return;
     setSaving(true);
     try {
-      const res = await fetch(`/admin/restaurants/${props.restaurantId}/images`, {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ action: "add", url: trimmed }),
-      });
-      if (!res.ok) throw new Error();
-      const data = (await res.json()) as { images?: string[] };
-      setImages(data.images ?? images);
-      setUrl("");
-    } finally {
-      setSaving(false);
-    }
-  }
+      const supabase = createSupabaseBrowserClient();
+      const uploadedUrls: string[] = [];
+      const list = Array.from(files).slice(0, 10);
 
-  async function removeUrl(u: string) {
-    setSaving(true);
-    try {
+      for (const file of list) {
+        const ext = file.name.split(".").pop() || "jpg";
+        const path = `restaurants/${props.restaurantId}/${crypto.randomUUID()}.${ext}`;
+        const { error } = await supabase.storage.from("restaurant-photos").upload(path, file, {
+          cacheControl: "3600",
+          upsert: false,
+        });
+        if (error) throw error;
+
+        const { data } = supabase.storage.from("restaurant-photos").getPublicUrl(path);
+        uploadedUrls.push(data.publicUrl);
+      }
+
       const res = await fetch(`/admin/restaurants/${props.restaurantId}/images`, {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ action: "remove", url: u }),
+        body: JSON.stringify({ action: "add", urls: uploadedUrls }),
       });
       if (!res.ok) throw new Error();
       const data = (await res.json()) as { images?: string[] };
-      setImages(data.images ?? images.filter((x) => x !== u));
+      setImages(data.images ?? Array.from(new Set([...uploadedUrls, ...images])));
+      toast.success("Photos uploaded");
+    } catch {
+      toast.error(
+        "Photo upload failed. Create a Supabase Storage bucket named 'restaurant-photos' with public read and authenticated upload.",
+      );
     } finally {
       setSaving(false);
     }
   }
 
   return (
-    <div className="grid gap-3">
-      <div className="text-sm font-medium">Photos</div>
+    <div className="rounded-lg border p-4">
+      <h2 className="mb-2 font-semibold">Photos</h2>
 
-      <div className="flex gap-2">
-        <Input value={url} onChange={(e) => setUrl(e.target.value)} placeholder="Paste image URL…" />
-        <Button type="button" onClick={() => void addUrl()} disabled={saving}>
-          Add
-        </Button>
-      </div>
+      <input
+        type="file"
+        multiple
+        accept="image/*"
+        disabled={saving}
+        onChange={(e) => void uploadFiles(e.target.files)}
+      />
+
+      <p className="mt-1 text-sm text-muted-foreground">Upload at least one exterior or interior photo</p>
+      <p className="mt-1 text-xs text-muted-foreground">
+        Requires a Supabase Storage bucket named <code className="font-mono">restaurant-photos</code>.
+      </p>
 
       {images.length ? (
-        <div className="flex flex-wrap gap-2">
-          {images.map((u) => (
-            <button key={u} type="button" onClick={() => void removeUrl(u)} disabled={saving} title="Remove">
-              <Badge variant="outline" className="max-w-[320px] truncate hover:bg-muted">
-                {u}
-              </Badge>
-            </button>
-          ))}
-        </div>
-      ) : (
-        <div className="text-xs text-muted-foreground">No photos yet.</div>
-      )}
+        <div className="mt-3 text-xs text-muted-foreground">{images.length} photo(s) uploaded</div>
+      ) : null}
     </div>
   );
 }
