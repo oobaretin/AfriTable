@@ -10,7 +10,7 @@ function requireEnv(name: string): string {
 function isProtectedPath(pathname: string): boolean {
   // Allow guest booking flow
   if (pathname.startsWith("/reservations/new")) return false;
-  return pathname.startsWith("/dashboard") || pathname.startsWith("/reservations");
+  return pathname.startsWith("/dashboard") || pathname.startsWith("/reservations") || pathname.startsWith("/admin");
 }
 
 export async function middleware(request: NextRequest) {
@@ -55,6 +55,22 @@ export async function middleware(request: NextRequest) {
       .maybeSingle();
 
     if (error || profile?.role !== "restaurant_owner") {
+      const redirectUrl = request.nextUrl.clone();
+      redirectUrl.pathname = "/";
+      redirectUrl.search = "";
+      return NextResponse.redirect(redirectUrl);
+    }
+  }
+
+  // Admin-only: /admin
+  if (user && url.pathname.startsWith("/admin")) {
+    const { data: profile, error } = await supabase
+      .from("profiles")
+      .select("role")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    if (error || profile?.role !== "admin") {
       const redirectUrl = request.nextUrl.clone();
       redirectUrl.pathname = "/";
       redirectUrl.search = "";
