@@ -467,6 +467,9 @@ export type Database = {
           owner_invited: boolean;
           owner_invited_at: string | null;
           owner_email: string | null;
+          owner_invite_token_hash: string | null;
+          owner_invite_token_expires_at: string | null;
+          owner_invite_token_used_at: string | null;
           verification: Json;
           admin_notes: string | null;
           status: "submitted" | "under_review" | "owner_invited" | "verified" | "approved" | "rejected";
@@ -486,6 +489,9 @@ export type Database = {
           owner_invited?: boolean;
           owner_invited_at?: string | null;
           owner_email?: string | null;
+          owner_invite_token_hash?: string | null;
+          owner_invite_token_expires_at?: string | null;
+          owner_invite_token_used_at?: string | null;
           verification?: Json;
           admin_notes?: string | null;
           status?: "submitted" | "under_review" | "owner_invited" | "verified" | "approved" | "rejected";
@@ -505,6 +511,9 @@ export type Database = {
           owner_invited?: boolean;
           owner_invited_at?: string | null;
           owner_email?: string | null;
+          owner_invite_token_hash?: string | null;
+          owner_invite_token_expires_at?: string | null;
+          owner_invite_token_used_at?: string | null;
           verification?: Json;
           admin_notes?: string | null;
           status?: "submitted" | "under_review" | "owner_invited" | "verified" | "approved" | "rejected";

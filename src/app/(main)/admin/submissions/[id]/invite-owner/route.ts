@@ -1,6 +1,7 @@
 import "server-only";
 
 import { NextResponse } from "next/server";
+import crypto from "crypto";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 
 function buildInviteEmail(params: { restaurantName: string; claimLink: string }) {
@@ -20,6 +21,10 @@ Claiming lets you:
 — AfriTable Team`;
 
   return { subject, body };
+}
+
+function hashToken(token: string): string {
+  return crypto.createHash("sha256").update(token).digest("hex");
 }
 
 export async function POST(request: Request, context: { params: { id: string } }) {
@@ -49,7 +54,12 @@ export async function POST(request: Request, context: { params: { id: string } }
 
   const email = String((submission as any).owner_email ?? (submission as any).submitted_by_email ?? "").trim();
   const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
-  const claimLink = `${appUrl}/restaurant-signup?from=submission&submissionId=${encodeURIComponent(submissionId)}`;
+
+  // Create/refresh a secure token (store only its hash)
+  const token = crypto.randomBytes(32).toString("base64url");
+  const tokenHash = hashToken(token);
+  const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(); // 7 days
+  const claimLink = `${appUrl}/claim?token=${encodeURIComponent(token)}`;
 
   // 🔔 Send invite email (stub for now)
   // Later: Resend / Postmark / Supabase Edge Function
@@ -74,6 +84,9 @@ ${body}
       owner_invited: true,
       owner_invited_at: new Date().toISOString(),
       owner_email: email || null,
+      owner_invite_token_hash: tokenHash,
+      owner_invite_token_expires_at: expiresAt,
+      owner_invite_token_used_at: null,
       status: "owner_invited",
     })
     .eq("id", submissionId);
