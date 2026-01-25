@@ -3,6 +3,25 @@ import "server-only";
 import { NextResponse } from "next/server";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 
+function buildInviteEmail(params: { restaurantName: string; claimLink: string }) {
+  const subject = "Your restaurant was submitted to AfriTable";
+  const body = `Hi,
+
+Your restaurant ${params.restaurantName} was recently submitted to AfriTable — a platform helping people discover African restaurants.
+
+If you are the owner or manager, you can claim and manage your listing here:
+👉 ${params.claimLink}
+
+Claiming lets you:
+• Verify details
+• Upload photos
+• Manage bookings
+
+— AfriTable Team`;
+
+  return { subject, body };
+}
+
 export async function POST(request: Request, context: { params: { id: string } }) {
   const submissionId = context.params.id;
 
@@ -23,23 +42,31 @@ export async function POST(request: Request, context: { params: { id: string } }
 
   if (!submission) return NextResponse.redirect(new URL("/admin/submissions?status=pending&error=not_found", request.url));
 
-  if (!(submission as any)?.website && !(submission as any)?.submitted_by_email) {
+  // We need an email address to invite the owner.
+  if (!(submission as any)?.owner_email && !(submission as any)?.submitted_by_email) {
     return NextResponse.redirect(new URL("/admin/submissions?error=no-contact", request.url));
   }
 
   const email = String((submission as any).owner_email ?? (submission as any).submitted_by_email ?? "").trim();
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+  const claimLink = `${appUrl}/restaurant-signup?from=submission&submissionId=${encodeURIComponent(submissionId)}`;
 
   // 🔔 Send invite email (stub for now)
   // Later: Resend / Postmark / Supabase Edge Function
-  // Claim link: use the restaurant claim flow; the listing is created after conversion/approval.
-  // Keeping log format close to the requested snippet for now.
+  // Using requested copy (simple, respectful).
+  const { subject, body } = buildInviteEmail({
+    restaurantName: String((submission as any).name ?? ""),
+    claimLink,
+  });
+
   // eslint-disable-next-line no-console
   console.log(`
-  INVITE OWNER EMAIL
-  To: ${email}
-  Restaurant: ${String((submission as any).name ?? "")}
-  Claim link: /claim
-  `);
+INVITE OWNER EMAIL (STUB)
+To: ${email}
+Subject: ${subject}
+
+${body}
+`);
 
   await supabaseAdmin
     .from("restaurant_submissions")
