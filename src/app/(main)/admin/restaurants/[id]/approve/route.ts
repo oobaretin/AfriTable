@@ -19,7 +19,7 @@ export async function POST(request: Request, context: { params: { id: string } }
   // Only approve listings that are claimed but not yet active.
   const { data: restaurant, error: restaurantError } = await supabaseAdmin
     .from("restaurants")
-    .select("id,is_claimed,is_active,claimed_by")
+    .select("id,is_claimed,is_active,claimed_by,claimed_at")
     .eq("id", restaurantId)
     .maybeSingle();
 
@@ -43,7 +43,12 @@ export async function POST(request: Request, context: { params: { id: string } }
   // Activate restaurant and transfer ownership to claimant
   await supabaseAdmin
     .from("restaurants")
-    .update({ owner_id: claimedBy, is_active: true })
+    .update({
+      owner_id: claimedBy,
+      is_active: true,
+      is_claimed: true,
+      claimed_at: (restaurant as any).claimed_at ?? new Date().toISOString(),
+    })
     .eq("id", restaurantId);
 
   return NextResponse.redirect(new URL("/admin/restaurants/pending", request.url));
