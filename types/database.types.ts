@@ -66,6 +66,9 @@ export type Database = {
           external_avg_rating: number | null;
           external_review_count: number | null;
           verification: Json | null;
+          is_claimed: boolean;
+          claimed_by: string | null;
+          claimed_at: string | null;
           is_active: boolean;
           created_at: string;
         };
@@ -88,6 +91,9 @@ export type Database = {
           external_avg_rating?: number | null;
           external_review_count?: number | null;
           verification?: Json | null;
+          is_claimed?: boolean;
+          claimed_by?: string | null;
+          claimed_at?: string | null;
           is_active?: boolean;
           created_at?: string;
         };
@@ -110,6 +116,9 @@ export type Database = {
           external_avg_rating?: number | null;
           external_review_count?: number | null;
           verification?: Json | null;
+          is_claimed?: boolean;
+          claimed_by?: string | null;
+          claimed_at?: string | null;
           is_active?: boolean;
           created_at?: string;
         };
@@ -117,6 +126,13 @@ export type Database = {
           {
             foreignKeyName: "restaurants_owner_id_fkey";
             columns: ["owner_id"];
+            isOneToOne: false;
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "restaurants_claimed_by_fkey";
+            columns: ["claimed_by"];
             isOneToOne: false;
             referencedRelation: "profiles";
             referencedColumns: ["id"];
@@ -367,6 +383,74 @@ export type Database = {
           },
         ];
       };
+
+      restaurant_claim_requests: {
+        Row: {
+          id: string;
+          restaurant_id: string;
+          user_id: string;
+          full_name: string;
+          email: string;
+          phone: string;
+          proof: string | null;
+          status: Database["public"]["Enums"]["claim_request_status"];
+          decision_note: string | null;
+          reviewed_by: string | null;
+          reviewed_at: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          restaurant_id: string;
+          user_id: string;
+          full_name: string;
+          email: string;
+          phone: string;
+          proof?: string | null;
+          status?: Database["public"]["Enums"]["claim_request_status"];
+          decision_note?: string | null;
+          reviewed_by?: string | null;
+          reviewed_at?: string | null;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          restaurant_id?: string;
+          user_id?: string;
+          full_name?: string;
+          email?: string;
+          phone?: string;
+          proof?: string | null;
+          status?: Database["public"]["Enums"]["claim_request_status"];
+          decision_note?: string | null;
+          reviewed_by?: string | null;
+          reviewed_at?: string | null;
+          created_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "restaurant_claim_requests_restaurant_id_fkey";
+            columns: ["restaurant_id"];
+            isOneToOne: false;
+            referencedRelation: "restaurants";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "restaurant_claim_requests_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "restaurant_claim_requests_reviewed_by_fkey";
+            columns: ["reviewed_by"];
+            isOneToOne: false;
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
     };
     Views: {
       restaurants_with_rating: {
@@ -403,6 +487,7 @@ export type Database = {
       };
     };
     Enums: {
+      claim_request_status: "pending" | "approved" | "rejected";
       user_role: "diner" | "restaurant_owner" | "admin";
       reservation_status:
         | "pending"
