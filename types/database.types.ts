@@ -73,6 +73,7 @@ export type Database = {
           claimed_by: string | null;
           claimed_at: string | null;
           is_active: boolean;
+          published_at: string | null;
           created_at: string;
         };
         Insert: {
@@ -98,6 +99,7 @@ export type Database = {
           claimed_by?: string | null;
           claimed_at?: string | null;
           is_active?: boolean;
+          published_at?: string | null;
           created_at?: string;
         };
         Update: {
@@ -123,6 +125,7 @@ export type Database = {
           claimed_by?: string | null;
           claimed_at?: string | null;
           is_active?: boolean;
+          published_at?: string | null;
           created_at?: string;
         };
         Relationships: [
