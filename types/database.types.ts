@@ -512,6 +512,46 @@ export type Database = {
         };
         Relationships: [];
       };
+
+      submission_events: {
+        Row: {
+          id: string;
+          submission_id: string;
+          event: string;
+          created_at: string;
+          created_by: string | null;
+        };
+        Insert: {
+          id?: string;
+          submission_id: string;
+          event: string;
+          created_at?: string;
+          created_by?: string | null;
+        };
+        Update: {
+          id?: string;
+          submission_id?: string;
+          event?: string;
+          created_at?: string;
+          created_by?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "submission_events_submission_id_fkey";
+            columns: ["submission_id"];
+            isOneToOne: false;
+            referencedRelation: "restaurant_submissions";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "submission_events_created_by_fkey";
+            columns: ["created_by"];
+            isOneToOne: false;
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
     };
     Views: {
       restaurants_with_rating: {

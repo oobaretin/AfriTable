@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { rateLimitOrPass } from "@/lib/security/rateLimit";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 
 const payloadSchema = z.object({
   name: z.string().min(2).max(200),
@@ -48,6 +48,16 @@ export async function POST(request: Request) {
 
   if (error) {
     return NextResponse.json({ error: "insert_failed", message: error.message }, { status: 400 });
+  }
+
+  // Best-effort event log (service role)
+  try {
+    if ((data as any)?.id) {
+      const admin = createSupabaseAdminClient();
+      await admin.from("submission_events").insert({ submission_id: (data as any).id, event: "submitted", created_by: null });
+    }
+  } catch {
+    // best-effort
   }
 
   return NextResponse.json({ ok: true, submission: data });

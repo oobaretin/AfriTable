@@ -78,6 +78,9 @@ export async function POST(request: Request, context: { params: { id: string } }
     .eq("id", submissionId)
     .eq("status", "submitted");
 
+  // Event log
+  await supabaseAdmin.from("submission_events").insert({ submission_id: submissionId, event: "under_review", created_by: user.id });
+
   return NextResponse.redirect(new URL(`/admin/restaurants/${(restaurant as any).id}/review`, request.url));
 }
 

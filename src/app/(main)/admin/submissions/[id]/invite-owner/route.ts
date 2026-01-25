@@ -78,6 +78,11 @@ ${body}
     })
     .eq("id", submissionId);
 
+  // Event log
+  await supabaseAdmin
+    .from("submission_events")
+    .insert({ submission_id: submissionId, event: "owner_invited", created_by: user.id });
+
   return NextResponse.redirect(new URL("/admin/submissions", request.url));
 }
 

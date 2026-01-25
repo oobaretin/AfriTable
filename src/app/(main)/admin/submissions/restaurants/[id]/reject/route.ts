@@ -17,6 +17,9 @@ export async function POST(request: Request, context: { params: { id: string } }
   const supabaseAdmin = createSupabaseAdminClient();
   await supabaseAdmin.from("restaurant_submissions").update({ status: "rejected" }).eq("id", submissionId).eq("status", "submitted");
 
+  // Event log
+  await supabaseAdmin.from("submission_events").insert({ submission_id: submissionId, event: "rejected", created_by: user.id });
+
   return NextResponse.redirect(new URL("/admin/submissions?status=submitted", request.url));
 }
 

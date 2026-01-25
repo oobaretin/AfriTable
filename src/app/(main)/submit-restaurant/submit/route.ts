@@ -3,7 +3,7 @@ import "server-only";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { rateLimitOrPass } from "@/lib/security/rateLimit";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 
 const formSchema = z.object({
   name: z.string().min(2).max(200),
@@ -48,7 +48,9 @@ export async function POST(request: Request) {
   if (!parsed.success) return NextResponse.redirect(new URL("/submit-restaurant?error=invalid", request.url));
 
   const supabase = createSupabaseServerClient();
-  const { error } = await supabase.from("restaurant_submissions").insert({
+  const { data: inserted, error } = await supabase
+    .from("restaurant_submissions")
+    .insert({
     name: parsed.data.name,
     city: parsed.data.city,
     state: parsed.data.state,
@@ -59,9 +61,22 @@ export async function POST(request: Request) {
     notes: parsed.data.notes.trim() ? parsed.data.notes.trim() : null,
     submitted_by_email: parsed.data.submitted_by_email.trim() ? parsed.data.submitted_by_email.trim() : null,
     status: "submitted",
-  });
+    })
+    .select("id")
+    .single();
 
   if (error) return NextResponse.redirect(new URL("/submit-restaurant?error=submit_failed", request.url));
+
+  // Best-effort event log (service role)
+  try {
+    if (inserted?.id) {
+      const admin = createSupabaseAdminClient();
+      await admin.from("submission_events").insert({ submission_id: inserted.id, event: "submitted", created_by: null });
+    }
+  } catch {
+    // best-effort
+  }
+
   return NextResponse.redirect(new URL("/submit-success", request.url));
 }
 
