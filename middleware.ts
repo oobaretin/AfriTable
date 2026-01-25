@@ -53,7 +53,7 @@ export async function middleware(request: NextRequest) {
     // Pending owner onboarding gate: must set password first.
     if (!error && profile?.role === "pending_owner" && !profile?.has_reset_password) {
       const redirectUrl = request.nextUrl.clone();
-      redirectUrl.pathname = "/reset-password";
+      redirectUrl.pathname = "/owner/onboarding";
       redirectUrl.search = "";
       return NextResponse.redirect(redirectUrl);
     }
@@ -61,7 +61,7 @@ export async function middleware(request: NextRequest) {
     // Pending owners should not access dashboard yet (wait for approval).
     if (!error && profile?.role === "pending_owner") {
       const redirectUrl = request.nextUrl.clone();
-      redirectUrl.pathname = "/claim-submitted";
+      redirectUrl.pathname = "/owner/onboarding";
       redirectUrl.search = "";
       return NextResponse.redirect(redirectUrl);
     }
