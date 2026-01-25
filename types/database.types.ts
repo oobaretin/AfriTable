@@ -54,6 +54,7 @@ export type Database = {
           slug: string;
           cuisine_types: string[];
           address: Json | null;
+          display_city: string | null;
           phone: string | null;
           website: string | null;
           instagram_handle: string | null;
@@ -74,6 +75,7 @@ export type Database = {
           slug: string;
           cuisine_types?: string[];
           address?: Json | null;
+          display_city?: string | null;
           phone?: string | null;
           website?: string | null;
           instagram_handle?: string | null;
@@ -94,6 +96,7 @@ export type Database = {
           slug?: string;
           cuisine_types?: string[];
           address?: Json | null;
+          display_city?: string | null;
           phone?: string | null;
           website?: string | null;
           instagram_handle?: string | null;
@@ -371,6 +374,7 @@ export type Database = {
           slug: string;
           cuisine_types: string[];
           address: Json | null;
+          display_city: string | null;
           phone: string | null;
           website: string | null;
           instagram_handle: string | null;
