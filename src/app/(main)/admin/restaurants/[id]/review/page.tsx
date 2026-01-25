@@ -14,7 +14,7 @@ function addressLine(a: any): string {
   return [a.street, a.city, a.state, a.zip].filter(Boolean).join(", ") || "—";
 }
 
-export default async function AdminRestaurantReviewPage({ params }: { params: { restaurantId: string } }) {
+export default async function AdminRestaurantReviewPage({ params }: { params: { id: string } }) {
   // Admin only (middleware should also handle)
   const supabaseSSR = createSupabaseServerClient();
   const { data: auth } = await supabaseSSR.auth.getUser();
@@ -30,7 +30,7 @@ export default async function AdminRestaurantReviewPage({ params }: { params: { 
     .select(
       "id,owner_id,name,slug,cuisine_types,price_range,phone,website,instagram_handle,facebook_url,address,description,images,hours,is_active,created_at,external_avg_rating,external_review_count,verification",
     )
-    .eq("id", params.restaurantId)
+    .eq("id", params.id)
     .maybeSingle();
 
   if (!restaurant) redirect("/admin/pending-restaurants");
@@ -162,11 +162,7 @@ export default async function AdminRestaurantReviewPage({ params }: { params: { 
           </CardContent>
         </Card>
 
-        <RestaurantReviewChecklist
-          restaurantId={(restaurant as any).id}
-          restaurantSlug={(restaurant as any).slug}
-          items={items}
-        />
+        <RestaurantReviewChecklist restaurantId={(restaurant as any).id} restaurantSlug={(restaurant as any).slug} items={items} />
       </div>
     </Container>
   );

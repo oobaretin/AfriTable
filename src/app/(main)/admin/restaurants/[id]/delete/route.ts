@@ -3,8 +3,8 @@ import "server-only";
 import { NextResponse } from "next/server";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 
-export async function POST(request: Request, context: { params: { restaurantId: string } }) {
-  const restaurantId = context.params.restaurantId;
+export async function POST(request: Request, context: { params: { id: string } }) {
+  const restaurantId = context.params.id;
 
   // AuthZ: admin only
   const supabaseSSR = createSupabaseServerClient();

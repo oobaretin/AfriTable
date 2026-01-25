@@ -10,8 +10,8 @@ function requireEnv(name: string): string {
   return v;
 }
 
-export async function POST(request: Request, context: { params: { restaurantId: string } }) {
-  const restaurantId = context.params.restaurantId;
+export async function POST(request: Request, context: { params: { id: string } }) {
+  const restaurantId = context.params.id;
 
   // AuthZ: admin only
   const supabaseSSR = createSupabaseServerClient();
@@ -37,7 +37,6 @@ export async function POST(request: Request, context: { params: { restaurantId: 
   const appBaseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
   const resend = new Resend(requireEnv("RESEND_API_KEY"));
 
-  // Best-effort welcome email. (Credentials are generated locally during import; this email is informational.)
   await resend.emails.send({
     from: requireEnv("RESEND_FROM_EMAIL"),
     to,

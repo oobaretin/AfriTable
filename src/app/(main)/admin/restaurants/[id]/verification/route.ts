@@ -9,8 +9,8 @@ const schema = z.object({
   value: z.boolean(),
 });
 
-export async function POST(request: Request, context: { params: { restaurantId: string } }) {
-  const restaurantId = context.params.restaurantId;
+export async function POST(request: Request, context: { params: { id: string } }) {
+  const restaurantId = context.params.id;
 
   // AuthZ: admin only (middleware should also block)
   const supabaseSSR = createSupabaseServerClient();
