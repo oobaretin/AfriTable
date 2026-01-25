@@ -43,6 +43,7 @@ export default async function PendingRestaurantsAliasPage() {
     .from("restaurants")
     .select("id,owner_id,name,slug,phone,website,address,description,is_active,created_at")
     .eq("is_active", false)
+    .eq("is_claimed", true)
     .order("created_at", { ascending: false });
 
   const pending = (restaurants ?? []) as PendingRestaurant[];
