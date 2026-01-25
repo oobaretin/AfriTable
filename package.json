@@ -11,6 +11,7 @@
     "dev:clean": "rm -rf .next && next dev",
     "dev:safe": "node scripts/dev-safe.mjs --port 3000",
     "seed:restaurants": "node scripts/seed-restaurants.mjs",
+    "import:json": "node scripts/import-restaurants.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
