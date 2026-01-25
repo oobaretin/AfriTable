@@ -2,7 +2,8 @@ import "server-only";
 
 import Link from "next/link";
 import type { Metadata } from "next";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { notFound } from "next/navigation";
+import { createSupabasePublicClient } from "@/lib/supabase/public";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
@@ -30,23 +31,61 @@ export async function generateMetadata({ params }: { params: { city: string } })
   };
 }
 
-export default async function CityPage({ params }: { params: { city: string } }) {
-  const citySlug = params.city.toLowerCase();
+function buildCityHref(params: { city: string; cuisine?: string; price?: string | number }) {
+  const sp = new URLSearchParams();
+  if (params.cuisine) sp.set("cuisine", params.cuisine);
+  if (params.price) sp.set("price", String(params.price));
+  const qs = sp.toString();
+  return `/city/${encodeURIComponent(params.city)}${qs ? `?${qs}` : ""}`;
+}
+
+function FilterLink(props: {
+  href: string;
+  active: boolean;
+  children: React.ReactNode;
+  "aria-label"?: string;
+}) {
+  return (
+    <Button asChild variant={props.active ? "default" : "outline"} size="sm">
+      <Link href={props.href} aria-label={props["aria-label"]}>
+        {props.children}
+      </Link>
+    </Button>
+  );
+}
+
+export default async function CityPage({
+  params,
+  searchParams,
+}: {
+  params: { city: string };
+  searchParams?: { cuisine?: string; price?: string };
+}) {
+  const citySlug = decodeURIComponent(params.city).toLowerCase();
   const cityLabel = titleCaseFromSlug(citySlug);
 
-  const supabase = createSupabaseServerClient();
+  const cuisine = searchParams?.cuisine?.trim() || undefined;
+  const price = searchParams?.price?.trim() || undefined;
+
+  const supabase = createSupabasePublicClient();
 
   // Use generated column when available; ilike is case-insensitive.
-  const { data } = await supabase
+  let query = supabase
     .from("restaurants_with_rating")
     .select("*")
     .eq("is_active", true)
-    .ilike("display_city", cityLabel)
+    .ilike("display_city", cityLabel);
+
+  if (cuisine) query = query.contains("cuisine_types", [cuisine]);
+  if (price && Number.isFinite(Number(price))) query = query.eq("price_range", Number(price));
+
+  const { data } = await query
     .order("avg_rating", { ascending: false, nullsFirst: false })
     .order("created_at", { ascending: false })
     .limit(48);
 
   const restaurants = (data ?? []) as any[];
+  if (!restaurants.length) notFound();
 
   return (
     <main>
@@ -58,7 +97,11 @@ export default async function CityPage({ params }: { params: { city: string } })
                 African &amp; Caribbean restaurants in <span className="text-primary">{cityLabel}</span>
               </>
             }
-            description="Discover bold flavors and reserve your table in minutes."
+            description={
+              <>
+                Discover authentic African cuisine in {cityLabel}. Book tables at Nigerian, Ethiopian, Ghanaian, and more.
+              </>
+            }
             right={
               <Button asChild variant="outline">
                 <Link href={`/restaurants?city=${encodeURIComponent(cityLabel)}`}>Open full search</Link>
@@ -70,21 +113,43 @@ export default async function CityPage({ params }: { params: { city: string } })
 
       <Section>
         <Container>
-          {restaurants.length ? (
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {restaurants.map((r) => (
-                <RestaurantCard key={r.id} restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
-              ))}
-            </div>
-          ) : (
-            <div className="rounded-2xl border bg-background/60 p-8 text-sm text-muted-foreground">
-              No active restaurants found in {cityLabel} yet. Try the{" "}
-              <Link className="text-primary hover:underline" href="/restaurants">
-                main restaurant list
-              </Link>
-              .
-            </div>
-          )}
+          {/* Filters */}
+          <div className="mb-6 flex flex-wrap gap-2">
+            <FilterLink href={buildCityHref({ city: citySlug })} active={!cuisine && !price} aria-label="All">
+              All
+            </FilterLink>
+            {["Nigerian", "Ethiopian", "Ghanaian", "Jamaican"].map((c) => (
+              <FilterLink
+                key={c}
+                href={buildCityHref({ city: citySlug, cuisine: c, price })}
+                active={cuisine === c}
+                aria-label={`Cuisine ${c}`}
+              >
+                {c}
+              </FilterLink>
+            ))}
+            <FilterLink
+              href={buildCityHref({ city: citySlug, cuisine, price: 2 })}
+              active={price === "2"}
+              aria-label="Price 2"
+            >
+              $$
+            </FilterLink>
+            <FilterLink
+              href={buildCityHref({ city: citySlug, cuisine, price: 3 })}
+              active={price === "3"}
+              aria-label="Price 3"
+            >
+              $$$
+            </FilterLink>
+          </div>
+
+          {/* Restaurant list */}
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {restaurants.map((r) => (
+              <RestaurantCard key={r.id} restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
+            ))}
+          </div>
         </Container>
       </Section>
     </main>
