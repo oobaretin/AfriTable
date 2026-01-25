@@ -28,6 +28,24 @@ type Submission = {
   created_at: string;
 };
 
+type SubmissionEvent = {
+  submission_id: string;
+  event: string;
+  created_at: string;
+};
+
+function labelForEvent(event: string): string {
+  const map: Record<string, string> = {
+    submitted: "Submitted",
+    under_review: "Under review",
+    owner_invited: "Owner invited",
+    verified: "Verified",
+    approved: "Approved",
+    rejected: "Rejected",
+  };
+  return map[event] ?? event;
+}
+
 function labelForStatus(status: Submission["status"]) {
   if (status === "submitted") return { label: "Submitted", variant: "secondary" as const };
   if (status === "under_review") return { label: "Under review", variant: "default" as const };
@@ -65,6 +83,23 @@ export default async function AdminSubmissionsPage({
     .limit(200);
 
   const submissions = (data ?? []) as Submission[];
+
+  const eventsBySubmissionId = new Map<string, SubmissionEvent[]>();
+  if (submissions.length) {
+    const ids = submissions.map((s) => s.id);
+    const { data: events } = await supabaseAdmin
+      .from("submission_events")
+      .select("submission_id,event,created_at")
+      .in("submission_id", ids)
+      .order("created_at", { ascending: true });
+
+    for (const e of (events ?? []) as any[]) {
+      const sid = String(e.submission_id);
+      const arr = eventsBySubmissionId.get(sid) ?? [];
+      arr.push({ submission_id: sid, event: String(e.event), created_at: String(e.created_at) });
+      eventsBySubmissionId.set(sid, arr);
+    }
+  }
 
   return (
     <Container className="py-10 md:py-14">
@@ -149,6 +184,43 @@ export default async function AdminSubmissionsPage({
                           Reject
                         </Button>
                       </form>
+                    </div>
+                  ) : sub.status === "under_review" || sub.status === "owner_invited" ? (
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      <form action={`/admin/submissions/restaurants/${sub.id}/verify`} method="post">
+                        <Button type="submit">Mark verified</Button>
+                      </form>
+                      <form action={`/admin/submissions/restaurants/${sub.id}/reject`} method="post">
+                        <Button type="submit" variant="destructive">
+                          Reject
+                        </Button>
+                      </form>
+                    </div>
+                  ) : sub.status === "verified" ? (
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      <form action={`/admin/submissions/restaurants/${sub.id}/approve`} method="post">
+                        <Button type="submit">Approve</Button>
+                      </form>
+                      <form action={`/admin/submissions/restaurants/${sub.id}/reject`} method="post">
+                        <Button type="submit" variant="destructive">
+                          Reject
+                        </Button>
+                      </form>
+                    </div>
+                  ) : null}
+
+                  {/* Timeline */}
+                  {eventsBySubmissionId.get(sub.id)?.length ? (
+                    <div className="pt-4">
+                      <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Submission timeline</div>
+                      <div className="mt-2 grid gap-1 text-sm">
+                        {eventsBySubmissionId.get(sub.id)!.slice(-10).map((e, idx) => (
+                          <div key={`${e.event}-${e.created_at}-${idx}`} className="flex items-center justify-between gap-4">
+                            <span>• {labelForEvent(e.event)}</span>
+                            <span className="text-muted-foreground">{format(new Date(e.created_at), "MMM d, yyyy")}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   ) : null}
                 </CardContent>
