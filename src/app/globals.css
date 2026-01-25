@@ -141,3 +141,49 @@
     letter-spacing: -0.01em;
   }
 }
+
+@layer components {
+  /* Lightweight "prose" styles (we don't use @tailwindcss/typography in this repo). */
+  .prose {
+    color: color-mix(in oklab, var(--foreground) 88%, transparent);
+    line-height: 1.75;
+    font-size: 0.98rem;
+  }
+  .prose :where(h2) {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    font-size: 1.25rem;
+    color: var(--foreground);
+  }
+  .prose :where(p) {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose :where(a) {
+    color: var(--foreground);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in oklab, var(--primary) 55%, transparent);
+    text-underline-offset: 4px;
+  }
+  .prose :where(ul) {
+    margin: 0.75rem 0;
+    padding-left: 1.25rem;
+    list-style: disc;
+  }
+  .prose :where(li) {
+    margin: 0.35rem 0;
+  }
+  .prose :where(code) {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    padding: 0.12rem 0.35rem;
+    border: 1px solid color-mix(in oklab, var(--border) 85%, transparent);
+    border-radius: 0.4rem;
+    background: color-mix(in oklab, var(--muted) 60%, transparent);
+  }
+  .prose-invert {
+    color: color-mix(in oklab, var(--foreground) 88%, transparent);
+  }
+}

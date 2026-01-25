@@ -7,6 +7,8 @@ import { Separator } from "@/components/ui/separator";
 import { HeroSearch } from "@/components/restaurant/HeroSearch";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { Reveal } from "@/components/layout/Reveal";
+import { Container } from "@/components/layout/Container";
+import { Section } from "@/components/layout/Section";
 
 type FeaturedRestaurant = {
   id: string;
@@ -70,7 +72,7 @@ export default async function MainHomePage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,oklch(0.78_0.18_55),transparent_55%),radial-gradient(circle_at_80%_20%,oklch(0.35_0.06_145),transparent_55%),linear-gradient(135deg,oklch(0.16_0.02_55),oklch(0.10_0.01_145))]" />
         <div className="absolute inset-0 -z-10 opacity-30 [background-image:linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:40px_40px]" />
 
-        <div className="mx-auto max-w-6xl px-6 pb-16 pt-14 md:pb-24 md:pt-20">
+        <Container className="pb-16 pt-14 md:pb-24 md:pt-20">
           <Reveal>
             <div className="mx-auto max-w-3xl text-center text-white">
               <Badge className="mx-auto mb-5 border-white/20 bg-white/10 text-white" variant="outline">
@@ -99,11 +101,11 @@ export default async function MainHomePage() {
               ))}
             </div>
           </Reveal>
-        </div>
+        </Container>
       </section>
 
       {/* Featured */}
-      <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
+      <Section>
         <Reveal>
           <div className="flex items-end justify-between gap-4">
             <div>
@@ -143,12 +145,12 @@ export default async function MainHomePage() {
             <Link href="/restaurants">View all restaurants</Link>
           </Button>
         </div>
-      </section>
+      </Section>
 
       <Separator />
 
       {/* Browse by cuisine */}
-      <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
+      <Section>
         <Reveal>
           <div>
             <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Browse by cuisine</h2>
@@ -173,7 +175,7 @@ export default async function MainHomePage() {
             </Reveal>
           ))}
         </div>
-      </section>
+      </Section>
 
       {/* Popular cities */}
       <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-20">

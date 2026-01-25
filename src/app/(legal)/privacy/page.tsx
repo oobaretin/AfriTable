@@ -10,7 +10,7 @@ export default function PrivacyPage() {
         This Privacy Policy explains how AfriTable collects and uses personal data. This is placeholder text for MVP—replace with final legal copy
         before launch.
       </p>
-      <div className="prose prose-invert mt-8 max-w-none">
+      <div className="prose mt-8 max-w-none">
         <h2>Data we collect</h2>
         <p>Account and reservation data (name, email, phone), preferences, and usage analytics.</p>
         <h2>How we use data</h2>

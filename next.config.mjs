@@ -1,6 +1,11 @@
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  webpack(config, { dev }) {
+    // Prevent dev-only filesystem cache corruption that can cause missing chunk/CSS 404s.
+    if (dev) config.cache = false;
+    return config;
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     // Allow common remote image hosts; tighten this list for production as needed.

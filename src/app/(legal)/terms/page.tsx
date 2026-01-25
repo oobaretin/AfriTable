@@ -9,7 +9,7 @@ export default function TermsPage() {
       <p className="mt-4 text-muted-foreground">
         These Terms govern your use of AfriTable. This is placeholder text for MVP—replace with final legal copy before launch.
       </p>
-      <div className="prose prose-invert mt-8 max-w-none">
+      <div className="prose mt-8 max-w-none">
         <h2>Reservations</h2>
         <p>
           AfriTable facilitates reservations between diners and restaurants. Restaurants are responsible for honoring reservations and maintaining

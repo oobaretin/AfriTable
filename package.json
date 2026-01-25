@@ -7,8 +7,9 @@
     "npm": ">=10"
   },
   "scripts": {
-    "predev": "rm -rf .next",
     "dev": "next dev",
+    "dev:clean": "rm -rf .next && next dev",
+    "dev:safe": "node scripts/dev-safe.mjs --port 3000",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

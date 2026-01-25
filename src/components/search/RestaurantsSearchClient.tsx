@@ -13,6 +13,8 @@ import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Input } from "@/components/ui/input";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
+import { Container } from "@/components/layout/Container";
+import { PageHeader } from "@/components/layout/PageHeader";
 
 const CUISINES = [
   "Nigerian",
@@ -173,13 +175,12 @@ export function RestaurantsSearchClient() {
   );
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-6xl flex-col gap-6 px-6 py-10 md:py-14">
-      <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-        <div>
-          <h1 className="text-3xl font-semibold tracking-tight">Restaurants</h1>
-          <p className="text-muted-foreground">Search and filter African & Caribbean dining across the US.</p>
-        </div>
-        <div className="flex items-center gap-2">
+    <Container as="div" className="flex min-h-[calc(100vh-5rem)] flex-col gap-6 py-10 md:py-14">
+      <PageHeader
+        title="Restaurants"
+        description="Search and filter African & Caribbean dining across the US."
+        right={
+          <div className="flex items-center gap-2">
           <Select value={sort} onValueChange={(v) => (setSort(v), setPage(1))}>
             <SelectTrigger className="w-[220px]">
               <SelectValue />
@@ -214,8 +215,9 @@ export function RestaurantsSearchClient() {
               {filters}
             </DrawerContent>
           </Drawer>
-        </div>
-      </div>
+          </div>
+        }
+      />
 
       <div className="grid gap-6 md:grid-cols-12">
         <div className="hidden md:col-span-3 md:block">
@@ -301,7 +303,7 @@ export function RestaurantsSearchClient() {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
 

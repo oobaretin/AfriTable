@@ -76,7 +76,7 @@ export function ReservationWidget({
   const slots = data?.slots ?? [];
 
   return (
-    <Card className="sticky top-20">
+    <Card className="sticky top-24">
       <CardHeader>
         <CardTitle>Reserve a table</CardTitle>
         <CardDescription>Pick a date, party size, and time.</CardDescription>

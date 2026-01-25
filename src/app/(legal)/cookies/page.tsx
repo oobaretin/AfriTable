@@ -10,7 +10,7 @@ export default function CookiesPage() {
         AfriTable uses cookies to keep you signed in, remember preferences, and measure performance. This is placeholder text for MVP—replace with
         final legal copy before launch.
       </p>
-      <div className="prose prose-invert mt-8 max-w-none">
+      <div className="prose mt-8 max-w-none">
         <h2>Essential cookies</h2>
         <p>Required for authentication and security.</p>
         <h2>Analytics cookies</h2>

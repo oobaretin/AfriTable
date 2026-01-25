@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Apple, Instagram, Smartphone, Twitter, Youtube } from "lucide-react";
 import FooterExpandedLists from "@/components/layout/FooterExpandedLists";
 import NewsletterSignup from "@/components/layout/NewsletterSignup";
@@ -12,10 +13,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-4">
             <Link href="/" className="inline-flex items-center gap-2">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/20">
-                AT
-              </span>
-              <span className="text-lg font-semibold tracking-tight">AfriTable</span>
+              <Image
+                src="/logo.png"
+                alt="AfriTable"
+                width={320}
+                height={80}
+                className="h-12 w-auto object-contain md:h-14"
+              />
+              <span className="sr-only">AfriTable</span>
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">
               Discover and reserve authentic African &amp; Caribbean dining experiences across America.
@@ -68,8 +73,9 @@ export default function Footer() {
 
           {/* Link columns */}
           <div className="grid gap-6 sm:grid-cols-2 md:col-span-8 md:grid-cols-4">
-            <div className="grid gap-2 text-sm leading-6">
+            <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-foreground/90">Discover</div>
+              <div className="mt-2 grid gap-1.5 leading-6">
               <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/restaurants">
                 Find restaurants
               </Link>
@@ -88,10 +94,12 @@ export default function Footer() {
               <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/restaurants?cuisine=Jamaican">
                 Jamaican cuisine
               </Link>
+              </div>
             </div>
 
-            <div className="grid gap-2 text-sm leading-6">
+            <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-foreground/90">For restaurants</div>
+              <div className="mt-2 grid gap-1.5 leading-6">
               <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/restaurant-signup">
                 Join AfriTable
               </Link>
@@ -101,10 +109,12 @@ export default function Footer() {
               <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/about">
                 Why AfriTable
               </Link>
+              </div>
             </div>
 
-            <div className="grid gap-2 text-sm leading-6">
+            <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-foreground/90">Company</div>
+              <div className="mt-2 grid gap-1.5 leading-6">
               <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/about">
                 About
               </Link>
@@ -114,10 +124,12 @@ export default function Footer() {
               <a className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="mailto:partners@afritable.com">
                 Partnerships
               </a>
+              </div>
             </div>
 
-            <div className="grid gap-2 text-sm leading-6">
+            <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-foreground/90">Legal</div>
+              <div className="mt-2 grid gap-1.5 leading-6">
               <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/terms">
                 Terms
               </Link>
@@ -127,6 +139,7 @@ export default function Footer() {
               <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/cookies">
                 Cookies
               </Link>
+              </div>
             </div>
           </div>
         </div>

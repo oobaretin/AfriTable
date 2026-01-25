@@ -73,8 +73,9 @@ export const config = {
       - image optimization files
       - favicon
       - next internals
+      - css/js map files (dev)
     */
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!_next/|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|css|js|map)$).*)",
   ],
 };
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -20,13 +21,18 @@ export default async function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-2">
-            <div className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground">
-              AT
-            </div>
-            <span className="text-base font-semibold tracking-tight">AfriTable</span>
+            <Image
+              src="/logo.png"
+              alt="AfriTable"
+              width={320}
+              height={80}
+              priority
+              className="h-16 w-auto object-contain md:h-[68px]"
+            />
+            <span className="sr-only">AfriTable</span>
           </Link>
 
           <nav className="hidden items-center gap-4 text-sm md:flex">
