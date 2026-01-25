@@ -451,6 +451,52 @@ export type Database = {
           },
         ];
       };
+
+      restaurant_submissions: {
+        Row: {
+          id: string;
+          name: string;
+          city: string;
+          state: string;
+          cuisine_types: string[] | null;
+          address: string | null;
+          phone: string | null;
+          website: string | null;
+          notes: string | null;
+          submitted_by_email: string | null;
+          status: string;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          name: string;
+          city: string;
+          state: string;
+          cuisine_types?: string[] | null;
+          address?: string | null;
+          phone?: string | null;
+          website?: string | null;
+          notes?: string | null;
+          submitted_by_email?: string | null;
+          status?: string;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          name?: string;
+          city?: string;
+          state?: string;
+          cuisine_types?: string[] | null;
+          address?: string | null;
+          phone?: string | null;
+          website?: string | null;
+          notes?: string | null;
+          submitted_by_email?: string | null;
+          status?: string;
+          created_at?: string;
+        };
+        Relationships: [];
+      };
     };
     Views: {
       restaurants_with_rating: {
