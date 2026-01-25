@@ -20,6 +20,30 @@ function slugify(input) {
     .replace(/^-+|-+$/g, "");
 }
 
+function toHHmm(input) {
+  const s = String(input || "").trim();
+  if (!s) return null;
+  if (/^\d{2}:\d{2}$/.test(s)) return s;
+
+  const m = s.match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$/i);
+  if (!m) return null;
+
+  const rawH = Number(m[1]);
+  const rawM = Number(m[2] ?? "0");
+  const ampm = String(m[3]).toUpperCase();
+  if (!Number.isFinite(rawH) || rawH < 1 || rawH > 12) return null;
+  if (!Number.isFinite(rawM) || rawM < 0 || rawM > 59) return null;
+
+  let hh = rawH % 12;
+  if (ampm === "PM") hh += 12;
+  return `${String(hh).padStart(2, "0")}:${String(rawM).padStart(2, "0")}`;
+}
+
+function normalizeOptionalString(v) {
+  const s = typeof v === "string" ? v.trim() : "";
+  return s ? s : null;
+}
+
 function normalizeHoursToArray(hoursObj) {
   // Our DB uses: [{ day_of_week: 0..6, open_time: "HH:mm", close_time: "HH:mm" }]
   // Input uses: { monday: { open, close, closed }, ... }
@@ -38,8 +62,10 @@ function normalizeHoursToArray(hoursObj) {
     const v = hoursObj[key];
     if (!v || typeof v !== "object") continue;
     if (v.closed) continue;
-    if (!v.open || !v.close) continue;
-    out.push({ day_of_week: dow, open_time: String(v.open), close_time: String(v.close) });
+    const open = toHHmm(v.open);
+    const close = toHHmm(v.close);
+    if (!open || !close) continue;
+    out.push({ day_of_week: dow, open_time: open, close_time: close });
   }
   return out;
 }
@@ -96,7 +122,10 @@ async function main() {
 
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
-  const seedPath = path.resolve(__dirname, "..", "data", "seed", "restaurants.json");
+  const seedArg = process.argv[2];
+  const seedPath = seedArg
+    ? path.resolve(process.cwd(), seedArg)
+    : path.resolve(__dirname, "..", "data", "seed", "restaurants.json");
   const raw = fs.readFileSync(seedPath, "utf8");
   const records = JSON.parse(raw);
   if (!Array.isArray(records) || records.length === 0) throw new Error("No restaurants found in data/seed/restaurants.json");
@@ -107,9 +136,9 @@ async function main() {
     const cuisineTypes = Array.isArray(r.cuisine_types) ? r.cuisine_types : [];
     const address = r.address ?? null;
     const phone = r.phone ?? null;
-    const website = r.website ?? null;
-    const instagramHandle = typeof r.instagram === "string" ? r.instagram : null;
-    const facebookUrl = typeof r.facebook === "string" ? r.facebook : null;
+    const website = normalizeOptionalString(r.website);
+    const instagramHandle = normalizeOptionalString(r.instagram);
+    const facebookUrl = normalizeOptionalString(r.facebook);
     const externalAvgRating = typeof r.google_rating === "number" ? r.google_rating : null;
 
     const hoursArray = normalizeHoursToArray(r.hours);

@@ -47,6 +47,30 @@ function generatePassword(): string {
 
 type OperatingHour = { day_of_week: number; open_time: string; close_time: string };
 
+function toHHmm(input: unknown): string | null {
+  const s = String(input ?? "").trim();
+  if (!s) return null;
+  if (/^\d{2}:\d{2}$/.test(s)) return s;
+
+  const m = s.match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$/i);
+  if (!m) return null;
+
+  const rawH = Number(m[1]);
+  const rawM = Number(m[2] ?? "0");
+  const ampm = String(m[3]).toUpperCase();
+  if (!Number.isFinite(rawH) || rawH < 1 || rawH > 12) return null;
+  if (!Number.isFinite(rawM) || rawM < 0 || rawM > 59) return null;
+
+  let hh = rawH % 12;
+  if (ampm === "PM") hh += 12;
+  return `${String(hh).padStart(2, "0")}:${String(rawM).padStart(2, "0")}`;
+}
+
+function normalizeOptionalString(v: unknown): string | null {
+  const s = typeof v === "string" ? v.trim() : "";
+  return s ? s : null;
+}
+
 function normalizeHoursToArray(hours: RestaurantImport["hours"]): OperatingHour[] {
   // DB expects: day_of_week 0..6 (Sun..Sat)
   const map: Array<[string, number]> = [
@@ -64,8 +88,10 @@ function normalizeHoursToArray(hours: RestaurantImport["hours"]): OperatingHour[
     const v = hours?.[k] ?? hours?.[k.toUpperCase()] ?? hours?.[k[0].toUpperCase() + k.slice(1)];
     if (!v) continue;
     if (v.closed) continue;
-    if (!v.open || !v.close) continue;
-    out.push({ day_of_week: dow, open_time: String(v.open), close_time: String(v.close) });
+    const open = toHHmm(v.open);
+    const close = toHHmm(v.close);
+    if (!open || !close) continue;
+    out.push({ day_of_week: dow, open_time: open, close_time: close });
   }
   return out;
 }
@@ -170,9 +196,9 @@ async function importRestaurants(filePath: string) {
             cuisine_types: restaurant.cuisine_types,
             address: restaurant.address,
             phone: restaurant.phone,
-            website: restaurant.website ?? null,
-            instagram_handle: restaurant.instagram ?? null,
-            facebook_url: restaurant.facebook ?? null,
+            website: normalizeOptionalString(restaurant.website),
+            instagram_handle: normalizeOptionalString(restaurant.instagram),
+            facebook_url: normalizeOptionalString(restaurant.facebook),
             external_avg_rating: restaurant.google_rating ?? null,
             external_review_count: restaurant.google_review_count ?? null,
             description: restaurant.description,

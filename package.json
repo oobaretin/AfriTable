@@ -11,6 +11,7 @@
     "dev:clean": "rm -rf .next && next dev",
     "dev:safe": "node scripts/dev-safe.mjs --port 3000",
     "seed:restaurants": "node scripts/seed-restaurants.mjs",
+    "seed:houston": "node scripts/seed-restaurants.mjs data/seed/houston-restaurants.json",
     "import:json": "tsx lib/import-from-json.ts",
     "build": "next build",
     "start": "next start",

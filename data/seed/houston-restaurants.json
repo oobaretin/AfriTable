@@ -1,0 +1,210 @@
+[
+  {
+    "name": "ChòpnBlọk",
+    "cuisine_types": ["West African"],
+    "address": {
+      "street": "507 Westheimer Rd",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77006"
+    },
+    "phone": "+1 832-962-4500",
+    "website": "https://chopnblok.co",
+    "description": "West African restaurant and cultural hub blending traditional dishes with contemporary creativity. Known for suya, jollof bowls, and yassa curry.",
+    "price_range": 3,
+    "hours": {
+      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "thursday": { "open": "11:00 AM", "close": "10:00 PM", "closed": false },
+      "friday": { "open": "11:00 AM", "close": "10:00 PM", "closed": false },
+      "saturday": { "open": "11:00 AM", "close": "10:00 PM", "closed": false },
+      "sunday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Afrikiko Restaurant",
+    "cuisine_types": ["Ghanaian", "West African"],
+    "address": {
+      "street": "9625 Bissonnet St",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77036"
+    },
+    "phone": "+1 713-773-1400",
+    "website": "http://afrikikohouston.com",
+    "description": "Authentic Ghanaian and West African cuisine featuring banku, peanut soup, jollof, and more.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "", "close": "", "closed": true },
+      "tuesday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false },
+      "wednesday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false },
+      "thursday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false },
+      "friday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false },
+      "saturday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false },
+      "sunday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Dakar Street Food",
+    "cuisine_types": ["Senegalese", "West African"],
+    "address": {
+      "street": "2923 Walnut Bend Ln",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77042"
+    },
+    "phone": "+1 281-846-6420",
+    "website": "https://dakarstreetfood.com",
+    "description": "Senegalese and West African street food spot known for Yassa poulet, Thieboudienne, and grilled specialties. Highly rated for flavor and portions.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "", "close": "", "closed": true },
+      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "saturday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "sunday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Lucy Ethiopian Restaurant & Lounge",
+    "cuisine_types": ["Ethiopian"],
+    "address": {
+      "street": "6800 Southwest Fwy",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77074"
+    },
+    "phone": "+1 713-334-0000",
+    "website": "http://www.lucyhouston.com",
+    "description": "Longstanding Ethiopian favorite with injera, wat, and communal dining traditions in a cozy atmosphere.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "saturday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "sunday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Amala Joint",
+    "cuisine_types": ["African"],
+    "address": {
+      "street": "6271 Highway 6 S",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77083"
+    },
+    "phone": "+1 281-721-2982",
+    "website": "",
+    "description": "Local African restaurant offering a variety of traditional dishes in a casual setting.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false },
+      "tuesday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false },
+      "wednesday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false },
+      "thursday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false },
+      "friday": { "open": "10:00 AM", "close": "7:00 PM", "closed": false },
+      "saturday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false },
+      "sunday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Kofoshi",
+    "cuisine_types": ["West African"],
+    "address": {
+      "street": "3706 S Gessner Rd",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77063"
+    },
+    "phone": "+1 346-252-2336",
+    "website": "",
+    "description": "Well‑liked West African restaurant known locally for authentic flavors and generous portions.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "12:00 PM", "close": "8:00 PM", "closed": false },
+      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "saturday": { "open": "12:00 PM", "close": "9:00 PM", "closed": false },
+      "sunday": { "open": "12:00 PM", "close": "8:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Bantu House",
+    "cuisine_types": ["African"],
+    "address": {
+      "street": "22224 Northwest Fwy",
+      "city": "Cypress",
+      "state": "TX",
+      "zip": "77429"
+    },
+    "phone": "+1 713-360-8333",
+    "website": "http://bantuhouse.com",
+    "description": "Pan‑African dining experience celebrating flavors from across the continent with authentic dishes and cultural ambience.",
+    "price_range": 3,
+    "hours": {
+      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "saturday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "sunday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Marie African Flavors",
+    "cuisine_types": ["African"],
+    "address": {
+      "street": "12600 Bissonnet St Ste A7",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77099"
+    },
+    "phone": "+1 832-771-8778",
+    "website": "",
+    "description": "Casual African restaurant serving a variety of dishes with traditional spices and flavors.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
+      "tuesday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
+      "wednesday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
+      "thursday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
+      "friday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
+      "saturday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
+      "sunday": { "open": "11:00 AM", "close": "7:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Afro Caribbean Grill",
+    "cuisine_types": ["African", "Caribbean"],
+    "address": {
+      "street": "1903 Blodgett St",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77004"
+    },
+    "phone": "(713) 804-2764",
+    "website": "https://www.afrocaribbeangrill.com",
+    "description": "Fusion African & Caribbean flavors with suya, jerk, and other soulful dishes prepared fresh daily.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "", "close": "", "closed": true },
+      "tuesday": { "open": "4:00 PM", "close": "10:00 PM", "closed": false },
+      "wednesday": { "open": "4:00 PM", "close": "10:00 PM", "closed": false },
+      "thursday": { "open": "12:00 PM", "close": "10:00 PM", "closed": false },
+      "friday": { "open": "4:00 PM", "close": "12:00 AM", "closed": false },
+      "saturday": { "open": "12:00 PM", "close": "12:00 AM", "closed": false },
+      "sunday": { "open": "12:00 PM", "close": "10:00 PM", "closed": false }
+    }
+  }
+]
+

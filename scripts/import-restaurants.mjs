@@ -19,6 +19,30 @@ function slugify(input) {
     .replace(/^-+|-+$/g, "");
 }
 
+function toHHmm(input) {
+  const s = String(input || "").trim();
+  if (!s) return null;
+  if (/^\d{2}:\d{2}$/.test(s)) return s;
+
+  const m = s.match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$/i);
+  if (!m) return null;
+
+  const rawH = Number(m[1]);
+  const rawM = Number(m[2] ?? "0");
+  const ampm = String(m[3]).toUpperCase();
+  if (!Number.isFinite(rawH) || rawH < 1 || rawH > 12) return null;
+  if (!Number.isFinite(rawM) || rawM < 0 || rawM > 59) return null;
+
+  let hh = rawH % 12;
+  if (ampm === "PM") hh += 12;
+  return `${String(hh).padStart(2, "0")}:${String(rawM).padStart(2, "0")}`;
+}
+
+function normalizeOptionalString(v) {
+  const s = typeof v === "string" ? v.trim() : "";
+  return s ? s : null;
+}
+
 function generatePassword() {
   // Avoid confusing chars (0/O, 1/l/I)
   const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789!@#$%";
@@ -43,8 +67,10 @@ function normalizeHoursToArray(hoursObj) {
     const v = hoursObj[key];
     if (!v || typeof v !== "object") continue;
     if (v.closed) continue;
-    if (!v.open || !v.close) continue;
-    out.push({ day_of_week: dow, open_time: String(v.open), close_time: String(v.close) });
+    const open = toHHmm(v.open);
+    const close = toHHmm(v.close);
+    if (!open || !close) continue;
+    out.push({ day_of_week: dow, open_time: open, close_time: close });
   }
   return out;
 }
@@ -150,9 +176,9 @@ async function importRestaurants(filePath) {
             cuisine_types: Array.isArray(restaurant?.cuisine_types) ? restaurant.cuisine_types : [],
             address: restaurant?.address ?? null,
             phone: restaurant?.phone ?? null,
-            website: restaurant?.website ?? null,
-            instagram_handle: restaurant?.instagram ?? null,
-            facebook_url: restaurant?.facebook ?? null,
+            website: normalizeOptionalString(restaurant?.website),
+            instagram_handle: normalizeOptionalString(restaurant?.instagram),
+            facebook_url: normalizeOptionalString(restaurant?.facebook),
             external_avg_rating: typeof restaurant?.google_rating === "number" ? restaurant.google_rating : null,
             external_review_count: typeof restaurant?.google_review_count === "number" ? restaurant.google_review_count : null,
             description: restaurant?.description ?? null,
