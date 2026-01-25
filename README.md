@@ -1,3 +1,23 @@
+# AfriTable
+
+Restaurant reservation platform built with Next.js App Router + TypeScript + Supabase + shadcn/ui.
+
+## Environment variables
+
+Create a local `.env.local` from `env.example`:
+
+```bash
+cp env.example .env.local
+```
+
+Then fill in:
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `SUPABASE_SERVICE_ROLE_KEY`
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
