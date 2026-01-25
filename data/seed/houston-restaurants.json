@@ -10,18 +10,15 @@
     },
     "phone": "+1 832-962-4500",
     "website": "https://chopnblok.co",
-    "description": "ChòpnBlọk is a nationally acclaimed Houston-based, fast-casual restaurant that carefully unveils the West African culinary experience. The menu moves beyond tradition, weaving together flavors from Nigeria, Ghana, Senegal, Liberia, and other countries in a contemporary way.",
+    "description": "ChòpnBlọk is a fast-casual restaurant concept that carefully unveils the West African culinary experience, serving fresh proteins, vegetables, grains, and beverages prepared under a West African flavor profile, packaged in a local, contemporary fashion. Freshness and integrity are embedded in our culture.",
     "price_range": 3,
-    "google_rating": 4.7,
+    "google_rating": 4.6,
     "instagram": "https://www.instagram.com/chopnblok_/",
-    "facebook": "https://www.facebook.com/chopnblok.co/",
+    "facebook": "https://www.facebook.com/chopnblok/",
     "sources": {
-      "restaurant_name": { "url": "https://chopnblok.co" },
-      "description": { "url": "https://chopnblok.co" },
-      "google_rating": { "url": "https://www.google.com/search?q=ChòpnBlọk+google+rating" },
+      "website_url": { "url": "https://chopnblok.co/" },
       "instagram_url": { "url": "https://www.instagram.com/chopnblok_/" },
-      "facebook_url": { "url": "https://www.facebook.com/chopnblok.co/" },
-      "website": { "url": "https://chopnblok.co" }
+      "facebook_url": { "url": "https://www.facebook.com/chopnblok/" }
     },
     "hours": {
       "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
@@ -43,19 +40,16 @@
       "zip": "77036"
     },
     "phone": "+1 713-773-1400",
-    "website": "http://afrikikohouston.com",
-    "description": "Experience the wonderful taste of African cuisine at Afrikiko. A family-owned gem serving authentic West African cuisine for over 15 years, offering a true taste of Ghana with exceptional hospitality.",
+    "website": "https://afrikikohouston.com/",
+    "description": "Experience the wonderful taste of African cuisine, from the spicy and tasty, to the downright mind-blowing. It's all here at Afrikiko.",
     "price_range": 2,
-    "google_rating": 4.1,
+    "google_rating": 4.4,
     "instagram": "https://www.instagram.com/afrikikohouston/",
-    "facebook": "https://www.facebook.com/profile.php?id=116153595076649",
+    "facebook": "https://www.facebook.com/afrikikohouston/",
     "sources": {
-      "restaurant_name": { "url": "http://afrikikohouston.com" },
-      "description": { "url": "http://afrikikohouston.com" },
-      "google_rating": { "url": "https://www.google.com/search?q=Afrikiko+Restaurant+google+rating" },
+      "website_url": { "url": "https://afrikikohouston.com/" },
       "instagram_url": { "url": "https://www.instagram.com/afrikikohouston/" },
-      "facebook_url": { "url": "https://www.facebook.com/profile.php?id=116153595076649" },
-      "website": { "url": "http://afrikikohouston.com" }
+      "facebook_url": { "url": "https://www.facebook.com/afrikikohouston/" }
     },
     "hours": {
       "monday": { "open": "", "close": "", "closed": true },
@@ -78,18 +72,15 @@
     },
     "phone": "+1 281-846-6420",
     "website": "https://dakarstreetfood.com",
-    "description": "Dakar Street Food is a highly-rated West African restaurant in Houston, known for authentic Senegalese flavors. Featured dishes include Jerk Chicken, Lamb Chops, Dibi Lamb, and Djollof Chicken, with excellent service and reasonable prices.",
+    "description": "We serve real Senegalese, West African, and Jamaican food right here in Houston. Our menu features classic dishes made with fresh ingredients and bold flavors. Whether you're trying these cuisines for the first time or grew up eating them, we've got something for you.",
     "price_range": 2,
-    "google_rating": 4.9,
+    "google_rating": 4.8,
     "instagram": "https://www.instagram.com/dakarstreetfood/",
-    "facebook": "https://www.facebook.com/Dakarstreetfood/",
+    "facebook": "https://www.facebook.com/dakarstreetfood/",
     "sources": {
-      "restaurant_name": { "url": "https://dakarstreetfood.com" },
-      "description": { "url": "https://dakarstreetfood.com" },
-      "google_rating": { "url": "https://www.google.com/search?q=Dakar+Street+Food+google+rating" },
+      "website_url": { "url": "https://dakarstreetfood.com/" },
       "instagram_url": { "url": "https://www.instagram.com/dakarstreetfood/" },
-      "facebook_url": { "url": "https://www.facebook.com/Dakarstreetfood/" },
-      "website": { "url": "https://dakarstreetfood.com" }
+      "facebook_url": { "url": "https://www.facebook.com/dakarstreetfood/" }
     },
     "hours": {
       "monday": { "open": "", "close": "", "closed": true },
@@ -111,19 +102,16 @@
       "zip": "77074"
     },
     "phone": "+1 713-334-0000",
-    "website": "http://www.lucyhouston.com",
-    "description": "Lucy Ethiopian Restaurant & Lounge offers a welcoming atmosphere and plentiful, tasty Ethiopian cuisine. The restaurant is nicely decorated and known for reasonable prices and tranquil instrumental music, providing a must-go experience for diners.",
+    "website": "https://lucyhouston.com/",
+    "description": "Our restaurant and lounge celebrates the roots of humanity in Ethiopia – which you will find in our food, art gallery, and festivities. We are family-owned and operated with friendly staff, delicious food and drink, and a great atmosphere.",
     "price_range": 2,
     "google_rating": 4.4,
     "instagram": "https://www.instagram.com/lucyethiopianrestaurant/",
     "facebook": "https://www.facebook.com/ILoveLucys123/",
     "sources": {
-      "restaurant_name": { "url": "http://www.lucyhouston.com" },
-      "description": { "url": "http://www.lucyhouston.com" },
-      "google_rating": { "url": "https://www.google.com/search?q=Lucy+Ethiopian+Restaurant+&+Lounge+google+rating" },
+      "website_url": { "url": "https://lucyhouston.com/" },
       "instagram_url": { "url": "https://www.instagram.com/lucyethiopianrestaurant/" },
-      "facebook_url": { "url": "https://www.facebook.com/ILoveLucys123/" },
-      "website": { "url": "http://www.lucyhouston.com" }
+      "facebook_url": { "url": "https://www.facebook.com/ILoveLucys123/" }
     },
     "hours": {
       "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
@@ -329,9 +317,17 @@
       "zip": "77074"
     },
     "phone": "+1 713-774-3000",
-    "website": "",
-    "description": "Family‑friendly Ethiopian restaurant known for traditional injera and hearty stews like doro wat, frequently recommended by locals.",
+    "website": "https://www.bluenilerestaurant.com/",
+    "description": "Blue Nile Ethiopian Restaurant located in the River Oaks neighborhood of Houston, TX. We have been nominated as one of the best ethnic restaurant among the Houston community. Food lovers will enjoy the unique taste of Ethiopian dishes.",
     "price_range": 2,
+    "google_rating": 4.5,
+    "instagram": "https://www.instagram.com/bluenileatriveroaks/",
+    "facebook": "https://www.facebook.com/bluenileatriveroaks/",
+    "sources": {
+      "website_url": { "url": "https://www.bluenilerestaurant.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/bluenileatriveroaks/" },
+      "facebook_url": { "url": "https://www.facebook.com/bluenileatriveroaks/" }
+    },
     "hours": {
       "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
       "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
@@ -363,6 +359,246 @@
       "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
       "saturday": { "open": "12:00 PM", "close": "9:00 PM", "closed": false },
       "sunday": { "open": "12:00 PM", "close": "8:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Taste of Nigeria",
+    "cuisine_types": ["Nigerian", "West African"],
+    "phone": "",
+    "website": "https://tasteofnigeria.us/",
+    "description": "The food we grew up eating holds a special place in our hearts, so when Tiffaney and Rasak Odewale noticed the need for authentic Nigerian food in their community, they jumped at the chance to follow their passion and connect with fellow locals.",
+    "price_range": 2,
+    "google_rating": 3.8,
+    "instagram": "https://www.instagram.com/tasteofnigeriatx/",
+    "facebook": "https://www.facebook.com/tasteofnigeriatx/",
+    "sources": {
+      "website_url": { "url": "https://tasteofnigeria.us/" },
+      "instagram_url": { "url": "https://www.instagram.com/tasteofnigeriatx/" },
+      "facebook_url": { "url": "https://www.facebook.com/tasteofnigeriatx/" }
+    }
+  },
+  {
+    "name": "Omalicha Kitchen",
+    "cuisine_types": ["Nigerian", "West African"],
+    "phone": "",
+    "website": "https://www.omalichakitchen.com",
+    "description": "African restaurant in Houston, Texas for rich, authentic dishes that bring family, culture, and comfort together. Explore our tasty jollof rice, egusi soup, and all your favorite mouth-wavering African dishes prepared with love, care, and pride.",
+    "price_range": 2,
+    "google_rating": 4.4,
+    "instagram": "https://www.instagram.com/omalichakitchen/",
+    "facebook": "https://www.facebook.com/omalichakitchen/",
+    "sources": {
+      "website_url": { "url": "https://www.omalichakitchen.com" },
+      "instagram_url": { "url": "https://www.instagram.com/omalichakitchen/" },
+      "facebook_url": { "url": "https://www.facebook.com/omalichakitchen/" }
+    }
+  },
+  {
+    "name": "Rodo Nigerian Cuisine",
+    "cuisine_types": ["Nigerian", "West African"],
+    "phone": "",
+    "website": "https://rodonigeriancuisine.com/",
+    "description": "At Rodo Nigerian Cuisine, we bring the heart of Nigeria straight to Richmond, TX. With more than twenty years in the hospitality industry, we've built a place where food feels like home. Our mission is simple—serve authentic Nigerian dishes that are flavorful, filling, and made for sharing.",
+    "price_range": 2,
+    "google_rating": 4.7,
+    "instagram": "https://www.instagram.com/rodocuisine/",
+    "facebook": "https://www.facebook.com/p/Rodo-Nigerian-Cuisine-61560238803796/",
+    "sources": {
+      "website_url": { "url": "https://rodonigeriancuisine.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/rodocuisine/" },
+      "facebook_url": { "url": "https://www.facebook.com/p/Rodo-Nigerian-Cuisine-61560238803796/" }
+    }
+  },
+  {
+    "name": "Sarabell Calabar Restaurant & Buffet",
+    "cuisine_types": ["Nigerian", "West African"],
+    "phone": "",
+    "website": "https://sarabellcalabarrestaurant.com/",
+    "description": "At Sarabell Calabar Restaurant and Buffet, we bring the bold, vibrant flavors of Nigeria to the heart of Houston. Our mission is to deliver an authentic Nigerian dining experience that ignites senses for traditional dishes and cultural flavor. From expertly prepared Calabar specials to classic Nigerian favorites, every dish is made with passion and tradition.",
+    "price_range": 2,
+    "google_rating": 4.7,
+    "instagram": "https://www.instagram.com/sarabellcalabar.restaurant/",
+    "facebook": "https://www.facebook.com/p/Sarabell-Calabar-Restaurant-Buffet-61576990936850/",
+    "sources": {
+      "website_url": { "url": "https://sarabellcalabarrestaurant.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/sarabellcalabar.restaurant/" },
+      "facebook_url": { "url": "https://www.facebook.com/p/Sarabell-Calabar-Restaurant-Buffet-61576990936850/" }
+    }
+  },
+  {
+    "name": "Fabaceae African Cuisine",
+    "cuisine_types": ["African"],
+    "phone": "",
+    "website": "https://www.fabaceaecuisine.com/",
+    "description": "Welcome to our lively African restaurant, where culinary traditions come alive and every bite is a journey for the senses! Just like the vibrant branches of the Fabaceae tree, our food is a lively source of nourishment that brings joy, energy, and a taste of life to every bite we serve.",
+    "price_range": 2,
+    "google_rating": 4.2,
+    "instagram": "https://www.instagram.com/fabaceaecuisine/",
+    "facebook": "https://www.facebook.com/fabaceaecuisine/",
+    "sources": {
+      "website_url": { "url": "https://www.fabaceaecuisine.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/fabaceaecuisine/" },
+      "facebook_url": { "url": "https://www.facebook.com/fabaceaecuisine/" }
+    }
+  },
+  {
+    "name": "Famous Princess African Kitchen",
+    "cuisine_types": ["African"],
+    "phone": "",
+    "website": "https://thefpak.start.page/",
+    "description": "Welcome to an African with a touch of difference and class. Indulge in our exquisite flavors of authentic African cuisines. This kitchen specializes in crafting delicious local delicacies, bringing the true taste of Africa to the heart of Houston.",
+    "price_range": 2,
+    "google_rating": 4.1,
+    "instagram": "https://www.instagram.com/thefpak/",
+    "facebook": "https://www.facebook.com/famousprincesskitchen/",
+    "sources": {
+      "website_url": { "url": "https://thefpak.start.page/" },
+      "instagram_url": { "url": "https://www.instagram.com/thefpak/" },
+      "facebook_url": { "url": "https://www.facebook.com/famousprincesskitchen/" }
+    }
+  },
+  {
+    "name": "Unique African Cuisine",
+    "cuisine_types": ["African", "West African"],
+    "phone": "",
+    "website": "https://uniqueafricancuisine.menu-res.com/",
+    "description": "Unique African Cuisine Bar & Grill brings you authentic West African flavors right here in Houston. From baked to grilled, we bring you authentic West African flavors. We offer catering services and are located at 6101 Wilcrest Dr, Houston, TX.",
+    "price_range": 2,
+    "google_rating": 4.3,
+    "instagram": "https://www.instagram.com/unique_african_cuisine/",
+    "facebook": "https://www.facebook.com/uniqueafricancuisine/",
+    "sources": {
+      "website_url": { "url": "https://uniqueafricancuisine.menu-res.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/unique_african_cuisine/" },
+      "facebook_url": { "url": "https://www.facebook.com/uniqueafricancuisine/" }
+    }
+  },
+  {
+    "name": "Chez Michelle Restaurant",
+    "cuisine_types": ["African"],
+    "phone": "",
+    "website": "https://chezmichellerestaurant.com/",
+    "description": "Chez Michelle Restaurant serves authentic African cuisine with a focus on bringing people together through food. Since Chez Michelle is open until midnight daily, this makes for the perfect late-night spot when you need a bowl of warm ndole soup with fresh ingredients and African flavors.",
+    "price_range": 2,
+    "google_rating": 4.5,
+    "instagram": "https://www.instagram.com/chezmichellerestaurant/",
+    "facebook": "https://www.facebook.com/chezmichellerestaurant/",
+    "sources": {
+      "website_url": { "url": "https://chezmichellerestaurant.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/chezmichellerestaurant/" },
+      "facebook_url": { "url": "https://www.facebook.com/chezmichellerestaurant/" }
+    }
+  },
+  {
+    "name": "Olatee African Cafe",
+    "cuisine_types": ["African"],
+    "phone": "",
+    "website": "https://olateeafricancafe.com/",
+    "description": "OlaTee African Café & Lounge brings Africa's rich flavors and culture to life through vibrant dining, lounge, and catering experiences—where good food, good people, and great memories meet.",
+    "price_range": 2,
+    "google_rating": 4.5,
+    "instagram": "https://www.instagram.com/olateeafricancafe/",
+    "facebook": "https://www.facebook.com/olateeafricancafe/",
+    "sources": {
+      "website_url": { "url": "https://olateeafricancafe.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/olateeafricancafe/" },
+      "facebook_url": { "url": "https://www.facebook.com/olateeafricancafe/" }
+    }
+  },
+  {
+    "name": "Aria Suya Kitchen",
+    "cuisine_types": ["Nigerian", "West African"],
+    "phone": "",
+    "website": "https://www.ariasuyakitchen.com/",
+    "description": "A Nigerian fusion upscale grill in the galleria area of Houston and also in Pearland Texas. Aria has created a demand that combines the flavorful taste of Nigerian food with American presentation. Suya is a spicy shish kebab which is a popular food item in Northern Nigeria.",
+    "price_range": 2,
+    "google_rating": 4.4,
+    "instagram": "https://www.instagram.com/ariasuyakitchen/",
+    "facebook": "https://www.facebook.com/ariasuyakitchen/",
+    "sources": {
+      "website_url": { "url": "https://www.ariasuyakitchen.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/ariasuyakitchen/" },
+      "facebook_url": { "url": "https://www.facebook.com/ariasuyakitchen/" }
+    }
+  },
+  {
+    "name": "Dibi Rapide",
+    "cuisine_types": ["West African"],
+    "phone": "",
+    "website": "https://www.dibirapide.com/",
+    "description": "Senegalese cuisine food truck serving mostly dibi lamb and chicken with our famous Jollof Rice. Houston's only Senegalese food truck bringing the heat with charred suya, street-style flavor, and spice that moves with the music.",
+    "price_range": 2,
+    "google_rating": 4.3,
+    "instagram": "https://www.instagram.com/dibirapide/",
+    "facebook": "https://www.facebook.com/dibirapide/",
+    "sources": {
+      "website_url": { "url": "https://www.dibirapide.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/dibirapide/" },
+      "facebook_url": { "url": "https://www.facebook.com/dibirapide/" }
+    }
+  },
+  {
+    "name": "Horn of Africa",
+    "cuisine_types": ["Ethiopian"],
+    "phone": "",
+    "website": "https://www.hornofafricahouston.com/",
+    "description": "Horn of Africa is a staple Ethiopian restaurant in the Gulfton district. It's owned by Suzani, the same owner as Lucy Ethiopian. They serve traditional meat & vegetarian platters, and even breakfast dishes.",
+    "price_range": 2,
+    "google_rating": 4.3,
+    "instagram": "https://www.instagram.com/hornofafricahouston/",
+    "facebook": "https://www.facebook.com/hornofafricahouston/",
+    "sources": {
+      "website_url": { "url": "https://www.hornofafricahouston.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/hornofafricahouston/" },
+      "facebook_url": { "url": "https://www.facebook.com/hornofafricahouston/" }
+    }
+  },
+  {
+    "name": "Addis Ababa Ethiopian Restaurant",
+    "cuisine_types": ["Ethiopian"],
+    "phone": "",
+    "website": "http://ethiopianrestaurant.com/",
+    "description": "Addis Ababa Ethiopian Restaurant is a family-owned and operated restaurant serving authentic Ethiopian cuisine. The restaurant offers traditional Ethiopian dishes and an Ethiopian coffee service in the Sharpstown area of Houston.",
+    "price_range": 2,
+    "google_rating": 4.7,
+    "instagram": "https://www.instagram.com/addisababarestaurant/",
+    "facebook": "https://www.facebook.com/addisababarestaurant.net/",
+    "sources": {
+      "website_url": { "url": "http://ethiopianrestaurant.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/addisababarestaurant/" },
+      "facebook_url": { "url": "https://www.facebook.com/addisababarestaurant.net/" }
+    }
+  },
+  {
+    "name": "Bahel Ethiopian Mart and Kitchen",
+    "cuisine_types": ["Ethiopian"],
+    "phone": "",
+    "website": "https://bahelmart.com/",
+    "description": "Bahel Ethiopian Mart and Kitchen serves authentic Ethiopian cuisine with quality ingredients and traditional dishes in a welcoming space. Experience authentic flavors in Houston. Bahel Ethiopian Mart and Kitchen would be honored to provide our services for your next event.",
+    "price_range": 2,
+    "google_rating": 4.6,
+    "instagram": "https://www.instagram.com/bahelmarthouston_tx/",
+    "facebook": "https://www.facebook.com/bahelmarthouston/",
+    "sources": {
+      "website_url": { "url": "https://bahelmart.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/bahelmarthouston_tx/" },
+      "facebook_url": { "url": "https://www.facebook.com/bahelmarthouston/" }
+    }
+  },
+  {
+    "name": "Authentic African Restaurant & Bar",
+    "cuisine_types": ["African", "West African"],
+    "phone": "",
+    "website": "https://www.authenticafricanrestaurant.com/",
+    "description": "Authentic African Restaurant & Bar is where we have delicious African food. With great customer service, quality food, and excellent vibes, we hope to see you soon.",
+    "price_range": 2,
+    "google_rating": 4.4,
+    "instagram": "https://www.instagram.com/authenticafricanhtx/",
+    "facebook": "https://www.facebook.com/authenticafricanhtx/",
+    "sources": {
+      "website_url": { "url": "https://www.authenticafricanrestaurant.com/" },
+      "instagram_url": { "url": "https://www.instagram.com/authenticafricanhtx/" },
+      "facebook_url": { "url": "https://www.facebook.com/authenticafricanhtx/" }
     }
   }
 ]
