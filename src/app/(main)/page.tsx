@@ -52,6 +52,23 @@ const CITIES: { label: string; href: string }[] = [
 
 async function getFeaturedRestaurants(): Promise<FeaturedRestaurant[]> {
   const supabase = createSupabaseServerClient();
+
+  // Prefer explicitly featured restaurants that haven't expired.
+  const nowIso = new Date().toISOString();
+  const featuredQuery = await supabase
+    .from("restaurants_with_rating")
+    .select("id,name,slug,cuisine_types,price_range,address,images,created_at,avg_rating,review_count")
+    .eq("is_active", true)
+    .eq("is_featured", true)
+    .or(`featured_until.is.null,featured_until.gt.${nowIso}`)
+    .order("avg_rating", { ascending: false, nullsFirst: false })
+    .order("created_at", { ascending: false })
+    .limit(12);
+
+  const featured = (featuredQuery.data ?? []) as FeaturedRestaurant[];
+  if (featured.length) return featured;
+
+  // Fallback: top-rated active restaurants.
   const { data } = await supabase
     .from("restaurants_with_rating")
     .select("id,name,slug,cuisine_types,price_range,address,images,created_at,avg_rating,review_count")
@@ -59,6 +76,7 @@ async function getFeaturedRestaurants(): Promise<FeaturedRestaurant[]> {
     .order("avg_rating", { ascending: false, nullsFirst: false })
     .order("created_at", { ascending: false })
     .limit(12);
+
   return (data ?? []) as FeaturedRestaurant[];
 }
 

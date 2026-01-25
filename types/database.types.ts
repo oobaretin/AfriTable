@@ -74,6 +74,8 @@ export type Database = {
           claimed_at: string | null;
           is_active: boolean;
           published_at: string | null;
+          is_featured: boolean;
+          featured_until: string | null;
           created_at: string;
         };
         Insert: {
@@ -100,6 +102,8 @@ export type Database = {
           claimed_at?: string | null;
           is_active?: boolean;
           published_at?: string | null;
+          is_featured?: boolean;
+          featured_until?: string | null;
           created_at?: string;
         };
         Update: {
@@ -126,6 +130,8 @@ export type Database = {
           claimed_at?: string | null;
           is_active?: boolean;
           published_at?: string | null;
+          is_featured?: boolean;
+          featured_until?: string | null;
           created_at?: string;
         };
         Relationships: [
@@ -588,6 +594,8 @@ export type Database = {
           hours: Json | null;
           is_active: boolean;
           created_at: string;
+          is_featured: boolean;
+          featured_until: string | null;
           avg_rating: number | null;
           review_count: number;
         };
