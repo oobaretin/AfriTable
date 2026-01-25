@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "dev:clean": "rm -rf .next && next dev",
+    "dev:clean": "node scripts/dev-safe.mjs --port 3000",
     "dev:safe": "node scripts/dev-safe.mjs --port 3000",
     "seed:restaurants": "node scripts/seed-restaurants.mjs",
     "seed:houston": "node scripts/seed-restaurants.mjs data/seed/houston-restaurants.json",
