@@ -140,6 +140,7 @@ async function main() {
     const instagramHandle = normalizeOptionalString(r.instagram);
     const facebookUrl = normalizeOptionalString(r.facebook);
     const externalAvgRating = typeof r.google_rating === "number" ? r.google_rating : null;
+    const sources = r.sources && typeof r.sources === "object" ? r.sources : {};
 
     const hoursArray = normalizeHoursToArray(r.hours);
 
@@ -163,6 +164,7 @@ async function main() {
           facebook_url: facebookUrl,
           external_avg_rating: externalAvgRating,
           external_review_count: r.google_review_count ?? null,
+          sources,
           price_range: Number(r.price_range || 2),
           description: r.description ?? null,
           images,

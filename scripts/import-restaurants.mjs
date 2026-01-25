@@ -181,6 +181,7 @@ async function importRestaurants(filePath) {
             facebook_url: normalizeOptionalString(restaurant?.facebook),
             external_avg_rating: typeof restaurant?.google_rating === "number" ? restaurant.google_rating : null,
             external_review_count: typeof restaurant?.google_review_count === "number" ? restaurant.google_review_count : null,
+            sources: restaurant?.sources && typeof restaurant.sources === "object" ? restaurant.sources : {},
             description: restaurant?.description ?? null,
             price_range: Number(restaurant?.price_range || 2),
             hours: operatingHours,

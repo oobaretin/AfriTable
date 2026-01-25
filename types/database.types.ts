@@ -76,6 +76,7 @@ export type Database = {
           published_at: string | null;
           is_featured: boolean;
           featured_until: string | null;
+          sources: Json;
           created_at: string;
         };
         Insert: {
@@ -104,6 +105,7 @@ export type Database = {
           published_at?: string | null;
           is_featured?: boolean;
           featured_until?: string | null;
+          sources?: Json;
           created_at?: string;
         };
         Update: {
@@ -132,6 +134,7 @@ export type Database = {
           published_at?: string | null;
           is_featured?: boolean;
           featured_until?: string | null;
+          sources?: Json;
           created_at?: string;
         };
         Relationships: [
@@ -596,6 +599,7 @@ export type Database = {
           created_at: string;
           is_featured: boolean;
           featured_until: string | null;
+          sources: Json;
           avg_rating: number | null;
           review_count: number;
         };

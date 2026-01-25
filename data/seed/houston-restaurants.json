@@ -10,8 +10,19 @@
     },
     "phone": "+1 832-962-4500",
     "website": "https://chopnblok.co",
-    "description": "West African restaurant and cultural hub blending traditional dishes with contemporary creativity. Known for suya, jollof bowls, and yassa curry.",
+    "description": "ChòpnBlọk is a nationally acclaimed Houston-based, fast-casual restaurant that carefully unveils the West African culinary experience. The menu moves beyond tradition, weaving together flavors from Nigeria, Ghana, Senegal, Liberia, and other countries in a contemporary way.",
     "price_range": 3,
+    "google_rating": 4.7,
+    "instagram": "https://www.instagram.com/chopnblok_/",
+    "facebook": "https://www.facebook.com/chopnblok.co/",
+    "sources": {
+      "restaurant_name": { "url": "https://chopnblok.co" },
+      "description": { "url": "https://chopnblok.co" },
+      "google_rating": { "url": "https://www.google.com/search?q=ChòpnBlọk+google+rating" },
+      "instagram_url": { "url": "https://www.instagram.com/chopnblok_/" },
+      "facebook_url": { "url": "https://www.facebook.com/chopnblok.co/" },
+      "website": { "url": "https://chopnblok.co" }
+    },
     "hours": {
       "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
       "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
@@ -33,8 +44,19 @@
     },
     "phone": "+1 713-773-1400",
     "website": "http://afrikikohouston.com",
-    "description": "Authentic Ghanaian and West African cuisine featuring banku, peanut soup, jollof, and more.",
+    "description": "Experience the wonderful taste of African cuisine at Afrikiko. A family-owned gem serving authentic West African cuisine for over 15 years, offering a true taste of Ghana with exceptional hospitality.",
     "price_range": 2,
+    "google_rating": 4.1,
+    "instagram": "https://www.instagram.com/afrikikohouston/",
+    "facebook": "https://www.facebook.com/profile.php?id=116153595076649",
+    "sources": {
+      "restaurant_name": { "url": "http://afrikikohouston.com" },
+      "description": { "url": "http://afrikikohouston.com" },
+      "google_rating": { "url": "https://www.google.com/search?q=Afrikiko+Restaurant+google+rating" },
+      "instagram_url": { "url": "https://www.instagram.com/afrikikohouston/" },
+      "facebook_url": { "url": "https://www.facebook.com/profile.php?id=116153595076649" },
+      "website": { "url": "http://afrikikohouston.com" }
+    },
     "hours": {
       "monday": { "open": "", "close": "", "closed": true },
       "tuesday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false },
@@ -56,8 +78,19 @@
     },
     "phone": "+1 281-846-6420",
     "website": "https://dakarstreetfood.com",
-    "description": "Senegalese and West African street food spot known for Yassa poulet, Thieboudienne, and grilled specialties. Highly rated for flavor and portions.",
+    "description": "Dakar Street Food is a highly-rated West African restaurant in Houston, known for authentic Senegalese flavors. Featured dishes include Jerk Chicken, Lamb Chops, Dibi Lamb, and Djollof Chicken, with excellent service and reasonable prices.",
     "price_range": 2,
+    "google_rating": 4.9,
+    "instagram": "https://www.instagram.com/dakarstreetfood/",
+    "facebook": "https://www.facebook.com/Dakarstreetfood/",
+    "sources": {
+      "restaurant_name": { "url": "https://dakarstreetfood.com" },
+      "description": { "url": "https://dakarstreetfood.com" },
+      "google_rating": { "url": "https://www.google.com/search?q=Dakar+Street+Food+google+rating" },
+      "instagram_url": { "url": "https://www.instagram.com/dakarstreetfood/" },
+      "facebook_url": { "url": "https://www.facebook.com/Dakarstreetfood/" },
+      "website": { "url": "https://dakarstreetfood.com" }
+    },
     "hours": {
       "monday": { "open": "", "close": "", "closed": true },
       "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
@@ -79,8 +112,19 @@
     },
     "phone": "+1 713-334-0000",
     "website": "http://www.lucyhouston.com",
-    "description": "Longstanding Ethiopian favorite with injera, wat, and communal dining traditions in a cozy atmosphere.",
+    "description": "Lucy Ethiopian Restaurant & Lounge offers a welcoming atmosphere and plentiful, tasty Ethiopian cuisine. The restaurant is nicely decorated and known for reasonable prices and tranquil instrumental music, providing a must-go experience for diners.",
     "price_range": 2,
+    "google_rating": 4.4,
+    "instagram": "https://www.instagram.com/lucyethiopianrestaurant/",
+    "facebook": "https://www.facebook.com/ILoveLucys123/",
+    "sources": {
+      "restaurant_name": { "url": "http://www.lucyhouston.com" },
+      "description": { "url": "http://www.lucyhouston.com" },
+      "google_rating": { "url": "https://www.google.com/search?q=Lucy+Ethiopian+Restaurant+&+Lounge+google+rating" },
+      "instagram_url": { "url": "https://www.instagram.com/lucyethiopianrestaurant/" },
+      "facebook_url": { "url": "https://www.facebook.com/ILoveLucys123/" },
+      "website": { "url": "http://www.lucyhouston.com" }
+    },
     "hours": {
       "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
       "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },

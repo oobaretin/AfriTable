@@ -23,6 +23,7 @@ interface RestaurantImport {
   instagram?: string;
   facebook?: string;
   images?: string[];
+  sources?: Record<string, unknown>;
 }
 
 function requireEnv(name: string): string {
@@ -201,6 +202,7 @@ async function importRestaurants(filePath: string) {
             facebook_url: normalizeOptionalString(restaurant.facebook),
             external_avg_rating: restaurant.google_rating ?? null,
             external_review_count: restaurant.google_review_count ?? null,
+            sources: restaurant.sources ?? {},
             description: restaurant.description,
             price_range: restaurant.price_range,
             hours: operatingHours,
