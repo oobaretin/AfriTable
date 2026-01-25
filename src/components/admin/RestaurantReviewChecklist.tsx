@@ -80,33 +80,9 @@ export function RestaurantReviewChecklist(props: {
             </label>
           ))}
         </div>
-
-        <div className="flex flex-wrap gap-2">
-          <form action={`/admin/restaurants/${props.restaurantId}/approve`} method="post">
-            <Button type="submit" disabled={!allChecked}>
-              Approve &amp; Activate
-            </Button>
-          </form>
-          <form action={`/admin/restaurants/${props.restaurantId}/send-welcome`} method="post">
-            <Button type="submit" variant="secondary">
-              Send welcome email
-            </Button>
-          </form>
-          <Button asChild variant="outline">
-            <Link href={`/admin/restaurants/${props.restaurantId}/edit`}>Edit</Link>
-          </Button>
-          <form action={`/admin/restaurants/${props.restaurantId}/delete`} method="post">
-            <Button type="submit" variant="destructive">
-              Delete
-            </Button>
-          </form>
+        <div className="text-xs text-muted-foreground">
+          {allChecked ? "All items verified." : "Complete all items before approval."}
         </div>
-
-        {!allChecked ? (
-          <div className="text-xs text-muted-foreground">
-            Check all items to enable approval.
-          </div>
-        ) : null}
       </CardContent>
     </Card>
   );

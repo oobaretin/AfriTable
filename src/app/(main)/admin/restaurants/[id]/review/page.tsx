@@ -3,11 +3,12 @@ import "server-only";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
-import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { RestaurantReviewChecklist } from "@/components/admin/RestaurantReviewChecklist";
+import { PhotoUploader } from "@/components/admin/PhotoUploader";
+import { Button } from "@/components/ui/button";
 
 function addressLine(a: any): string {
   if (!a || typeof a !== "object") return "—";
@@ -86,85 +87,124 @@ export default async function AdminRestaurantReviewPage({ params }: { params: { 
     },
   ];
 
+  const allVerified = items.every((i) => Boolean(i.initialChecked));
+
   return (
-    <Container className="py-10 md:py-14">
+    <div className="mx-auto max-w-4xl px-6 py-10 md:py-14 space-y-6">
       <PageHeader
-        title="Review restaurant"
-        description="Verify listing details before approving."
+        title={
+          <>
+            Review: <span className="text-primary">{(restaurant as any).name}</span>
+          </>
+        }
+        description="Verify the listing, add photos, then approve."
         right={
           <Link className="text-sm text-primary hover:underline" href="/admin/pending-restaurants">
-            Back to pending list
+            Back
           </Link>
         }
       />
 
-      <div className="mt-6 grid gap-4 md:grid-cols-[1fr_420px]">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex flex-wrap items-center gap-2">
-              <span>{(restaurant as any).name}</span>
-              {(restaurant as any).is_active ? <Badge>Active</Badge> : <Badge variant="secondary">Pending</Badge>}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="grid gap-4 text-sm">
-            <div className="grid gap-1">
-              <div className="text-muted-foreground">Slug</div>
-              <div className="font-medium">{(restaurant as any).slug}</div>
+      {/* Checklist */}
+      <RestaurantReviewChecklist restaurantId={(restaurant as any).id} restaurantSlug={(restaurant as any).slug} items={items} />
+
+      {/* Details */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex flex-wrap items-center gap-2">
+            <span>Restaurant details</span>
+            {(restaurant as any).is_active ? <Badge>Active</Badge> : <Badge variant="secondary">Pending</Badge>}
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="grid gap-4 text-sm">
+          <div className="grid gap-1">
+            <div className="text-muted-foreground">Slug</div>
+            <div className="font-medium">{(restaurant as any).slug}</div>
+          </div>
+          <div className="grid gap-1">
+            <div className="text-muted-foreground">Location</div>
+            <div className="font-medium">{addressLine(addr)}</div>
+          </div>
+          <div className="grid gap-1">
+            <div className="text-muted-foreground">Owner email</div>
+            <div className="font-medium">{ownerEmail}</div>
+          </div>
+          <div className="grid gap-1">
+            <div className="text-muted-foreground">Cuisine</div>
+            <div className="font-medium">{cuisines.length ? cuisines.join(" • ") : "—"}</div>
+          </div>
+          <div className="grid gap-1">
+            <div className="text-muted-foreground">Price range</div>
+            <div className="font-medium">{"$".repeat(Math.max(1, Math.min(4, (restaurant as any).price_range ?? 1)))}</div>
+          </div>
+          <div className="grid gap-1">
+            <div className="text-muted-foreground">External rating</div>
+            <div className="font-medium">
+              {(restaurant as any).external_avg_rating != null
+                ? `${Number((restaurant as any).external_avg_rating).toFixed(1)}★ (${(restaurant as any).external_review_count ?? 0})`
+                : "—"}
             </div>
-
+          </div>
+          {(restaurant as any).description ? (
             <div className="grid gap-1">
-              <div className="text-muted-foreground">Location</div>
-              <div className="font-medium">{addressLine(addr)}</div>
+              <div className="text-muted-foreground">Description</div>
+              <div className="text-muted-foreground">{(restaurant as any).description}</div>
             </div>
-
-            <div className="grid gap-1">
-              <div className="text-muted-foreground">Owner email</div>
-              <div className="font-medium">{ownerEmail}</div>
+          ) : null}
+          <div className="grid gap-1">
+            <div className="text-muted-foreground">Quick links</div>
+            <div className="flex flex-wrap gap-3">
+              <Link className="text-primary hover:underline" href={`/city/${encodeURIComponent(String(city ?? "city"))}`}>
+                City page
+              </Link>
+              <Link className="text-primary hover:underline" href={`/restaurants/${encodeURIComponent((restaurant as any).slug)}`}>
+                Restaurant page
+              </Link>
             </div>
+          </div>
+        </CardContent>
+      </Card>
 
-            <div className="grid gap-1">
-              <div className="text-muted-foreground">Cuisine</div>
-              <div className="font-medium">{cuisines.length ? cuisines.join(" • ") : "—"}</div>
-            </div>
+      {/* Photo uploader */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Photos</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <PhotoUploader restaurantId={(restaurant as any).id} initialImages={images} />
+        </CardContent>
+      </Card>
 
-            <div className="grid gap-1">
-              <div className="text-muted-foreground">Price range</div>
-              <div className="font-medium">{"$".repeat(Math.max(1, Math.min(4, (restaurant as any).price_range ?? 1)))}</div>
-            </div>
-
-            <div className="grid gap-1">
-              <div className="text-muted-foreground">External rating</div>
-              <div className="font-medium">
-                {(restaurant as any).external_avg_rating != null
-                  ? `${Number((restaurant as any).external_avg_rating).toFixed(1)}★ (${(restaurant as any).external_review_count ?? 0})`
-                  : "—"}
-              </div>
-            </div>
-
-            {(restaurant as any).description ? (
-              <div className="grid gap-1">
-                <div className="text-muted-foreground">Description</div>
-                <div className="text-muted-foreground">{(restaurant as any).description}</div>
-              </div>
-            ) : null}
-
-            <div className="grid gap-1">
-              <div className="text-muted-foreground">Quick links</div>
-              <div className="flex flex-wrap gap-3">
-                <Link className="text-primary hover:underline" href={`/city/${encodeURIComponent(String(city ?? "city"))}`}>
-                  City page
-                </Link>
-                <Link className="text-primary hover:underline" href={`/restaurants/${encodeURIComponent((restaurant as any).slug)}`}>
-                  Restaurant page
-                </Link>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <RestaurantReviewChecklist restaurantId={(restaurant as any).id} restaurantSlug={(restaurant as any).slug} items={items} />
-      </div>
-    </Container>
+      {/* Approval actions */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Approval actions</CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-wrap gap-2">
+          <form action={`/admin/restaurants/${(restaurant as any).id}/approve`} method="post">
+            <Button type="submit" disabled={!allVerified}>
+              Approve &amp; Activate
+            </Button>
+          </form>
+          <form action={`/admin/restaurants/${(restaurant as any).id}/send-welcome`} method="post">
+            <Button type="submit" variant="secondary">
+              Send welcome email
+            </Button>
+          </form>
+          <Button asChild variant="outline">
+            <Link href={`/admin/restaurants/${(restaurant as any).id}/edit`}>Edit</Link>
+          </Button>
+          <form action={`/admin/restaurants/${(restaurant as any).id}/delete`} method="post">
+            <Button type="submit" variant="destructive">
+              Delete
+            </Button>
+          </form>
+          {!allVerified ? (
+            <div className="w-full text-xs text-muted-foreground">Complete the checklist to enable approval.</div>
+          ) : null}
+        </CardContent>
+      </Card>
+    </div>
   );
 }
 
