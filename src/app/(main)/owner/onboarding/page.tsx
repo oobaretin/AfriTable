@@ -18,10 +18,28 @@ type ClaimedRestaurant = {
   claimed_at: string | null;
   is_active: boolean;
   created_at: string;
+  verification: any;
+  address: any;
+  phone: string | null;
+  images: string[] | null;
+  hours: any;
 };
 
 function stepBadge(done: boolean) {
   return done ? <Badge>Done</Badge> : <Badge variant="secondary">To do</Badge>;
+}
+
+function listingStrengthPercent(r: ClaimedRestaurant): number {
+  const v = (r.verification ?? {}) as Record<string, any>;
+  const checks: boolean[] = [
+    Boolean(v.name) || Boolean(r.name),
+    Boolean(v.address) || Boolean(r.address),
+    Boolean(v.phone) || Boolean(r.phone),
+    Boolean(v.photos) || Boolean(r.images?.length),
+    Boolean(v.hours) || (Array.isArray(r.hours) && r.hours.length > 0),
+  ];
+  const done = checks.filter(Boolean).length;
+  return Math.round((done / checks.length) * 100);
 }
 
 export default async function OwnerOnboardingPage() {
@@ -43,7 +61,7 @@ export default async function OwnerOnboardingPage() {
   const supabaseAdmin = createSupabaseAdminClient();
   const { data: claimed } = await supabaseAdmin
     .from("restaurants")
-    .select("id,name,slug,is_claimed,claimed_at,is_active,created_at")
+    .select("id,name,slug,is_claimed,claimed_at,is_active,created_at,verification,address,phone,images,hours")
     .eq("claimed_by", user.id)
     .order("created_at", { ascending: false })
     .limit(1)
@@ -120,6 +138,18 @@ export default async function OwnerOnboardingPage() {
                     <Badge variant={restaurant.is_active ? "default" : "secondary"}>
                       {restaurant.is_active ? "Active" : "Pending approval"}
                     </Badge>
+                  </div>
+                  <div className="mt-3">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">Listing strength</span>
+                      <span className="font-medium text-foreground">{listingStrengthPercent(restaurant)}%</span>
+                    </div>
+                    <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-muted">
+                      <div
+                        className="h-full rounded-full bg-primary transition-[width]"
+                        style={{ width: `${listingStrengthPercent(restaurant)}%` }}
+                      />
+                    </div>
                   </div>
                   <div className="mt-2 text-xs text-muted-foreground">
                     {restaurant.claimed_at ? `Claimed ${format(new Date(restaurant.claimed_at), "MMM d, yyyy")}` : null}
