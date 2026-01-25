@@ -28,7 +28,7 @@ export default async function AdminRestaurantReviewPage({ params }: { params: { 
   const { data: restaurant } = await supabaseAdmin
     .from("restaurants")
     .select(
-      "id,owner_id,name,slug,cuisine_types,price_range,phone,website,instagram_handle,facebook_url,address,description,images,hours,is_active,created_at,external_avg_rating,external_review_count",
+      "id,owner_id,name,slug,cuisine_types,price_range,phone,website,instagram_handle,facebook_url,address,description,images,hours,is_active,created_at,external_avg_rating,external_review_count,verification",
     )
     .eq("id", params.restaurantId)
     .maybeSingle();
@@ -42,16 +42,48 @@ export default async function AdminRestaurantReviewPage({ params }: { params: { 
   const images = ((restaurant as any).images ?? []) as string[];
   const addr = (restaurant as any).address;
   const city = addr?.city ?? null;
+  const verification = ((restaurant as any).verification ?? {}) as Record<string, unknown>;
 
   const items = [
-    { id: "name", label: "Name looks correct", initialChecked: Boolean((restaurant as any).name) },
-    { id: "address", label: "Address is complete", initialChecked: Boolean(addr?.street && addr?.city && addr?.state) },
-    { id: "phone", label: "Phone number present", initialChecked: Boolean((restaurant as any).phone) },
-    { id: "website", label: "Website present (optional)", initialChecked: Boolean((restaurant as any).website) },
-    { id: "cuisines", label: "Cuisine tags set", initialChecked: cuisines.length > 0 },
-    { id: "price", label: "Price range set", initialChecked: Number.isFinite((restaurant as any).price_range) },
-    { id: "images", label: "At least one image provided", initialChecked: images.length > 0 },
-    { id: "hours", label: "Operating hours set", initialChecked: Array.isArray((restaurant as any).hours) && (restaurant as any).hours.length > 0 },
+    {
+      id: "name",
+      label: "Name looks correct",
+      initialChecked: typeof verification.name === "boolean" ? (verification.name as boolean) : Boolean((restaurant as any).name),
+    },
+    {
+      id: "address",
+      label: "Address is complete",
+      initialChecked:
+        typeof verification.address === "boolean"
+          ? (verification.address as boolean)
+          : Boolean(addr?.street && addr?.city && addr?.state),
+    },
+    {
+      id: "phone",
+      label: "Phone number present",
+      initialChecked: typeof verification.phone === "boolean" ? (verification.phone as boolean) : Boolean((restaurant as any).phone),
+    },
+    {
+      id: "hours",
+      label: "Operating hours set",
+      initialChecked:
+        typeof verification.hours === "boolean"
+          ? (verification.hours as boolean)
+          : Array.isArray((restaurant as any).hours) && (restaurant as any).hours.length > 0,
+    },
+    {
+      id: "photos",
+      label: "At least one photo provided",
+      initialChecked: typeof verification.photos === "boolean" ? (verification.photos as boolean) : images.length > 0,
+    },
+    {
+      id: "description",
+      label: "Description looks good",
+      initialChecked:
+        typeof verification.description === "boolean"
+          ? (verification.description as boolean)
+          : Boolean((restaurant as any).description),
+    },
   ];
 
   return (
@@ -130,7 +162,11 @@ export default async function AdminRestaurantReviewPage({ params }: { params: { 
           </CardContent>
         </Card>
 
-        <RestaurantReviewChecklist restaurantId={(restaurant as any).id} restaurantSlug={(restaurant as any).slug} items={items} />
+        <RestaurantReviewChecklist
+          restaurantId={(restaurant as any).id}
+          restaurantSlug={(restaurant as any).slug}
+          items={items}
+        />
       </div>
     </Container>
   );

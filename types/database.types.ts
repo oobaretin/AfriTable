@@ -65,6 +65,7 @@ export type Database = {
           hours: Json | null;
           external_avg_rating: number | null;
           external_review_count: number | null;
+          verification: Json | null;
           is_active: boolean;
           created_at: string;
         };
@@ -86,6 +87,7 @@ export type Database = {
           hours?: Json | null;
           external_avg_rating?: number | null;
           external_review_count?: number | null;
+          verification?: Json | null;
           is_active?: boolean;
           created_at?: string;
         };
@@ -107,6 +109,7 @@ export type Database = {
           hours?: Json | null;
           external_avg_rating?: number | null;
           external_review_count?: number | null;
+          verification?: Json | null;
           is_active?: boolean;
           created_at?: string;
         };

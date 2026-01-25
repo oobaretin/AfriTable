@@ -26,13 +26,29 @@ export function RestaurantReviewChecklist(props: {
 
   const allChecked = props.items.every((i) => checked[i.id]);
 
+  const [saving, setSaving] = React.useState<string | null>(null);
+
+  async function persist(key: string, value: boolean) {
+    setSaving(key);
+    try {
+      const res = await fetch(`/admin/restaurants/${props.restaurantId}/verification`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ key, value }),
+      });
+      if (!res.ok) throw new Error();
+    } finally {
+      setSaving(null);
+    }
+  }
+
   return (
     <Card>
       <CardHeader className="flex flex-row items-start justify-between gap-4">
         <div>
           <CardTitle>Verification checklist</CardTitle>
           <div className="mt-1 text-sm text-muted-foreground">
-            Confirm key details before approving. (This checklist is currently not persisted.)
+            Confirm key details before approving. Changes are saved automatically.
           </div>
         </div>
         <Button asChild variant="outline">
@@ -48,10 +64,17 @@ export function RestaurantReviewChecklist(props: {
             <label key={i.id} className="flex items-start gap-3">
               <Checkbox
                 checked={checked[i.id]}
-                onCheckedChange={(v) => setChecked((prev) => ({ ...prev, [i.id]: Boolean(v) }))}
+                onCheckedChange={(v) => {
+                  const next = Boolean(v);
+                  setChecked((prev) => ({ ...prev, [i.id]: next }));
+                  void persist(i.id, next);
+                }}
               />
               <div className="min-w-0">
-                <div className="text-sm font-medium">{i.label}</div>
+                <div className="text-sm font-medium">
+                  {i.label}
+                  {saving === i.id ? <span className="ml-2 text-xs text-muted-foreground">(saving…)</span> : null}
+                </div>
                 {i.hint ? <div className="text-xs text-muted-foreground">{i.hint}</div> : null}
               </div>
             </label>
