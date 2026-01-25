@@ -65,6 +65,7 @@ export async function POST(request: Request, context: { params: { slug: string }
     full_name: parsed.data.full_name,
     phone: parsed.data.phone,
     role: "pending_owner",
+    has_reset_password: false,
   });
 
   if (profileError) {
@@ -84,6 +85,17 @@ export async function POST(request: Request, context: { params: { slug: string }
 
   if (claimError) {
     return NextResponse.redirect(new URL(`/restaurant/${encodeURIComponent(context.params.slug)}/claim?error=claim_failed`, request.url));
+  }
+
+  // Send password reset email so the owner can set their password.
+  // This uses Supabase Auth email provider settings.
+  try {
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? new URL(request.url).origin;
+    await supabaseAdmin.auth.resetPasswordForEmail(parsed.data.email, {
+      redirectTo: `${appUrl}/auth/callback?next=/reset-password`,
+    });
+  } catch {
+    // best-effort
   }
 
   return NextResponse.redirect(new URL("/claim-submitted", request.url));

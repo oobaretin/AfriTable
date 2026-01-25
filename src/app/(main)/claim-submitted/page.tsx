@@ -11,13 +11,13 @@ export default function ClaimSubmittedPage() {
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Claim submitted</CardTitle>
             <CardDescription>
-              Thanks! We’ve created your pending owner account and marked the restaurant as claimed. Our team will follow up if we
-              need more details.
+              Thanks! We created your pending owner account and marked the restaurant as claimed. Check your email for a password
+              setup link.
             </CardDescription>
           </CardHeader>
           <CardContent className="grid gap-3">
             <Button asChild>
-              <Link href="/login">Sign in</Link>
+              <Link href="/reset-password">Set password</Link>
             </Button>
             <Button asChild variant="outline">
               <Link href="/restaurants">Browse restaurants</Link>

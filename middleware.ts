@@ -48,11 +48,23 @@ export async function middleware(request: NextRequest) {
 
   // Owner-only: /dashboard
   if (user && url.pathname.startsWith("/dashboard")) {
-    const { data: profile, error } = await supabase
-      .from("profiles")
-      .select("role")
-      .eq("id", user.id)
-      .maybeSingle();
+    const { data: profile, error } = await supabase.from("profiles").select("role,has_reset_password").eq("id", user.id).maybeSingle();
+
+    // Pending owner onboarding gate: must set password first.
+    if (!error && profile?.role === "pending_owner" && !profile?.has_reset_password) {
+      const redirectUrl = request.nextUrl.clone();
+      redirectUrl.pathname = "/reset-password";
+      redirectUrl.search = "";
+      return NextResponse.redirect(redirectUrl);
+    }
+
+    // Pending owners should not access dashboard yet (wait for approval).
+    if (!error && profile?.role === "pending_owner") {
+      const redirectUrl = request.nextUrl.clone();
+      redirectUrl.pathname = "/claim-submitted";
+      redirectUrl.search = "";
+      return NextResponse.redirect(redirectUrl);
+    }
 
     if (error || profile?.role !== "restaurant_owner") {
       const redirectUrl = request.nextUrl.clone();

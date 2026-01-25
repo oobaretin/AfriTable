@@ -15,6 +15,7 @@ export type Database = {
           full_name: string | null;
           phone: string | null;
           role: Database["public"]["Enums"]["user_role"];
+          has_reset_password: boolean;
           avatar_url: string | null;
           created_at: string;
         };
@@ -23,6 +24,7 @@ export type Database = {
           full_name?: string | null;
           phone?: string | null;
           role?: Database["public"]["Enums"]["user_role"];
+          has_reset_password?: boolean;
           avatar_url?: string | null;
           created_at?: string;
         };
@@ -31,6 +33,7 @@ export type Database = {
           full_name?: string | null;
           phone?: string | null;
           role?: Database["public"]["Enums"]["user_role"];
+          has_reset_password?: boolean;
           avatar_url?: string | null;
           created_at?: string;
         };
