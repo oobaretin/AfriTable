@@ -2,7 +2,7 @@ import "server-only";
 
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient } from "@/lib/supabase/server";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,11 +12,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 export default async function ClaimRestaurantPage({ params }: { params: { slug: string } }) {
-  const supabaseSSR = createSupabaseServerClient();
-  const { data: auth } = await supabaseSSR.auth.getUser();
-  const user = auth.user;
-  if (!user) redirect(`/login?redirectTo=/restaurant/${encodeURIComponent(params.slug)}/claim`);
-
   const supabaseAdmin = createSupabaseAdminClient();
   const { data: restaurant } = await supabaseAdmin
     .from("restaurants")

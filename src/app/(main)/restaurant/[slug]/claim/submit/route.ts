@@ -2,7 +2,8 @@ import "server-only";
 
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient } from "@/lib/supabase/server";
+import { assertSameOrigin } from "@/lib/dashboard/auth";
 
 const formSchema = z.object({
   full_name: z.string().min(2).max(200),
@@ -12,12 +13,8 @@ const formSchema = z.object({
 });
 
 export async function POST(request: Request, context: { params: { slug: string } }) {
-  const supabaseSSR = createSupabaseServerClient();
-  const { data: auth } = await supabaseSSR.auth.getUser();
-  const user = auth.user;
-  if (!user) {
-    return NextResponse.redirect(new URL(`/login?redirectTo=/restaurant/${encodeURIComponent(context.params.slug)}/claim`, request.url));
-  }
+  // Basic CSRF protection for form posts
+  assertSameOrigin();
 
   const formData = await request.formData();
   const raw = {
@@ -32,8 +29,8 @@ export async function POST(request: Request, context: { params: { slug: string }
     return NextResponse.redirect(new URL(`/restaurant/${encodeURIComponent(context.params.slug)}/claim?error=invalid`, request.url));
   }
 
-  // Lookup restaurant (bypass restaurants RLS which only exposes active restaurants)
   const supabaseAdmin = createSupabaseAdminClient();
+
   const { data: restaurant, error: restaurantError } = await supabaseAdmin
     .from("restaurants")
     .select("id,is_claimed")
@@ -48,21 +45,47 @@ export async function POST(request: Request, context: { params: { slug: string }
     return NextResponse.redirect(new URL(`/restaurant/${encodeURIComponent(context.params.slug)}/claim?error=claimed`, request.url));
   }
 
-  // Insert claim request under the user's session (RLS enforces user_id = auth.uid()).
-  const { error: insertError } = await supabaseSSR.from("restaurant_claim_requests").insert({
-    restaurant_id: (restaurant as any).id,
-    user_id: user.id,
-    full_name: parsed.data.full_name,
+  // Create pending owner account (service-role only)
+  const randomPassword = Math.random().toString(36).slice(-12);
+  const { data: created, error: createUserError } = await supabaseAdmin.auth.admin.createUser({
     email: parsed.data.email,
-    phone: parsed.data.phone,
-    proof: parsed.data.proof ?? null,
+    password: randomPassword,
+    email_confirm: true,
   });
 
-  if (insertError) {
-    // Handles duplicate pending (unique partial index) and other failures.
-    return NextResponse.redirect(new URL(`/restaurant/${encodeURIComponent(context.params.slug)}/claim?error=submit_failed`, request.url));
+  if (createUserError || !created?.user?.id) {
+    return NextResponse.redirect(new URL(`/restaurant/${encodeURIComponent(context.params.slug)}/claim?error=user_create_failed`, request.url));
   }
 
-  return NextResponse.redirect(new URL(`/restaurant/${encodeURIComponent(context.params.slug)}/claim?submitted=1`, request.url));
+  const pendingOwnerId = created.user.id;
+
+  // Create profile (must exist before claimed_by due to FK)
+  const { error: profileError } = await supabaseAdmin.from("profiles").insert({
+    id: pendingOwnerId,
+    full_name: parsed.data.full_name,
+    phone: parsed.data.phone,
+    role: "pending_owner",
+  });
+
+  if (profileError) {
+    return NextResponse.redirect(new URL(`/restaurant/${encodeURIComponent(context.params.slug)}/claim?error=profile_create_failed`, request.url));
+  }
+
+  // Mark restaurant claimed
+  const { error: claimError } = await supabaseAdmin
+    .from("restaurants")
+    .update({
+      is_claimed: true,
+      claimed_by: pendingOwnerId,
+      claimed_at: new Date().toISOString(),
+    })
+    .eq("slug", context.params.slug)
+    .eq("is_claimed", false);
+
+  if (claimError) {
+    return NextResponse.redirect(new URL(`/restaurant/${encodeURIComponent(context.params.slug)}/claim?error=claim_failed`, request.url));
+  }
+
+  return NextResponse.redirect(new URL("/claim-submitted", request.url));
 }
 

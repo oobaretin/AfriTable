@@ -488,7 +488,7 @@ export type Database = {
     };
     Enums: {
       claim_request_status: "pending" | "approved" | "rejected";
-      user_role: "diner" | "restaurant_owner" | "admin";
+      user_role: "diner" | "pending_owner" | "restaurant_owner" | "admin";
       reservation_status:
         | "pending"
         | "confirmed"
