@@ -6,9 +6,9 @@ import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/sup
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { RestaurantReviewChecklist } from "@/components/admin/RestaurantReviewChecklist";
 import { PhotoUploader } from "@/components/admin/PhotoUploader";
 import { Button } from "@/components/ui/button";
+import { Checklist } from "@/components/admin/Checklist";
 
 function addressLine(a: any): string {
   if (!a || typeof a !== "object") return "—";
@@ -45,49 +45,13 @@ export default async function AdminRestaurantReviewPage({ params }: { params: { 
   const city = addr?.city ?? null;
   const verification = ((restaurant as any).verification ?? {}) as Record<string, unknown>;
 
-  const items = [
-    {
-      id: "name",
-      label: "Name looks correct",
-      initialChecked: typeof verification.name === "boolean" ? (verification.name as boolean) : Boolean((restaurant as any).name),
-    },
-    {
-      id: "address",
-      label: "Address is complete",
-      initialChecked:
-        typeof verification.address === "boolean"
-          ? (verification.address as boolean)
-          : Boolean(addr?.street && addr?.city && addr?.state),
-    },
-    {
-      id: "phone",
-      label: "Phone number present",
-      initialChecked: typeof verification.phone === "boolean" ? (verification.phone as boolean) : Boolean((restaurant as any).phone),
-    },
-    {
-      id: "hours",
-      label: "Operating hours set",
-      initialChecked:
-        typeof verification.hours === "boolean"
-          ? (verification.hours as boolean)
-          : Array.isArray((restaurant as any).hours) && (restaurant as any).hours.length > 0,
-    },
-    {
-      id: "photos",
-      label: "At least one photo provided",
-      initialChecked: typeof verification.photos === "boolean" ? (verification.photos as boolean) : images.length > 0,
-    },
-    {
-      id: "description",
-      label: "Description looks good",
-      initialChecked:
-        typeof verification.description === "boolean"
-          ? (verification.description as boolean)
-          : Boolean((restaurant as any).description),
-    },
-  ];
-
-  const allVerified = items.every((i) => Boolean(i.initialChecked));
+  const allVerified =
+    Boolean(verification.name) &&
+    Boolean(verification.address) &&
+    Boolean(verification.phone) &&
+    Boolean(verification.hours) &&
+    Boolean(verification.photos) &&
+    Boolean(verification.description);
 
   return (
     <div className="mx-auto max-w-4xl px-6 py-10 md:py-14 space-y-6">
@@ -106,7 +70,7 @@ export default async function AdminRestaurantReviewPage({ params }: { params: { 
       />
 
       {/* Checklist */}
-      <RestaurantReviewChecklist restaurantId={(restaurant as any).id} restaurantSlug={(restaurant as any).slug} items={items} />
+      <Checklist restaurantId={(restaurant as any).id} verification={verification as any} />
 
       {/* Details */}
       <Card>
