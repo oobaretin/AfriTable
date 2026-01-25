@@ -135,7 +135,7 @@ async function main() {
     const slug = slugify(r.slug || r.name);
     const cuisineTypes = Array.isArray(r.cuisine_types) ? r.cuisine_types : [];
     const address = r.address ?? null;
-    const phone = r.phone ?? null;
+    const phone = normalizeOptionalString(r.phone);
     const website = normalizeOptionalString(r.website);
     const instagramHandle = normalizeOptionalString(r.instagram);
     const facebookUrl = normalizeOptionalString(r.facebook);

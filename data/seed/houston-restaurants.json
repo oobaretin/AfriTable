@@ -125,7 +125,7 @@
     },
     "phone": "+1 346-252-2336",
     "website": "",
-    "description": "Well‑liked West African restaurant known locally for authentic flavors and generous portions.",
+    "description": "Highly rated West African restaurant known for authentic tastes and generous portions in a relaxed neighborhood setting.",
     "price_range": 2,
     "hours": {
       "monday": { "open": "12:00 PM", "close": "8:00 PM", "closed": false },
@@ -171,7 +171,7 @@
     },
     "phone": "+1 832-771-8778",
     "website": "",
-    "description": "Casual African restaurant serving a variety of dishes with traditional spices and flavors.",
+    "description": "Local African flavors restaurant offering a variety of traditional dishes with a casual vibe and generous portions.",
     "price_range": 2,
     "hours": {
       "monday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
@@ -194,7 +194,7 @@
     },
     "phone": "(713) 804-2764",
     "website": "https://www.afrocaribbeangrill.com",
-    "description": "Fusion African & Caribbean flavors with suya, jerk, and other soulful dishes prepared fresh daily.",
+    "description": "Fusion of West African and Caribbean flavors with suya, jerk dishes, and soulful specialties.",
     "price_range": 2,
     "hours": {
       "monday": { "open": "", "close": "", "closed": true },
@@ -204,6 +204,121 @@
       "friday": { "open": "4:00 PM", "close": "12:00 AM", "closed": false },
       "saturday": { "open": "12:00 PM", "close": "12:00 AM", "closed": false },
       "sunday": { "open": "12:00 PM", "close": "10:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Safari Nigerian Restaurant",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "10014 Bissonnet St",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77036"
+    },
+    "phone": "+1 713-541-4436",
+    "website": "",
+    "description": "Classic Nigerian spot with a long history in Houston, serving traditional dishes like egusi, jollof rice, and suya. A community favorite.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "friday": { "open": "11:00 AM", "close": "10:00 PM", "closed": false },
+      "saturday": { "open": "12:00 PM", "close": "10:00 PM", "closed": false },
+      "sunday": { "open": "12:00 PM", "close": "8:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Suya Hut",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "11720 W Airport Blvd #1600",
+      "city": "Meadows Place",
+      "state": "TX",
+      "zip": "77477"
+    },
+    "phone": "",
+    "website": "",
+    "description": "Casual spot focused on Nigerian suya and grilled classics with bold spices and an approachable menu. Featured locally for its smoke‑grilled flavors.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "friday": { "open": "11:00 AM", "close": "10:00 PM", "closed": false },
+      "saturday": { "open": "12:00 PM", "close": "10:00 PM", "closed": false },
+      "sunday": { "open": "12:00 PM", "close": "9:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Delight's Ghanaian Cuisine",
+    "cuisine_types": ["Ghanaian", "West African"],
+    "address": {
+      "street": "14524 Piping Rock Ln",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77077"
+    },
+    "phone": "+1 281-995-1958",
+    "website": "https://order.spoton.com/so-delights-delight-kitchen-3629/houston-tx/6532c4ce2cb4e2003dd65e05",
+    "description": "Well‑loved Ghanaian restaurant with homestyle cooking, praised for rich flavors and generous portions.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "12:30 PM", "close": "7:30 PM", "closed": false },
+      "tuesday": { "open": "11:30 AM", "close": "7:00 PM", "closed": false },
+      "wednesday": { "open": "11:30 AM", "close": "9:00 PM", "closed": false },
+      "thursday": { "open": "11:30 AM", "close": "9:00 PM", "closed": false },
+      "friday": { "open": "11:30 AM", "close": "9:00 PM", "closed": false },
+      "saturday": { "open": "11:30 AM", "close": "9:00 PM", "closed": false },
+      "sunday": { "open": "11:30 AM", "close": "9:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Blue Nile Ethiopian Restaurant",
+    "cuisine_types": ["Ethiopian"],
+    "address": {
+      "street": "7770 Southwest Fwy",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77074"
+    },
+    "phone": "+1 713-774-3000",
+    "website": "",
+    "description": "Family‑friendly Ethiopian restaurant known for traditional injera and hearty stews like doro wat, frequently recommended by locals.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "saturday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "sunday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false }
+    }
+  },
+  {
+    "name": "Cafe Abuja",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "7010 Southwest Fwy Unit D",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77074"
+    },
+    "phone": "(713) 777-9929",
+    "website": "",
+    "description": "Popular Nigerian restaurant known for rich flavors and classic staples such as egusi and jollof rice, frequently recommended by the Houston community.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
+      "saturday": { "open": "12:00 PM", "close": "9:00 PM", "closed": false },
+      "sunday": { "open": "12:00 PM", "close": "8:00 PM", "closed": false }
     }
   }
 ]

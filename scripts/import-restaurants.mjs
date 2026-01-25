@@ -175,7 +175,7 @@ async function importRestaurants(filePath) {
             slug,
             cuisine_types: Array.isArray(restaurant?.cuisine_types) ? restaurant.cuisine_types : [],
             address: restaurant?.address ?? null,
-            phone: restaurant?.phone ?? null,
+            phone: normalizeOptionalString(restaurant?.phone),
             website: normalizeOptionalString(restaurant?.website),
             instagram_handle: normalizeOptionalString(restaurant?.instagram),
             facebook_url: normalizeOptionalString(restaurant?.facebook),

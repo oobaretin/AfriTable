@@ -195,7 +195,7 @@ async function importRestaurants(filePath: string) {
             slug,
             cuisine_types: restaurant.cuisine_types,
             address: restaurant.address,
-            phone: restaurant.phone,
+            phone: normalizeOptionalString(restaurant.phone),
             website: normalizeOptionalString(restaurant.website),
             instagram_handle: normalizeOptionalString(restaurant.instagram),
             facebook_url: normalizeOptionalString(restaurant.facebook),
