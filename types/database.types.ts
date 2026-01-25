@@ -464,6 +464,9 @@ export type Database = {
           website: string | null;
           notes: string | null;
           submitted_by_email: string | null;
+          owner_invited: boolean;
+          owner_invited_at: string | null;
+          owner_email: string | null;
           status: string;
           created_at: string;
         };
@@ -478,6 +481,9 @@ export type Database = {
           website?: string | null;
           notes?: string | null;
           submitted_by_email?: string | null;
+          owner_invited?: boolean;
+          owner_invited_at?: string | null;
+          owner_email?: string | null;
           status?: string;
           created_at?: string;
         };
@@ -492,6 +498,9 @@ export type Database = {
           website?: string | null;
           notes?: string | null;
           submitted_by_email?: string | null;
+          owner_invited?: boolean;
+          owner_invited_at?: string | null;
+          owner_email?: string | null;
           status?: string;
           created_at?: string;
         };
