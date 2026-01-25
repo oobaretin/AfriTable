@@ -1,0 +1,189 @@
+#!/usr/bin/env node
+import fs from "node:fs";
+import path from "node:path";
+import crypto from "node:crypto";
+import { fileURLToPath } from "node:url";
+import { createClient } from "@supabase/supabase-js";
+
+function requireEnv(name) {
+  const v = process.env[name];
+  if (!v) throw new Error(`Missing environment variable: ${name}`);
+  return v;
+}
+
+function slugify(input) {
+  return String(input)
+    .toLowerCase()
+    .trim()
+    .replace(/['"]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function normalizeHoursToArray(hoursObj) {
+  // Our DB uses: [{ day_of_week: 0..6, open_time: "HH:mm", close_time: "HH:mm" }]
+  // Input uses: { monday: { open, close, closed }, ... }
+  if (!hoursObj || typeof hoursObj !== "object") return [];
+  const map = [
+    ["sunday", 0],
+    ["monday", 1],
+    ["tuesday", 2],
+    ["wednesday", 3],
+    ["thursday", 4],
+    ["friday", 5],
+    ["saturday", 6],
+  ];
+  const out = [];
+  for (const [key, dow] of map) {
+    const v = hoursObj[key];
+    if (!v || typeof v !== "object") continue;
+    if (v.closed) continue;
+    if (!v.open || !v.close) continue;
+    out.push({ day_of_week: dow, open_time: String(v.open), close_time: String(v.close) });
+  }
+  return out;
+}
+
+async function getOrCreateSeedOwner(supabaseAdmin) {
+  const email = process.env.SEED_OWNER_EMAIL || "seed-owner@afritable.local";
+  const password =
+    process.env.SEED_OWNER_PASSWORD || crypto.randomBytes(24).toString("base64url") + "Aa1!";
+
+  // Try to create; if exists, look it up.
+  const created = await supabaseAdmin.auth.admin.createUser({
+    email,
+    password,
+    email_confirm: true,
+    user_metadata: {
+      full_name: "AfriTable Seed Owner",
+      role: "restaurant_owner",
+      phone: "(000) 000-0000",
+    },
+  });
+
+  if (!created.error && created.data?.user?.id) {
+    // eslint-disable-next-line no-console
+    console.log(`seed owner created: ${email}`);
+    return created.data.user.id;
+  }
+
+  // If user already exists, find by email (best-effort).
+  if (created.error && /already/i.test(created.error.message)) {
+    for (let page = 1; page <= 10; page++) {
+      const listed = await supabaseAdmin.auth.admin.listUsers({ page, perPage: 200 });
+      const found = (listed.data?.users || []).find((u) => u.email?.toLowerCase() === email.toLowerCase());
+      if (found?.id) {
+        // eslint-disable-next-line no-console
+        console.log(`seed owner found: ${email}`);
+        return found.id;
+      }
+      if ((listed.data?.users || []).length < 200) break;
+    }
+  }
+
+  throw new Error(`Could not create/find seed owner (${email}): ${created.error?.message || "unknown error"}`);
+}
+
+async function main() {
+  const url = requireEnv("NEXT_PUBLIC_SUPABASE_URL");
+  const serviceRoleKey = requireEnv("SUPABASE_SERVICE_ROLE_KEY");
+
+  const supabaseAdmin = createClient(url, serviceRoleKey, {
+    auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
+  });
+
+  const ownerId = await getOrCreateSeedOwner(supabaseAdmin);
+
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+  const seedPath = path.resolve(__dirname, "..", "data", "seed", "restaurants.json");
+  const raw = fs.readFileSync(seedPath, "utf8");
+  const records = JSON.parse(raw);
+  if (!Array.isArray(records) || records.length === 0) throw new Error("No restaurants found in data/seed/restaurants.json");
+
+  for (const r of records) {
+    const name = r.name;
+    const slug = slugify(r.slug || r.name);
+    const cuisineTypes = Array.isArray(r.cuisine_types) ? r.cuisine_types : [];
+    const address = r.address ?? null;
+    const phone = r.phone ?? null;
+    const website = r.website ?? null;
+    const instagramHandle = typeof r.instagram === "string" ? r.instagram : null;
+    const facebookUrl = typeof r.facebook === "string" ? r.facebook : null;
+    const externalAvgRating = typeof r.google_rating === "number" ? r.google_rating : null;
+
+    const hoursArray = normalizeHoursToArray(r.hours);
+
+    const images = [
+      // safe placeholder (you can replace with real photos later)
+      "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1600&q=80",
+    ];
+
+    const upsertRestaurant = await supabaseAdmin
+      .from("restaurants")
+      .upsert(
+        {
+          owner_id: ownerId,
+          name,
+          slug,
+          cuisine_types: cuisineTypes,
+          address,
+          phone,
+          website,
+          instagram_handle: instagramHandle,
+          facebook_url: facebookUrl,
+          external_avg_rating: externalAvgRating,
+          external_review_count: r.google_review_count ?? null,
+          price_range: Number(r.price_range || 2),
+          description: r.description ?? null,
+          images,
+          hours: hoursArray,
+          is_active: true,
+        },
+        { onConflict: "slug" },
+      )
+      .select("id,slug")
+      .single();
+
+    if (upsertRestaurant.error) throw new Error(`Restaurant upsert failed (${name}): ${upsertRestaurant.error.message}`);
+    const restaurantId = upsertRestaurant.data.id;
+
+    // Availability settings (idempotent)
+    const upsertSettings = await supabaseAdmin
+      .from("availability_settings")
+      .upsert(
+        {
+          restaurant_id: restaurantId,
+          slot_duration_minutes: 90,
+          operating_hours: hoursArray,
+        },
+        { onConflict: "restaurant_id" },
+      );
+    if (upsertSettings.error) throw new Error(`availability_settings upsert failed (${name}): ${upsertSettings.error.message}`);
+
+    // Seed a few tables so availability works immediately (idempotent via delete+insert)
+    await supabaseAdmin.from("restaurant_tables").delete().eq("restaurant_id", restaurantId);
+    const tables = [
+      { table_number: "T1", capacity: 2 },
+      { table_number: "T2", capacity: 2 },
+      { table_number: "T3", capacity: 4 },
+      { table_number: "T4", capacity: 4 },
+      { table_number: "T5", capacity: 4 },
+      { table_number: "T6", capacity: 6 },
+      { table_number: "T7", capacity: 6 },
+      { table_number: "T8", capacity: 8 },
+    ].map((t) => ({ ...t, restaurant_id: restaurantId, is_active: true }));
+    const insTables = await supabaseAdmin.from("restaurant_tables").insert(tables);
+    if (insTables.error) throw new Error(`restaurant_tables insert failed (${name}): ${insTables.error.message}`);
+
+    // eslint-disable-next-line no-console
+    console.log(`seeded: ${name} (${slug})`);
+  }
+}
+
+main().catch((e) => {
+  // eslint-disable-next-line no-console
+  console.error(e);
+  process.exit(1);
+});
+

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Lagos Kitchen",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "9889 Bissonnet St",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77036",
+      "coordinates": { "lat": 29.6947, "lng": -95.5639 }
+    },
+    "phone": "(713) 555-0100",
+    "website": "https://lagoskitchen.com",
+    "description": "Authentic Nigerian cuisine bringing the flavors of Lagos to Houston. Family-owned restaurant serving traditional jollof rice, egusi soup, suya, and more.",
+    "price_range": 2,
+    "hours": {
+      "monday": { "open": "11:00", "close": "22:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "22:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "22:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "22:00", "closed": false },
+      "friday": { "open": "11:00", "close": "23:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "23:00", "closed": false },
+      "sunday": { "open": "12:00", "close": "21:00", "closed": false }
+    },
+    "google_rating": 4.5,
+    "instagram": "@lagoskitchenhtx",
+    "facebook": "https://facebook.com/lagoskitchen"
+  }
+]
+
