@@ -9,118 +9,20 @@
       "zip": "77006"
     },
     "phone": "+1 832-962-4500",
-    "website": "https://chopnblok.co",
-    "description": "ChòpnBlọk is a fast-casual restaurant concept that carefully unveils the West African culinary experience, serving fresh proteins, vegetables, grains, and beverages prepared under a West African flavor profile, packaged in a local, contemporary fashion. Freshness and integrity are embedded in our culture.",
+    "website": "https://chopnblok.co/",
+    "instagram": "https://www.instagram.com/chopnblọk/",
+    "facebook": "https://www.facebook.com/chopnblok/",
+    "description": "Modern West African restaurant celebrating diaspora flavors in Montrose with bowls, suya, and cocktails.",
     "price_range": 3,
     "google_rating": 4.6,
-    "instagram": "https://www.instagram.com/chopnblok_/",
-    "facebook": "https://www.facebook.com/chopnblok/",
-    "sources": {
-      "website_url": { "url": "https://chopnblok.co/" },
-      "instagram_url": { "url": "https://www.instagram.com/chopnblok_/" },
-      "facebook_url": { "url": "https://www.facebook.com/chopnblok/" }
-    },
     "hours": {
-      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "thursday": { "open": "11:00 AM", "close": "10:00 PM", "closed": false },
-      "friday": { "open": "11:00 AM", "close": "10:00 PM", "closed": false },
-      "saturday": { "open": "11:00 AM", "close": "10:00 PM", "closed": false },
-      "sunday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false }
-    }
-  },
-  {
-    "name": "Afrikiko Restaurant",
-    "cuisine_types": ["Ghanaian", "West African"],
-    "address": {
-      "street": "9625 Bissonnet St",
-      "city": "Houston",
-      "state": "TX",
-      "zip": "77036"
-    },
-    "phone": "+1 713-773-1400",
-    "website": "https://afrikikohouston.com/",
-    "description": "Experience the wonderful taste of African cuisine, from the spicy and tasty, to the downright mind-blowing. It's all here at Afrikiko.",
-    "price_range": 2,
-    "google_rating": 4.4,
-    "instagram": "https://www.instagram.com/afrikikohouston/",
-    "facebook": "https://www.facebook.com/afrikikohouston/",
-    "sources": {
-      "website_url": { "url": "https://afrikikohouston.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/afrikikohouston/" },
-      "facebook_url": { "url": "https://www.facebook.com/afrikikohouston/" }
-    },
-    "hours": {
-      "monday": { "open": "", "close": "", "closed": true },
-      "tuesday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false },
-      "wednesday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false },
-      "thursday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false },
-      "friday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false },
-      "saturday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false },
-      "sunday": { "open": "12:30 PM", "close": "10:00 PM", "closed": false }
-    }
-  },
-  {
-    "name": "Dakar Street Food",
-    "cuisine_types": ["Senegalese", "West African"],
-    "address": {
-      "street": "2923 Walnut Bend Ln",
-      "city": "Houston",
-      "state": "TX",
-      "zip": "77042"
-    },
-    "phone": "+1 281-846-6420",
-    "website": "https://dakarstreetfood.com",
-    "description": "We serve real Senegalese, West African, and Jamaican food right here in Houston. Our menu features classic dishes made with fresh ingredients and bold flavors. Whether you're trying these cuisines for the first time or grew up eating them, we've got something for you.",
-    "price_range": 2,
-    "google_rating": 4.8,
-    "instagram": "https://www.instagram.com/dakarstreetfood/",
-    "facebook": "https://www.facebook.com/dakarstreetfood/",
-    "sources": {
-      "website_url": { "url": "https://dakarstreetfood.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/dakarstreetfood/" },
-      "facebook_url": { "url": "https://www.facebook.com/dakarstreetfood/" }
-    },
-    "hours": {
-      "monday": { "open": "", "close": "", "closed": true },
-      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "saturday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "sunday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false }
-    }
-  },
-  {
-    "name": "Lucy Ethiopian Restaurant & Lounge",
-    "cuisine_types": ["Ethiopian"],
-    "address": {
-      "street": "6800 Southwest Fwy",
-      "city": "Houston",
-      "state": "TX",
-      "zip": "77074"
-    },
-    "phone": "+1 713-334-0000",
-    "website": "https://lucyhouston.com/",
-    "description": "Our restaurant and lounge celebrates the roots of humanity in Ethiopia – which you will find in our food, art gallery, and festivities. We are family-owned and operated with friendly staff, delicious food and drink, and a great atmosphere.",
-    "price_range": 2,
-    "google_rating": 4.4,
-    "instagram": "https://www.instagram.com/lucyethiopianrestaurant/",
-    "facebook": "https://www.facebook.com/ILoveLucys123/",
-    "sources": {
-      "website_url": { "url": "https://lucyhouston.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/lucyethiopianrestaurant/" },
-      "facebook_url": { "url": "https://www.facebook.com/ILoveLucys123/" }
-    },
-    "hours": {
-      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "saturday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "sunday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false }
+      "monday": { "open": "11:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "21:00", "closed": false },
+      "friday": { "open": "11:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "11:00", "close": "21:00", "closed": false }
     }
   },
   {
@@ -133,17 +35,46 @@
       "zip": "77083"
     },
     "phone": "+1 281-721-2982",
-    "website": "",
-    "description": "Local African restaurant offering a variety of traditional dishes in a casual setting.",
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "description": "African restaurant with a range of traditional dishes.",
     "price_range": 2,
+    "google_rating": 4.5,
     "hours": {
-      "monday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false },
-      "tuesday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false },
-      "wednesday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false },
-      "thursday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false },
-      "friday": { "open": "10:00 AM", "close": "7:00 PM", "closed": false },
-      "saturday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false },
-      "sunday": { "open": "10:00 AM", "close": "10:00 PM", "closed": false }
+      "monday": { "open": "10:00", "close": "22:00", "closed": false },
+      "tuesday": { "open": "10:00", "close": "22:00", "closed": false },
+      "wednesday": { "open": "10:00", "close": "22:00", "closed": false },
+      "thursday": { "open": "10:00", "close": "22:00", "closed": false },
+      "friday": { "open": "10:00", "close": "19:00", "closed": false },
+      "saturday": { "open": "10:00", "close": "22:00", "closed": false },
+      "sunday": { "open": "10:00", "close": "22:00", "closed": false }
+    }
+  },
+  {
+    "name": "Bantu House",
+    "cuisine_types": ["African"],
+    "address": {
+      "street": "22224 Northwest Fwy, Ste B",
+      "city": "Cypress",
+      "state": "TX",
+      "zip": "77429"
+    },
+    "phone": "+1 713-360-8333",
+    "website": "http://bantuhouse.com",
+    "instagram": "https://www.instagram.com/bantuhouse/",
+    "facebook": "https://www.facebook.com/bantuhouse/",
+    "description": "Celebrates diverse African culinary heritage with regional dishes and cultural vibe.",
+    "price_range": 3,
+    "google_rating": 4.7,
+    "hours": {
+      "monday": { "open": "", "close": "", "closed": true },
+      "tuesday": { "open": "12:00", "close": "22:00", "closed": false },
+      "wednesday": { "open": "12:00", "close": "22:00", "closed": false },
+      "thursday": { "open": "12:00", "close": "22:00", "closed": false },
+      "friday": { "open": "12:00", "close": "22:00", "closed": false },
+      "saturday": { "open": "12:00", "close": "22:00", "closed": false },
+      "sunday": { "open": "", "close": "", "closed": true }
     }
   },
   {
@@ -156,40 +87,72 @@
       "zip": "77063"
     },
     "phone": "+1 346-252-2336",
-    "website": "",
-    "description": "Highly rated West African restaurant known for authentic tastes and generous portions in a relaxed neighborhood setting.",
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "description": "West African restaurant known for flavorful cuisine.",
     "price_range": 2,
+    "google_rating": 4.6,
     "hours": {
-      "monday": { "open": "12:00 PM", "close": "8:00 PM", "closed": false },
-      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "saturday": { "open": "12:00 PM", "close": "9:00 PM", "closed": false },
-      "sunday": { "open": "12:00 PM", "close": "8:00 PM", "closed": false }
+      "monday": { "open": "11:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "21:00", "closed": false },
+      "friday": { "open": "11:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "12:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "12:00", "close": "20:00", "closed": false }
     }
   },
   {
-    "name": "Bantu House",
-    "cuisine_types": ["African"],
+    "name": "Lucy Ethiopian Restaurant & Lounge",
+    "cuisine_types": ["Ethiopian"],
     "address": {
-      "street": "22224 Northwest Fwy",
-      "city": "Cypress",
+      "street": "6800 Southwest Fwy",
+      "city": "Houston",
       "state": "TX",
-      "zip": "77429"
+      "zip": "77074"
     },
-    "phone": "+1 713-360-8333",
-    "website": "http://bantuhouse.com",
-    "description": "Pan‑African dining experience celebrating flavors from across the continent with authentic dishes and cultural ambience.",
-    "price_range": 3,
+    "phone": "+1 713-334-0000",
+    "website": "http://www.lucyhouston.com",
+    "instagram": "https://www.instagram.com/lucyhouston/",
+    "facebook": "https://www.facebook.com/LucyEthiopianRestaurant/",
+    "description": "Ethiopian restaurant and lounge with traditional dishes like injera and stews.",
+    "price_range": 2,
+    "google_rating": 4.3,
     "hours": {
-      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "saturday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "sunday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false }
+      "monday": { "open": "", "close": "", "closed": true },
+      "tuesday": { "open": "11:00", "close": "23:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "23:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "23:00", "closed": false },
+      "friday": { "open": "11:00", "close": "23:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "23:00", "closed": false },
+      "sunday": { "open": "11:00", "close": "23:00", "closed": false }
+    }
+  },
+  {
+    "name": "Sarabell Calabar Restaurant & Buffet",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "9801 Bissonnet St Ste C",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77036"
+    },
+    "phone": "+1 713-814-5253",
+    "website": "https://sarabellcalabarrestaurant.com",
+    "instagram": "https://www.instagram.com/sarabellcalabar/",
+    "facebook": "https://www.facebook.com/sarabellcalabar/",
+    "description": "Buffet-style Nigerian cuisine with traditional favorites.",
+    "price_range": 2,
+    "google_rating": 4.7,
+    "hours": {
+      "monday": { "open": "08:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "08:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "08:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "08:00", "close": "21:00", "closed": false },
+      "friday": { "open": "08:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "08:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "08:00", "close": "21:00", "closed": false }
     }
   },
   {
@@ -202,86 +165,20 @@
       "zip": "77099"
     },
     "phone": "+1 832-771-8778",
-    "website": "",
-    "description": "Local African flavors restaurant offering a variety of traditional dishes with a casual vibe and generous portions.",
+    "website": null,
+    "instagram": "https://www.instagram.com/marieafricanflavors/",
+    "facebook": "https://www.facebook.com/MarieAfricanFlavors/",
+    "description": "African restaurant featuring jollof rice, grilled fish, and more.",
     "price_range": 2,
+    "google_rating": 3.5,
     "hours": {
-      "monday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
-      "tuesday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
-      "wednesday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
-      "thursday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
-      "friday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
-      "saturday": { "open": "11:00 AM", "close": "8:00 PM", "closed": false },
-      "sunday": { "open": "11:00 AM", "close": "7:00 PM", "closed": false }
-    }
-  },
-  {
-    "name": "Afro Caribbean Grill",
-    "cuisine_types": ["African", "Caribbean"],
-    "address": {
-      "street": "1903 Blodgett St",
-      "city": "Houston",
-      "state": "TX",
-      "zip": "77004"
-    },
-    "phone": "(713) 804-2764",
-    "website": "https://www.afrocaribbeangrill.com",
-    "description": "Fusion of West African and Caribbean flavors with suya, jerk dishes, and soulful specialties.",
-    "price_range": 2,
-    "hours": {
-      "monday": { "open": "", "close": "", "closed": true },
-      "tuesday": { "open": "4:00 PM", "close": "10:00 PM", "closed": false },
-      "wednesday": { "open": "4:00 PM", "close": "10:00 PM", "closed": false },
-      "thursday": { "open": "12:00 PM", "close": "10:00 PM", "closed": false },
-      "friday": { "open": "4:00 PM", "close": "12:00 AM", "closed": false },
-      "saturday": { "open": "12:00 PM", "close": "12:00 AM", "closed": false },
-      "sunday": { "open": "12:00 PM", "close": "10:00 PM", "closed": false }
-    }
-  },
-  {
-    "name": "Safari Nigerian Restaurant",
-    "cuisine_types": ["Nigerian", "West African"],
-    "address": {
-      "street": "10014 Bissonnet St",
-      "city": "Houston",
-      "state": "TX",
-      "zip": "77036"
-    },
-    "phone": "+1 713-541-4436",
-    "website": "",
-    "description": "Classic Nigerian spot with a long history in Houston, serving traditional dishes like egusi, jollof rice, and suya. A community favorite.",
-    "price_range": 2,
-    "hours": {
-      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "friday": { "open": "11:00 AM", "close": "10:00 PM", "closed": false },
-      "saturday": { "open": "12:00 PM", "close": "10:00 PM", "closed": false },
-      "sunday": { "open": "12:00 PM", "close": "8:00 PM", "closed": false }
-    }
-  },
-  {
-    "name": "Suya Hut",
-    "cuisine_types": ["Nigerian", "West African"],
-    "address": {
-      "street": "11720 W Airport Blvd #1600",
-      "city": "Meadows Place",
-      "state": "TX",
-      "zip": "77477"
-    },
-    "phone": "",
-    "website": "",
-    "description": "Casual spot focused on Nigerian suya and grilled classics with bold spices and an approachable menu. Featured locally for its smoke‑grilled flavors.",
-    "price_range": 2,
-    "hours": {
-      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "friday": { "open": "11:00 AM", "close": "10:00 PM", "closed": false },
-      "saturday": { "open": "12:00 PM", "close": "10:00 PM", "closed": false },
-      "sunday": { "open": "12:00 PM", "close": "9:00 PM", "closed": false }
+      "monday": { "open": "12:30", "close": "22:00", "closed": false },
+      "tuesday": { "open": "12:30", "close": "22:00", "closed": false },
+      "wednesday": { "open": "12:30", "close": "22:00", "closed": false },
+      "thursday": { "open": "12:30", "close": "22:00", "closed": false },
+      "friday": { "open": "12:30", "close": "23:00", "closed": false },
+      "saturday": { "open": "12:30", "close": "23:00", "closed": false },
+      "sunday": { "open": "12:30", "close": "23:00", "closed": false }
     }
   },
   {
@@ -295,311 +192,201 @@
     },
     "phone": "+1 281-995-1958",
     "website": "https://order.spoton.com/so-delights-delight-kitchen-3629/houston-tx/6532c4ce2cb4e2003dd65e05",
-    "description": "Well‑loved Ghanaian restaurant with homestyle cooking, praised for rich flavors and generous portions.",
+    "instagram": "https://www.instagram.com/delight_foodtx/",
+    "facebook": "https://www.facebook.com/DelightsGhanaianCuisine/",
+    "description": "Ghanaian cuisine with favorites like jollof and suya.",
     "price_range": 2,
+    "google_rating": 4.8,
     "hours": {
-      "monday": { "open": "12:30 PM", "close": "7:30 PM", "closed": false },
-      "tuesday": { "open": "11:30 AM", "close": "7:00 PM", "closed": false },
-      "wednesday": { "open": "11:30 AM", "close": "9:00 PM", "closed": false },
-      "thursday": { "open": "11:30 AM", "close": "9:00 PM", "closed": false },
-      "friday": { "open": "11:30 AM", "close": "9:00 PM", "closed": false },
-      "saturday": { "open": "11:30 AM", "close": "9:00 PM", "closed": false },
-      "sunday": { "open": "11:30 AM", "close": "9:00 PM", "closed": false }
+      "monday": { "open": "11:30", "close": "19:00", "closed": false },
+      "tuesday": { "open": "11:30", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:30", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:30", "close": "21:00", "closed": false },
+      "friday": { "open": "11:30", "close": "21:00", "closed": false },
+      "saturday": { "open": "11:30", "close": "21:00", "closed": false },
+      "sunday": { "open": "11:30", "close": "19:00", "closed": false }
     }
   },
   {
-    "name": "Blue Nile Ethiopian Restaurant",
-    "cuisine_types": ["Ethiopian"],
+    "name": "Afro Caribbean Grill",
+    "cuisine_types": ["African", "Caribbean"],
     "address": {
-      "street": "7770 Southwest Fwy",
+      "street": "1903 Blodgett St",
       "city": "Houston",
       "state": "TX",
-      "zip": "77074"
+      "zip": "77004"
     },
-    "phone": "+1 713-774-3000",
-    "website": "https://www.bluenilerestaurant.com/",
-    "description": "Blue Nile Ethiopian Restaurant located in the River Oaks neighborhood of Houston, TX. We have been nominated as one of the best ethnic restaurant among the Houston community. Food lovers will enjoy the unique taste of Ethiopian dishes.",
+    "phone": "+1 713-804-2764",
+    "website": "https://afrocaribbeangrill.com/",
+    "instagram": "https://www.instagram.com/afrocaribbeangrill/",
+    "facebook": "https://www.facebook.com/AfroCaribbeanGrill/",
+    "description": "West African and Caribbean fusion featuring suya, jerk, and more, with catering.",
     "price_range": 2,
-    "google_rating": 4.5,
-    "instagram": "https://www.instagram.com/bluenileatriveroaks/",
-    "facebook": "https://www.facebook.com/bluenileatriveroaks/",
-    "sources": {
-      "website_url": { "url": "https://www.bluenilerestaurant.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/bluenileatriveroaks/" },
-      "facebook_url": { "url": "https://www.facebook.com/bluenileatriveroaks/" }
-    },
+    "google_rating": null,
     "hours": {
-      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "saturday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "sunday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false }
+      "monday": { "open": "", "close": "", "closed": true },
+      "tuesday": { "open": "16:00", "close": "22:00", "closed": false },
+      "wednesday": { "open": "16:00", "close": "22:00", "closed": false },
+      "thursday": { "open": "12:00", "close": "22:00", "closed": false },
+      "friday": { "open": "16:00", "close": "00:00", "closed": false },
+      "saturday": { "open": "12:00", "close": "00:00", "closed": false },
+      "sunday": { "open": "12:00", "close": "22:00", "closed": false }
     }
   },
   {
-    "name": "Cafe Abuja",
+    "name": "Safari",
     "cuisine_types": ["Nigerian", "West African"],
     "address": {
-      "street": "7010 Southwest Fwy Unit D",
+      "street": "10014 Bissonnet St",
       "city": "Houston",
       "state": "TX",
-      "zip": "77074"
+      "zip": "77036"
     },
-    "phone": "(713) 777-9929",
-    "website": "",
-    "description": "Popular Nigerian restaurant known for rich flavors and classic staples such as egusi and jollof rice, frequently recommended by the Houston community.",
+    "phone": "+1 713-541-4436",
+    "website": "https://thesafarirestaurant.com/",
+    "instagram": "https://www.instagram.com/thesafarirestaurantx/",
+    "facebook": "https://www.facebook.com/TheSafariRestaurant/",
+    "description": "Iconic Houston Nigerian restaurant known for soups, fufu, and West African classics.",
     "price_range": 2,
+    "google_rating": 4.1,
     "hours": {
-      "monday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "tuesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "wednesday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "thursday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "friday": { "open": "11:00 AM", "close": "9:00 PM", "closed": false },
-      "saturday": { "open": "12:00 PM", "close": "9:00 PM", "closed": false },
-      "sunday": { "open": "12:00 PM", "close": "8:00 PM", "closed": false }
+      "monday": { "open": "11:00", "close": "02:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "02:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "02:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "02:00", "closed": false },
+      "friday": { "open": "11:00", "close": "02:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "02:00", "closed": false },
+      "sunday": { "open": "11:00", "close": "02:00", "closed": false }
+    }
+  },
+  {
+    "name": "Afrikiko Restaurant",
+    "cuisine_types": ["Ghanaian", "West African"],
+    "address": {
+      "street": "9625 Bissonnet St",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77036"
+    },
+    "phone": "+1 713-773-1400",
+    "website": "http://afrikikohouston.com",
+    "instagram": "https://www.instagram.com/afrikiko/",
+    "facebook": "https://www.facebook.com/afrikikohouston/",
+    "description": "West African restaurant serving Ghanaian and Nigerian dishes.",
+    "price_range": 2,
+    "google_rating": 4.0,
+    "hours": {
+      "monday": { "open": "", "close": "", "closed": true },
+      "tuesday": { "open": "12:30", "close": "22:00", "closed": false },
+      "wednesday": { "open": "12:30", "close": "22:00", "closed": false },
+      "thursday": { "open": "12:30", "close": "22:00", "closed": false },
+      "friday": { "open": "12:30", "close": "22:00", "closed": false },
+      "saturday": { "open": "12:30", "close": "22:00", "closed": false },
+      "sunday": { "open": "12:30", "close": "22:00", "closed": false }
     }
   },
   {
     "name": "Taste of Nigeria",
     "cuisine_types": ["Nigerian", "West African"],
-    "phone": "",
-    "website": "https://tasteofnigeria.us/",
-    "description": "The food we grew up eating holds a special place in our hearts, so when Tiffaney and Rasak Odewale noticed the need for authentic Nigerian food in their community, they jumped at the chance to follow their passion and connect with fellow locals.",
+    "address": {
+      "street": "5959 Richmond Ave Ste 160",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77057"
+    },
+    "phone": "+1 713-589-9055",
+    "website": "https://tasteofnigeria.us",
+    "instagram": "https://www.instagram.com/tasteofnigeriahouston/",
+    "facebook": "https://www.facebook.com/TasteOfNigeriaHouston/",
+    "description": "Family-operated Nigerian cuisine with traditional flavors.",
     "price_range": 2,
-    "google_rating": 3.8,
-    "instagram": "https://www.instagram.com/tasteofnigeriatx/",
-    "facebook": "https://www.facebook.com/tasteofnigeriatx/",
-    "sources": {
-      "website_url": { "url": "https://tasteofnigeria.us/" },
-      "instagram_url": { "url": "https://www.instagram.com/tasteofnigeriatx/" },
-      "facebook_url": { "url": "https://www.facebook.com/tasteofnigeriatx/" }
-    }
-  },
-  {
-    "name": "Omalicha Kitchen",
-    "cuisine_types": ["Nigerian", "West African"],
-    "phone": "",
-    "website": "https://www.omalichakitchen.com",
-    "description": "African restaurant in Houston, Texas for rich, authentic dishes that bring family, culture, and comfort together. Explore our tasty jollof rice, egusi soup, and all your favorite mouth-wavering African dishes prepared with love, care, and pride.",
-    "price_range": 2,
-    "google_rating": 4.4,
-    "instagram": "https://www.instagram.com/omalichakitchen/",
-    "facebook": "https://www.facebook.com/omalichakitchen/",
-    "sources": {
-      "website_url": { "url": "https://www.omalichakitchen.com" },
-      "instagram_url": { "url": "https://www.instagram.com/omalichakitchen/" },
-      "facebook_url": { "url": "https://www.facebook.com/omalichakitchen/" }
-    }
-  },
-  {
-    "name": "Rodo Nigerian Cuisine",
-    "cuisine_types": ["Nigerian", "West African"],
-    "phone": "",
-    "website": "https://rodonigeriancuisine.com/",
-    "description": "At Rodo Nigerian Cuisine, we bring the heart of Nigeria straight to Richmond, TX. With more than twenty years in the hospitality industry, we've built a place where food feels like home. Our mission is simple—serve authentic Nigerian dishes that are flavorful, filling, and made for sharing.",
-    "price_range": 2,
-    "google_rating": 4.7,
-    "instagram": "https://www.instagram.com/rodocuisine/",
-    "facebook": "https://www.facebook.com/p/Rodo-Nigerian-Cuisine-61560238803796/",
-    "sources": {
-      "website_url": { "url": "https://rodonigeriancuisine.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/rodocuisine/" },
-      "facebook_url": { "url": "https://www.facebook.com/p/Rodo-Nigerian-Cuisine-61560238803796/" }
-    }
-  },
-  {
-    "name": "Sarabell Calabar Restaurant & Buffet",
-    "cuisine_types": ["Nigerian", "West African"],
-    "phone": "",
-    "website": "https://sarabellcalabarrestaurant.com/",
-    "description": "At Sarabell Calabar Restaurant and Buffet, we bring the bold, vibrant flavors of Nigeria to the heart of Houston. Our mission is to deliver an authentic Nigerian dining experience that ignites senses for traditional dishes and cultural flavor. From expertly prepared Calabar specials to classic Nigerian favorites, every dish is made with passion and tradition.",
-    "price_range": 2,
-    "google_rating": 4.7,
-    "instagram": "https://www.instagram.com/sarabellcalabar.restaurant/",
-    "facebook": "https://www.facebook.com/p/Sarabell-Calabar-Restaurant-Buffet-61576990936850/",
-    "sources": {
-      "website_url": { "url": "https://sarabellcalabarrestaurant.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/sarabellcalabar.restaurant/" },
-      "facebook_url": { "url": "https://www.facebook.com/p/Sarabell-Calabar-Restaurant-Buffet-61576990936850/" }
-    }
-  },
-  {
-    "name": "Fabaceae African Cuisine",
-    "cuisine_types": ["African"],
-    "phone": "",
-    "website": "https://www.fabaceaecuisine.com/",
-    "description": "Welcome to our lively African restaurant, where culinary traditions come alive and every bite is a journey for the senses! Just like the vibrant branches of the Fabaceae tree, our food is a lively source of nourishment that brings joy, energy, and a taste of life to every bite we serve.",
-    "price_range": 2,
-    "google_rating": 4.2,
-    "instagram": "https://www.instagram.com/fabaceaecuisine/",
-    "facebook": "https://www.facebook.com/fabaceaecuisine/",
-    "sources": {
-      "website_url": { "url": "https://www.fabaceaecuisine.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/fabaceaecuisine/" },
-      "facebook_url": { "url": "https://www.facebook.com/fabaceaecuisine/" }
-    }
-  },
-  {
-    "name": "Famous Princess African Kitchen",
-    "cuisine_types": ["African"],
-    "phone": "",
-    "website": "https://thefpak.start.page/",
-    "description": "Welcome to an African with a touch of difference and class. Indulge in our exquisite flavors of authentic African cuisines. This kitchen specializes in crafting delicious local delicacies, bringing the true taste of Africa to the heart of Houston.",
-    "price_range": 2,
-    "google_rating": 4.1,
-    "instagram": "https://www.instagram.com/thefpak/",
-    "facebook": "https://www.facebook.com/famousprincesskitchen/",
-    "sources": {
-      "website_url": { "url": "https://thefpak.start.page/" },
-      "instagram_url": { "url": "https://www.instagram.com/thefpak/" },
-      "facebook_url": { "url": "https://www.facebook.com/famousprincesskitchen/" }
-    }
-  },
-  {
-    "name": "Unique African Cuisine",
-    "cuisine_types": ["African", "West African"],
-    "phone": "",
-    "website": "https://uniqueafricancuisine.menu-res.com/",
-    "description": "Unique African Cuisine Bar & Grill brings you authentic West African flavors right here in Houston. From baked to grilled, we bring you authentic West African flavors. We offer catering services and are located at 6101 Wilcrest Dr, Houston, TX.",
-    "price_range": 2,
-    "google_rating": 4.3,
-    "instagram": "https://www.instagram.com/unique_african_cuisine/",
-    "facebook": "https://www.facebook.com/uniqueafricancuisine/",
-    "sources": {
-      "website_url": { "url": "https://uniqueafricancuisine.menu-res.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/unique_african_cuisine/" },
-      "facebook_url": { "url": "https://www.facebook.com/uniqueafricancuisine/" }
-    }
-  },
-  {
-    "name": "Chez Michelle Restaurant",
-    "cuisine_types": ["African"],
-    "phone": "",
-    "website": "https://chezmichellerestaurant.com/",
-    "description": "Chez Michelle Restaurant serves authentic African cuisine with a focus on bringing people together through food. Since Chez Michelle is open until midnight daily, this makes for the perfect late-night spot when you need a bowl of warm ndole soup with fresh ingredients and African flavors.",
-    "price_range": 2,
-    "google_rating": 4.5,
-    "instagram": "https://www.instagram.com/chezmichellerestaurant/",
-    "facebook": "https://www.facebook.com/chezmichellerestaurant/",
-    "sources": {
-      "website_url": { "url": "https://chezmichellerestaurant.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/chezmichellerestaurant/" },
-      "facebook_url": { "url": "https://www.facebook.com/chezmichellerestaurant/" }
-    }
-  },
-  {
-    "name": "Olatee African Cafe",
-    "cuisine_types": ["African"],
-    "phone": "",
-    "website": "https://olateeafricancafe.com/",
-    "description": "OlaTee African Café & Lounge brings Africa's rich flavors and culture to life through vibrant dining, lounge, and catering experiences—where good food, good people, and great memories meet.",
-    "price_range": 2,
-    "google_rating": 4.5,
-    "instagram": "https://www.instagram.com/olateeafricancafe/",
-    "facebook": "https://www.facebook.com/olateeafricancafe/",
-    "sources": {
-      "website_url": { "url": "https://olateeafricancafe.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/olateeafricancafe/" },
-      "facebook_url": { "url": "https://www.facebook.com/olateeafricancafe/" }
+    "google_rating": 3.1,
+    "hours": {
+      "monday": { "open": "12:00", "close": "22:00", "closed": false },
+      "tuesday": { "open": "12:00", "close": "22:00", "closed": false },
+      "wednesday": { "open": "12:00", "close": "22:00", "closed": false },
+      "thursday": { "open": "12:00", "close": "22:00", "closed": false },
+      "friday": { "open": "12:00", "close": "02:00", "closed": false },
+      "saturday": { "open": "12:00", "close": "02:00", "closed": false },
+      "sunday": { "open": "12:00", "close": "21:00", "closed": false }
     }
   },
   {
     "name": "Aria Suya Kitchen",
     "cuisine_types": ["Nigerian", "West African"],
-    "phone": "",
-    "website": "https://www.ariasuyakitchen.com/",
-    "description": "A Nigerian fusion upscale grill in the galleria area of Houston and also in Pearland Texas. Aria has created a demand that combines the flavorful taste of Nigerian food with American presentation. Suya is a spicy shish kebab which is a popular food item in Northern Nigeria.",
-    "price_range": 2,
-    "google_rating": 4.4,
+    "address": {
+      "street": "6357 Westheimer Rd",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77057"
+    },
+    "phone": "+1 832-831-4372",
+    "website": "https://www.ariasuyakitchen.com",
     "instagram": "https://www.instagram.com/ariasuyakitchen/",
     "facebook": "https://www.facebook.com/ariasuyakitchen/",
-    "sources": {
-      "website_url": { "url": "https://www.ariasuyakitchen.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/ariasuyakitchen/" },
-      "facebook_url": { "url": "https://www.facebook.com/ariasuyakitchen/" }
+    "description": "Nigerian suya and fusion menu in a trendy setting.",
+    "price_range": 3,
+    "google_rating": 4.2,
+    "hours": {
+      "monday": { "open": "11:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "21:00", "closed": false },
+      "friday": { "open": "11:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "11:00", "close": "21:00", "closed": false }
     }
   },
   {
-    "name": "Dibi Rapide",
-    "cuisine_types": ["West African"],
-    "phone": "",
-    "website": "https://www.dibirapide.com/",
-    "description": "Senegalese cuisine food truck serving mostly dibi lamb and chicken with our famous Jollof Rice. Houston's only Senegalese food truck bringing the heat with charred suya, street-style flavor, and spice that moves with the music.",
+    "name": "Fabaceae African Cuisine",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "10023 S Main St Bldg 7",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77025"
+    },
+    "phone": "+1 512-840-0855",
+    "website": "http://www.fabaceaecuisine.com",
+    "instagram": "https://www.instagram.com/fabaceaecuisine/",
+    "facebook": "https://www.facebook.com/fabaceaecuisine/",
+    "description": "Authentic Nigerian cuisine focused on classic dishes.",
     "price_range": 2,
-    "google_rating": 4.3,
-    "instagram": "https://www.instagram.com/dibirapide/",
-    "facebook": "https://www.facebook.com/dibirapide/",
-    "sources": {
-      "website_url": { "url": "https://www.dibirapide.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/dibirapide/" },
-      "facebook_url": { "url": "https://www.facebook.com/dibirapide/" }
+    "google_rating": 4.2,
+    "hours": {
+      "monday": { "open": "11:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "21:00", "closed": false },
+      "friday": { "open": "11:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "11:00", "close": "21:00", "closed": false }
     }
   },
   {
-    "name": "Horn of Africa",
-    "cuisine_types": ["Ethiopian"],
-    "phone": "",
-    "website": "https://www.hornofafricahouston.com/",
-    "description": "Horn of Africa is a staple Ethiopian restaurant in the Gulfton district. It's owned by Suzani, the same owner as Lucy Ethiopian. They serve traditional meat & vegetarian platters, and even breakfast dishes.",
+    "name": "Suya Hut",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "11720 W Airport Blvd Ste 1600",
+      "city": "Meadows Place",
+      "state": "TX",
+      "zip": "77477"
+    },
+    "phone": "+1 281-265-1411",
+    "website": "https://therealsuyahut.com/",
+    "instagram": "https://www.instagram.com/therealsuyahut/",
+    "facebook": "https://www.facebook.com/therealsuyahut/",
+    "description": "Suya Hut specializes in Nigerian suya skewers, jollof rice and West African flavors.",
     "price_range": 2,
-    "google_rating": 4.3,
-    "instagram": "https://www.instagram.com/hornofafricahouston/",
-    "facebook": "https://www.facebook.com/hornofafricahouston/",
-    "sources": {
-      "website_url": { "url": "https://www.hornofafricahouston.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/hornofafricahouston/" },
-      "facebook_url": { "url": "https://www.facebook.com/hornofafricahouston/" }
-    }
-  },
-  {
-    "name": "Addis Ababa Ethiopian Restaurant",
-    "cuisine_types": ["Ethiopian"],
-    "phone": "",
-    "website": "http://ethiopianrestaurant.com/",
-    "description": "Addis Ababa Ethiopian Restaurant is a family-owned and operated restaurant serving authentic Ethiopian cuisine. The restaurant offers traditional Ethiopian dishes and an Ethiopian coffee service in the Sharpstown area of Houston.",
-    "price_range": 2,
-    "google_rating": 4.7,
-    "instagram": "https://www.instagram.com/addisababarestaurant/",
-    "facebook": "https://www.facebook.com/addisababarestaurant.net/",
-    "sources": {
-      "website_url": { "url": "http://ethiopianrestaurant.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/addisababarestaurant/" },
-      "facebook_url": { "url": "https://www.facebook.com/addisababarestaurant.net/" }
-    }
-  },
-  {
-    "name": "Bahel Ethiopian Mart and Kitchen",
-    "cuisine_types": ["Ethiopian"],
-    "phone": "",
-    "website": "https://bahelmart.com/",
-    "description": "Bahel Ethiopian Mart and Kitchen serves authentic Ethiopian cuisine with quality ingredients and traditional dishes in a welcoming space. Experience authentic flavors in Houston. Bahel Ethiopian Mart and Kitchen would be honored to provide our services for your next event.",
-    "price_range": 2,
-    "google_rating": 4.6,
-    "instagram": "https://www.instagram.com/bahelmarthouston_tx/",
-    "facebook": "https://www.facebook.com/bahelmarthouston/",
-    "sources": {
-      "website_url": { "url": "https://bahelmart.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/bahelmarthouston_tx/" },
-      "facebook_url": { "url": "https://www.facebook.com/bahelmarthouston/" }
-    }
-  },
-  {
-    "name": "Authentic African Restaurant & Bar",
-    "cuisine_types": ["African", "West African"],
-    "phone": "",
-    "website": "https://www.authenticafricanrestaurant.com/",
-    "description": "Authentic African Restaurant & Bar is where we have delicious African food. With great customer service, quality food, and excellent vibes, we hope to see you soon.",
-    "price_range": 2,
-    "google_rating": 4.4,
-    "instagram": "https://www.instagram.com/authenticafricanhtx/",
-    "facebook": "https://www.facebook.com/authenticafricanhtx/",
-    "sources": {
-      "website_url": { "url": "https://www.authenticafricanrestaurant.com/" },
-      "instagram_url": { "url": "https://www.instagram.com/authenticafricanhtx/" },
-      "facebook_url": { "url": "https://www.facebook.com/authenticafricanhtx/" }
+    "google_rating": null,
+    "hours": {
+      "monday": { "open": "11:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "21:00", "closed": false },
+      "friday": { "open": "11:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "", "close": "", "closed": true }
     }
   }
 ]
-

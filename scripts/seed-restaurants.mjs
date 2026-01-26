@@ -193,34 +193,71 @@ async function main() {
 
     let restaurantId;
     try {
-      const upsertRestaurant = await upsertWithColumnFallback({
-        supabaseAdmin,
-        table: "restaurants",
-        payload: {
-          owner_id: ownerId,
-          name,
-          slug,
-          cuisine_types: cuisineTypes,
-          address,
-          phone,
-          website,
-          instagram_handle: instagramHandle,
-          facebook_url: facebookUrl,
-          external_avg_rating: externalAvgRating,
-          external_review_count: r.google_review_count ?? null,
-          sources,
-          price_range: Number(r.price_range || 2),
-          description: r.description ?? null,
-          images,
-          hours: hoursArray,
-          is_active: true,
-        },
-        onConflict: "slug",
-        select: "id,slug",
-        single: true,
-      });
+      // First, try to find existing restaurant by slug
+      const existing = await supabaseAdmin
+        .from("restaurants")
+        .select("id")
+        .eq("slug", slug)
+        .maybeSingle();
 
-      restaurantId = upsertRestaurant.data.id;
+      if (existing.data?.id) {
+        // Update existing restaurant explicitly
+        const updateRes = await supabaseAdmin
+          .from("restaurants")
+          .update({
+            name,
+            cuisine_types: cuisineTypes,
+            address,
+            phone,
+            website,
+            instagram_handle: instagramHandle,
+            facebook_url: facebookUrl,
+            external_avg_rating: externalAvgRating,
+            external_review_count: r.google_review_count ?? null,
+            sources,
+            price_range: Number(r.price_range || 2),
+            description: r.description ?? null,
+            images,
+            hours: hoursArray,
+            is_active: true,
+          })
+          .eq("id", existing.data.id)
+          .select("id")
+          .single();
+        
+        if (updateRes.error) throw updateRes.error;
+        restaurantId = updateRes.data.id;
+      } else {
+        // Insert new restaurant
+        const upsertRestaurant = await upsertWithColumnFallback({
+          supabaseAdmin,
+          table: "restaurants",
+          payload: {
+            owner_id: ownerId,
+            name,
+            slug,
+            cuisine_types: cuisineTypes,
+            address,
+            phone,
+            website,
+            instagram_handle: instagramHandle,
+            facebook_url: facebookUrl,
+            external_avg_rating: externalAvgRating,
+            external_review_count: r.google_review_count ?? null,
+            sources,
+            price_range: Number(r.price_range || 2),
+            description: r.description ?? null,
+            images,
+            hours: hoursArray,
+            is_active: true,
+          },
+          onConflict: "slug",
+          select: "id,slug",
+          single: true,
+        });
+
+        restaurantId = upsertRestaurant.data.id;
+      }
     } catch (e) {
       throw new Error(`Restaurant upsert failed (${name}): ${e?.message || String(e)}`);
     }

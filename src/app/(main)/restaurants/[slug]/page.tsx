@@ -44,11 +44,25 @@ function googleMapsLink(addressString: string) {
 
 function addressToString(address: any): string {
   if (!address) return "";
+  // Handle both object format and string format
+  if (typeof address === "string") return address;
   const street = address.street ?? "";
   const city = address.city ?? "";
   const state = address.state ?? "";
   const zip = address.zip ?? "";
-  return [street, city, state, zip].filter(Boolean).join(", ");
+  const parts = [street, city, state, zip].filter(Boolean);
+  return parts.length > 0 ? parts.join(", ") : "";
+}
+
+function normalizeInstagramUrl(handleOrUrl: string | null | undefined): string | null {
+  if (!handleOrUrl) return null;
+  // If it's already a full URL, return it
+  if (handleOrUrl.startsWith("http://") || handleOrUrl.startsWith("https://")) {
+    return handleOrUrl;
+  }
+  // Otherwise, construct the Instagram URL from the handle
+  const cleanHandle = handleOrUrl.replace(/^@/, "").replace(/^instagram\.com\//, "").replace(/\/$/, "");
+  return `https://www.instagram.com/${cleanHandle}/`;
 }
 
 type OperatingHour = { day_of_week: number; open_time: string; close_time: string };
@@ -129,8 +143,7 @@ async function getReviews(restaurantId: string) {
 
 async function getSimilarRestaurants(restaurantId: string, cuisines: string[]) {
   const supabase = createSupabasePublicClient();
-  const primary = cuisines?.[0];
-  if (!primary) return [];
+  if (!Array.isArray(cuisines) || cuisines.length === 0) return [];
 
   const { data } = await supabase
     .from("restaurants_with_rating")
@@ -140,12 +153,24 @@ async function getSimilarRestaurants(restaurantId: string, cuisines: string[]) {
     // best-effort: filter in app (json/array contains differs across drivers)
     .order("avg_rating", { ascending: false, nullsFirst: false })
     .order("created_at", { ascending: false })
-    .limit(24);
+    .limit(50);
 
   const rows = (data ?? []) as any[];
-  return rows
-    .filter((r) => Array.isArray(r.cuisine_types) && r.cuisine_types.map((c: string) => c.toLowerCase()).includes(primary.toLowerCase()))
-    .slice(0, 6);
+  const cuisineSet = new Set(cuisines.map((c) => c.toLowerCase()));
+
+  // First, try to find restaurants with any matching cuisine type
+  const matching = rows.filter((r) => {
+    if (!Array.isArray(r.cuisine_types)) return false;
+    return r.cuisine_types.some((c: string) => cuisineSet.has(c.toLowerCase()));
+  });
+
+  // If we have enough matches (at least 3), return them
+  if (matching.length >= 3) {
+    return matching.slice(0, 6);
+  }
+
+  // Otherwise, fall back to top-rated restaurants (still excluding the current one)
+  return rows.slice(0, 6);
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
@@ -194,40 +219,54 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
 
   const avg = restaurant.avg_rating ?? null;
 
-  const jsonLd = {
+  // Build JSON-LD with proper undefined handling
+  const jsonLd: any = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    name: restaurant.name,
+    name: String(restaurant.name || "").replace(/[\u0000-\u001F\u007F-\u009F]/g, ""),
     url: (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000") + `/restaurants/${restaurant.slug}`,
-    telephone: restaurant.phone ?? undefined,
-    address: addrStr
-      ? {
-          "@type": "PostalAddress",
-          streetAddress: restaurant.address?.street ?? undefined,
-          addressLocality: restaurant.address?.city ?? undefined,
-          addressRegion: restaurant.address?.state ?? undefined,
-          postalCode: restaurant.address?.zip ?? undefined,
-          addressCountry: "US",
-        }
-      : undefined,
-    servesCuisine: restaurant.cuisine_types ?? [],
+    servesCuisine: (restaurant.cuisine_types ?? []).map((c: string) => String(c).replace(/[\u0000-\u001F\u007F-\u009F]/g, "")),
     priceRange: priceLabel(restaurant.price_range),
-    aggregateRating:
-      avg != null
-        ? {
-            "@type": "AggregateRating",
-            ratingValue: avg,
-            reviewCount: restaurant.review_count ?? 0,
-          }
-        : undefined,
-    review: (reviews ?? []).slice(0, 5).map((r: any) => ({
-      "@type": "Review",
-      author: { "@type": "Person", name: "Verified Diner" },
-      datePublished: r.created_at,
-      reviewBody: r.review_text ?? "",
-      reviewRating: { "@type": "Rating", ratingValue: r.overall_rating, bestRating: 5, worstRating: 1 },
-    })),
-    openingHoursSpecification: (operatingHours ?? []).map((o: any) => ({
+  };
+
+  if (restaurant.phone) {
+    jsonLd.telephone = restaurant.phone;
+  }
+
+  if (addrStr && restaurant.address) {
+    const addressObj: any = {
+      "@type": "PostalAddress",
+      addressCountry: "US",
+    };
+    if (restaurant.address.street) addressObj.streetAddress = String(restaurant.address.street).replace(/[\u0000-\u001F\u007F-\u009F]/g, "");
+    if (restaurant.address.city) addressObj.addressLocality = String(restaurant.address.city).replace(/[\u0000-\u001F\u007F-\u009F]/g, "");
+    if (restaurant.address.state) addressObj.addressRegion = String(restaurant.address.state).replace(/[\u0000-\u001F\u007F-\u009F]/g, "");
+    if (restaurant.address.zip) addressObj.postalCode = String(restaurant.address.zip).replace(/[\u0000-\u001F\u007F-\u009F]/g, "");
+    jsonLd.address = addressObj;
+  }
+
+  if (avg != null) {
+    jsonLd.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: avg,
+      reviewCount: restaurant.review_count ?? 0,
+    };
+  }
+
+  const reviewList = (reviews ?? []).slice(0, 5).map((r: any) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: "Verified Diner" },
+    datePublished: r.created_at || new Date().toISOString(),
+    reviewBody: String(r.review_text || "").replace(/[\u0000-\u001F\u007F-\u009F]/g, ""),
+    reviewRating: { "@type": "Rating", ratingValue: Number(r.overall_rating) || 0, bestRating: 5, worstRating: 1 },
+  }));
+  if (reviewList.length > 0) {
+    jsonLd.review = reviewList;
+  }
+
+  const hoursList = (operatingHours ?? [])
+    .filter((o: any) => o?.open_time && o?.close_time)
+    .map((o: any) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [
         "Sunday",
@@ -240,15 +279,30 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
       ][Number(o.day_of_week) ?? 0],
       opens: o.open_time,
       closes: o.close_time,
-    })),
-  };
+    }));
+  if (hoursList.length > 0) {
+    jsonLd.openingHoursSpecification = hoursList;
+  }
+
+  // Safely stringify JSON-LD, removing any circular references or invalid values
+  let jsonLdString = "";
+  try {
+    jsonLdString = JSON.stringify(jsonLd, null, 0);
+  } catch (error) {
+    console.error("Error stringifying JSON-LD:", error);
+    jsonLdString = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      name: restaurant.name,
+    });
+  }
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-10 md:py-14">
+    <main className="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-14">
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdString }}
       />
       <div className="mb-4 flex flex-wrap items-center gap-2 text-sm">
         <Link href="/" className="text-muted-foreground hover:text-foreground">
@@ -262,12 +316,15 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
         <span className="font-medium">{restaurant.name}</span>
       </div>
 
-      {/* Header */}
-      <div className="grid gap-8 lg:grid-cols-12">
-        <div className="lg:col-span-8">
+      {/* Main Layout - Single Grid for Proper Alignment */}
+      <div className="grid gap-8 lg:grid-cols-12 lg:items-start w-full">
+        {/* Left Column - All Content */}
+        <div className="lg:col-span-8 w-full">
+          {/* Photo Gallery */}
           <PhotoGallery name={restaurant.name} images={restaurant.images} />
 
-          <div className="mt-6 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+          {/* Restaurant Header */}
+          <div className="mt-6 flex flex-col gap-3 md:flex-row md:items-start md:justify-between w-full">
             <div className="space-y-2">
               <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">{restaurant.name}</h1>
               <div className="flex flex-wrap items-center gap-2">
@@ -300,31 +357,67 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
             </div>
           </div>
 
-          {/* Quick Info (sticky on desktop only) */}
-          <div className="mt-6 rounded-xl border bg-background/80 p-4 backdrop-blur lg:sticky lg:top-16 lg:z-40">
-            <div className="grid gap-3 md:grid-cols-5 md:items-center">
-              <div className="md:col-span-2">
-                <div className="text-xs text-muted-foreground">Address</div>
-                <div className="text-sm font-medium">{addrStr || "Address coming soon"}</div>
+          {/* Quick Info Bar - Sticky with Connect Buttons */}
+          <div className="mt-6 rounded-xl border bg-background/95 p-3 sm:p-4 backdrop-blur-sm lg:sticky lg:top-4 lg:z-30 lg:self-start lg:h-fit shadow-sm overflow-visible">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+              {/* Address with Connect below - Always visible */}
+              <div className="min-w-0">
+                <div className="text-xs text-muted-foreground mb-1">Address</div>
+                <div className="text-sm font-medium break-words">{addrStr || "Address coming soon"}</div>
                 {addrStr ? (
-                  <a className="text-xs text-primary underline underline-offset-4" href={googleMapsLink(addrStr)} target="_blank" rel="noreferrer">
+                  <a className="text-xs text-primary underline underline-offset-4 mt-1 inline-block py-1 min-h-[32px] flex items-center" href={googleMapsLink(addrStr)} target="_blank" rel="noreferrer">
                     Get directions
                   </a>
                 ) : null}
+                
+                {/* Connect - Under Address */}
+                <div className="mt-4">
+                  <div className="text-xs text-muted-foreground mb-1">Connect</div>
+                  <div className="flex flex-wrap items-center gap-2 min-h-[32px]">
+                    {restaurant.website ? (
+                      <Button asChild size="sm" variant="outline" className="flex-shrink-0 whitespace-nowrap min-h-[36px]">
+                        <a href={restaurant.website} target="_blank" rel="noreferrer">
+                          Website
+                        </a>
+                      </Button>
+                    ) : null}
+                    {restaurant.instagram_handle ? (
+                      <Button asChild size="sm" variant="outline" className="flex-shrink-0 whitespace-nowrap min-h-[36px]">
+                        <a href={normalizeInstagramUrl(restaurant.instagram_handle) || "#"} target="_blank" rel="noreferrer">
+                          Instagram
+                        </a>
+                      </Button>
+                    ) : null}
+                    {restaurant.facebook_url ? (
+                      <Button asChild size="sm" variant="outline" className="flex-shrink-0 whitespace-nowrap min-h-[36px]">
+                        <a href={restaurant.facebook_url} target="_blank" rel="noreferrer">
+                          Facebook
+                        </a>
+                      </Button>
+                    ) : null}
+                    {!restaurant.website && !restaurant.instagram_handle && !restaurant.facebook_url ? (
+                      <span className="text-xs text-muted-foreground">—</span>
+                    ) : null}
+                  </div>
+                </div>
               </div>
-              <div>
-                <div className="text-xs text-muted-foreground">Phone</div>
+              
+              {/* Phone - Always visible */}
+              <div className="min-w-0">
+                <div className="text-xs text-muted-foreground mb-1">Phone</div>
                 {restaurant.phone ? (
-                  <a className="text-sm font-medium" href={`tel:${restaurant.phone}`}>
+                  <a className="text-sm font-medium whitespace-nowrap py-1 min-h-[32px] flex items-center" href={`tel:${restaurant.phone}`}>
                     {restaurant.phone}
                   </a>
                 ) : (
-                  <div className="text-sm font-medium">—</div>
+                  <div className="text-sm font-medium text-muted-foreground py-1 min-h-[32px] flex items-center">—</div>
                 )}
               </div>
-              <div>
-                <div className="text-xs text-muted-foreground">Hours</div>
-                <div className="text-sm font-medium">
+              
+              {/* Hours - Always visible */}
+              <div className="min-w-0">
+                <div className="text-xs text-muted-foreground mb-1">Hours</div>
+                <div className="text-sm font-medium break-words sm:whitespace-nowrap py-1 min-h-[32px] flex items-center">
                   {!todays.hasHours ? (
                     <span className="text-muted-foreground">{todays.label}</span>
                   ) : (
@@ -335,36 +428,13 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
                   )}
                 </div>
               </div>
-              <div className="flex flex-wrap items-center gap-2 md:justify-end">
-                {restaurant.website ? (
-                  <Button asChild size="sm" variant="outline">
-                    <a href={restaurant.website} target="_blank" rel="noreferrer">
-                      Website
-                    </a>
-                  </Button>
-                ) : null}
-                {restaurant.instagram_handle ? (
-                  <Button asChild size="sm" variant="outline">
-                    <a href={restaurant.instagram_handle} target="_blank" rel="noreferrer">
-                      Instagram
-                    </a>
-                  </Button>
-                ) : null}
-                {restaurant.facebook_url ? (
-                  <Button asChild size="sm" variant="outline">
-                    <a href={restaurant.facebook_url} target="_blank" rel="noreferrer">
-                      Facebook
-                    </a>
-                  </Button>
-                ) : null}
-              </div>
             </div>
           </div>
 
-          {/* Content */}
-          <div className="mt-8 grid gap-10">
+          {/* Content Sections */}
+          <div className="mt-8 grid gap-10 w-full">
             {/* About */}
-            <section>
+            <section className="w-full">
               <h2 className="text-xl font-semibold tracking-tight">About</h2>
               <p className="mt-2 text-muted-foreground">
                 {restaurant.description ||
@@ -390,7 +460,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
             <Separator />
 
             {/* Menu (placeholder) */}
-            <section>
+            <section className="w-full">
               <div className="flex items-end justify-between gap-4">
                 <div>
                   <h2 className="text-xl font-semibold tracking-tight">Menu</h2>
@@ -445,7 +515,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
             <Separator />
 
             {/* Reviews */}
-            <section>
+            <section className="w-full">
               <div className="flex items-end justify-between gap-4">
                 <div>
                   <h2 className="text-xl font-semibold tracking-tight">Reviews &amp; Ratings</h2>
@@ -527,7 +597,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
             <Separator />
 
             {/* Location & Details */}
-            <section>
+            <section className="w-full">
               <h2 className="text-xl font-semibold tracking-tight">Location &amp; details</h2>
               <div className="mt-4 grid gap-4 lg:grid-cols-2">
                 <Card>
@@ -547,7 +617,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
                         />
                       </div>
                     ) : (
-                      <div className="text-sm text-muted-foreground">Map will appear once address is set.</div>
+                      <div className="text-xs text-muted-foreground">Map will appear once address is set.</div>
                     )}
                   </CardContent>
                 </Card>
@@ -575,44 +645,44 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
                 </Card>
               </div>
             </section>
-
-            {/* Similar */}
-            <section>
-              <div className="flex items-end justify-between gap-4">
-                <div>
-                  <h2 className="text-xl font-semibold tracking-tight">You might also like</h2>
-                  <p className="mt-2 text-muted-foreground">Similar cuisine picks, curated for you.</p>
-                </div>
-                <Button asChild variant="outline">
-                  <Link href="/restaurants">Browse all</Link>
-                </Button>
-              </div>
-              <div className="mt-6 flex gap-4 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                {(similar.length ? similar : []).map((r: any) => (
-                  <div key={r.id} className="w-[280px] shrink-0 md:w-[320px]">
-                    <RestaurantCard restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
-                  </div>
-                ))}
-                {!similar.length ? (
-                  <Card className="w-full">
-                    <CardHeader>
-                      <CardTitle className="text-base">More recommendations coming soon</CardTitle>
-                      <CardDescription>As we onboard more restaurants, we’ll show great matches here.</CardDescription>
-                    </CardHeader>
-                  </Card>
-                ) : null}
-              </div>
-            </section>
           </div>
         </div>
 
-        {/* Reservation widget */}
-        <div className="lg:col-span-4 lg:pl-4">
-          <div className="lg:sticky lg:top-24">
-            <ReservationWidget restaurantId={restaurant.id} restaurantSlug={restaurant.slug} />
-          </div>
+        {/* Right Column - Reservation Widget (Sticky on desktop, normal flow on mobile) */}
+        <div className="lg:col-span-4 lg:pl-8 w-full lg:sticky lg:top-4 lg:z-40 lg:self-start lg:h-fit">
+          <ReservationWidget restaurantId={restaurant.id} restaurantSlug={restaurant.slug} />
         </div>
       </div>
+
+      {/* You might also like - Full width, below main grid */}
+      <section className="mt-10 w-full overflow-hidden">
+        <div className="flex items-end justify-between gap-4 mb-6">
+          <div>
+            <h2 className="text-xl font-semibold tracking-tight">You might also like</h2>
+            <p className="mt-2 text-muted-foreground">Similar cuisine picks, curated for you.</p>
+          </div>
+          <Button asChild variant="outline" className="flex-shrink-0">
+            <Link href="/restaurants">Browse all</Link>
+          </Button>
+        </div>
+        <div className="relative w-full overflow-hidden">
+          <div className="flex gap-4 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {(similar.length ? similar : []).map((r: any) => (
+              <div key={r.id} className="w-[280px] shrink-0 snap-start md:w-[300px]">
+                <RestaurantCard restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
+              </div>
+            ))}
+            {!similar.length ? (
+              <Card className="w-full shrink-0">
+                <CardHeader>
+                  <CardTitle className="text-base">More recommendations coming soon</CardTitle>
+                  <CardDescription>As we onboard more restaurants, we'll show great matches here.</CardDescription>
+                </CardHeader>
+              </Card>
+            ) : null}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

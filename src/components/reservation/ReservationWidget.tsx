@@ -85,7 +85,7 @@ export function ReservationWidget({
   const slots = data?.slots ?? [];
 
   return (
-    <Card className="sticky top-24">
+    <Card>
       <CardHeader>
         <CardTitle>Reserve a table</CardTitle>
         <CardDescription>Pick a date, party size, and time.</CardDescription>
@@ -152,14 +152,14 @@ export function ReservationWidget({
             <p className="text-xs text-muted-foreground">{String((error as any)?.message ?? "")}</p>
           </div>
         ) : slots.length ? (
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-3 gap-2 sm:gap-2">
             {slots.map((s) => (
               <button
                 key={s.time}
                 type="button"
                 disabled={s.status === "unavailable"}
                 className={cn(
-                  "rounded-md px-2 py-2 text-sm font-medium transition hover:brightness-[0.98] disabled:cursor-not-allowed",
+                  "rounded-md px-2 py-2.5 sm:py-2 text-sm font-medium transition hover:brightness-[0.98] disabled:cursor-not-allowed min-h-[44px] sm:min-h-[36px]",
                   slotClasses(s.status, selectedTime === s.time),
                 )}
                 onClick={() => setSelectedTime(s.time)}
