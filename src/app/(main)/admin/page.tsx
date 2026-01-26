@@ -20,55 +20,69 @@ import {
 async function getAdminStats() {
   const supabase = createSupabaseAdminClient();
 
-  // Total restaurants
-  const { count: totalRestaurants } = await supabase
-    .from("restaurants")
-    .select("*", { count: "exact", head: true });
+  try {
+    // Total restaurants
+    const { count: totalRestaurants } = await supabase
+      .from("restaurants")
+      .select("*", { count: "exact", head: true });
 
-  // Active restaurants
-  const { count: activeRestaurants } = await supabase
-    .from("restaurants")
-    .select("*", { count: "exact", head: true })
-    .eq("is_active", true);
+    // Active restaurants
+    const { count: activeRestaurants } = await supabase
+      .from("restaurants")
+      .select("*", { count: "exact", head: true })
+      .eq("is_active", true);
 
-  // Pending restaurants (claimed but not active)
-  const { count: pendingRestaurants } = await supabase
-    .from("restaurants")
-    .select("*", { count: "exact", head: true })
-    .eq("is_claimed", true)
-    .eq("is_active", false);
+    // Pending restaurants (claimed but not active)
+    const { count: pendingRestaurants } = await supabase
+      .from("restaurants")
+      .select("*", { count: "exact", head: true })
+      .eq("is_claimed", true)
+      .eq("is_active", false);
 
-  // Restaurant submissions
-  const { count: totalSubmissions } = await supabase
-    .from("restaurant_submissions")
-    .select("*", { count: "exact", head: true });
+    // Restaurant submissions
+    const { count: totalSubmissions } = await supabase
+      .from("restaurant_submissions")
+      .select("*", { count: "exact", head: true });
 
-  // Pending submissions
-  const { count: pendingSubmissions } = await supabase
-    .from("restaurant_submissions")
-    .select("*", { count: "exact", head: true })
-    .in("status", ["submitted", "under_review"]);
+    // Pending submissions
+    const { count: pendingSubmissions } = await supabase
+      .from("restaurant_submissions")
+      .select("*", { count: "exact", head: true })
+      .in("status", ["submitted", "under_review"]);
 
-  // Total users
-  const { count: totalUsers } = await supabase
-    .from("profiles")
-    .select("*", { count: "exact", head: true });
+    // Total users
+    const { count: totalUsers } = await supabase
+      .from("profiles")
+      .select("*", { count: "exact", head: true });
 
-  // Restaurant owners
-  const { count: restaurantOwners } = await supabase
-    .from("profiles")
-    .select("*", { count: "exact", head: true })
-    .eq("role", "restaurant_owner");
+    // Restaurant owners
+    const { count: restaurantOwners } = await supabase
+      .from("profiles")
+      .select("*", { count: "exact", head: true })
+      .eq("role", "restaurant_owner");
 
-  return {
-    totalRestaurants: totalRestaurants || 0,
-    activeRestaurants: activeRestaurants || 0,
-    pendingRestaurants: pendingRestaurants || 0,
-    totalSubmissions: totalSubmissions || 0,
-    pendingSubmissions: pendingSubmissions || 0,
-    totalUsers: totalUsers || 0,
-    restaurantOwners: restaurantOwners || 0,
-  };
+    return {
+      totalRestaurants: totalRestaurants || 0,
+      activeRestaurants: activeRestaurants || 0,
+      pendingRestaurants: pendingRestaurants || 0,
+      totalSubmissions: totalSubmissions || 0,
+      pendingSubmissions: pendingSubmissions || 0,
+      totalUsers: totalUsers || 0,
+      restaurantOwners: restaurantOwners || 0,
+    };
+  } catch (error) {
+    console.error("[Admin Dashboard] Error fetching stats:", error);
+    // Return default values on error
+    return {
+      totalRestaurants: 0,
+      activeRestaurants: 0,
+      pendingRestaurants: 0,
+      totalSubmissions: 0,
+      pendingSubmissions: 0,
+      totalUsers: 0,
+      restaurantOwners: 0,
+    };
+  }
 }
 
 export default async function AdminDashboardPage() {
