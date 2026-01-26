@@ -1,0 +1,392 @@
+[
+  {
+    "name": "ChòpnBlọk",
+    "cuisine_types": ["West African"],
+    "address": {
+      "street": "507 Westheimer Rd",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77006"
+    },
+    "phone": "+1 832-962-4500",
+    "website": "https://chopnblok.co/",
+    "instagram": "https://www.instagram.com/chopnblọk/",
+    "facebook": "https://www.facebook.com/chopnblok/",
+    "description": "Modern West African restaurant celebrating diaspora flavors in Montrose with bowls, suya, and cocktails.",
+    "price_range": 3,
+    "google_rating": 4.6,
+    "hours": {
+      "monday": { "open": "11:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "21:00", "closed": false },
+      "friday": { "open": "11:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "11:00", "close": "21:00", "closed": false }
+    }
+  },
+  {
+    "name": "Amala Joint",
+    "cuisine_types": ["African"],
+    "address": {
+      "street": "6271 Highway 6 S",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77083"
+    },
+    "phone": "+1 281-721-2982",
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "description": "African restaurant with a range of traditional dishes.",
+    "price_range": 2,
+    "google_rating": 4.5,
+    "hours": {
+      "monday": { "open": "10:00", "close": "22:00", "closed": false },
+      "tuesday": { "open": "10:00", "close": "22:00", "closed": false },
+      "wednesday": { "open": "10:00", "close": "22:00", "closed": false },
+      "thursday": { "open": "10:00", "close": "22:00", "closed": false },
+      "friday": { "open": "10:00", "close": "19:00", "closed": false },
+      "saturday": { "open": "10:00", "close": "22:00", "closed": false },
+      "sunday": { "open": "10:00", "close": "22:00", "closed": false }
+    }
+  },
+  {
+    "name": "Bantu House",
+    "cuisine_types": ["African"],
+    "address": {
+      "street": "22224 Northwest Fwy, Ste B",
+      "city": "Cypress",
+      "state": "TX",
+      "zip": "77429"
+    },
+    "phone": "+1 713-360-8333",
+    "website": "http://bantuhouse.com",
+    "instagram": "https://www.instagram.com/bantuhouse/",
+    "facebook": "https://www.facebook.com/bantuhouse/",
+    "description": "Celebrates diverse African culinary heritage with regional dishes and cultural vibe.",
+    "price_range": 3,
+    "google_rating": 4.7,
+    "hours": {
+      "monday": { "open": "", "close": "", "closed": true },
+      "tuesday": { "open": "12:00", "close": "22:00", "closed": false },
+      "wednesday": { "open": "12:00", "close": "22:00", "closed": false },
+      "thursday": { "open": "12:00", "close": "22:00", "closed": false },
+      "friday": { "open": "12:00", "close": "22:00", "closed": false },
+      "saturday": { "open": "12:00", "close": "22:00", "closed": false },
+      "sunday": { "open": "", "close": "", "closed": true }
+    }
+  },
+  {
+    "name": "Kofoshi",
+    "cuisine_types": ["West African"],
+    "address": {
+      "street": "3706 S Gessner Rd",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77063"
+    },
+    "phone": "+1 346-252-2336",
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "description": "West African restaurant known for flavorful cuisine.",
+    "price_range": 2,
+    "google_rating": 4.6,
+    "hours": {
+      "monday": { "open": "11:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "21:00", "closed": false },
+      "friday": { "open": "11:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "12:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "12:00", "close": "20:00", "closed": false }
+    }
+  },
+  {
+    "name": "Lucy Ethiopian Restaurant & Lounge",
+    "cuisine_types": ["Ethiopian"],
+    "address": {
+      "street": "6800 Southwest Fwy",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77074"
+    },
+    "phone": "+1 713-334-0000",
+    "website": "http://www.lucyhouston.com",
+    "instagram": "https://www.instagram.com/lucyhouston/",
+    "facebook": "https://www.facebook.com/LucyEthiopianRestaurant/",
+    "description": "Ethiopian restaurant and lounge with traditional dishes like injera and stews.",
+    "price_range": 2,
+    "google_rating": 4.3,
+    "hours": {
+      "monday": { "open": "", "close": "", "closed": true },
+      "tuesday": { "open": "11:00", "close": "23:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "23:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "23:00", "closed": false },
+      "friday": { "open": "11:00", "close": "23:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "23:00", "closed": false },
+      "sunday": { "open": "11:00", "close": "23:00", "closed": false }
+    }
+  },
+  {
+    "name": "Sarabell Calabar Restaurant & Buffet",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "9801 Bissonnet St Ste C",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77036"
+    },
+    "phone": "+1 713-814-5253",
+    "website": "https://sarabellcalabarrestaurant.com",
+    "instagram": "https://www.instagram.com/sarabellcalabar/",
+    "facebook": "https://www.facebook.com/sarabellcalabar/",
+    "description": "Buffet-style Nigerian cuisine with traditional favorites.",
+    "price_range": 2,
+    "google_rating": 4.7,
+    "hours": {
+      "monday": { "open": "08:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "08:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "08:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "08:00", "close": "21:00", "closed": false },
+      "friday": { "open": "08:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "08:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "08:00", "close": "21:00", "closed": false }
+    }
+  },
+  {
+    "name": "Marie African Flavors",
+    "cuisine_types": ["African"],
+    "address": {
+      "street": "12600 Bissonnet St Ste A7",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77099"
+    },
+    "phone": "+1 832-771-8778",
+    "website": null,
+    "instagram": "https://www.instagram.com/marieafricanflavors/",
+    "facebook": "https://www.facebook.com/MarieAfricanFlavors/",
+    "description": "African restaurant featuring jollof rice, grilled fish, and more.",
+    "price_range": 2,
+    "google_rating": 3.5,
+    "hours": {
+      "monday": { "open": "12:30", "close": "22:00", "closed": false },
+      "tuesday": { "open": "12:30", "close": "22:00", "closed": false },
+      "wednesday": { "open": "12:30", "close": "22:00", "closed": false },
+      "thursday": { "open": "12:30", "close": "22:00", "closed": false },
+      "friday": { "open": "12:30", "close": "23:00", "closed": false },
+      "saturday": { "open": "12:30", "close": "23:00", "closed": false },
+      "sunday": { "open": "12:30", "close": "23:00", "closed": false }
+    }
+  },
+  {
+    "name": "Delight's Ghanaian Cuisine",
+    "cuisine_types": ["Ghanaian", "West African"],
+    "address": {
+      "street": "14524 Piping Rock Ln",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77077"
+    },
+    "phone": "+1 281-995-1958",
+    "website": "https://order.spoton.com/so-delights-delight-kitchen-3629/houston-tx/6532c4ce2cb4e2003dd65e05",
+    "instagram": "https://www.instagram.com/delight_foodtx/",
+    "facebook": "https://www.facebook.com/DelightsGhanaianCuisine/",
+    "description": "Ghanaian cuisine with favorites like jollof and suya.",
+    "price_range": 2,
+    "google_rating": 4.8,
+    "hours": {
+      "monday": { "open": "11:30", "close": "19:00", "closed": false },
+      "tuesday": { "open": "11:30", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:30", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:30", "close": "21:00", "closed": false },
+      "friday": { "open": "11:30", "close": "21:00", "closed": false },
+      "saturday": { "open": "11:30", "close": "21:00", "closed": false },
+      "sunday": { "open": "11:30", "close": "19:00", "closed": false }
+    }
+  },
+  {
+    "name": "Afro Caribbean Grill",
+    "cuisine_types": ["African", "Caribbean"],
+    "address": {
+      "street": "1903 Blodgett St",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77004"
+    },
+    "phone": "+1 713-804-2764",
+    "website": "https://afrocaribbeangrill.com/",
+    "instagram": "https://www.instagram.com/afrocaribbeangrill/",
+    "facebook": "https://www.facebook.com/AfroCaribbeanGrill/",
+    "description": "West African and Caribbean fusion featuring suya, jerk, and more, with catering.",
+    "price_range": 2,
+    "google_rating": null,
+    "hours": {
+      "monday": { "open": "", "close": "", "closed": true },
+      "tuesday": { "open": "16:00", "close": "22:00", "closed": false },
+      "wednesday": { "open": "16:00", "close": "22:00", "closed": false },
+      "thursday": { "open": "12:00", "close": "22:00", "closed": false },
+      "friday": { "open": "16:00", "close": "00:00", "closed": false },
+      "saturday": { "open": "12:00", "close": "00:00", "closed": false },
+      "sunday": { "open": "12:00", "close": "22:00", "closed": false }
+    }
+  },
+  {
+    "name": "Safari",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "10014 Bissonnet St",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77036"
+    },
+    "phone": "+1 713-541-4436",
+    "website": "https://thesafarirestaurant.com/",
+    "instagram": "https://www.instagram.com/thesafarirestaurantx/",
+    "facebook": "https://www.facebook.com/TheSafariRestaurant/",
+    "description": "Iconic Houston Nigerian restaurant known for soups, fufu, and West African classics.",
+    "price_range": 2,
+    "google_rating": 4.1,
+    "hours": {
+      "monday": { "open": "11:00", "close": "02:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "02:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "02:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "02:00", "closed": false },
+      "friday": { "open": "11:00", "close": "02:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "02:00", "closed": false },
+      "sunday": { "open": "11:00", "close": "02:00", "closed": false }
+    }
+  },
+  {
+    "name": "Afrikiko Restaurant",
+    "cuisine_types": ["Ghanaian", "West African"],
+    "address": {
+      "street": "9625 Bissonnet St",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77036"
+    },
+    "phone": "+1 713-773-1400",
+    "website": "http://afrikikohouston.com",
+    "instagram": "https://www.instagram.com/afrikiko/",
+    "facebook": "https://www.facebook.com/afrikikohouston/",
+    "description": "West African restaurant serving Ghanaian and Nigerian dishes.",
+    "price_range": 2,
+    "google_rating": 4.0,
+    "hours": {
+      "monday": { "open": "", "close": "", "closed": true },
+      "tuesday": { "open": "12:30", "close": "22:00", "closed": false },
+      "wednesday": { "open": "12:30", "close": "22:00", "closed": false },
+      "thursday": { "open": "12:30", "close": "22:00", "closed": false },
+      "friday": { "open": "12:30", "close": "22:00", "closed": false },
+      "saturday": { "open": "12:30", "close": "22:00", "closed": false },
+      "sunday": { "open": "12:30", "close": "22:00", "closed": false }
+    }
+  },
+  {
+    "name": "Taste of Nigeria",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "5959 Richmond Ave Ste 160",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77057"
+    },
+    "phone": "+1 713-589-9055",
+    "website": "https://tasteofnigeria.us",
+    "instagram": "https://www.instagram.com/tasteofnigeriahouston/",
+    "facebook": "https://www.facebook.com/TasteOfNigeriaHouston/",
+    "description": "Family-operated Nigerian cuisine with traditional flavors.",
+    "price_range": 2,
+    "google_rating": 3.1,
+    "hours": {
+      "monday": { "open": "12:00", "close": "22:00", "closed": false },
+      "tuesday": { "open": "12:00", "close": "22:00", "closed": false },
+      "wednesday": { "open": "12:00", "close": "22:00", "closed": false },
+      "thursday": { "open": "12:00", "close": "22:00", "closed": false },
+      "friday": { "open": "12:00", "close": "02:00", "closed": false },
+      "saturday": { "open": "12:00", "close": "02:00", "closed": false },
+      "sunday": { "open": "12:00", "close": "21:00", "closed": false }
+    }
+  },
+  {
+    "name": "Aria Suya Kitchen",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "6357 Westheimer Rd",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77057"
+    },
+    "phone": "+1 832-831-4372",
+    "website": "https://www.ariasuyakitchen.com",
+    "instagram": "https://www.instagram.com/ariasuyakitchen/",
+    "facebook": "https://www.facebook.com/ariasuyakitchen/",
+    "description": "Nigerian suya and fusion menu in a trendy setting.",
+    "price_range": 3,
+    "google_rating": 4.2,
+    "hours": {
+      "monday": { "open": "11:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "21:00", "closed": false },
+      "friday": { "open": "11:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "11:00", "close": "21:00", "closed": false }
+    }
+  },
+  {
+    "name": "Fabaceae African Cuisine",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "10023 S Main St Bldg 7",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77025"
+    },
+    "phone": "+1 512-840-0855",
+    "website": "http://www.fabaceaecuisine.com",
+    "instagram": "https://www.instagram.com/fabaceaecuisine/",
+    "facebook": "https://www.facebook.com/fabaceaecuisine/",
+    "description": "Authentic Nigerian cuisine focused on classic dishes.",
+    "price_range": 2,
+    "google_rating": 4.2,
+    "hours": {
+      "monday": { "open": "11:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "21:00", "closed": false },
+      "friday": { "open": "11:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "11:00", "close": "21:00", "closed": false }
+    }
+  },
+  {
+    "name": "Suya Hut",
+    "cuisine_types": ["Nigerian", "West African"],
+    "address": {
+      "street": "11720 W Airport Blvd Ste 1600",
+      "city": "Meadows Place",
+      "state": "TX",
+      "zip": "77477"
+    },
+    "phone": "+1 281-265-1411",
+    "website": "https://therealsuyahut.com/",
+    "instagram": "https://www.instagram.com/therealsuyahut/",
+    "facebook": "https://www.facebook.com/therealsuyahut/",
+    "description": "Suya Hut specializes in Nigerian suya skewers, jollof rice and West African flavors.",
+    "price_range": 2,
+    "google_rating": null,
+    "hours": {
+      "monday": { "open": "11:00", "close": "21:00", "closed": false },
+      "tuesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "wednesday": { "open": "11:00", "close": "21:00", "closed": false },
+      "thursday": { "open": "11:00", "close": "21:00", "closed": false },
+      "friday": { "open": "11:00", "close": "21:00", "closed": false },
+      "saturday": { "open": "11:00", "close": "21:00", "closed": false },
+      "sunday": { "open": "", "close": "", "closed": true }
+    }
+  }
+]

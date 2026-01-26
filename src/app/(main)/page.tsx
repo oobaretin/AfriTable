@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabasePublicClient } from "@/lib/supabase/public";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -51,7 +51,7 @@ const CITIES: { label: string; href: string }[] = [
 ];
 
 async function getFeaturedRestaurants(): Promise<FeaturedRestaurant[]> {
-  const supabase = createSupabaseServerClient();
+  const supabase = createSupabasePublicClient();
 
   // Prefer explicitly featured restaurants that haven't expired.
   const nowIso = new Date().toISOString();
@@ -65,17 +65,26 @@ async function getFeaturedRestaurants(): Promise<FeaturedRestaurant[]> {
     .order("created_at", { ascending: false })
     .limit(12);
 
+  if (featuredQuery.error) {
+    console.error("Error fetching featured restaurants:", featuredQuery.error);
+  }
+
   const featured = (featuredQuery.data ?? []) as FeaturedRestaurant[];
   if (featured.length) return featured;
 
   // Fallback: top-rated active restaurants.
-  const { data } = await supabase
+  const { data, error } = await supabase
     .from("restaurants_with_rating")
     .select("id,name,slug,cuisine_types,price_range,address,images,created_at,avg_rating,review_count")
     .eq("is_active", true)
     .order("avg_rating", { ascending: false, nullsFirst: false })
     .order("created_at", { ascending: false })
     .limit(12);
+
+  if (error) {
+    console.error("Error fetching restaurants:", error);
+    return [];
+  }
 
   return (data ?? []) as FeaturedRestaurant[];
 }
