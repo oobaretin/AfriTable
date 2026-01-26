@@ -19,6 +19,7 @@ import {
 
 async function getAdminStats() {
   const supabase = createSupabaseAdminClient();
+  // Fetch admin dashboard statistics
 
   try {
     // Total restaurants
