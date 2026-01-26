@@ -676,7 +676,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
               <Card className="w-full shrink-0">
                 <CardHeader>
                   <CardTitle className="text-base">More recommendations coming soon</CardTitle>
-                  <CardDescription>As we onboard more restaurants, we'll show great matches here.</CardDescription>
+                  <CardDescription>As we onboard more restaurants, we&apos;ll show great matches here.</CardDescription>
                 </CardHeader>
               </Card>
             ) : null}

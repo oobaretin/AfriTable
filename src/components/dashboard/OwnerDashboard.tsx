@@ -100,7 +100,7 @@ export function OwnerDashboard({ restaurantName }: { restaurantName: string }) {
     refetchInterval: 30_000,
   });
 
-  const rows = q.data?.reservations ?? [];
+  const rows = React.useMemo(() => q.data?.reservations ?? [], [q.data?.reservations]);
 
   // timeline buckets by hour
   const buckets = React.useMemo(() => {
