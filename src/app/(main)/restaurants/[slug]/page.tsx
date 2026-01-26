@@ -54,8 +54,8 @@ function addressToString(address: any): string {
   return parts.length > 0 ? parts.join(", ") : "";
 }
 
-function normalizeInstagramUrl(handleOrUrl: string | null | undefined): string | null {
-  if (!handleOrUrl || typeof handleOrUrl !== "string") return null;
+function normalizeInstagramUrl(handleOrUrl: string | null | undefined): string {
+  if (!handleOrUrl || typeof handleOrUrl !== "string") return "#";
   // If it's already a full URL, return it
   if (handleOrUrl.startsWith("http://") || handleOrUrl.startsWith("https://")) {
     return handleOrUrl;
@@ -383,7 +383,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
                     ) : null}
                     {restaurant.instagram_handle ? (
                       <Button asChild size="sm" variant="outline" className="flex-shrink-0 whitespace-nowrap min-h-[36px]">
-                        <a href={normalizeInstagramUrl(restaurant.instagram_handle) || "#"} target="_blank" rel="noreferrer">
+                        <a href={normalizeInstagramUrl(restaurant.instagram_handle)} target="_blank" rel="noreferrer">
                           Instagram
                         </a>
                       </Button>
