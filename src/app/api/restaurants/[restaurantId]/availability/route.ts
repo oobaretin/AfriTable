@@ -6,7 +6,7 @@ import type { OperatingHour } from "@/lib/reservation/availability";
 import { calculateAvailableTimeSlots } from "@/lib/reservation/availability";
 
 const querySchema = z.object({
-  date: z.string().regex(/^\\d{4}-\\d{2}-\\d{2}$/),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   partySize: z.string().optional().default("2"),
 });
 

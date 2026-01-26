@@ -46,7 +46,7 @@ export function RestaurantsSearchClient() {
     (sp.get("price") ?? "")
       .split(",")
       .map((s) => Number(s))
-      .filter((n) => Number.isFinite(n)),
+      .filter((n) => Number.isFinite(n) && n >= 1 && n <= 4),
   );
   const [minRating, setMinRating] = React.useState(sp.get("minRating") ?? "");
   const [sort, setSort] = React.useState(sp.get("sort") ?? "recommended");

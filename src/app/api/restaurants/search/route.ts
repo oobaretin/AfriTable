@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabasePublicClient } from "@/lib/supabase/public";
+
+export const dynamic = "force-dynamic";
 
 const querySchema = z.object({
   city: z.string().optional(),
@@ -28,14 +30,41 @@ export async function GET(request: Request) {
   const prices = (parsed.data.price ?? "")
     .split(",")
     .map((s) => Number(s))
-    .filter((n) => Number.isFinite(n));
+    .filter((n) => Number.isFinite(n) && n >= 1 && n <= 4);
   const minRating = Number(parsed.data.minRating ?? "");
   const city = parsed.data.city?.toLowerCase();
   const zip = parsed.data.zip?.toLowerCase();
 
   const sort = parsed.data.sort ?? "recommended";
 
-  const supabase = createSupabaseServerClient();
+  // Public endpoint: avoid cookie/session SSR client to prevent subtle dev-time
+  // issues; use a pure anon client.
+  const supabase = createSupabasePublicClient();
+
+  // Dev-only debug hook to diagnose "0 restaurants found" quickly.
+  if (process.env.NODE_ENV !== "production" && url.searchParams.get("debug") === "1") {
+    const [v, t] = await Promise.all([
+      supabase.from("restaurants_with_rating").select("id,name,is_active,address").limit(3),
+      supabase.from("restaurants").select("id,name,is_active,address").limit(3),
+    ]);
+    const normal = await supabase
+      .from("restaurants_with_rating")
+      .select("id,name,is_active,address,avg_rating,created_at")
+      .eq("is_active", true)
+      .order("avg_rating", { ascending: false, nullsFirst: false })
+      .order("created_at", { ascending: false })
+      .limit(10);
+    return NextResponse.json({
+      env: {
+        hasUrl: Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL),
+        anonPrefix: (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "").slice(0, 12),
+      },
+      restaurants_with_rating: { count: v.data?.length ?? 0, error: v.error?.message ?? null, sample: v.data ?? [] },
+      restaurants: { count: t.data?.length ?? 0, error: t.error?.message ?? null, sample: t.data ?? [] },
+      normalQuery: { count: normal.data?.length ?? 0, error: normal.error?.message ?? null, sample: normal.data ?? [] },
+    });
+  }
+
   const { data, error } = await supabase
     .from("restaurants_with_rating")
     .select("id,slug,name,cuisine_types,price_range,address,images,avg_rating,review_count,is_active,created_at")
