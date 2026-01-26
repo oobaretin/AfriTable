@@ -55,7 +55,7 @@ function addressToString(address: any): string {
 }
 
 function normalizeInstagramUrl(handleOrUrl: string | null | undefined): string | null {
-  if (!handleOrUrl) return null;
+  if (!handleOrUrl || typeof handleOrUrl !== "string") return null;
   // If it's already a full URL, return it
   if (handleOrUrl.startsWith("http://") || handleOrUrl.startsWith("https://")) {
     return handleOrUrl;
