@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { toast } from "sonner";
@@ -176,6 +177,11 @@ export function RestaurantsSearchClient() {
 
   return (
     <Container as="div" className="flex min-h-[calc(100vh-5rem)] flex-col gap-6 py-10 md:py-14">
+      <div className="-mb-2 flex items-center gap-2 text-sm">
+        <Link href="/" className="text-muted-foreground hover:text-foreground">
+          ← Back to home
+        </Link>
+      </div>
       <PageHeader
         title="Restaurants"
         description="Search and filter African & Caribbean dining across the US."

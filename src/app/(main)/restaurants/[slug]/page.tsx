@@ -23,6 +23,9 @@ type RestaurantDetail = {
   description: string | null;
   address: any;
   phone: string | null;
+  website: string | null;
+  instagram_handle: string | null;
+  facebook_url: string | null;
   images: string[];
   hours: any;
   avg_rating: number | null;
@@ -48,37 +51,69 @@ function addressToString(address: any): string {
   return [street, city, state, zip].filter(Boolean).join(", ");
 }
 
+type OperatingHour = { day_of_week: number; open_time: string; close_time: string };
+
+function normalizeOperatingHours(input: unknown): OperatingHour[] {
+  const list = Array.isArray(input) ? input : [];
+  return list
+    .map((o: any) => ({
+      day_of_week: Number(o?.day_of_week),
+      open_time: String(o?.open_time ?? ""),
+      close_time: String(o?.close_time ?? ""),
+    }))
+    .filter(
+      (o) =>
+        Number.isFinite(o.day_of_week) &&
+        o.day_of_week >= 0 &&
+        o.day_of_week <= 6 &&
+        /^\d{2}:\d{2}$/.test(o.open_time) &&
+        /^\d{2}:\d{2}$/.test(o.close_time),
+    );
+}
+
+function pickOperatingHours(...candidates: OperatingHour[][]): OperatingHour[] {
+  for (const c of candidates) {
+    if (Array.isArray(c) && c.length) return c;
+  }
+  return [];
+}
+
 function todayHours(operatingHours: any, date = new Date()) {
-  const list = Array.isArray(operatingHours) ? operatingHours : [];
+  const list = normalizeOperatingHours(operatingHours);
+  if (!list.length) return { label: "Hours coming soon", openNow: false, hasHours: false };
   const dow = date.getDay();
   const rule = list.find((o: any) => o?.day_of_week === dow);
-  if (!rule) return { label: "Closed", openNow: false };
+  if (!rule) return { label: "Closed", openNow: false, hasHours: true };
   const open = String(rule.open_time ?? "");
   const close = String(rule.close_time ?? "");
   const now = format(date, "HH:mm");
   const openNow = open && close ? now >= open && now < close : false;
-  return { label: `${open}–${close}`, openNow };
+  return { label: `${open}–${close}`, openNow, hasHours: true };
 }
 
 async function getRestaurantBySlug(slug: string): Promise<RestaurantDetail | null> {
   const supabase = createSupabasePublicClient();
   const { data, error } = await supabase
     .from("restaurants_with_rating")
-    .select("id,name,slug,cuisine_types,price_range,description,address,phone,images,hours,avg_rating,review_count")
+    .select(
+      "id,name,slug,cuisine_types,price_range,description,address,phone,website,instagram_handle,facebook_url,images,hours,avg_rating,review_count",
+    )
     .eq("slug", slug)
     .maybeSingle();
   if (error) return null;
   return (data ?? null) as any;
 }
 
-async function getOperatingHours(restaurantId: string) {
+async function getOperatingHours(restaurantId: string, restaurantHours: unknown) {
   const supabase = createSupabasePublicClient();
   const { data } = await supabase
     .from("availability_settings")
     .select("operating_hours")
     .eq("restaurant_id", restaurantId)
     .maybeSingle();
-  return (data?.operating_hours as any) ?? [];
+  const fromSettings = normalizeOperatingHours(data?.operating_hours);
+  const fromRestaurant = normalizeOperatingHours(restaurantHours);
+  return pickOperatingHours(fromSettings, fromRestaurant);
 }
 
 async function getReviews(restaurantId: string) {
@@ -142,7 +177,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
   if (!restaurant) notFound();
 
   const [operatingHours, reviews, similar] = await Promise.all([
-    getOperatingHours(restaurant.id),
+    getOperatingHours(restaurant.id, restaurant.hours),
     getReviews(restaurant.id),
     getSimilarRestaurants(restaurant.id, restaurant.cuisine_types),
   ]);
@@ -215,6 +250,18 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <div className="mb-4 flex flex-wrap items-center gap-2 text-sm">
+        <Link href="/" className="text-muted-foreground hover:text-foreground">
+          Home
+        </Link>
+        <span className="text-muted-foreground">/</span>
+        <Link href="/restaurants" className="text-muted-foreground hover:text-foreground">
+          Restaurants
+        </Link>
+        <span className="text-muted-foreground">/</span>
+        <span className="font-medium">{restaurant.name}</span>
+      </div>
+
       {/* Header */}
       <div className="grid gap-8 lg:grid-cols-12">
         <div className="lg:col-span-8">
@@ -253,8 +300,8 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
             </div>
           </div>
 
-          {/* Sticky Quick Info */}
-          <div className="mt-6 sticky top-16 z-40 rounded-xl border bg-background/80 p-4 backdrop-blur">
+          {/* Quick Info (sticky on desktop only) */}
+          <div className="mt-6 rounded-xl border bg-background/80 p-4 backdrop-blur lg:sticky lg:top-16 lg:z-40">
             <div className="grid gap-3 md:grid-cols-5 md:items-center">
               <div className="md:col-span-2">
                 <div className="text-xs text-muted-foreground">Address</div>
@@ -278,14 +325,38 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
               <div>
                 <div className="text-xs text-muted-foreground">Hours</div>
                 <div className="text-sm font-medium">
-                  {todays.openNow ? <span className="text-[oklch(0.35_0.06_145)]">Open now</span> : "Closed"}{" "}
-                  <span className="text-muted-foreground">({todays.label})</span>
+                  {!todays.hasHours ? (
+                    <span className="text-muted-foreground">{todays.label}</span>
+                  ) : (
+                    <>
+                      {todays.openNow ? <span className="text-[oklch(0.35_0.06_145)]">Open now</span> : "Closed"}{" "}
+                      <span className="text-muted-foreground">({todays.label})</span>
+                    </>
+                  )}
                 </div>
               </div>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">Halal</Badge>
-                <Badge variant="secondary">Vegan</Badge>
-                <Badge variant="secondary">Vegetarian</Badge>
+              <div className="flex flex-wrap items-center gap-2 md:justify-end">
+                {restaurant.website ? (
+                  <Button asChild size="sm" variant="outline">
+                    <a href={restaurant.website} target="_blank" rel="noreferrer">
+                      Website
+                    </a>
+                  </Button>
+                ) : null}
+                {restaurant.instagram_handle ? (
+                  <Button asChild size="sm" variant="outline">
+                    <a href={restaurant.instagram_handle} target="_blank" rel="noreferrer">
+                      Instagram
+                    </a>
+                  </Button>
+                ) : null}
+                {restaurant.facebook_url ? (
+                  <Button asChild size="sm" variant="outline">
+                    <a href={restaurant.facebook_url} target="_blank" rel="noreferrer">
+                      Facebook
+                    </a>
+                  </Button>
+                ) : null}
               </div>
             </div>
           </div>

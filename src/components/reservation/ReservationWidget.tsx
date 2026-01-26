@@ -62,7 +62,16 @@ export function ReservationWidget({
       const res = await fetch(
         `/api/restaurants/${restaurantId}/availability?date=${encodeURIComponent(dateStr)}&partySize=${encodeURIComponent(partySize)}`,
       );
-      if (!res.ok) throw new Error("Failed to load availability");
+      if (!res.ok) {
+        let details = "";
+        try {
+          const body = await res.json();
+          details = body?.error ? String(body.error) : body?.message ? String(body.message) : "";
+        } catch {
+          // ignore
+        }
+        throw new Error(details ? `Failed to load availability: ${details}` : "Failed to load availability");
+      }
       return (await res.json()) as AvailabilityResponse;
     },
     staleTime: 15_000,
@@ -138,7 +147,10 @@ export function ReservationWidget({
             ))}
           </div>
         ) : error ? (
-          <p className="text-sm text-destructive">Couldn’t load availability. Try again.</p>
+          <div className="grid gap-2">
+            <p className="text-sm text-destructive">Couldn’t load availability.</p>
+            <p className="text-xs text-muted-foreground">{String((error as any)?.message ?? "")}</p>
+          </div>
         ) : slots.length ? (
           <div className="grid grid-cols-3 gap-2">
             {slots.map((s) => (
@@ -164,7 +176,11 @@ export function ReservationWidget({
             ))}
           </div>
         ) : (
-          <p className="text-sm text-muted-foreground">No times available for this day.</p>
+          <p className="text-sm text-muted-foreground">
+            {data?.eligibleTableCount === 0
+              ? "No tables can accommodate this party size. Try a smaller party."
+              : "No times available for this day."}
+          </p>
         )}
 
         <div className="grid gap-2">
