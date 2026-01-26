@@ -53,40 +53,59 @@ const CITIES: { label: string; href: string }[] = [
 async function getFeaturedRestaurants(): Promise<FeaturedRestaurant[]> {
   const supabase = createSupabasePublicClient();
 
-  // Prefer explicitly featured restaurants that haven't expired.
-  const nowIso = new Date().toISOString();
-  const featuredQuery = await supabase
-    .from("restaurants_with_rating")
-    .select("id,name,slug,cuisine_types,price_range,address,images,created_at,avg_rating,review_count")
-    .eq("is_active", true)
-    .eq("is_featured", true)
-    .or(`featured_until.is.null,featured_until.gt.${nowIso}`)
-    .order("avg_rating", { ascending: false, nullsFirst: false })
-    .order("created_at", { ascending: false })
-    .limit(12);
+  try {
+    // Prefer explicitly featured restaurants that haven't expired.
+    const nowIso = new Date().toISOString();
+    const featuredQuery = await supabase
+      .from("restaurants_with_rating")
+      .select("id,name,slug,cuisine_types,price_range,address,images,created_at,avg_rating,review_count")
+      .eq("is_active", true)
+      .eq("is_featured", true)
+      .or(`featured_until.is.null,featured_until.gt.${nowIso}`)
+      .order("avg_rating", { ascending: false, nullsFirst: false })
+      .order("created_at", { ascending: false })
+      .limit(12);
 
-  if (featuredQuery.error) {
-    console.error("Error fetching featured restaurants:", featuredQuery.error);
-  }
+    if (featuredQuery.error) {
+      console.error("[Homepage] Error fetching featured restaurants:", {
+        message: featuredQuery.error.message,
+        details: featuredQuery.error.details,
+        hint: featuredQuery.error.hint,
+        code: featuredQuery.error.code,
+      });
+    }
 
-  const featured = (featuredQuery.data ?? []) as FeaturedRestaurant[];
-  if (featured.length) return featured;
+    const featured = (featuredQuery.data ?? []) as FeaturedRestaurant[];
+    if (featured.length) {
+      console.log(`[Homepage] Found ${featured.length} featured restaurants`);
+      return featured;
+    }
 
-  // Fallback: top-rated active restaurants.
-  const { data, error } = await supabase
-    .from("restaurants_with_rating")
-    .select("id,name,slug,cuisine_types,price_range,address,images,created_at,avg_rating,review_count")
-    .eq("is_active", true)
-    .order("avg_rating", { ascending: false, nullsFirst: false })
-    .order("created_at", { ascending: false })
-    .limit(12);
+    // Fallback: top-rated active restaurants.
+    const { data, error } = await supabase
+      .from("restaurants_with_rating")
+      .select("id,name,slug,cuisine_types,price_range,address,images,created_at,avg_rating,review_count")
+      .eq("is_active", true)
+      .order("avg_rating", { ascending: false, nullsFirst: false })
+      .order("created_at", { ascending: false })
+      .limit(12);
 
-  if (error) {
-    console.error("Error fetching restaurants:", error);
+    if (error) {
+      console.error("[Homepage] Error fetching restaurants:", {
+        message: error.message,
+        details: error.details,
+        hint: error.hint,
+        code: error.code,
+      });
+      return [];
+    }
+
+    console.log(`[Homepage] Found ${data?.length || 0} restaurants (fallback query)`);
+    return (data ?? []) as FeaturedRestaurant[];
+  } catch (err) {
+    console.error("[Homepage] Unexpected error:", err);
     return [];
   }
-
-  return (data ?? []) as FeaturedRestaurant[];
 }
 
 export default async function MainHomePage() {

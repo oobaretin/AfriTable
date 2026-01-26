@@ -14,6 +14,7 @@
     "seed:houston": "node scripts/seed-restaurants.mjs data/seed/houston-restaurants.json",
     "activate:restaurants": "node scripts/activate-restaurants.mjs",
     "test:restaurants": "node scripts/test-restaurants-query.mjs",
+    "verify:production": "node scripts/verify-production.mjs",
     "import:json": "tsx lib/import-from-json.ts",
     "build": "next build",
     "start": "next start",
