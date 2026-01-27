@@ -41,6 +41,7 @@ export function HeroSearch() {
   const router = useRouter();
 
   const [location, setLocation] = React.useState("");
+  const [cuisine, setCuisine] = React.useState("");
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   const [partySize, setPartySize] = React.useState("2");
   const [time, setTime] = React.useState("19:00");
@@ -67,8 +68,11 @@ export function HeroSearch() {
     const params = new URLSearchParams();
     if (location.trim()) {
       // very light heuristic for city vs zip
-      if (/^\\d{5}(-\\d{4})?$/.test(location.trim())) params.set("zip", location.trim());
+      if (/^\d{5}(-\d{4})?$/.test(location.trim())) params.set("zip", location.trim());
       else params.set("city", location.trim());
+    }
+    if (cuisine.trim()) {
+      params.set("cuisine", cuisine.trim());
     }
     if (date) params.set("date", format(date, "yyyy-MM-dd"));
     if (partySize) params.set("partySize", partySize);
@@ -77,107 +81,55 @@ export function HeroSearch() {
   }
 
   return (
-    <Card className="relative z-20 mx-auto w-full max-w-5xl border-white/20 bg-background/70 p-4 shadow-xl backdrop-blur md:p-6">
-      <div className="grid gap-4 md:grid-cols-12 md:items-end">
-        <div className="md:col-span-4">
-          <Label htmlFor="location">Location</Label>
-          <div ref={locationWrapRef} className="relative">
-            <Input
-              id="location"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-              placeholder="City or ZIP (e.g. Atlanta, 30303)"
-              autoComplete="off"
-              className="mt-1"
-              onFocus={() => setLocationOpen(true)}
-              onKeyDown={(e) => {
-                if (e.key === "Escape") setLocationOpen(false);
-              }}
-            />
-            {locationOpen ? (
-              <div className="absolute left-0 right-0 top-full z-50 mt-1 overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md">
-                {suggestions.map((s) => (
-                  <button
-                    key={s}
-                    type="button"
-                    className="flex w-full items-center justify-between px-3 py-2 text-left text-sm hover:bg-accent hover:text-accent-foreground"
-                    onClick={() => {
-                      setLocation(s);
-                      setLocationOpen(false);
-                    }}
-                  >
-                    <span>{s}</span>
-                    <span className="text-xs text-muted-foreground">Popular</span>
-                  </button>
-                ))}
-              </div>
-            ) : null}
+    <>
+      <input
+        type="text"
+        placeholder="Cuisine or Restaurant"
+        value={cuisine}
+        onChange={(e) => setCuisine(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") onSearch();
+        }}
+        className="flex-1 px-6 py-4 text-slate-900 focus:outline-none rounded-xl"
+      />
+      <div ref={locationWrapRef} className="relative flex-1">
+        <input
+          type="text"
+          placeholder="Location"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+          onFocus={() => setLocationOpen(true)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") onSearch();
+            if (e.key === "Escape") setLocationOpen(false);
+          }}
+          className="w-full px-6 py-4 text-slate-900 border-l border-slate-100 focus:outline-none rounded-xl md:rounded-none"
+        />
+        {locationOpen && (
+          <div className="absolute left-0 right-0 top-full z-50 mt-1 overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md">
+            {suggestions.map((s) => (
+              <button
+                key={s}
+                type="button"
+                className="flex w-full items-center justify-between px-3 py-2 text-left text-sm hover:bg-accent hover:text-accent-foreground"
+                onClick={() => {
+                  setLocation(s);
+                  setLocationOpen(false);
+                }}
+              >
+                <span>{s}</span>
+                <span className="text-xs text-muted-foreground">Popular</span>
+              </button>
+            ))}
           </div>
-        </div>
-
-        <div className="md:col-span-3">
-          <Label>Date</Label>
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button variant="outline" className="mt-1 w-full justify-start">
-                {date ? format(date, "EEE, MMM d") : "Pick a date"}
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[360px]">
-              <DialogHeader>
-                <DialogTitle>Select a date</DialogTitle>
-              </DialogHeader>
-              <Calendar
-                mode="single"
-                selected={date}
-                onSelect={setDate}
-                disabled={(d) => d < new Date() || d > addDays(new Date(), 90)}
-                initialFocus
-              />
-            </DialogContent>
-          </Dialog>
-        </div>
-
-        <div className="md:col-span-2">
-          <Label>Party size</Label>
-          <Select value={partySize} onValueChange={setPartySize}>
-            <SelectTrigger className="mt-1">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              {Array.from({ length: 20 }, (_, i) => String(i + 1)).map((n) => (
-                <SelectItem key={n} value={n}>
-                  {n}
-                </SelectItem>
-              ))}
-              <SelectItem value="20+">20+</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div className="md:col-span-2">
-          <Label>Time</Label>
-          <Select value={time} onValueChange={setTime}>
-            <SelectTrigger className="mt-1">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent className="max-h-72">
-              {TIMES.map((t) => (
-                <SelectItem key={t} value={t}>
-                  {formatTime12h(t)}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div className="md:col-span-1">
-          <Button className="mt-6 w-full" onClick={onSearch} type="button">
-            Search
-          </Button>
-        </div>
+        )}
       </div>
-    </Card>
+      <button
+        onClick={onSearch}
+        className="bg-orange-600 px-10 py-4 rounded-xl font-bold hover:bg-orange-700 transition-all text-white"
+      >
+        Search
+      </button>
+    </>
   );
 }
-

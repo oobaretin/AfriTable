@@ -199,40 +199,36 @@ export default async function MainHomePage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative z-30 overflow-x-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,oklch(0.78_0.18_55),transparent_55%),radial-gradient(circle_at_80%_20%,oklch(0.35_0.06_145),transparent_55%),linear-gradient(135deg,oklch(0.16_0.02_55),oklch(0.10_0.01_145))]" />
-        <div className="absolute inset-0 -z-10 opacity-30 [background-image:linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:40px_40px]" />
-
-        <Container className="pb-16 pt-14 md:pb-24 md:pt-20">
+      <section className="relative bg-slate-900 py-24 px-6 text-center text-white">
+        {/* Abstract Background Texture */}
+        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        
+        <div className="relative z-10 max-w-4xl mx-auto">
           <Reveal>
-            <div className="mx-auto max-w-3xl text-center text-white">
-              <Badge className="mx-auto mb-5 border-white/20 bg-white/10 text-white" variant="outline">
-                African & Caribbean dining across America
-              </Badge>
-              <h1 className="text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-                Discover Authentic African &amp; Caribbean Dining
-              </h1>
-              <p className="mt-4 text-pretty text-base text-white/80 md:text-lg">
-                Reserve tables at the best African and Caribbean restaurants across America.
-              </p>
+            <span className="inline-block px-4 py-1 mb-6 rounded-full bg-orange-500/20 text-orange-500 text-sm font-bold border border-orange-500/30">
+              Celebrating 1,000+ Tables Across America
+            </span>
+          </Reveal>
+          
+          <Reveal>
+            <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
+              Discover Authentic <span className="text-orange-500">African</span> & <span className="text-yellow-500">Caribbean</span> Dining
+            </h1>
+          </Reveal>
+          
+          <Reveal>
+            <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+              Reserve tables at the best diaspora-owned restaurants. From the smoky grills of Nairobi to the vibrant spices of Kingston.
+            </p>
+          </Reveal>
+          
+          {/* Search Component */}
+          <Reveal>
+            <div className="flex flex-col md:flex-row gap-2 bg-white p-2 rounded-2xl shadow-2xl max-w-3xl mx-auto">
+              <HeroSearch />
             </div>
           </Reveal>
-
-          <div className="mt-10">
-            <HeroSearch />
-          </div>
-
-          <Reveal className="mt-10">
-            <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-3 text-sm text-white/80">
-              <span className="font-medium text-white">Trending:</span>
-              {CITIES.slice(0, 4).map((c) => (
-                <Link key={c.label} href={c.href} className="rounded-full border border-white/15 bg-white/5 px-3 py-1 hover:bg-white/10">
-                  {c.label}
-                </Link>
-              ))}
-            </div>
-          </Reveal>
-        </Container>
+        </div>
       </section>
 
       {/* Restaurant Search */}
