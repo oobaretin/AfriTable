@@ -13,8 +13,22 @@ function requireEnv(name: string): string {
  * Useful for SEO routes like sitemap/robots and cached public data fetching.
  */
 export function createSupabasePublicClient(): SupabaseClient<Database> {
-  return createClient<Database>(requireEnv("NEXT_PUBLIC_SUPABASE_URL"), requireEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY"), {
+  const url = requireEnv("NEXT_PUBLIC_SUPABASE_URL");
+  const anonKey = requireEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY");
+  
+  return createClient<Database>(url, anonKey, {
     auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
+    global: {
+      fetch: (url, options = {}) => {
+        return fetch(url, {
+          ...options,
+          headers: {
+            ...options.headers,
+            'apikey': anonKey,
+          },
+        });
+      },
+    },
   });
 }
 
