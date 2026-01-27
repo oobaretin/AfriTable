@@ -586,5 +586,71 @@
     "address": "Bushwick, New York City, NY",
     "about": "Everything is better when shared with music and coffee.",
     "vibe_tags": ["Cinematic Communal"]
+  },
+  {
+    "id": "atl-001",
+    "name": "Virgil's Gullah Kitchen",
+    "cuisine": "Gullah Geechee / West African Roots",
+    "region": "West African",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "West Midtown, Atlanta, GA",
+    "about": "A love letter to the coastal heritage of the Gullah people.",
+    "vibe_tags": ["Soulful & Social"]
+  },
+  {
+    "id": "dc-001",
+    "name": "Swahili Village",
+    "cuisine": "Kenyan / East African",
+    "region": "East African",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "M St / Downtown, Washington D.C., DC",
+    "about": "African food diplomacy served in a fine-dining oasis.",
+    "vibe_tags": ["Diplomatic Luxury"]
+  },
+  {
+    "id": "atl-002",
+    "name": "Desta",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Briarcliff, Atlanta, GA",
+    "about": "Where traditional happiness meets contemporary design.",
+    "vibe_tags": ["Sleek & Modern"]
+  },
+  {
+    "id": "dc-002",
+    "name": "Mansyon",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "U Street Corridor, Washington D.C., DC",
+    "about": "The ultimate late-night destination for the Nigerian elite.",
+    "vibe_tags": ["High-End Lounge"]
+  },
+  {
+    "id": "atl-003",
+    "name": "Ubuntu",
+    "cuisine": "West African (Vegan)",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Virginia-Highland, Atlanta, GA",
+    "about": "A plant-based journey through the soul of the West.",
+    "vibe_tags": ["Artistic & Refined"]
+  },
+  {
+    "id": "dc-003",
+    "name": "Elfegne",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Adams Morgan, Washington D.C., DC",
+    "about": "Formerly Zenebech; dining reimagined for kings and queens.",
+    "vibe_tags": ["Royal Traditional"]
   }
 ]
