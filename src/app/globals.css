@@ -253,6 +253,21 @@
     animation-name: slide-in-from-bottom;
   }
 
+  @keyframes slide-in-from-top {
+    from {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slide-in-from-top-12 {
+    animation-name: slide-in-from-top;
+  }
+
   .zoom-in {
     animation-name: zoom-in;
   }
