@@ -13,6 +13,7 @@ import { FavoriteButton } from "@/components/restaurant/FavoriteButton";
 import { ShareButton } from "@/components/restaurant/ShareButton";
 import { ReservationWidget } from "@/components/reservation/ReservationWidget";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
+import { ReviewBreakdown } from "@/components/restaurant/ReviewBreakdown";
 import { generateDefaultContent } from "@/lib/restaurant-content-helpers";
 import { formatTimeRange12h } from "@/lib/utils/time-format";
 import { getRestaurantByIdFromJSON, transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
@@ -700,31 +701,14 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
                 </div>
               </div>
 
-              <div className="mt-6 grid gap-6 lg:grid-cols-3">
-                <Card className="lg:col-span-1">
-                  <CardHeader>
-                    <CardTitle className="text-base">Rating breakdown</CardTitle>
-                    <CardDescription>5-star histogram</CardDescription>
-                  </CardHeader>
-                  <CardContent className="grid gap-2">
-                    {[5, 4, 3, 2, 1].map((star) => {
-                      const count = histogram[star - 1] ?? 0;
-                      const total = Math.max(1, reviews.length);
-                      const pct = Math.round((count / total) * 100);
-                      return (
-                        <div key={star} className="grid grid-cols-[32px_1fr_40px] items-center gap-3 text-sm">
-                          <span className="text-muted-foreground">{star}★</span>
-                          <div className="h-2 overflow-hidden rounded-full bg-muted">
-                            <div className="h-2 bg-primary" style={{ width: `${pct}%` }} />
-                          </div>
-                          <span className="text-right text-muted-foreground">{count}</span>
-                        </div>
-                      );
-                    })}
-                  </CardContent>
-                </Card>
+              {/* Review Breakdown */}
+              <ReviewBreakdown
+                rating={avg}
+                totalReviews={restaurant.review_count}
+                histogram={histogram}
+              />
 
-                <div className="lg:col-span-2 grid gap-4">
+              <div className="grid gap-4">
                   {reviews.length ? (
                     reviews.slice(0, 8).map((r: any) => (
                       <Card key={r.id}>
