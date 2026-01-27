@@ -81,7 +81,6 @@ const cuisineContentMap: Record<string, Partial<RestaurantContent>> = {
 export function generateDefaultContent(
   restaurantName: string,
   cuisineTypes: string[],
-  description?: string | null,
 ): RestaurantContent {
   // Find the best matching cuisine content
   let matchedContent: Partial<RestaurantContent> = {};
@@ -107,7 +106,6 @@ export function generateDefaultContent(
 
   // Generate defaults if still missing
   const primaryCuisine = cuisineTypes[0] || "African";
-  const baseDescription = description || `A vibrant ${primaryCuisine} dining experience celebrating authentic flavors and hospitality.`;
 
   return {
     our_story:

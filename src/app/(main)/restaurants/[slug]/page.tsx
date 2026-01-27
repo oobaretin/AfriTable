@@ -228,7 +228,6 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
   const defaultContent = generateDefaultContent(
     restaurant.name,
     restaurant.cuisine_types || [],
-    restaurant.description,
   );
   const ourStory = restaurant.our_story || defaultContent.our_story;
   const culturalRoots = restaurant.cultural_roots || defaultContent.cultural_roots;
