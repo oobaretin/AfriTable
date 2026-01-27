@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 import Footer from "@/components/layout/Footer";
 import CookieConsentBanner from "@/components/layout/CookieConsentBanner";
+import { FoundersNote } from "@/components/home/FoundersNote";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -85,6 +86,7 @@ export default function RootLayout({
             <Footer />
           </div>
           <CookieConsentBanner />
+          <FoundersNote />
           <Analytics />
         </Providers>
       </body>
