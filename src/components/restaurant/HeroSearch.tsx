@@ -1,13 +1,25 @@
 "use client";
 
-"use client";
-
 import * as React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 const CUISINES = ["NIGERIAN", "SENEGALESE", "HAITIAN", "ETHIOPIAN", "JAMAICAN"];
 const TYPING_SPEED = 100;
 const PAUSE_TIME = 2000;
+
+// Available cities from our database
+const AVAILABLE_CITIES = [
+  "New York City",
+  "Houston",
+  "Atlanta",
+  "Washington D.C.",
+  "Miami",
+  "Los Angeles",
+  "Chicago",
+  "Philadelphia",
+  "San Francisco",
+  "Oakland",
+];
 
 export function HeroSearch() {
   const router = useRouter();
@@ -16,6 +28,41 @@ export function HeroSearch() {
   const [displayText, setDisplayText] = React.useState("");
   const [isDeleting, setIsDeleting] = React.useState(false);
   const [city, setCity] = React.useState(searchParams.get("city") || "");
+  const [showSuggestions, setShowSuggestions] = React.useState(false);
+  const [suggestions, setSuggestions] = React.useState<string[]>([]);
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  const suggestionsRef = React.useRef<HTMLDivElement>(null);
+
+  // Filter cities based on input
+  React.useEffect(() => {
+    if (city.trim()) {
+      const filtered = AVAILABLE_CITIES.filter((c) =>
+        c.toLowerCase().includes(city.toLowerCase())
+      );
+      setSuggestions(filtered);
+      setShowSuggestions(filtered.length > 0 && city.trim().length > 0);
+    } else {
+      setSuggestions([]);
+      setShowSuggestions(false);
+    }
+  }, [city]);
+
+  // Close suggestions when clicking outside
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        suggestionsRef.current &&
+        !suggestionsRef.current.contains(event.target as Node) &&
+        inputRef.current &&
+        !inputRef.current.contains(event.target as Node)
+      ) {
+        setShowSuggestions(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   React.useEffect(() => {
     const currentWord = CUISINES[index];
@@ -103,28 +150,68 @@ export function HeroSearch() {
 
       {/* 4. FIND TABLE PILL (Consistent Sizing) */}
       <div className="relative z-30 mt-16 w-full max-w-lg">
-        <div className="bg-white rounded-full p-1.5 shadow-2xl flex items-center border border-white/10">
-          <div className="flex-1 flex items-center px-5 gap-3">
-            <span className="text-slate-400 text-sm" role="img" aria-label="Location">📍</span>
-            <input
-              type="text"
-              placeholder="Where are you eating?"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  handleSearch();
-                }
-              }}
-              className="w-full py-2.5 bg-transparent outline-none font-bold text-slate-800 text-sm placeholder:text-slate-300"
-            />
+        <div className="relative">
+          <div className="bg-white rounded-full p-1.5 shadow-2xl flex items-center border border-white/10">
+            <div className="flex-1 flex items-center px-5 gap-3">
+              <span className="text-slate-400 text-sm" role="img" aria-label="Location">📍</span>
+              <input
+                ref={inputRef}
+                type="text"
+                placeholder="Where are you eating?"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                onFocus={() => {
+                  if (suggestions.length > 0 && city.trim().length > 0) {
+                    setShowSuggestions(true);
+                  }
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    if (showSuggestions && suggestions.length > 0) {
+                      setCity(suggestions[0]);
+                      setShowSuggestions(false);
+                    } else {
+                      handleSearch();
+                    }
+                  } else if (e.key === "Escape") {
+                    setShowSuggestions(false);
+                  }
+                }}
+                className="w-full py-2.5 bg-transparent outline-none font-bold text-slate-800 text-sm placeholder:text-slate-300"
+              />
+            </div>
+            <button
+              onClick={handleSearch}
+              className="bg-[#111] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-[9px] hover:bg-[#A33B32] transition-all"
+            >
+              Find Table
+            </button>
           </div>
-          <button
-            onClick={handleSearch}
-            className="bg-[#111] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-[9px] hover:bg-[#A33B32] transition-all"
-          >
-            Find Table
-          </button>
+
+          {/* City Suggestions Dropdown */}
+          {showSuggestions && suggestions.length > 0 && (
+            <div
+              ref={suggestionsRef}
+              className="absolute top-full mt-2 w-full bg-[#0A1120] border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-50"
+            >
+              {suggestions.map((suggestion, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    setCity(suggestion);
+                    setShowSuggestions(false);
+                    handleSearch();
+                  }}
+                  className="w-full px-6 py-4 text-left text-white hover:bg-[#C69C2B]/10 hover:text-[#C69C2B] transition-colors border-b border-white/5 last:border-b-0"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-[#A33B32] text-sm">📍</span>
+                    <span className="font-bold text-sm">{suggestion}</span>
+                  </div>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

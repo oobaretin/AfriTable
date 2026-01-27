@@ -718,5 +718,71 @@
     "address": "The Citadel, Miami, FL",
     "about": "Clean, modern, and undeniably Caribbean.",
     "vibe_tags": ["Modern Fast-Casual"]
+  },
+  {
+    "id": "chi-001",
+    "name": "Demera",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "Uptown, Chicago, IL",
+    "about": "Award-winning flavors served with Chicago's finest hospitality.",
+    "vibe_tags": ["Upscale Communal"]
+  },
+  {
+    "id": "phi-001",
+    "name": "African Small Pot",
+    "cuisine": "Senegalese / Mauritanian",
+    "region": "West African",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "Southwest Philly, Philadelphia, PA",
+    "about": "The legendary destination for wood-grilled Diby.",
+    "vibe_tags": ["Authentic & Renowned"]
+  },
+  {
+    "id": "chi-002",
+    "name": "Gorée Cuisine",
+    "cuisine": "Senegalese",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Kenwood, Chicago, IL",
+    "about": "Bringing the peaceful, rich flavors of Gorée Island to the Midwest.",
+    "vibe_tags": ["Island Heritage"]
+  },
+  {
+    "id": "phi-002",
+    "name": "Kilimandjaro",
+    "cuisine": "Senegalese / West African",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "University City, Philadelphia, PA",
+    "about": "A cornerstone of Philadelphia's West African culinary scene.",
+    "vibe_tags": ["Academic & Cultural"]
+  },
+  {
+    "id": "chi-003",
+    "name": "Iyanze",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Uptown, Chicago, IL",
+    "about": "The heart of the diaspora in the heart of the city.",
+    "vibe_tags": ["Modern & Spacious"]
+  },
+  {
+    "id": "phi-003",
+    "name": "Quality Taste",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "West Philly, Philadelphia, PA",
+    "about": "Where traditional jerk meets a modern city pulse.",
+    "vibe_tags": ["Artisanal Caribbean"]
   }
 ]
