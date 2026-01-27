@@ -103,7 +103,7 @@ export function RestaurantGrid({
   const hasResults = transformedRestaurants.length > 0;
 
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-[100vh]">
       {/* Restaurant Grid - Always display grid structure */}
       <div 
         key={`${activeCategory}-${activeCity}`}

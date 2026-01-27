@@ -1,12 +1,17 @@
+import { Suspense } from "react";
 import Image from "next/image";
 import { CategoryFilterWrapper } from "@/components/home/CategoryFilterWrapper";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
+import { RestaurantCardSkeleton } from "@/components/home/RestaurantCardSkeleton";
+
+function RestaurantsGrid() {
+  const restaurantsFromJSON = loadRestaurantsFromJSON();
+  return <CategoryFilterWrapper restaurants={restaurantsFromJSON} />;
+}
 
 export default function RestaurantsPage() {
-  const restaurantsFromJSON = loadRestaurantsFromJSON();
-
   return (
-    <main className="min-h-screen bg-[#050A18]">
+    <main className="min-h-[100vh] bg-[#050A18]">
       {/* Sankofa Brand Bridge Separator */}
       <div className="py-12 bg-[#050A18]">
         <div className="mx-auto max-w-6xl px-6">
@@ -52,9 +57,19 @@ export default function RestaurantsPage() {
       </div>
 
       {/* Restaurant Grid - Shows filtered results or all restaurants */}
-      <div className="pb-16 bg-[#050A18] min-h-screen">
+      <div className="pb-16 bg-[#050A18] min-h-[100vh]">
         <div className="mx-auto max-w-6xl px-6">
-          <CategoryFilterWrapper restaurants={restaurantsFromJSON} />
+          <Suspense
+            fallback={
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <RestaurantCardSkeleton key={`suspense-skeleton-${i}`} />
+                ))}
+              </div>
+            }
+          >
+            <RestaurantsGrid />
+          </Suspense>
         </div>
       </div>
     </main>
