@@ -34,9 +34,9 @@ export function RestaurantGrid({ restaurants: jsonRestaurants }: RestaurantGridP
       <CategoryFilter activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 
       {/* Restaurant Grid - 3 columns */}
-      {filteredRestaurants.length > 0 ? (
+      {transformedRestaurants.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredRestaurants.map((restaurant) => (
+          {transformedRestaurants.map((restaurant) => (
             <RestaurantCard
               key={restaurant.id}
               restaurant={restaurant}
