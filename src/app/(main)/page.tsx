@@ -217,12 +217,12 @@ export default async function MainHomePage() {
       <RestaurantResults restaurants={restaurantsFromJSON} />
 
       {/* Restaurant Grid - Shows filtered results or all restaurants */}
-      <div id="restaurants-section">
-        <Section>
+      <div id="restaurants-section" className="py-16">
+        <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <RestaurantGrid restaurants={restaurantsFromJSON} />
           </Reveal>
-        </Section>
+        </div>
       </div>
 
       <Separator />
