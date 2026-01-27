@@ -24,11 +24,21 @@ type ReviewsSectionProps = {
 export function ReviewsSection({ rating, totalReviews, histogram, reviews }: ReviewsSectionProps) {
   return (
     <section className="w-full">
-      <div className="mb-6 flex items-center justify-between">
-        <h2 className="text-xl font-semibold tracking-tight">Reviews &amp; Ratings</h2>
-        {totalReviews > 0 && (
-          <span className="text-sm text-muted-foreground">{totalReviews} reviews</span>
-        )}
+      <div className="flex items-end justify-between gap-4 mb-6">
+        <div>
+          <h2 className="text-xl font-semibold tracking-tight">Reviews &amp; Ratings</h2>
+          <p className="mt-2 text-muted-foreground">What diners are saying.</p>
+        </div>
+        <div className="text-sm text-muted-foreground">
+          {rating != null ? (
+            <>
+              <span className="font-medium text-foreground">{rating.toFixed(1)}★</span> •{" "}
+              <span>{totalReviews} reviews</span>
+            </>
+          ) : (
+            "No reviews yet"
+          )}
+        </div>
       </div>
 
       {totalReviews === 0 ? (
