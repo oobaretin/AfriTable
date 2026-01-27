@@ -3,13 +3,15 @@
 import * as React from "react";
 import { X } from "lucide-react";
 import Image from "next/image";
+import type { RestaurantRow } from "@/components/restaurant/RestaurantCard";
 
 type BookingModalProps = {
   isOpen: boolean;
   onClose: () => void;
+  restaurant: RestaurantRow | null;
 };
 
-export function BookingModal({ isOpen, onClose }: BookingModalProps) {
+export function BookingModal({ isOpen, onClose, restaurant }: BookingModalProps) {
   // Prevent body scroll when modal is open
   React.useEffect(() => {
     if (isOpen) {
@@ -80,6 +82,32 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
               <p className="text-sm text-white/70 leading-relaxed max-w-sm mx-auto">
                 We are currently hand-selecting the finest tables for our grand launch.
               </p>
+
+              {/* Restaurant Address and Phone */}
+              {restaurant && (
+                <div className="pt-4 space-y-2 border-t border-white/10">
+                  {/* Address */}
+                  <div className="text-sm text-white/80">
+                    {typeof restaurant.address === "string" 
+                      ? restaurant.address 
+                      : (restaurant.address as any)?.street 
+                        ? `${(restaurant.address as any).street}${(restaurant.address as any).city ? `, ${(restaurant.address as any).city}` : ""}${(restaurant.address as any).state ? `, ${(restaurant.address as any).state}` : ""}`
+                        : "Address not available"}
+                  </div>
+                  
+                  {/* Phone Number - Clickable tel: link */}
+                  {restaurant.phone && (
+                    <div className="text-sm">
+                      <a 
+                        href={`tel:${restaurant.phone.replace(/\D/g, "")}`}
+                        className="text-[#C69C2B] hover:text-[#C69C2B]/80 transition-colors font-medium"
+                      >
+                        {restaurant.phone}
+                      </a>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>

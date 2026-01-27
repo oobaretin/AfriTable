@@ -850,5 +850,21 @@
     "address": "South End, Boston, MA",
     "about": "A contemporary taste of Dakar in the heart of Boston.",
     "vibe_tags": ["Chic & Minimalist"]
+  },
+  {
+    "id": "hou-003",
+    "name": "Cool Runnings Jamaican Grill",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "8270 W Bellfort Ave, Houston, TX 77071",
+    "phone": "(713) 771-0116",
+    "neighborhood": "Southwest Houston",
+    "vibe": "Authentic & Lively",
+    "tagline": "The legendary heartbeat of Houston's Jamaican culinary scene.",
+    "website": "https://coolrunningsjamaicangrill.com/",
+    "featured": false,
+    "about": "The legendary heartbeat of Houston's Jamaican culinary scene."
   }
 ]
