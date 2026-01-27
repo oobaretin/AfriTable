@@ -1,0 +1,77 @@
+[
+  {
+    "id": "chez-michelle",
+    "name": "Chez Michelle Restaurant",
+    "cuisine": "Cameroonian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "6991 S Texas 6, Houston, TX 77083",
+    "phone": "(281) 372-8925",
+    "website": "https://chezmichellerestaurant.com",
+    "social": { "instagram": "@chezmichelle_houston", "facebook": "Chez Michelle" },
+    "hours": {
+      "mon_sat": "12:00 PM - 12:00 AM",
+      "sun": "12:00 PM - 10:00 PM"
+    },
+    "about": "Authentic African cuisine with a focus on bringing people together. Perfect for late-night Ndole soup.",
+    "our_story": "We are passionate about sharing the rich flavors and warm hospitality that define African dining using traditional recipes and fresh ingredients.",
+    "cultural_roots": "Food in African culture is a way of expressing love and preserving generations of traditions.",
+    "menu_highlights": ["Ndole Soup", "Grilled Tilapia", "Eru"]
+  },
+  {
+    "id": "addis-abeba",
+    "name": "Addis Abeba Ethiopian Restaurant",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.7,
+    "address": "100 S Central Expy #65, Richardson, TX 75080",
+    "phone": "(469) 319-9604",
+    "website": "https://addisabebarestauranttx.com",
+    "social": { "instagram": "@addisabebatx", "facebook": "Addis Abeba Richardson" },
+    "hours": {
+      "wed_sun": "11:00 AM - 2:00 AM",
+      "mon_thu": "11:00 AM - 12:00 AM",
+      "tue": "Closed"
+    },
+    "about": "A cozy, inviting hidden gem known for late-night hours and vibrant communal dining.",
+    "our_story": "Founded to preserve traditional Habesha recipes where the aroma of berbere and fresh injera welcomes everyone.",
+    "cultural_roots": "Honors the 'Agelgil' tradition where sharing a plate signifies bonds of friendship.",
+    "menu_highlights": ["Doro Wat", "Veggie Combo", "Addis Tibs"]
+  },
+  {
+    "id": "famous-princess",
+    "name": "Famous Princess African Kitchen",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.6,
+    "address": "17036 W Little York Rd, Houston, TX 77084",
+    "phone": "(832) 419-5670",
+    "website": "https://thefpak.start.page/",
+    "social": { "instagram": "@famousprincesskitchen" },
+    "hours": { "tue_sat": "2:00 PM - 10:00 PM", "sun_mon": "Closed" },
+    "about": "High-end Nigerian cuisine specializing in bold spices and meticulous preparation of traditional stews.",
+    "our_story": "Showcasing the 'touch of difference' by using the finest ingredients to create stews that taste like home.",
+    "cultural_roots": "Celebrates 'Swallow' culture—dishes like Amala and Pounded Yam paired with nutrient-rich soups.",
+    "menu_highlights": ["Ayamashe (Designer) Stew", "Abula (Amala)", "Jollof Rice"]
+  },
+  {
+    "id": "omalicha-kitchen",
+    "name": "Omalicha Kitchen",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.4,
+    "address": "1701 Cypress Creek Pkwy Ste D, Houston, TX 77090",
+    "phone": "(281) 781-7209",
+    "website": "https://www.omalichakitchen.com",
+    "social": { "instagram": "@omalichakitchen" },
+    "hours": { "mon_sat": "11:00 AM - 10:00 PM", "sun": "Closed" },
+    "about": "A vibrant hub for Igbo delicacies and seafood in a modern, welcoming environment.",
+    "our_story": "Dedicated to bringing regional flavors of Eastern Nigeria, like Oha and Afang soups, to Houston.",
+    "cultural_roots": "Celebrates the industrious spirit of the Igbo people through fresh, earthy ingredients.",
+    "menu_highlights": ["Egusi Soup", "Nkwobi", "Seafood Okra"]
+  }
+]
