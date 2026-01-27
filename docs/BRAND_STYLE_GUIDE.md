@@ -2,39 +2,53 @@
 
 ## Color Palette
 
-Our color palette is curated to look premium, "earthy," and appetizing—reflecting the warmth and authenticity of African and Caribbean cuisine.
+Our color palette is derived from the Sankofa logo—a symbol of learning from the past to build the future. These "Legacy" tones reflect the rich heritage and warmth of African and Caribbean cuisine.
 
-### Primary Brand Colors
+### Primary Brand Colors (Sankofa Logo Palette)
 
-#### Clay Pot Orange (`#E65100`)
+#### Bronze (`#8C6239`)
+- **Source**: Metallic brown/gold from the Sankofa text
+- **Usage**: Primary text, headers, logo elements
+- **Tailwind Class**: `bg-brand-bronze`, `text-brand-bronze`
+- **Purpose**: Represents heritage, tradition, and the wisdom of ancestors
+- **Example**: Main headings, logo text, premium accents
+
+#### Muted Red (`#A33B32`)
+- **Source**: Deep red from the bird's head in the Sankofa symbol
 - **Usage**: Main CTA buttons, primary actions, highlights
-- **Tailwind Class**: `bg-brand-orange`, `text-brand-orange`
-- **Purpose**: The signature color that represents warmth, spice, and hospitality
-- **Example**: "View Details" buttons, primary CTAs
+- **Tailwind Class**: `bg-brand-mutedRed`, `text-brand-mutedRed`
+- **Purpose**: Represents passion, warmth, and the heart of the community
+- **Example**: "View Details" buttons, primary CTAs, important actions
 
-#### Palm Leaf Green (`#2E7D32`)
+#### Forest (`#2D5A27`)
+- **Source**: Dark green from the wings of the Sankofa bird
 - **Usage**: Success states, West African cuisine badges, positive indicators
-- **Tailwind Class**: `bg-brand-green`, `text-brand-green`
-- **Purpose**: Represents growth, freshness, and West African culinary traditions
+- **Tailwind Class**: `bg-brand-forest`, `text-brand-forest`
+- **Purpose**: Represents growth, nature, and West African culinary traditions
 - **Example**: Cuisine labels for Nigerian, Ghanaian, Senegalese restaurants
 
-#### Saffron Gold (`#FFB300`)
+#### Ochre (`#C69C2B`)
+- **Source**: Gold/yellow from the tail of the Sankofa bird
 - **Usage**: Highlights, ratings, East African cuisine badges, premium features
-- **Tailwind Class**: `bg-brand-gold`, `text-brand-gold`
-- **Purpose**: Represents richness, quality, and East African spices
-- **Example**: Star ratings, Ethiopian/Ghanaian cuisine highlights
+- **Tailwind Class**: `bg-brand-ochre`, `text-brand-ochre`
+- **Purpose**: Represents richness, prosperity, and East African spices
+- **Example**: Star ratings, Ethiopian/Eritrean cuisine highlights
 
-#### Deep Charcoal (`#1A1A1B`)
-- **Usage**: Main text, headers, primary typography
-- **Tailwind Class**: `text-brand-dark`
-- **Purpose**: More sophisticated than pure black, provides better readability
-- **Example**: Headings, body text, card titles
-
-#### Sandstone Cream (`#FFF8F1`)
+#### Paper (`#F9F7F2`)
+- **Source**: Textured off-white background inspired by traditional paper
 - **Usage**: Soft backgrounds for cards, subtle sections
-- **Tailwind Class**: `bg-brand-cream`
+- **Tailwind Class**: `bg-brand-paper`
 - **Purpose**: Warm, neutral background that complements the earthy palette
-- **Example**: Card backgrounds, section backgrounds
+- **Example**: Card backgrounds, section backgrounds, subtle highlights
+
+### Legacy Color Aliases
+
+For backward compatibility, the following aliases map to the new Sankofa colors:
+- `brand-orange` → `brand-mutedRed` (#A33B32)
+- `brand-green` → `brand-forest` (#2D5A27)
+- `brand-gold` → `brand-ochre` (#C69C2B)
+- `brand-cream` → `brand-paper` (#F9F7F2)
+- `brand-dark` → Deep Charcoal (#1A1A1B) - kept for text contrast
 
 ## Typography
 
@@ -51,36 +65,46 @@ Our color palette is curated to look premium, "earthy," and appetizing—reflect
 
 ### Buttons
 ```tsx
-// Primary CTA Button
-<button className="bg-brand-orange hover:bg-orange-700 text-white">
+// Primary CTA Button (using mutedRed from Sankofa logo)
+<button className="bg-brand-mutedRed hover:bg-brand-mutedRed/90 text-white">
+  View Details →
+</button>
+
+// Alternative using legacy alias
+<button className="bg-brand-orange hover:bg-brand-orange/90 text-white">
   View Details →
 </button>
 ```
 
 ### Cuisine Badges
 ```tsx
-// West African (Nigerian, Ghanaian, Senegalese)
-<span className="text-brand-green bg-brand-green/10">
+// West African (Nigerian, Ghanaian, Senegalese) - using Forest green
+<span className="text-brand-forest bg-brand-forest/10">
   Nigerian
 </span>
 
-// East African (Ethiopian, Eritrean, Somali)
-<span className="text-brand-gold bg-brand-gold/10">
+// East African (Ethiopian, Eritrean, Somali) - using Ochre gold
+<span className="text-brand-ochre bg-brand-ochre/10">
   Ethiopian
 </span>
 ```
 
 ### Ratings
 ```tsx
-// Star Ratings
-<div className="text-brand-gold">
+// Star Ratings (using Ochre from Sankofa tail)
+<div className="text-brand-ochre">
   ⭐ 4.5
 </div>
 ```
 
 ### Headings
 ```tsx
-// Main Headings
+// Main Headings (using Bronze from Sankofa text)
+<h1 className="text-brand-bronze font-black">
+  Discover Authentic Dining
+</h1>
+
+// Or use dark for high contrast
 <h1 className="text-brand-dark font-black">
   Discover Authentic Dining
 </h1>

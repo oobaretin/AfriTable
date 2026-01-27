@@ -55,7 +55,7 @@ export function RestaurantCard({
     const cuisineLower = cuisineName.toLowerCase();
     const regionLower = (regionName || "").toLowerCase();
     
-    // West African cuisines
+    // West African cuisines - using Forest green from Sankofa wings
     if (
       cuisineLower.includes("nigerian") ||
       cuisineLower.includes("ghanaian") ||
@@ -64,10 +64,10 @@ export function RestaurantCard({
       cuisineLower.includes("cameroonian") ||
       regionLower.includes("west african")
     ) {
-      return { text: "text-brand-green", bg: "bg-brand-green/10" };
+      return { text: "text-brand-forest", bg: "bg-brand-forest/10" };
     }
     
-    // East African cuisines
+    // East African cuisines - using Ochre gold from Sankofa tail
     if (
       cuisineLower.includes("ethiopian") ||
       cuisineLower.includes("eritrean") ||
@@ -75,22 +75,22 @@ export function RestaurantCard({
       cuisineLower.includes("kenyan") ||
       regionLower.includes("east african")
     ) {
-      return { text: "text-brand-gold", bg: "bg-brand-gold/10" };
+      return { text: "text-brand-ochre", bg: "bg-brand-ochre/10" };
     }
     
-    // South African
+    // South African - using Ochre gold
     if (cuisineLower.includes("south african")) {
-      return { text: "text-brand-gold", bg: "bg-brand-gold/10" };
+      return { text: "text-brand-ochre", bg: "bg-brand-ochre/10" };
     }
     
-    // Caribbean (can use green or orange)
+    // Caribbean - using Forest green (legacy support)
     if (
       cuisineLower.includes("jamaican") ||
       cuisineLower.includes("haitian") ||
       cuisineLower.includes("trinidadian") ||
       regionLower.includes("caribbean")
     ) {
-      return { text: "text-brand-green", bg: "bg-brand-green/10" };
+      return { text: "text-brand-forest", bg: "bg-brand-forest/10" };
     }
     
     // Default

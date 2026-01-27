@@ -38,12 +38,18 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  /* AfriTable Brand Colors */
-  --color-brand-orange: #E65100;
-  --color-brand-green: #2E7D32;
-  --color-brand-gold: #FFB300;
-  --color-brand-dark: #1A1A1B;
-  --color-brand-cream: #FFF8F1;
+  /* AfriTable Brand Colors - Sankofa Logo Palette */
+  --color-brand-bronze: #8C6239;   /* Metallic brown/gold from text */
+  --color-brand-mutedRed: #A33B32; /* Deep red from bird's head */
+  --color-brand-forest: #2D5A27;   /* Dark green from wings */
+  --color-brand-ochre: #C69C2B;    /* Gold/yellow from tail */
+  --color-brand-paper: #F9F7F2;     /* Textured off-white background */
+  /* Legacy aliases for backward compatibility */
+  --color-brand-orange: #A33B32;   /* Maps to mutedRed for CTAs */
+  --color-brand-green: #2D5A27;    /* Maps to forest */
+  --color-brand-gold: #C69C2B;     /* Maps to ochre */
+  --color-brand-dark: #1A1A1B;     /* Keep dark for text */
+  --color-brand-cream: #F9F7F2;    /* Maps to paper */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
