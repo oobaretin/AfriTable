@@ -286,5 +286,149 @@
     "our_story": "Pearl's is our tribute to the coastal flavors of the islands, designed to bring the warmth of a Caribbean beach house to the middle of Brooklyn.",
     "cultural_roots": "Focuses on the 'Blue Food' (seafood) traditions of the Caribbean, where fresh catch and island spices rule the table.",
     "menu_highlights": ["Bake & Shark", "Curry Crab & Dumplings", "Jerk Catfish"]
+  },
+  {
+    "id": "appioo-dc",
+    "name": "Appioo African Bar & Grill",
+    "cuisine": "Ghanaian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "1924 9th St NW, Washington, DC 20001",
+    "phone": "(202) 588-7366",
+    "website": "http://appiooafricanbargrill.com",
+    "social": { "instagram": "@appioobargrill" },
+    "hours": {
+      "tue_thu": "4:00 PM - 10:00 PM",
+      "fri_sat": "2:00 PM - 11:30 PM",
+      "sun": "2:00 PM - 10:00 PM",
+      "mon": "Closed"
+    },
+    "about": "A beloved DC staple offering authentic Ghanaian home-style cooking and a lively communal bar scene.",
+    "our_story": "Chef Prince Boateng created Appioo to bring the 'chop bar' culture of Accra to the U Street corridor, focusing on recipes passed down through generations.",
+    "cultural_roots": "Celebrates the soul of Ghana, where meals like Fufu and Light Soup are not just food, but a centerpiece for community and storytelling.",
+    "menu_highlights": ["Banku with Tilapia", "Red Red (Bean Stew)", "Waakye"]
+  },
+  {
+    "id": "teranga-nyc",
+    "name": "Teranga",
+    "cuisine": "Senegalese",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.6,
+    "address": "1280 5th Ave, New York, NY 10029",
+    "phone": "(646) 335-2468",
+    "website": "https://itsteranga.com",
+    "social": { "instagram": "@itsteranga" },
+    "hours": {
+      "tue_sun": "12:00 PM - 8:00 PM",
+      "mon": "Closed"
+    },
+    "about": "A modern African superfood café located in The Africa Center, overlooking Central Park.",
+    "our_story": "Founded by world-renowned Chef Pierre Thiam, Teranga reflects the Senegalese philosophy of hospitality, offering nutrient-dense bowls based on ancient grains.",
+    "cultural_roots": "The word 'Teranga' means 'hospitality' in Wolof. The menu highlights fonio and jollof rice as the foundation of West African agricultural heritage.",
+    "menu_highlights": ["Fonio Grain Bowls", "Yassa Grilled Chicken", "Black Eyed Pea Salad"]
+  },
+  {
+    "id": "mansa-kunda-md",
+    "name": "Mansa Kunda",
+    "cuisine": "Senegambian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.7,
+    "address": "8000 Flower Ave, Takoma Park, MD 20912",
+    "phone": "(301) 589-8222",
+    "website": "https://mansakunda.com",
+    "social": { "instagram": "@mansakunda" },
+    "hours": {
+      "tue_sun": "12:00 PM - 9:00 PM",
+      "mon": "Closed"
+    },
+    "about": "An upscale dining destination celebrating the rich history and flavors of The Gambia and Senegal.",
+    "our_story": "Named after 'Mansa' (King) and 'Kunda' (Home/Family), we strive to treat every guest like royalty while serving authentic dishes from the Jolof Empire roots.",
+    "cultural_roots": "Focuses on the deep culinary connection between the land and the river in Senegambian culture, utilizing smoked fish and peanut-based sauces.",
+    "menu_highlights": ["Benachin (Jollof Rice)", "Domoda (Peanut Stew)", "Superkanja (Okra Stew)"]
+  },
+  {
+    "id": "bukom-cafe-dc",
+    "name": "Bukom Cafe",
+    "cuisine": "West African Fusion",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.4,
+    "address": "2442 18th St NW, Washington, DC 20009",
+    "phone": "(202) 265-4600",
+    "website": "https://bukomcafe.com",
+    "social": { "instagram": "@bukomcafe" },
+    "hours": {
+      "tue_thu": "5:00 PM - 11:00 PM",
+      "fri_sat": "5:00 PM - 2:00 AM",
+      "sun": "5:00 PM - 11:00 PM",
+      "mon": "Closed"
+    },
+    "about": "A legendary Adams Morgan haunt known for its spicy West African dishes and live Reggae and Afrobeat music.",
+    "our_story": "For over 20 years, Bukom has been the heartbeat of DC's African nightlife, blending authentic spices with a high-energy lounge atmosphere.",
+    "cultural_roots": "A melting pot of West African flavors, honoring the late-night dining culture found in the urban hubs of Lagos and Accra.",
+    "menu_highlights": ["Jollof Rice with Lamb", "Fried Plantains", "Bukom Wings"]
+  },
+  {
+    "id": "ponti-ivorian-houston",
+    "name": "Ponti's Ivorian Kitchen",
+    "cuisine": "Ivorian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "12450 Westheimer Rd, Houston, TX 77077",
+    "phone": "(281) 506-7935",
+    "website": "N/A",
+    "social": { "instagram": "@pontiskitchen" },
+    "hours": {
+      "tue_sun": "1:00 PM - 9:00 PM",
+      "mon": "Closed"
+    },
+    "about": "The go-to spot in Houston for authentic Ivorian (Ivory Coast) street food and grilled delicacies.",
+    "our_story": "Ponti's was built to satisfy the cravings of the Ivorian diaspora, specializing in the slow-grilled techniques that define the streets of Abidjan.",
+    "cultural_roots": "Highlights Ivorian staples like Attiéké (fermented cassava) and Aloco, showing the unique French-African culinary marriage.",
+    "menu_highlights": ["Grilled Fish with Attiéké", "Aloco (Fried Plantains)", "Kedjenou (Slow-cooked Chicken)"]
+  },
+  {
+    "id": "gold-coast-kitchen-chi",
+    "name": "Gold Coast African Restaurant",
+    "cuisine": "Ghanaian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.3,
+    "address": "6200 N Clark St, Chicago, IL 60660",
+    "phone": "(773) 764-1234",
+    "website": "N/A",
+    "social": { "instagram": "@goldcoastchicago" },
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    },
+    "about": "A Chicago staple for over 20 years, providing a nostalgic taste of Ghana's finest traditional meals.",
+    "our_story": "We are one of the oldest African restaurants in the city, dedicated to maintaining the exact flavor profiles of the 'Gold Coast' for our long-time patrons.",
+    "cultural_roots": "Roots deep in the Ashanti and Fante cooking traditions, where hearty soups and fufu are the ultimate comfort foods.",
+    "menu_highlights": ["Egusi with Fufu", "Ghanaian Jollof", "Fried Croaker Fish"]
+  },
+  {
+    "id": "afrik-che-houston",
+    "name": "Afrik-CHe Kitchen",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.6,
+    "address": "12030 Bissonnet St, Houston, TX 77099",
+    "phone": "(832) 617-8924",
+    "website": "N/A",
+    "social": { "instagram": "@afrik_che_houston" },
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "Closed"
+    },
+    "about": "A casual, highly-rated spot known for its consistent quality and generous portions of West African staples.",
+    "our_story": "We believe that quality African food should be accessible. Our kitchen focuses on the 'Big Three': Jollof, Soup, and Swallow.",
+    "cultural_roots": "Representing the pan-African spirit of Houston's Bissonnet district, where food acts as the universal language.",
+    "menu_highlights": ["Assorted Meat Stew", "Okra Soup", "Pounded Yam"]
   }
 ]
