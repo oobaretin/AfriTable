@@ -1010,5 +1010,38 @@
     "address": "New Orleans, LA",
     "phone": "(504) 522-1230",
     "about": "Authentic West African cuisine in the heart of New Orleans."
+  },
+  {
+    "id": "nola-dooky-chase",
+    "name": "Dooky Chase's",
+    "cuisine": "Creole",
+    "region": "Southern",
+    "price_range": "$$$",
+    "rating": 4.7,
+    "address": "2301 Orleans Ave, New Orleans, LA 70119",
+    "phone": "(504) 821-0600",
+    "about": "A legendary Creole restaurant and cultural institution in New Orleans, serving authentic Southern and Creole cuisine."
+  },
+  {
+    "id": "nyc-buvette",
+    "name": "Buvette (West Village)",
+    "cuisine": "French-African Influences",
+    "region": "European / African Fusion",
+    "price_range": "$$$",
+    "rating": 4.6,
+    "address": "42 Grove St, New York, NY 10014",
+    "phone": "(212) 255-3590",
+    "about": "A charming West Village bistro with French-African influences, known for its intimate atmosphere and innovative cuisine."
+  },
+  {
+    "id": "nyc-abyssinia",
+    "name": "Abyssinia",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "35 W 28th St, New York, NY 10001",
+    "phone": "(212) 663-0533",
+    "about": "Authentic Ethiopian cuisine in the heart of Manhattan, serving traditional dishes with fresh injera and bold spices."
   }
 ]
