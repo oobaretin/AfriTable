@@ -27,10 +27,20 @@ function isFeatured(restaurant: JSONRestaurant): boolean {
 }
 
 export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
-  // Prioritize restaurants from key cities: NYC, Houston, Atlanta, DC
-  // Mix of featured and non-featured to showcase variety
+  // Show only 4 featured restaurants initially for minimalist feel
   const displayedRestaurants = React.useMemo(() => {
-    const keyCities = ["new york city", "houston", "atlanta", "washington d.c."];
+    // Get all featured restaurants
+    const allFeatured = restaurants.filter(isFeatured);
+    
+    // Prioritize by key cities: NYC, Houston, Atlanta, DC, Miami, LA
+    const keyCities = [
+      "new york city",
+      "houston",
+      "atlanta",
+      "washington d.c.",
+      "miami",
+      "los angeles",
+    ];
     
     // Helper to check if restaurant is from a key city
     const isFromKeyCity = (r: JSONRestaurant): boolean => {
@@ -38,31 +48,24 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
       return keyCities.some((keyCity) => city.includes(keyCity));
     };
     
-    // Separate restaurants by featured status and city priority
-    const featuredFromKeyCities = restaurants.filter(
-      (r) => isFeatured(r) && isFromKeyCity(r)
-    );
-    const othersFromKeyCities = restaurants.filter(
-      (r) => !isFeatured(r) && isFromKeyCity(r)
-    );
-    const featuredOthers = restaurants.filter(
-      (r) => isFeatured(r) && !isFromKeyCity(r)
-    );
-    const others = restaurants.filter(
-      (r) => !isFeatured(r) && !isFromKeyCity(r)
-    );
+    // Separate featured restaurants by city priority
+    const featuredFromKeyCities = allFeatured.filter(isFromKeyCity);
+    const featuredOthers = allFeatured.filter((r) => !isFromKeyCity(r));
     
-    // Prioritize: featured from key cities, then others from key cities, then other featured, then others
-    // Aim for 6 total with good representation
-    const combined = [
-      ...featuredFromKeyCities.slice(0, 4), // Up to 4 featured from key cities
-      ...othersFromKeyCities.slice(0, 2), // Up to 2 non-featured from key cities
-      ...featuredOthers.slice(0, 1), // 1 other featured if space
-      ...others.slice(0, 1), // 1 other if space
-    ];
+    // Combine: featured from key cities first, then other featured
+    const combined = [...featuredFromKeyCities, ...featuredOthers];
     
-    return combined.slice(0, 6);
+    // Return only the first 4 for initial view
+    return combined.slice(0, 4);
   }, [restaurants]);
+
+  const handleSeeAll = () => {
+    // Scroll to the restaurants section
+    const restaurantsSection = document.getElementById("restaurants-section");
+    if (restaurantsSection) {
+      restaurantsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   if (displayedRestaurants.length === 0) {
     return null;
@@ -81,7 +84,7 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
           </h3>
         </div>
 
-        {/* The Gallery Grid */}
+        {/* The Gallery Grid - Only 4 Featured Restaurants */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {displayedRestaurants.map((restaurant) => {
             const city = extractCityFromAddress(restaurant.address);
@@ -145,6 +148,17 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
               </div>
             );
           })}
+        </div>
+
+        {/* See All Destinations Button */}
+        <div className="mt-16 flex justify-center">
+          <button
+            onClick={handleSeeAll}
+            className="group relative bg-white/5 hover:bg-[#A33B32] border border-white/10 hover:border-[#A33B32] text-white text-[10px] font-black px-8 py-4 rounded-full uppercase tracking-[0.3em] transition-all duration-300 flex items-center gap-3"
+          >
+            <span>See All Destinations</span>
+            <span className="text-[#C69C2B] group-hover:text-white text-lg transition-colors">→</span>
+          </button>
         </div>
       </div>
     </section>

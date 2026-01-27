@@ -652,5 +652,71 @@
     "address": "Adams Morgan, Washington D.C., DC",
     "about": "Formerly Zenebech; dining reimagined for kings and queens.",
     "vibe_tags": ["Royal Traditional"]
+  },
+  {
+    "id": "mia-001",
+    "name": "Chef Adrienne's",
+    "cuisine": "Haitian",
+    "region": "Caribbean",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "Little Haiti, Miami, FL",
+    "about": "A refined celebration of Haiti's revolutionary flavors.",
+    "vibe_tags": ["Tropical Elegance"]
+  },
+  {
+    "id": "la-001",
+    "name": "Meals by Genet",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "Little Ethiopia, Los Angeles, CA",
+    "about": "The legendary destination for the finest Dorowat in the West.",
+    "vibe_tags": ["Intimate & Prestigious"]
+  },
+  {
+    "id": "mia-002",
+    "name": "Dukunoo Jamaican Kitchen",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Wynwood, Miami, FL",
+    "about": "Come for the jerk, stay for the high-energy Wynwood soul.",
+    "vibe_tags": ["Vibrant Luxury"]
+  },
+  {
+    "id": "oak-001",
+    "name": "Amawele's",
+    "cuisine": "South African",
+    "region": "South African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Downtown, San Francisco/Oakland, CA",
+    "about": "Bringing the heartbeat of Durban to the Bay Area.",
+    "vibe_tags": ["Modern Heritage"]
+  },
+  {
+    "id": "la-002",
+    "name": "Jitlada (Southern Thai/African Fusion)",
+    "cuisine": "Other African Flavors",
+    "region": "Other African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Hollywood, Los Angeles, CA",
+    "about": "Spices that bridge the gap between continents.",
+    "vibe_tags": ["Eclectic & Bold"]
+  },
+  {
+    "id": "mia-003",
+    "name": "Manjay",
+    "cuisine": "Haitian / Caribbean Fusion",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "The Citadel, Miami, FL",
+    "about": "Clean, modern, and undeniably Caribbean.",
+    "vibe_tags": ["Modern Fast-Casual"]
   }
 ]
