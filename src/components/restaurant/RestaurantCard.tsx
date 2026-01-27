@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Database } from "@db/database.types";
+import { useBookingDrawer } from "@/contexts/BookingDrawerContext";
 
 export type RestaurantRow = Database["public"]["Tables"]["restaurants"]["Row"] & {
   // optional denormalized fields for UI
@@ -24,6 +25,7 @@ export function RestaurantCard({
   onQuickReserve?: () => void;
   city?: string;
 }) {
+  const { openDrawer } = useBookingDrawer();
   const safeHref = href ?? `/restaurants/${encodeURIComponent(restaurant.slug)}`;
   const cuisines = Array.isArray(restaurant.cuisine_types) ? restaurant.cuisine_types : [];
   const price = "$".repeat(Math.max(1, Math.min(4, restaurant.price_range ?? 1)));
@@ -39,6 +41,12 @@ export function RestaurantCard({
       displayCity = parts[1];
     }
   }
+
+  const handleFindTable = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    openDrawer(restaurant);
+  };
   
   // Get rating
   const rating = restaurant.avg_rating ?? null;
@@ -163,6 +171,17 @@ export function RestaurantCard({
           </div>
         </div>
       </Link>
+
+      {/* Find Table Button */}
+      <div className="px-5 pb-5">
+        <button
+          type="button"
+          onClick={handleFindTable}
+          className="w-full rounded-lg bg-[#A33B32] hover:bg-[#A33B32]/90 text-white px-3 py-2.5 text-sm font-bold transition-colors"
+        >
+          Find Table
+        </button>
+      </div>
 
       {onQuickReserve && (
         <div className="px-5 pb-5">

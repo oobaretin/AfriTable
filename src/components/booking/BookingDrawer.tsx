@@ -86,6 +86,24 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
     return null;
   }, [restaurant]);
 
+  // Extract city from restaurant address
+  const restaurantCity = React.useMemo(() => {
+    if (!restaurant) return "";
+    const address = restaurant.address;
+    if (typeof address === "string") {
+      const parts = address.split(",").map((s) => s.trim());
+      if (parts.length >= 2) {
+        const cityState = parts[1];
+        const cityMatch = cityState.match(/^([^,]+)/);
+        return cityMatch ? cityMatch[1].trim() : "";
+      }
+    } else if (typeof address === "object" && address !== null) {
+      const addr = address as any;
+      return addr.city || "";
+    }
+    return "";
+  }, [restaurant]);
+
   if (!restaurant) return null;
 
   return (
@@ -116,9 +134,14 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
                   <h2 className="text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.5em] mb-2">
                     The Invitation
                   </h2>
-                  <h3 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter italic leading-none mb-3">
-                    YOUR TABLE AWAITS
+                  <h3 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter italic leading-none mb-2">
+                    {restaurant.name}
                   </h3>
+                  {restaurantCity && (
+                    <p className="text-[10px] font-black text-[#A33B32] uppercase tracking-widest mb-3">
+                      {restaurantCity}
+                    </p>
+                  )}
                   <p className="text-white/70 text-sm leading-relaxed max-w-md">
                     From the pulse of Lagos to the heart of Harlem, we are curating the ultimate directory of the diaspora&apos;s finest tables. Tell us when you&apos;d like to dine, and we&apos;ll handle the rest.
                   </p>
