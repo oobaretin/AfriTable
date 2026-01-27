@@ -112,14 +112,24 @@ function todayHours(operatingHours: any, date = new Date()) {
 
 async function getRestaurantBySlug(slug: string): Promise<RestaurantDetail | null> {
   const supabase = createSupabasePublicClient();
+  // Decode the slug in case it's URL encoded
+  const decodedSlug = decodeURIComponent(slug);
   const { data, error } = await supabase
     .from("restaurants_with_rating")
     .select(
-      "id,name,slug,cuisine_types,price_range,description,our_story,cultural_roots,special_features,menu,address,phone,website,instagram_handle,facebook_url,images,hours,avg_rating,review_count",
+      "id,name,slug,cuisine_types,price_range,description,our_story,cultural_roots,special_features,menu,address,phone,website,instagram_handle,facebook_url,images,hours,avg_rating,review_count,is_active",
     )
-    .eq("slug", slug)
+    .eq("slug", decodedSlug)
+    .eq("is_active", true)
     .maybeSingle();
-  if (error) return null;
+  if (error) {
+    console.error("[RestaurantPage] Error fetching restaurant:", error);
+    return null;
+  }
+  if (!data) {
+    console.log(`[RestaurantPage] Restaurant not found with slug: ${decodedSlug}`);
+    return null;
+  }
   return (data ?? null) as any;
 }
 
@@ -204,7 +214,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 export default async function RestaurantProfilePage({ params }: { params: { slug: string } }) {
   const restaurant = await getRestaurantBySlug(params.slug);
-  if (!restaurant) notFound();
+  if (!restaurant) {
+    console.error(`[RestaurantPage] Restaurant not found for slug: ${params.slug}`);
+    notFound();
+  }
 
   const [operatingHours, reviews, similar] = await Promise.all([
     getOperatingHours(restaurant.id, restaurant.hours),
