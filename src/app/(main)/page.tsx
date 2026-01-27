@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { HeroSearch } from "@/components/restaurant/HeroSearch";
@@ -44,6 +45,28 @@ export default async function MainHomePage() {
 
       {/* Restaurant Results - Ultimate Dining Gallery */}
       <RestaurantResults restaurants={restaurantsFromJSON} />
+
+      {/* Brand Logo Bridge - Premium Separator */}
+      <div className="py-12 bg-[#050A18]">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="flex items-center">
+            {/* Left line stretching to edge */}
+            <div className="flex-1 h-px bg-white/10"></div>
+            {/* Centered logo - matching Navbar */}
+            <div className="px-6 flex items-center">
+              <Image
+                src="/logo.png"
+                alt="AfriTable"
+                width={420}
+                height={120}
+                className="h-10 w-auto object-contain"
+              />
+            </div>
+            {/* Right line stretching to edge */}
+            <div className="flex-1 h-px bg-white/10"></div>
+          </div>
+        </div>
+      </div>
 
       <Separator />
 
