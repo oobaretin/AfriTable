@@ -41,7 +41,7 @@ export default async function PendingRestaurantsPage() {
   const supabaseAdmin = createSupabaseAdminClient();
 
   // Try to query with is_claimed, but fallback if column doesn't exist
-  let query = supabaseAdmin
+  const query = supabaseAdmin
     .from("restaurants")
     .select("id,owner_id,name,slug,phone,website,address,description,is_active,created_at")
     .eq("is_active", false)
