@@ -37,7 +37,8 @@ type RestaurantDetail = {
   review_count: number;
 };
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 function priceLabel(priceRange: number) {
   return "$".repeat(Math.max(1, Math.min(4, priceRange)));
@@ -137,8 +138,10 @@ async function getRestaurantBySlug(slug: string): Promise<RestaurantDetail | nul
     
     if (inactive) {
       console.error(`[RestaurantPage] Restaurant "${inactive.name}" found but is_active=${inactive.is_active} for slug: ${slug}`);
+      console.error(`[RestaurantPage] 💡 Run: npm run activate:restaurants to activate this restaurant`);
     } else {
       console.error(`[RestaurantPage] No restaurant found with slug: ${slug}`);
+      console.error(`[RestaurantPage] 💡 Check: /api/debug/restaurant/${encodeURIComponent(slug)}`);
     }
     return null;
   }
