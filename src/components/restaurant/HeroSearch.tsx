@@ -21,6 +21,8 @@ export function HeroSearch() {
   const [location, setLocation] = React.useState("");
   const [cuisine, setCuisine] = React.useState("");
   const [date] = React.useState<Date | undefined>(new Date());
+  const [partySize] = React.useState("2");
+  const [time] = React.useState("19:00");
   const [locationOpen, setLocationOpen] = React.useState(false);
   const locationWrapRef = React.useRef<HTMLDivElement | null>(null);
 
