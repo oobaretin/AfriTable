@@ -14,6 +14,7 @@ import { ShareButton } from "@/components/restaurant/ShareButton";
 import { ReservationWidget } from "@/components/reservation/ReservationWidget";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { ReviewBreakdown } from "@/components/restaurant/ReviewBreakdown";
+import { ReviewItem } from "@/components/restaurant/ReviewItem";
 import { generateDefaultContent } from "@/lib/restaurant-content-helpers";
 import { formatTimeRange12h } from "@/lib/utils/time-format";
 import { getRestaurantByIdFromJSON, transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
@@ -708,30 +709,17 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
                 histogram={histogram}
               />
 
-              <div className="grid gap-4">
+              <div>
                   {reviews.length ? (
                     reviews.slice(0, 8).map((r: any) => (
-                      <Card key={r.id}>
-                        <CardHeader>
-                          <div className="flex flex-wrap items-center justify-between gap-2">
-                            <div className="flex items-center gap-2">
-                              <Badge variant="secondary">Verified Diner</Badge>
-                              <span className="text-sm font-medium">Diner</span>
-                              <span className="text-sm text-muted-foreground">{format(new Date(r.created_at), "MMM d, yyyy")}</span>
-                            </div>
-                            <span className="text-sm font-medium">{Number(r.overall_rating).toFixed(1)}★</span>
-                          </div>
-                          {r.review_text ? <CardDescription>{r.review_text}</CardDescription> : null}
-                        </CardHeader>
-                        {r.restaurant_response ? (
-                          <CardContent className="text-sm">
-                            <div className="rounded-lg border bg-muted/30 p-3">
-                              <div className="text-xs font-medium text-muted-foreground">Restaurant response</div>
-                              <div className="mt-1">{r.restaurant_response}</div>
-                            </div>
-                          </CardContent>
-                        ) : null}
-                      </Card>
+                      <ReviewItem
+                        key={r.id}
+                        name="Verified Diner"
+                        date={r.created_at}
+                        comment={r.review_text}
+                        rating={Number(r.overall_rating) || 0}
+                        restaurantResponse={r.restaurant_response}
+                      />
                     ))
                   ) : (
                     <Card>
