@@ -824,8 +824,20 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "University City, Philadelphia, PA",
+    "phone": "(215) 387-1970",
     "about": "A cornerstone of Philadelphia's West African culinary scene.",
     "vibe_tags": ["Academic & Cultural"]
+  },
+  {
+    "id": "phi-aksum",
+    "name": "Aksum Cafe",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Philadelphia, PA",
+    "phone": "(267) 275-8195",
+    "about": "Authentic Ethiopian cuisine in the heart of Philadelphia."
   },
   {
     "id": "chi-003",
@@ -837,6 +849,28 @@
     "address": "Uptown, Chicago, IL",
     "about": "The heart of the diaspora in the heart of the city.",
     "vibe_tags": ["Modern & Spacious"]
+  },
+  {
+    "id": "chi-virtue",
+    "name": "Virtue Restaurant",
+    "cuisine": "Southern / Soul Food",
+    "region": "Southern",
+    "price_range": "$$$",
+    "rating": 4.7,
+    "address": "Chicago, IL",
+    "phone": "(773) 947-8831",
+    "about": "Elevated Southern cuisine with a modern twist."
+  },
+  {
+    "id": "chi-yassa",
+    "name": "Yassa African Restaurant",
+    "cuisine": "Senegalese",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Chicago, IL",
+    "phone": "(773) 488-5300",
+    "about": "Authentic Senegalese flavors in the heart of Chicago."
   },
   {
     "id": "phi-003",
@@ -857,8 +891,20 @@
     "price_range": "$$$",
     "rating": 4.8,
     "address": "Central District, Seattle, WA",
+    "phone": "(206) 322-6000",
     "about": "A story of survival and soul on a plate.",
     "vibe_tags": ["Award-Winning Luxury"]
+  },
+  {
+    "id": "sea-meskel",
+    "name": "Meskel Ethiopian",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Seattle, WA",
+    "phone": "(206) 860-7043",
+    "about": "Authentic Ethiopian dining experience in Seattle."
   },
   {
     "id": "bos-001",
@@ -931,5 +977,16 @@
     "website": "https://coolrunningsjamaicangrill.com/",
     "featured": false,
     "about": "The legendary heartbeat of Houston's Jamaican culinary scene."
+  },
+  {
+    "id": "nola-bennachin",
+    "name": "Bennachin",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "New Orleans, LA",
+    "phone": "(504) 522-1230",
+    "about": "Authentic West African cuisine in the heart of New Orleans."
   }
 ]
