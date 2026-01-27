@@ -21,6 +21,7 @@ export type JSONRestaurant = {
   cultural_roots?: string;
   menu_highlights?: string[];
   images?: string[];
+  vibe_tags?: string[]; // Vibe tags like "Fine Dining", "Casual", "Upscale", etc.
 };
 
 export function loadRestaurantsFromJSON(): JSONRestaurant[] {
@@ -197,6 +198,7 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
     hours: hoursArray.length > 0 ? hoursArray : jsonRestaurant.hours || null,
     avg_rating: jsonRestaurant.rating || null,
     review_count: 0,
+    vibe_tags: jsonRestaurant.vibe_tags || null,
   };
 }
 

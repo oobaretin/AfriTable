@@ -160,7 +160,8 @@
     "about": "A retro-cool, vinyl-filled Caribbean hideaway that feels like an intimate Brooklyn apartment party in the 70s.",
     "our_story": "We created a space where music and food are inseparable, featuring one of the largest vinyl collections in the South alongside elite fusion dishes.",
     "cultural_roots": "A 'love letter' to the West Indian diaspora, blending French technique with the soulful spices of the islands.",
-    "menu_highlights": ["Oxtail Hummus", "Tamarind Glazed Short Ribs", "Curry Goat"]
+    "menu_highlights": ["Oxtail Hummus", "Tamarind Glazed Short Ribs", "Curry Goat"],
+    "vibe_tags": ["Fine Dining"]
   },
   {
     "id": "blaqhaus-atlanta",

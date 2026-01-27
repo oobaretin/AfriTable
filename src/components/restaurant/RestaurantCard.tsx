@@ -9,6 +9,7 @@ export type RestaurantRow = Database["public"]["Tables"]["restaurants"]["Row"] &
   distance_miles?: number | null;
   avg_rating?: number | null;
   review_count?: number | null;
+  vibe_tags?: string[] | null; // Vibe tags like "Fine Dining", "Casual", etc.
 };
 
 export function RestaurantCard({
@@ -57,8 +58,15 @@ export function RestaurantCard({
             className="object-cover transition-transform duration-500 group-hover:scale-110"
             sizes="(max-width: 768px) 100vw, 33vw"
           />
-          <div className="absolute top-4 right-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm">
-            {price}
+          <div className="absolute top-4 right-4 flex items-center gap-2">
+            <div className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm">
+              {price}
+            </div>
+            {restaurant.vibe_tags && restaurant.vibe_tags.length > 0 && (
+              <div className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 backdrop-blur-sm">
+                {restaurant.vibe_tags[0]}
+              </div>
+            )}
           </div>
         </div>
 

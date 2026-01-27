@@ -27,6 +27,7 @@ type FeaturedRestaurant = {
   created_at: string;
   avg_rating: number | null;
   review_count: number;
+  vibe_tags?: string[] | null;
 };
 
 const CUISINES: { label: string; href: string }[] = [
@@ -141,11 +142,27 @@ function loadRestaurantsFromJSON(): JSONRestaurant[] {
 function getFeaturedRestaurantsFromJSON(): FeaturedRestaurant[] {
   const jsonRestaurants = loadRestaurantsFromJSON();
   
+  // Priority restaurants to show first
+  const priorityNames = ["Tatiana", "Swahili Village", "Apt 4B"];
+  
   // Filter for restaurants with price_range "$$$"
   const premiumRestaurants = jsonRestaurants.filter((r) => r.price_range === "$$$");
   
+  // Sort: priority restaurants first, then others
+  const sortedRestaurants = premiumRestaurants.sort((a, b) => {
+    const aIndex = priorityNames.findIndex(name => a.name.includes(name) || name.includes(a.name));
+    const bIndex = priorityNames.findIndex(name => b.name.includes(name) || name.includes(b.name));
+    
+    if (aIndex !== -1 && bIndex !== -1) {
+      return aIndex - bIndex; // Both are priority, maintain order
+    }
+    if (aIndex !== -1) return -1; // a is priority
+    if (bIndex !== -1) return 1; // b is priority
+    return 0; // Neither is priority, maintain original order
+  });
+  
   // Transform JSON format to FeaturedRestaurant format
-  return premiumRestaurants.map((r) => {
+  return sortedRestaurants.map((r) => {
     // Convert price_range string to number: "$" = 1, "$$" = 2, "$$$" = 3, "$$$$" = 4
     const priceRangeMap: Record<string, number> = {
       $: 1,
@@ -184,6 +201,7 @@ function getFeaturedRestaurantsFromJSON(): FeaturedRestaurant[] {
       created_at: new Date().toISOString(), // Use current date as fallback
       avg_rating: r.rating || null,
       review_count: 0, // JSON doesn't have review count
+      vibe_tags: (r as any).vibe_tags || null, // Include vibe tags if available
     };
   });
 }
