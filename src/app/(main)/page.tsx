@@ -11,7 +11,6 @@ import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
 import { RestaurantSearchBar } from "@/components/search/RestaurantSearchBar";
 import { RestaurantGrid } from "@/components/home/RestaurantGrid";
 import { RestaurantOwnerCTA } from "@/components/home/RestaurantOwnerCTA";
-import { TypewriterText } from "@/components/home/TypewriterText";
 import { LocalPulse } from "@/components/home/LocalPulse";
 import { StickySearch } from "@/components/home/StickySearch";
 import { HeritageSection } from "@/components/home/HeritageSection";

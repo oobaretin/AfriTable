@@ -106,16 +106,16 @@ export function CulinaryPassport() {
     },
   });
 
-  // Fetch event stamps (like Carnival challenge)
-  const { data: stampsData } = useQuery<{ stamps: Array<{ id: string; event_type?: string; created_at: string }> }>({
-    queryKey: ["userStamps"],
-    queryFn: async () => {
-      const res = await fetch("/api/user/stamps");
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.message || "Failed to load stamps");
-      return data;
-    },
-  });
+  // Fetch event stamps (like Carnival challenge) - kept for future use
+  // const { data: stampsData } = useQuery<{ stamps: Array<{ id: string; event_type?: string; created_at: string }> }>({
+  //   queryKey: ["userStamps"],
+  //   queryFn: async () => {
+  //     const res = await fetch("/api/user/stamps");
+  //     const data = await res.json();
+  //     if (!res.ok) throw new Error(data?.message || "Failed to load stamps");
+  //     return data;
+  //   },
+  // });
 
   const reservations = data?.reservations ?? [];
   const now = new Date();

@@ -3,7 +3,6 @@
 import * as React from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { parseISO, isAfter, isBefore } from "date-fns";
-import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 type Reservation = {
@@ -64,7 +63,6 @@ export function EventChallenge() {
     }
 
     const now = new Date();
-    const isChallengeActive = isAfter(now, CHALLENGE_START) && isBefore(now, CHALLENGE_END);
 
     // Filter reservations for Caribbean restaurants during challenge period
     const qualifyingReservations = data.reservations.filter((r) => {

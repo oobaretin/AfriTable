@@ -4,7 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 import { toPng } from "html-to-image";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 type Stamp = {
   id: string;

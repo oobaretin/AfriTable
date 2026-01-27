@@ -18,12 +18,6 @@ type LeaderboardResp = {
   ambassadors: Ambassador[];
 };
 
-function getRank(stampCount: number): "Gold" | "Silver" | "Bronze" {
-  if (stampCount >= 20) return "Gold";
-  if (stampCount >= 10) return "Silver";
-  return "Bronze";
-}
-
 export function Leaderboard() {
   const { data, isLoading, error } = useQuery<LeaderboardResp>({
     queryKey: ["leaderboard"],

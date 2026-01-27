@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalid_payload", message: "Request body is required" }, { status: 400 });
   }
 
-  const { event_type, stamp_name, stamp_description, is_rare, reservation_id, restaurant_id } = json;
+  const { event_type, stamp_description, reservation_id, restaurant_id } = json;
 
   // For event stamps (like Carnival challenge), we don't need a photo or reservation
   if (event_type) {

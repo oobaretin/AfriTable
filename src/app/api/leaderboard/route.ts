@@ -31,12 +31,12 @@ export async function GET() {
     // Group by user_id and count unique restaurants
     const userStampsMap = new Map<string, Set<string>>();
 
-    const now = new Date();
+    const currentDate = new Date();
     (reservations || []).forEach((r: any) => {
       // Only count past reservations (completed or date has passed)
       if (!r.reservation_date) return;
       const resDate = new Date(r.reservation_date);
-      if (resDate > now && r.status !== "completed" && r.status !== "no_show") return;
+      if (resDate > currentDate && r.status !== "completed" && r.status !== "no_show") return;
 
       if (!userStampsMap.has(r.user_id)) {
         userStampsMap.set(r.user_id, new Set());

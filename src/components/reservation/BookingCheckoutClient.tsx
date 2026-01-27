@@ -26,20 +26,11 @@ export function BookingCheckoutClient() {
   const timeStr = searchParams.get("time");
   const partySizeStr = searchParams.get("party");
 
-  // Validate required params
-  if (!restaurantSlug || !dateStr || !timeStr || !partySizeStr) {
-    router.push("/restaurants");
-    return null;
-  }
-
-  const date = parseISO(dateStr);
-  const time = timeStr;
-  const partySize = parseInt(partySizeStr, 10) || 2;
-
-  // Fetch restaurant details
+  // Fetch restaurant details (must be called before any early returns)
   const { data: restaurant, isLoading } = useQuery<Restaurant | null>({
     queryKey: ["restaurant", restaurantSlug],
     queryFn: async () => {
+      if (!restaurantSlug) return null;
       const supabase = createSupabasePublicClient();
       const { data, error } = await supabase
         .from("restaurants_with_rating")
@@ -53,6 +44,16 @@ export function BookingCheckoutClient() {
     },
     enabled: !!restaurantSlug,
   });
+
+  // Validate required params
+  if (!restaurantSlug || !dateStr || !timeStr || !partySizeStr) {
+    router.push("/restaurants");
+    return null;
+  }
+
+  const date = parseISO(dateStr);
+  const time = timeStr;
+  const partySize = parseInt(partySizeStr, 10) || 2;
 
   if (isLoading) {
     return (
@@ -79,7 +80,7 @@ export function BookingCheckoutClient() {
       <div className="min-h-screen bg-brand-paper py-12 px-6 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-black text-brand-dark mb-4">Restaurant not found</h1>
-          <p className="text-slate-600 mb-6">The restaurant you're looking for doesn't exist or is no longer available.</p>
+          <p className="text-slate-600 mb-6">The restaurant you&apos;re looking for doesn&apos;t exist or is no longer available.</p>
           <button
             onClick={() => router.push("/restaurants")}
             className="btn-bronze px-6 py-3 rounded-xl text-white font-bold uppercase"
