@@ -4,10 +4,10 @@ import * as React from "react";
 import { useSearchParams } from "next/navigation";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { transformJSONRestaurantToDetail, type JSONRestaurant } from "@/lib/restaurant-json-loader";
-import { CategoryFilter } from "./CategoryFilter";
 
 type RestaurantGridProps = {
   restaurants: JSONRestaurant[];
+  activeCategory?: string;
 };
 
 // Helper function to extract city from address string
@@ -23,10 +23,16 @@ function extractCityFromAddress(address: string | unknown): string {
   return "";
 }
 
-export function RestaurantGrid({ restaurants: jsonRestaurants }: RestaurantGridProps) {
+export function RestaurantGrid({ 
+  restaurants: jsonRestaurants, 
+  activeCategory: externalActiveCategory
+}: RestaurantGridProps) {
   const searchParams = useSearchParams();
   const cityFilter = searchParams.get("city")?.toLowerCase().trim() || "";
-  const [activeCategory, setActiveCategory] = React.useState<string>("All");
+  const [internalActiveCategory] = React.useState<string>("All");
+  
+  // Use external state if provided, otherwise use internal state
+  const activeCategory = externalActiveCategory ?? internalActiveCategory;
 
   // Filter restaurants by cuisine and city from URL params
   const filteredJSONRestaurants = React.useMemo(() => {
@@ -60,12 +66,12 @@ export function RestaurantGrid({ restaurants: jsonRestaurants }: RestaurantGridP
 
   return (
     <div className="w-full">
-      {/* Category Filter */}
-      <CategoryFilter activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
-
-      {/* Restaurant Grid - 3 columns */}
+      {/* Restaurant Grid - 3 columns with fade transition */}
       {transformedRestaurants.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div 
+          key={activeCategory}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in duration-300"
+        >
           {transformedRestaurants.map((restaurant) => (
             <RestaurantCard
               key={restaurant.id}
@@ -75,7 +81,7 @@ export function RestaurantGrid({ restaurants: jsonRestaurants }: RestaurantGridP
           ))}
         </div>
       ) : (
-        <div className="text-center py-12">
+        <div className="text-center py-12 animate-in fade-in duration-300">
           <p className="text-slate-500">
             {cityFilter
               ? `No restaurants found in ${cityFilter.charAt(0).toUpperCase() + cityFilter.slice(1)}${activeCategory !== "All" ? ` for ${activeCategory}` : ""}.`

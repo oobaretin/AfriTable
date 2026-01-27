@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { HeroSearch } from "@/components/restaurant/HeroSearch";
 import { Reveal } from "@/components/layout/Reveal";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
-import { RestaurantGrid } from "@/components/home/RestaurantGrid";
+import { CategoryFilterWrapper } from "@/components/home/CategoryFilterWrapper";
 import { RestaurantResults } from "@/components/home/RestaurantResults";
 import { RestaurantOwnerCTA } from "@/components/home/RestaurantOwnerCTA";
 import { LocalPulse } from "@/components/home/LocalPulse";
@@ -72,10 +72,10 @@ export default async function MainHomePage() {
       </div>
 
       {/* Restaurant Grid - Shows filtered results or all restaurants */}
-      <div id="restaurants-section" className="pt-4 pb-16">
+      <div id="restaurants-section" className="pt-4 pb-16 bg-[#050A18]">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
-            <RestaurantGrid restaurants={restaurantsFromJSON} />
+            <CategoryFilterWrapper restaurants={restaurantsFromJSON} />
           </Reveal>
         </div>
       </div>
