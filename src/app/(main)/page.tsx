@@ -10,6 +10,7 @@ import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { CuisineFilterClient } from "@/components/home/CuisineFilterClient";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
+import { RestaurantSearchBar } from "@/components/search/RestaurantSearchBar";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
@@ -233,6 +234,23 @@ export default async function MainHomePage() {
           </Reveal>
         </Container>
       </section>
+
+      {/* Restaurant Search */}
+      <Section>
+        <Reveal>
+          <div className="flex flex-col items-center gap-4">
+            <div className="w-full text-center">
+              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Search restaurants</h2>
+              <p className="mt-2 text-muted-foreground">Find restaurants by name, city, or cuisine</p>
+            </div>
+            <div className="w-full">
+              <RestaurantSearchBar restaurants={restaurantsFromJSON} />
+            </div>
+          </div>
+        </Reveal>
+      </Section>
+
+      <Separator />
 
       {/* Featured */}
       <Section>
