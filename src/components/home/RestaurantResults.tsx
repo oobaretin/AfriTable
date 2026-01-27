@@ -63,10 +63,6 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
     return combined.slice(0, 4);
   }, [restaurants]);
 
-  const handleSeeAll = () => {
-    // Navigate to restaurants page
-    window.location.href = "/restaurants";
-  };
 
   if (displayedRestaurants.length === 0) {
     return null;
@@ -158,13 +154,13 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
 
         {/* See All Destinations Button */}
         <div className="mt-16 flex justify-center">
-          <button
-            onClick={handleSeeAll}
-            className="group relative bg-white/5 hover:bg-[#A33B32] border border-white/10 hover:border-[#A33B32] text-white text-[10px] font-black px-8 py-4 rounded-full uppercase tracking-[0.3em] transition-all duration-300 flex items-center gap-3"
+          <Link
+            href="/restaurants"
+            className="group relative bg-transparent hover:bg-[#C69C2B]/10 border border-[#C69C2B] text-[#C69C2B] text-[10px] font-black px-8 py-4 rounded-full uppercase tracking-widest transition-all duration-500 flex items-center gap-3 hover:shadow-[0_0_15px_rgba(198,156,43,0.4)]"
           >
             <span>See All Destinations</span>
-            <span className="text-[#C69C2B] group-hover:text-white text-lg transition-colors">→</span>
-          </button>
+            <span className="text-lg transition-transform duration-500 group-hover:translate-x-1">→</span>
+          </Link>
         </div>
       </div>
     </section>

@@ -30,6 +30,15 @@ export default function RestaurantsPage() {
         </div>
       </div>
 
+      {/* Page Title */}
+      <div className="bg-[#050A18] pb-8">
+        <div className="mx-auto max-w-6xl px-6">
+          <h1 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter">
+            The Full Collection
+          </h1>
+        </div>
+      </div>
+
       {/* Restaurant Grid - Shows filtered results or all restaurants */}
       <div className="pt-4 pb-16 bg-[#050A18]">
         <div className="mx-auto max-w-6xl px-6">
