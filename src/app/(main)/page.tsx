@@ -11,6 +11,7 @@ import { Section } from "@/components/layout/Section";
 import { CuisineFilterClient } from "@/components/home/CuisineFilterClient";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
 import { RestaurantSearchBar } from "@/components/search/RestaurantSearchBar";
+import { RestaurantGrid } from "@/components/home/RestaurantGrid";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
@@ -243,6 +244,26 @@ export default async function MainHomePage() {
               <RestaurantSearchBar restaurants={restaurantsFromJSON} />
             </div>
           </div>
+        </Reveal>
+      </Section>
+
+      <Separator />
+
+      {/* Restaurant Grid with Cuisine Filter */}
+      <Section>
+        <Reveal>
+          <div className="flex items-end justify-between gap-4 mb-8">
+            <div>
+              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">All restaurants</h2>
+              <p className="mt-2 text-muted-foreground">
+                Explore our complete collection of African & Caribbean restaurants.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <RestaurantGrid />
         </Reveal>
       </Section>
 
