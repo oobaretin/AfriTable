@@ -35,6 +35,7 @@
     "remove:closed": "node scripts/remove-closed-restaurant.mjs",
     "check:count": "node scripts/check-restaurant-count.mjs",
     "check:displayable": "node scripts/check-displayable-restaurants.mjs",
+    "scrape:hours": "node scripts/scrape-restaurant-hours.mjs",
     "test:api": "node scripts/test-api-query.mjs",
     "build": "next build",
     "start": "next start",
