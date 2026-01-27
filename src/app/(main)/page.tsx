@@ -218,7 +218,7 @@ export default async function MainHomePage() {
       <RestaurantResults restaurants={restaurantsFromJSON} />
 
       {/* Sankofa Brand Bridge Separator */}
-      <div className="py-16 bg-[#050A18]">
+      <div className="pt-8 pb-4 bg-[#050A18]">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex items-center">
             {/* Left line stretching to edge */}
@@ -242,7 +242,7 @@ export default async function MainHomePage() {
       </div>
 
       {/* Restaurant Grid - Shows filtered results or all restaurants */}
-      <div id="restaurants-section" className="pt-0 pb-16">
+      <div id="restaurants-section" className="pt-4 pb-16">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <RestaurantGrid restaurants={restaurantsFromJSON} />
