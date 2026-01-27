@@ -32,6 +32,7 @@ type ReservationsResp = {
 type Stamp = {
   id: string;
   restaurant: string;
+  restaurantSlug?: string;
   city: string;
   date: string;
   color: string;
@@ -128,6 +129,7 @@ export function CulinaryPassport() {
     return past.map((r, index) => ({
       id: r.id,
       restaurant: r.restaurant?.name || "Unknown Restaurant",
+      restaurantSlug: r.restaurant?.slug,
       city: r.restaurant?.address ? extractCity(r.restaurant.address) : "Unknown",
       date: format(parseISO(r.reservation_date), "MMM yyyy"),
       color: getStampColor(r.restaurant?.cuisine_types, index),
@@ -290,7 +292,7 @@ export function CulinaryPassport() {
           {stamps.map((stamp) => (
             <Link
               key={stamp.id}
-              href={stamp.restaurant !== "Unknown Restaurant" ? `/restaurants/${stamp.restaurant.toLowerCase().replace(/\s+/g, "-")}` : "#"}
+              href={stamp.restaurantSlug ? `/restaurants/${stamp.restaurantSlug}` : "#"}
               className="aspect-square bg-white rounded-[2.5rem] p-4 border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center group hover:shadow-xl hover:-translate-y-1 transition-all"
             >
               {/* The "Postal Stamp" Circle */}
