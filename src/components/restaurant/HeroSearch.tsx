@@ -17,6 +17,8 @@ const AVAILABLE_CITIES = [
   "Los Angeles",
   "Chicago",
   "Philadelphia",
+  "Seattle",
+  "Boston",
   "San Francisco",
   "Oakland",
 ];

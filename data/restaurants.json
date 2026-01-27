@@ -784,5 +784,71 @@
     "address": "West Philly, Philadelphia, PA",
     "about": "Where traditional jerk meets a modern city pulse.",
     "vibe_tags": ["Artisanal Caribbean"]
+  },
+  {
+    "id": "sea-001",
+    "name": "Communion",
+    "cuisine": "Afro-Texan / Soul",
+    "region": "Other African",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "Central District, Seattle, WA",
+    "about": "A story of survival and soul on a plate.",
+    "vibe_tags": ["Award-Winning Luxury"]
+  },
+  {
+    "id": "bos-001",
+    "name": "Cesaria",
+    "cuisine": "Cape Verdean / West African",
+    "region": "West African",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "Dorchester, Boston, MA",
+    "about": "The premier destination for the flavors of the islands.",
+    "vibe_tags": ["Old World Elegance"]
+  },
+  {
+    "id": "sea-002",
+    "name": "Cafe Selam",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Central District, Seattle, WA",
+    "about": "The neighborhood heartbeat of Little Ethiopia.",
+    "vibe_tags": ["Cozy & Authentic"]
+  },
+  {
+    "id": "bos-002",
+    "name": "Suya Joint",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Roxbury, Boston, MA",
+    "about": "Elevating West African street food to a fine-dining art.",
+    "vibe_tags": ["Modern Nigerian"]
+  },
+  {
+    "id": "sea-003",
+    "name": "Jebena Cafe",
+    "cuisine": "Ethiopian / Eritrean",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Pinehurst, Seattle, WA",
+    "about": "Authentic hospitality and the perfect cup of coffee.",
+    "vibe_tags": ["Warm & Traditional"]
+  },
+  {
+    "id": "bos-003",
+    "name": "Teranga",
+    "cuisine": "Senegalese",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "South End, Boston, MA",
+    "about": "A contemporary taste of Dakar in the heart of Boston.",
+    "vibe_tags": ["Chic & Minimalist"]
   }
 ]
