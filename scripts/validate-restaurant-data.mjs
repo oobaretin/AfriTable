@@ -587,8 +587,8 @@ const ZIP_STATE_MAP = {
   "980": "WA", // Bellevue
   "841": "UT", // West Valley City
   "528": "IA", // Davenport
-  "774": "TX", // Meadows Place
-  "774": "TX", // Cypress
+  "774": "TX", // Meadows Place, Cypress, Richmond (TX)
+  "775": "TX", // Pasadena, TX area
 };
 
 function validatePhone(phone) {
@@ -627,20 +627,56 @@ function validateAddress(addr) {
   if (!state) issues.push("Missing state");
   if (!zip) issues.push("Missing ZIP code");
   
-  // Check city-state mapping
-  if (city && state) {
-    const expectedState = CITY_STATE_MAP[city];
-    if (expectedState && expectedState !== state) {
-      issues.push(`City "${addr.city}" should be in ${expectedState}, but state is ${state}`);
-    }
-  }
-  
-  // Check ZIP-state mapping
+  // Check ZIP-state mapping first (ZIP codes are more reliable)
+  let zipStateMatch = null;
   if (zip && state && zip.length >= 3) {
     const zipPrefix = zip.substring(0, 3);
     const expectedState = ZIP_STATE_MAP[zipPrefix];
+    if (expectedState) {
+      zipStateMatch = expectedState === state;
+      if (!zipStateMatch) {
+        issues.push(`ZIP code ${zip} (prefix ${zipPrefix}) indicates ${expectedState}, but state is ${state}`);
+      }
+    }
+  }
+  
+  // Check city-state mapping (only if ZIP doesn't provide clear answer or confirms issue)
+  if (city && state) {
+    const expectedState = CITY_STATE_MAP[city];
     if (expectedState && expectedState !== state) {
-      issues.push(`ZIP code ${zip} (prefix ${zipPrefix}) suggests ${expectedState}, but state is ${state}`);
+      // Special cases: cities that exist in multiple states
+      // Only flag if ZIP code doesn't contradict or if both agree on mismatch
+      if (city.includes("richmond")) {
+        // Richmond exists in both TX and VA - trust ZIP code
+        if (zip && zip.length >= 3) {
+          const zipPrefix = zip.substring(0, 3);
+          if (zipPrefix.startsWith("77")) {
+            // Texas ZIP - don't flag as issue
+          } else if (zipPrefix.startsWith("23")) {
+            // Virginia ZIP - flag as issue
+            issues.push(`City "${addr.city}" should be in ${expectedState}, but state is ${state}`);
+          }
+        }
+      } else if (city.includes("arlington")) {
+        // Arlington exists in both TX and VA - trust ZIP code
+        if (zip && zip.length >= 3) {
+          const zipPrefix = zip.substring(0, 3);
+          if (zipPrefix.startsWith("22")) {
+            // Virginia ZIP - flag as issue
+            issues.push(`City "${addr.city}" should be in ${expectedState}, but state is ${state}`);
+          } else if (zipPrefix.startsWith("76")) {
+            // Texas ZIP - don't flag as issue
+          }
+        }
+      } else {
+        // For other cities, only flag if ZIP code doesn't contradict
+        if (zipStateMatch === null || zipStateMatch === true) {
+          // ZIP either doesn't provide answer or confirms state is correct
+          // So city-state mismatch is a real issue
+          issues.push(`City "${addr.city}" should be in ${expectedState}, but state is ${state}`);
+        }
+        // If ZIP contradicts city (zipStateMatch === false), trust ZIP over city
+      }
     }
   }
   
