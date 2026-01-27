@@ -126,7 +126,7 @@ export function HeroSearch() {
       </div>
       <button
         onClick={onSearch}
-        className="bg-orange-600 px-10 py-4 rounded-xl font-bold hover:bg-orange-700 transition-all text-white"
+        className="btn-bronze px-10 py-4 rounded-xl font-bold text-white uppercase tracking-widest text-sm"
       >
         Search
       </button>
