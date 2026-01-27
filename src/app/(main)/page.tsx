@@ -263,7 +263,7 @@ export default async function MainHomePage() {
         </Reveal>
 
         <Reveal>
-          <RestaurantGrid />
+          <RestaurantGrid restaurants={restaurantsFromJSON} />
         </Reveal>
       </Section>
 

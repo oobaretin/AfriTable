@@ -2,22 +2,19 @@
 
 import * as React from "react";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
-import { transformJSONRestaurantToDetail, loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader";
+import { transformJSONRestaurantToDetail, type JSONRestaurant } from "@/lib/restaurant-json-loader";
 
-export function RestaurantGrid() {
+type RestaurantGridProps = {
+  restaurants: JSONRestaurant[];
+};
+
+export function RestaurantGrid({ restaurants: jsonRestaurants }: RestaurantGridProps) {
   const [selectedCuisine, setSelectedCuisine] = React.useState<string | null>(null);
-  const [restaurants, setRestaurants] = React.useState<any[]>([]);
 
-  // Load restaurants from JSON and transform them
-  React.useEffect(() => {
-    try {
-      const jsonRestaurants = loadRestaurantsFromJSON();
-      const transformed = jsonRestaurants.map((r) => transformJSONRestaurantToDetail(r));
-      setRestaurants(transformed);
-    } catch (error) {
-      console.error("[RestaurantGrid] Error loading restaurants:", error);
-    }
-  }, []);
+  // Transform JSON restaurants to RestaurantCard format
+  const restaurants = React.useMemo(() => {
+    return jsonRestaurants.map((r) => transformJSONRestaurantToDetail(r));
+  }, [jsonRestaurants]);
 
   // Get unique cuisines from restaurants
   const cuisines = React.useMemo(() => {
