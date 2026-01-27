@@ -21,6 +21,8 @@
     "find:duplicates": "node scripts/find-duplicates.mjs",
     "remove:duplicates": "node scripts/remove-duplicates.mjs",
     "verify:restaurants": "node scripts/verify-production-restaurants.mjs",
+    "list:restaurants": "node scripts/list-all-restaurants.mjs",
+    "check:status": "node scripts/check-restaurant-status.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

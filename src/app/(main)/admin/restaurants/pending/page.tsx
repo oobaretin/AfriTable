@@ -40,14 +40,28 @@ export default async function PendingRestaurantsPage() {
 
   const supabaseAdmin = createSupabaseAdminClient();
 
-  const { data: restaurants } = await supabaseAdmin
+  // Try to query with is_claimed, but fallback if column doesn't exist
+  let query = supabaseAdmin
     .from("restaurants")
     .select("id,owner_id,name,slug,phone,website,address,description,is_active,created_at")
     .eq("is_active", false)
-    .eq("is_claimed", true)
     .order("created_at", { ascending: false });
 
-  const pending = (restaurants ?? []) as PendingRestaurant[];
+  const { data: restaurants, error } = await query;
+
+  // If error is about missing column, retry without is_claimed filter
+  let pending: PendingRestaurant[];
+  if (error && error.code === "42703" && error.message?.includes("is_claimed")) {
+    const { data: retryData } = await supabaseAdmin
+      .from("restaurants")
+      .select("id,owner_id,name,slug,phone,website,address,description,is_active,created_at")
+      .eq("is_active", false)
+      .order("created_at", { ascending: false });
+    pending = (retryData ?? []) as PendingRestaurant[];
+  } else {
+    // Filter by is_claimed if column exists and query succeeded
+    pending = (restaurants ?? []).filter((r: any) => r.is_claimed !== false) as PendingRestaurant[];
+  }
 
   // Owner email is not stored in profiles; fetch from auth.users via Admin API.
   const ownerIds = Array.from(new Set(pending.map((r) => r.owner_id)));

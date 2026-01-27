@@ -39,14 +39,29 @@ export default async function PendingRestaurantsAliasPage() {
   if (profile?.role !== "admin") redirect("/");
 
   const supabaseAdmin = createSupabaseAdminClient();
-  const { data: restaurants } = await supabaseAdmin
+  
+  // Try to query with is_claimed, but fallback if column doesn't exist
+  let query = supabaseAdmin
     .from("restaurants")
     .select("id,owner_id,name,slug,phone,website,address,description,is_active,created_at")
     .eq("is_active", false)
-    .eq("is_claimed", true)
     .order("created_at", { ascending: false });
 
-  const pending = (restaurants ?? []) as PendingRestaurant[];
+  // Only filter by is_claimed if the column exists (will be caught by error handling)
+  const { data: restaurants, error } = await query;
+
+  // If error is about missing column, retry without is_claimed filter
+  if (error && error.code === "42703" && error.message?.includes("is_claimed")) {
+    const { data: retryData } = await supabaseAdmin
+      .from("restaurants")
+      .select("id,owner_id,name,slug,phone,website,address,description,is_active,created_at")
+      .eq("is_active", false)
+      .order("created_at", { ascending: false });
+    var pending = (retryData ?? []) as PendingRestaurant[];
+  } else {
+    // Filter by is_claimed if column exists and query succeeded
+    var pending = (restaurants ?? []).filter((r: any) => r.is_claimed !== false) as PendingRestaurant[];
+  }
 
   return (
     <Container className="py-10 md:py-14">
