@@ -6,9 +6,9 @@ import { addDays, format } from "date-fns";
 import { useRouter } from "next/navigation";
 import { Calendar } from "@/components/ui/calendar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatTime12h } from "@/lib/utils/time-format";
+import { Confetti } from "./Confetti";
 
 type Slot = {
   time: string;
@@ -37,6 +37,8 @@ export function ReservationWidget({
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   const [guests, setGuests] = React.useState(2);
   const [selectedTime, setSelectedTime] = React.useState<string | null>(null);
+  const [showSuccess, setShowSuccess] = React.useState(false);
+  const [showConfetti, setShowConfetti] = React.useState(false);
 
   const dateStr = date ? format(date, "yyyy-MM-dd") : format(new Date(), "yyyy-MM-dd");
   const partySize = String(guests);
@@ -72,12 +74,20 @@ export function ReservationWidget({
 
   const handleReserve = () => {
     if (!selectedTime || !restaurantSlug) return;
-    const params = new URLSearchParams();
-    params.set("restaurant", restaurantSlug);
-    params.set("date", dateStr);
-    params.set("time", selectedTime);
-    params.set("party", partySize);
-    router.push(`/reservations/new?${params.toString()}`);
+    
+    // Show success state with confetti
+    setShowConfetti(true);
+    setShowSuccess(true);
+    
+    // After showing success, navigate to reservation flow
+    setTimeout(() => {
+      const params = new URLSearchParams();
+      params.set("restaurant", restaurantSlug);
+      params.set("date", dateStr);
+      params.set("time", selectedTime);
+      params.set("party", partySize);
+      router.push(`/reservations/new?${params.toString()}`);
+    }, 2000);
   };
 
   // Generate time options (7:00 PM - 10:30 PM in 30-min intervals)
@@ -93,6 +103,45 @@ export function ReservationWidget({
     return times;
   }, []);
 
+  // Format date for display
+  const displayDate = date ? format(date, "MMMM d, yyyy") : "";
+  const displayTime = selectedTime ? formatTime12h(selectedTime) : "";
+
+  // Success State
+  if (showSuccess) {
+    return (
+      <>
+        {showConfetti && <Confetti />}
+        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
+          <div className="text-center py-8">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-100 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-8 h-8 text-orange-600"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2">Table Reserved!</h3>
+            <p className="text-lg text-slate-600 mb-6">
+              Table reserved for <span className="font-semibold">{displayDate}</span> at{" "}
+              <span className="font-semibold">{displayTime}</span>
+            </p>
+            <p className="text-sm text-slate-400">Redirecting to confirmation...</p>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  // Form State
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
       <h3 className="text-xl font-bold text-slate-900 mb-6">
