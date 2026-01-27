@@ -46,7 +46,7 @@ export function RestaurantOwnerCTA() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="rounded-xl bg-orange-600 px-8 py-4 font-bold text-white transition-all hover:bg-orange-700 hover:scale-105 active:scale-95 shadow-lg shadow-orange-900/20">
-                <Link href="/restaurant-signup">Get Started for Free</Link>
+                <Link href="/join-as-restaurant">Get Started for Free</Link>
               </Button>
               <Button asChild variant="outline" className="rounded-xl bg-white/5 px-8 py-4 font-bold text-white border border-white/10 transition-all hover:bg-white/10">
                 <Link href="/contact">Talk to Sales</Link>
