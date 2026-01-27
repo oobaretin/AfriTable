@@ -53,7 +53,7 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
   }
 
   // Parse hours from JSON format to array format
-  let hoursArray: any[] = [];
+  const hoursArray: any[] = [];
   if (jsonRestaurant.hours && typeof jsonRestaurant.hours === "object") {
     const hoursObj = jsonRestaurant.hours as Record<string, string>;
     const dayMap: Array<[string, number]> = [
