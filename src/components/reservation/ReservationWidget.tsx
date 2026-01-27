@@ -242,10 +242,9 @@ export function ReservationWidget({
           type="button"
           onClick={handleReserve}
           disabled={!selectedTime || !restaurantSlug || isLoading}
-          className="group relative w-full overflow-hidden rounded-xl bg-slate-900 py-4 font-bold text-white transition-all hover:bg-orange-600 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-slate-900"
+          className="btn-bronze w-full px-10 py-4 rounded-xl font-bold text-white uppercase tracking-widest text-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
         >
-          <span className="relative z-10">Find a Table</span>
-          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-orange-600 to-orange-500 transition-transform duration-300 group-hover:translate-x-0"></div>
+          Find a Table
         </button>
       </div>
 
