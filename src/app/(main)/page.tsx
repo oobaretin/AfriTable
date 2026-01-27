@@ -8,7 +8,6 @@ import { Reveal } from "@/components/layout/Reveal";
 import { Section } from "@/components/layout/Section";
 import { CuisineFilterClient } from "@/components/home/CuisineFilterClient";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
-import { RestaurantSearchBar } from "@/components/search/RestaurantSearchBar";
 import { RestaurantGrid } from "@/components/home/RestaurantGrid";
 import { RestaurantOwnerCTA } from "@/components/home/RestaurantOwnerCTA";
 import { LocalPulse } from "@/components/home/LocalPulse";
@@ -213,40 +212,14 @@ export default async function MainHomePage() {
       {/* Hero - Search-First Design */}
       <HeroSearch />
 
-      {/* Restaurant Search */}
-      <Section>
-        <Reveal>
-          <div className="flex flex-col items-center gap-4">
-            <div className="w-full text-center">
-              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Search restaurants</h2>
-              <p className="mt-2 text-muted-foreground">Find restaurants by name, city, or cuisine</p>
-            </div>
-            <div className="w-full">
-              <RestaurantSearchBar restaurants={restaurantsFromJSON} />
-            </div>
-          </div>
-        </Reveal>
-      </Section>
-
-      <Separator />
-
-      {/* Restaurant Grid with Cuisine Filter */}
-      <Section>
-        <Reveal>
-          <div className="flex items-end justify-between gap-4 mb-8">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">All restaurants</h2>
-              <p className="mt-2 text-muted-foreground">
-                Explore our complete collection of African & Caribbean restaurants.
-              </p>
-            </div>
-          </div>
-        </Reveal>
-
-        <Reveal>
-          <RestaurantGrid restaurants={restaurantsFromJSON} />
-        </Reveal>
-      </Section>
+      {/* Restaurant Grid - Shows filtered results or all restaurants */}
+      <div id="restaurants-section">
+        <Section>
+          <Reveal>
+            <RestaurantGrid restaurants={restaurantsFromJSON} />
+          </Reveal>
+        </Section>
+      </div>
 
       <Separator />
 

@@ -1,7 +1,9 @@
 "use client";
 
+"use client";
+
 import * as React from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const CUISINES = ["NIGERIAN", "SENEGALESE", "HAITIAN", "ETHIOPIAN", "JAMAICAN"];
 const TYPING_SPEED = 100;
@@ -9,10 +11,11 @@ const PAUSE_TIME = 2000;
 
 export function HeroSearch() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [index, setIndex] = React.useState(0);
   const [displayText, setDisplayText] = React.useState("");
   const [isDeleting, setIsDeleting] = React.useState(false);
-  const [city, setCity] = React.useState("");
+  const [city, setCity] = React.useState(searchParams.get("city") || "");
 
   React.useEffect(() => {
     const currentWord = CUISINES[index];
@@ -39,22 +42,24 @@ export function HeroSearch() {
   }, [displayText, isDeleting, index]);
 
   function handleSearch() {
-    if (!city.trim()) {
-      // If no city, just scroll to restaurants section
-      const restaurantsSection = document.getElementById("restaurants-section");
-      if (restaurantsSection) {
-        restaurantsSection.scrollIntoView({ behavior: "smooth" });
-        return;
-      }
-      return;
+    // Scroll to restaurants section
+    const restaurantsSection = document.getElementById("restaurants-section");
+    if (restaurantsSection) {
+      restaurantsSection.scrollIntoView({ behavior: "smooth" });
     }
 
-    // Build search params with city
-    const params = new URLSearchParams();
-    params.set("city", city.trim());
-
-    // Navigate to search results
-    router.push(`/restaurants?${params.toString()}`);
+    // Update URL with city filter if provided
+    if (city.trim()) {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("city", city.trim());
+      router.push(`/?${params.toString()}`, { scroll: false });
+    } else {
+      // Remove city filter if empty
+      const params = new URLSearchParams(searchParams.toString());
+      params.delete("city");
+      const newUrl = params.toString() ? `/?${params.toString()}` : "/";
+      router.push(newUrl, { scroll: false });
+    }
   }
 
   return (
