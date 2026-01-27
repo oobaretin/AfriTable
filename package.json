@@ -20,6 +20,7 @@
     "import:json": "tsx lib/import-from-json.ts",
     "find:duplicates": "node scripts/find-duplicates.mjs",
     "remove:duplicates": "node scripts/remove-duplicates.mjs",
+    "verify:restaurants": "node scripts/verify-production-restaurants.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
