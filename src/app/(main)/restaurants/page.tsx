@@ -30,17 +30,30 @@ export default function RestaurantsPage() {
         </div>
       </div>
 
-      {/* Page Title */}
-      <div className="bg-[#050A18] pb-8">
+      {/* Premium Header */}
+      <div className="bg-[#050A18] py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <h1 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter">
-            The Full Collection
-          </h1>
+          <div className="text-center space-y-6">
+            {/* Main Title */}
+            <h1 className="text-5xl md:text-6xl font-serif text-[#C69C2B] font-normal">
+              The Full Collection
+            </h1>
+            
+            {/* Subtitle */}
+            <p className="text-sm md:text-base text-white/60 tracking-[0.2em] uppercase">
+              63 Destinations Across the Global Diaspora
+            </p>
+            
+            {/* Divider Line */}
+            <div className="flex justify-center pt-2">
+              <div className="w-10 h-px bg-[#C69C2B]"></div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Restaurant Grid - Shows filtered results or all restaurants */}
-      <div className="pt-4 pb-16 bg-[#050A18]">
+      <div className="pb-16 bg-[#050A18]">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <CategoryFilterWrapper restaurants={restaurantsFromJSON} />
