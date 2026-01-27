@@ -13,7 +13,6 @@ type RestaurantOwnerDashboardLayoutProps = {
 
 export function RestaurantOwnerDashboardLayout({
   children,
-  restaurantName,
   activeTab = "overview",
 }: RestaurantOwnerDashboardLayoutProps) {
   const pathname = usePathname();

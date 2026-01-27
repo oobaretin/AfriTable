@@ -24,7 +24,7 @@ export function RestaurantGrid({ restaurants: jsonRestaurants }: RestaurantGridP
   }, [jsonRestaurants, activeCategory]);
 
   // Transform filtered JSON restaurants to RestaurantCard format
-  const restaurants = React.useMemo(() => {
+  const transformedRestaurants = React.useMemo(() => {
     return filteredJSONRestaurants.map((r) => transformJSONRestaurantToDetail(r));
   }, [filteredJSONRestaurants]);
 

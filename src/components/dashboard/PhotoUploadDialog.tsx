@@ -18,8 +18,6 @@ type PhotoUploadDialogProps = {
 
 export function PhotoUploadDialog({
   reservationId,
-  restaurantName,
-  restaurantSlug,
   onUploadComplete,
 }: PhotoUploadDialogProps) {
   const [open, setOpen] = React.useState(false);

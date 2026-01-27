@@ -2,15 +2,7 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { addDays, format } from "date-fns";
-import { Calendar } from "@/components/ui/calendar";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { formatTime12h } from "@/lib/utils/time-format";
+import { format } from "date-fns";
 
 const POPULAR_LOCATIONS = [
   "Houston, TX",
@@ -35,16 +27,12 @@ function times30m() {
   return times;
 }
 
-const TIMES = times30m();
-
 export function HeroSearch() {
   const router = useRouter();
 
   const [location, setLocation] = React.useState("");
   const [cuisine, setCuisine] = React.useState("");
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
-  const [partySize, setPartySize] = React.useState("2");
-  const [time, setTime] = React.useState("19:00");
+  const [date] = React.useState<Date | undefined>(new Date());
   const [locationOpen, setLocationOpen] = React.useState(false);
   const locationWrapRef = React.useRef<HTMLDivElement | null>(null);
 

@@ -95,7 +95,7 @@ export function SuccessStory() {
           {/* Text Side: The Story */}
           <div className="flex-1">
             <div className="mb-8">
-               <span className="text-brand-ochre text-6xl font-serif">"</span>
+               <span className="text-brand-ochre text-6xl font-serif">&quot;</span>
                <h3 className="text-3xl md:text-4xl font-black text-white leading-tight mb-6">
                  AfriTable didn&apos;t just give us a booking system; they gave us a <span className="text-brand-forest">community</span> that actually understands our culture.
                </h3>

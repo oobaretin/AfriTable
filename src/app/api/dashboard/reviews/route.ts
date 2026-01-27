@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { requireRestaurantOwner } from "@/lib/dashboard/auth";
 
-export async function GET(request: Request) {
+export async function GET() {
   const { restaurantId } = await requireRestaurantOwner();
   const supabase = createSupabaseServerClient();
 

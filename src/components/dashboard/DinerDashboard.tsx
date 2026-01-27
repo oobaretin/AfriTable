@@ -51,12 +51,6 @@ function reservationStart(r: ReservationRow) {
   return new Date(`${r.reservation_date}T${String(r.reservation_time).slice(0, 5)}:00`);
 }
 
-function addressToString(address: any) {
-  if (!address) return "";
-  if (typeof address === "string") return address;
-  const a: any = address ?? {};
-  return [a.street, a.city, a.state, a.zip].filter(Boolean).join(", ");
-}
 
 function extractCity(address: any): string {
   if (!address) return "";

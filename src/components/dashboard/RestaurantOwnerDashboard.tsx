@@ -65,7 +65,6 @@ export function RestaurantOwnerDashboard({ restaurantName }: { restaurantName: s
   // Calculate metrics
   const totalCovers = data?.stats.covers ?? 0;
   const activeTables = todayReservations.length;
-  const totalToday = data?.stats.total ?? 0;
   
   // Calculate estimated revenue (rough estimate: $60 per cover)
   const estimatedRevenue = totalCovers * 60;

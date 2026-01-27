@@ -17,7 +17,7 @@ type ShareStampProps = {
   userName?: string;
 };
 
-export function ShareStamp({ restaurant, mealImage, reviewText, userName }: ShareStampProps) {
+export function ShareStamp({ restaurant, mealImage, reviewText }: ShareStampProps) {
   const [isHovered, setIsHovered] = React.useState(false);
 
   return (

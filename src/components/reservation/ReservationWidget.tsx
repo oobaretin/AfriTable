@@ -43,7 +43,7 @@ export function ReservationWidget({
   const dateStr = date ? format(date, "yyyy-MM-dd") : format(new Date(), "yyyy-MM-dd");
   const partySize = String(guests);
 
-  const { data, isLoading, isFetching, error, refetch } = useQuery<AvailabilityResponse>({
+  const { data, isLoading, error } = useQuery<AvailabilityResponse>({
     queryKey: ["availability", restaurantId, dateStr, partySize],
     queryFn: async () => {
       const res = await fetch(

@@ -2,11 +2,9 @@ import Link from "next/link";
 import { createSupabasePublicClient } from "@/lib/supabase/public";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { HeroSearch } from "@/components/restaurant/HeroSearch";
 import { Reveal } from "@/components/layout/Reveal";
-import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { CuisineFilterClient } from "@/components/home/CuisineFilterClient";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
@@ -51,16 +49,6 @@ const CUISINES: { label: string; href: string }[] = [
   { label: "Other Caribbean", href: "/restaurants?cuisine=Other%20Caribbean" },
 ];
 
-const CITIES: { label: string; href: string }[] = [
-  { label: "Houston, TX", href: "/restaurants?city=Houston%2C%20TX" },
-  { label: "Atlanta, GA", href: "/restaurants?city=Atlanta%2C%20GA" },
-  { label: "Washington, DC", href: "/restaurants?city=Washington%2C%20DC" },
-  { label: "New York, NY", href: "/restaurants?city=New%20York%2C%20NY" },
-  { label: "Los Angeles, CA", href: "/restaurants?city=Los%20Angeles%2C%20CA" },
-  { label: "Dallas, TX", href: "/restaurants?city=Dallas%2C%20TX" },
-  { label: "Chicago, IL", href: "/restaurants?city=Chicago%2C%20IL" },
-  { label: "Philadelphia, PA", href: "/restaurants?city=Philadelphia%2C%20PA" },
-];
 
 async function getFeaturedRestaurants(): Promise<FeaturedRestaurant[]> {
   const supabase = createSupabasePublicClient();
@@ -120,16 +108,6 @@ async function getFeaturedRestaurants(): Promise<FeaturedRestaurant[]> {
   }
 }
 
-type JSONRestaurant = {
-  id: string;
-  name: string;
-  cuisine: string;
-  region: string;
-  price_range: string;
-  rating: number;
-  address: string;
-  images?: string[];
-};
 
 // loadRestaurantsFromJSON is now imported from restaurant-json-loader-server
 

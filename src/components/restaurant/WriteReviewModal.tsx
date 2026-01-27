@@ -38,7 +38,7 @@ function Stars({ value, onChange }: { value: number; onChange: (v: number) => vo
   );
 }
 
-export function WriteReviewModal({ restaurantId, restaurantSlug, restaurantName }: WriteReviewModalProps) {
+export function WriteReviewModal({ restaurantSlug, restaurantName }: WriteReviewModalProps) {
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const [rating, setRating] = React.useState(5);

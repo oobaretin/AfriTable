@@ -91,7 +91,7 @@ export function ReviewStudio() {
       const generated = generateAIResponse(activeReview, selectedTone);
       setResponseText(generated);
     }
-  }, [activeReviewIndex, selectedTone, reviews]);
+  }, [activeReviewIndex, selectedTone]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function postResponse(reviewId: string) {
     if (!responseText.trim()) {
@@ -201,7 +201,6 @@ export function ReviewStudio() {
         {/* Left: Review Feed */}
         <div className="lg:col-span-1 space-y-4">
           {reviews.map((rev, i) => {
-            const revSentiment = getSentiment(rev);
             const revUserName = rev.user?.full_name || "Guest";
             return (
               <div

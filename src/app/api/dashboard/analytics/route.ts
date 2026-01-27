@@ -3,7 +3,7 @@ import { format, subMonths, startOfMonth, endOfMonth } from "date-fns";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { requireRestaurantOwner } from "@/lib/dashboard/auth";
 
-export async function GET(request: Request) {
+export async function GET() {
   const { restaurantId } = await requireRestaurantOwner();
   const supabase = createSupabaseServerClient();
 
@@ -63,7 +63,6 @@ export async function GET(request: Request) {
 
   // Calculate peak hours (5PM-11PM, 6 time slots)
   const peakHours: number[] = [0, 0, 0, 0, 0, 0];
-  const hourSlots = ["17:00", "18:30", "20:00", "21:30", "23:00"]; // Approximate slots
 
   (currentMonthReservations ?? []).forEach((r) => {
     if (!r.reservation_time) return;

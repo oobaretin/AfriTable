@@ -61,7 +61,7 @@ export default function JoinAsRestaurantPage() {
     mode: "onChange",
   });
 
-  const { trigger, getValues } = form;
+  const { trigger } = form;
 
   const handleNext = async () => {
     let fieldsToValidate: (keyof PartnerSignupValues)[] = [];

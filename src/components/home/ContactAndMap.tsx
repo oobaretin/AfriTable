@@ -46,7 +46,7 @@ export function ContactAndMap() {
       toast.success(`We'll notify you when we launch in ${parsed.data.city}!`);
       setEmail("");
       setSelectedCity("");
-    } catch (error) {
+    } catch {
       toast.error("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
@@ -68,7 +68,7 @@ export function ContactAndMap() {
             </h3>
             
             <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
-              We are currently establishing roots in major culinary hubs across the US. Don't see your city? Tell us where we should head next.
+              We are currently establishing roots in major culinary hubs across the US. Don&apos;t see your city? Tell us where we should head next.
             </p>
 
             {/* City Tag Cloud */}
@@ -120,7 +120,7 @@ export function ContactAndMap() {
                   </Button>
                 </div>
                 <p className="text-xs text-slate-500">
-                  We'll send you an email when AfriTable launches in your city.
+                  We&apos;ll send you an email when AfriTable launches in your city.
                 </p>
               </form>
             </div>

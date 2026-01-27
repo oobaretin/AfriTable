@@ -24,17 +24,6 @@ export type JSONRestaurant = {
   vibe_tags?: string[];
 };
 
-// Extract city from address string
-function extractCity(address: string): string {
-  const parts = address.split(",").map((s) => s.trim());
-  if (parts.length >= 2) {
-    const cityState = parts[1];
-    const cityMatch = cityState.match(/^([^,]+)/);
-    return cityMatch ? cityMatch[1].trim() : cityState;
-  }
-  return "";
-}
-
 // Transform JSON restaurant to RestaurantDetail format
 export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant): any {
   const priceRangeMap: Record<string, number> = {
@@ -103,7 +92,6 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
             const closeTime = `${String(close24h).padStart(2, "0")}:${m2}`;
 
             // Add entries for each day in range
-            let currentDay = startDayNum;
             const daysToAdd: number[] = [];
             
             // Handle wrapping around Sunday (0) to Saturday (6)

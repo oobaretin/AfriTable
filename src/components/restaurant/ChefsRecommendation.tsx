@@ -111,7 +111,7 @@ export function ChefsRecommendation({
   return (
     <div className="bg-brand-paper rounded-[2rem] p-8 border border-brand-bronze/10 relative overflow-hidden">
       <div className="absolute top-0 right-0 p-6 opacity-5 text-8xl">👩🏾‍🍳</div>
-      <h3 className="text-xs font-black text-brand-bronze uppercase tracking-[0.2em] mb-6">The Chef's Choice</h3>
+      <h3 className="text-xs font-black text-brand-bronze uppercase tracking-[0.2em] mb-6">The Chef&apos;s Choice</h3>
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="w-32 h-32 rounded-2xl overflow-hidden rotate-3 shadow-lg flex-shrink-0">
           <Image

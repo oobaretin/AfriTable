@@ -1,12 +1,11 @@
 import { NextResponse } from "next/server";
-import { createSupabaseServerClient, createSupabaseAdminClient } from "@/lib/supabase/server";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { assertSameOrigin, requireRestaurantOwner } from "@/lib/dashboard/auth";
 
 export async function POST(request: Request, context: { params: { id: string } }) {
   assertSameOrigin();
   const { restaurantId, userId } = await requireRestaurantOwner();
   const supabase = createSupabaseServerClient();
-  const supabaseAdmin = createSupabaseAdminClient();
 
   // Verify review belongs to owner's restaurant
   const { data: existing, error: existingError } = await supabase

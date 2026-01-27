@@ -160,7 +160,6 @@ export function RestaurantSearchBar({ restaurants }: RestaurantSearchBarProps) {
               </div>
               <div className="space-y-4">
                 {filteredRestaurants.map((r) => {
-                  const transformed = transformRestaurant(r);
                   const city = extractCity(r.address);
                   return (
                     <Link
