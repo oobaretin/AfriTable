@@ -7,6 +7,7 @@ import { format, isAfter, isBefore, parseISO } from "date-fns";
 import { formatTime12h } from "@/lib/utils/time-format";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
+import { PhotoUploadDialog } from "./PhotoUploadDialog";
 // Note: loadRestaurantsFromJSON is server-side only, so we'll fetch favorites from API
 
 type ReservationRow = {
@@ -231,9 +232,22 @@ export function DinerDashboard() {
                         <h4 className="font-bold text-slate-900">{restaurant?.name || "Restaurant"}</h4>
                         <p className="text-xs text-slate-500 italic">Successfully visited in {visitDate}</p>
                       </div>
-                      <Button asChild variant="ghost" size="sm" className="text-xs font-black text-brand-bronze uppercase">
-                        <Link href={`/reviews/new/${r.id}`}>Rate</Link>
-                      </Button>
+                      <div className="flex gap-2">
+                        {restaurant && (
+                          <PhotoUploadDialog
+                            reservationId={r.id}
+                            restaurantName={restaurant.name}
+                            restaurantSlug={restaurant.slug}
+                            onUploadComplete={() => {
+                              // Refresh data if needed
+                              reservationsQuery.refetch();
+                            }}
+                          />
+                        )}
+                        <Button asChild variant="ghost" size="sm" className="text-xs font-black text-brand-bronze uppercase">
+                          <Link href={`/reviews/new/${r.id}`}>Rate</Link>
+                        </Button>
+                      </div>
                     </div>
                   );
                 })}

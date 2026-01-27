@@ -2,10 +2,10 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { Resend } from "resend";
 import { rateLimitOrPass } from "@/lib/security/rateLimit";
-import { getWelcomeEmailHTML } from "@/lib/emails/welcome-email";
 
 const schema = z.object({
   email: z.string().email(),
+  city: z.string().min(1).max(100),
   source: z.string().max(80).optional(),
 });
 
@@ -17,7 +17,7 @@ function requireEnv(name: string): string {
 
 export async function POST(request: Request) {
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-  const rl = await rateLimitOrPass(`newsletter:${ip}`);
+  const rl = await rateLimitOrPass(`city-notify:${ip}`);
   if (!rl.ok) {
     return NextResponse.json(
       { error: "rate_limited", message: rl.message },
@@ -27,14 +27,21 @@ export async function POST(request: Request) {
 
   const json = await request.json().catch(() => null);
   const parsed = schema.safeParse(json);
-  if (!parsed.success) return NextResponse.json({ error: "invalid_payload" }, { status: 400 });
+  if (!parsed.success) {
+    return NextResponse.json({ error: "invalid_payload", message: "Please check your email and city selection." }, { status: 400 });
+  }
 
   const resend = new Resend(requireEnv("RESEND_API_KEY"));
   const audienceId = requireEnv("RESEND_AUDIENCE_ID");
 
-  // Add contact to audience. If it already exists, update it (idempotent).
+  // Add contact to audience with city preference
   const email = parsed.data.email;
-  const properties = parsed.data.source ? { source: parsed.data.source } : undefined;
+  const city = parsed.data.city;
+  const properties = {
+    ...(parsed.data.source ? { source: parsed.data.source } : {}),
+    city: city,
+    notify_city: "true", // Tag to identify city notification subscribers
+  };
 
   const created = await resend.contacts.create({ email, audienceId, properties });
   if ((created as any)?.error) {
@@ -51,40 +58,16 @@ export async function POST(request: Request) {
       );
     }
 
-    // Ensure the contact is present/up-to-date in the audience.
+    // Update existing contact with city preference
     const updated = await resend.contacts.update({ email, audienceId, properties });
     if ((updated as any)?.error) {
       const uerr = (updated as any).error as { message?: string } | undefined;
       return NextResponse.json(
-        { error: "subscribe_failed", message: uerr?.message || "Could not subscribe." },
+        { error: "subscribe_failed", message: uerr?.message || "Could not update subscription." },
         { status: 400 }
       );
     }
   }
 
-  // Send welcome email (best-effort)
-  const from = process.env.RESEND_FROM_EMAIL;
-  if (from) {
-    try {
-      const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
-      const html = getWelcomeEmailHTML({
-        logoUrl: `${appUrl}/logo.png`,
-        restaurantsUrl: `${appUrl}/restaurants`,
-        appUrl,
-        unsubscribeUrl: `${appUrl}/unsubscribe?email=${encodeURIComponent(email)}`,
-      });
-
-      await resend.emails.send({
-        from,
-        to: email,
-        subject: "Welcome to AfriTable",
-        html,
-      });
-    } catch (error) {
-      // best-effort: log but don't fail the request
-      console.error("Failed to send welcome email:", error);
-    }
-  }
-
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, message: `You'll be notified when we launch in ${city}!` });
 }

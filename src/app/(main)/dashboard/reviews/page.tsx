@@ -1,12 +1,13 @@
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
-import { RestaurantOwnerDashboard } from "@/components/dashboard/RestaurantOwnerDashboard";
+import { ReviewStudio } from "@/components/dashboard/ReviewStudio";
+import { RestaurantOwnerDashboardLayout } from "@/components/dashboard/RestaurantOwnerDashboardLayout";
 
-export default async function DashboardPage() {
+export default async function ReviewsPage() {
   const supabase = createSupabaseServerClient();
   const { data: authData } = await supabase.auth.getUser();
   const user = authData.user;
-  if (!user) redirect("/login?redirectTo=/dashboard");
+  if (!user) redirect("/login?redirectTo=/dashboard/reviews");
 
   const { data: profile } = await supabase.from("profiles").select("role").eq("id", user.id).maybeSingle();
   if (profile?.role !== "restaurant_owner") redirect("/");
@@ -19,6 +20,9 @@ export default async function DashboardPage() {
     .limit(1)
     .maybeSingle();
 
-  // Use the new modernized dashboard
-  return <RestaurantOwnerDashboard restaurantName={restaurant?.name ?? "Your restaurant"} />;
+  return (
+    <RestaurantOwnerDashboardLayout restaurantName={restaurant?.name ?? "Your restaurant"} activeTab="reviews">
+      <ReviewStudio />
+    </RestaurantOwnerDashboardLayout>
+  );
 }

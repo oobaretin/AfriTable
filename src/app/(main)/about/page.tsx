@@ -1,3 +1,5 @@
+import { ContactAndMap } from "@/components/home/ContactAndMap";
+
 export default function AboutPage() {
   return (
     <div className="bg-white">
@@ -145,6 +147,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Cities of Flavor Section */}
+      <ContactAndMap />
     </div>
   );
 }

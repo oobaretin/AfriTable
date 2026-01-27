@@ -17,6 +17,8 @@ import { TypewriterText } from "@/components/home/TypewriterText";
 import { LocalPulse } from "@/components/home/LocalPulse";
 import { StickySearch } from "@/components/home/StickySearch";
 import { HeritageSection } from "@/components/home/HeritageSection";
+import { CommunityFeed } from "@/components/home/CommunityFeed";
+import { SuccessStory } from "@/components/home/SuccessStory";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
@@ -483,6 +485,12 @@ export default async function MainHomePage() {
       <Reveal>
         <HeritageSection />
       </Reveal>
+
+      {/* Community Feed */}
+      <CommunityFeed />
+
+      {/* Success Story */}
+      <SuccessStory />
 
       {/* Restaurant Owner CTA */}
       <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">

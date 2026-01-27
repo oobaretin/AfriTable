@@ -9,6 +9,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PhotoGallery } from "@/components/restaurant/PhotoGallery";
+import { ImmersiveGallery } from "@/components/restaurant/ImmersiveGallery";
+import { ChefsRecommendation } from "@/components/restaurant/ChefsRecommendation";
 import { FavoriteButton } from "@/components/restaurant/FavoriteButton";
 import { ShareButton } from "@/components/restaurant/ShareButton";
 import { ReservationWidget } from "@/components/reservation/ReservationWidget";
@@ -418,13 +420,13 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
   }
 
   return (
-    <main className="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-14">
+    <main className="bg-white min-h-screen">
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: jsonLdString }}
       />
-      <div className="mb-4 flex flex-wrap items-center gap-2 text-sm">
+      <div className="mb-4 flex flex-wrap items-center gap-2 text-sm px-4 sm:px-6 pt-10">
         <Link href="/" className="text-muted-foreground hover:text-foreground">
           Home
         </Link>
@@ -436,46 +438,47 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
         <span className="font-medium">{restaurant.name}</span>
       </div>
 
+      {/* Immersive Image Gallery - Full Width */}
+      <div className="-mx-4 sm:-mx-6 mb-12">
+        <ImmersiveGallery images={restaurant.images || []} restaurantName={restaurant.name} />
+      </div>
+
       {/* Main Layout - Single Grid for Proper Alignment */}
-      <div className="grid gap-8 lg:grid-cols-12 lg:items-start w-full">
-        {/* Left Column - All Content */}
-        <div className="lg:col-span-8 w-full">
-          {/* Photo Gallery */}
-          <PhotoGallery name={restaurant.name} images={restaurant.images} />
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-3 gap-16 pb-12">
+        {/* Left Column - Info & Story */}
+        <div className="lg:col-span-2">
           {/* Restaurant Header */}
-          <div className="mt-6 flex flex-col gap-3 md:flex-row md:items-start md:justify-between w-full">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">{restaurant.name}</h1>
-              <div className="flex flex-wrap items-center gap-2">
-                <Badge variant="secondary">{priceLabel(restaurant.price_range)}</Badge>
-                {restaurant.cuisine_types?.slice(0, 6).map((c) => (
-                  <Badge key={c} variant="outline">
-                    {c}
-                  </Badge>
-                ))}
-              </div>
-              <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-                <span>{addrStr || "United States"}</span>
-                <span>•</span>
-                <span>
-                  {avg != null ? (
-                    <>
-                      <span className="font-medium text-foreground">{avg.toFixed(1)}★</span>{" "}
-                      <span>({restaurant.review_count} reviews)</span>
-                    </>
-                  ) : (
-                    <span>New on AfriTable</span>
-                  )}
-                </span>
+          <div className="flex justify-between items-start mb-6">
+            <div>
+              <h1 className="text-5xl font-black text-brand-dark tracking-tighter uppercase mb-2">
+                {restaurant.name}
+              </h1>
+              <div className="flex items-center gap-4 text-sm font-bold text-brand-bronze">
+                <span>{restaurant.cuisine_types?.[0] || "African"}</span>
+                <span className="h-1 w-1 rounded-full bg-slate-300"></span>
+                <span>{priceLabel(restaurant.price_range)}</span>
+                {(restaurant as any).region && (
+                  <>
+                    <span className="h-1 w-1 rounded-full bg-slate-300"></span>
+                    <span>{(restaurant as any).region}</span>
+                  </>
+                )}
               </div>
             </div>
-
-            <div className="flex flex-wrap gap-2">
-              <FavoriteButton restaurantId={restaurant.id} />
-              <ShareButton title={restaurant.name} />
-            </div>
+            <FavoriteButton restaurantId={restaurant.id} />
           </div>
+
+          <p className="text-xl text-slate-600 leading-relaxed mb-12">
+            {about || `Experience the vibrant pulse of ${restaurant.address?.city || "our city"}'s dining scene. This space combines ancestral techniques with modern flair.`}
+          </p>
+
+          {/* Chef's Recommendation Section */}
+          <ChefsRecommendation
+            cuisine={restaurant.cuisine_types?.[0] || "African"}
+            restaurantName={restaurant.name}
+            dishName={(restaurant.menu as any)?.highlights?.[0]}
+            dishImage={restaurant.images?.[0]}
+          />
 
           {/* Quick Info Bar - Sticky with Connect Buttons */}
           <div className="mt-6 rounded-xl border bg-background/95 p-3 sm:p-4 backdrop-blur-sm lg:sticky lg:top-4 lg:z-30 lg:self-start lg:h-fit shadow-sm overflow-visible">
@@ -552,16 +555,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
           </div>
 
           {/* Content Sections */}
-          <div className="mt-8 grid gap-10 w-full">
-            {/* About - Always visible */}
-            <section className="w-full">
-              <h2 className="text-xl font-semibold tracking-tight mb-4">About</h2>
-              <div className="prose prose-sm max-w-none text-muted-foreground">
-                <p className="text-base leading-relaxed whitespace-pre-line">{about}</p>
-              </div>
-            </section>
-
-            <Separator />
+          <div className="mt-12 grid gap-10 w-full">
 
             {/* Our Story - Always visible */}
             <section className="w-full">
@@ -793,9 +787,16 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
           </div>
         </div>
 
-        {/* Right Column - Reservation Widget (Sticky on desktop, normal flow on mobile) */}
-        <div className="lg:col-span-4 lg:pl-8 w-full lg:sticky lg:top-4 lg:z-40 lg:self-start lg:h-fit">
-          <ReservationWidget restaurantId={restaurant.id} restaurantSlug={restaurant.slug} restaurantName={restaurant.name} />
+        {/* Right Column - Reservation Sidebar */}
+        <div className="lg:col-span-1 relative">
+          <div className="sticky top-8">
+            {/* Gradient Border Wrapper */}
+            <div className="p-1 bg-gradient-to-tr from-brand-bronze via-brand-ochre to-brand-forest rounded-[2.2rem]">
+              <div className="bg-white rounded-[2rem] p-2">
+                <ReservationWidget restaurantId={restaurant.id} restaurantSlug={restaurant.slug} restaurantName={restaurant.name} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
