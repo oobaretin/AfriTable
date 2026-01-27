@@ -338,6 +338,11 @@ export default async function MainHomePage() {
               Senegalese: { emoji: "🥘", description: "Savor Thieboudienne" },
               Somali: { emoji: "🍖", description: "Experience Bariis & Hilib" },
               Eritrean: { emoji: "🍛", description: "Try Zigni & Injera" },
+              "South African": { emoji: "🍖", description: "Taste Bobotie & Sosaties" },
+              Kenyan: { emoji: "🍛", description: "Enjoy Nyama Choma & Ugali" },
+              Trinidadian: { emoji: "🍛", description: "Try Doubles & Roti" },
+              "Other African": { emoji: "🌍", description: "Explore African Flavors" },
+              "Other Caribbean": { emoji: "🏝️", description: "Discover Island Cuisine" },
             };
             
             const info = cuisineInfo[c.label] || { emoji: "🍴", description: "Explore restaurants" };
