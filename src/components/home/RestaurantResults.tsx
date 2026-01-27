@@ -64,11 +64,8 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
   }, [restaurants]);
 
   const handleSeeAll = () => {
-    // Scroll to the restaurants section
-    const restaurantsSection = document.getElementById("restaurants-section");
-    if (restaurantsSection) {
-      restaurantsSection.scrollIntoView({ behavior: "smooth" });
-    }
+    // Navigate to restaurants page
+    window.location.href = "/restaurants";
   };
 
   if (displayedRestaurants.length === 0) {
