@@ -27,12 +27,40 @@ function isFeatured(restaurant: JSONRestaurant): boolean {
 }
 
 export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
-  // Get featured restaurants first, then others, limit to 4-6 for the gallery
+  // Prioritize restaurants from key cities: NYC, Houston, Atlanta, DC
+  // Mix of featured and non-featured to showcase variety
   const displayedRestaurants = React.useMemo(() => {
-    const featured = restaurants.filter(isFeatured);
-    const others = restaurants.filter((r) => !isFeatured(r));
-    // Prioritize featured restaurants, then add others up to 6 total
-    const combined = [...featured.slice(0, 2), ...others.slice(0, 4)];
+    const keyCities = ["new york city", "houston", "atlanta", "washington d.c."];
+    
+    // Helper to check if restaurant is from a key city
+    const isFromKeyCity = (r: JSONRestaurant): boolean => {
+      const city = extractCityFromAddress(r.address).toLowerCase();
+      return keyCities.some((keyCity) => city.includes(keyCity));
+    };
+    
+    // Separate restaurants by featured status and city priority
+    const featuredFromKeyCities = restaurants.filter(
+      (r) => isFeatured(r) && isFromKeyCity(r)
+    );
+    const othersFromKeyCities = restaurants.filter(
+      (r) => !isFeatured(r) && isFromKeyCity(r)
+    );
+    const featuredOthers = restaurants.filter(
+      (r) => isFeatured(r) && !isFromKeyCity(r)
+    );
+    const others = restaurants.filter(
+      (r) => !isFeatured(r) && !isFromKeyCity(r)
+    );
+    
+    // Prioritize: featured from key cities, then others from key cities, then other featured, then others
+    // Aim for 6 total with good representation
+    const combined = [
+      ...featuredFromKeyCities.slice(0, 4), // Up to 4 featured from key cities
+      ...othersFromKeyCities.slice(0, 2), // Up to 2 non-featured from key cities
+      ...featuredOthers.slice(0, 1), // 1 other featured if space
+      ...others.slice(0, 1), // 1 other if space
+    ];
+    
     return combined.slice(0, 6);
   }, [restaurants]);
 
