@@ -15,6 +15,7 @@ import { ReservationWidget } from "@/components/reservation/ReservationWidget";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { generateDefaultContent } from "@/lib/restaurant-content-helpers";
 import { formatTimeRange12h } from "@/lib/utils/time-format";
+import { getRestaurantByIdFromJSON, transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 
 type RestaurantDetail = {
   id: string;
@@ -175,6 +176,14 @@ function todayHours(operatingHours: any, date = new Date()) {
 }
 
 async function getRestaurantBySlug(slug: string): Promise<RestaurantDetail | null> {
+  // First, try to load from restaurants.json by id (since id is used as slug)
+  const jsonRestaurant = getRestaurantByIdFromJSON(slug);
+  if (jsonRestaurant) {
+    console.log(`[RestaurantPage] ✅ Found restaurant in JSON: "${jsonRestaurant.name}" (id: ${slug})`);
+    return transformJSONRestaurantToDetail(jsonRestaurant) as RestaurantDetail;
+  }
+
+  // Fallback to Supabase
   const supabase = createSupabasePublicClient();
   // Next.js params are already decoded, use slug as-is
   const { data, error } = await supabase
