@@ -26,6 +26,7 @@
     "diagnose": "node scripts/full-diagnostic.mjs",
     "compare:view": "node scripts/compare-view-vs-table.mjs",
     "check:addresses": "node scripts/check-address-data.mjs",
+    "fix:address-state": "node scripts/fix-address-state.mjs",
     "test:api": "node scripts/test-api-query.mjs",
     "build": "next build",
     "start": "next start",
