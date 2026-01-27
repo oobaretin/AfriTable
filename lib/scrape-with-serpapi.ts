@@ -6,7 +6,7 @@ import * as path from "path";
 // Load environment variables from .env.local
 config({ path: path.join(process.cwd(), ".env.local") });
 
-async function scrapeGoogleMaps(query: string, _location: string = "Houston, TX", coordinates?: string) {
+async function scrapeGoogleMaps(query: string, coordinates?: string) {
   try {
     const apiKey = process.env.SERPAPI_KEY;
     if (!apiKey) {
@@ -73,7 +73,7 @@ async function scrapeAllAfricanCaribbeanRestaurants(location: string = "Houston,
 
   for (const query of queries) {
     console.log(`Searching: ${query}...`);
-    const results = await scrapeGoogleMaps(query, location, coordinates);
+    const results = await scrapeGoogleMaps(query, coordinates);
 
     console.log(`  Found: ${results.length} results`);
     allRestaurants = allRestaurants.concat(results);
