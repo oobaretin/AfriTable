@@ -683,54 +683,12 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
             <Separator />
 
             {/* Reviews */}
-            <section className="w-full">
-              <div className="flex items-end justify-between gap-4">
-                <div>
-                  <h2 className="text-xl font-semibold tracking-tight">Reviews &amp; Ratings</h2>
-                  <p className="mt-2 text-muted-foreground">What diners are saying.</p>
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {avg != null ? (
-                    <>
-                      <span className="font-medium text-foreground">{avg.toFixed(1)}★</span> •{" "}
-                      <span>{restaurant.review_count} reviews</span>
-                    </>
-                  ) : (
-                    "No reviews yet"
-                  )}
-                </div>
-              </div>
-
-              {/* Review Breakdown */}
-              <ReviewBreakdown
-                rating={avg}
-                totalReviews={restaurant.review_count}
-                histogram={histogram}
-              />
-
-              <div>
-                  {reviews.length ? (
-                    reviews.slice(0, 8).map((r: any) => (
-                      <ReviewItem
-                        key={r.id}
-                        name="Verified Diner"
-                        date={r.created_at}
-                        comment={r.review_text}
-                        rating={Number(r.overall_rating) || 0}
-                        restaurantResponse={r.restaurant_response}
-                      />
-                    ))
-                  ) : (
-                    <Card>
-                      <CardHeader>
-                        <CardTitle className="text-base">Be the first to review</CardTitle>
-                        <CardDescription>After dining, leave a rating and help others discover this spot.</CardDescription>
-                      </CardHeader>
-                    </Card>
-                  )}
-                </div>
-              </div>
-            </section>
+            <ReviewsSection
+              rating={avg}
+              totalReviews={restaurant.review_count}
+              histogram={histogram}
+              reviews={reviews}
+            />
 
             <Separator />
 
