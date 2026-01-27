@@ -65,7 +65,7 @@ export async function POST(request: Request) {
   // For now, we'll use a simple approach: store in a JSON column or create stamps table
   // Let's check if stamps table exists, otherwise we'll use reviews table with a flag
   const { data: stamp, error: insertError } = await supabaseAdmin
-    .from("stamps")
+    .from("stamps" as any)
     .insert({
       user_id: user.id,
       reservation_id: reservationId,

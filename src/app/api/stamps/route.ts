@@ -8,7 +8,7 @@ export async function GET(request: Request) {
 
   // Fetch recent stamps with restaurant and user info
   const { data: stamps, error } = await supabase
-    .from("stamps")
+    .from("stamps" as any)
     .select(
       `
       id,
