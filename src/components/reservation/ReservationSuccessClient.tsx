@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { format, parseISO } from "date-fns";
@@ -19,21 +19,8 @@ type Restaurant = {
   address?: unknown;
 };
 
-function extractCity(address: unknown): string {
-  if (!address) return "";
-  if (typeof address === "string") {
-    const parts = address.split(",");
-    return parts.length > 0 ? parts[parts.length - 2]?.trim() || "" : "";
-  }
-  if (typeof address === "object" && address !== null) {
-    return (address as any).city || "";
-  }
-  return "";
-}
-
 export function ReservationSuccessClient() {
   const searchParams = useSearchParams();
-  const router = useRouter();
   const restaurantSlug = searchParams.get("restaurant");
   const reservationDate = searchParams.get("date");
   const reservationTime = searchParams.get("time");
