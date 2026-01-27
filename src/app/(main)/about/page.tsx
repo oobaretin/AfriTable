@@ -82,6 +82,69 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Meet the Team Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-slate-900 mb-4">Meet the Team</h2>
+            <div className="h-1 w-20 bg-orange-600 mx-auto"></div>
+            <p className="mt-4 text-lg text-slate-600">
+              The passionate people building AfriTable
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Founder */}
+            <div className="text-center">
+              <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg">
+                <img 
+                  src="/api/placeholder/200/200" 
+                  alt="Founder" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Founder</h3>
+              <p className="text-sm text-slate-500 mb-4">Leadership & Vision</p>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Building the platform that connects the diaspora with authentic culinary experiences.
+              </p>
+            </div>
+
+            {/* Head of Growth */}
+            <div className="text-center">
+              <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg">
+                <img 
+                  src="/api/placeholder/200/200" 
+                  alt="Head of Growth" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Head of Growth</h3>
+              <p className="text-sm text-slate-500 mb-4">Marketing & Expansion</p>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Growing our community of restaurants and diners across cities.
+              </p>
+            </div>
+
+            {/* Community Lead */}
+            <div className="text-center">
+              <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg">
+                <img 
+                  src="/api/placeholder/200/200" 
+                  alt="Community Lead" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Community Lead</h3>
+              <p className="text-sm text-slate-500 mb-4">Engagement & Support</p>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Fostering connections between restaurants and their communities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
