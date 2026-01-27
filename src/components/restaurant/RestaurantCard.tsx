@@ -24,19 +24,12 @@ export function RestaurantCard({
   onQuickReserve?: () => void;
   city?: string;
 }) {
-  const { openDrawer } = useBookingDrawer();
   const safeHref = href ?? `/restaurants/${encodeURIComponent(restaurant.slug)}`;
   const cuisines = Array.isArray(restaurant.cuisine_types) ? restaurant.cuisine_types : [];
   const price = "$".repeat(Math.max(1, Math.min(4, restaurant.price_range ?? 1)));
   const imgSrc = restaurant.images?.[0] || "/og-image.svg";
   const cityFromAddress = (restaurant.address as any)?.city as string | undefined;
   const cityLabel = city ?? cityFromAddress;
-
-  const handleFindTable = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    openDrawer(restaurant);
-  };
   
   // Extract city from address if it's a string
   let displayCity = cityLabel;

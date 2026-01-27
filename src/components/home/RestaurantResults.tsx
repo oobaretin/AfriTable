@@ -29,6 +29,8 @@ function isFeatured(restaurant: JSONRestaurant): boolean {
 }
 
 export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
+  const { openDrawer } = useBookingDrawer();
+
   // Show only 4 featured restaurants initially for minimalist feel
   const displayedRestaurants = React.useMemo(() => {
     // Get all featured restaurants
