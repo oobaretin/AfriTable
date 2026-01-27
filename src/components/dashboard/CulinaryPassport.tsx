@@ -8,6 +8,7 @@ import { format, parseISO, isAfter, isBefore } from "date-fns";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { InstagramStoryExport } from "./InstagramStoryExport";
 
 type Reservation = {
   id: string;
@@ -89,6 +90,17 @@ export function CulinaryPassport() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.message || "Failed to load reservations");
       return data as ReservationsResp;
+    },
+  });
+
+  // Fetch user profile for name
+  const { data: profileData } = useQuery<{ profile: { full_name: string | null } }>({
+    queryKey: ["userProfile"],
+    queryFn: async () => {
+      const res = await fetch("/api/user/profile");
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.message || "Failed to load profile");
+      return data;
     },
   });
 
@@ -213,6 +225,13 @@ export function CulinaryPassport() {
                   </span>
                 </div>
               )}
+              <div className="mt-4">
+                <InstagramStoryExport
+                  user={{ name: profileData?.profile?.full_name || "Diner" }}
+                  stamps={stamps}
+                  rank={rank}
+                />
+              </div>
             </div>
           </div>
         </div>
