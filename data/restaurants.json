@@ -540,6 +540,7 @@
     "price_range": "$$$",
     "rating": 4.8,
     "address": "Lincoln Center, New York City, NY",
+    "phone": "(212) 875-5222",
     "about": "The intersection of heritage and high-fashion dining.",
     "vibe_tags": ["Luxury Editorial"]
   },
@@ -562,8 +563,31 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "Harlem, New York City, NY",
+    "phone": "(212) 920-4101",
     "about": "A love letter to the flavors of the Sahel.",
     "vibe_tags": ["Cultural Sanctuary"]
+  },
+  {
+    "id": "nyc-ponty",
+    "name": "Ponty Café",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "New York City, NY",
+    "phone": "(212) 234-6474",
+    "about": "Authentic West African flavors in a welcoming café setting."
+  },
+  {
+    "id": "nyc-berber",
+    "name": "Berber Street Food",
+    "cuisine": "North African",
+    "region": "North African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "New York City, NY",
+    "phone": "(646) 476-2533",
+    "about": "Traditional North African street food with modern flair."
   },
   {
     "id": "hou-002",
