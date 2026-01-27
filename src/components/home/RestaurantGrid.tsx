@@ -98,18 +98,19 @@ export function RestaurantGrid({
   }, [filteredJSONRestaurants]);
 
   return (
-    <div className="w-full">
+    <div className="w-full min-h-screen">
       {/* Restaurant Grid - 3 columns with fade transition */}
       {transformedRestaurants.length > 0 ? (
         <div 
           key={activeCategory}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in duration-300"
         >
-          {transformedRestaurants.map((restaurant) => (
+          {transformedRestaurants.map((restaurant, index) => (
             <RestaurantCard
               key={restaurant.id}
               restaurant={restaurant}
               href={`/restaurants/${restaurant.slug}`}
+              index={index}
             />
           ))}
         </div>

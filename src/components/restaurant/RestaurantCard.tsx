@@ -19,11 +19,13 @@ export function RestaurantCard({
   href,
   onQuickReserve,
   city,
+  index = 0,
 }: {
   restaurant: RestaurantRow;
   href?: string;
   onQuickReserve?: () => void;
   city?: string;
+  index?: number;
 }) {
   const { openDrawer } = useBookingDrawer();
   const safeHref = href ?? `/restaurants/${encodeURIComponent(restaurant.slug)}`;
@@ -32,6 +34,12 @@ export function RestaurantCard({
   const imgSrc = restaurant.images?.[0] || "/og-image.svg";
   const cityFromAddress = (restaurant.address as any)?.city as string | undefined;
   const cityLabel = city ?? cityFromAddress;
+  
+  // Priority loading: first 6 images get priority, rest are lazy
+  const shouldPriorityLoad = index < 6;
+  
+  // Generate a simple blur placeholder (base64 encoded 1x1 transparent pixel with blur)
+  const blurDataURL = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
   
   // Extract city from address if it's a string
   let displayCity = cityLabel;
@@ -111,13 +119,17 @@ export function RestaurantCard({
     <div className="group cursor-pointer overflow-hidden rounded-xl bg-white transition-all hover:shadow-xl border border-slate-100">
       {/* Image Container */}
       <Link href={safeHref} className="block">
-        <div className="relative h-64 w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden aspect-[4/3] bg-slate-200">
           <Image
             src={imgSrc}
             alt={restaurant.name}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, 33vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={shouldPriorityLoad}
+            loading={shouldPriorityLoad ? undefined : "lazy"}
+            placeholder="blur"
+            blurDataURL={blurDataURL}
           />
           <div className="absolute top-4 right-4 flex items-center gap-2">
             <div className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm">
