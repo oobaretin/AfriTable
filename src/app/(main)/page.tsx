@@ -327,21 +327,34 @@ export default async function MainHomePage() {
         </Reveal>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {CUISINES.map((c) => (
-            <Reveal key={c.label}>
-              <Link href={c.href} className="block">
-                <Card className="group overflow-hidden">
-                  <div className="relative h-28 bg-gradient-to-br from-[oklch(0.94_0.05_80)] via-[oklch(0.98_0_0)] to-[oklch(0.92_0.05_145)]">
-                    <div className="absolute inset-0 opacity-40 transition-opacity group-hover:opacity-60 [background:radial-gradient(circle_at_20%_30%,oklch(0.78_0.18_55),transparent_55%),radial-gradient(circle_at_80%_40%,oklch(0.35_0.06_145),transparent_55%)]" />
+          {CUISINES.map((c) => {
+            // Map cuisines to emojis and descriptions
+            const cuisineInfo: Record<string, { emoji: string; description: string }> = {
+              Nigerian: { emoji: "🥘", description: "Explore Jollof & Pounded Yam" },
+              Ethiopian: { emoji: "🍛", description: "Discover Injera & Wat" },
+              Jamaican: { emoji: "🍗", description: "Taste Jerk & Curry Goat" },
+              Haitian: { emoji: "🍲", description: "Try Griot & Soup Joumou" },
+              Ghanaian: { emoji: "🍽️", description: "Enjoy Banku & Fufu" },
+              Senegalese: { emoji: "🥘", description: "Savor Thieboudienne" },
+              Somali: { emoji: "🍖", description: "Experience Bariis & Hilib" },
+              Eritrean: { emoji: "🍛", description: "Try Zigni & Injera" },
+            };
+            
+            const info = cuisineInfo[c.label] || { emoji: "🍴", description: "Explore restaurants" };
+            
+            return (
+              <Reveal key={c.label}>
+                <Link href={c.href} className="block">
+                  <div className="group relative overflow-hidden rounded-2xl bg-orange-600 p-8 text-white transition-all hover:scale-[1.02]">
+                    <div className="absolute -right-4 -bottom-4 opacity-20 text-6xl rotate-12">{info.emoji}</div>
+                    <h3 className="text-2xl font-black">{c.label}</h3>
+                    <p className="text-orange-100 mb-4">{info.description}</p>
+                    <span className="text-sm font-bold border-b-2 border-white pb-1">Explore →</span>
                   </div>
-                  <CardHeader className="py-4">
-                    <CardTitle className="text-base">{c.label}</CardTitle>
-                    <CardDescription>Explore restaurants</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-            </Reveal>
-          ))}
+                </Link>
+              </Reveal>
+            );
+          })}
         </div>
       </Section>
 
