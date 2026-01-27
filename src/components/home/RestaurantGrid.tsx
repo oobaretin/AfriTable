@@ -12,20 +12,21 @@ type RestaurantGridProps = {
 export function RestaurantGrid({ restaurants: jsonRestaurants }: RestaurantGridProps) {
   const [activeCategory, setActiveCategory] = React.useState<string>("All");
 
-  // Transform JSON restaurants to RestaurantCard format
-  const restaurants = React.useMemo(() => {
-    return jsonRestaurants.map((r) => transformJSONRestaurantToDetail(r));
-  }, [jsonRestaurants]);
-
-  // Filter restaurants by selected category
-  const filteredRestaurants = React.useMemo(() => {
+  // Filter restaurants by cuisine field from JSON before transforming
+  const filteredJSONRestaurants = React.useMemo(() => {
     if (activeCategory === "All") {
-      return restaurants;
+      return jsonRestaurants;
     }
-    return restaurants.filter((r) =>
-      (r.cuisine_types || []).some((c: string) => c.toLowerCase() === activeCategory.toLowerCase())
-    );
-  }, [restaurants, activeCategory]);
+    return jsonRestaurants.filter((r) => {
+      const cuisine = r.cuisine?.toLowerCase() || "";
+      return cuisine === activeCategory.toLowerCase();
+    });
+  }, [jsonRestaurants, activeCategory]);
+
+  // Transform filtered JSON restaurants to RestaurantCard format
+  const restaurants = React.useMemo(() => {
+    return filteredJSONRestaurants.map((r) => transformJSONRestaurantToDetail(r));
+  }, [filteredJSONRestaurants]);
 
   return (
     <div className="w-full">
