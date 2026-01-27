@@ -65,17 +65,29 @@ export async function GET(request: Request) {
     });
   }
 
+  // First, get all active restaurants without ordering to ensure we get everything
   const { data, error } = await supabase
     .from("restaurants_with_rating")
     .select("id,slug,name,cuisine_types,price_range,address,images,avg_rating,review_count,is_active,created_at")
     .eq("is_active", true)
-    .order("avg_rating", { ascending: false, nullsFirst: false })
-    .order("created_at", { ascending: false })
-    .limit(300);
+    .limit(500); // Increased limit to be safe
 
   if (error) return NextResponse.json({ error: "query_failed", message: error.message }, { status: 500 });
 
   let rows = (data ?? []).filter((r: any) => r.is_active);
+  
+  // Apply default sorting in memory (more reliable than database ordering with nulls)
+  if (sort === "recommended" || !sort) {
+    // Recommended: highest rating first, then newest
+    rows.sort((a: any, b: any) => {
+      const ratingA = a.avg_rating ?? 0;
+      const ratingB = b.avg_rating ?? 0;
+      if (Math.abs(ratingA - ratingB) > 0.1) {
+        return ratingB - ratingA;
+      }
+      return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+    });
+  }
 
   if (cuisines.length) {
     const set = new Set(cuisines.map((c) => decodeURIComponent(c).toLowerCase()));
@@ -97,10 +109,16 @@ export async function GET(request: Request) {
     });
   }
 
-  if (sort === "rating") rows = rows.sort((a: any, b: any) => (b.avg_rating ?? 0) - (a.avg_rating ?? 0));
-  if (sort === "new") rows = rows.sort((a: any, b: any) => String(b.created_at).localeCompare(String(a.created_at)));
-  if (sort === "price_asc") rows = rows.sort((a: any, b: any) => a.price_range - b.price_range);
-  if (sort === "price_desc") rows = rows.sort((a: any, b: any) => b.price_range - a.price_range);
+  // Apply sorting (only if not already sorted by recommended)
+  if (sort === "rating") {
+    rows.sort((a: any, b: any) => (b.avg_rating ?? 0) - (a.avg_rating ?? 0));
+  } else if (sort === "new") {
+    rows.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+  } else if (sort === "price_asc") {
+    rows.sort((a: any, b: any) => a.price_range - b.price_range);
+  } else if (sort === "price_desc") {
+    rows.sort((a: any, b: any) => b.price_range - a.price_range);
+  }
 
   const total = rows.length;
   const start = (page - 1) * limit;
