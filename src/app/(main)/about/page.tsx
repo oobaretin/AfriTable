@@ -1,5 +1,3 @@
-import { HeritageSection } from "@/components/home/HeritageSection";
-
 export default function AboutPage() {
   return (
     <div className="bg-white">
@@ -84,9 +82,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Heritage Section */}
-      <HeritageSection />
 
       {/* Meet the Team Section */}
       <section className="py-24 px-6">

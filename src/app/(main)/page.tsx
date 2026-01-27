@@ -16,6 +16,7 @@ import { RestaurantOwnerCTA } from "@/components/home/RestaurantOwnerCTA";
 import { TypewriterText } from "@/components/home/TypewriterText";
 import { LocalPulse } from "@/components/home/LocalPulse";
 import { StickySearch } from "@/components/home/StickySearch";
+import { HeritageSection } from "@/components/home/HeritageSection";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
@@ -477,6 +478,11 @@ export default async function MainHomePage() {
           )}
         </div>
       </section>
+
+      {/* Heritage Section */}
+      <Reveal>
+        <HeritageSection />
+      </Reveal>
 
       {/* Restaurant Owner CTA */}
       <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
