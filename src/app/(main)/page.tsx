@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { createSupabasePublicClient } from "@/lib/supabase/public";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -215,6 +216,24 @@ export default async function MainHomePage() {
 
       {/* Restaurant Results - Ultimate Dining Gallery */}
       <RestaurantResults restaurants={restaurantsFromJSON} />
+
+      {/* Sankofa Separator */}
+      <div className="relative py-8 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-white/10"></div>
+        </div>
+        <div className="relative bg-[#050A18] px-6">
+          <div className="relative h-8 w-8">
+            <Image
+              src="/logo.png"
+              alt="Sankofa"
+              fill
+              className="object-contain opacity-60"
+              style={{ filter: "brightness(0) saturate(100%) invert(67%) sepia(95%) saturate(1352%) hue-rotate(5deg) brightness(102%) contrast(85%)" }}
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Restaurant Grid - Shows filtered results or all restaurants */}
       <div id="restaurants-section" className="py-16">
