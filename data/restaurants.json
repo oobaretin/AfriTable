@@ -20,8 +20,8 @@
     "menu_highlights": ["Ndole Soup", "Grilled Tilapia", "Eru"]
   },
   {
-    "id": "addis-abeba",
-    "name": "Addis Abeba Ethiopian Restaurant",
+    "id": "addis-ababa",
+    "name": "Addis Ababa Ethiopian Restaurant",
     "cuisine": "Ethiopian",
     "region": "East African",
     "price_range": "$$",
