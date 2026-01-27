@@ -252,12 +252,14 @@ export default async function MainHomePage() {
           
           <Reveal>
             {homeConfig?.hero ? (
-              <TypewriterText
-                words={homeConfig.hero.cuisines}
-                baseText={homeConfig.hero.baseText}
-                suffixText={homeConfig.hero.suffixText}
-                className="text-5xl md:text-7xl font-black mb-6 tracking-tighter"
-              />
+              <div className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
+                <TypewriterText
+                  words={homeConfig.hero.cuisines}
+                  baseText={homeConfig.hero.baseText}
+                  suffixText={homeConfig.hero.suffixText}
+                  className=""
+                />
+              </div>
             ) : (
               <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
                 Discover Authentic <span className="text-orange-500">African</span> & <span className="text-yellow-500">Caribbean</span> Dining

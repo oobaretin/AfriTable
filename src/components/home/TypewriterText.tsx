@@ -16,6 +16,8 @@ export function TypewriterText({ words, baseText, suffixText, className = "" }: 
   const [typingSpeed, setTypingSpeed] = React.useState(150);
 
   React.useEffect(() => {
+    if (words.length === 0) return;
+    
     const currentWord = words[currentWordIndex];
     
     const handleTyping = () => {
@@ -48,9 +50,9 @@ export function TypewriterText({ words, baseText, suffixText, className = "" }: 
   return (
     <h1 className={className}>
       {baseText}{" "}
-      <span className="text-orange-500 relative">
+      <span className="text-orange-500 relative inline-block min-w-[200px]">
         {displayText}
-        <span className="animate-pulse">|</span>
+        <span className="animate-pulse ml-1">|</span>
       </span>{" "}
       {suffixText}
     </h1>
