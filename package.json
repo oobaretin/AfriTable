@@ -27,6 +27,8 @@
     "compare:view": "node scripts/compare-view-vs-table.mjs",
     "check:addresses": "node scripts/check-address-data.mjs",
     "fix:address-state": "node scripts/fix-address-state.mjs",
+    "validate:restaurants": "node scripts/validate-restaurant-data.mjs",
+    "check:missing-addresses": "node scripts/check-missing-addresses.mjs",
     "test:api": "node scripts/test-api-query.mjs",
     "build": "next build",
     "start": "next start",
