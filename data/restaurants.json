@@ -621,6 +621,7 @@
     "price_range": "$$$",
     "rating": 4.8,
     "address": "West Midtown, Atlanta, GA",
+    "phone": "(404) 228-4897",
     "about": "A love letter to the coastal heritage of the Gullah people.",
     "vibe_tags": ["Soulful & Social"]
   },
@@ -643,8 +644,20 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "Briarcliff, Atlanta, GA",
+    "phone": "(404) 321-0510",
     "about": "Where traditional happiness meets contemporary design.",
     "vibe_tags": ["Sleek & Modern"]
+  },
+  {
+    "id": "atl-busy-bee",
+    "name": "Busy Bee Cafe",
+    "cuisine": "Soul Food / Southern",
+    "region": "Southern",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Atlanta, GA",
+    "phone": "(404) 525-9212",
+    "about": "A legendary Atlanta institution serving authentic soul food and Southern comfort classics."
   },
   {
     "id": "dc-002",
