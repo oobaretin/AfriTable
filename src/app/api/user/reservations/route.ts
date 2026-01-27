@@ -18,7 +18,7 @@ export async function GET() {
   const restaurantIds = Array.from(new Set((data ?? []).map((r: any) => r.restaurant_id)));
   const { data: restaurants } = await supabase
     .from("restaurants_with_rating")
-    .select("id,slug,name,address,phone,images,avg_rating,review_count")
+    .select("id,slug,name,address,phone,images,cuisine_types,avg_rating,review_count")
     .in("id", restaurantIds);
 
   const restaurantById = new Map((restaurants ?? []).map((r: any) => [r.id, r]));
