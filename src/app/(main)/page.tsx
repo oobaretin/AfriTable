@@ -111,7 +111,18 @@ async function getFeaturedRestaurants(): Promise<FeaturedRestaurant[]> {
   }
 }
 
-function loadRestaurantsFromJSON(): any[] {
+type JSONRestaurant = {
+  id: string;
+  name: string;
+  cuisine: string;
+  region: string;
+  price_range: string;
+  rating: number;
+  address: string;
+  images?: string[];
+};
+
+function loadRestaurantsFromJSON(): JSONRestaurant[] {
   try {
     const filePath = path.join(process.cwd(), "data", "restaurants.json");
     if (fs.existsSync(filePath)) {
@@ -124,8 +135,64 @@ function loadRestaurantsFromJSON(): any[] {
   return [];
 }
 
+function getFeaturedRestaurantsFromJSON(): FeaturedRestaurant[] {
+  const jsonRestaurants = loadRestaurantsFromJSON();
+  
+  // Filter for restaurants with price_range "$$$"
+  const premiumRestaurants = jsonRestaurants.filter((r) => r.price_range === "$$$");
+  
+  // Transform JSON format to FeaturedRestaurant format
+  return premiumRestaurants.map((r) => {
+    // Convert price_range string to number: "$" = 1, "$$" = 2, "$$$" = 3, "$$$$" = 4
+    const priceRangeMap: Record<string, number> = {
+      $: 1,
+      $$: 2,
+      $$$: 3,
+      $$$$: 4,
+    };
+    
+    // Parse address string to extract city/state if needed
+    let addressObj: unknown = r.address;
+    if (typeof r.address === "string") {
+      const parts = r.address.split(",").map((s) => s.trim());
+      if (parts.length >= 2) {
+        const cityState = parts[1];
+        const cityMatch = cityState.match(/^([^,]+)/);
+        const stateMatch = cityState.match(/\b([A-Z]{2})\b/);
+        addressObj = {
+          street: parts[0],
+          city: cityMatch ? cityMatch[1].trim() : cityState,
+          state: stateMatch ? stateMatch[1] : null,
+          zip: parts.length > 2 ? parts[2] : null,
+        };
+      } else {
+        addressObj = { street: r.address };
+      }
+    }
+    
+    return {
+      id: r.id,
+      name: r.name,
+      slug: r.id, // Use id as slug
+      cuisine_types: [r.cuisine], // Convert single cuisine string to array
+      price_range: priceRangeMap[r.price_range] || 3,
+      address: addressObj,
+      images: r.images || [],
+      created_at: new Date().toISOString(), // Use current date as fallback
+      avg_rating: r.rating || null,
+      review_count: 0, // JSON doesn't have review count
+    };
+  });
+}
+
 export default async function MainHomePage() {
-  const featured = await getFeaturedRestaurants();
+  // Get featured restaurants from JSON (filtered for $$$ price range)
+  const featuredFromJSON = getFeaturedRestaurantsFromJSON();
+  
+  // Fallback to Supabase if no JSON restaurants found
+  const featuredFromDB = await getFeaturedRestaurants();
+  const featured = featuredFromJSON.length > 0 ? featuredFromJSON : featuredFromDB;
+  
   const restaurantsFromJSON = loadRestaurantsFromJSON();
 
   return (
