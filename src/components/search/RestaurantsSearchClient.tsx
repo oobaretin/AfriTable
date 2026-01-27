@@ -254,7 +254,7 @@ export function RestaurantsSearchClient() {
           ) : q.data?.items?.length ? (
             <div className={view === "grid" ? "grid gap-4 sm:grid-cols-2 lg:grid-cols-3" : "grid gap-4"}>
               {q.data.items.map((r) => (
-                <RestaurantCard key={r.id} restaurant={r} href={`/restaurants/${r.slug}`} />
+                <RestaurantCard key={r.id} restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
               ))}
             </div>
           ) : (
