@@ -66,36 +66,36 @@ export function HeroSearch() {
       </div>
 
       {/* 2. CATCHY WORDS (Top Row) */}
-      <div className="relative z-20 mb-6 flex gap-10 opacity-30 px-6 flex-wrap justify-center">
+      <div className="relative z-20 mb-8 flex gap-8 opacity-30 px-6 flex-wrap justify-center">
         {["REDEFINED", "AUTHENTIC", "ANCESTRAL"].map((word, i) => (
-          <span key={i} className="text-[10px] font-black text-white uppercase tracking-[0.5em]">
+          <span key={i} className="text-[9px] font-black text-white uppercase tracking-[0.4em]">
             {word}
           </span>
         ))}
       </div>
 
       {/* 3. THE "wonderful" LAYOUT */}
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto flex items-center justify-center gap-6 md:gap-14 px-6">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto flex items-center justify-center gap-6 md:gap-12 px-6">
         
         {/* LEFT: Typing Cuisine Name */}
-        <div className="h-[12vw] max-h-[180px] w-[38vw] max-w-[600px] flex items-center justify-end">
+        <div className="h-[10vw] max-h-[150px] w-[35vw] max-w-[500px] flex items-center justify-end">
           <h2 
             className="font-black text-[#C69C2B] leading-none tracking-tighter uppercase text-right"
-            style={{ fontSize: 'clamp(60px, 9vw, 140px)' }}
+            style={{ fontSize: 'clamp(48px, 7vw, 110px)' }}
           >
             {displayText}
-            <span className="animate-pulse border-r-4 border-[#C69C2B] ml-2 inline-block h-[0.8em]"></span>
+            <span className="animate-pulse border-r-3 border-[#C69C2B] ml-2 inline-block h-[0.8em]"></span>
           </h2>
         </div>
 
         {/* THE RED SPINE */}
-        <div className="w-3 md:w-5 h-[22vw] max-h-[300px] bg-[#A33B32] shadow-[0_0_50px_rgba(163,59,50,0.5)] rounded-full"></div>
+        <div className="w-3 md:w-4 h-[18vw] max-h-[250px] bg-[#A33B32] shadow-[0_0_50px_rgba(163,59,50,0.5)] rounded-full"></div>
 
         {/* RIGHT: Ultimate Dining */}
-        <div className="w-[38vw] max-w-[600px] text-left">
+        <div className="w-[35vw] max-w-[500px] text-left">
           <h1 
             className="font-black text-white leading-[0.85] tracking-tighter uppercase italic"
-            style={{ fontSize: 'clamp(60px, 9vw, 140px)' }}
+            style={{ fontSize: 'clamp(48px, 7vw, 110px)' }}
           >
             ULTIMATE <br/> DINING
           </h1>
