@@ -738,6 +738,28 @@
     "vibe_tags": ["Intimate & Prestigious"]
   },
   {
+    "id": "la-post-beam",
+    "name": "Post & Beam",
+    "cuisine": "Soul Food / Southern",
+    "region": "Southern",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Los Angeles, CA",
+    "phone": "(323) 299-5599",
+    "about": "Modern soul food in the heart of Los Angeles."
+  },
+  {
+    "id": "la-blaqhaus-noho",
+    "name": "BlaqHaus NoHo",
+    "cuisine": "Southern-Caribbean",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "North Hollywood, Los Angeles, CA",
+    "phone": "(818) 980-2527",
+    "about": "A fusion of Southern comfort and Caribbean heat in North Hollywood."
+  },
+  {
     "id": "mia-002",
     "name": "Dukunoo Jamaican Kitchen",
     "cuisine": "Jamaican",
