@@ -17,6 +17,8 @@ import { StickySearch } from "@/components/home/StickySearch";
 import { HeritageSection } from "@/components/home/HeritageSection";
 import { CommunityFeed } from "@/components/home/CommunityFeed";
 import { SuccessStory } from "@/components/home/SuccessStory";
+import * as fs from "node:fs";
+import * as path from "node:path";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 
 type FeaturedRestaurant = {
