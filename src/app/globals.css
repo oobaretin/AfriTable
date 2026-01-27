@@ -269,6 +269,16 @@
     animation-delay: 500ms;
   }
 
+  /* Vertical Marquee Animation for Hero */
+  @keyframes vertical-roll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-85.7%); } /* Adjust based on list length (6 items + duplicate = 7, so ~85.7%) */
+  }
+
+  .animate-vertical-roll {
+    animation: vertical-roll 12s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+  }
+
   /* Lightweight "prose" styles (we don't use @tailwindcss/typography in this repo). */
   .prose {
     color: color-mix(in oklab, var(--foreground) 88%, transparent);
