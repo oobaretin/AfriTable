@@ -1,10 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { HeroSearch } from "@/components/restaurant/HeroSearch";
 import { Reveal } from "@/components/layout/Reveal";
-import { Section } from "@/components/layout/Section";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
 import { RestaurantGrid } from "@/components/home/RestaurantGrid";
 import { RestaurantResults } from "@/components/home/RestaurantResults";
@@ -92,50 +90,6 @@ export default async function MainHomePage() {
       <Separator />
 
       {/* Browse by cuisine */}
-      <Section>
-        <Reveal>
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Browse by cuisine</h2>
-            <p className="mt-2 text-muted-foreground">From jollof to jerk, explore your favorites.</p>
-          </div>
-        </Reveal>
-
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {CUISINES.map((c) => {
-            // Map cuisines to emojis and descriptions
-            const cuisineInfo: Record<string, { emoji: string; description: string }> = {
-              Nigerian: { emoji: "🥘", description: "Explore Jollof & Pounded Yam" },
-              Ethiopian: { emoji: "🍛", description: "Discover Injera & Wat" },
-              Jamaican: { emoji: "🍗", description: "Taste Jerk & Curry Goat" },
-              Haitian: { emoji: "🍲", description: "Try Griot & Soup Joumou" },
-              Ghanaian: { emoji: "🍽️", description: "Enjoy Banku & Fufu" },
-              Senegalese: { emoji: "🥘", description: "Savor Thieboudienne" },
-              Somali: { emoji: "🍖", description: "Experience Bariis & Hilib" },
-              Eritrean: { emoji: "🍛", description: "Try Zigni & Injera" },
-              "South African": { emoji: "🍖", description: "Taste Bobotie & Sosaties" },
-              Kenyan: { emoji: "🍛", description: "Enjoy Nyama Choma & Ugali" },
-              Trinidadian: { emoji: "🍛", description: "Try Doubles & Roti" },
-              "Other African": { emoji: "🌍", description: "Explore African Flavors" },
-              "Other Caribbean": { emoji: "🏝️", description: "Discover Island Cuisine" },
-            };
-            
-            const info = cuisineInfo[c.label] || { emoji: "🍴", description: "Explore restaurants" };
-            
-            return (
-              <Reveal key={c.label}>
-                <Link href={c.href} className="block">
-                  <div className="group relative overflow-hidden rounded-2xl bg-orange-600 p-8 text-white transition-all hover:scale-[1.02]">
-                    <div className="absolute -right-4 -bottom-4 opacity-20 text-6xl rotate-12">{info.emoji}</div>
-                    <h3 className="text-2xl font-black">{c.label}</h3>
-                    <p className="text-orange-100 mb-4">{info.description}</p>
-                    <span className="text-sm font-bold border-b-2 border-white pb-1">Explore →</span>
-                  </div>
-                </Link>
-              </Reveal>
-            );
-          })}
-        </div>
-      </Section>
 
       {/* Trending cities */}
       <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-20">
