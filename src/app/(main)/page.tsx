@@ -9,6 +9,7 @@ import { Section } from "@/components/layout/Section";
 import { CuisineFilterClient } from "@/components/home/CuisineFilterClient";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
 import { RestaurantGrid } from "@/components/home/RestaurantGrid";
+import { RestaurantResults } from "@/components/home/RestaurantResults";
 import { RestaurantOwnerCTA } from "@/components/home/RestaurantOwnerCTA";
 import { LocalPulse } from "@/components/home/LocalPulse";
 import { StickySearch } from "@/components/home/StickySearch";
@@ -211,6 +212,9 @@ export default async function MainHomePage() {
       
       {/* Hero - Search-First Design */}
       <HeroSearch />
+
+      {/* Restaurant Results - Ultimate Dining Gallery */}
+      <RestaurantResults restaurants={restaurantsFromJSON} />
 
       {/* Restaurant Grid - Shows filtered results or all restaurants */}
       <div id="restaurants-section">
