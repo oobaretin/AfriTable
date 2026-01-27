@@ -110,6 +110,31 @@ export function BookingModal({ isOpen, onClose, restaurant }: BookingModalProps)
                     </p>
                   </div>
                 )}
+
+                {/* Secondary Location (if available) */}
+                {(restaurant as any).secondary_location && (
+                  <div className="w-full pt-4 border-t border-white/5 space-y-3">
+                    <p className="text-xs text-white/50 font-medium uppercase tracking-wider">
+                      Additional Location
+                    </p>
+                    <div className="text-sm text-white/70 leading-relaxed">
+                      {(restaurant as any).secondary_location.name && (
+                        <div className="font-semibold text-white/80 mb-1">
+                          {(restaurant as any).secondary_location.name}
+                        </div>
+                      )}
+                      <div className="mb-2">
+                        {(restaurant as any).secondary_location.address}
+                      </div>
+                      <a 
+                        href={`tel:${(restaurant as any).secondary_location.phone.replace(/\D/g, "")}`}
+                        className="text-lg font-light text-white tracking-wide hover:text-[#C69C2B] transition-colors underline underline-offset-2 decoration-[#C69C2B]/50 hover:decoration-[#C69C2B]"
+                      >
+                        {(restaurant as any).secondary_location.phone}
+                      </a>
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </div>

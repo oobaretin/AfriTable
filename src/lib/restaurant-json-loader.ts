@@ -22,6 +22,11 @@ export type JSONRestaurant = {
   menu_highlights?: string[];
   images?: string[];
   vibe_tags?: string[];
+  secondary_location?: {
+    name: string;
+    address: string;
+    phone: string;
+  };
 };
 
 // Transform JSON restaurant to RestaurantDetail format
@@ -170,6 +175,7 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
     review_count: 0,
     vibe_tags: jsonRestaurant.vibe_tags || null,
     region: jsonRestaurant.region || null, // Include region field for color mapping
+    secondary_location: jsonRestaurant.secondary_location || null,
   };
 }
 

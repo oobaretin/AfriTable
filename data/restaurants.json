@@ -1120,5 +1120,23 @@
     "address": "12005 Veterans Memorial Dr, Ste A, Houston, TX 77067",
     "phone": "(832) 446-3722",
     "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes."
+  },
+  {
+    "id": "hou-caribbean-hotpot-grill",
+    "name": "Caribbean Hotpot Grill",
+    "cuisine": "Jamaican / Caribbean",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "954 FM 1960 West, Houston, TX 77090",
+    "phone": "(281) 377-1961",
+    "website": "https://www.caribbeanhotpotgrill.com/",
+    "vibe_tags": ["Authentic", "Vibrant"],
+    "secondary_location": {
+      "name": "Veterans Memorial",
+      "address": "12005 Veterans Memorial Dr, Ste A, Houston, TX 77067",
+      "phone": "(832) 446-3722"
+    },
+    "about": "Authentic Caribbean cuisine with vibrant flavors and island vibes. Serving traditional Jamaican and Caribbean dishes in a lively, welcoming atmosphere."
   }
 ]
