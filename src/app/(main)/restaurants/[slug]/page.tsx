@@ -14,6 +14,7 @@ import { ShareButton } from "@/components/restaurant/ShareButton";
 import { ReservationWidget } from "@/components/reservation/ReservationWidget";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { generateDefaultContent } from "@/lib/restaurant-content-helpers";
+import { formatTimeRange12h } from "@/lib/utils/time-format";
 
 type RestaurantDetail = {
   id: string;
@@ -108,7 +109,7 @@ function todayHours(operatingHours: any, date = new Date()) {
   const close = String(rule.close_time ?? "");
   const now = format(date, "HH:mm");
   const openNow = open && close ? now >= open && now < close : false;
-  return { label: `${open}–${close}`, openNow, hasHours: true };
+  return { label: formatTimeRange12h(open, close), openNow, hasHours: true };
 }
 
 async function getRestaurantBySlug(slug: string): Promise<RestaurantDetail | null> {
@@ -770,7 +771,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
                             return (
                               <div key={day} className="flex justify-between">
                                 <span>{day}:</span>
-                                <span>{hour ? `${hour.open_time} - ${hour.close_time}` : "Closed"}</span>
+                                <span>{hour ? formatTimeRange12h(hour.open_time, hour.close_time, "-") : "Closed"}</span>
                               </div>
                             );
                           })}

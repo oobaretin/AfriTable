@@ -11,6 +11,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+import { formatTime12h } from "@/lib/utils/time-format";
 
 type Slot = {
   time: string;
@@ -25,16 +26,6 @@ type AvailabilityResponse = {
   eligibleTableCount: number;
   slots: Slot[];
 };
-
-function formatTime12h(hhmm: string) {
-  const [hhRaw, mmRaw] = hhmm.split(":");
-  const hh = Number(hhRaw);
-  const mm = Number(mmRaw);
-  if (!Number.isFinite(hh) || !Number.isFinite(mm)) return hhmm;
-  const period = hh >= 12 ? "PM" : "AM";
-  const hour12 = ((hh + 11) % 12) + 1;
-  return `${hour12}:${String(mm).padStart(2, "0")} ${period}`;
-}
 
 function slotClasses(status: Slot["status"], selected: boolean) {
   if (status === "unavailable") return cn("bg-muted text-muted-foreground opacity-60", selected && "ring-2 ring-ring");

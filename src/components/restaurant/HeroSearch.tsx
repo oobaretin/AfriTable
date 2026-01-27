@@ -10,6 +10,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { formatTime12h } from "@/lib/utils/time-format";
 
 const POPULAR_LOCATIONS = [
   "Houston, TX",
@@ -35,16 +36,6 @@ function times30m() {
 }
 
 const TIMES = times30m();
-
-function formatTime12h(hhmm: string) {
-  const [hhRaw, mmRaw] = hhmm.split(":");
-  const hh = Number(hhRaw);
-  const mm = Number(mmRaw);
-  if (!Number.isFinite(hh) || !Number.isFinite(mm)) return hhmm;
-  const period = hh >= 12 ? "PM" : "AM";
-  const hour12 = ((hh + 11) % 12) + 1;
-  return `${hour12}:${String(mm).padStart(2, "0")} ${period}`;
-}
 
 export function HeroSearch() {
   const router = useRouter();

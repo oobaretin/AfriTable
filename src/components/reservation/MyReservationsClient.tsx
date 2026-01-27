@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { format, isAfter, isBefore, parseISO } from "date-fns";
+import { formatTime12h } from "@/lib/utils/time-format";
 import { toast } from "sonner";
 import { useQuery } from "@tanstack/react-query";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -196,7 +197,7 @@ function ReservationCard({
           </CardTitle>
           <CardDescription className="flex flex-wrap gap-2">
             <Badge variant="secondary">{format(parseISO(r.reservation_date), "EEE, MMM d, yyyy")}</Badge>
-            <Badge variant="secondary">{time}</Badge>
+            <Badge variant="secondary">{formatTime12h(time)}</Badge>
             <Badge variant="secondary">Party {r.party_size}</Badge>
             <Badge variant="outline">Confirmation {confirmationCode(r.id)}</Badge>
             <Badge variant="outline">{r.status.replace("_", " ")}</Badge>
