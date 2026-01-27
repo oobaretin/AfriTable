@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
+import { NoResultsFound } from "./NoResultsFound";
 
 const CUISINES = [
   "Nigerian",
@@ -252,61 +253,48 @@ export function RestaurantsSearchClient() {
               ))}
             </div>
           ) : q.data?.items?.length ? (
-            <div className={view === "grid" ? "grid gap-4 sm:grid-cols-2 lg:grid-cols-3" : "grid gap-4"}>
-              {q.data.items.map((r) => (
-                <RestaurantCard key={r.id} restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
-              ))}
-            </div>
-          ) : (
-            <Card>
-              <CardHeader>
-                <CardTitle>No restaurants found</CardTitle>
-                <CardDescription>Try adjusting your filters or broaden your location.</CardDescription>
-              </CardHeader>
-              <CardContent>
+            <>
+              <div className={view === "grid" ? "grid gap-4 sm:grid-cols-2 lg:grid-cols-3" : "grid gap-4"}>
+                {q.data.items.map((r) => (
+                  <RestaurantCard key={r.id} restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
+                ))}
+              </div>
+              <div className="mt-6 flex items-center justify-center gap-2">
                 <Button
                   variant="outline"
-                  type="button"
+                  disabled={page <= 1}
                   onClick={() => {
-                    router.push("/restaurants");
-                    toast.message("Showing all restaurants");
+                    const next = Math.max(1, page - 1);
+                    setPage(next);
+                    const params = new URLSearchParams(sp.toString());
+                    params.set("page", String(next));
+                    router.push(`/restaurants?${params.toString()}`);
                   }}
                 >
-                  Show all
+                  Prev
                 </Button>
-              </CardContent>
-            </Card>
+                <div className="text-sm text-muted-foreground">Page {page}</div>
+                <Button
+                  variant="outline"
+                  disabled={(q.data?.items?.length ?? 0) < 20}
+                  onClick={() => {
+                    const next = page + 1;
+                    setPage(next);
+                    const params = new URLSearchParams(sp.toString());
+                    params.set("page", String(next));
+                    router.push(`/restaurants?${params.toString()}`);
+                  }}
+                >
+                  Next
+                </Button>
+              </div>
+            </>
+          ) : (
+            <NoResultsFound
+              searchedCity={city || zip || undefined}
+              searchedCuisine={selectedCuisines.length > 0 ? selectedCuisines.join(", ") : undefined}
+            />
           )}
-
-          <div className="mt-6 flex items-center justify-center gap-2">
-            <Button
-              variant="outline"
-              disabled={page <= 1}
-              onClick={() => {
-                const next = Math.max(1, page - 1);
-                setPage(next);
-                const params = new URLSearchParams(sp.toString());
-                params.set("page", String(next));
-                router.push(`/restaurants?${params.toString()}`);
-              }}
-            >
-              Prev
-            </Button>
-            <div className="text-sm text-muted-foreground">Page {page}</div>
-            <Button
-              variant="outline"
-              disabled={(q.data?.items?.length ?? 0) < 20}
-              onClick={() => {
-                const next = page + 1;
-                setPage(next);
-                const params = new URLSearchParams(sp.toString());
-                params.set("page", String(next));
-                router.push(`/restaurants?${params.toString()}`);
-              }}
-            >
-              Next
-            </Button>
-          </div>
         </div>
       </div>
     </Container>

@@ -2,10 +2,83 @@ import { NextResponse } from "next/server";
 import { createSupabaseServerClient, createSupabaseAdminClient } from "@/lib/supabase/server";
 import { requireAuth } from "@/lib/auth/utils";
 
+export async function GET() {
+  const user = await requireAuth();
+  const supabase = createSupabaseServerClient();
+
+  const { data: stamps, error } = await supabase
+    .from("stamps" as any)
+    .select("id, event_type, created_at")
+    .eq("user_id", user.id);
+
+  if (error) {
+    console.error("Error fetching user stamps:", error);
+    return NextResponse.json({ error: "query_failed", message: error.message }, { status: 500 });
+  }
+
+  return NextResponse.json({ stamps: stamps || [] });
+}
+
 export async function POST(request: Request) {
   const user = await requireAuth();
   const supabase = createSupabaseServerClient();
 
+  const json = await request.json().catch(() => null);
+  if (!json) {
+    return NextResponse.json({ error: "invalid_payload", message: "Request body is required" }, { status: 400 });
+  }
+
+  const { event_type, stamp_name, stamp_description, is_rare, reservation_id, restaurant_id } = json;
+
+  // For event stamps (like Carnival challenge), we don't need a photo or reservation
+  if (event_type) {
+    // Check if stamp already exists
+    const { data: existing } = await supabase
+      .from("stamps" as any)
+      .select("id")
+      .eq("user_id", user.id)
+      .eq("event_type", event_type)
+      .maybeSingle();
+
+    if (existing) {
+      return NextResponse.json({ ok: true, stamp: existing, message: "Stamp already unlocked" });
+    }
+
+    // Create event stamp (without photo_url requirement)
+    const supabaseAdmin = createSupabaseAdminClient();
+    const { data: stamp, error: insertError } = await supabaseAdmin
+      .from("stamps" as any)
+      .insert({
+        user_id: user.id,
+        reservation_id: reservation_id || null,
+        restaurant_id: restaurant_id || null,
+        photo_url: "", // Empty for event stamps
+        review_text: stamp_description || null,
+        event_type: event_type,
+        created_at: new Date().toISOString(),
+      })
+      .select("*")
+      .single();
+
+    if (insertError) {
+      console.error("Insert error:", insertError);
+      return NextResponse.json(
+        {
+          error: "database_error",
+          message: "Failed to unlock stamp.",
+          details: insertError.message,
+        },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({
+      ok: true,
+      stamp,
+    });
+  }
+
+  // Original photo upload logic for regular stamps
   const formData = await request.formData();
   const photo = formData.get("photo") as File | null;
   const reservationId = formData.get("reservationId") as string | null;
@@ -61,9 +134,7 @@ export async function POST(request: Request) {
   const { data: urlData } = supabaseAdmin.storage.from("stamp-photos").getPublicUrl(path);
   const photoUrl = urlData.publicUrl;
 
-  // Store stamp in database (using reviews table or creating a stamps table)
-  // For now, we'll use a simple approach: store in a JSON column or create stamps table
-  // Let's check if stamps table exists, otherwise we'll use reviews table with a flag
+  // Store stamp in database
   const { data: stamp, error: insertError } = await supabaseAdmin
     .from("stamps" as any)
     .insert({
@@ -78,8 +149,6 @@ export async function POST(request: Request) {
     .single();
 
   if (insertError) {
-    // If stamps table doesn't exist, we'll need to create it or use reviews table
-    // For now, return error with instructions
     console.error("Insert error:", insertError);
     return NextResponse.json(
       {

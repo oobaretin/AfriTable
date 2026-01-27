@@ -18,6 +18,16 @@ module.exports = {
           dark: '#1A1A1B',     // Deep charcoal for text
         },
       },
+      animation: {
+        'spin-slow': 'spin 8s linear infinite',
+        'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
+      },
+      keyframes: {
+        'bounce-subtle': {
+          '0%, 100%': { transform: 'translateY(0) rotate(-10deg)' },
+          '50%': { transform: 'translateY(-10px) rotate(-10deg)' },
+        },
+      },
     },
   },
   plugins: [],

@@ -38,6 +38,8 @@ type Stamp = {
   date: string;
   color: string;
   cuisine?: string;
+  isEvent?: boolean;
+  emoji?: string;
 };
 
 // Generate stamp color based on cuisine/region
@@ -100,6 +102,17 @@ export function CulinaryPassport() {
       const res = await fetch("/api/user/profile");
       const data = await res.json();
       if (!res.ok) throw new Error(data?.message || "Failed to load profile");
+      return data;
+    },
+  });
+
+  // Fetch event stamps (like Carnival challenge)
+  const { data: stampsData } = useQuery<{ stamps: Array<{ id: string; event_type?: string; created_at: string }> }>({
+    queryKey: ["userStamps"],
+    queryFn: async () => {
+      const res = await fetch("/api/user/stamps");
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.message || "Failed to load stamps");
       return data;
     },
   });
@@ -308,26 +321,46 @@ export function CulinaryPassport() {
           Journey Log (Past Stamps)
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {stamps.map((stamp) => (
-            <Link
-              key={stamp.id}
-              href={stamp.restaurantSlug ? `/restaurants/${stamp.restaurantSlug}` : "#"}
-              className="aspect-square bg-white rounded-[2.5rem] p-4 border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center group hover:shadow-xl hover:-translate-y-1 transition-all"
-            >
-              {/* The "Postal Stamp" Circle */}
-              <div
-                className={`h-24 w-24 rounded-full ${stamp.color} mb-4 flex flex-col items-center justify-center p-2 border-4 border-dashed border-white/40 rotate-[-12deg] group-hover:rotate-0 transition-transform`}
-              >
-                <p className="text-[10px] font-black text-white leading-none mb-1 uppercase tracking-tighter text-center px-1">
-                  {stamp.restaurant.length > 12 ? stamp.restaurant.slice(0, 10) + "..." : stamp.restaurant}
+          {stamps.map((stamp) => {
+            const StampContent = (
+              <div className="aspect-square bg-white rounded-[2.5rem] p-4 border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center group hover:shadow-xl hover:-translate-y-1 transition-all">
+                {/* The "Postal Stamp" Circle */}
+                <div
+                  className={`h-24 w-24 rounded-full ${stamp.color} mb-4 flex flex-col items-center justify-center p-2 border-4 border-dashed border-white/40 ${
+                    stamp.isEvent ? "animate-spin-slow" : "rotate-[-12deg] group-hover:rotate-0"
+                  } transition-transform relative overflow-hidden`}
+                >
+                  {stamp.emoji && (
+                    <span className="text-2xl mb-1">{stamp.emoji}</span>
+                  )}
+                  <p className="text-[10px] font-black text-white leading-none mb-1 uppercase tracking-tighter text-center px-1">
+                    {stamp.restaurant.length > 12 ? stamp.restaurant.slice(0, 10) + "..." : stamp.restaurant}
+                  </p>
+                  <div className="h-[1px] w-12 bg-white/30 my-1"></div>
+                  <p className="text-[8px] font-bold text-white uppercase">{stamp.city}</p>
+                  <p className="text-[8px] font-bold text-white/70 mt-1">{stamp.date}</p>
+                  {stamp.isEvent && (
+                    <div className="absolute -top-1 -right-1 bg-brand-forest text-white rounded-full w-5 h-5 flex items-center justify-center text-xs shadow-lg">
+                      ✨
+                    </div>
+                  )}
+                </div>
+                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                  {stamp.isEvent ? "Rare" : "Captured"}
                 </p>
-                <div className="h-[1px] w-12 bg-white/30 my-1"></div>
-                <p className="text-[8px] font-bold text-white uppercase">{stamp.city}</p>
-                <p className="text-[8px] font-bold text-white/70 mt-1">{stamp.date}</p>
               </div>
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Captured</p>
-            </Link>
-          ))}
+            );
+
+            if (stamp.restaurantSlug) {
+              return (
+                <Link key={stamp.id} href={`/restaurants/${stamp.restaurantSlug}`}>
+                  {StampContent}
+                </Link>
+              );
+            }
+
+            return <div key={stamp.id}>{StampContent}</div>;
+          })}
 
           {/* Empty Slot */}
           {stamps.length < 20 && (

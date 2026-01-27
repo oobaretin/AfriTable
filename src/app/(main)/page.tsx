@@ -17,6 +17,7 @@ import { StickySearch } from "@/components/home/StickySearch";
 import { HeritageSection } from "@/components/home/HeritageSection";
 import { CommunityFeed } from "@/components/home/CommunityFeed";
 import { SuccessStory } from "@/components/home/SuccessStory";
+import { Leaderboard } from "@/components/home/Leaderboard";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
@@ -210,49 +211,8 @@ export default async function MainHomePage() {
       {/* Sticky Search Bar */}
       <StickySearch />
       
-      {/* Hero */}
-      <section className="relative bg-slate-900 py-24 px-6 text-center text-white">
-        {/* Abstract Background Texture */}
-        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <Reveal>
-            <span className="inline-block px-4 py-1 mb-6 rounded-full bg-orange-500/20 text-orange-500 text-sm font-bold border border-orange-500/30">
-              Celebrating 1,000+ Tables Across America
-            </span>
-          </Reveal>
-          
-          <Reveal>
-            {homeConfig?.hero ? (
-              <div className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
-                <TypewriterText
-                  words={homeConfig.hero.cuisines}
-                  baseText={homeConfig.hero.baseText}
-                  suffixText={homeConfig.hero.suffixText}
-                  className=""
-                />
-              </div>
-            ) : (
-              <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
-                Discover Authentic <span className="text-orange-500">African</span> & <span className="text-yellow-500">Caribbean</span> Dining
-              </h1>
-            )}
-          </Reveal>
-          
-          <Reveal>
-            <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
-              Reserve tables at the best diaspora-owned restaurants. From the smoky grills of Nairobi to the vibrant spices of Kingston.
-            </p>
-          </Reveal>
-          
-          {/* Search Component */}
-          <Reveal>
-            <div id="hero-search" className="flex flex-col md:flex-row gap-2 bg-white p-2 rounded-2xl shadow-2xl max-w-3xl mx-auto">
-              <HeroSearch />
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      {/* Hero - Search-First Design */}
+      <HeroSearch />
 
       {/* Restaurant Search */}
       <Section>
@@ -459,6 +419,11 @@ export default async function MainHomePage() {
 
       {/* Success Story */}
       <SuccessStory />
+
+      {/* Ambassador's Circle Leaderboard */}
+      <Reveal>
+        <Leaderboard />
+      </Reveal>
 
       {/* Restaurant Owner CTA */}
       <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
