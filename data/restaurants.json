@@ -907,7 +907,7 @@
   },
   {
     "id": "sea-001",
-    "name": "Communion",
+    "name": "Communion R&B",
     "cuisine": "Afro-Texan / Soul",
     "region": "Other African",
     "price_range": "$$$",
@@ -1043,5 +1043,49 @@
     "address": "35 W 28th St, New York, NY 10001",
     "phone": "(212) 663-0533",
     "about": "Authentic Ethiopian cuisine in the heart of Manhattan, serving traditional dishes with fresh injera and bold spices."
+  },
+  {
+    "id": "clt-leah-louise",
+    "name": "Leah & Louise",
+    "cuisine": "Southern / Soul",
+    "region": "Southern",
+    "price_range": "$$$",
+    "rating": 4.6,
+    "address": "Charlotte, NC",
+    "phone": "(980) 299-4496",
+    "about": "A modern juke joint serving Southern and soul food with contemporary flair in Charlotte."
+  },
+  {
+    "id": "sf-teranga-village",
+    "name": "Teranga (The Village)",
+    "cuisine": "Senegalese",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "San Francisco, CA",
+    "phone": "(415) 366-0633",
+    "about": "Authentic Senegalese cuisine in San Francisco's The Village, bringing the flavors of Dakar to the Bay Area."
+  },
+  {
+    "id": "oak-lala-eritrean",
+    "name": "Lala's Eritrean",
+    "cuisine": "Eritrean",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Oakland, CA",
+    "phone": "(510) 545-6677",
+    "about": "Authentic Eritrean cuisine in Oakland, serving traditional dishes with fresh injera and bold spices."
+  },
+  {
+    "id": "nash-riddim-spice",
+    "name": "Riddim n' Spice",
+    "cuisine": "Jamaican / Caribbean",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Nashville, TN",
+    "phone": "(615) 942-5264",
+    "about": "Authentic Jamaican and Caribbean cuisine in Nashville, bringing the vibrant flavors of the islands to Music City."
   }
 ]
