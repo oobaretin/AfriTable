@@ -30,40 +30,40 @@ export function SuccessStory() {
 
   React.useEffect(() => {
     if (!hasAnimated) return;
-      // Animate booking growth from 0 to 35
-      const duration = 2000; // 2 seconds
-      const steps = 60;
-      const increment = 35 / steps;
-      const stepDuration = duration / steps;
+    
+    // Animate booking growth from 0 to 35
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const increment = 35 / steps;
+    const stepDuration = duration / steps;
+    
+    let currentStep = 0;
+    const interval = setInterval(() => {
+      currentStep++;
+      const newValue = Math.min(increment * currentStep, 35);
+      setBookingGrowth(Math.round(newValue));
       
-      let currentStep = 0;
-      const interval = setInterval(() => {
-        currentStep++;
-        const newValue = Math.min(increment * currentStep, 35);
-        setBookingGrowth(Math.round(newValue));
-        
-        if (currentStep >= steps) {
-          clearInterval(interval);
-        }
-      }, stepDuration);
-
-      // Animate rating from 0 to 4.9
-      let ratingStep = 0;
-      const ratingInterval = setInterval(() => {
-        ratingStep++;
-        const newRating = Math.min((4.9 / steps) * ratingStep, 4.9);
-        setRating(Number(newRating.toFixed(1)));
-        
-        if (ratingStep >= steps) {
-          clearInterval(ratingInterval);
-        }
-      }, stepDuration);
-
-      return () => {
+      if (currentStep >= steps) {
         clearInterval(interval);
+      }
+    }, stepDuration);
+
+    // Animate rating from 0 to 4.9
+    let ratingStep = 0;
+    const ratingInterval = setInterval(() => {
+      ratingStep++;
+      const newRating = Math.min((4.9 / steps) * ratingStep, 4.9);
+      setRating(Number(newRating.toFixed(1)));
+      
+      if (ratingStep >= steps) {
         clearInterval(ratingInterval);
-      };
-    }
+      }
+    }, stepDuration);
+
+    return () => {
+      clearInterval(interval);
+      clearInterval(ratingInterval);
+    };
   }, [hasAnimated]);
 
   return (

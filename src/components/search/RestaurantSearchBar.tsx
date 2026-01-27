@@ -163,12 +163,10 @@ export function RestaurantSearchBar({ restaurants }: RestaurantSearchBarProps) {
                   const transformed = transformRestaurant(r);
                   const city = extractCity(r.address);
                   return (
-                    <div
+                    <Link
                       key={r.id}
-                      className="cursor-pointer rounded-lg border p-3 transition-colors hover:bg-accent"
-                      onClick={() => {
-                        window.location.href = `/restaurants/${r.id}`;
-                      }}
+                      href={`/restaurants/${r.id}`}
+                      className="block cursor-pointer rounded-lg border p-3 transition-colors hover:bg-accent"
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex-1">
