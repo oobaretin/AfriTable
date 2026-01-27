@@ -229,6 +229,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
     restaurant.name,
     restaurant.cuisine_types || [],
   );
+  const about = restaurant.description || defaultContent.about;
   const ourStory = restaurant.our_story || defaultContent.our_story;
   const culturalRoots = restaurant.cultural_roots || defaultContent.cultural_roots;
   const specialFeatures = restaurant.special_features || defaultContent.special_features;
@@ -447,14 +448,11 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
 
           {/* Content Sections */}
           <div className="mt-8 grid gap-10 w-full">
-            {/* About */}
+            {/* About - Always visible */}
             <section className="w-full">
               <h2 className="text-xl font-semibold tracking-tight mb-4">About</h2>
               <div className="prose prose-sm max-w-none text-muted-foreground">
-                <p className="text-base leading-relaxed">
-                  {restaurant.description ||
-                    "A vibrant dining experience celebrating African and Caribbean flavors, hospitality, and culture."}
-                </p>
+                <p className="text-base leading-relaxed whitespace-pre-line">{about}</p>
               </div>
             </section>
 

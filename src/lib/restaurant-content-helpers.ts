@@ -3,6 +3,7 @@
  */
 
 export interface RestaurantContent {
+  about: string;
   our_story: string;
   cultural_roots: string;
   special_features: string;
@@ -10,6 +11,8 @@ export interface RestaurantContent {
 
 const cuisineContentMap: Record<string, Partial<RestaurantContent>> = {
   Nigerian: {
+    about:
+      "Authentic Nigerian restaurant serving traditional West African cuisine. Experience the bold flavors of jollof rice, hearty stews, and grilled specialties in a warm, welcoming atmosphere that celebrates Nigerian culture and hospitality.",
     our_story:
       "We bring the authentic flavors of Nigeria to your table, serving traditional dishes passed down through generations. Our commitment is to share the rich culinary heritage of West Africa with every plate.",
     cultural_roots:
@@ -18,6 +21,8 @@ const cuisineContentMap: Record<string, Partial<RestaurantContent>> = {
       "Experience authentic Nigerian hospitality with our signature dishes including jollof rice, egusi soup, pepper soup, and suya. We offer traditional dining experiences, catering services, and special events celebrating Nigerian culture.",
   },
   Ethiopian: {
+    about:
+      "Traditional Ethiopian restaurant featuring authentic East African cuisine. Enjoy communal dining with injera bread, flavorful stews, and traditional coffee ceremonies in an atmosphere that honors Ethiopia's rich culinary heritage.",
     our_story:
       "We honor the ancient traditions of Ethiopian cuisine, bringing the communal spirit of injera and wat to our community. Our restaurant is a place where food brings people together, just as it has for centuries in the highlands of Ethiopia.",
     cultural_roots:
@@ -26,6 +31,8 @@ const cuisineContentMap: Record<string, Partial<RestaurantContent>> = {
       "Enjoy traditional Ethiopian dining with our authentic injera, doro wat, kitfo, and vegetarian platters. We offer coffee ceremonies, cultural events, and private dining experiences that showcase the depth of Ethiopian culinary traditions.",
   },
   Ghanaian: {
+    about:
+      "Authentic Ghanaian restaurant bringing the vibrant flavors of West Africa to your table. Savor traditional dishes like jollof rice, fufu, and groundnut stew in a setting that celebrates Ghanaian culture and warm hospitality.",
     our_story:
       "From the bustling markets of Accra to your table, we serve authentic Ghanaian cuisine that honors our heritage. Our recipes come from family kitchens and local traditions, bringing the warmth of Ghanaian hospitality to every meal.",
     cultural_roots:
@@ -34,6 +41,8 @@ const cuisineContentMap: Record<string, Partial<RestaurantContent>> = {
       "Discover authentic Ghanaian flavors with our fufu, banku, kelewele, and red red. We offer traditional preparation methods, cultural dining experiences, and special events that celebrate Ghanaian festivals and traditions.",
   },
   Senegalese: {
+    about:
+      "Authentic Senegalese restaurant showcasing the sophisticated flavors of West Africa. Experience the national dish thieboudienne, along with yassa and mafé, in an atmosphere that embodies teranga—the Senegalese spirit of hospitality.",
     our_story:
       "We celebrate the culinary artistry of Senegal, known as the gateway to West Africa. Our restaurant brings the sophisticated flavors of Senegalese cuisine, where French and West African influences create something truly special.",
     cultural_roots:
@@ -42,6 +51,8 @@ const cuisineContentMap: Record<string, Partial<RestaurantContent>> = {
       "Experience the elegance of Senegalese dining with our thieboudienne, yassa, mafé, and pastels. We offer traditional cooking demonstrations, cultural events, and authentic Senegalese hospitality that makes every guest feel like family.",
   },
   Jamaican: {
+    about:
+      "Authentic Jamaican restaurant serving vibrant Caribbean cuisine. Enjoy jerk chicken, curry goat, ackee and saltfish, and other island favorites in a warm atmosphere that captures the spirit of Jamaica.",
     our_story:
       "We bring the vibrant flavors of Jamaica to your neighborhood, serving authentic Caribbean cuisine that captures the island's spirit. From jerk seasoning to curry goat, our dishes tell the story of Jamaica's rich cultural heritage.",
     cultural_roots:
@@ -50,6 +61,8 @@ const cuisineContentMap: Record<string, Partial<RestaurantContent>> = {
       "Enjoy authentic Jamaican flavors with our jerk chicken, curry goat, ackee and saltfish, and patties. We offer traditional preparation methods, live music events, and a warm atmosphere that brings the spirit of Jamaica to every visit.",
   },
   Caribbean: {
+    about:
+      "Authentic Caribbean restaurant celebrating the diverse flavors of the islands. From roti to callaloo, experience the bold spices and tropical ingredients that define Caribbean cuisine in a festive, welcoming atmosphere.",
     our_story:
       "We celebrate the diverse flavors of the Caribbean, bringing together the best of island cuisine from across the region. Our restaurant is a journey through the Caribbean, one delicious dish at a time.",
     cultural_roots:
@@ -58,6 +71,8 @@ const cuisineContentMap: Record<string, Partial<RestaurantContent>> = {
       "Explore Caribbean flavors with our roti, callaloo, conch fritters, and rum-infused desserts. We offer island-inspired cocktails, cultural events, and a festive atmosphere that captures the warmth and vibrancy of Caribbean culture.",
   },
   "West African": {
+    about:
+      "Authentic West African restaurant serving traditional dishes from across the region. Experience the bold spices, hearty stews, and communal dining traditions that make West African cuisine a celebration of flavor and community.",
     our_story:
       "We honor the rich culinary traditions of West Africa, serving authentic dishes that showcase the region's diverse flavors and cooking techniques. Our restaurant is a celebration of West African hospitality and the vibrant food culture that spans from Senegal to Nigeria.",
     cultural_roots:
@@ -66,6 +81,8 @@ const cuisineContentMap: Record<string, Partial<RestaurantContent>> = {
       "Experience West African cuisine with our jollof rice, groundnut stew, fufu, and suya. We offer traditional preparation methods, cultural dining experiences, and special events that celebrate the diversity and richness of West African food traditions.",
   },
   "East African": {
+    about:
+      "Authentic East African restaurant featuring traditional dishes from Ethiopia, Eritrea, Kenya, and Tanzania. Enjoy distinctive spice blends, injera, and other regional specialties in an atmosphere that honors East African culinary traditions.",
     our_story:
       "We bring the distinctive flavors of East Africa to your table, serving dishes that reflect the region's unique spice blends and cooking traditions. Our restaurant celebrates the culinary heritage of countries like Ethiopia, Eritrea, Kenya, and Tanzania.",
     cultural_roots:
@@ -108,6 +125,9 @@ export function generateDefaultContent(
   const primaryCuisine = cuisineTypes[0] || "African";
 
   return {
+    about:
+      matchedContent.about ||
+      `${restaurantName} brings authentic ${primaryCuisine} cuisine to our community. Experience traditional flavors, warm hospitality, and dishes prepared with care using time-honored recipes and fresh ingredients.`,
     our_story:
       matchedContent.our_story ||
       `Welcome to ${restaurantName}. We are passionate about bringing authentic ${primaryCuisine} cuisine to our community. Our journey began with a simple mission: to share the rich flavors and warm hospitality that define ${primaryCuisine} dining. Every dish we serve is prepared with care, using traditional recipes and fresh ingredients that honor our culinary heritage.`,
