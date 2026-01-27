@@ -3,6 +3,8 @@
 import * as React from "react";
 import Link from "next/link";
 import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
+import { useBookingDrawer } from "@/contexts/BookingDrawerContext";
+import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 
 type RestaurantResultsProps = {
   restaurants: JSONRestaurant[];
@@ -135,12 +137,17 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
                   >
                     View Details <span className="text-[#A33B32] text-xl">→</span>
                   </Link>
-                  <Link
-                    href={`/restaurants/${slug}`}
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      const transformedRestaurant = transformJSONRestaurantToDetail(restaurant);
+                      openDrawer(transformedRestaurant as any);
+                    }}
                     className="bg-white/5 hover:bg-[#A33B32] text-white text-[9px] font-black px-6 py-3 rounded-full uppercase tracking-widest transition-all"
                   >
                     Find Table
-                  </Link>
+                  </button>
                 </div>
 
                 {/* Subtle 3D Background Glow for each card */}
