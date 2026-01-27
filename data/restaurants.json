@@ -126,7 +126,7 @@
     "price_range": "$$$",
     "rating": 4.4,
     "address": "316 NW 24th St, Miami, FL 33127",
-    "phone": "(786) 334-5162",
+    "phone": "(786) 334-5150",
     "website": "https://dukunoojamaicankitchen.com",
     "social": { "instagram": "@dukunookitchen" },
     "hours": {
@@ -587,7 +587,7 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "New York City, NY",
-    "phone": "(646) 476-2533",
+    "phone": "(646) 870-0495",
     "about": "Traditional North African street food with modern flair."
   },
   {
@@ -788,6 +788,7 @@
     "price_range": "$$$",
     "rating": 4.8,
     "address": "Uptown, Chicago, IL",
+    "phone": "(773) 334-8787",
     "about": "Award-winning flavors served with Chicago's finest hospitality.",
     "vibe_tags": ["Upscale Communal"]
   },
@@ -909,6 +910,7 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "South End, Boston, MA",
+    "phone": "(617) 266-0003",
     "about": "A contemporary taste of Dakar in the heart of Boston.",
     "vibe_tags": ["Chic & Minimalist"]
   },
