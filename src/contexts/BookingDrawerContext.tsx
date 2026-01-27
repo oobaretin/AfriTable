@@ -4,7 +4,7 @@ import * as React from "react";
 import type { RestaurantRow } from "@/components/restaurant/RestaurantCard";
 
 type BookingDrawerContextType = {
-  openDrawer: (restaurant: RestaurantRow) => void;
+  openDrawer: (restaurant?: RestaurantRow) => void;
   closeDrawer: () => void;
   restaurant: RestaurantRow | null;
   isOpen: boolean;
@@ -16,8 +16,11 @@ export function BookingDrawerProvider({ children }: { children: React.ReactNode 
   const [restaurant, setRestaurant] = React.useState<RestaurantRow | null>(null);
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const openDrawer = React.useCallback((rest: RestaurantRow) => {
-    setRestaurant(rest);
+  const openDrawer = React.useCallback((rest?: RestaurantRow) => {
+    // Store restaurant for potential future use, but modal doesn't need it currently
+    if (rest) {
+      setRestaurant(rest);
+    }
     setIsOpen(true);
   }, []);
 
