@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { X } from "lucide-react";
+import Image from "next/image";
 import type { RestaurantRow } from "@/components/restaurant/RestaurantCard";
 
 type BookingDrawerProps = {
@@ -73,35 +74,35 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-full max-w-md bg-[#050A18] z-50 transform transition-transform duration-300 ease-in-out shadow-2xl ${
+        className={`fixed top-0 right-0 h-full w-full max-w-md z-50 transform transition-transform duration-300 ease-in-out shadow-2xl ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="h-full flex flex-col overflow-y-auto">
+        {/* Glassmorphism Background */}
+        <div className="absolute inset-0 bg-[#050A18]/95 backdrop-blur-xl"></div>
+        
+        <div className="relative h-full flex flex-col overflow-y-auto">
           {/* Header */}
-          <div className="border-b border-white/10 p-6 flex items-center justify-between">
-            <div>
-              <h2 className="text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.5em] mb-1">
-                Reserve Your Table
-              </h2>
-              <h3 className="text-2xl font-black text-white uppercase tracking-tighter">
+          <div className="border-b border-white/10 p-8 flex items-start justify-between">
+            <div className="flex-1">
+              <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter italic leading-none mb-2">
                 {restaurant.name}
               </h3>
             </div>
             <button
               onClick={onClose}
-              className="text-white/60 hover:text-white transition-colors p-2"
+              className="text-white/60 hover:text-white transition-colors p-2 ml-4"
               aria-label="Close drawer"
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="flex-1 p-6 space-y-8">
+          <form onSubmit={handleSubmit} className="flex-1 p-8 space-y-10">
             {/* Date Input */}
             <div>
-              <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-3">
+              <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
                 Date
               </label>
               <input
@@ -110,13 +111,13 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
                 onChange={(e) => setDate(e.target.value)}
                 min={new Date().toISOString().split("T")[0]}
                 required
-                className="w-full bg-[#0A1120] border border-white/10 rounded-xl px-5 py-4 text-white font-bold text-sm focus:outline-none focus:border-[#C69C2B]/50 transition-colors"
+                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors"
               />
             </div>
 
             {/* Time Input */}
             <div>
-              <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-3">
+              <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
                 Time
               </label>
               <input
@@ -124,23 +125,23 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
                 required
-                className="w-full bg-[#0A1120] border border-white/10 rounded-xl px-5 py-4 text-white font-bold text-sm focus:outline-none focus:border-[#C69C2B]/50 transition-colors"
+                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors"
               />
             </div>
 
-            {/* Party Size Input */}
+            {/* Guests Input */}
             <div>
-              <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-3">
-                Party Size
+              <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
+                Guests
               </label>
               <select
                 value={partySize}
                 onChange={(e) => setPartySize(e.target.value)}
                 required
-                className="w-full bg-[#0A1120] border border-white/10 rounded-xl px-5 py-4 text-white font-bold text-sm focus:outline-none focus:border-[#C69C2B]/50 transition-colors appearance-none cursor-pointer"
+                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors appearance-none cursor-pointer"
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((size) => (
-                  <option key={size} value={size} className="bg-[#0A1120] text-white">
+                  <option key={size} value={size} className="bg-[#050A18] text-white">
                     {size} {size === 1 ? "Guest" : "Guests"}
                   </option>
                 ))}
@@ -148,15 +149,31 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
             </div>
 
             {/* Submit Button */}
-            <div className="pt-8 border-t border-white/10">
+            <div className="pt-8">
               <button
                 type="submit"
-                className="w-full bg-[#A33B32] hover:bg-[#A33B32]/90 text-white text-[10px] font-black px-8 py-4 rounded-full uppercase tracking-[0.3em] transition-all"
+                className="w-full bg-[#A33B32] hover:bg-[#A33B32]/90 text-white text-sm font-black px-8 py-5 rounded-full uppercase tracking-widest transition-all"
               >
-                Continue to Booking
+                Confirm Reservation
               </button>
             </div>
           </form>
+
+          {/* Sankofa Branding Footer */}
+          <div className="border-t border-white/10 p-8 flex flex-col items-center gap-4">
+            <div className="relative h-12 w-12">
+              <Image
+                src="/logo.png"
+                alt="Sankofa"
+                fill
+                className="object-contain"
+                style={{ filter: "brightness(0) saturate(100%) invert(67%) sepia(95%) saturate(1352%) hue-rotate(5deg) brightness(102%) contrast(85%)" }}
+              />
+            </div>
+            <p className="text-[10px] font-medium text-[#C69C2B] uppercase tracking-[0.2em] text-center">
+              Honoring the Past, Finding your Table
+            </p>
+          </div>
 
           {/* Subtle Background Glow */}
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-blue-900/10 blur-[80px] pointer-events-none"></div>
