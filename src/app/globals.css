@@ -268,6 +268,21 @@
     animation-name: slide-in-from-top;
   }
 
+  @keyframes slide-in-from-left {
+    from {
+      opacity: 0;
+      transform: translateX(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .slide-in-from-left-12 {
+    animation-name: slide-in-from-left;
+  }
+
   .zoom-in {
     animation-name: zoom-in;
   }
