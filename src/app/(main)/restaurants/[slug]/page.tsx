@@ -13,6 +13,7 @@ import { FavoriteButton } from "@/components/restaurant/FavoriteButton";
 import { ShareButton } from "@/components/restaurant/ShareButton";
 import { ReservationWidget } from "@/components/reservation/ReservationWidget";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
+import { generateDefaultContent } from "@/lib/restaurant-content-helpers";
 
 type RestaurantDetail = {
   id: string;
@@ -21,6 +22,10 @@ type RestaurantDetail = {
   cuisine_types: string[];
   price_range: number;
   description: string | null;
+  our_story: string | null;
+  cultural_roots: string | null;
+  special_features: string | null;
+  menu: any;
   address: any;
   phone: string | null;
   website: string | null;
@@ -110,7 +115,7 @@ async function getRestaurantBySlug(slug: string): Promise<RestaurantDetail | nul
   const { data, error } = await supabase
     .from("restaurants_with_rating")
     .select(
-      "id,name,slug,cuisine_types,price_range,description,address,phone,website,instagram_handle,facebook_url,images,hours,avg_rating,review_count",
+      "id,name,slug,cuisine_types,price_range,description,our_story,cultural_roots,special_features,menu,address,phone,website,instagram_handle,facebook_url,images,hours,avg_rating,review_count",
     )
     .eq("slug", slug)
     .maybeSingle();
@@ -218,6 +223,16 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
   }
 
   const avg = restaurant.avg_rating ?? null;
+
+  // Generate default content if missing
+  const defaultContent = generateDefaultContent(
+    restaurant.name,
+    restaurant.cuisine_types || [],
+    restaurant.description,
+  );
+  const ourStory = restaurant.our_story || defaultContent.our_story;
+  const culturalRoots = restaurant.cultural_roots || defaultContent.cultural_roots;
+  const specialFeatures = restaurant.special_features || defaultContent.special_features;
 
   // Build JSON-LD with proper undefined handling
   const jsonLd: any = {
@@ -435,81 +450,132 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
           <div className="mt-8 grid gap-10 w-full">
             {/* About */}
             <section className="w-full">
-              <h2 className="text-xl font-semibold tracking-tight">About</h2>
-              <p className="mt-2 text-muted-foreground">
-                {restaurant.description ||
-                  "A vibrant dining experience celebrating African and Caribbean flavors, hospitality, and culture."}
-              </p>
-
-              <div className="mt-4 grid gap-4 md:grid-cols-3">
-                {[
-                  { title: "Our Story", desc: "A chef-led kitchen focused on heritage recipes and modern twists." },
-                  { title: "Cultural Roots", desc: "Authentic flavors inspired by Lagos, Accra, Addis, Kingston, and beyond." },
-                  { title: "Special Features", desc: "Live music nights, outdoor seating, and family-style sharing." },
-                ].map((c) => (
-                  <Card key={c.title}>
-                    <CardHeader>
-                      <CardTitle className="text-base">{c.title}</CardTitle>
-                      <CardDescription>{c.desc}</CardDescription>
-                    </CardHeader>
-                  </Card>
-                ))}
+              <h2 className="text-xl font-semibold tracking-tight mb-4">About</h2>
+              <div className="prose prose-sm max-w-none text-muted-foreground">
+                <p className="text-base leading-relaxed">
+                  {restaurant.description ||
+                    "A vibrant dining experience celebrating African and Caribbean flavors, hospitality, and culture."}
+                </p>
               </div>
             </section>
 
             <Separator />
 
-            {/* Menu (placeholder) */}
+            {/* Our Story - Always visible */}
+            <section className="w-full">
+              <h2 className="text-xl font-semibold tracking-tight mb-4">Our Story</h2>
+              <div className="prose prose-sm max-w-none text-muted-foreground">
+                <p className="text-base leading-relaxed whitespace-pre-line">{ourStory}</p>
+              </div>
+            </section>
+
+            <Separator />
+
+            {/* Cultural Roots - Always visible */}
+            <section className="w-full">
+              <h2 className="text-xl font-semibold tracking-tight mb-4">Cultural Roots</h2>
+              <div className="prose prose-sm max-w-none text-muted-foreground">
+                <p className="text-base leading-relaxed whitespace-pre-line">{culturalRoots}</p>
+              </div>
+            </section>
+
+            <Separator />
+
+            {/* Special Features - Always visible */}
+            <section className="w-full">
+              <h2 className="text-xl font-semibold tracking-tight mb-4">Special Features</h2>
+              <div className="prose prose-sm max-w-none text-muted-foreground">
+                <p className="text-base leading-relaxed whitespace-pre-line">{specialFeatures}</p>
+              </div>
+            </section>
+
+            <Separator />
+
+            {/* Menu */}
             <section className="w-full">
               <div className="flex items-end justify-between gap-4">
                 <div>
                   <h2 className="text-xl font-semibold tracking-tight">Menu</h2>
-                  <p className="mt-2 text-muted-foreground">Sample highlights (placeholder)</p>
+                  <p className="mt-2 text-muted-foreground">
+                    {restaurant.menu && typeof restaurant.menu === "object" && Object.keys(restaurant.menu).length > 0
+                      ? "Explore our offerings"
+                      : "Menu information coming soon"}
+                  </p>
                 </div>
-                <Button variant="outline" type="button" disabled>
-                  Download full menu (PDF)
-                </Button>
+                {restaurant.menu?.menu_pdf_url ? (
+                  <Button asChild variant="outline">
+                    <a href={restaurant.menu.menu_pdf_url} target="_blank" rel="noreferrer">
+                      Download full menu (PDF)
+                    </a>
+                  </Button>
+                ) : null}
               </div>
 
-              <Tabs defaultValue="mains" className="mt-4">
-                <TabsList>
-                  <TabsTrigger value="appetizers">Appetizers</TabsTrigger>
-                  <TabsTrigger value="mains">Mains</TabsTrigger>
-                  <TabsTrigger value="desserts">Desserts</TabsTrigger>
-                  <TabsTrigger value="drinks">Drinks</TabsTrigger>
-                </TabsList>
-                {(
-                  [
-                    { k: "appetizers", items: [["Suya Skewers", "Spiced grilled skewers", "$12", ["Halal"]]] },
-                    { k: "mains", items: [["Jollof Rice + Chicken", "Smoky jollof, grilled chicken", "$22", ["Gluten-free"]]] },
-                    { k: "desserts", items: [["Coconut Puff-Puff", "Warm dough bites, coconut dust", "$9", ["Vegetarian"]]] },
-                    { k: "drinks", items: [["Sorrel", "Hibiscus drink, ginger", "$6", ["Vegan"]]] },
-                  ] as { k: string; items: [string, string, string, string[]][] }[]
-                ).map((tab) => (
-                  <TabsContent key={tab.k} value={tab.k} className="mt-4">
-                    <div className="grid gap-3 md:grid-cols-2">
-                      {tab.items.map(([name, desc, price, icons]) => (
-                        <Card key={name}>
-                          <CardHeader>
-                            <div className="flex items-start justify-between gap-2">
-                              <CardTitle className="text-base">{name}</CardTitle>
-                              <Badge variant="secondary">{price}</Badge>
-                            </div>
-                            <CardDescription>{desc}</CardDescription>
-                            <div className="flex flex-wrap gap-2 pt-2">
-                              {icons.map((i) => (
-                                <Badge key={i} variant="outline" className="text-xs">
-                                  {i}
-                                </Badge>
-                              ))}
-                            </div>
-                          </CardHeader>
-                        </Card>
+              {restaurant.menu && typeof restaurant.menu === "object" && Object.keys(restaurant.menu).filter((k) => k !== "menu_pdf_url").length > 0 ? (
+                <Tabs defaultValue={Object.keys(restaurant.menu).filter((k) => k !== "menu_pdf_url")[0] || "mains"} className="mt-4">
+                  <TabsList className="flex-wrap">
+                    {Object.keys(restaurant.menu)
+                      .filter((k) => k !== "menu_pdf_url")
+                      .map((category) => (
+                        <TabsTrigger key={category} value={category}>
+                          {category.charAt(0).toUpperCase() + category.slice(1)}
+                        </TabsTrigger>
                       ))}
-                    </div>
-                  </TabsContent>
-                ))}
-              </Tabs>
+                  </TabsList>
+                  {Object.entries(restaurant.menu)
+                    .filter(([key]) => key !== "menu_pdf_url")
+                    .map(([category, items]: [string, any]) => {
+                      const itemList = Array.isArray(items) ? items : [];
+                      return (
+                        <TabsContent key={category} value={category} className="mt-4">
+                          <div className="grid gap-3 md:grid-cols-2">
+                            {itemList.length > 0 ? (
+                              itemList.map((item: any, idx: number) => {
+                                const name = typeof item === "string" ? item : item.name || `Item ${idx + 1}`;
+                                const description = typeof item === "object" ? item.description || "" : "";
+                                const price = typeof item === "object" ? item.price || "" : "";
+                                const tags = typeof item === "object" && Array.isArray(item.tags) ? item.tags : [];
+                                return (
+                                  <Card key={idx}>
+                                    <CardHeader>
+                                      <div className="flex items-start justify-between gap-2">
+                                        <CardTitle className="text-base">{name}</CardTitle>
+                                        {price ? <Badge variant="secondary">{price}</Badge> : null}
+                                      </div>
+                                      {description ? <CardDescription>{description}</CardDescription> : null}
+                                      {tags.length > 0 ? (
+                                        <div className="flex flex-wrap gap-2 pt-2">
+                                          {tags.map((tag: string) => (
+                                            <Badge key={tag} variant="outline" className="text-xs">
+                                              {tag}
+                                            </Badge>
+                                          ))}
+                                        </div>
+                                      ) : null}
+                                    </CardHeader>
+                                  </Card>
+                                );
+                              })
+                            ) : (
+                              <Card>
+                                <CardHeader>
+                                  <CardDescription>No items in this category yet.</CardDescription>
+                                </CardHeader>
+                              </Card>
+                            )}
+                          </div>
+                        </TabsContent>
+                      );
+                    })}
+                </Tabs>
+              ) : (
+                <Card className="mt-4">
+                  <CardHeader>
+                    <CardTitle className="text-base">Menu coming soon</CardTitle>
+                    <CardDescription>We&apos;re working on adding our full menu. Check back soon!</CardDescription>
+                  </CardHeader>
+                </Card>
+              )}
             </section>
 
             <Separator />
@@ -598,8 +664,8 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
 
             {/* Location & Details */}
             <section className="w-full">
-              <h2 className="text-xl font-semibold tracking-tight">Location &amp; details</h2>
-              <div className="mt-4 grid gap-4 lg:grid-cols-2">
+              <h2 className="text-xl font-semibold tracking-tight mb-4">Location &amp; Details</h2>
+              <div className="grid gap-4 lg:grid-cols-2">
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-base">Map</CardTitle>
@@ -623,23 +689,64 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-base">Details</CardTitle>
-                    <CardDescription>Helpful info for your visit</CardDescription>
+                    <CardTitle className="text-base">Contact & Details</CardTitle>
+                    <CardDescription>Get in touch and plan your visit</CardDescription>
                   </CardHeader>
-                  <CardContent className="grid gap-3 text-sm text-muted-foreground">
-                    <div>
-                      <span className="font-medium text-foreground">Parking:</span> Street parking + nearby lots.
-                    </div>
-                    <div>
-                      <span className="font-medium text-foreground">Public transit:</span> Accessible via major bus/rail routes.
-                    </div>
-                    <div>
-                      <span className="font-medium text-foreground">Accessibility:</span> Step-free entry (confirm with venue).
-                    </div>
+                  <CardContent className="grid gap-4 text-sm">
+                    {restaurant.phone ? (
+                      <div>
+                        <span className="font-medium text-foreground">Phone:</span>{" "}
+                        <a href={`tel:${restaurant.phone}`} className="text-primary hover:underline">
+                          {restaurant.phone}
+                        </a>
+                      </div>
+                    ) : null}
+                    {restaurant.website ? (
+                      <div>
+                        <span className="font-medium text-foreground">Website:</span>{" "}
+                        <a href={restaurant.website} target="_blank" rel="noreferrer" className="text-primary hover:underline">
+                          Visit website
+                        </a>
+                      </div>
+                    ) : null}
                     {addrStr ? (
-                      <a className="text-primary underline underline-offset-4" href={googleMapsLink(addrStr)} target="_blank" rel="noreferrer">
-                        Get directions
-                      </a>
+                      <>
+                        <div>
+                          <span className="font-medium text-foreground">Address:</span>
+                          <div className="mt-1 text-muted-foreground">{addrStr}</div>
+                        </div>
+                        <div>
+                          <a className="text-primary underline underline-offset-4" href={googleMapsLink(addrStr)} target="_blank" rel="noreferrer">
+                            Get directions on Google Maps →
+                          </a>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="text-muted-foreground">Address information coming soon.</div>
+                    )}
+                    {operatingHours && operatingHours.length > 0 ? (
+                      <div>
+                        <span className="font-medium text-foreground">Hours:</span>
+                        <div className="mt-2 space-y-1 text-muted-foreground">
+                          {[
+                            ["Sunday", 0],
+                            ["Monday", 1],
+                            ["Tuesday", 2],
+                            ["Wednesday", 3],
+                            ["Thursday", 4],
+                            ["Friday", 5],
+                            ["Saturday", 6],
+                          ].map(([day, dow]) => {
+                            const hour = operatingHours.find((h: any) => h.day_of_week === dow);
+                            return (
+                              <div key={day} className="flex justify-between">
+                                <span>{day}:</span>
+                                <span>{hour ? `${hour.open_time} - ${hour.close_time}` : "Closed"}</span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
                     ) : null}
                   </CardContent>
                 </Card>
