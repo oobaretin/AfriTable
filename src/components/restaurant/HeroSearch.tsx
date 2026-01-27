@@ -22,8 +22,6 @@ const CUISINES = [
   "Other Caribbean",
 ];
 
-const TRENDING_CITIES = ["Houston", "New York", "Atlanta", "Washington DC", "Miami"];
-
 export function HeroSearch() {
   const router = useRouter();
   const [city, setCity] = React.useState("");
@@ -53,60 +51,58 @@ export function HeroSearch() {
     router.push(`/restaurants?${params.toString()}`);
   }
 
-  function handleCityClick(cityName: string) {
-    setCity(cityName);
-    // Auto-trigger search after a brief delay
-    setTimeout(() => {
-      const params = new URLSearchParams();
-      params.set("city", cityName);
-      router.push(`/restaurants?${params.toString()}`);
-    }, 300);
-  }
-
   return (
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-brand-dark">
-      {/* Background: High-end, dark, moody food photography with overlay */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-160432870172bb-388279930f9a?auto=format&fit=crop&q=80&w=2000"
-          alt="African Fine Dining"
-          fill
-          className="object-cover opacity-40 grayscale-[20%]"
-          priority
-          unoptimized
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/60 via-brand-dark/40 to-brand-dark"></div>
+    <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-brand-dark">
+      {/* 1. ANIMATED BACKGROUND SHAPES (z-0) */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Floating gradient blurs - animated */}
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-forest/20 blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-brand-mutedRed/10 blur-[120px] animate-pulse" style={{ animationDelay: "700ms" }}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50%] h-[50%] bg-brand-ochre/5 blur-[150px] animate-pulse" style={{ animationDelay: "1400ms" }}></div>
+        
+        {/* Optional: Background image overlay (subtle) */}
+        <div className="absolute inset-0 opacity-20">
+          <Image
+            src="https://images.unsplash.com/photo-160432870172bb-388279930f9a?auto=format&fit=crop&q=80&w=2000"
+            alt="African Fine Dining"
+            fill
+            className="object-cover grayscale-[30%]"
+            priority
+            unoptimized
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/60 to-brand-dark"></div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-4xl px-6 text-center">
+      {/* 2. BRAND STORY - CENTERED (z-10) */}
+      <div className="relative z-10 text-center px-6 mb-12">
         <Image
           src="/logo.png"
-          alt="Sankofa Logo"
+          alt="AfriTable Logo"
           width={64}
           height={64}
-          className="h-16 mx-auto mb-8 brightness-0 invert"
+          className="h-16 mx-auto mb-8 brightness-0 invert animate-fade-in"
           priority
         />
-
-        <h1 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter mb-6 leading-[0.9]">
-          The Soul of <br />
-          <span className="text-brand-ochre">The Diaspora</span>
+        <h1 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-4">
+          Taste the <br /> <span className="text-brand-ochre">Heritage</span>
         </h1>
-
-        <p className="text-slate-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium italic">
-          Discover and book the finest African &amp; Caribbean dining experiences.
+        <p className="text-slate-300 text-lg md:text-xl font-medium italic opacity-80">
+          Connecting the Diaspora, one table at a time.
         </p>
+      </div>
 
-        {/* THE CORE ENGINE: The Search Bar */}
-        <div className="bg-white p-2 md:p-4 rounded-[2rem] shadow-2xl flex flex-col md:flex-row gap-2 items-center">
-          <div className="flex-1 w-full flex items-center px-4 gap-3 border-r-0 md:border-r border-slate-100">
+      {/* 3. FLOATING SEARCH DOCK - BOTTOM (z-20) */}
+      <div className="relative z-20 w-full max-w-5xl px-6">
+        <div className="bg-white/95 backdrop-blur-xl p-3 md:p-4 rounded-[2.5rem] shadow-2xl flex flex-col md:flex-row gap-3 items-center border border-white/20">
+          {/* City Input */}
+          <div className="flex-1 w-full flex items-center px-5 gap-3 border-r-0 md:border-r border-slate-100">
             <span className="text-xl" role="img" aria-label="Location">
               📍
             </span>
             <input
               type="text"
-              placeholder="Which city?"
+              placeholder="Select City"
               value={city}
               onChange={(e) => setCity(e.target.value)}
               onKeyDown={(e) => {
@@ -114,10 +110,12 @@ export function HeroSearch() {
                   handleSearch();
                 }
               }}
-              className="w-full py-3 bg-transparent outline-none font-bold text-brand-dark placeholder:text-slate-300"
+              className="w-full py-3 bg-transparent outline-none font-bold text-brand-dark placeholder:text-slate-400"
             />
           </div>
-          <div className="flex-1 w-full flex items-center px-4 gap-3">
+
+          {/* Cuisine Dropdown */}
+          <div className="flex-1 w-full flex items-center px-5 gap-3">
             <span className="text-xl" role="img" aria-label="Cuisine">
               🥘
             </span>
@@ -133,29 +131,21 @@ export function HeroSearch() {
               ))}
             </select>
           </div>
+
+          {/* Find Table Button */}
           <Button
             onClick={handleSearch}
             disabled={isSearching}
-            className="w-full md:w-auto bg-brand-bronze hover:bg-brand-dark text-white px-10 py-4 rounded-[1.5rem] font-black uppercase tracking-widest transition-all shadow-lg active:scale-95 disabled:opacity-50"
+            className="w-full md:w-auto bg-brand-dark hover:bg-brand-forest text-white px-12 py-5 rounded-[2rem] font-black uppercase tracking-widest text-xs transition-all hover:shadow-lg active:scale-95 disabled:opacity-50"
           >
             {isSearching ? "Searching..." : "Find Table"}
           </Button>
         </div>
 
-        {/* Quick Links */}
-        <div className="mt-8 flex flex-wrap justify-center gap-4 text-[10px] font-black text-white/50 uppercase tracking-[0.2em]">
-          <span className="text-white/30">Trending:</span>
-          {TRENDING_CITIES.map((cityName, i) => (
-            <React.Fragment key={cityName}>
-              <button
-                onClick={() => handleCityClick(cityName)}
-                className="hover:text-brand-ochre transition-colors cursor-pointer"
-              >
-                {cityName}
-              </button>
-              {i < TRENDING_CITIES.length - 1 && <span>•</span>}
-            </React.Fragment>
-          ))}
+        {/* Subtle Scroll Indicator */}
+        <div className="mt-12 flex flex-col items-center gap-2 opacity-30 animate-bounce">
+          <span className="text-[10px] font-black text-white uppercase tracking-[0.3em]">Explore</span>
+          <div className="w-[1px] h-8 bg-white"></div>
         </div>
       </div>
     </section>
