@@ -15,6 +15,9 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
   const [date, setDate] = React.useState("");
   const [time, setTime] = React.useState("");
   const [partySize, setPartySize] = React.useState("2");
+  const [showWaitlist, setShowWaitlist] = React.useState(false);
+  const [email, setEmail] = React.useState("");
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   // Set default date to tomorrow
   React.useEffect(() => {
@@ -31,6 +34,9 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
       setDate("");
       setTime("");
       setPartySize("2");
+      setShowWaitlist(false);
+      setEmail("");
+      setIsSubmitting(false);
     }
   }, [isOpen]);
 
@@ -50,14 +56,23 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
     e.preventDefault();
     if (!restaurant) return;
 
-    // Navigate to booking page with params
-    const params = new URLSearchParams();
-    if (date) params.set("date", date);
-    if (time) params.set("time", time);
-    if (partySize) params.set("partySize", partySize);
+    // Transition to VIP Access waitlist
+    setShowWaitlist(true);
+  };
 
-    const url = `/restaurants/${restaurant.slug}${params.toString() ? `?${params.toString()}` : ""}`;
-    window.location.href = url;
+  const handleWaitlistSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+
+    setIsSubmitting(true);
+    
+    // TODO: Add API call to submit email to waitlist
+    // For now, just show success state
+    setTimeout(() => {
+      setIsSubmitting(false);
+      // Could show a success message or close drawer
+      // For now, keep it open to show the success state
+    }, 1000);
   };
 
   if (!restaurant) return null;
@@ -83,11 +98,22 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
         
         <div className="relative h-full flex flex-col overflow-y-auto">
           {/* Header */}
-          <div className="border-b border-white/10 p-8 flex items-start justify-between">
+          <div className="border-b border-white/10 p-8 flex items-start justify-between transition-all duration-300">
             <div className="flex-1">
-              <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter italic leading-none mb-2">
-                {restaurant.name}
-              </h3>
+              {!showWaitlist ? (
+                <h3 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter italic leading-none mb-2 transition-all duration-300">
+                  {restaurant.name}
+                </h3>
+              ) : (
+                <div className="transition-all duration-300">
+                  <h2 className="text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.5em] mb-2">
+                    VIP Access
+                  </h2>
+                  <h3 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter italic leading-none">
+                    Join the Waitlist
+                  </h3>
+                </div>
+              )}
             </div>
             <button
               onClick={onClose}
@@ -98,8 +124,10 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
             </button>
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="flex-1 p-8 space-y-10">
+          {/* Booking Form or Waitlist Form */}
+          <div className="flex-1 transition-all duration-300">
+            {!showWaitlist ? (
+            <form onSubmit={handleSubmit} className="p-8 space-y-10">
             {/* Date Input */}
             <div>
               <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
@@ -158,6 +186,41 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
               </button>
             </div>
           </form>
+            ) : (
+            <form onSubmit={handleWaitlistSubmit} className="p-8 flex flex-col justify-center min-h-[400px]">
+              {/* Waitlist Message */}
+              <p className="text-white/80 text-base leading-relaxed mb-10 text-center max-w-sm mx-auto">
+                AfriTable is coming soon. Join the waitlist for exclusive access to the diaspora&apos;s finest tables.
+              </p>
+
+              {/* Email Input */}
+              <div className="mb-8">
+                <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  required
+                  className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base placeholder:text-white/30 focus:outline-none focus:border-[#C69C2B] transition-colors"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <div>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#A33B32] hover:bg-[#A33B32]/90 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm font-black px-8 py-5 rounded-full uppercase tracking-widest transition-all"
+                >
+                  {isSubmitting ? "Joining..." : "Join Waitlist"}
+                </button>
+              </div>
+            </form>
+            )}
+          </div>
 
           {/* Sankofa Branding Footer */}
           <div className="border-t border-white/10 p-8 flex flex-col items-center gap-4">
