@@ -226,11 +226,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function RestaurantProfilePage({ params }: { params: { slug: string } }) {
+  console.log(`[RestaurantPage] Attempting to load restaurant with slug: "${params.slug}"`);
   const restaurant = await getRestaurantBySlug(params.slug);
   if (!restaurant) {
-    console.error(`[RestaurantPage] Restaurant not found for slug: ${params.slug}`);
+    console.error(`[RestaurantPage] ❌ Restaurant not found for slug: "${params.slug}"`);
+    console.error(`[RestaurantPage] Check: /api/debug/restaurant/${encodeURIComponent(params.slug)}`);
     notFound();
   }
+  console.log(`[RestaurantPage] ✅ Successfully loaded restaurant: "${restaurant.name}" (${restaurant.slug})`);
 
   const [operatingHours, reviews, similar] = await Promise.all([
     getOperatingHours(restaurant.id, restaurant.hours),
