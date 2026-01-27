@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { createSupabasePublicClient } from "@/lib/supabase/public";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { HeroSearch } from "@/components/restaurant/HeroSearch";
-import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { Reveal } from "@/components/layout/Reveal";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
+import { CuisineFilterClient } from "@/components/home/CuisineFilterClient";
 
 type FeaturedRestaurant = {
   id: string;
@@ -166,25 +166,9 @@ export default async function MainHomePage() {
           </div>
         </Reveal>
 
-        <div className="mt-6 flex gap-4 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {(featured.length ? featured : Array.from({ length: 6 })).map((r: any, idx: number) => (
-            <div key={r?.id ?? idx} className="w-[280px] shrink-0 md:w-[320px]">
-              {r ? (
-                <RestaurantCard restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
-              ) : (
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-base">Coming soon</CardTitle>
-                    <CardDescription>We’re onboarding restaurants now.</CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-sm text-muted-foreground">
-                    If you own a restaurant, join AfriTable to reach diners across America.
-                  </CardContent>
-                </Card>
-              )}
-            </div>
-          ))}
-        </div>
+        <Reveal className="mt-6">
+          <CuisineFilterClient restaurants={featured} />
+        </Reveal>
 
         <div className="mt-2 md:hidden">
           <Button asChild variant="outline" className="w-full">
@@ -301,4 +285,3 @@ export default async function MainHomePage() {
     </main>
   );
 }
-
