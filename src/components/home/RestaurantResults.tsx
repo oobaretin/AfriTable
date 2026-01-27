@@ -76,7 +76,7 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
   }
 
   return (
-    <section className="pt-24 pb-16 bg-[#050A18] px-6">
+    <section className="pt-24 pb-0 bg-[#050A18] px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header matching the 'Catchy Words' style */}
         <div className="mb-16 border-l-4 border-[#A33B32] pl-8">
