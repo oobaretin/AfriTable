@@ -6,28 +6,7 @@ import * as path from "path";
 // Load environment variables from .env.local
 config({ path: path.join(process.cwd(), ".env.local") });
 
-interface SerpAPIRestaurant {
-  title: string;
-  address: string;
-  phone?: string;
-  rating?: number;
-  reviews?: number;
-  price?: string;
-  hours?: any;
-  website?: string;
-  type?: string;
-  thumbnail?: string;
-  latitude?: number;
-  longitude?: number;
-  place_id?: string;
-  gps_coordinates?: {
-    latitude: number;
-    longitude: number;
-  };
-  link?: string;
-}
-
-async function scrapeGoogleMaps(query: string, location: string = "Houston, TX", coordinates?: string) {
+async function scrapeGoogleMaps(query: string, _location: string = "Houston, TX", coordinates?: string) {
   try {
     const apiKey = process.env.SERPAPI_KEY;
     if (!apiKey) {
