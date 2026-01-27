@@ -9,6 +9,9 @@ import { Reveal } from "@/components/layout/Reveal";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { CuisineFilterClient } from "@/components/home/CuisineFilterClient";
+import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
+import * as fs from "node:fs";
+import * as path from "node:path";
 
 type FeaturedRestaurant = {
   id: string;
@@ -108,8 +111,22 @@ async function getFeaturedRestaurants(): Promise<FeaturedRestaurant[]> {
   }
 }
 
+function loadRestaurantsFromJSON(): any[] {
+  try {
+    const filePath = path.join(process.cwd(), "data", "restaurants.json");
+    if (fs.existsSync(filePath)) {
+      const fileContent = fs.readFileSync(filePath, "utf-8");
+      return JSON.parse(fileContent);
+    }
+  } catch (error) {
+    console.error("[Homepage] Error loading restaurants.json:", error);
+  }
+  return [];
+}
+
 export default async function MainHomePage() {
   const featured = await getFeaturedRestaurants();
+  const restaurantsFromJSON = loadRestaurantsFromJSON();
 
   return (
     <main>
@@ -207,29 +224,18 @@ export default async function MainHomePage() {
         </div>
       </Section>
 
-      {/* Popular cities */}
+      {/* Trending cities */}
       <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-20">
         <Reveal>
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Popular cities</h2>
-            <p className="mt-2 text-muted-foreground">Find top African & Caribbean dining in major US markets.</p>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Trending cities</h2>
+            <p className="mt-2 text-muted-foreground">Discover African & Caribbean restaurants by city.</p>
           </div>
         </Reveal>
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {CITIES.map((c) => (
-            <Reveal key={c.label}>
-              <Link href={c.href} className="block">
-                <Card className="group">
-                  <CardHeader className="py-5">
-                    <CardTitle className="text-base">{c.label}</CardTitle>
-                    <CardDescription className="group-hover:text-foreground">Browse restaurants</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal className="mt-6">
+          <TrendingCitiesClient restaurants={restaurantsFromJSON} />
+        </Reveal>
       </section>
 
       {/* How it works */}
