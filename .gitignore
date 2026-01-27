@@ -28,6 +28,10 @@
 import-credentials.txt
 import-results.json
 
+# scraped data (never commit)
+data/serpapi-*.json
+!data/seed/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

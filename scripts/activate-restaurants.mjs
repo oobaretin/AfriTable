@@ -1,10 +1,13 @@
 #!/usr/bin/env node
-import nextEnv from "@next/env";
+import { config } from "dotenv";
 import { createClient } from "@supabase/supabase-js";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 
-// Load `.env*` files (including `.env.local`) like Next.js does.
-const { loadEnvConfig } = nextEnv;
-loadEnvConfig(process.cwd());
+// Load environment variables from .env.local
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+config({ path: join(__dirname, "..", ".env.local") });
 
 function requireEnv(name) {
   const v = process.env[name];
