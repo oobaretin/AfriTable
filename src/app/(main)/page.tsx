@@ -12,6 +12,7 @@ import { CuisineFilterClient } from "@/components/home/CuisineFilterClient";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
 import { RestaurantSearchBar } from "@/components/search/RestaurantSearchBar";
 import { RestaurantGrid } from "@/components/home/RestaurantGrid";
+import { RestaurantOwnerCTA } from "@/components/home/RestaurantOwnerCTA";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
@@ -374,20 +375,10 @@ export default async function MainHomePage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Restaurant Owner CTA */}
       <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
         <Reveal>
-          <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-[oklch(0.98_0_0)] via-[oklch(0.94_0.05_80)] to-[oklch(0.92_0.05_145)]">
-            <CardHeader className="md:flex-row md:items-center md:justify-between">
-              <div className="space-y-1">
-                <CardTitle>Own a restaurant?</CardTitle>
-                <CardDescription>Join AfriTable and connect with diners across America.</CardDescription>
-              </div>
-              <Button asChild className="mt-4 md:mt-0">
-                <Link href="/restaurant-signup">Get started</Link>
-              </Button>
-            </CardHeader>
-          </Card>
+          <RestaurantOwnerCTA />
         </Reveal>
       </section>
     </main>
