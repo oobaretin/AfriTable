@@ -1,13 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { createSupabasePublicClient } from "@/lib/supabase/public";
-import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { HeroSearch } from "@/components/restaurant/HeroSearch";
 import { Reveal } from "@/components/layout/Reveal";
 import { Section } from "@/components/layout/Section";
-import { CuisineFilterClient } from "@/components/home/CuisineFilterClient";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
 import { RestaurantGrid } from "@/components/home/RestaurantGrid";
 import { RestaurantResults } from "@/components/home/RestaurantResults";
@@ -22,165 +19,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 
-type FeaturedRestaurant = {
-  id: string;
-  name: string;
-  slug: string;
-  cuisine_types: string[];
-  price_range: number;
-  address: unknown;
-  images: string[];
-  created_at: string;
-  avg_rating: number | null;
-  review_count: number;
-  vibe_tags?: string[] | null;
-};
-
-const CUISINES: { label: string; href: string }[] = [
-  { label: "Nigerian", href: "/restaurants?cuisine=Nigerian" },
-  { label: "Ethiopian", href: "/restaurants?cuisine=Ethiopian" },
-  { label: "Ghanaian", href: "/restaurants?cuisine=Ghanaian" },
-  { label: "Senegalese", href: "/restaurants?cuisine=Senegalese" },
-  { label: "Somali", href: "/restaurants?cuisine=Somali" },
-  { label: "Eritrean", href: "/restaurants?cuisine=Eritrean" },
-  { label: "South African", href: "/restaurants?cuisine=South%20African" },
-  { label: "Kenyan", href: "/restaurants?cuisine=Kenyan" },
-  { label: "Jamaican", href: "/restaurants?cuisine=Jamaican" },
-  { label: "Trinidadian", href: "/restaurants?cuisine=Trinidadian" },
-  { label: "Haitian", href: "/restaurants?cuisine=Haitian" },
-  { label: "Other African", href: "/restaurants?cuisine=Other%20African" },
-  { label: "Other Caribbean", href: "/restaurants?cuisine=Other%20Caribbean" },
-];
-
-
-async function getFeaturedRestaurants(): Promise<FeaturedRestaurant[]> {
-  const supabase = createSupabasePublicClient();
-
-  try {
-    // Prefer explicitly featured restaurants that haven't expired.
-    const nowIso = new Date().toISOString();
-    const featuredQuery = await supabase
-      .from("restaurants_with_rating")
-      .select("id,name,slug,cuisine_types,price_range,address,images,created_at,avg_rating,review_count")
-      .eq("is_active", true)
-      .eq("is_featured", true)
-      .or(`featured_until.is.null,featured_until.gt.${nowIso}`)
-      .order("avg_rating", { ascending: false, nullsFirst: false })
-      .order("created_at", { ascending: false })
-      .limit(12);
-
-    if (featuredQuery.error) {
-      console.error("[Homepage] Error fetching featured restaurants:", {
-        message: featuredQuery.error.message,
-        details: featuredQuery.error.details,
-        hint: featuredQuery.error.hint,
-        code: featuredQuery.error.code,
-      });
-    }
-
-    const featured = (featuredQuery.data ?? []) as FeaturedRestaurant[];
-    if (featured.length) {
-      console.log(`[Homepage] Found ${featured.length} featured restaurants`);
-      return featured;
-    }
-
-    // Fallback: top-rated active restaurants.
-    const { data, error } = await supabase
-      .from("restaurants_with_rating")
-      .select("id,name,slug,cuisine_types,price_range,address,images,created_at,avg_rating,review_count")
-      .eq("is_active", true)
-      .order("avg_rating", { ascending: false, nullsFirst: false })
-      .order("created_at", { ascending: false })
-      .limit(12);
-
-    if (error) {
-      console.error("[Homepage] Error fetching restaurants:", {
-        message: error.message,
-        details: error.details,
-        hint: error.hint,
-        code: error.code,
-      });
-      return [];
-    }
-
-    console.log(`[Homepage] Found ${data?.length || 0} restaurants (fallback query)`);
-    return (data ?? []) as FeaturedRestaurant[];
-  } catch (err) {
-    console.error("[Homepage] Unexpected error:", err);
-    return [];
-  }
-}
-
-
 // loadRestaurantsFromJSON is now imported from restaurant-json-loader-server
-
-function getFeaturedRestaurantsFromJSON(): FeaturedRestaurant[] {
-  const jsonRestaurants = loadRestaurantsFromJSON();
-  
-  // Priority restaurants to show first
-  const priorityNames = ["Tatiana", "Swahili Village", "Apt 4B"];
-  
-  // Filter for restaurants with price_range "$$$"
-  const premiumRestaurants = jsonRestaurants.filter((r) => r.price_range === "$$$");
-  
-  // Sort: priority restaurants first, then others
-  const sortedRestaurants = premiumRestaurants.sort((a, b) => {
-    const aIndex = priorityNames.findIndex(name => a.name.includes(name) || name.includes(a.name));
-    const bIndex = priorityNames.findIndex(name => b.name.includes(name) || name.includes(b.name));
-    
-    if (aIndex !== -1 && bIndex !== -1) {
-      return aIndex - bIndex; // Both are priority, maintain order
-    }
-    if (aIndex !== -1) return -1; // a is priority
-    if (bIndex !== -1) return 1; // b is priority
-    return 0; // Neither is priority, maintain original order
-  });
-  
-  // Transform JSON format to FeaturedRestaurant format
-  return sortedRestaurants.map((r) => {
-    // Convert price_range string to number: "$" = 1, "$$" = 2, "$$$" = 3, "$$$$" = 4
-    const priceRangeMap: Record<string, number> = {
-      $: 1,
-      $$: 2,
-      $$$: 3,
-      $$$$: 4,
-    };
-    
-    // Parse address string to extract city/state if needed
-    let addressObj: unknown = r.address;
-    if (typeof r.address === "string") {
-      const parts = r.address.split(",").map((s) => s.trim());
-      if (parts.length >= 2) {
-        const cityState = parts[1];
-        const cityMatch = cityState.match(/^([^,]+)/);
-        const stateMatch = cityState.match(/\b([A-Z]{2})\b/);
-        addressObj = {
-          street: parts[0],
-          city: cityMatch ? cityMatch[1].trim() : cityState,
-          state: stateMatch ? stateMatch[1] : null,
-          zip: parts.length > 2 ? parts[2] : null,
-        };
-      } else {
-        addressObj = { street: r.address };
-      }
-    }
-    
-    return {
-      id: r.id,
-      name: r.name,
-      slug: r.id, // Use id as slug
-      cuisine_types: [r.cuisine], // Convert single cuisine string to array
-      price_range: priceRangeMap[r.price_range] || 3,
-      address: addressObj,
-      images: r.images || [],
-      created_at: new Date().toISOString(), // Use current date as fallback
-      avg_rating: r.rating || null,
-      review_count: 0, // JSON doesn't have review count
-      vibe_tags: (r as any).vibe_tags || null, // Include vibe tags if available
-      region: (r as any).region || null, // Include region field for color mapping
-    };
-  });
-}
 
 function loadHomeConfig() {
   try {
@@ -196,13 +35,6 @@ function loadHomeConfig() {
 }
 
 export default async function MainHomePage() {
-  // Get featured restaurants from JSON (filtered for $$$ price range)
-  const featuredFromJSON = getFeaturedRestaurantsFromJSON();
-  
-  // Fallback to Supabase if no JSON restaurants found
-  const featuredFromDB = await getFeaturedRestaurants();
-  const featured = featuredFromJSON.length > 0 ? featuredFromJSON : featuredFromDB;
-  
   const restaurantsFromJSON = loadRestaurantsFromJSON();
   const homeConfig = loadHomeConfig();
 
@@ -251,33 +83,6 @@ export default async function MainHomePage() {
       </div>
 
       <Separator />
-
-      {/* Featured */}
-      <Section>
-        <Reveal>
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Featured restaurants</h2>
-              <p className="mt-2 text-muted-foreground">
-                Handpicked spots with bold flavors, great vibes, and easy reservations.
-              </p>
-            </div>
-            <Button asChild variant="outline" className="hidden md:inline-flex">
-              <Link href="/restaurants">View all</Link>
-            </Button>
-          </div>
-        </Reveal>
-
-        <Reveal className="mt-6">
-          <CuisineFilterClient restaurants={featured} />
-        </Reveal>
-
-        <div className="mt-2 md:hidden">
-          <Button asChild variant="outline" className="w-full">
-            <Link href="/restaurants">View all restaurants</Link>
-          </Button>
-        </div>
-      </Section>
 
       {/* Local Pulse Section */}
       {homeConfig?.localPulse?.messages && (
