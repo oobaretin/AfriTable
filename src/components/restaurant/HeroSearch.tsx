@@ -75,22 +75,28 @@ export function HeroSearch() {
       </div>
 
       {/* 3. THE "wonderful" LAYOUT */}
-      <div className="relative z-10 flex items-center justify-center gap-6 md:gap-14 px-6">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto flex items-center justify-center gap-6 md:gap-14 px-6">
         
         {/* LEFT: Typing Cuisine Name */}
-        <div className="h-[12vw] w-[38vw] flex items-center justify-end">
-          <h2 className="text-[9vw] font-black text-[#C69C2B] leading-none tracking-tighter uppercase text-right">
+        <div className="h-[12vw] max-h-[180px] w-[38vw] max-w-[600px] flex items-center justify-end">
+          <h2 
+            className="font-black text-[#C69C2B] leading-none tracking-tighter uppercase text-right"
+            style={{ fontSize: 'clamp(60px, 9vw, 140px)' }}
+          >
             {displayText}
             <span className="animate-pulse border-r-4 border-[#C69C2B] ml-2 inline-block h-[0.8em]"></span>
           </h2>
         </div>
 
         {/* THE RED SPINE */}
-        <div className="w-3 md:w-5 h-[22vw] bg-[#A33B32] shadow-[0_0_50px_rgba(163,59,50,0.5)] rounded-full"></div>
+        <div className="w-3 md:w-5 h-[22vw] max-h-[300px] bg-[#A33B32] shadow-[0_0_50px_rgba(163,59,50,0.5)] rounded-full"></div>
 
         {/* RIGHT: Ultimate Dining */}
-        <div className="w-[38vw] text-left">
-          <h1 className="text-[9vw] font-black text-white leading-[0.85] tracking-tighter uppercase italic">
+        <div className="w-[38vw] max-w-[600px] text-left">
+          <h1 
+            className="font-black text-white leading-[0.85] tracking-tighter uppercase italic"
+            style={{ fontSize: 'clamp(60px, 9vw, 140px)' }}
+          >
             ULTIMATE <br/> DINING
           </h1>
         </div>
