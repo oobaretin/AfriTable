@@ -552,6 +552,7 @@
     "price_range": "$$$",
     "rating": 4.8,
     "address": "Downtown, Houston, TX",
+    "phone": "(281) 747-7500",
     "about": "Accessible West African flavors for the modern palate.",
     "vibe_tags": ["Contemporary Heritage"]
   },
@@ -597,6 +598,7 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "Westchase, Houston, TX",
+    "phone": "(713) 774-2700",
     "about": "The ultimate destination for authentic pounded yam.",
     "vibe_tags": ["Premium Traditional"]
   },
