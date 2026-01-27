@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Reveal } from "@/components/layout/Reveal";
 import { CategoryFilterWrapper } from "@/components/home/CategoryFilterWrapper";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 
@@ -7,7 +6,7 @@ export default function RestaurantsPage() {
   const restaurantsFromJSON = loadRestaurantsFromJSON();
 
   return (
-    <main>
+    <main className="min-h-screen bg-[#050A18]">
       {/* Sankofa Brand Bridge Separator */}
       <div className="py-12 bg-[#050A18]">
         <div className="mx-auto max-w-6xl px-6">
@@ -53,11 +52,9 @@ export default function RestaurantsPage() {
       </div>
 
       {/* Restaurant Grid - Shows filtered results or all restaurants */}
-      <div className="pb-16 bg-[#050A18]">
+      <div className="pb-16 bg-[#050A18] min-h-screen">
         <div className="mx-auto max-w-6xl px-6">
-          <Reveal>
-            <CategoryFilterWrapper restaurants={restaurantsFromJSON} />
-          </Reveal>
+          <CategoryFilterWrapper restaurants={restaurantsFromJSON} />
         </div>
       </div>
     </main>

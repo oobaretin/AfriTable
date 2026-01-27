@@ -3,6 +3,7 @@
 import * as React from "react";
 import { useSearchParams } from "next/navigation";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
+import { RestaurantCardSkeleton } from "./RestaurantCardSkeleton";
 import { transformJSONRestaurantToDetail, type JSONRestaurant } from "@/lib/restaurant-json-loader";
 
 type RestaurantGridProps = {
@@ -97,33 +98,44 @@ export function RestaurantGrid({
     return filteredJSONRestaurants.map((r) => transformJSONRestaurantToDetail(r));
   }, [filteredJSONRestaurants]);
 
+  // Always show grid structure to prevent layout collapse
+  const isLoading = transformedRestaurants.length === 0 && jsonRestaurants.length > 0;
+  const hasResults = transformedRestaurants.length > 0;
+
   return (
     <div className="w-full min-h-screen">
-      {/* Restaurant Grid - 3 columns with fade transition */}
-      {transformedRestaurants.length > 0 ? (
-        <div 
-          key={activeCategory}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in duration-300"
-        >
-          {transformedRestaurants.map((restaurant, index) => (
+      {/* Restaurant Grid - Always display grid structure */}
+      <div 
+        key={`${activeCategory}-${activeCity}`}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        {isLoading ? (
+          // Show skeleton loaders while filtering
+          Array.from({ length: 6 }).map((_, i) => (
+            <RestaurantCardSkeleton key={`skeleton-${i}`} />
+          ))
+        ) : hasResults ? (
+          // Show actual restaurant cards
+          transformedRestaurants.map((restaurant, index) => (
             <RestaurantCard
               key={restaurant.id}
               restaurant={restaurant}
               href={`/restaurants/${restaurant.slug}`}
               index={index}
             />
-          ))}
-        </div>
-      ) : (
-        <div className="text-center py-16 animate-in fade-in duration-300">
-          <p className="text-white/70 text-lg mb-2">
-            No destinations match your selection.
-          </p>
-          <p className="text-white/50 text-sm">
-            Explore another city?
-          </p>
-        </div>
-      )}
+          ))
+        ) : (
+          // Show empty state (but keep grid structure)
+          <div className="col-span-full text-center py-16">
+            <p className="text-white/70 text-lg mb-2">
+              No destinations match your selection.
+            </p>
+            <p className="text-white/50 text-sm">
+              Explore another city?
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

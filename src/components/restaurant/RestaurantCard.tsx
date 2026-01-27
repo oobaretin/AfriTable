@@ -119,7 +119,7 @@ export function RestaurantCard({
     <div className="group cursor-pointer overflow-hidden rounded-xl bg-white transition-all hover:shadow-xl border border-slate-100">
       {/* Image Container */}
       <Link href={safeHref} className="block">
-        <div className="relative w-full overflow-hidden aspect-[4/3] bg-slate-200">
+        <div className="relative w-full overflow-hidden aspect-[4/3] bg-white/5">
           <Image
             src={imgSrc}
             alt={restaurant.name}
