@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-brand-dark">
+    <footer className="border-t bg-brand-dark text-white">
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-12">
           {/* Brand */}
@@ -22,12 +22,12 @@ export default function Footer() {
               />
               <span className="sr-only">AfriTable</span>
             </Link>
-            <p className="mt-3 text-sm text-muted-foreground">
+            <p className="mt-3 text-sm text-slate-300">
               Discover and reserve authentic African &amp; Caribbean dining experiences across America.
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border bg-background/60 text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 bg-slate-800/60 text-slate-300 transition-colors hover:bg-slate-700 hover:text-white"
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
@@ -36,7 +36,7 @@ export default function Footer() {
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border bg-background/60 text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 bg-slate-800/60 text-slate-300 transition-colors hover:bg-slate-700 hover:text-white"
                 href="https://x.com"
                 target="_blank"
                 rel="noreferrer"
@@ -45,7 +45,7 @@ export default function Footer() {
                 <Twitter className="h-4 w-4" />
               </a>
               <a
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border bg-background/60 text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 bg-slate-800/60 text-slate-300 transition-colors hover:bg-slate-700 hover:text-white"
                 href="https://youtube.com"
                 target="_blank"
                 rel="noreferrer"
@@ -56,87 +56,87 @@ export default function Footer() {
             </div>
 
             <div className="mt-6 grid gap-2">
-              <div className="text-xs font-semibold uppercase tracking-wide text-foreground/90">Get the app</div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Get the app</div>
               <div className="flex flex-wrap gap-2">
-                <Button variant="outline" size="sm" className="gap-2 bg-background/60">
+                <Button variant="outline" size="sm" className="gap-2 bg-slate-800/60 border-slate-700 text-slate-300 hover:bg-slate-700 hover:text-white">
                   <Apple className="h-4 w-4" />
                   App Store
                 </Button>
-                <Button variant="outline" size="sm" className="gap-2 bg-background/60">
+                <Button variant="outline" size="sm" className="gap-2 bg-slate-800/60 border-slate-700 text-slate-300 hover:bg-slate-700 hover:text-white">
                   <Smartphone className="h-4 w-4" />
                   Google Play
                 </Button>
               </div>
-              <div className="text-xs text-muted-foreground">Coming soon • join the newsletter for launch updates.</div>
+              <div className="text-xs text-slate-400">Coming soon • join the newsletter for launch updates.</div>
             </div>
           </div>
 
           {/* Link columns */}
           <div className="grid gap-6 sm:grid-cols-2 md:col-span-8 md:grid-cols-4">
             <div className="text-sm">
-              <div className="text-xs font-semibold uppercase tracking-wide text-foreground/90">Discover</div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Discover</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/restaurants">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/restaurants">
                 Find restaurants
               </Link>
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/restaurants?city=Houston%2C%20TX">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/restaurants?city=Houston%2C%20TX">
                 Houston
               </Link>
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/restaurants?city=Atlanta%2C%20GA">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/restaurants?city=Atlanta%2C%20GA">
                 Atlanta
               </Link>
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/restaurants?city=New%20York%2C%20NY">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/restaurants?city=New%20York%2C%20NY">
                 New York City
               </Link>
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/restaurants?cuisine=Nigerian">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/restaurants?cuisine=Nigerian">
                 Nigerian cuisine
               </Link>
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/restaurants?cuisine=Jamaican">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/restaurants?cuisine=Jamaican">
                 Jamaican cuisine
               </Link>
               </div>
             </div>
 
             <div className="text-sm">
-              <div className="text-xs font-semibold uppercase tracking-wide text-foreground/90">For restaurants</div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">For restaurants</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/restaurant-signup">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/restaurant-signup">
                 Join AfriTable
               </Link>
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/dashboard">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/dashboard">
                 Owner dashboard
               </Link>
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/about">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/about">
                 Why AfriTable
               </Link>
               </div>
             </div>
 
             <div className="text-sm">
-              <div className="text-xs font-semibold uppercase tracking-wide text-foreground/90">Company</div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Company</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/about">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/about">
                 About
               </Link>
-              <a className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="mailto:support@afritable.com">
+              <a className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="mailto:support@afritable.com">
                 Contact support
               </a>
-              <a className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="mailto:partners@afritable.com">
+              <a className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="mailto:partners@afritable.com">
                 Partnerships
               </a>
               </div>
             </div>
 
             <div className="text-sm">
-              <div className="text-xs font-semibold uppercase tracking-wide text-foreground/90">Legal</div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Legal</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/terms">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/terms">
                 Terms
               </Link>
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/privacy">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/privacy">
                 Privacy
               </Link>
-              <Link className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4" href="/cookies">
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/cookies">
                 Cookies
               </Link>
               </div>
@@ -144,31 +144,31 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t pt-10">
+        <div className="mt-10 border-t border-slate-800 pt-10">
           <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
-            <div className="rounded-2xl border bg-background/40 p-5">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
               <FooterExpandedLists />
             </div>
           </div>
           <div className="md:col-span-5">
-            <div className="rounded-2xl border bg-background/60 p-5 shadow-sm">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 shadow-sm">
               <NewsletterSignup />
             </div>
           </div>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-slate-800 pt-6 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} AfriTable. All rights reserved.</div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <Link className="hover:text-foreground hover:underline underline-offset-4" href="/terms">
+            <Link className="hover:text-white hover:underline underline-offset-4" href="/terms">
               Terms
             </Link>
-            <Link className="hover:text-foreground hover:underline underline-offset-4" href="/privacy">
+            <Link className="hover:text-white hover:underline underline-offset-4" href="/privacy">
               Privacy
             </Link>
-            <Link className="hover:text-foreground hover:underline underline-offset-4" href="/cookies">
+            <Link className="hover:text-white hover:underline underline-offset-4" href="/cookies">
               Cookies
             </Link>
           </div>
