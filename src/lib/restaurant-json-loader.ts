@@ -1,5 +1,5 @@
-import * as fs from "node:fs";
-import * as path from "node:path";
+// Client-safe utilities for transforming JSON restaurant data
+// Server-only functions are in restaurant-json-loader-server.ts
 
 export type JSONRestaurant = {
   id: string;
@@ -21,26 +21,8 @@ export type JSONRestaurant = {
   cultural_roots?: string;
   menu_highlights?: string[];
   images?: string[];
-  vibe_tags?: string[]; // Vibe tags like "Fine Dining", "Casual", "Upscale", etc.
+  vibe_tags?: string[];
 };
-
-export function loadRestaurantsFromJSON(): JSONRestaurant[] {
-  try {
-    const filePath = path.join(process.cwd(), "data", "restaurants.json");
-    if (fs.existsSync(filePath)) {
-      const fileContent = fs.readFileSync(filePath, "utf-8");
-      return JSON.parse(fileContent);
-    }
-  } catch (error) {
-    console.error("[RestaurantJSONLoader] Error loading restaurants.json:", error);
-  }
-  return [];
-}
-
-export function getRestaurantByIdFromJSON(id: string): JSONRestaurant | null {
-  const restaurants = loadRestaurantsFromJSON();
-  return restaurants.find((r) => r.id === id) || null;
-}
 
 // Extract city from address string
 function extractCity(address: string): string {

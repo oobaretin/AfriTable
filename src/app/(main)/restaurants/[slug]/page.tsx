@@ -18,7 +18,8 @@ import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { ReviewsSection } from "@/components/restaurant/ReviewsSection";
 import { generateDefaultContent } from "@/lib/restaurant-content-helpers";
 import { formatTimeRange12h } from "@/lib/utils/time-format";
-import { getRestaurantByIdFromJSON, transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
+import { getRestaurantByIdFromJSON } from "@/lib/restaurant-json-loader-server";
+import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 
 type RestaurantDetail = {
   id: string;
