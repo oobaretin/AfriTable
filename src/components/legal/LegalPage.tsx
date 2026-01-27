@@ -56,7 +56,7 @@ export function LegalPage({ title, lastUpdated, children, sections = [] }: Legal
             </div>
 
             {/* Main Content Rendered Here */}
-            <article className="prose prose-slate prose-orange max-w-none prose-headings:font-black prose-headings:tracking-tight prose-p:text-slate-600 prose-li:text-slate-600">
+            <article className="prose prose-slate prose-orange max-w-none prose-headings:font-black prose-headings:tracking-tight prose-headings:text-slate-900 prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-ul:list-disc prose-ol:list-decimal prose-li:my-2 prose-strong:text-slate-900 prose-strong:font-semibold">
               {children}
             </article>
           </div>
