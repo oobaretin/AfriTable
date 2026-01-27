@@ -3,69 +3,34 @@
 import * as React from "react";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { transformJSONRestaurantToDetail, type JSONRestaurant } from "@/lib/restaurant-json-loader";
+import { CategoryFilter } from "./CategoryFilter";
 
 type RestaurantGridProps = {
   restaurants: JSONRestaurant[];
 };
 
 export function RestaurantGrid({ restaurants: jsonRestaurants }: RestaurantGridProps) {
-  const [selectedCuisine, setSelectedCuisine] = React.useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = React.useState<string>("All");
 
   // Transform JSON restaurants to RestaurantCard format
   const restaurants = React.useMemo(() => {
     return jsonRestaurants.map((r) => transformJSONRestaurantToDetail(r));
   }, [jsonRestaurants]);
 
-  // Get unique cuisines from restaurants
-  const cuisines = React.useMemo(() => {
-    const cuisineSet = new Set<string>();
-    restaurants.forEach((r) => {
-      if (r.cuisine_types && Array.isArray(r.cuisine_types)) {
-        r.cuisine_types.forEach((c: string) => cuisineSet.add(c));
-      }
-    });
-    return Array.from(cuisineSet).sort();
-  }, [restaurants]);
-
-  // Filter restaurants by selected cuisine
+  // Filter restaurants by selected category
   const filteredRestaurants = React.useMemo(() => {
-    if (!selectedCuisine) {
+    if (activeCategory === "All") {
       return restaurants;
     }
     return restaurants.filter((r) =>
-      (r.cuisine_types || []).some((c: string) => c.toLowerCase() === selectedCuisine.toLowerCase())
+      (r.cuisine_types || []).some((c: string) => c.toLowerCase() === activeCategory.toLowerCase())
     );
-  }, [restaurants, selectedCuisine]);
+  }, [restaurants, activeCategory]);
 
   return (
     <div className="w-full">
-      {/* Browse by Cuisine Filter */}
-      <div className="mb-8 flex flex-wrap items-center gap-3">
-        <span className="text-sm font-medium text-slate-600">Browse by Cuisine:</span>
-        <button
-          onClick={() => setSelectedCuisine(null)}
-          className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
-            selectedCuisine === null
-              ? "bg-orange-600 text-white shadow-md"
-              : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-          }`}
-        >
-          All
-        </button>
-        {cuisines.map((cuisine) => (
-          <button
-            key={cuisine}
-            onClick={() => setSelectedCuisine(cuisine)}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
-              selectedCuisine === cuisine
-                ? "bg-orange-600 text-white shadow-md"
-                : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-            }`}
-          >
-            {cuisine}
-          </button>
-        ))}
-      </div>
+      {/* Category Filter */}
+      <CategoryFilter activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 
       {/* Restaurant Grid - 3 columns */}
       {filteredRestaurants.length > 0 ? (
