@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "cuisines": ["Nigerian", "Ethiopian", "Jamaican", "Haitian", "Ghanaian", "Senegalese"],
+    "baseText": "Discover Authentic",
+    "suffixText": "Dining"
+  },
+  "localPulse": {
+    "messages": [
+      {
+        "type": "trending",
+        "emoji": "🔥",
+        "text": "Trending in Houston: 45 tables booked in the last 24 hours at Omalicha Kitchen.",
+        "city": "Houston"
+      },
+      {
+        "type": "new",
+        "emoji": "🆕",
+        "text": "New Addition: Welcome Dukunoo Jamaican Kitchen to the AfriTable family in Miami.",
+        "city": "Miami"
+      }
+    ]
+  },
+  "howItWorks": {
+    "steps": [
+      {
+        "number": 1,
+        "title": "Discover",
+        "description": "We vet every restaurant for quality and authenticity. No more guessing.",
+        "icon": "🔎"
+      },
+      {
+        "number": 2,
+        "title": "Reserve",
+        "description": "Real-time availability. Your table is actually there when you arrive.",
+        "icon": "🗓️"
+      },
+      {
+        "number": 3,
+        "title": "Celebrate",
+        "description": "Join a community that values the stories behind the spices.",
+        "icon": "🍲"
+      }
+    ],
+    "promise": {
+      "title": "The AfriTable Promise",
+      "description": "We're not just a booking platform—we're a movement. Every reservation supports authentic diaspora-owned businesses and preserves culinary heritage. When you book with us, you're investing in the communities that make these flavors possible."
+    }
+  }
+}

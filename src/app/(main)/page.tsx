@@ -13,6 +13,9 @@ import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
 import { RestaurantSearchBar } from "@/components/search/RestaurantSearchBar";
 import { RestaurantGrid } from "@/components/home/RestaurantGrid";
 import { RestaurantOwnerCTA } from "@/components/home/RestaurantOwnerCTA";
+import { TypewriterText } from "@/components/home/TypewriterText";
+import { LocalPulse } from "@/components/home/LocalPulse";
+import { StickySearch } from "@/components/home/StickySearch";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
@@ -206,6 +209,19 @@ function getFeaturedRestaurantsFromJSON(): FeaturedRestaurant[] {
   });
 }
 
+function loadHomeConfig() {
+  try {
+    const filePath = path.join(process.cwd(), "data", "home_config.json");
+    if (fs.existsSync(filePath)) {
+      const fileContent = fs.readFileSync(filePath, "utf-8");
+      return JSON.parse(fileContent);
+    }
+  } catch (error) {
+    console.error("[Homepage] Error loading home_config.json:", error);
+  }
+  return null;
+}
+
 export default async function MainHomePage() {
   // Get featured restaurants from JSON (filtered for $$$ price range)
   const featuredFromJSON = getFeaturedRestaurantsFromJSON();
@@ -215,9 +231,13 @@ export default async function MainHomePage() {
   const featured = featuredFromJSON.length > 0 ? featuredFromJSON : featuredFromDB;
   
   const restaurantsFromJSON = loadRestaurantsFromJSON();
+  const homeConfig = loadHomeConfig();
 
   return (
     <main>
+      {/* Sticky Search Bar */}
+      <StickySearch />
+      
       {/* Hero */}
       <section className="relative bg-slate-900 py-24 px-6 text-center text-white">
         {/* Abstract Background Texture */}
@@ -231,9 +251,18 @@ export default async function MainHomePage() {
           </Reveal>
           
           <Reveal>
-            <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
-              Discover Authentic <span className="text-orange-500">African</span> & <span className="text-yellow-500">Caribbean</span> Dining
-            </h1>
+            {homeConfig?.hero ? (
+              <TypewriterText
+                words={homeConfig.hero.cuisines}
+                baseText={homeConfig.hero.baseText}
+                suffixText={homeConfig.hero.suffixText}
+                className="text-5xl md:text-7xl font-black mb-6 tracking-tighter"
+              />
+            ) : (
+              <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
+                Discover Authentic <span className="text-orange-500">African</span> & <span className="text-yellow-500">Caribbean</span> Dining
+              </h1>
+            )}
           </Reveal>
           
           <Reveal>
@@ -244,7 +273,7 @@ export default async function MainHomePage() {
           
           {/* Search Component */}
           <Reveal>
-            <div className="flex flex-col md:flex-row gap-2 bg-white p-2 rounded-2xl shadow-2xl max-w-3xl mx-auto">
+            <div id="hero-search" className="flex flex-col md:flex-row gap-2 bg-white p-2 rounded-2xl shadow-2xl max-w-3xl mx-auto">
               <HeroSearch />
             </div>
           </Reveal>
@@ -314,6 +343,11 @@ export default async function MainHomePage() {
           </Button>
         </div>
       </Section>
+
+      {/* Local Pulse Section */}
+      {homeConfig?.localPulse?.messages && (
+        <LocalPulse messages={homeConfig.localPulse.messages} />
+      )}
 
       <Separator />
 
@@ -388,26 +422,56 @@ export default async function MainHomePage() {
           </Reveal>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {[
+            {(homeConfig?.howItWorks?.steps || [
               {
-                title: "Browse & Discover",
-                desc: "Find your favorite African & Caribbean cuisine.",
+                number: 1,
+                title: "Discover",
+                description: "We vet every restaurant for quality and authenticity. No more guessing.",
                 icon: "🔎",
               },
-              { title: "Reserve Your Table", desc: "Book instantly online in seconds.", icon: "🗓️" },
-              { title: "Enjoy Your Meal", desc: "Show up, dine, and celebrate culture.", icon: "🍲" },
-            ].map((s) => (
+              {
+                number: 2,
+                title: "Reserve",
+                description: "Real-time availability. Your table is actually there when you arrive.",
+                icon: "🗓️",
+              },
+              {
+                number: 3,
+                title: "Celebrate",
+                description: "Join a community that values the stories behind the spices.",
+                icon: "🍲",
+              },
+            ]).map((s: any) => (
               <Reveal key={s.title}>
                 <Card className="h-full">
                   <CardHeader>
-                    <div className="mb-2 text-2xl">{s.icon}</div>
+                    <div className="mb-2 flex items-center gap-3">
+                      <div className="text-2xl">{s.icon}</div>
+                      <span className="text-sm font-bold text-orange-600">Step {s.number}</span>
+                    </div>
                     <CardTitle className="text-lg">{s.title}</CardTitle>
-                    <CardDescription>{s.desc}</CardDescription>
+                    <CardDescription>{s.description}</CardDescription>
                   </CardHeader>
                 </Card>
               </Reveal>
             ))}
           </div>
+
+          {/* The AfriTable Promise */}
+          {homeConfig?.howItWorks?.promise && (
+            <Reveal className="mt-12">
+              <Card className="bg-gradient-to-br from-orange-50 to-yellow-50 border-orange-200">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl font-black text-slate-900 mb-3">
+                    {homeConfig.howItWorks.promise.title}
+                  </CardTitle>
+                  <CardDescription className="text-base text-slate-700 leading-relaxed max-w-3xl mx-auto">
+                    {homeConfig.howItWorks.promise.description}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Reveal>
+          )}
         </div>
       </section>
 
