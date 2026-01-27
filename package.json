@@ -23,6 +23,7 @@
     "verify:restaurants": "node scripts/verify-production-restaurants.mjs",
     "list:restaurants": "node scripts/list-all-restaurants.mjs",
     "check:status": "node scripts/check-restaurant-status.mjs",
+    "diagnose": "node scripts/full-diagnostic.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
