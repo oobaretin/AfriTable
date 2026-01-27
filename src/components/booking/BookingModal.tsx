@@ -82,33 +82,36 @@ export function BookingModal({ isOpen, onClose, restaurant }: BookingModalProps)
               <p className="text-sm text-white/70 leading-relaxed max-w-sm mx-auto">
                 We are currently hand-selecting the finest tables for our grand launch.
               </p>
-
-              {/* Restaurant Address and Phone */}
-              {restaurant && (
-                <div className="pt-4 space-y-2 border-t border-white/10">
-                  {/* Address */}
-                  <div className="text-sm text-white/80">
-                    {typeof restaurant.address === "string" 
-                      ? restaurant.address 
-                      : (restaurant.address as any)?.street 
-                        ? `${(restaurant.address as any).street}${(restaurant.address as any).city ? `, ${(restaurant.address as any).city}` : ""}${(restaurant.address as any).state ? `, ${(restaurant.address as any).state}` : ""}`
-                        : "Address not available"}
-                  </div>
-                  
-                  {/* Phone Number - Clickable tel: link */}
-                  {restaurant.phone && (
-                    <div className="text-sm">
-                      <a 
-                        href={`tel:${restaurant.phone.replace(/\D/g, "")}`}
-                        className="text-[#C69C2B] hover:text-[#C69C2B]/80 transition-colors font-medium"
-                      >
-                        {restaurant.phone}
-                      </a>
-                    </div>
-                  )}
-                </div>
-              )}
             </div>
+
+            {/* Restaurant Address and Contact Concierge Section */}
+            {restaurant && (
+              <div className="w-full pt-6 border-t border-white/10 space-y-4">
+                {/* Address */}
+                <div className="text-sm text-white/80 leading-relaxed">
+                  {typeof restaurant.address === "string" 
+                    ? restaurant.address 
+                    : (restaurant.address as any)?.street 
+                      ? `${(restaurant.address as any).street}${(restaurant.address as any).city ? `, ${(restaurant.address as any).city}` : ""}${(restaurant.address as any).state ? `, ${(restaurant.address as any).state}` : ""}${(restaurant.address as any).zip ? ` ${(restaurant.address as any).zip}` : ""}`
+                      : "Address not available"}
+                </div>
+
+                {/* Phone Number - Click to Call */}
+                {restaurant.phone && (
+                  <div className="flex flex-col items-center space-y-2 pt-2">
+                    <a 
+                      href={`tel:${restaurant.phone.replace(/\D/g, "")}`}
+                      className="text-2xl md:text-3xl font-light text-white tracking-wider hover:text-[#C69C2B] transition-colors underline underline-offset-4 decoration-[#C69C2B]/50 hover:decoration-[#C69C2B]"
+                    >
+                      {restaurant.phone}
+                    </a>
+                    <p className="text-xs text-white/60 font-medium">
+                      Click to Call
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
