@@ -17,6 +17,7 @@ import { TypewriterText } from "@/components/home/TypewriterText";
 import { LocalPulse } from "@/components/home/LocalPulse";
 import { StickySearch } from "@/components/home/StickySearch";
 import { HeritageSection } from "@/components/home/HeritageSection";
+import { FoundersNote } from "@/components/home/FoundersNote";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
@@ -490,6 +491,9 @@ export default async function MainHomePage() {
           <RestaurantOwnerCTA />
         </Reveal>
       </section>
+
+      {/* Founder's Note - Fixed bottom-right notification */}
+      <FoundersNote />
     </main>
   );
 }
