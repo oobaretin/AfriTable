@@ -73,5 +73,218 @@
     "our_story": "Dedicated to bringing regional flavors of Eastern Nigeria, like Oha and Afang soups, to Houston.",
     "cultural_roots": "Celebrates the industrious spirit of the Igbo people through fresh, earthy ingredients.",
     "menu_highlights": ["Egusi Soup", "Nkwobi", "Seafood Okra"]
+  },
+  {
+    "id": "kokomo-nyc",
+    "name": "Kokomo",
+    "cuisine": "Caribbean Fusion",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "65 Kent Ave, Brooklyn, NY 11249",
+    "phone": "(347) 572-7598",
+    "website": "https://www.kokomonyc.com",
+    "social": { "instagram": "@kokomonyc" },
+    "hours": {
+      "mon_wed": "4:00 PM - 11:00 PM",
+      "thu_fri": "4:00 PM - 1:00 AM",
+      "sat": "11:00 AM - 1:00 AM",
+      "sun": "11:00 AM - 11:00 PM"
+    },
+    "about": "A vibrant, multisensory Caribbean experience in Brooklyn known for high energy and bold, refined island flavors.",
+    "our_story": "Kokomo was designed to celebrate the joy of the Caribbean through food, music, and art, creating a 'vacation in a meal' for every guest.",
+    "cultural_roots": "Inspired by the diverse islands of the West Indies, blending traditional spices with modern Brooklyn flair.",
+    "menu_highlights": ["Koko's Island Pasta", "Wah Gwan Duck Tacos", "Stuffed Plantains"]
+  },
+  {
+    "id": "zanmi-nyc",
+    "name": "Zanmi",
+    "cuisine": "Haitian",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.6,
+    "address": "1206 Nostrand Ave, Brooklyn, NY 11225",
+    "phone": "(718) 676-1336",
+    "website": "https://www.zanminyc.com",
+    "social": { "instagram": "@zanminyc" },
+    "hours": {
+      "tue_thu": "12:00 PM - 10:00 PM",
+      "fri_sat": "12:00 PM - 11:00 PM",
+      "sun": "11:00 AM - 9:00 PM",
+      "mon": "Closed"
+    },
+    "about": "A soulful Haitian kitchen where 'Zanmi' (meaning 'Friend' in Kreyòl) is the core of the dining experience.",
+    "our_story": "Our mission is to showcase the beauty of Haiti through upscale comfort food, moving beyond stereotypes to highlight the depth of our culinary history.",
+    "cultural_roots": "Haitian cuisine is a proud blend of African, French, and Taino traditions, celebrated here through slow-stewed meats and aromatic 'epis'.",
+    "menu_highlights": ["Griot (Fried Pork)", "Oxfail Sliders", "Bouillon Soup"]
+  },
+  {
+    "id": "dukunoo-miami",
+    "name": "Dukunoo Jamaican Kitchen",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$$",
+    "rating": 4.4,
+    "address": "316 NW 24th St, Miami, FL 33127",
+    "phone": "(786) 334-5162",
+    "website": "https://dukunoojamaicankitchen.com",
+    "social": { "instagram": "@dukunookitchen" },
+    "hours": {
+      "tue_thu": "12:00 PM - 11:00 PM",
+      "fri_sat": "12:00 PM - 1:00 AM",
+      "sun": "11:00 AM - 10:00 PM",
+      "mon": "Closed"
+    },
+    "about": "An upscale, artsy Jamaican destination in Wynwood that invites you to 'come for the food, stay for the vibes.'",
+    "our_story": "Named after a traditional sweet treat, Dukunoo offers the 'sweet surprise' of authentic Jamaican wood-fired jerk in a chic, modern setting.",
+    "cultural_roots": "Honors the 'Out of Many, One People' heritage of Jamaica, blending Taino smoke techniques with global presentation.",
+    "menu_highlights": ["Fia Bun Jerk Chicken", "Oxtail Shepherd's Pie", "Escovitch Fish"]
+  },
+  {
+    "id": "apt4b-atlanta",
+    "name": "Apt 4B",
+    "cuisine": "Caribbean Fusion",
+    "region": "Caribbean",
+    "price_range": "$$$",
+    "rating": 4.5,
+    "address": "2293 Peachtree Rd NW, Atlanta, GA 30309",
+    "phone": "(404) 709-2906",
+    "website": "https://apt4batl.com",
+    "social": { "instagram": "@apt4batl" },
+    "hours": {
+      "tue_thu": "5:00 PM - 11:00 PM",
+      "fri_sat": "5:00 PM - 12:00 AM",
+      "sun": "11:00 AM - 10:00 PM",
+      "mon": "Closed"
+    },
+    "about": "A retro-cool, vinyl-filled Caribbean hideaway that feels like an intimate Brooklyn apartment party in the 70s.",
+    "our_story": "We created a space where music and food are inseparable, featuring one of the largest vinyl collections in the South alongside elite fusion dishes.",
+    "cultural_roots": "A 'love letter' to the West Indian diaspora, blending French technique with the soulful spices of the islands.",
+    "menu_highlights": ["Oxtail Hummus", "Tamarind Glazed Short Ribs", "Curry Goat"]
+  },
+  {
+    "id": "blaqhaus-atlanta",
+    "name": "Blaqhaus",
+    "cuisine": "Southern-Caribbean",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.3,
+    "address": "1167 Joseph E. Boone Blvd NW, Atlanta, GA 30314",
+    "phone": "(470) 225-8941",
+    "website": "https://blaqhaus.co",
+    "social": { "instagram": "@blaqhaus_atl" },
+    "hours": {
+      "mon_thu": "4:00 PM - 12:00 AM",
+      "fri": "4:00 PM - 2:00 AM",
+      "sat": "11:00 AM - 2:00 AM",
+      "sun": "11:00 AM - 12:00 AM"
+    },
+    "about": "A fusion of Southern comfort and Caribbean heat, offering a high-energy dining experience in the heart of Atlanta.",
+    "our_story": "Blaqhaus was born from the desire to bridge the gap between Soul Food and Island spices, creating a community hub for food and nightlife.",
+    "cultural_roots": "Celebrates the historical connection between the American South and the Caribbean islands through shared ingredients like corn, greens, and peppers.",
+    "menu_highlights": ["Jerk Chicken & Waffles", "Southern Style Oxtails", "Cajun Pasta"]
+  },
+  {
+    "id": "callaloo-kitchen",
+    "name": "Callaloo Trinidadian Kitchen",
+    "cuisine": "Trinidadian",
+    "region": "Caribbean",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "1639 Flatbush Ave, Brooklyn, NY 11210",
+    "phone": "(718) 677-1773",
+    "website": "N/A",
+    "social": { "instagram": "@callalookitchen" },
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 7:00 PM"
+    },
+    "about": "A no-frills, legendary neighborhood spot serving some of the most authentic Trinidadian street food in NYC.",
+    "our_story": "We keep it simple: authentic recipes from Port of Spain, served with speed and heart to our Brooklyn community.",
+    "cultural_roots": "Trinidadian cuisine is a unique mix of African and Indian heritage, famous for hand-held delights and complex curries.",
+    "menu_highlights": ["Doubles", "Bake and Shark", "Curry Buss Up Shut"]
+  },
+  {
+    "id": "miss-lilys-nyc",
+    "name": "Miss Lily's 7A",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.4,
+    "address": "109 Avenue A, New York, NY 10009",
+    "phone": "(212) 812-1482",
+    "website": "https://www.misslilys.com",
+    "social": { "instagram": "@misslilys" },
+    "hours": {
+      "mon_fri": "12:00 PM - 12:00 AM",
+      "sat_sun": "11:00 AM - 12:00 AM"
+    },
+    "about": "A high-energy Jamaican diner and juice bar with a colorful, island-shack aesthetic in the East Village.",
+    "our_story": "Miss Lily's is a cultural destination where old-school ska meets modern Caribbean cooking, providing a vibrant escape from the city streets.",
+    "cultural_roots": "Honors the roadside 'jerk centers' of Jamaica while adding a cosmopolitan New York energy.",
+    "menu_highlights": ["Jerky Grilled Corn", "Curry Goat", "Hot Pepper Shrimp"]
+  },
+  {
+    "id": "negrit-houston",
+    "name": "Negrit",
+    "cuisine": "Caribbean Fusion",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "3401 Main St, Houston, TX 77002",
+    "phone": "(832) 123-4567",
+    "website": "https://negrithouston.com",
+    "social": { "instagram": "@negrithouston" },
+    "hours": {
+      "tue_sun": "4:00 PM - 11:00 PM",
+      "mon": "Closed"
+    },
+    "about": "A modern Caribbean lounge in Houston's Midtown specializing in creative cocktails and island-inspired small plates.",
+    "our_story": "Negrit was built to offer a sophisticated alternative to island dining, focusing on the craft of the cocktail and the artistry of the platter.",
+    "cultural_roots": "A celebration of the 'Black' (Negrit) influence on global cuisine, focusing specifically on the Afro-Caribbean experience.",
+    "menu_highlights": ["Rum Glazed Pork Belly", "Fried Snapper", "Sweet Plantain Gnocchi"]
+  },
+  {
+    "id": "cane-dc",
+    "name": "Cane",
+    "cuisine": "Trinidadian",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.8,
+    "address": "403 H St NE, Washington, DC 20002",
+    "phone": "(202) 675-2012",
+    "website": "https://www.cane-dc.com",
+    "social": { "instagram": "@cane_dc" },
+    "hours": {
+      "mon_thu": "11:30 AM - 9:00 PM",
+      "fri_sat": "11:30 AM - 10:00 PM",
+      "sun": "Closed"
+    },
+    "about": "Award-winning Trinidadian street food on DC's H Street corridor, focusing on wood-smoked meats and authentic roti.",
+    "our_story": "Chef Peter Prime named the restaurant after the sugar cane that shaped the history and cuisine of his native Trinidad.",
+    "cultural_roots": "Explores the diverse heritage of Trinidad, highlighting the influence of Indian indentured servants and enslaved Africans on the island's flavors.",
+    "menu_highlights": ["Trini Doubles", "Cumin-Spiced Pork", "Tiffin Box Sampler"]
+  },
+  {
+    "id": "pearls-nyc",
+    "name": "Pearl's",
+    "cuisine": "Trinidadian Fusion",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "178 N 8th St, Brooklyn, NY 11211",
+    "phone": "(929) 276-3528",
+    "website": "https://pearlsbkly.com",
+    "social": { "instagram": "@pearlsbkly" },
+    "hours": {
+      "tue_fri": "5:00 PM - 11:00 PM",
+      "sat": "12:00 PM - 12:00 AM",
+      "sun": "12:00 PM - 10:00 PM",
+      "mon": "Closed"
+    },
+    "about": "A chic Williamsburg spot serving 'Trini-style' seafood and tropical cocktails in a bright, beachy atmosphere.",
+    "our_story": "Pearl's is our tribute to the coastal flavors of the islands, designed to bring the warmth of a Caribbean beach house to the middle of Brooklyn.",
+    "cultural_roots": "Focuses on the 'Blue Food' (seafood) traditions of the Caribbean, where fresh catch and island spices rule the table.",
+    "menu_highlights": ["Bake & Shark", "Curry Crab & Dumplings", "Jerk Catfish"]
   }
 ]
