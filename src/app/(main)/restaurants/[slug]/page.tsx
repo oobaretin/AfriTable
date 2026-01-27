@@ -688,6 +688,14 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
               totalReviews={restaurant.review_count}
               histogram={histogram}
               reviews={reviews}
+              restaurantId={restaurant.id}
+              restaurantSlug={restaurant.slug}
+              restaurantName={restaurant.name}
+              jsonRating={(() => {
+                // Try to get rating from restaurants.json
+                const jsonRestaurant = getRestaurantByIdFromJSON(restaurant.slug);
+                return jsonRestaurant?.rating ?? null;
+              })()}
             />
 
             <Separator />

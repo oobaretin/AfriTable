@@ -4,6 +4,7 @@ import * as React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ReviewBreakdown } from "./ReviewBreakdown";
 import { ReviewItem } from "./ReviewItem";
+import { WriteReviewModal } from "./WriteReviewModal";
 
 type Review = {
   id: string;
@@ -19,9 +20,25 @@ type ReviewsSectionProps = {
   totalReviews: number;
   histogram: number[];
   reviews: Review[];
+  restaurantId?: string;
+  restaurantSlug?: string;
+  restaurantName?: string;
+  jsonRating?: number | null; // Rating from restaurants.json
 };
 
-export function ReviewsSection({ rating, totalReviews, histogram, reviews }: ReviewsSectionProps) {
+export function ReviewsSection({
+  rating,
+  totalReviews,
+  histogram,
+  reviews,
+  restaurantId,
+  restaurantSlug,
+  restaurantName,
+  jsonRating,
+}: ReviewsSectionProps) {
+  // Use JSON rating if available, otherwise fall back to database rating
+  const displayRating = jsonRating ?? rating;
+  
   return (
     <section className="w-full">
       <div className="flex items-end justify-between gap-4 mb-6">
@@ -29,15 +46,22 @@ export function ReviewsSection({ rating, totalReviews, histogram, reviews }: Rev
           <h2 className="text-xl font-semibold tracking-tight">Reviews &amp; Ratings</h2>
           <p className="mt-2 text-muted-foreground">What diners are saying.</p>
         </div>
-        <div className="text-sm text-muted-foreground">
-          {rating != null ? (
-            <>
-              <span className="font-medium text-foreground">{rating.toFixed(1)}★</span> •{" "}
-              <span>{totalReviews} reviews</span>
-            </>
-          ) : (
-            "No reviews yet"
-          )}
+        <div className="flex items-center gap-4">
+          <div className="text-sm text-muted-foreground">
+            {displayRating != null ? (
+              <>
+                <span className="font-medium text-foreground">{displayRating.toFixed(1)}★</span> •{" "}
+                <span>{totalReviews} reviews</span>
+              </>
+            ) : (
+              "No reviews yet"
+            )}
+          </div>
+          <WriteReviewModal
+            restaurantId={restaurantId}
+            restaurantSlug={restaurantSlug}
+            restaurantName={restaurantName}
+          />
         </div>
       </div>
 
@@ -51,7 +75,7 @@ export function ReviewsSection({ rating, totalReviews, histogram, reviews }: Rev
       ) : (
         <>
           {/* Review Breakdown */}
-          <ReviewBreakdown rating={rating} totalReviews={totalReviews} histogram={histogram} />
+          <ReviewBreakdown rating={displayRating} totalReviews={totalReviews} histogram={histogram} />
 
           {/* Reviews List */}
           <div>
