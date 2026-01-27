@@ -34,48 +34,6 @@ function extractCity(address: string): string {
   return "";
 }
 
-// Transform JSON restaurant to RestaurantCard format
-function transformRestaurant(r: JSONRestaurant): any {
-  const priceRangeMap: Record<string, number> = {
-    $: 1,
-    $$: 2,
-    $$$: 3,
-    $$$$: 4,
-  };
-
-  // Parse address string to extract city/state if needed
-  let addressObj: unknown = r.address;
-  if (typeof r.address === "string") {
-    const parts = r.address.split(",").map((s) => s.trim());
-    if (parts.length >= 2) {
-      const cityState = parts[1];
-      const cityMatch = cityState.match(/^([^,]+)/);
-      const stateMatch = cityState.match(/\b([A-Z]{2})\b/);
-      addressObj = {
-        street: parts[0],
-        city: cityMatch ? cityMatch[1].trim() : cityState,
-        state: stateMatch ? stateMatch[1] : null,
-        zip: parts.length > 2 ? parts[2] : null,
-      };
-    } else {
-      addressObj = { street: r.address };
-    }
-  }
-
-  return {
-    id: r.id,
-    name: r.name,
-    slug: r.id,
-    cuisine_types: [r.cuisine],
-    price_range: priceRangeMap[r.price_range] || 2,
-    address: addressObj,
-    images: r.images || [],
-    created_at: new Date().toISOString(),
-    avg_rating: r.rating || null,
-    review_count: 0,
-  };
-}
-
 export function RestaurantSearchBar({ restaurants }: RestaurantSearchBarProps) {
   const [searchQuery, setSearchQuery] = React.useState("");
   const [isOpen, setIsOpen] = React.useState(false);

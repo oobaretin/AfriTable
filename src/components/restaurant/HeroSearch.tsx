@@ -15,18 +15,6 @@ const POPULAR_LOCATIONS = [
   "Philadelphia, PA",
 ];
 
-function times30m() {
-  const times: string[] = [];
-  for (let h = 7; h <= 22; h++) {
-    for (const m of [0, 30]) {
-      const hh = String(h).padStart(2, "0");
-      const mm = String(m).padStart(2, "0");
-      times.push(`${hh}:${mm}`);
-    }
-  }
-  return times;
-}
-
 export function HeroSearch() {
   const router = useRouter();
 
