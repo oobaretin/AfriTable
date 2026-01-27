@@ -5,12 +5,9 @@ import { useQuery } from "@tanstack/react-query";
 import { addDays, format } from "date-fns";
 import { useRouter } from "next/navigation";
 import { Calendar } from "@/components/ui/calendar";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { cn } from "@/lib/utils";
 import { formatTime12h } from "@/lib/utils/time-format";
 
 type Slot = {
@@ -27,25 +24,22 @@ type AvailabilityResponse = {
   slots: Slot[];
 };
 
-function slotClasses(status: Slot["status"], selected: boolean) {
-  if (status === "unavailable") return cn("bg-muted text-muted-foreground opacity-60", selected && "ring-2 ring-ring");
-  if (status === "limited") return cn("bg-[oklch(0.94_0.03_80)] text-foreground", selected && "ring-2 ring-ring");
-  return cn("bg-[oklch(0.92_0.05_145)] text-foreground", selected && "ring-2 ring-ring");
-}
-
 export function ReservationWidget({
   restaurantId,
   restaurantSlug,
+  restaurantName,
 }: {
   restaurantId: string;
   restaurantSlug?: string;
+  restaurantName?: string;
 }) {
   const router = useRouter();
   const [date, setDate] = React.useState<Date | undefined>(new Date());
-  const [partySize, setPartySize] = React.useState("2");
+  const [guests, setGuests] = React.useState(2);
   const [selectedTime, setSelectedTime] = React.useState<string | null>(null);
 
   const dateStr = date ? format(date, "yyyy-MM-dd") : format(new Date(), "yyyy-MM-dd");
+  const partySize = String(guests);
 
   const { data, isLoading, isFetching, error, refetch } = useQuery<AvailabilityResponse>({
     queryKey: ["availability", restaurantId, dateStr, partySize],
@@ -74,22 +68,74 @@ export function ReservationWidget({
   }, [dateStr, partySize]);
 
   const slots = data?.slots ?? [];
+  const availableSlots = slots.filter((s) => s.status !== "unavailable");
+
+  const handleReserve = () => {
+    if (!selectedTime || !restaurantSlug) return;
+    const params = new URLSearchParams();
+    params.set("restaurant", restaurantSlug);
+    params.set("date", dateStr);
+    params.set("time", selectedTime);
+    params.set("party", partySize);
+    router.push(`/reservations/new?${params.toString()}`);
+  };
+
+  // Generate time options (7:00 PM - 10:30 PM in 30-min intervals)
+  const timeOptions = React.useMemo(() => {
+    const times: string[] = [];
+    for (let h = 19; h <= 22; h++) {
+      for (const m of [0, 30]) {
+        const hh = String(h).padStart(2, "0");
+        const mm = String(m).padStart(2, "0");
+        times.push(`${hh}:${mm}`);
+      }
+    }
+    return times;
+  }, []);
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Reserve a table</CardTitle>
-        <CardDescription>Pick a date, party size, and time.</CardDescription>
-      </CardHeader>
-      <CardContent className="grid gap-4">
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-          <div className="grid gap-1.5">
-            <span className="text-sm font-medium">Date</span>
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
+      <h3 className="text-xl font-bold text-slate-900 mb-6">
+        {restaurantName ? `Reserve at ${restaurantName}` : "Make a Reservation"}
+      </h3>
+
+      <div className="space-y-4">
+        {/* Guest Count Selector */}
+        <div>
+          <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Guests</label>
+          <div className="flex items-center justify-between rounded-xl border border-slate-200 p-2">
+            <button
+              type="button"
+              onClick={() => setGuests(Math.max(1, guests - 1))}
+              className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 text-slate-600 hover:bg-slate-100 transition-colors"
+            >
+              −
+            </button>
+            <span className="text-lg font-bold text-slate-900">
+              {guests} {guests === 1 ? "Guest" : "Guests"}
+            </span>
+            <button
+              type="button"
+              onClick={() => setGuests(Math.min(20, guests + 1))}
+              className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 text-slate-600 hover:bg-slate-100 transition-colors"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        {/* Date & Time Grid */}
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Date</label>
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="outline" className="w-full justify-start">
-                  {date ? format(date, "EEE, MMM d") : "Pick a date"}
-                </Button>
+                <button
+                  type="button"
+                  className="w-full rounded-xl border border-slate-200 p-3 text-sm font-medium text-left focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all hover:bg-slate-50"
+                >
+                  {date ? format(date, "MMM d, yyyy") : "Select date"}
+                </button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[360px]">
                 <DialogHeader>
@@ -105,97 +151,58 @@ export function ReservationWidget({
               </DialogContent>
             </Dialog>
           </div>
-
-          <div className="grid gap-1.5">
-            <span className="text-sm font-medium">Party size</span>
-            <Select value={partySize} onValueChange={setPartySize}>
-              <SelectTrigger>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {Array.from({ length: 20 }, (_, i) => String(i + 1)).map((n) => (
-                  <SelectItem key={n} value={n}>
-                    {n}
-                  </SelectItem>
-                ))}
-                <SelectItem value="20+">20+</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
-
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-medium">Available times</span>
-          <Button variant="ghost" size="sm" onClick={() => void refetch()} disabled={isFetching}>
-            Refresh
-          </Button>
-        </div>
-
-        {isLoading ? (
-          <div className="grid grid-cols-3 gap-2">
-            {Array.from({ length: 9 }).map((_, i) => (
-              <Skeleton key={i} className="h-9 w-full" />
-            ))}
-          </div>
-        ) : error ? (
-          <div className="grid gap-2">
-            <p className="text-sm text-destructive">Couldn’t load availability.</p>
-            <p className="text-xs text-muted-foreground">{String((error as any)?.message ?? "")}</p>
-          </div>
-        ) : slots.length ? (
-          <div className="grid grid-cols-3 gap-2 sm:gap-2">
-            {slots.map((s) => (
-              <button
-                key={s.time}
-                type="button"
-                disabled={s.status === "unavailable"}
-                className={cn(
-                  "rounded-md px-2 py-2.5 sm:py-2 text-sm font-medium transition hover:brightness-[0.98] disabled:cursor-not-allowed min-h-[44px] sm:min-h-[36px]",
-                  slotClasses(s.status, selectedTime === s.time),
-                )}
-                onClick={() => setSelectedTime(s.time)}
-                title={
-                  s.status === "available"
-                    ? `${s.availableTables} tables available`
-                    : s.status === "limited"
-                      ? `Limited: ${s.availableTables} left`
-                      : "Unavailable"
-                }
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Time</label>
+            {isLoading ? (
+              <Skeleton className="h-[42px] w-full rounded-xl" />
+            ) : (
+              <select
+                value={selectedTime || ""}
+                onChange={(e) => setSelectedTime(e.target.value || null)}
+                className="w-full rounded-xl border border-slate-200 p-3 text-sm font-medium focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all bg-white"
               >
-                {formatTime12h(s.time)}
-              </button>
-            ))}
+                <option value="">Select time</option>
+                {availableSlots.length > 0 ? (
+                  availableSlots.map((slot) => (
+                    <option key={slot.time} value={slot.time}>
+                      {formatTime12h(slot.time)}
+                      {slot.status === "limited" && " (Limited)"}
+                    </option>
+                  ))
+                ) : (
+                  timeOptions.map((time) => (
+                    <option key={time} value={time}>
+                      {formatTime12h(time)}
+                    </option>
+                  ))
+                )}
+              </select>
+            )}
           </div>
-        ) : (
-          <p className="text-sm text-muted-foreground">
-            {data?.eligibleTableCount === 0
-              ? "No tables can accommodate this party size. Try a smaller party."
-              : "No times available for this day."}
-          </p>
+        </div>
+
+        {/* Error Message */}
+        {error && (
+          <div className="rounded-xl border border-red-200 bg-red-50 p-3">
+            <p className="text-sm text-red-600">Couldn&apos;t load availability. Please try again.</p>
+          </div>
         )}
 
-        <div className="grid gap-2">
-          <Button
-            disabled={!selectedTime || !restaurantSlug}
-            type="button"
-            onClick={() => {
-              if (!selectedTime || !restaurantSlug) return;
-              const params = new URLSearchParams();
-              params.set("restaurant", restaurantSlug);
-              params.set("date", dateStr);
-              params.set("time", selectedTime);
-              params.set("party", partySize);
-              router.push(`/reservations/new?${params.toString()}`);
-            }}
-          >
-            Reserve Now
-          </Button>
-          <p className="text-xs text-muted-foreground">
-            Availability updates automatically. Final booking flow will create a reservation record.
-          </p>
-        </div>
-      </CardContent>
-    </Card>
+        {/* Action Button */}
+        <button
+          type="button"
+          onClick={handleReserve}
+          disabled={!selectedTime || !restaurantSlug || isLoading}
+          className="group relative w-full overflow-hidden rounded-xl bg-slate-900 py-4 font-bold text-white transition-all hover:bg-orange-600 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-slate-900"
+        >
+          <span className="relative z-10">Find a Table</span>
+          <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-orange-600 to-orange-500 transition-transform duration-300 group-hover:translate-x-0"></div>
+        </button>
+      </div>
+
+      <p className="mt-4 text-center text-xs text-slate-400">
+        Powered by <span className="font-bold text-orange-500/80 uppercase">AfriTable</span> Secure Booking
+      </p>
+    </div>
   );
 }
-

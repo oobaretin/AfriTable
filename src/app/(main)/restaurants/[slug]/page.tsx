@@ -858,7 +858,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
 
         {/* Right Column - Reservation Widget (Sticky on desktop, normal flow on mobile) */}
         <div className="lg:col-span-4 lg:pl-8 w-full lg:sticky lg:top-4 lg:z-40 lg:self-start lg:h-fit">
-          <ReservationWidget restaurantId={restaurant.id} restaurantSlug={restaurant.slug} />
+          <ReservationWidget restaurantId={restaurant.id} restaurantSlug={restaurant.slug} restaurantName={restaurant.name} />
         </div>
       </div>
 
