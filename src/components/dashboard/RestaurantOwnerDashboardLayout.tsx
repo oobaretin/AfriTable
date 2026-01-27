@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 type RestaurantOwnerDashboardLayoutProps = {
   children: React.ReactNode;
   restaurantName: string;
-  activeTab?: "overview" | "bookings" | "menu" | "reviews" | "settings";
+  activeTab?: "overview" | "bookings" | "menu" | "reviews" | "analytics" | "settings";
 };
 
 export function RestaurantOwnerDashboardLayout({
