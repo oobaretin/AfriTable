@@ -531,5 +531,60 @@
     "our_story": "The Anthony family moved from South Africa to Atlanta with a mission to introduce Americans to the 'finer side' of the continent's southern tip.",
     "cultural_roots": "A sophisticated blend of French, Portuguese, and Indian influences that have simmered in South Africa for centuries.",
     "menu_highlights": ["Sosaties (Curried Lamb Kebabs)", "Boerewors", "Ostrich Medallions"]
+  },
+  {
+    "id": "nyc-001",
+    "name": "Tatiana",
+    "cuisine": "Haitian / Afro-Caribbean",
+    "region": "Caribbean",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "Lincoln Center, New York City, NY",
+    "about": "The intersection of heritage and high-fashion dining.",
+    "vibe_tags": ["Luxury Editorial"]
+  },
+  {
+    "id": "hou-001",
+    "name": "ChopnBlok",
+    "cuisine": "Nigerian / Ghanaian",
+    "region": "West African",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "Downtown, Houston, TX",
+    "about": "Accessible West African flavors for the modern palate.",
+    "vibe_tags": ["Contemporary Heritage"]
+  },
+  {
+    "id": "nyc-002",
+    "name": "Teranga",
+    "cuisine": "Senegalese",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Harlem, New York City, NY",
+    "about": "A love letter to the flavors of the Sahel.",
+    "vibe_tags": ["Cultural Sanctuary"]
+  },
+  {
+    "id": "hou-002",
+    "name": "Ariya Cuisine",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Westchase, Houston, TX",
+    "about": "The ultimate destination for authentic pounded yam.",
+    "vibe_tags": ["Premium Traditional"]
+  },
+  {
+    "id": "nyc-003",
+    "name": "Bunna Cafe",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Bushwick, New York City, NY",
+    "about": "Everything is better when shared with music and coffee.",
+    "vibe_tags": ["Cinematic Communal"]
   }
 ]

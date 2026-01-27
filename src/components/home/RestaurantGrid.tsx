@@ -40,11 +40,13 @@ export function RestaurantGrid({ restaurants: jsonRestaurants }: RestaurantGridP
       });
     }
 
-    // Filter by cuisine category
+    // Filter by cuisine category (handles compound cuisines like "Haitian / Afro-Caribbean")
     if (activeCategory !== "All") {
       filtered = filtered.filter((r) => {
         const cuisine = r.cuisine?.toLowerCase() || "";
-        return cuisine === activeCategory.toLowerCase();
+        const categoryLower = activeCategory.toLowerCase();
+        // Check if cuisine exactly matches or contains the category
+        return cuisine === categoryLower || cuisine.includes(categoryLower);
       });
     }
 
