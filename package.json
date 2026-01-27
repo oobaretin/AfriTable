@@ -31,6 +31,7 @@
     "check:missing-addresses": "node scripts/check-missing-addresses.mjs",
     "update:missing-addresses": "node scripts/update-missing-addresses.mjs",
     "remove:food-trucks": "node scripts/remove-food-trucks.mjs",
+    "check:hours": "node scripts/check-restaurant-hours.mjs",
     "test:api": "node scripts/test-api-query.mjs",
     "build": "next build",
     "start": "next start",

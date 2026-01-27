@@ -75,21 +75,83 @@ function normalizeInstagramUrl(handleOrUrl: string | null | undefined): string {
 type OperatingHour = { day_of_week: number; open_time: string; close_time: string };
 
 function normalizeOperatingHours(input: unknown): OperatingHour[] {
-  const list = Array.isArray(input) ? input : [];
-  return list
-    .map((o: any) => ({
-      day_of_week: Number(o?.day_of_week),
-      open_time: String(o?.open_time ?? ""),
-      close_time: String(o?.close_time ?? ""),
-    }))
-    .filter(
-      (o) =>
-        Number.isFinite(o.day_of_week) &&
-        o.day_of_week >= 0 &&
-        o.day_of_week <= 6 &&
-        /^\d{2}:\d{2}$/.test(o.open_time) &&
-        /^\d{2}:\d{2}$/.test(o.close_time),
-    );
+  // If it's already an array format, process it directly
+  if (Array.isArray(input)) {
+    return input
+      .map((o: any) => ({
+        day_of_week: Number(o?.day_of_week),
+        open_time: String(o?.open_time ?? ""),
+        close_time: String(o?.close_time ?? ""),
+      }))
+      .filter(
+        (o) =>
+          Number.isFinite(o.day_of_week) &&
+          o.day_of_week >= 0 &&
+          o.day_of_week <= 6 &&
+          /^\d{2}:\d{2}$/.test(o.open_time) &&
+          /^\d{2}:\d{2}$/.test(o.close_time),
+      );
+  }
+
+  // If it's an object format (e.g., {monday: {open: "10:00", close: "22:00"}}), convert it
+  if (input && typeof input === "object" && !Array.isArray(input)) {
+    const hoursObj = input as Record<string, any>;
+    const dayMap: Array<[string, number]> = [
+      ["sunday", 0],
+      ["monday", 1],
+      ["tuesday", 2],
+      ["wednesday", 3],
+      ["thursday", 4],
+      ["friday", 5],
+      ["saturday", 6],
+    ];
+
+    const result: OperatingHour[] = [];
+    for (const [dayName, dayOfWeek] of dayMap) {
+      const dayData = hoursObj[dayName] ?? hoursObj[dayName.toLowerCase()] ?? hoursObj[dayName[0].toUpperCase() + dayName.slice(1)];
+      if (!dayData || dayData.closed) continue;
+
+      // Handle different time formats
+      let openTime = dayData.open || dayData.open_time || "";
+      let closeTime = dayData.close || dayData.close_time || "";
+
+      // Convert to HH:mm format if needed
+      if (openTime && !/^\d{2}:\d{2}$/.test(openTime)) {
+        // Try to parse various formats
+        const match = openTime.match(/(\d{1,2}):?(\d{2})?\s*(am|pm)?/i);
+        if (match) {
+          let h = parseInt(match[1], 10);
+          const m = parseInt(match[2] || "0", 10);
+          const period = match[3]?.toLowerCase();
+          if (period === "pm" && h !== 12) h += 12;
+          if (period === "am" && h === 12) h = 0;
+          openTime = `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
+        }
+      }
+      if (closeTime && !/^\d{2}:\d{2}$/.test(closeTime)) {
+        const match = closeTime.match(/(\d{1,2}):?(\d{2})?\s*(am|pm)?/i);
+        if (match) {
+          let h = parseInt(match[1], 10);
+          const m = parseInt(match[2] || "0", 10);
+          const period = match[3]?.toLowerCase();
+          if (period === "pm" && h !== 12) h += 12;
+          if (period === "am" && h === 12) h = 0;
+          closeTime = `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
+        }
+      }
+
+      if (/^\d{2}:\d{2}$/.test(openTime) && /^\d{2}:\d{2}$/.test(closeTime)) {
+        result.push({
+          day_of_week: dayOfWeek,
+          open_time: openTime,
+          close_time: closeTime,
+        });
+      }
+    }
+    return result;
+  }
+
+  return [];
 }
 
 function pickOperatingHours(...candidates: OperatingHour[][]): OperatingHour[] {
