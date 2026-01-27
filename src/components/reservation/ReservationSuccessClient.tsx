@@ -5,7 +5,6 @@ import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { format, parseISO } from "date-fns";
-import confetti from "canvas-confetti";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useQuery } from "@tanstack/react-query";
@@ -40,39 +39,52 @@ export function ReservationSuccessClient() {
   const reservationTime = searchParams.get("time");
   const partySize = searchParams.get("party");
 
-  // Trigger confetti celebration on mount
+  // Trigger confetti celebration on mount (browser-only)
   React.useEffect(() => {
-    const duration = 3 * 1000;
-    const animationEnd = Date.now() + duration;
-    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+    if (typeof window === "undefined") return;
 
-    const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
+    let interval: NodeJS.Timeout | null = null;
 
-    const interval = setInterval(() => {
-      const timeLeft = animationEnd - Date.now();
-      if (timeLeft <= 0) {
-        clearInterval(interval);
-        return;
-      }
+    import("canvas-confetti")
+      .then((mod) => {
+        const confetti = mod.default;
+        const duration = 3 * 1000;
+        const animationEnd = Date.now() + duration;
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
-      const particleCount = 50 * (timeLeft / duration);
-      // Left side confetti
-      confetti({
-        ...defaults,
-        particleCount,
-        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-        colors: ["#A33B32", "#2D5A27", "#C69C2B"], // brand-mutedRed, brand-forest, brand-ochre
+        const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
+
+        interval = setInterval(() => {
+          const timeLeft = animationEnd - Date.now();
+          if (timeLeft <= 0) {
+            if (interval) clearInterval(interval);
+            return;
+          }
+
+          const particleCount = 50 * (timeLeft / duration);
+          // Left side confetti
+          confetti({
+            ...defaults,
+            particleCount,
+            origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+            colors: ["#A33B32", "#2D5A27", "#C69C2B"], // brand-mutedRed, brand-forest, brand-ochre
+          });
+          // Right side confetti
+          confetti({
+            ...defaults,
+            particleCount,
+            origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+            colors: ["#A33B32", "#2D5A27", "#C69C2B"],
+          });
+        }, 250);
+      })
+      .catch(() => {
+        // Silently fail if confetti can't be loaded
       });
-      // Right side confetti
-      confetti({
-        ...defaults,
-        particleCount,
-        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-        colors: ["#A33B32", "#2D5A27", "#C69C2B"],
-      });
-    }, 250);
 
-    return () => clearInterval(interval);
+    return () => {
+      if (interval) clearInterval(interval);
+    };
   }, []);
 
   // Fetch restaurant details
@@ -95,6 +107,7 @@ export function ReservationSuccessClient() {
   });
 
   const formattedDate = reservationDate ? format(parseISO(reservationDate), "EEEE, MMMM d") : "";
+  const formattedDateShort = reservationDate ? format(parseISO(reservationDate), "MMM d") : "";
   const formattedTime = reservationTime
     ? format(parseISO(`2000-01-01T${reservationTime.slice(0, 5)}:00`), "h:mm a")
     : "";
@@ -144,8 +157,8 @@ export function ReservationSuccessClient() {
             <p className="text-xl font-black text-brand-dark uppercase leading-none relative z-10 text-center px-2">
               {restaurant.name.length > 15 ? restaurant.name.slice(0, 12) + "..." : restaurant.name}
             </p>
-            {formattedDate && (
-              <p className="text-[8px] font-bold text-slate-400 mt-2 uppercase relative z-10">{formattedDate}</p>
+            {formattedDateShort && (
+              <p className="text-[8px] font-bold text-slate-400 mt-2 uppercase relative z-10">{formattedDateShort}</p>
             )}
           </div>
           {/* Success Checkmark */}
