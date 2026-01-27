@@ -430,5 +430,105 @@
     "our_story": "We believe that quality African food should be accessible. Our kitchen focuses on the 'Big Three': Jollof, Soup, and Swallow.",
     "cultural_roots": "Representing the pan-African spirit of Houston's Bissonnet district, where food acts as the universal language.",
     "menu_highlights": ["Assorted Meat Stew", "Okra Soup", "Pounded Yam"]
+  },
+  {
+    "id": "adulis-ny",
+    "name": "Adulis",
+    "cuisine": "Eritrean",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.6,
+    "address": "149-10 45th Ave, Flushing, NY 11355",
+    "phone": "(718) 886-2442",
+    "website": "N/A",
+    "social": { "instagram": "@adulis_restaurant" },
+    "hours": {
+      "tue_sun": "12:00 PM - 10:00 PM",
+      "mon": "Closed"
+    },
+    "about": "An authentic Eritrean dining room in Queens known for its warm hospitality and traditional clay-pot cooking.",
+    "our_story": "Named after the ancient port city of Adulis, we aim to bridge the gap between ancient Red Sea history and modern New York through the art of the spice.",
+    "cultural_roots": "Eritrean cuisine shares similarities with Ethiopian food but features unique coastal influences and a distinct blend of 'Tsebhi' (stews) served on injera.",
+    "menu_highlights": ["Zigni (Spicy Beef Stew)", "Hamli (Sautéed Spinach)", "Eritrean Coffee Ceremony"]
+  },
+  {
+    "id": "kulan-cafe-houston",
+    "name": "Kulan Cafe",
+    "cuisine": "Somali",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.5,
+    "address": "8321 Westpark Dr, Houston, TX 77063",
+    "phone": "(713) 952-4441",
+    "website": "N/A",
+    "social": { "instagram": "@kulancafe_houston" },
+    "hours": {
+      "mon_sun": "8:00 AM - 10:00 PM"
+    },
+    "about": "A staple of Houston's Somali community, Kulan Cafe is famous for its massive portions and signature spiced goat.",
+    "our_story": "We built Kulan to be a gathering place—a 'Kulan'—where people can start their day with Somali tea and end it with a mountain of rice and tender meat.",
+    "cultural_roots": "Somali cuisine is a crossroads of flavors from the Horn of Africa, India, and Italy, characterized by the use of 'Xawaash' spice mix and the inevitable banana served on the side.",
+    "menu_highlights": ["Bariis Iskukaris (Spiced Rice)", "Roasted Goat (Hilib Ari)", "Somali Chai"]
+  },
+  {
+    "id": "peli-peli-houston",
+    "name": "Peli Peli South African Kitchen",
+    "cuisine": "South African",
+    "region": "South African",
+    "price_range": "$$$",
+    "rating": 4.5,
+    "address": "5085 Westheimer Rd Suite B2515, Houston, TX 77056",
+    "phone": "(281) 257-9500",
+    "website": "https://www.pelipeli.com",
+    "social": { "instagram": "@pelipeli" },
+    "hours": {
+      "mon_thu": "11:00 AM - 9:00 PM",
+      "fri_sat": "11:00 AM - 10:00 PM",
+      "sun": "11:00 AM - 8:00 PM"
+    },
+    "about": "A high-end dining destination in The Galleria showcasing the 'Rainbow Nation' through bold, Portuguese-influenced flavors.",
+    "our_story": "Peli Peli brings the flavors of South Africa to the US, focusing on the bird's eye chili (Piri Piri) and the diverse melting pot of Cape Town's culinary scene.",
+    "cultural_roots": "Reflects the 'Rainbow Nation' heritage, blending Dutch, Portuguese, and indigenous African flavors into a unique fusion found nowhere else.",
+    "menu_highlights": ["Espetada (Hanging Meat Skewers)", "Bobotie", "South African Melktert"]
+  },
+  {
+    "id": "safari-restaurant-mn",
+    "name": "Safari Restaurant",
+    "cuisine": "Somali",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.7,
+    "address": "3010 4th Ave S, Minneapolis, MN 55408",
+    "phone": "(612) 354-3755",
+    "website": "https://safari-restaurant.com",
+    "social": { "instagram": "@safarirestaurant" },
+    "hours": {
+      "mon_sun": "11:00 AM - 11:00 PM"
+    },
+    "about": "An award-winning Somali upscale restaurant that has become a national landmark for East African cuisine in the Midwest.",
+    "our_story": "Safari was founded to elevate Somali food from casual cafes to a formal dining experience, proving that our traditional recipes belong in the fine-dining world.",
+    "cultural_roots": "Showcases the nomadic heritage of the Somali people, where grilled meats and fragrant rice are staples of hospitality and survival.",
+    "menu_highlights": ["Safari Mango Chicken", "Camel Meat (Seasonal)", "Suqaar (Sautéed Beef)"]
+  },
+  {
+    "id": "10-degrees-south-atl",
+    "name": "10 Degrees South",
+    "cuisine": "South African",
+    "region": "South African",
+    "price_range": "$$$",
+    "rating": 4.6,
+    "address": "4183 Roswell Rd NE, Atlanta, GA 30342",
+    "phone": "(404) 705-8870",
+    "website": "https://10degreessouth.com",
+    "social": { "instagram": "@10degreessouth" },
+    "hours": {
+      "mon_thu": "5:30 PM - 10:00 PM",
+      "fri_sat": "5:30 PM - 11:00 PM",
+      "sun": "Closed"
+    },
+    "about": "The first South African fine-dining restaurant in the US, offering a sophisticated taste of Johannesburg in Buckhead.",
+    "our_story": "The Anthony family moved from South Africa to Atlanta with a mission to introduce Americans to the 'finer side' of the continent's southern tip.",
+    "cultural_roots": "A sophisticated blend of French, Portuguese, and Indian influences that have simmered in South Africa for centuries.",
+    "menu_highlights": ["Sosaties (Curried Lamb Kebabs)", "Boerewors", "Ostrich Medallions"]
   }
 ]
