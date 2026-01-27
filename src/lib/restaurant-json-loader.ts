@@ -199,6 +199,7 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
     avg_rating: jsonRestaurant.rating || null,
     review_count: 0,
     vibe_tags: jsonRestaurant.vibe_tags || null,
+    region: jsonRestaurant.region || null, // Include region field for color mapping
   };
 }
 

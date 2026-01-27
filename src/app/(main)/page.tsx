@@ -205,6 +205,7 @@ function getFeaturedRestaurantsFromJSON(): FeaturedRestaurant[] {
       avg_rating: r.rating || null,
       review_count: 0, // JSON doesn't have review count
       vibe_tags: (r as any).vibe_tags || null, // Include vibe tags if available
+      region: (r as any).region || null, // Include region field for color mapping
     };
   });
 }
