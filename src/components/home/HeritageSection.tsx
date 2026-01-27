@@ -35,7 +35,10 @@ export function HeritageSection() {
                 Our logo features the <strong>Sankofa</strong>, a sacred symbol from the Akan people of Ghana. The bird is depicted with its head turned backward, retrieving a precious egg—representing the wisdom of our ancestors.
               </p>
               <p>
-                At <strong>AfriTable</strong>, this reflects our core belief: that the most innovative dining experiences are rooted in the traditions we carry with us. By &quot;reaching back&quot; to authentic recipes and cultural rituals, we create a way forward for the diaspora&apos;s culinary legacy.
+                At <strong>AfriTable</strong>, this reflects our core belief: that the most innovative dining experiences are rooted in the traditions we carry with us. Look closer at our symbol and you will see this mission taking shape: the bird&apos;s back is designed as a table, flanked by chairs on either side. It is a literal invitation to gather.
+              </p>
+              <p>
+                By &quot;reaching back&quot; to authentic recipes and cultural rituals, we create a way forward for the diaspora&apos;s culinary legacy—one seat at a time.
               </p>
               <p className="font-serif italic text-brand-bronze">
                 &quot;Se wo were fi na wosankofa a yenkyi.&quot; <br/>
