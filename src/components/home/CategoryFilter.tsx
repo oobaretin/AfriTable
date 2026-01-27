@@ -11,7 +11,7 @@ type CategoryFilterProps = {
 
 export function CategoryFilter({ activeCategory, setActiveCategory }: CategoryFilterProps) {
   return (
-    <div className="flex items-center gap-3 overflow-x-auto pb-6 scrollbar-hide">
+    <div className="flex items-center gap-3 overflow-x-auto pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {categories.map((category) => (
         <button
           key={category}
