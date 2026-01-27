@@ -1098,5 +1098,27 @@
     "address": "4814 Almeda Rd, Houston, TX 77004",
     "phone": "(713) 520-7171",
     "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes."
+  },
+  {
+    "id": "hou-reggae-hut-fm1960",
+    "name": "Reggae Hut (FM 1960)",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "954 FM 1960 West, Houston, TX 77090",
+    "phone": "(281) 377-1961",
+    "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes."
+  },
+  {
+    "id": "hou-reggae-hut-veterans",
+    "name": "Reggae Hut (Veterans Memorial)",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "12005 Veterans Memorial Dr, Ste A, Houston, TX 77067",
+    "phone": "(832) 446-3722",
+    "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes."
   }
 ]
