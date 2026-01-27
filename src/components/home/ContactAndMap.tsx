@@ -23,7 +23,8 @@ export function ContactAndMap() {
     e.preventDefault();
     const parsed = notifySchema.safeParse({ email, city: selectedCity });
     if (!parsed.success) {
-      toast.error(parsed.error.errors[0].message);
+      const firstError = parsed.error.issues[0];
+      toast.error(firstError?.message || "Please check your input");
       return;
     }
 
