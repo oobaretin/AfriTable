@@ -1087,5 +1087,16 @@
     "address": "Nashville, TN",
     "phone": "(615) 942-5264",
     "about": "Authentic Jamaican and Caribbean cuisine in Nashville, bringing the vibrant flavors of the islands to Music City."
+  },
+  {
+    "id": "hou-reggae-hut",
+    "name": "Reggae Hut",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "4814 Almeda Rd, Houston, TX 77004",
+    "phone": "(713) 520-7171",
+    "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes."
   }
 ]
