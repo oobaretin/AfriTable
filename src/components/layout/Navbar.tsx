@@ -36,13 +36,25 @@ export default async function Navbar() {
           </Link>
 
           <nav className="hidden items-center gap-4 text-sm md:flex">
-            <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+            <Link 
+              href="/" 
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer relative z-10"
+              prefetch={true}
+            >
               Home
             </Link>
-            <Link href="/restaurants" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+            <Link 
+              href="/restaurants" 
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer relative z-10"
+              prefetch={true}
+            >
               Restaurants
             </Link>
-            <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+            <Link 
+              href="/about" 
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer relative z-10"
+              prefetch={true}
+            >
               About
             </Link>
           </nav>
