@@ -1505,26 +1505,27 @@
   {
     "id": "mia-red-rooster-overtown",
     "name": "Red Rooster Overtown",
-    "cuisine": "Modern Afro-American",
+    "cuisine": "Afro-American / Caribbean",
     "region": "Southern",
     "price_range": "$$$",
     "rating": 4.8,
     "address": "920 NW 2nd Ave, Miami, FL 33136",
     "phone": "(305) 640-9880",
-    "website": "https://redroosterovertown.com/",
-    "neighborhood": "Overtown",
-    "vibe": "Luxury & High Energy",
+    "website": "https://www.redroosterovertown.com/",
+    "neighborhood": "Historic Overtown",
+    "vibe": "Cultural Landmark / Vibrant Art",
     "vibe_tags": [
-      "Luxury & High Energy"
+      "Cultural Landmark / Vibrant Art"
     ],
-    "specialty": "Hot Honey Yardbird",
+    "specialty": "Coconut Smoked Oxtails & M's Fried Yardbird",
     "menu_highlights": [
-      "Hot Honey Yardbird"
+      "Coconut Smoked Oxtails",
+      "M's Fried Yardbird"
     ],
-    "awards": ["Global Icon"],
-    "quality_factor": "Marcus Samuelsson's Overtown masterpiece.",
+    "awards": ["Michelin Bib Gourmand"],
+    "quality_factor": "Marcus Samuelsson's tribute to Black culinary history.",
     "featured": true,
-    "about": "A luxury, high-energy modern Afro-American restaurant in Overtown, known for elevated dishes like Hot Honey Yardbird in a vibrant, sophisticated setting."
+    "about": "Marcus Samuelsson's tribute to Black culinary history. Features a world-class art collection and the famous 'Shrine' Saturday nights for Afrobeats."
   },
   {
     "id": "det-001",
@@ -1624,15 +1625,22 @@
   {
     "id": "nola-dakar",
     "name": "Dakar NOLA",
-    "cuisine": "Senegalese",
+    "cuisine": "Senegalese Tasting Menu",
     "region": "West African",
     "price_range": "$$$",
     "rating": 4.9,
-    "address": "New Orleans, LA",
-    "awards": ["Michelin 2025"],
+    "address": "3814 Magazine St, New Orleans, LA 70115",
+    "phone": "(504) 493-9396",
+    "website": "https://www.dakarnola.com/",
+    "neighborhood": "Magazine St / Uptown",
+    "vibe": "Intimate & Story-Driven",
+    "vibe_tags": ["Intimate & Story-Driven"],
+    "specialty": "The Seafood Thieboudienne",
+    "menu_highlights": ["The Seafood Thieboudienne"],
+    "awards": ["2025 Michelin Recommended / James Beard Winner"],
     "quality_factor": "Elite Senegalese tasting menu experience.",
     "featured": true,
-    "about": "Elite Senegalese tasting menu experience in New Orleans, recognized by Michelin 2025."
+    "about": "A single-seating, multi-course dining experience that follows the lineage of West African food to New Orleans. Reservations are highly sought after."
   },
   {
     "id": "sa-jerk-shack",
@@ -1663,15 +1671,22 @@
   {
     "id": "por-kann",
     "name": "Kann",
-    "cuisine": "Haitian",
+    "cuisine": "Haitian (Live-Fire)",
     "region": "Caribbean",
     "price_range": "$$$",
     "rating": 4.9,
-    "address": "Portland, OR",
-    "awards": ["James Beard"],
+    "address": "548 SE Ash St, Portland, OR 97214",
+    "phone": "(503) 702-0290",
+    "website": "https://kannrestaurant.com/",
+    "neighborhood": "Central Eastside",
+    "vibe": "Elite Wood-Fired Mastery",
+    "vibe_tags": ["Elite Wood-Fired Mastery"],
+    "specialty": "Glazed Duck with Cane Sugar & Habanero",
+    "menu_highlights": ["Glazed Duck with Cane Sugar & Habanero"],
+    "awards": ["James Beard Best New Restaurant Winner"],
     "quality_factor": "America's most famous Haitian wood-fired kitchen.",
     "featured": true,
-    "about": "America's most famous Haitian wood-fired kitchen in Portland, recognized by James Beard."
+    "about": "Chef Gregory Gourdet's masterpiece. This is arguably the most famous Haitian restaurant in the world right now, featuring an open kitchen fueled entirely by wood fire."
   },
   {
     "id": "atx-fine-001",
@@ -1792,5 +1807,42 @@
     "specialty": "Mediterranean-African Seafood",
     "menu_highlights": ["Mediterranean-African Seafood"],
     "about": "A chic modern lounge offering global African fusion cuisine with a focus on Mediterranean-African seafood dishes."
+  },
+  {
+    "id": "chs-fine-001",
+    "name": "Bintü Atelier",
+    "cuisine": "Modern West African",
+    "region": "West African",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "8D Line St, Charleston, SC 29403",
+    "phone": "(843) 478-4144",
+    "website": "https://www.bintuatelier.com/",
+    "neighborhood": "Downtown Charleston",
+    "vibe": "Minimalist & Chef-Forward",
+    "vibe_tags": ["Minimalist & Chef-Forward"],
+    "specialty": "Heritage Jollof & Goat Egusi with Fufu",
+    "menu_highlights": ["Heritage Jollof", "Goat Egusi with Fufu"],
+    "awards": ["2026 James Beard Semifinalist"],
+    "featured": true,
+    "about": "Chef Bintou N'Daw brings a level of precision and elegance to West African staples that matches the legendary fine-dining scene of Charleston."
+  },
+  {
+    "id": "lax-fine-001",
+    "name": "Status Hollywood",
+    "cuisine": "Upscale Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$$",
+    "rating": 4.7,
+    "address": "1612 N Cahuenga Blvd, Los Angeles, CA 90028",
+    "phone": "(323) 450-9311",
+    "website": "https://www.statushollywood.com/",
+    "neighborhood": "Hollywood",
+    "vibe": "Celebrity Favorite / Sexy Lounge",
+    "vibe_tags": ["Celebrity Favorite / Sexy Lounge"],
+    "specialty": "Sweet Chili Lamb Chops & Oxtail Egg Rolls",
+    "menu_highlights": ["Sweet Chili Lamb Chops", "Oxtail Egg Rolls"],
+    "featured": false,
+    "about": "Where Hollywood glamour meets authentic island heat. This is the spot for 'Vibe Dining'—the food quality is high-end, and the crowd is impeccably dressed."
   }
 ]
