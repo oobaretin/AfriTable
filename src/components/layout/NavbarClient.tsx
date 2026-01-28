@@ -42,21 +42,21 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
           <nav className="hidden items-center gap-4 text-sm md:flex relative z-50">
             <Link 
               href="/" 
-              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1"
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50"
               prefetch={true}
             >
               Home
             </Link>
             <Link 
               href="/restaurants" 
-              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1"
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50"
               prefetch={true}
             >
               Restaurants
             </Link>
             <Link 
               href="/about" 
-              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1"
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50"
               prefetch={true}
             >
               About

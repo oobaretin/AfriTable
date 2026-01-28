@@ -18,10 +18,20 @@ type RestaurantsPageClientProps = {
 export function RestaurantsPageClient({ restaurants }: RestaurantsPageClientProps) {
   const [filteredRestaurants, setFilteredRestaurants] = React.useState<RestaurantWithDistance[] | null>(null);
   const [isSearchActive, setIsSearchActive] = React.useState(false);
+  const [hasInitialized, setHasInitialized] = React.useState(false);
 
-  const handleFilterChange = (filtered: RestaurantWithDistance[]) => {
+  const handleFilterChange = React.useCallback((filtered: RestaurantWithDistance[]) => {
     // Check if search is active (has distance data, meaning zip code was entered)
-    const hasSearch = filtered.length > 0 && filtered[0].distance !== null;
+    // Only consider it a search if at least one restaurant has a non-null distance
+    const hasSearch = filtered.some((r) => r.distance !== null);
+    
+    // Don't trigger search mode on initial load (when all distances are null)
+    if (!hasInitialized && !hasSearch) {
+      setHasInitialized(true);
+      return; // Skip the first call with all null distances
+    }
+    
+    setHasInitialized(true);
     setIsSearchActive(hasSearch);
     if (hasSearch) {
       setFilteredRestaurants(filtered);
@@ -29,7 +39,7 @@ export function RestaurantsPageClient({ restaurants }: RestaurantsPageClientProp
       // Reset to null when search is cleared
       setFilteredRestaurants(null);
     }
-  };
+  }, [hasInitialized]);
 
   return (
     <>
