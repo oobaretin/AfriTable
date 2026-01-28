@@ -115,32 +115,26 @@ export function HeroSearch() {
   }
 
   return (
-    <section className="relative z-0 min-h-[60vh] max-h-[800px] w-full bg-[#050A18] flex flex-col items-center justify-center overflow-hidden px-4 py-24" id="hero-search">
-      {/* 1. BACKGROUND PATTERN - Geometric pattern overlay */}
+    <section className="relative z-0 min-h-[80vh] w-full bg-[#000814] flex flex-col items-center justify-center overflow-hidden px-4" id="hero-search">
+      {/* 1. 3D ISOMETRIC CUBE PATTERN - Hero section only */}
       <div 
-        className="absolute inset-0 z-0 bg-[#000814] pointer-events-none"
+        className="absolute inset-0 z-0 pointer-events-none"
         style={{
           backgroundColor: '#000814',
           backgroundImage: `
-            linear-gradient(30deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
-            linear-gradient(150deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
-            linear-gradient(30deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
-            linear-gradient(150deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
-            linear-gradient(60deg, #003566 25%, transparent 25.5%, transparent 75%, #003566 75%, #003566),
-            linear-gradient(60deg, #003566 25%, transparent 25.5%, transparent 75%, #003566 75%, #003566)`,
-          backgroundSize: '80px 140px',
-          backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px'
+            /* Top face (diamond shape) - lightest blue */
+            linear-gradient(30deg, transparent 0%, transparent 48%, #003566 48%, #003566 52%, transparent 52%),
+            linear-gradient(150deg, transparent 0%, transparent 48%, #003566 48%, #003566 52%, transparent 52%),
+            /* Right side face - medium blue */
+            linear-gradient(30deg, #001d3d 0%, #001d3d 48%, transparent 48%),
+            linear-gradient(150deg, transparent 52%, #001d3d 52%, #001d3d 100%),
+            /* Left side face - medium blue */
+            linear-gradient(30deg, transparent 52%, #001d3d 52%, #001d3d 100%),
+            linear-gradient(150deg, #001d3d 0%, #001d3d 48%, transparent 48%)`,
+          backgroundSize: '120px 208px',
+          backgroundPosition: '0 0, 60px 104px, 0 0, 60px 104px, 0 0, 60px 104px'
         }}
-      >
-        {/* Shadow vignette for 3D depth effect */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#000814] opacity-90"></div>
-      </div>
-
-      {/* 2. BACKGROUND STRUCTURES (Subtler) - pointer-events-none to prevent blocking */}
-      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[50%] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-indigo-900/20 rounded-full blur-[100px] pointer-events-none"></div>
-      </div>
+      />
 
       {/* 2. CATCHY WORDS (Smaller & More Spaced) */}
       <div className="relative z-10 mb-8 flex gap-8 md:gap-16 opacity-30">
