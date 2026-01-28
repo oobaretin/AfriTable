@@ -42,7 +42,7 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
 
   if (displayedRestaurants.length === 0) {
     return (
-      <section className="pt-24 pb-0 bg-[#050A18] px-6">
+      <section className="pt-24 pb-0 bg-[#000814] px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center py-20">
             <h2 className="text-2xl md:text-3xl font-serif text-[#C69C2B] font-normal mb-4">
@@ -61,7 +61,7 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
   }
 
   return (
-    <section className="pt-12 pb-24 bg-[#050A18] px-6">
+    <section className="pt-12 pb-24 bg-[#000814] px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header - Different for search mode vs featured */}
         {isSearchMode ? (

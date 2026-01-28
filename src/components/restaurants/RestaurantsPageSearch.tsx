@@ -77,7 +77,7 @@ export function RestaurantsPageSearch({ restaurants, onFilterChange }: Restauran
   };
 
   return (
-    <section className="py-12 bg-[#050A18] px-6">
+    <section className="py-12 bg-[#000814] px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-xl md:text-2xl font-serif text-[#C69C2B] font-normal mb-2">

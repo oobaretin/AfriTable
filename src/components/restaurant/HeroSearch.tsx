@@ -115,24 +115,26 @@ export function HeroSearch() {
   }
 
   return (
-    <section className="relative z-0 min-h-[80vh] w-full bg-[#000814] flex flex-col items-center justify-center overflow-hidden px-4" id="hero-search">
-      {/* 1. 3D ISOMETRIC CUBE PATTERN - Hero section only */}
+    <section className="relative z-0 min-h-[85vh] w-full bg-[#000814] flex flex-col items-center justify-center overflow-hidden px-4" id="hero-search">
+      {/* 1. 3D ISOMETRIC HEXAGON PATTERN - Hero section only */}
       <div 
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
           backgroundColor: '#000814',
           backgroundImage: `
-            /* Top face (diamond shape) - lightest blue */
-            linear-gradient(30deg, transparent 0%, transparent 48%, #003566 48%, #003566 52%, transparent 52%),
-            linear-gradient(150deg, transparent 0%, transparent 48%, #003566 48%, #003566 52%, transparent 52%),
-            /* Right side face - medium blue */
-            linear-gradient(30deg, #001d3d 0%, #001d3d 48%, transparent 48%),
-            linear-gradient(150deg, transparent 52%, #001d3d 52%, #001d3d 100%),
-            /* Left side face - medium blue */
-            linear-gradient(30deg, transparent 52%, #001d3d 52%, #001d3d 100%),
-            linear-gradient(150deg, #001d3d 0%, #001d3d 48%, transparent 48%)`,
-          backgroundSize: '120px 208px',
-          backgroundPosition: '0 0, 60px 104px, 0 0, 60px 104px, 0 0, 60px 104px'
+            /* Hexagon top faces - brightest blue */
+            linear-gradient(30deg, transparent 0%, transparent 45%, #003566 45%, #003566 55%, transparent 55%),
+            linear-gradient(150deg, transparent 0%, transparent 45%, #003566 45%, #003566 55%, transparent 55%),
+            linear-gradient(90deg, transparent 0%, transparent 45%, #003566 45%, #003566 55%, transparent 55%),
+            /* Hexagon side facets - mid blue */
+            linear-gradient(30deg, #001d3d 0%, #001d3d 45%, transparent 45%),
+            linear-gradient(150deg, transparent 55%, #001d3d 55%, #001d3d 100%),
+            linear-gradient(30deg, transparent 55%, #001d3d 55%, #001d3d 100%),
+            linear-gradient(150deg, #001d3d 0%, #001d3d 45%, transparent 45%),
+            linear-gradient(90deg, #001d3d 0%, #001d3d 45%, transparent 45%),
+            linear-gradient(90deg, transparent 55%, #001d3d 55%, #001d3d 100%)`,
+          backgroundSize: '100px 173px',
+          backgroundPosition: '0 0, 50px 86px, 25px 43px, 75px 129px, 0 0, 50px 86px, 0 0, 50px 86px, 25px 43px, 75px 129px'
         }}
       />
 
@@ -145,7 +147,7 @@ export function HeroSearch() {
         ))}
       </div>
 
-      {/* 4. THE CORE ENGINE (RESIZED) */}
+      {/* 3. THE CORE ENGINE (RESIZED) - Centered vertically */}
       <div className="relative z-10 flex items-center justify-center w-full max-w-7xl">
         
         {/* LEFT: Typing (Reduced Size) */}
