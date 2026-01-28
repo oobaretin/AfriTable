@@ -187,7 +187,7 @@ export function HeroSearch() {
             </div>
             <button
               onClick={handleSearch}
-              className="bg-[#111] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-[9px] hover:bg-[#A33B32] transition-all"
+              className="bg-[#111] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-[9px] hover:bg-[#A33B32] transition-all pointer-events-auto cursor-pointer relative z-30"
             >
               Find Table
             </button>
@@ -207,7 +207,7 @@ export function HeroSearch() {
                     setShowSuggestions(false);
                     handleSearch();
                   }}
-                  className="w-full px-6 py-4 text-left text-white hover:bg-[#C69C2B]/10 hover:text-[#C69C2B] transition-colors border-b border-white/5 last:border-b-0"
+                  className="w-full px-6 py-4 text-left text-white hover:bg-[#C69C2B]/10 hover:text-[#C69C2B] transition-colors border-b border-white/5 last:border-b-0 pointer-events-auto cursor-pointer relative z-50"
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-[#A33B32] text-sm">📍</span>

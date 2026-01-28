@@ -8,6 +8,17 @@ body {
   width: 100%;
 }
 
+/* Ensure buttons and interactive elements are always clickable */
+button,
+[role="button"],
+a,
+input[type="button"],
+input[type="submit"],
+select {
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

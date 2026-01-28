@@ -226,7 +226,7 @@ export function RestaurantCard({
         <button
           type="button"
           onClick={handleFindTable}
-          className="w-full rounded-lg bg-[#A33B32] hover:bg-[#A33B32]/90 text-white px-3 py-2.5 text-sm font-bold transition-colors"
+          className="w-full rounded-lg bg-[#A33B32] hover:bg-[#A33B32]/90 text-white px-3 py-2.5 text-sm font-bold transition-colors pointer-events-auto cursor-pointer relative z-10"
         >
           Find Table
         </button>
@@ -237,7 +237,7 @@ export function RestaurantCard({
           <button
             type="button"
             onClick={onQuickReserve}
-            className="w-full rounded-lg bg-primary px-3 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="w-full rounded-lg bg-primary px-3 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 pointer-events-auto cursor-pointer relative z-10"
           >
             Quick Reserve
           </button>
