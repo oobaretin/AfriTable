@@ -27,6 +27,7 @@ export type JSONRestaurant = {
   specialty?: string;
   awards?: string[];
   quality_factor?: string;
+  featured?: boolean;
   secondary_location?: {
     name: string;
     address: string;

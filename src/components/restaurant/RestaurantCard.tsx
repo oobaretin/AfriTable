@@ -20,12 +20,14 @@ export function RestaurantCard({
   onQuickReserve,
   city,
   index = 0,
+  isFeatured = false,
 }: {
   restaurant: RestaurantRow;
   href?: string;
   onQuickReserve?: () => void;
   city?: string;
   index?: number;
+  isFeatured?: boolean;
 }) {
   const { openDrawer } = useBookingDrawer();
   const safeHref = href ?? `/restaurants/${encodeURIComponent(restaurant.slug)}`;
@@ -35,8 +37,8 @@ export function RestaurantCard({
   const cityFromAddress = (restaurant.address as any)?.city as string | undefined;
   const cityLabel = city ?? cityFromAddress;
   
-  // Priority loading: first 6 images get priority, rest are lazy
-  const shouldPriorityLoad = index < 6;
+  // Priority loading: featured items or first 6 images get priority
+  const shouldPriorityLoad = isFeatured || index < 6;
   
   // Generate a simple blur placeholder (base64 encoded 1x1 transparent pixel with blur)
   const blurDataURL = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
@@ -116,7 +118,11 @@ export function RestaurantCard({
   const regionColor = getRegionColor(cuisine, region);
 
   return (
-    <div className="group cursor-pointer overflow-hidden rounded-xl bg-white transition-all hover:shadow-xl border border-slate-100">
+    <div className={`group cursor-pointer overflow-hidden rounded-xl bg-white transition-all hover:shadow-xl border ${
+      isFeatured 
+        ? "border-[#C69C2B]/40 shadow-[0_0_20px_rgba(198,156,43,0.15)] hover:shadow-[0_0_30px_rgba(198,156,43,0.25)]" 
+        : "border-slate-100"
+    }`}>
       {/* Image Container */}
       <Link href={safeHref} className="block">
         <div className="relative w-full overflow-hidden aspect-[4/3] bg-white/5">
@@ -131,6 +137,16 @@ export function RestaurantCard({
             placeholder="blur"
             blurDataURL={blurDataURL}
           />
+          {/* Gold Star for Featured */}
+          {isFeatured && (
+            <div className="absolute top-4 left-4 z-10">
+              <div className="bg-[#C69C2B] rounded-full p-1.5 shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-[#050A18]">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              </div>
+            </div>
+          )}
           <div className="absolute top-4 right-4 flex items-center gap-2">
             <div className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm">
               {price}

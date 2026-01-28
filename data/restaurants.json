@@ -729,6 +729,7 @@
     ],
     "awards": ["⭐⭐⭐⭐⭐"],
     "quality_factor": "Named the #1 Restaurant in NYC (Kwame Onwuachi)",
+    "featured": true,
     "about": "Elite fine dining at Lincoln Center, where Chef Kwame Onwuachi creates the intersection of heritage and high-fashion dining with specialties like Wagyu Short Rib Pastrami."
   },
   {
@@ -742,6 +743,7 @@
     "phone": "(281) 747-7500",
     "awards": ["NYT Top 50"],
     "quality_factor": "The \"Gold Standard\" for West African fast-fine dining.",
+    "featured": true,
     "about": "Accessible West African flavors for the modern palate.",
     "vibe_tags": [
       "Contemporary Heritage"
@@ -1008,6 +1010,7 @@
     "phone": "(773) 334-8787",
     "awards": ["Michelin Bib"],
     "quality_factor": "A Chicago institution for elite Ethiopian dining.",
+    "featured": true,
     "about": "Award-winning flavors served with Chicago's finest hospitality.",
     "vibe_tags": [
       "Upscale Communal"
@@ -1133,6 +1136,7 @@
     ],
     "awards": ["James Beard"],
     "quality_factor": "Seattle's legendary \"Soul-Fusion\" destination.",
+    "featured": true,
     "about": "An award-winning soul-fusion restaurant in Seattle's Central District, serving innovative dishes like Hood Sushi & Catfish in a vibrant, social atmosphere."
   },
   {
@@ -1519,6 +1523,7 @@
     ],
     "awards": ["Global Icon"],
     "quality_factor": "Marcus Samuelsson's Overtown masterpiece.",
+    "featured": true,
     "about": "A luxury, high-energy modern Afro-American restaurant in Overtown, known for elevated dishes like Hot Honey Yardbird in a vibrant, sophisticated setting."
   },
   {
@@ -1613,6 +1618,7 @@
     "address": "Washington, DC",
     "awards": ["Michelin 2025"],
     "quality_factor": "High-end Afro-Caribbean by the Potomac.",
+    "featured": true,
     "about": "High-end Afro-Caribbean fine dining by the Potomac, recognized by Michelin 2025."
   },
   {
@@ -1625,6 +1631,7 @@
     "address": "New Orleans, LA",
     "awards": ["Michelin 2025"],
     "quality_factor": "Elite Senegalese tasting menu experience.",
+    "featured": true,
     "about": "Elite Senegalese tasting menu experience in New Orleans, recognized by Michelin 2025."
   },
   {
@@ -1637,6 +1644,7 @@
     "address": "San Antonio, TX",
     "awards": ["Michelin Guide"],
     "quality_factor": "Texas' only Michelin-recognized Jamaican spot.",
+    "featured": true,
     "about": "Texas' only Michelin-recognized Jamaican restaurant, serving authentic Caribbean cuisine."
   },
   {
@@ -1649,6 +1657,7 @@
     "address": "Midtown, Atlanta, GA",
     "awards": ["2026 Vanguard"],
     "quality_factor": "High-end Afro-Caribbean fine dining in Midtown.",
+    "featured": true,
     "about": "High-end Afro-Caribbean fine dining in Midtown Atlanta, recognized as 2026 Vanguard."
   },
   {
@@ -1661,6 +1670,7 @@
     "address": "Portland, OR",
     "awards": ["James Beard"],
     "quality_factor": "America's most famous Haitian wood-fired kitchen.",
+    "featured": true,
     "about": "America's most famous Haitian wood-fired kitchen in Portland, recognized by James Beard."
   }
 ]

@@ -78,9 +78,9 @@ export function RestaurantGrid({
     return restaurantCityLower.includes(cityLower);
   }
 
-  // Filter restaurants by cuisine and city
+  // Filter restaurants by cuisine and city (exclude featured - they're shown separately)
   const filteredJSONRestaurants = React.useMemo(() => {
-    let filtered = jsonRestaurants;
+    let filtered = jsonRestaurants.filter((r) => !r.featured); // Exclude featured restaurants
 
     // Filter by city if provided
     if (activeCity) {

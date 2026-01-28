@@ -4,6 +4,7 @@ import * as React from "react";
 import { CategoryFilter } from "./CategoryFilter";
 import { CityFilter } from "./CityFilter";
 import { RestaurantGrid } from "./RestaurantGrid";
+import { StaffPicks } from "./StaffPicks";
 import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
 
 type CategoryFilterWrapperProps = {
@@ -37,6 +38,11 @@ export function CategoryFilterWrapper({ restaurants, onCountChange }: CategoryFi
         </div>
       </div>
       
+      {/* Staff Picks Section */}
+      <div className="pt-6">
+        <StaffPicks restaurants={restaurants} />
+      </div>
+
       {/* Restaurant Grid with shared filter state */}
       <div className="pt-6">
         <RestaurantGrid 
