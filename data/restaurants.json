@@ -2838,5 +2838,33 @@
     "menu_highlights": ["Senegalese Grilled Fish"],
     "vibe_category": "Authentic Staples",
     "about": "An authentic comfort spot in Chicago's Uptown/Washington Park area, specializing in Senegalese grilled fish."
+  },
+  {
+    "id": "katy-sta-004",
+    "name": "Royal Arm Restaurant",
+    "cuisine": "Nigerian & Caribbean Fusion",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.4,
+    "address": "23010 Highland Knolls Dr Ste C, Katy, TX 77494",
+    "phone": "(281) 665-8511",
+    "website": "https://royalarmrestaurant.com/",
+    "neighborhood": "Cinco Ranch / Falcon Rock",
+    "vibe": "Warm, Family-Friendly & Vibrant",
+    "vibe_tags": ["Warm, Family-Friendly & Vibrant"],
+    "specialty": "Egusi (Melon Stew) with Pounded Yam & Ayamase (Designer Rice)",
+    "menu_highlights": [
+      "Egusi (Melon Stew) with Pounded Yam",
+      "Ayamase (Designer Rice) with Boiled Egg & Plantain",
+      "Afang Soup with Fufu",
+      "Oxtail with Jollof Rice",
+      "Jerk Chicken with Fried Plantain"
+    ],
+    "hours": {
+      "mon_sat": "12:00 PM - 8:00 PM",
+      "sun": "Closed"
+    },
+    "vibe_category": "Community Favorites",
+    "about": "A local Katy pillar that successfully bridges Nigerian staples with Caribbean favorites. Known for their meticulous preparation of 'swallow' dishes and their standout Designer Rice (Ayamase)."
   }
 ]
