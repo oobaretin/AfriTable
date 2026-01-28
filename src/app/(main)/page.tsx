@@ -11,7 +11,7 @@ import { HeritageSection } from "@/components/home/HeritageSection";
 import { CommunityFeed } from "@/components/home/CommunityFeed";
 import { SuccessStory } from "@/components/home/SuccessStory";
 import { Leaderboard } from "@/components/home/Leaderboard";
-import { HomepageRestaurantClient } from "@/components/home/HomepageRestaurantClient";
+import { HomepageRestaurantSimple } from "@/components/home/HomepageRestaurantSimple";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
@@ -43,8 +43,8 @@ export default async function MainHomePage() {
       {/* Hero - Search-First Design */}
       <HeroSearch />
 
-      {/* Restaurant Results with Zip Code Search - Ultimate Dining Gallery */}
-      <HomepageRestaurantClient restaurants={restaurantsFromJSON} />
+      {/* Restaurant Results - Featured Restaurants Only */}
+      <HomepageRestaurantSimple restaurants={restaurantsFromJSON} />
 
       {/* Brand Logo Bridge - Premium Separator */}
       <div className="py-12 bg-[#050A18]">

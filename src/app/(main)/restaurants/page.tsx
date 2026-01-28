@@ -1,8 +1,6 @@
-import { Suspense } from "react";
 import Image from "next/image";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
-import { RestaurantCardSkeleton } from "@/components/home/RestaurantCardSkeleton";
-import { RestaurantsGridClient } from "./RestaurantsGridClient";
+import { RestaurantsPageClient } from "./RestaurantsPageClient";
 
 function RestaurantsGrid() {
   const restaurantsFromJSON = loadRestaurantsFromJSON();
@@ -10,6 +8,8 @@ function RestaurantsGrid() {
 }
 
 export default function RestaurantsPage() {
+  const restaurantsFromJSON = loadRestaurantsFromJSON();
+
   return (
     <main className="min-h-[100vh] bg-[#050A18]">
       {/* Sankofa Brand Bridge Separator */}
@@ -34,27 +34,8 @@ export default function RestaurantsPage() {
         </div>
       </div>
 
-      {/* Premium Header */}
-      <div className="bg-[#050A18] py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center space-y-6">
-            {/* Main Title */}
-            <h1 className="text-5xl md:text-6xl font-serif text-[#C69C2B] font-normal">
-              The Full Collection
-            </h1>
-            
-            {/* Subtitle - Will be updated dynamically */}
-            <p className="text-sm md:text-base text-white/60 tracking-[0.2em] uppercase">
-              The Full Collection
-            </p>
-            
-            {/* Divider Line */}
-            <div className="flex justify-center pt-2">
-              <div className="w-10 h-px bg-[#C69C2B]"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Zip Code Search and Vibe Filter Section */}
+      <RestaurantsPageSearchWrapper restaurants={restaurantsFromJSON} />
 
       {/* Restaurant Grid - Shows filtered results or all restaurants */}
       <div className="pb-16 bg-[#050A18] min-h-[100vh] flex flex-col">
@@ -74,5 +55,10 @@ export default function RestaurantsPage() {
       </div>
     </main>
   );
+}
+
+// Client component wrapper for search
+function RestaurantsPageSearchWrapper({ restaurants }: { restaurants: any[] }) {
+  return <RestaurantsPageSearch restaurants={restaurants} onFilterChange={() => {}} />;
 }
 
