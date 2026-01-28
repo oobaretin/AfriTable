@@ -67,10 +67,12 @@ export function ZipCodeSearch({ restaurants, onFilterChange }: ZipCodeSearchProp
       
       if (!userCoords) {
         // If zip code not found in lookup, fall back to exact zip match
-        const filtered = restaurants.filter((restaurant) => {
-          const restaurantZip = getRestaurantZipCode(restaurant);
-          return restaurantZip === zipCode;
-        });
+        const filtered: RestaurantWithDistance[] = restaurants
+          .filter((restaurant) => {
+            const restaurantZip = getRestaurantZipCode(restaurant);
+            return restaurantZip === zipCode;
+          })
+          .map((restaurant) => ({ restaurant, distance: 0 }));
         onFilterChange(filtered);
         return;
       }
