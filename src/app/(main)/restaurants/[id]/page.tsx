@@ -177,28 +177,43 @@ function todayHours(operatingHours: any, date = new Date()) {
   return { label: formatTimeRange12h(open, close), openNow, hasHours: true };
 }
 
-async function getRestaurantBySlug(slug: string): Promise<RestaurantDetail | null> {
-  // First, try to load from restaurants.json by id (since id is used as slug)
-  const jsonRestaurant = getRestaurantByIdFromJSON(slug);
+async function getRestaurantById(id: string): Promise<RestaurantDetail | null> {
+  // First, try to load from restaurants.json by id
+  const jsonRestaurant = getRestaurantByIdFromJSON(id);
   if (jsonRestaurant) {
-    console.log(`[RestaurantPage] ✅ Found restaurant in JSON: "${jsonRestaurant.name}" (id: ${slug})`);
+    console.log(`[RestaurantPage] ✅ Found restaurant in JSON: "${jsonRestaurant.name}" (id: ${id})`);
     return transformJSONRestaurantToDetail(jsonRestaurant) as RestaurantDetail;
   }
 
-  // Fallback to Supabase
+  // Fallback to Supabase (try by id first, then by slug)
   const supabase = createSupabasePublicClient();
-  // Next.js params are already decoded, use slug as-is
-  const { data, error } = await supabase
+  // Try by id first
+  let { data, error } = await supabase
     .from("restaurants_with_rating")
     .select(
       "id,name,slug,cuisine_types,price_range,description,our_story,cultural_roots,special_features,menu,address,phone,website,instagram_handle,facebook_url,images,hours,avg_rating,review_count,is_active",
     )
-    .eq("slug", slug)
+    .eq("id", id)
     .eq("is_active", true)
     .maybeSingle();
   
+  // If not found by id, try by slug
+  if (!data && !error) {
+    const { data: slugData, error: slugError } = await supabase
+      .from("restaurants_with_rating")
+      .select(
+        "id,name,slug,cuisine_types,price_range,description,our_story,cultural_roots,special_features,menu,address,phone,website,instagram_handle,facebook_url,images,hours,avg_rating,review_count,is_active",
+      )
+      .eq("slug", id)
+      .eq("is_active", true)
+      .maybeSingle();
+    
+    data = slugData;
+    error = slugError;
+  }
+  
   if (error) {
-    console.error("[RestaurantPage] Error fetching restaurant:", { error, slug });
+    console.error("[RestaurantPage] Error fetching restaurant:", { error, id });
     return null;
   }
   
@@ -207,15 +222,15 @@ async function getRestaurantBySlug(slug: string): Promise<RestaurantDetail | nul
     const { data: inactive } = await supabase
       .from("restaurants")
       .select("id,name,slug,is_active")
-      .eq("slug", slug)
+      .or(`id.eq.${id},slug.eq.${id}`)
       .maybeSingle();
     
     if (inactive) {
-      console.error(`[RestaurantPage] Restaurant "${inactive.name}" found but is_active=${inactive.is_active} for slug: ${slug}`);
+      console.error(`[RestaurantPage] Restaurant "${inactive.name}" found but is_active=${inactive.is_active} for id: ${id}`);
       console.error(`[RestaurantPage] 💡 Run: npm run activate:restaurants to activate this restaurant`);
     } else {
-      console.error(`[RestaurantPage] No restaurant found with slug: ${slug}`);
-      console.error(`[RestaurantPage] 💡 Check: /api/debug/restaurant/${encodeURIComponent(slug)}`);
+      console.error(`[RestaurantPage] No restaurant found with id: ${id}`);
+      console.error(`[RestaurantPage] 💡 Check: /api/debug/restaurant/${encodeURIComponent(id)}`);
     }
     return null;
   }
@@ -278,9 +293,9 @@ async function getSimilarRestaurants(restaurantId: string, cuisines: string[]) {
   return rows.slice(0, 6);
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
-  const restaurant = await getRestaurantBySlug(params.slug);
+  const restaurant = await getRestaurantById(params.id);
   if (!restaurant) return {};
 
   const addr = addressToString(restaurant.address);
@@ -292,25 +307,25 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title,
     description,
-    alternates: { canonical: `${baseUrl}/restaurants/${encodeURIComponent(restaurant.slug)}` },
+    alternates: { canonical: `${baseUrl}/restaurants/${encodeURIComponent(restaurant.id || restaurant.slug)}` },
     openGraph: {
       title,
       description,
-      url: `${baseUrl}/restaurants/${encodeURIComponent(restaurant.slug)}`,
+      url: `${baseUrl}/restaurants/${encodeURIComponent(restaurant.id || restaurant.slug)}`,
       images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: title }],
     },
   };
 }
 
-export default async function RestaurantProfilePage({ params }: { params: { slug: string } }) {
-  console.log(`[RestaurantPage] Attempting to load restaurant with slug: "${params.slug}"`);
-  const restaurant = await getRestaurantBySlug(params.slug);
+export default async function RestaurantProfilePage({ params }: { params: { id: string } }) {
+  console.log(`[RestaurantPage] Attempting to load restaurant with id: "${params.id}"`);
+  const restaurant = await getRestaurantById(params.id);
   if (!restaurant) {
-    console.error(`[RestaurantPage] ❌ Restaurant not found for slug: "${params.slug}"`);
-    console.error(`[RestaurantPage] Check: /api/debug/restaurant/${encodeURIComponent(params.slug)}`);
+    console.error(`[RestaurantPage] ❌ Restaurant not found for id: "${params.id}"`);
+    console.error(`[RestaurantPage] Check: /api/debug/restaurant/${encodeURIComponent(params.id)}`);
     notFound();
   }
-  console.log(`[RestaurantPage] ✅ Successfully loaded restaurant: "${restaurant.name}" (${restaurant.slug})`);
+  console.log(`[RestaurantPage] ✅ Successfully loaded restaurant: "${restaurant.name}" (${restaurant.id || restaurant.slug})`);
 
   const [operatingHours, reviews, similar] = await Promise.all([
     getOperatingHours(restaurant.id, restaurant.hours),
@@ -345,7 +360,7 @@ export default async function RestaurantProfilePage({ params }: { params: { slug
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: String(restaurant.name || "").replace(/[\u0000-\u001F\u007F-\u009F]/g, ""),
-    url: (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000") + `/restaurants/${restaurant.slug}`,
+    url: (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000") + `/restaurants/${restaurant.id || restaurant.slug}`,
     servesCuisine: (restaurant.cuisine_types ?? []).map((c: string) => String(c).replace(/[\u0000-\u001F\u007F-\u009F]/g, "")),
     priceRange: priceLabel(restaurant.price_range),
   };

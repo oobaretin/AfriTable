@@ -160,7 +160,7 @@ export function RestaurantGrid({
             >
               <RestaurantCard
                 restaurant={restaurant}
-                href={`/restaurants/${encodeURIComponent(restaurant.slug)}`}
+                href={`/restaurants/${encodeURIComponent(restaurant.id || restaurant.slug)}`}
                 index={index}
               />
             </div>

@@ -91,23 +91,26 @@ export function HeroSearch() {
   }, [displayText, isDeleting, index]);
 
   function handleSearch() {
-    // Scroll to restaurants section
-    const restaurantsSection = document.getElementById("restaurants-section");
-    if (restaurantsSection) {
-      restaurantsSection.scrollIntoView({ behavior: "smooth" });
+    // If on homepage, try to scroll to restaurants section
+    if (window.location.pathname === "/") {
+      const restaurantsSection = document.getElementById("restaurants-section");
+      if (restaurantsSection) {
+        restaurantsSection.scrollIntoView({ behavior: "smooth" });
+        // Update URL with city filter if provided
+        if (city.trim()) {
+          const params = new URLSearchParams(searchParams.toString());
+          params.set("city", city.trim());
+          router.push(`/?${params.toString()}`, { scroll: false });
+        }
+        return;
+      }
     }
-
-    // Update URL with city filter if provided
+    
+    // Otherwise, navigate to /restaurants page with city filter
     if (city.trim()) {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set("city", city.trim());
-      router.push(`/?${params.toString()}`, { scroll: false });
+      router.push(`/restaurants?city=${encodeURIComponent(city.trim())}`);
     } else {
-      // Remove city filter if empty
-      const params = new URLSearchParams(searchParams.toString());
-      params.delete("city");
-      const newUrl = params.toString() ? `/?${params.toString()}` : "/";
-      router.push(newUrl, { scroll: false });
+      router.push("/restaurants");
     }
   }
 

@@ -24,7 +24,7 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
   const displayName = profile?.full_name ?? user?.email ?? "AfriTable";
 
   return (
-    <header className="sticky top-0 z-[100] border-b bg-background/80 backdrop-blur">
+    <header className="sticky top-0 border-b bg-background/80 backdrop-blur" style={{ zIndex: 9999, position: 'relative' }}>
       <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6 relative z-[100]">
         <div className="flex items-center gap-6 relative z-[100]">
           <Link href="/" className="flex items-center gap-2 relative z-[100]">

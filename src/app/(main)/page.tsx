@@ -44,7 +44,9 @@ export default async function MainHomePage() {
       <HeroSearch />
 
       {/* Restaurant Results - Featured Restaurants Only */}
-      <HomepageRestaurantSimple restaurants={restaurantsFromJSON} />
+      <div id="restaurants-section">
+        <HomepageRestaurantSimple restaurants={restaurantsFromJSON} />
+      </div>
 
       {/* Brand Logo Bridge - Premium Separator */}
       <div className="py-12 bg-[#050A18]">
