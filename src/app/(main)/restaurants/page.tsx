@@ -10,26 +10,26 @@ export default function RestaurantsPage() {
       {/* Sankofa Brand Bridge Separator with 3D Pattern */}
       <div className="py-12 bg-[#000814] relative">
         {/* 3D Isometric Hexagon Pattern - Header only */}
-        <div 
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            backgroundColor: '#000814',
-            backgroundImage: `
-              /* Hexagon top faces - brightest blue */
-              linear-gradient(30deg, transparent 0%, transparent 45%, #003566 45%, #003566 55%, transparent 55%),
-              linear-gradient(150deg, transparent 0%, transparent 45%, #003566 45%, #003566 55%, transparent 55%),
-              linear-gradient(90deg, transparent 0%, transparent 45%, #003566 45%, #003566 55%, transparent 55%),
-              /* Hexagon side facets - mid blue */
-              linear-gradient(30deg, #001d3d 0%, #001d3d 45%, transparent 45%),
-              linear-gradient(150deg, transparent 55%, #001d3d 55%, #001d3d 100%),
-              linear-gradient(30deg, transparent 55%, #001d3d 55%, #001d3d 100%),
-              linear-gradient(150deg, #001d3d 0%, #001d3d 45%, transparent 45%),
-              linear-gradient(90deg, #001d3d 0%, #001d3d 45%, transparent 45%),
-              linear-gradient(90deg, transparent 55%, #001d3d 55%, #001d3d 100%)`,
-            backgroundSize: '100px 173px',
-            backgroundPosition: '0 0, 50px 86px, 25px 43px, 75px 129px, 0 0, 50px 86px, 0 0, 50px 86px, 25px 43px, 75px 129px'
-          }}
-        />
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#000814]">
+          {/* The Isometric Pattern */}
+          <div 
+            className="absolute inset-0 opacity-40"
+            style={{
+              backgroundImage: `
+                linear-gradient(30deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
+                linear-gradient(150deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
+                linear-gradient(30deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
+                linear-gradient(150deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
+                linear-gradient(60deg, #003566 25%, transparent 25.5%, transparent 75%, #003566 75%, #003566),
+                linear-gradient(60deg, #003566 25%, transparent 25.5%, transparent 75%, #003566 75%, #003566)
+              `,
+              backgroundSize: '40px 70px',
+              backgroundPosition: '0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px'
+            }}
+          />
+          {/* The Deep Shadow Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#000814]/50 to-[#000814]"></div>
+        </div>
         <div className="mx-auto max-w-6xl px-6 relative z-10">
           <div className="flex items-center">
             {/* Left line stretching to edge */}
