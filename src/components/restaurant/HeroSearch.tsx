@@ -115,11 +115,11 @@ export function HeroSearch() {
   }
 
   return (
-    <section className="relative h-screen w-full bg-[#050A18] flex flex-col items-center justify-center overflow-hidden px-4">
-      {/* 1. BACKGROUND STRUCTURES (Subtler) */}
-      <div className="absolute inset-0 z-0 opacity-40">
-        <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[50%] bg-blue-900/20 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-indigo-900/20 rounded-full blur-[100px]"></div>
+    <section className="relative h-screen w-full bg-[#050A18] flex flex-col items-center justify-center overflow-hidden px-4" id="hero-search">
+      {/* 1. BACKGROUND STRUCTURES (Subtler) - pointer-events-none to prevent blocking */}
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[50%] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-indigo-900/20 rounded-full blur-[100px] pointer-events-none"></div>
       </div>
 
       {/* 2. CATCHY WORDS (Smaller & More Spaced) */}

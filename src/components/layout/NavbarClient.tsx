@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -20,14 +21,32 @@ function initials(name?: string | null) {
 }
 
 export function NavbarClient({ user, profile }: NavbarClientProps) {
+  const [mounted, setMounted] = React.useState(false);
+  
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const role = profile?.role ?? "diner";
   const displayName = profile?.full_name ?? user?.email ?? "AfriTable";
 
+  if (!mounted) {
+    return (
+      <header className="sticky top-0 border-b bg-background/80 backdrop-blur" style={{ zIndex: 9999, position: 'relative' }}>
+        <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6">
+          <div className="flex items-center gap-6">
+            <div className="h-[86px] w-[200px] bg-muted animate-pulse rounded" />
+          </div>
+        </div>
+      </header>
+    );
+  }
+
   return (
-    <header className="sticky top-0 border-b bg-background/80 backdrop-blur" style={{ zIndex: 9999, position: 'relative' }}>
-      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6 relative z-[100]">
-        <div className="flex items-center gap-6 relative z-[100]">
-          <Link href="/" className="flex items-center gap-2 relative z-[100]">
+    <header className="sticky top-0 border-b bg-background/80 backdrop-blur relative" style={{ zIndex: 9999 }}>
+      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6 relative" style={{ zIndex: 9999 }}>
+        <div className="flex items-center gap-6 relative" style={{ zIndex: 9999 }}>
+          <Link href="/" className="flex items-center gap-2 relative" style={{ zIndex: 9999 }}>
             <Image
               src="/logo.png"
               alt="AfriTable"
@@ -64,7 +83,7 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
           </nav>
         </div>
 
-        <div className="flex items-center gap-2 relative z-[100]">
+        <div className="flex items-center gap-2 relative" style={{ zIndex: 9999 }}>
           {/* Mobile menu */}
           <Dialog>
             <DialogTrigger asChild>

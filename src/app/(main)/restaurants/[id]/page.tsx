@@ -293,9 +293,10 @@ async function getSimilarRestaurants(restaurantId: string, cuisines: string[]) {
   return rows.slice(0, 6);
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
-  const restaurant = await getRestaurantById(params.id);
+  const restaurant = await getRestaurantById(id);
   if (!restaurant) return {};
 
   const addr = addressToString(restaurant.address);
@@ -317,12 +318,13 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-export default async function RestaurantProfilePage({ params }: { params: { id: string } }) {
-  console.log(`[RestaurantPage] Attempting to load restaurant with id: "${params.id}"`);
-  const restaurant = await getRestaurantById(params.id);
+export default async function RestaurantProfilePage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  console.log(`[RestaurantPage] Attempting to load restaurant with id: "${id}"`);
+  const restaurant = await getRestaurantById(id);
   if (!restaurant) {
-    console.error(`[RestaurantPage] ❌ Restaurant not found for id: "${params.id}"`);
-    console.error(`[RestaurantPage] Check: /api/debug/restaurant/${encodeURIComponent(params.id)}`);
+    console.error(`[RestaurantPage] ❌ Restaurant not found for id: "${id}"`);
+    console.error(`[RestaurantPage] Check: /api/debug/restaurant/${encodeURIComponent(id)}`);
     notFound();
   }
   console.log(`[RestaurantPage] ✅ Successfully loaded restaurant: "${restaurant.name}" (${restaurant.id || restaurant.slug})`);

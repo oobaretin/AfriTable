@@ -1,3 +1,6 @@
+"use client";
+
+import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Apple, Instagram, Smartphone, Twitter, Youtube } from "lucide-react";
@@ -6,6 +9,22 @@ import NewsletterSignup from "@/components/layout/NewsletterSignup";
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
+  const [mounted, setMounted] = React.useState(false);
+  
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <footer className="border-t bg-brand-dark text-white relative z-[90]">
+        <div className="mx-auto max-w-6xl px-6 py-14">
+          <div className="h-32 bg-muted/20 animate-pulse rounded" />
+        </div>
+      </footer>
+    );
+  }
+
   return (
     <footer className="border-t bg-brand-dark text-white relative z-[90]">
       <div className="mx-auto max-w-6xl px-6 py-14">
