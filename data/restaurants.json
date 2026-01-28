@@ -838,7 +838,7 @@
     "vibe_category": "Authentic Staples"
   },
   {
-    "id": "hou-002",
+    "id": "hou-007",
     "name": "Ariya Cuisine",
     "cuisine": "Nigerian",
     "region": "West African",
@@ -867,7 +867,7 @@
     "vibe_category": "Authentic Staples"
   },
   {
-    "id": "atl-001",
+    "id": "atl-004",
     "name": "Virgil's Gullah Kitchen",
     "cuisine": "Gullah Geechee / West African Roots",
     "region": "West African",
@@ -1314,7 +1314,7 @@
     "vibe_category": "Authentic Staples"
   },
   {
-    "id": "hou-003",
+    "id": "hou-009",
     "name": "Cool Runnings Jamaican Grill",
     "cuisine": "Jamaican",
     "region": "Caribbean",
@@ -2180,7 +2180,7 @@
     "vibe_category": "Fine Dining"
   },
   {
-    "id": "hou-002",
+    "id": "hou-008",
     "name": "Helen's Kitchen",
     "cuisine": "Jamaican",
     "region": "Caribbean",
