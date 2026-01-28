@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { RestaurantCardWithDistance } from "./RestaurantCardWithDistance";
+import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
 
 type RestaurantWithDistance = {
   restaurant: JSONRestaurant;
@@ -13,68 +14,30 @@ type RestaurantResultsProps = {
   restaurants: RestaurantWithDistance[];
 };
 
-// Helper function to extract city from address string
-function extractCityFromAddress(address: string | unknown): string {
-  if (typeof address === "string") {
-    const parts = address.split(",").map((s) => s.trim());
-    if (parts.length >= 2) {
-      const cityState = parts[1];
-      const cityMatch = cityState.match(/^([^,]+)/);
-      return cityMatch ? cityMatch[1].trim() : "";
-    }
-  }
-  return "";
-}
-
-// Helper to check if restaurant is featured (price_range === "$$$")
-function isFeatured(restaurant: JSONRestaurant): boolean {
-  return restaurant.price_range === "$$$";
-}
-
 export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
-  const { openDrawer } = useBookingDrawer();
-
-  // Show only 4 featured restaurants initially for minimalist feel
-  // If restaurants are filtered (e.g., by zip code), show all filtered results
+  // Check if we're in search mode (has distance data)
+  const isSearchMode = restaurants.length > 0 && restaurants[0].distance !== null;
+  
+  // In search mode, show all results (already filtered and sorted by distance)
+  // Otherwise, show featured restaurants (legacy behavior)
   const displayedRestaurants = React.useMemo(() => {
-    // If we have fewer restaurants than the full dataset, they're likely filtered
-    // Show all filtered results (they're already filtered by zip code)
-    // We'll use a threshold: if less than 50 restaurants, assume it's a filtered set
-    const FULL_DATASET_SIZE = 50; // Approximate full dataset size
+    if (isSearchMode) {
+      return restaurants;
+    }
+    
+    // Legacy: Show only 4 featured restaurants for minimalist feel
+    const FULL_DATASET_SIZE = 50;
     if (restaurants.length < FULL_DATASET_SIZE && restaurants.length > 0) {
       return restaurants;
     }
     
-    // Otherwise, show only 4 featured restaurants for minimalist feel
-    // Get all featured restaurants
-    const allFeatured = restaurants.filter(isFeatured);
+    // Filter for featured restaurants (price_range === "$$$")
+    const featured = restaurants.filter(
+      (r) => r.restaurant.price_range === "$$$"
+    );
     
-    // Prioritize by key cities: NYC, Houston, Atlanta, DC, Miami, LA
-    const keyCities = [
-      "new york city",
-      "houston",
-      "atlanta",
-      "washington d.c.",
-      "miami",
-      "los angeles",
-    ];
-    
-    // Helper to check if restaurant is from a key city
-    const isFromKeyCity = (r: JSONRestaurant): boolean => {
-      const city = extractCityFromAddress(r.address).toLowerCase();
-      return keyCities.some((keyCity) => city.includes(keyCity));
-    };
-    
-    // Separate featured restaurants by city priority
-    const featuredFromKeyCities = allFeatured.filter(isFromKeyCity);
-    const featuredOthers = allFeatured.filter((r) => !isFromKeyCity(r));
-    
-    // Combine: featured from key cities first, then other featured
-    const combined = [...featuredFromKeyCities, ...featuredOthers];
-    
-    // Return only the first 4 for initial view
-    return combined.slice(0, 4);
-  }, [restaurants]);
+    return featured.slice(0, 4);
+  }, [restaurants, isSearchMode]);
 
 
   if (displayedRestaurants.length === 0) {
