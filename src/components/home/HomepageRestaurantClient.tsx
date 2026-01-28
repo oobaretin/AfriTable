@@ -5,14 +5,21 @@ import { RestaurantResults } from "./RestaurantResults";
 import { ZipCodeSearch } from "./ZipCodeSearch";
 import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
 
+type RestaurantWithDistance = {
+  restaurant: JSONRestaurant;
+  distance: number | null;
+};
+
 type HomepageRestaurantClientProps = {
   restaurants: JSONRestaurant[];
 };
 
 export function HomepageRestaurantClient({ restaurants }: HomepageRestaurantClientProps) {
-  const [filteredRestaurants, setFilteredRestaurants] = React.useState<JSONRestaurant[]>(restaurants);
+  const [filteredRestaurants, setFilteredRestaurants] = React.useState<RestaurantWithDistance[]>(
+    restaurants.map((r) => ({ restaurant: r, distance: null }))
+  );
 
-  const handleFilterChange = (filtered: JSONRestaurant[]) => {
+  const handleFilterChange = (filtered: RestaurantWithDistance[]) => {
     setFilteredRestaurants(filtered);
   };
 

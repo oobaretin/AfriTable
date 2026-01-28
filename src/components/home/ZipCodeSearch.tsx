@@ -5,9 +5,14 @@ import { Search } from "lucide-react";
 import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
 import { getZipCodeCoordinates, calculateDistance } from "@/lib/geocoding";
 
+type RestaurantWithDistance = {
+  restaurant: JSONRestaurant;
+  distance: number;
+};
+
 type ZipCodeSearchProps = {
   restaurants: JSONRestaurant[];
-  onFilterChange: (filteredRestaurants: JSONRestaurant[]) => void;
+  onFilterChange: (filteredRestaurants: RestaurantWithDistance[]) => void;
 };
 
 // Extract zip code from restaurant (prefer explicit zip field, fallback to address parsing)
@@ -103,7 +108,8 @@ export function ZipCodeSearch({ restaurants, onFilterChange }: ZipCodeSearchProp
       onFilterChange(filtered);
     } else {
       // Reset to show all restaurants when zip is cleared
-      onFilterChange(restaurants);
+      const allRestaurants = restaurants.map((restaurant) => ({ restaurant, distance: null as number | null }));
+      onFilterChange(allRestaurants as any);
     }
   }, [zipCode, radius, restaurants, onFilterChange]);
 

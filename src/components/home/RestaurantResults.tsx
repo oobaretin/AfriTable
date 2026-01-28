@@ -2,12 +2,15 @@
 
 import * as React from "react";
 import Link from "next/link";
-import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
-import { useBookingDrawer } from "@/contexts/BookingDrawerContext";
-import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
+import { RestaurantCardWithDistance } from "./RestaurantCardWithDistance";
+
+type RestaurantWithDistance = {
+  restaurant: JSONRestaurant;
+  distance: number | null;
+};
 
 type RestaurantResultsProps = {
-  restaurants: JSONRestaurant[];
+  restaurants: RestaurantWithDistance[];
 };
 
 // Helper function to extract city from address string
@@ -80,11 +83,13 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
         <div className="max-w-7xl mx-auto">
           <div className="text-center py-20">
             <h2 className="text-2xl md:text-3xl font-serif text-[#C69C2B] font-normal mb-4">
-              Coming Soon to Your Area
+              {isSearchMode ? "No Spots Found" : "Coming Soon to Your Area"}
             </h2>
             <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              We&apos;re working on expanding our network of authentic African and Caribbean restaurants. 
-              Join our waitlist to be notified when we add restaurants near you.
+              {isSearchMode 
+                ? "Expanding our reach soon! No spots found within this distance."
+                : "We're working on expanding our network of authentic African and Caribbean restaurants. Join our waitlist to be notified when we add restaurants near you."
+              }
             </p>
           </div>
         </div>
@@ -93,99 +98,56 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
   }
 
   return (
-    <section className="pt-24 pb-0 bg-[#050A18] px-6">
+    <section className="pt-12 pb-24 bg-[#050A18] px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Header matching the 'Catchy Words' style */}
-        <div className="mb-16 border-l-4 border-[#A33B32] pl-8">
-          <h2 className="text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.5em] mb-2">
-            Selected Destinations
-          </h2>
-          <h3 className="text-4xl font-black text-white uppercase tracking-tighter italic">
-            Featured Establishments
-          </h3>
+        {/* Header - Different for search mode vs featured */}
+        {isSearchMode ? (
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-serif text-[#C69C2B] font-normal mb-2">
+              Restaurants Near You
+            </h2>
+            <p className="text-sm text-white/60">
+              {displayedRestaurants.length} {displayedRestaurants.length === 1 ? "restaurant" : "restaurants"} found
+            </p>
+          </div>
+        ) : (
+          <div className="mb-16 border-l-4 border-[#A33B32] pl-8">
+            <h2 className="text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.5em] mb-2">
+              Selected Destinations
+            </h2>
+            <h3 className="text-4xl font-black text-white uppercase tracking-tighter italic">
+              Featured Establishments
+            </h3>
+          </div>
+        )}
+
+        {/* Restaurant Grid */}
+        <div className={`grid gap-6 ${
+          isSearchMode 
+            ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" 
+            : "grid-cols-1 md:grid-cols-2"
+        }`}>
+          {displayedRestaurants.map((item) => (
+            <RestaurantCardWithDistance
+              key={item.restaurant.id}
+              restaurant={item.restaurant}
+              distance={item.distance}
+            />
+          ))}
         </div>
 
-        {/* The Gallery Grid - Only 4 Featured Restaurants */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {displayedRestaurants.map((restaurant) => {
-            const city = extractCityFromAddress(restaurant.address);
-            const cuisine = restaurant.cuisine || "";
-            const description = restaurant.about || "";
-            const featured = isFeatured(restaurant);
-            const slug = restaurant.id; // Use id as slug
-
-            return (
-              <div
-                key={restaurant.id}
-                className="group relative overflow-hidden bg-[#0A1120] border border-white/5 p-10 rounded-[2rem] transition-all duration-500 hover:border-[#C69C2B]/30 hover:shadow-[0_0_50px_rgba(198,156,43,0.05)]"
-              >
-                {/* Top Row: City & Cuisine */}
-                <div className="flex justify-between items-start mb-12">
-                  <div>
-                    <span className="text-[10px] font-black text-[#A33B32] uppercase tracking-widest block mb-1">
-                      {city || "Location"}
-                    </span>
-                    <span className="text-xs font-medium text-white/40 uppercase tracking-[0.2em]">
-                      {cuisine}
-                    </span>
-                  </div>
-                  {featured && (
-                    <span className="bg-[#C69C2B] text-[#050A18] text-[8px] font-black px-3 py-1 rounded-full uppercase tracking-tighter">
-                      Ultimate Choice
-                    </span>
-                  )}
-                </div>
-
-                {/* Middle Row: Name & Description */}
-                <div className="mb-12">
-                  <h4 className="text-4xl font-black text-white uppercase tracking-tighter mb-4 group-hover:text-[#C69C2B] transition-colors duration-300">
-                    {restaurant.name}
-                  </h4>
-                  {description && (
-                    <p className="text-slate-400 text-sm italic leading-relaxed max-w-xs">
-                      &quot;{description}&quot;
-                    </p>
-                  )}
-                </div>
-
-                {/* Bottom Row: The 'Find Table' Action */}
-                <div className="flex items-center justify-between border-t border-white/5 pt-8">
-                  <Link
-                    href={`/restaurants/${slug}`}
-                    className="text-[10px] font-black text-white uppercase tracking-[0.3em] flex items-center gap-4 group-hover:gap-6 transition-all"
-                  >
-                    View Details <span className="text-[#A33B32] text-xl">→</span>
-                  </Link>
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      const transformedRestaurant = transformJSONRestaurantToDetail(restaurant);
-                      openDrawer(transformedRestaurant as any);
-                    }}
-                    className="bg-white/5 hover:bg-[#A33B32] text-white text-[9px] font-black px-6 py-3 rounded-full uppercase tracking-widest transition-all"
-                  >
-                    Find Table
-                  </button>
-                </div>
-
-                {/* Subtle 3D Background Glow for each card */}
-                <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-blue-900/10 blur-[80px] group-hover:bg-[#C69C2B]/10 transition-all"></div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* See All Destinations Button */}
-        <div className="mt-16 flex justify-center">
-          <Link
-            href="/restaurants"
-            className="group relative bg-transparent hover:bg-[#C69C2B]/10 border border-[#C69C2B] text-[#C69C2B] text-[10px] font-black px-8 py-4 rounded-full uppercase tracking-widest transition-all duration-500 flex items-center gap-3 hover:shadow-[0_0_15px_rgba(198,156,43,0.4)]"
-          >
-            <span>See All Destinations</span>
-            <span className="text-lg transition-transform duration-500 group-hover:translate-x-1">→</span>
-          </Link>
-        </div>
+        {/* See All Destinations Button - Only show in featured mode */}
+        {!isSearchMode && (
+          <div className="mt-16 flex justify-center">
+            <Link
+              href="/restaurants"
+              className="group relative bg-transparent hover:bg-[#C69C2B]/10 border border-[#C69C2B] text-[#C69C2B] text-[10px] font-black px-8 py-4 rounded-full uppercase tracking-widest transition-all duration-500 flex items-center gap-3 hover:shadow-[0_0_15px_rgba(198,156,43,0.4)]"
+            >
+              <span>See All Destinations</span>
+              <span className="text-lg transition-transform duration-500 group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
