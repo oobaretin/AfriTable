@@ -2571,24 +2571,6 @@
     "about": "A legendary Houston staple. It has national fame from 'Diners, Drive-Ins and Dives' but stays true to its roots."
   },
   {
-    "id": "hou-sta-015",
-    "name": "Reggae Hut",
-    "cuisine": "Caribbean Fusion",
-    "region": "Caribbean",
-    "price_range": "$$",
-    "rating": 4.6,
-    "address": "4814 Almeda Rd, Houston, TX 77004",
-    "phone": "(713) 520-7171",
-    "website": "http://reggaehutcafe.com/",
-    "neighborhood": "Third Ward / Museum District",
-    "vibe": "Artsy & Colorful / Museum District",
-    "vibe_tags": ["Artsy & Colorful / Museum District"],
-    "specialty": "Beef Patties & Jerk Chicken Enchiladas",
-    "menu_highlights": ["Beef Patties", "Jerk Chicken Enchiladas"],
-    "vibe_category": "Community Favorites",
-    "about": "Located in the historic Third Ward/Museum District. It blends island flavors with a cool, artsy Houston energy."
-  },
-  {
     "id": "katy-sta-003",
     "name": "Butter D' Roti",
     "cuisine": "Trinidadian (Indo-Caribbean)",
