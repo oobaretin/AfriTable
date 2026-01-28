@@ -32,7 +32,7 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
 
   if (!mounted) {
     return (
-      <header className="sticky top-0 border-b bg-background/80 backdrop-blur" style={{ zIndex: 9999, position: 'relative' }}>
+      <header className="fixed top-0 w-full border-b bg-white z-[9999]">
         <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6">
           <div className="flex items-center gap-6">
             <div className="h-[86px] w-[200px] bg-muted animate-pulse rounded" />

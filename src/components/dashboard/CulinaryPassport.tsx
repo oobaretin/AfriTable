@@ -117,8 +117,15 @@ export function CulinaryPassport() {
   //   },
   // });
 
-  const reservations = data?.reservations ?? [];
-  const now = new Date();
+  // Memoize reservations to prevent infinite re-renders
+  const reservations = React.useMemo(() => {
+    return data?.reservations ?? [];
+  }, [data?.reservations]);
+
+  // Memoize now to prevent infinite re-renders
+  const now = React.useMemo(() => {
+    return new Date();
+  }, []);
 
   // Separate upcoming and past reservations
   const upcoming = React.useMemo(() => {

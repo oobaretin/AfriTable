@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
 import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
@@ -255,11 +256,13 @@ export function AnalyticsExport() {
           <p className="text-[10px] font-bold text-slate-400 italic">
             Certified by AfriTable Insights Engine • {format(new Date(), "MMM yyyy")}
           </p>
-          <img
+          <Image
             src="/logo.png"
-            className="h-6 opacity-30 grayscale"
+            width={120}
+            height={30}
+            className="h-6 w-auto opacity-30 grayscale"
             alt="Sankofa Seal"
-            crossOrigin="anonymous"
+            unoptimized
           />
         </div>
       </div>

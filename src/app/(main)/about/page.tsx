@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ContactAndMap } from "@/components/home/ContactAndMap";
 
 export default function AboutPage() {
@@ -19,9 +20,11 @@ export default function AboutPage() {
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
-            <img 
+            <Image 
               src="/api/placeholder/600/800" 
               alt="Culinary tradition" 
+              width={600}
+              height={800}
               className="w-full h-full object-cover"
             />
           </div>
@@ -99,10 +102,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Founder */}
             <div className="text-center">
-              <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg">
-                <img 
+              <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg relative">
+                <Image 
                   src="/api/placeholder/200/200" 
                   alt="Founder" 
+                  width={200}
+                  height={200}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -131,10 +136,12 @@ export default function AboutPage() {
 
             {/* Community Lead */}
             <div className="text-center">
-              <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg">
-                <img 
+              <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg relative">
+                <Image 
                   src="/api/placeholder/200/200" 
                   alt="Community Lead" 
+                  width={200}
+                  height={200}
                   className="w-full h-full object-cover"
                 />
               </div>
