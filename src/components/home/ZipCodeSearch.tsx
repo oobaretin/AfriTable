@@ -7,7 +7,7 @@ import { getZipCodeCoordinates, calculateDistance } from "@/lib/geocoding";
 
 type RestaurantWithDistance = {
   restaurant: JSONRestaurant;
-  distance: number;
+  distance: number | null;
 };
 
 type ZipCodeSearchProps = {
@@ -105,9 +105,7 @@ export function ZipCodeSearch({ restaurants, onFilterChange }: ZipCodeSearchProp
         })
         .sort((a, b) => a.distance - b.distance); // Sort by distance (closest first)
 
-      // Extract just the restaurants (sorted by distance)
-      const filtered = restaurantsWithDistance.map((item) => item.restaurant);
-      onFilterChange(filtered);
+      onFilterChange(restaurantsWithDistance);
     } else {
       // Reset to show all restaurants when zip is cleared
       const allRestaurants: RestaurantWithDistance[] = restaurants.map((restaurant) => ({ 
