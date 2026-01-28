@@ -32,9 +32,9 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
 
   if (!mounted) {
     return (
-      <header className="fixed top-0 w-full border-b bg-white z-[9999]">
-        <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6">
-          <div className="flex items-center gap-6">
+      <header className="fixed top-0 w-full border-b bg-white relative z-50">
+        <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6 relative z-50">
+          <div className="flex items-center gap-6 relative z-50">
             <div className="h-[86px] w-[200px] bg-muted animate-pulse rounded" />
           </div>
         </div>
@@ -43,10 +43,10 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
   }
 
   return (
-    <header className="fixed top-0 w-full border-b bg-white z-[9999]">
-      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6 relative" style={{ zIndex: 9999 }}>
-        <div className="flex items-center gap-6 relative" style={{ zIndex: 9999 }}>
-          <Link href="/" className="flex items-center gap-2 relative" style={{ zIndex: 9999 }} prefetch={false}>
+    <header className="fixed top-0 w-full border-b bg-white relative z-50">
+      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6 relative z-50">
+        <div className="flex items-center gap-6 relative z-50">
+          <Link href="/" className="flex items-center gap-2 relative z-50 pointer-events-auto cursor-pointer" prefetch={false}>
             <Image
               src="/logo.png"
               alt="AfriTable"
@@ -59,28 +59,25 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
           </Link>
 
           {mounted && (
-            <nav className="hidden items-center gap-4 text-sm md:flex relative" style={{ zIndex: 9999 }}>
+            <nav className="hidden items-center gap-4 text-sm md:flex relative z-50">
               <Link 
                 href="/" 
-                className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative pointer-events-auto"
+                className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto"
                 prefetch={false}
-                style={{ zIndex: 9999 }}
               >
                 Home
               </Link>
               <Link 
                 href="/restaurants" 
-                className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative pointer-events-auto"
+                className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto"
                 prefetch={false}
-                style={{ zIndex: 9999 }}
               >
                 Restaurants
               </Link>
               <Link 
                 href="/about" 
-                className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative pointer-events-auto"
+                className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto"
                 prefetch={false}
-                style={{ zIndex: 9999 }}
               >
                 About
               </Link>
@@ -88,11 +85,11 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
           )}
         </div>
 
-        <div className="flex items-center gap-2 relative" style={{ zIndex: 9999 }}>
+        <div className="flex items-center gap-2 relative z-50">
           {/* Mobile menu */}
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="outline" className="md:hidden" aria-label="Open menu">
+              <Button variant="outline" className="md:hidden pointer-events-auto cursor-pointer relative z-50" aria-label="Open menu">
                 Menu
               </Button>
             </DialogTrigger>
@@ -102,29 +99,29 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
               </DialogHeader>
               {mounted && (
                 <div className="grid gap-2">
-                  <Button asChild variant="ghost" className="justify-start">
-                    <Link href="/" prefetch={false}>Home</Link>
+                  <Button asChild variant="ghost" className="justify-start pointer-events-auto cursor-pointer relative z-50">
+                    <Link href="/" prefetch={false} className="pointer-events-auto">Home</Link>
                   </Button>
-                  <Button asChild variant="ghost" className="justify-start">
-                    <Link href="/restaurants" prefetch={false}>Restaurants</Link>
+                  <Button asChild variant="ghost" className="justify-start pointer-events-auto cursor-pointer relative z-50">
+                    <Link href="/restaurants" prefetch={false} className="pointer-events-auto">Restaurants</Link>
                   </Button>
-                  <Button asChild variant="ghost" className="justify-start">
-                    <Link href="/about" prefetch={false}>About</Link>
+                  <Button asChild variant="ghost" className="justify-start pointer-events-auto cursor-pointer relative z-50">
+                    <Link href="/about" prefetch={false} className="pointer-events-auto">About</Link>
                   </Button>
                   <div className="h-px bg-border my-2" />
                   {user ? (
                     <>
                       {role === "restaurant_owner" ? (
-                        <Button asChild variant="ghost" className="justify-start">
-                          <Link href="/dashboard" prefetch={false}>Dashboard</Link>
+                        <Button asChild variant="ghost" className="justify-start pointer-events-auto cursor-pointer relative z-50">
+                          <Link href="/dashboard" prefetch={false} className="pointer-events-auto">Dashboard</Link>
                         </Button>
                       ) : (
-                        <Button asChild variant="ghost" className="justify-start">
-                          <Link href="/reservations" prefetch={false}>My Reservations</Link>
+                        <Button asChild variant="ghost" className="justify-start pointer-events-auto cursor-pointer relative z-50">
+                          <Link href="/reservations" prefetch={false} className="pointer-events-auto">My Reservations</Link>
                         </Button>
                       )}
                       <form action={signOutAction}>
-                        <Button type="submit" variant="ghost" className="w-full justify-start">
+                        <Button type="submit" variant="ghost" className="w-full justify-start pointer-events-auto cursor-pointer relative z-50">
                           Sign out
                         </Button>
                       </form>
@@ -146,11 +143,11 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
 
           {/* Desktop auth area */}
           {mounted && (
-            <div className="hidden items-center gap-2 md:flex" style={{ zIndex: 9999 }}>
+            <div className="hidden items-center gap-2 md:flex relative z-50">
               {user ? (
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="outline" className="gap-2">
+                    <Button variant="outline" className="gap-2 pointer-events-auto cursor-pointer relative z-50">
                       <Avatar className="h-6 w-6">
                         <AvatarFallback className="text-[10px]">{initials(profile?.full_name)}</AvatarFallback>
                       </Avatar>
@@ -162,15 +159,15 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
                     <DropdownMenuSeparator />
                     {role === "restaurant_owner" ? (
                       <DropdownMenuItem asChild>
-                        <Link href="/dashboard" prefetch={false}>Dashboard</Link>
+                        <Link href="/dashboard" prefetch={false} className="pointer-events-auto">Dashboard</Link>
                       </DropdownMenuItem>
                     ) : (
                       <DropdownMenuItem asChild>
-                        <Link href="/reservations" prefetch={false}>My Reservations</Link>
+                        <Link href="/reservations" prefetch={false} className="pointer-events-auto">My Reservations</Link>
                       </DropdownMenuItem>
                     )}
                     <DropdownMenuItem asChild>
-                      <Link href="/profile" prefetch={false}>Profile</Link>
+                      <Link href="/profile" prefetch={false} className="pointer-events-auto">Profile</Link>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem asChild>
@@ -184,11 +181,11 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
                 </DropdownMenu>
               ) : (
                 <>
-                  <Button asChild variant="outline">
-                    <Link href="/login" prefetch={false}>Sign in</Link>
+                  <Button asChild variant="outline" className="pointer-events-auto cursor-pointer relative z-50">
+                    <Link href="/login" prefetch={false} className="pointer-events-auto">Sign in</Link>
                   </Button>
-                  <Button asChild>
-                    <Link href="/signup" prefetch={false}>Sign up</Link>
+                  <Button asChild className="pointer-events-auto cursor-pointer relative z-50">
+                    <Link href="/signup" prefetch={false} className="pointer-events-auto">Sign up</Link>
                   </Button>
                 </>
               )}
