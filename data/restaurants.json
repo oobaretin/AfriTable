@@ -740,19 +740,24 @@
   {
     "id": "hou-001",
     "name": "ChòpnBlọk",
-    "cuisine": "Nigerian / Ghanaian",
+    "cuisine": "West African (Fast-Fine)",
     "region": "West African",
     "price_range": "$$$",
     "rating": 4.8,
-    "address": "Downtown, Houston, TX",
-    "phone": "(281) 747-7500",
+    "address": "401 Franklin St Suite 1325, Houston, TX 77201",
+    "phone": "(713) 223-0103",
+    "website": "https://www.chopnblok.com/",
+    "neighborhood": "POST Houston / Downtown",
+    "vibe": "Modern & High-Design",
+    "vibe_tags": [
+      "Modern & High-Design"
+    ],
+    "specialty": "Trad Bowl (Jollof) & Yassa Grill",
+    "menu_highlights": ["Trad Bowl (Jollof)", "Yassa Grill"],
     "awards": ["NYT Top 50"],
     "quality_factor": "The \"Gold Standard\" for West African fast-fine dining.",
     "featured": true,
-    "about": "Accessible West African flavors for the modern palate.",
-    "vibe_tags": [
-      "Contemporary Heritage"
-    ]
+    "about": "Accessible West African flavors for the modern palate."
   },
   {
     "id": "nyc-ponty",
@@ -1927,5 +1932,41 @@
     "menu_highlights": ["Oxtail Risotto with Scotch Bonnet Oil"],
     "featured": false,
     "about": "While the flagship is in Austin, their 2025/2026 West Coast residency has become the most exclusive ticket for Afro-Caribbean fusion in the Bay Area."
+  },
+  {
+    "id": "hou-002",
+    "name": "Helen's Kitchen",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.6,
+    "address": "14608 S Post Oak Rd, Houston, TX 77045",
+    "phone": "(713) 413-9022",
+    "website": "https://helenkitchen.com/",
+    "neighborhood": "South Post Oak",
+    "vibe": "Authentic / High-Rated",
+    "vibe_tags": ["Authentic / High-Rated"],
+    "specialty": "Oxtail & Curry Goat",
+    "menu_highlights": ["Oxtail", "Curry Goat"],
+    "featured": false,
+    "about": "An authentic Jamaican restaurant in Houston's South Post Oak neighborhood, known for traditional dishes like oxtail and curry goat."
+  },
+  {
+    "id": "katy-001",
+    "name": "Wing Snob (Katy)",
+    "cuisine": "Afro-Fusion / Wings",
+    "region": "Other African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "3902 N Fry Rd, Katy, TX 77449",
+    "phone": "(832) 427-6311",
+    "website": "https://www.wingsnob.com/",
+    "neighborhood": "North Fry",
+    "vibe": "Casual / High-Quality Takeout",
+    "vibe_tags": ["Casual / High-Quality Takeout"],
+    "specialty": "Lemon Pepper & Afro-Fusion Dry Rubs",
+    "menu_highlights": ["Lemon Pepper Wings", "Afro-Fusion Dry Rubs"],
+    "featured": false,
+    "about": "A casual, high-quality takeout spot in Katy specializing in Afro-fusion wings with unique dry rubs and flavors."
   }
 ]
