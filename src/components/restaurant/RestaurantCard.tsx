@@ -30,7 +30,7 @@ export function RestaurantCard({
   isFeatured?: boolean;
 }) {
   const { openDrawer } = useBookingDrawer();
-  const safeHref = href ?? `/restaurants/${encodeURIComponent(restaurant.slug)}`;
+  const safeHref = href ?? `/restaurants/${encodeURIComponent(restaurant.slug || restaurant.id)}`;
   const cuisines = Array.isArray(restaurant.cuisine_types) ? restaurant.cuisine_types : [];
   const price = "$".repeat(Math.max(1, Math.min(4, restaurant.price_range ?? 1)));
   const imgSrc = restaurant.images?.[0] || "/og-image.svg";
@@ -124,7 +124,7 @@ export function RestaurantCard({
         : "border-slate-100"
     }`}>
       {/* Image Container */}
-      <Link href={safeHref} className="block">
+      <Link href={safeHref} className="block" prefetch={true}>
         <div className="relative w-full overflow-hidden aspect-[4/3] bg-white/5">
           <Image
             src={imgSrc}
