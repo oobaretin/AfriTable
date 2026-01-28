@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-12">
           {/* Brand */}
           <div className="md:col-span-4">
-            <Link href="/" className="inline-flex items-center gap-2 relative z-[90] pointer-events-auto" prefetch={true}>
+            <Link href="/" className="inline-flex items-center gap-2 relative z-[90] pointer-events-auto" prefetch={false}>
               <Image
                 src="/logo.png"
                 alt="AfriTable"
@@ -95,22 +95,22 @@ export default function Footer() {
             <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Discover</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants" prefetch={false}>
                 Find restaurants
               </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?city=Houston%2C%20TX" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?city=Houston%2C%20TX" prefetch={false}>
                 Houston
               </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?city=Atlanta%2C%20GA" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?city=Atlanta%2C%20GA" prefetch={false}>
                 Atlanta
               </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?city=New%20York%2C%20NY" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?city=New%20York%2C%20NY" prefetch={false}>
                 New York City
               </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?cuisine=Nigerian" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?cuisine=Nigerian" prefetch={false}>
                 Nigerian cuisine
               </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?cuisine=Jamaican" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?cuisine=Jamaican" prefetch={false}>
                 Jamaican cuisine
               </Link>
               </div>
@@ -119,13 +119,13 @@ export default function Footer() {
             <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">For restaurants</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/restaurant-signup" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/restaurant-signup" prefetch={false}>
                 Join AfriTable
               </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/dashboard" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/dashboard" prefetch={false}>
                 Owner dashboard
               </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/about" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/about" prefetch={false}>
                 Why AfriTable
               </Link>
               </div>
@@ -134,7 +134,7 @@ export default function Footer() {
             <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Company</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/about" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/about" prefetch={false}>
                 About
               </Link>
               <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="mailto:support@afritable.com">
@@ -149,13 +149,13 @@ export default function Footer() {
             <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Legal</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/terms" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/terms" prefetch={false}>
                 Terms
               </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/privacy" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/privacy" prefetch={false}>
                 Privacy
               </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/cookies" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/cookies" prefetch={false}>
                 Cookies
               </Link>
               </div>
@@ -181,13 +181,13 @@ export default function Footer() {
         <div className="mt-10 flex flex-col gap-3 border-t border-slate-800 pt-6 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} AfriTable. All rights reserved.</div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/terms" prefetch={true}>
+            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/terms" prefetch={false}>
               Terms
             </Link>
-            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/privacy" prefetch={true}>
+            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/privacy" prefetch={false}>
               Privacy
             </Link>
-            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/cookies" prefetch={true}>
+            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/cookies" prefetch={false}>
               Cookies
             </Link>
           </div>
