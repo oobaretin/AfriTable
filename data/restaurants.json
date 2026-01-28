@@ -337,13 +337,13 @@
   {
     "id": "cane-dc",
     "name": "Cane",
-    "cuisine": "Trinidadian",
+    "cuisine": "Trinidadian (Street-to-Table)",
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.8,
     "address": "403 H St NE, Washington, DC 20002",
     "phone": "(202) 675-2011",
-    "website": "https://www.cane-dc.com",
+    "website": "https://www.cane-dc.com/",
     "social": {
       "instagram": "@cane_dc"
     },
@@ -352,13 +352,18 @@
       "fri_sat": "11:30 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Award-winning Trinidadian street food on DC's H Street corridor, focusing on wood-smoked meats and authentic roti.",
+    "neighborhood": "H Street Corridor",
+    "vibe": "Intimate & Authentic",
+    "vibe_tags": ["Intimate & Authentic"],
+    "specialty": "Tiffin Box with Curry Goat & Paratha",
+    "awards": ["Michelin Bib Gourmand"],
+    "about": "Chef Peter Prime brings the soul of Trinidadian night markets to a sleek DC storefront. The 'Tiffin Box' is a legendary multi-layered experience of curries and chutneys.",
     "our_story": "Chef Peter Prime named the restaurant after the sugar cane that shaped the history and cuisine of his native Trinidad.",
     "cultural_roots": "Explores the diverse heritage of Trinidad, highlighting the influence of Indian indentured servants and enslaved Africans on the island's flavors.",
     "menu_highlights": [
+      "Tiffin Box with Curry Goat & Paratha",
       "Trini Doubles",
-      "Cumin-Spiced Pork",
-      "Tiffin Box Sampler"
+      "Cumin-Spiced Pork"
     ]
   },
   {
@@ -1001,20 +1006,25 @@
   },
   {
     "id": "chi-001",
-    "name": "Demera",
-    "cuisine": "Ethiopian",
+    "name": "Demera Ethiopian",
+    "cuisine": "Ethiopian (Fine Dining)",
     "region": "East African",
     "price_range": "$$$",
     "rating": 4.8,
-    "address": "Uptown, Chicago, IL",
-    "phone": "(773) 334-8787",
-    "awards": ["Michelin Bib"],
+    "address": "4801 N Broadway, Chicago, IL 60640",
+    "phone": "(773) 334-8888",
+    "website": "https://www.demerachicago.com/",
+    "neighborhood": "Uptown",
+    "vibe": "Vibrant & Culturally Rich",
+    "vibe_tags": [
+      "Vibrant & Culturally Rich"
+    ],
+    "specialty": "Messob Family Platter & Honey Wine",
+    "menu_highlights": ["Messob Family Platter", "Honey Wine"],
+    "awards": ["Michelin Bib Gourmand"],
     "quality_factor": "A Chicago institution for elite Ethiopian dining.",
     "featured": true,
-    "about": "Award-winning flavors served with Chicago's finest hospitality.",
-    "vibe_tags": [
-      "Upscale Communal"
-    ]
+    "about": "Chef Tigist Reda is a culinary ambassador for Ethiopia in the Midwest. Demera offers a polished, full-service experience that is widely considered the best Ethiopian in Chicago."
   },
   {
     "id": "phi-001",
@@ -1844,5 +1854,78 @@
     "menu_highlights": ["Sweet Chili Lamb Chops", "Oxtail Egg Rolls"],
     "featured": false,
     "about": "Where Hollywood glamour meets authentic island heat. This is the spot for 'Vibe Dining'—the food quality is high-end, and the crowd is impeccably dressed."
+  },
+  {
+    "id": "atl-fine-001",
+    "name": "Lucian Books and Wine",
+    "cuisine": "Modern Afro-European Fusion",
+    "region": "Other African",
+    "price_range": "$$$$",
+    "rating": 4.9,
+    "address": "3003 Peachtree Rd NE Ste 300, Atlanta, GA 30305",
+    "phone": "(404) 549-2655",
+    "website": "https://www.lucianbooksandwine.com/",
+    "neighborhood": "Buckhead",
+    "vibe": "Elite / Intellectual Chic",
+    "vibe_tags": ["Elite / Intellectual Chic"],
+    "specialty": "Heritage Pork with Black Garlic & Peanuts",
+    "menu_highlights": ["Heritage Pork with Black Garlic & Peanuts"],
+    "featured": true,
+    "about": "A sophisticated bookstore-restaurant hybrid in Buckhead. It represents the absolute peak of modern, ingredient-driven dining in Atlanta with a world-class wine program."
+  },
+  {
+    "id": "phi-fine-001",
+    "name": "Friday Saturday Sunday",
+    "cuisine": "Modern Diaspora / American",
+    "region": "Other African",
+    "price_range": "$$$$",
+    "rating": 4.9,
+    "address": "261 S 21st St, Philadelphia, PA 19103",
+    "phone": "(215) 546-4232",
+    "website": "https://www.fridaysaturdaysunday.com/",
+    "neighborhood": "Rittenhouse Square",
+    "vibe": "Moody / Architectural",
+    "vibe_tags": ["Moody / Architectural"],
+    "specialty": "Grilled Quail with African Spices",
+    "menu_highlights": ["Grilled Quail with African Spices"],
+    "awards": ["James Beard Outstanding Restaurant Winner"],
+    "featured": true,
+    "about": "Located in a historic Rittenhouse rowhouse, this restaurant offers an eight-course tasting menu that frequently integrates West African and Caribbean seasoning techniques."
+  },
+  {
+    "id": "sea-fine-002",
+    "name": "Jerk Shack",
+    "cuisine": "Modern Caribbean",
+    "region": "Caribbean",
+    "price_range": "$$$",
+    "rating": 4.7,
+    "address": "1133 24th Ave Ste N, Seattle, WA 98122",
+    "phone": "(206) 898-4085",
+    "website": "https://jerkshackseattle.com/",
+    "neighborhood": "Central District",
+    "vibe": "Island-Industrial / High Energy",
+    "vibe_tags": ["Island-Industrial / High Energy"],
+    "specialty": "Pimento Wood Smoked Jerk Chicken",
+    "menu_highlights": ["Pimento Wood Smoked Jerk Chicken"],
+    "featured": false,
+    "about": "Chef Trey Lamont uses high-end techniques to elevate classic street food. The jerk chicken here is seasoned for 48 hours and smoked over authentic pimento wood."
+  },
+  {
+    "id": "sf-fine-001",
+    "name": "Canje (Expansion Concept)",
+    "cuisine": "Modern Caribbean",
+    "region": "Caribbean",
+    "price_range": "$$$$",
+    "rating": 4.8,
+    "address": "Mission District (Various Pop-ups)",
+    "phone": "N/A - Online Booking Only",
+    "website": "https://canjeatx.com/",
+    "neighborhood": "Mission District",
+    "vibe": "Tech-Forward / Avant-Garde",
+    "vibe_tags": ["Tech-Forward / Avant-Garde"],
+    "specialty": "Oxtail Risotto with Scotch Bonnet Oil",
+    "menu_highlights": ["Oxtail Risotto with Scotch Bonnet Oil"],
+    "featured": false,
+    "about": "While the flagship is in Austin, their 2025/2026 West Coast residency has become the most exclusive ticket for Afro-Caribbean fusion in the Bay Area."
   }
 ]
