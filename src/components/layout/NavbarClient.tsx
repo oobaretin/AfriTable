@@ -24,10 +24,10 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
   const displayName = profile?.full_name ?? user?.email ?? "AfriTable";
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
-      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6 relative z-50">
-        <div className="flex items-center gap-6 relative z-50">
-          <Link href="/" className="flex items-center gap-2 relative z-50">
+    <header className="sticky top-0 z-[100] border-b bg-background/80 backdrop-blur">
+      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6 relative z-[100]">
+        <div className="flex items-center gap-6 relative z-[100]">
+          <Link href="/" className="flex items-center gap-2 relative z-[100]">
             <Image
               src="/logo.png"
               alt="AfriTable"
@@ -39,24 +39,24 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
             <span className="sr-only">AfriTable</span>
           </Link>
 
-          <nav className="hidden items-center gap-4 text-sm md:flex relative z-50">
+          <nav className="hidden items-center gap-4 text-sm md:flex relative z-[100]">
             <Link 
               href="/" 
-              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto"
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-[100] pointer-events-auto"
               prefetch={true}
             >
               Home
             </Link>
             <Link 
               href="/restaurants" 
-              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto"
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-[100] pointer-events-auto"
               prefetch={true}
             >
               Restaurants
             </Link>
             <Link 
               href="/about" 
-              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto"
+              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-[100] pointer-events-auto"
               prefetch={true}
             >
               About
@@ -64,7 +64,7 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
           </nav>
         </div>
 
-        <div className="flex items-center gap-2 relative z-50">
+        <div className="flex items-center gap-2 relative z-[100]">
           {/* Mobile menu */}
           <Dialog>
             <DialogTrigger asChild>

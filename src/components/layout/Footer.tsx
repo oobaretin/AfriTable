@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-brand-dark text-white relative z-10">
+    <footer className="border-t bg-brand-dark text-white relative z-[90]">
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-12">
           {/* Brand */}
           <div className="md:col-span-4">
-            <Link href="/" className="inline-flex items-center gap-2 relative z-10" prefetch={true}>
+            <Link href="/" className="inline-flex items-center gap-2 relative z-[90] pointer-events-auto" prefetch={true}>
               <Image
                 src="/logo.png"
                 alt="AfriTable"
@@ -115,13 +115,13 @@ export default function Footer() {
             <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Company</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/about" prefetch={true}>
+              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/about" prefetch={true}>
                 About
               </Link>
-              <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="mailto:support@afritable.com">
+              <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="mailto:support@afritable.com">
                 Contact support
               </a>
-              <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="mailto:partners@afritable.com">
+              <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="mailto:partners@afritable.com">
                 Partnerships
               </a>
               </div>
@@ -162,13 +162,13 @@ export default function Footer() {
         <div className="mt-10 flex flex-col gap-3 border-t border-slate-800 pt-6 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} AfriTable. All rights reserved.</div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <Link className="hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/terms" prefetch={true}>
+            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/terms" prefetch={true}>
               Terms
             </Link>
-            <Link className="hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/privacy" prefetch={true}>
+            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/privacy" prefetch={true}>
               Privacy
             </Link>
-            <Link className="hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/cookies" prefetch={true}>
+            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/cookies" prefetch={true}>
               Cookies
             </Link>
           </div>
