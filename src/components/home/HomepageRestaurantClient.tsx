@@ -11,12 +11,9 @@ type HomepageRestaurantClientProps = {
 
 export function HomepageRestaurantClient({ restaurants }: HomepageRestaurantClientProps) {
   const [filteredRestaurants, setFilteredRestaurants] = React.useState<JSONRestaurant[]>(restaurants);
-  const [hasZipFilter, setHasZipFilter] = React.useState(false);
 
   const handleFilterChange = (filtered: JSONRestaurant[]) => {
     setFilteredRestaurants(filtered);
-    // Track if we're filtering (fewer restaurants than original)
-    setHasZipFilter(filtered.length < restaurants.length);
   };
 
   return (
