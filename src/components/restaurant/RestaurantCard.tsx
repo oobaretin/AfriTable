@@ -118,13 +118,13 @@ export function RestaurantCard({
   const regionColor = getRegionColor(cuisine, region);
 
   return (
-    <div className={`group cursor-pointer overflow-hidden rounded-xl bg-white transition-all hover:shadow-xl border ${
+    <div className={`group cursor-pointer overflow-hidden rounded-xl bg-white transition-all hover:shadow-xl border relative z-10 pointer-events-auto ${
       isFeatured 
         ? "border-[#C69C2B]/40 shadow-[0_0_20px_rgba(198,156,43,0.15)] hover:shadow-[0_0_30px_rgba(198,156,43,0.25)]" 
         : "border-slate-100"
     }`}>
       {/* Image Container */}
-      <Link href={safeHref} className="block" prefetch={false}>
+      <Link href={safeHref} className="block relative z-10 pointer-events-auto" prefetch={false}>
         <div className="relative w-full overflow-hidden aspect-[4/3] bg-white/5">
           <Image
             src={imgSrc}

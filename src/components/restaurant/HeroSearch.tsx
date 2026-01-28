@@ -115,7 +115,7 @@ export function HeroSearch() {
   }
 
   return (
-    <section className="relative z-0 min-h-[85vh] w-full bg-[#000814] flex flex-col items-center justify-center overflow-hidden px-4" id="hero-search">
+    <section className="relative z-0 min-h-[80vh] w-full bg-[#000814] flex flex-col items-center justify-center px-4" id="hero-search">
       {/* 1. 3D ISOMETRIC HEXAGON PATTERN - Hero section only */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#000814]">
         {/* The Isometric Pattern */}
