@@ -108,8 +108,11 @@ export function ZipCodeSearch({ restaurants, onFilterChange }: ZipCodeSearchProp
       onFilterChange(filtered);
     } else {
       // Reset to show all restaurants when zip is cleared
-      const allRestaurants = restaurants.map((restaurant) => ({ restaurant, distance: null as number | null }));
-      onFilterChange(allRestaurants as any);
+      const allRestaurants: RestaurantWithDistance[] = restaurants.map((restaurant) => ({ 
+        restaurant, 
+        distance: null 
+      }));
+      onFilterChange(allRestaurants);
     }
   }, [zipCode, radius, restaurants, onFilterChange]);
 
