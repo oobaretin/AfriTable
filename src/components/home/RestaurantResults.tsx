@@ -104,7 +104,8 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
           <div className="mt-16 flex justify-center">
             <Link
               href="/restaurants"
-              className="group relative bg-transparent hover:bg-[#C69C2B]/10 border border-[#C69C2B] text-[#C69C2B] text-[10px] font-black px-8 py-4 rounded-full uppercase tracking-widest transition-all duration-500 flex items-center gap-3 hover:shadow-[0_0_15px_rgba(198,156,43,0.4)]"
+              className="group relative bg-transparent hover:bg-[#C69C2B]/10 border border-[#C69C2B] text-[#C69C2B] text-[10px] font-black px-8 py-4 rounded-full uppercase tracking-widest transition-all duration-500 flex items-center gap-3 hover:shadow-[0_0_15px_rgba(198,156,43,0.4)] cursor-pointer"
+              prefetch={true}
             >
               <span>See All Destinations</span>
               <span className="text-lg transition-transform duration-500 group-hover:translate-x-1">→</span>

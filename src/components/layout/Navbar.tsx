@@ -36,13 +36,13 @@ export default async function Navbar() {
           </Link>
 
           <nav className="hidden items-center gap-4 text-sm md:flex">
-            <Link href="/" className="text-muted-foreground hover:text-foreground">
+            <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
               Home
             </Link>
-            <Link href="/restaurants" className="text-muted-foreground hover:text-foreground">
+            <Link href="/restaurants" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
               Restaurants
             </Link>
-            <Link href="/about" className="text-muted-foreground hover:text-foreground">
+            <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
               About
             </Link>
           </nav>
@@ -119,15 +119,15 @@ export default async function Navbar() {
                   <DropdownMenuSeparator />
                   {role === "restaurant_owner" ? (
                     <DropdownMenuItem asChild>
-                      <Link href="/dashboard">Dashboard</Link>
+                      <Link href="/dashboard" prefetch={true}>Dashboard</Link>
                     </DropdownMenuItem>
                   ) : (
                     <DropdownMenuItem asChild>
-                      <Link href="/reservations">My Reservations</Link>
+                      <Link href="/reservations" prefetch={true}>My Reservations</Link>
                     </DropdownMenuItem>
                   )}
                   <DropdownMenuItem asChild>
-                    <Link href="/profile">Profile</Link>
+                    <Link href="/profile" prefetch={true}>Profile</Link>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem asChild>
