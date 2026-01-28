@@ -20,10 +20,15 @@ export function RestaurantsPageClient({ restaurants }: RestaurantsPageClientProp
   const [isSearchActive, setIsSearchActive] = React.useState(false);
 
   const handleFilterChange = (filtered: RestaurantWithDistance[]) => {
-    // Check if search is active (has distance data or vibe filter applied)
+    // Check if search is active (has distance data, meaning zip code was entered)
     const hasSearch = filtered.length > 0 && filtered[0].distance !== null;
     setIsSearchActive(hasSearch);
-    setFilteredRestaurants(hasSearch ? filtered : null);
+    if (hasSearch) {
+      setFilteredRestaurants(filtered);
+    } else {
+      // Reset to null when search is cleared
+      setFilteredRestaurants(null);
+    }
   };
 
   return (
