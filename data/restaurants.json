@@ -1755,6 +1755,9 @@
     "price_range": "$$$",
     "rating": 4.9,
     "address": "800 Maine Ave SW, Washington, DC 20024",
+    "zip": "20024",
+    "lat": 38.880,
+    "lng": -77.022,
     "phone": "(202) 978-1320",
     "website": "https://www.dogonwdc.com/",
     "neighborhood": "The Wharf",
@@ -1773,8 +1776,7 @@
     "quality_factor": "High-end Afro-Caribbean by the Potomac.",
     "featured": true,
     "vibe_category": "Fine Dining",
-    "about": "High-end Afro-Caribbean fine dining by the Potomac, recognized by Michelin 2025.",
-    "vibe_category": "Fine Dining"
+    "about": "High-end Afro-Caribbean fine dining by the Potomac, recognized by Michelin 2025."
   },
   {
     "id": "nola-dakar",
@@ -1836,13 +1838,16 @@
     "vibe_category": "Fine Dining"
   },
   {
-    "id": "por-kann",
+    "id": "pdx-001",
     "name": "Kann",
-    "cuisine": "Haitian (Live-Fire)",
+    "cuisine": "Haitian Fine Dining",
     "region": "Caribbean",
     "price_range": "$$$",
     "rating": 4.9,
     "address": "548 SE Ash St, Portland, OR 97214",
+    "zip": "97214",
+    "lat": 45.517,
+    "lng": -122.656,
     "phone": "(503) 702-0290",
     "website": "https://kannrestaurant.com/",
     "neighborhood": "Central Eastside",
@@ -2060,6 +2065,9 @@
     "price_range": "$$$",
     "rating": 4.7,
     "address": "1612 N Cahuenga Blvd, Los Angeles, CA 90028",
+    "zip": "90028",
+    "lat": 34.100,
+    "lng": -118.329,
     "phone": "(323) 450-9311",
     "website": "https://www.statushollywood.com/",
     "neighborhood": "Hollywood",
@@ -2074,8 +2082,7 @@
     ],
     "featured": false,
     "vibe_category": "Fine Dining",
-    "about": "Where Hollywood glamour meets authentic island heat. This is the spot for 'Vibe Dining'—the food quality is high-end, and the crowd is impeccably dressed.",
-    "vibe_category": "Fine Dining"
+    "about": "Where Hollywood glamour meets authentic island heat. This is the spot for 'Vibe Dining'—the food quality is high-end, and the crowd is impeccably dressed."
   },
   {
     "id": "atl-fine-001",
@@ -2197,30 +2204,6 @@
     "vibe_category": "Community Favorites"
   },
   {
-    "id": "katy-001",
-    "name": "Wing Snob (Katy)",
-    "cuisine": "Afro-Fusion / Wings",
-    "region": "Other African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "3902 N Fry Rd, Katy, TX 77449",
-    "phone": "(832) 427-6311",
-    "website": "https://www.wingsnob.com/",
-    "neighborhood": "North Fry",
-    "vibe": "Casual / High-Quality Takeout",
-    "vibe_tags": [
-      "Casual / High-Quality Takeout"
-    ],
-    "specialty": "Lemon Pepper & Afro-Fusion Dry Rubs",
-    "menu_highlights": [
-      "Lemon Pepper Wings",
-      "Afro-Fusion Dry Rubs"
-    ],
-    "featured": false,
-    "about": "A casual, high-quality takeout spot in Katy specializing in Afro-fusion wings with unique dry rubs and flavors.",
-    "vibe_category": "Authentic Staples"
-  },
-  {
     "id": "lax-002",
     "name": "Lucia",
     "cuisine": "Afro-Caribbean Fine Dining",
@@ -2336,30 +2319,36 @@
     "about": "A major player in the Houston scene, known for traditional flavors."
   },
   {
-    "id": "hou-sta-002",
+    "id": "hou-005",
     "name": "Komchop",
-    "cuisine": "Nigerian / West African",
+    "cuisine": "Nigerian",
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
     "address": "10050 Westheimer Rd, Houston, TX 77042",
+    "zip": "77042",
+    "lat": 29.737,
+    "lng": -95.547,
     "phone": "(832) 834-3141",
     "website": "https://komchop.com/",
     "vibe": "Modern Casual / Family-Friendly",
     "vibe_tags": ["Modern Casual / Family-Friendly"],
     "specialty": "Grilled Fish & Efo Riro",
     "menu_highlights": ["Grilled Fish", "Efo Riro"],
-    "vibe_category": "Community Favorites",
+    "vibe_category": "Authentic Staples",
     "about": "Very consistent quality; a go-to for Westheimer locals."
   },
   {
-    "id": "hou-sta-003",
+    "id": "hou-004",
     "name": "Finger Licking 2.0",
-    "cuisine": "Traditional Nigerian",
+    "cuisine": "Nigerian",
     "region": "West African",
     "price_range": "$$",
     "rating": 4.6,
     "address": "9815 Bissonnet St, Houston, TX 77036",
+    "zip": "77036",
+    "lat": 29.688,
+    "lng": -95.549,
     "phone": "(713) 270-7070",
     "website": "https://fingerlickinghtx.com/",
     "vibe": "Lively / High-Volume",
@@ -2508,7 +2497,7 @@
     "vibe_tags": ["Casual Boutique / Neighborhood Spot"],
     "specialty": "Beef Suya Astor & Peri-Peri Chicken",
     "menu_highlights": ["Beef Suya Astor", "Peri-Peri Chicken"],
-    "vibe_category": "Authentic Staples",
+    "vibe_category": "Community Favorites",
     "about": "Chef Casey brings a unique South African flair to Katy. Great for a casual but 'stepped-up' lunch."
   },
   {
@@ -2553,13 +2542,16 @@
     "price_range": "$$",
     "rating": 4.6,
     "address": "6308 Richmond Ave, Houston, TX 77057",
+    "zip": "77057",
+    "lat": 29.734,
+    "lng": -95.492,
     "phone": "(832) 831-4372",
     "website": "https://ariasuyakitchen.com/",
     "vibe": "Vibe Dining / Semi-Casual",
     "vibe_tags": ["Vibe Dining / Semi-Casual"],
     "specialty": "Grilled Lamb Chops & Jollof",
     "menu_highlights": ["Grilled Lamb Chops", "Jollof"],
-    "vibe_category": "Authentic Staples",
+    "vibe_category": "Community Favorites",
     "about": "Slightly more 'upscale' than a standard joint, but still very much a regular spot for the Galleria crowd."
   },
   {
@@ -2604,6 +2596,9 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "3710 Deepwind Bay Ct, Katy, TX 77493",
+    "zip": "77493",
+    "lat": 29.805,
+    "lng": -95.824,
     "phone": "(832) 437-0570",
     "website": "https://butterdroti.com/",
     "vibe": "Cottage / Authentic Takeout",
