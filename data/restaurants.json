@@ -126,9 +126,14 @@
     "price_range": "$$$",
     "rating": 4.4,
     "address": "316 NW 24th St, Miami, FL 33127",
-    "phone": "(786) 334-5150",
-    "website": "https://dukunoojamaicankitchen.com",
+    "phone": "(305) 921-0777",
+    "website": "https://www.dukunookitchen.com/",
     "social": { "instagram": "@dukunookitchen" },
+    "neighborhood": "Wynwood",
+    "vibe": "Vibe Dining / Artsy",
+    "vibe_tags": ["Vibe Dining / Artsy"],
+    "specialty": "Jerk Lamb Chops",
+    "menu_highlights": ["Jerk Lamb Chops", "Fia Bun Jerk Chicken", "Oxtail Shepherd's Pie", "Escovitch Fish"],
     "hours": {
       "tue_thu": "12:00 PM - 11:00 PM",
       "fri_sat": "12:00 PM - 1:00 AM",
@@ -137,8 +142,7 @@
     },
     "about": "An upscale, artsy Jamaican destination in Wynwood that invites you to 'come for the food, stay for the vibes.'",
     "our_story": "Named after a traditional sweet treat, Dukunoo offers the 'sweet surprise' of authentic Jamaican wood-fired jerk in a chic, modern setting.",
-    "cultural_roots": "Honors the 'Out of Many, One People' heritage of Jamaica, blending Taino smoke techniques with global presentation.",
-    "menu_highlights": ["Fia Bun Jerk Chicken", "Oxtail Shepherd's Pie", "Escovitch Fish"]
+    "cultural_roots": "Honors the 'Out of Many, One People' heritage of Jamaica, blending Taino smoke techniques with global presentation."
   },
   {
     "id": "apt4b-atlanta",
@@ -534,15 +538,20 @@
   },
   {
     "id": "nyc-001",
-    "name": "Tatiana",
-    "cuisine": "Haitian / Afro-Caribbean",
+    "name": "Tatiana by Kwame Onwuachi",
+    "cuisine": "Afro-Caribbean",
     "region": "Caribbean",
     "price_range": "$$$",
     "rating": 4.8,
-    "address": "Lincoln Center, New York City, NY",
+    "address": "10 Lincoln Center Plaza, New York, NY 10023",
     "phone": "(212) 875-5222",
-    "about": "The intersection of heritage and high-fashion dining.",
-    "vibe_tags": ["Luxury Editorial"]
+    "website": "https://www.tatiananyc.com/",
+    "neighborhood": "Lincoln Center",
+    "vibe": "Elite Fine Dining",
+    "vibe_tags": ["Elite Fine Dining"],
+    "specialty": "Wagyu Short Rib Pastrami",
+    "menu_highlights": ["Wagyu Short Rib Pastrami"],
+    "about": "Elite fine dining at Lincoln Center, where Chef Kwame Onwuachi creates the intersection of heritage and high-fashion dining with specialties like Wagyu Short Rib Pastrami."
   },
   {
     "id": "hou-001",
@@ -908,14 +917,19 @@
   {
     "id": "sea-001",
     "name": "Communion R&B",
-    "cuisine": "Afro-Texan / Soul",
+    "cuisine": "Soul-Fusion",
     "region": "Other African",
     "price_range": "$$$",
     "rating": 4.8,
-    "address": "Central District, Seattle, WA",
+    "address": "2350 E Union St, Seattle, WA 98122",
     "phone": "(206) 322-6000",
-    "about": "A story of survival and soul on a plate.",
-    "vibe_tags": ["Award-Winning Luxury"]
+    "website": "https://www.communionseattle.com/",
+    "neighborhood": "Central District",
+    "vibe": "Award-Winning & Social",
+    "vibe_tags": ["Award-Winning & Social"],
+    "specialty": "Hood Sushi & Catfish",
+    "menu_highlights": ["Hood Sushi & Catfish"],
+    "about": "An award-winning soul-fusion restaurant in Seattle's Central District, serving innovative dishes like Hood Sushi & Catfish in a vibrant, social atmosphere."
   },
   {
     "id": "sea-meskel",
@@ -1264,5 +1278,56 @@
     "specialty": "Hot Honey Yardbird",
     "menu_highlights": ["Hot Honey Yardbird"],
     "about": "A luxury, high-energy modern Afro-American restaurant in Overtown, known for elevated dishes like Hot Honey Yardbird in a vibrant, sophisticated setting."
+  },
+  {
+    "id": "det-001",
+    "name": "Baobab Fare",
+    "cuisine": "Burundian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.7,
+    "address": "6568 Woodward Ave, Detroit, MI 48202",
+    "phone": "(313) 265-3093",
+    "website": "https://www.baobabfare.com/",
+    "neighborhood": "New Center",
+    "vibe": "Award-Winning & Heartfelt",
+    "vibe_tags": ["Award-Winning & Heartfelt"],
+    "specialty": "Kuku Na Mali (Chicken & Spinach)",
+    "menu_highlights": ["Kuku Na Mali (Chicken & Spinach)"],
+    "about": "An award-winning Burundian restaurant in New Center, serving heartfelt East African cuisine with specialties like Kuku Na Mali in a warm, welcoming atmosphere."
+  },
+  {
+    "id": "hou-006",
+    "name": "Lucille's",
+    "cuisine": "Southern / Fine Dining",
+    "region": "Southern",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "5512 La Branch St, Houston, TX 77004",
+    "phone": "(713) 568-2505",
+    "website": "https://lucilleshouston.com/",
+    "neighborhood": "Museum District",
+    "vibe": "Historic & Elegant",
+    "vibe_tags": ["Historic & Elegant"],
+    "specialty": "Chili Biscuits & Yardbird",
+    "menu_highlights": ["Chili Biscuits & Yardbird"],
+    "about": "A historic and elegant fine dining restaurant in Houston's Museum District, serving elevated Southern cuisine with specialties like Chili Biscuits & Yardbird in a sophisticated setting."
+  },
+  {
+    "id": "chi-ja-grill-hyde-park",
+    "name": "Ja' Grill Hyde Park",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$$",
+    "rating": 4.6,
+    "address": "1510 E Harper Ct, Chicago, IL 60615",
+    "phone": "(773) 752-5375",
+    "website": "https://www.jagrill.com/",
+    "neighborhood": "Hyde Park",
+    "vibe": "Upscale & Energetic",
+    "vibe_tags": ["Upscale & Energetic"],
+    "specialty": "Curry Goat & Ja' Rum Punch",
+    "menu_highlights": ["Curry Goat & Ja' Rum Punch"],
+    "about": "An upscale and energetic Jamaican restaurant in Hyde Park, serving authentic Caribbean cuisine with specialties like Curry Goat & Ja' Rum Punch in a vibrant, sophisticated setting."
   }
 ]
