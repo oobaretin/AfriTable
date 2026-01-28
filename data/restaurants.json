@@ -716,7 +716,7 @@
   {
     "id": "nyc-001",
     "name": "Tatiana by Kwame Onwuachi",
-    "cuisine": "Afro-Caribbean",
+    "cuisine": "Afro-Caribbean Fine Dining",
     "region": "Caribbean",
     "price_range": "$$$",
     "rating": 5.0,
@@ -724,9 +724,9 @@
     "phone": "(212) 875-5222",
     "website": "https://www.tatiananyc.com/",
     "neighborhood": "Lincoln Center",
-    "vibe": "Elite Fine Dining",
+    "vibe": "Michelin Star Tier / High-Fashion",
     "vibe_tags": [
-      "Elite Fine Dining"
+      "Michelin Star Tier / High-Fashion"
     ],
     "specialty": "Wagyu Short Rib Pastrami",
     "menu_highlights": [
@@ -1627,11 +1627,18 @@
   {
     "id": "dc-dogon",
     "name": "Dōgon",
-    "cuisine": "Afro-Caribbean",
+    "cuisine": "Afro-Caribbean Fine Dining",
     "region": "Caribbean",
     "price_range": "$$$",
     "rating": 4.9,
-    "address": "Washington, DC",
+    "address": "800 Maine Ave SW, Washington, DC 20024",
+    "phone": "(202) 978-1320",
+    "website": "https://www.dogonwdc.com/",
+    "neighborhood": "The Wharf",
+    "vibe": "Sophisticated Waterfront",
+    "vibe_tags": ["Sophisticated Waterfront"],
+    "specialty": "Crab Hoe Cakes & Lamb Terrine",
+    "menu_highlights": ["Crab Hoe Cakes", "Lamb Terrine"],
     "awards": ["Michelin 2025"],
     "quality_factor": "High-end Afro-Caribbean by the Potomac.",
     "featured": true,
@@ -2022,5 +2029,23 @@
     "menu_highlights": ["Baobab Energy Bowls", "Yassa Chicken"],
     "featured": false,
     "about": "A polished, health-conscious Senegalese restaurant in San Francisco's Financial District, offering authentic West African dishes like Baobab Energy Bowls and Yassa Chicken."
+  },
+  {
+    "id": "atl-001",
+    "name": "Negril ATL",
+    "cuisine": "Innovative Caribbean",
+    "region": "Caribbean",
+    "price_range": "$$$",
+    "rating": 4.7,
+    "address": "999 Chattahoochee Ave, Atlanta, GA 30318",
+    "phone": "(404) 464-7159",
+    "website": "https://negrilatl.com/",
+    "neighborhood": "Upper West Side",
+    "vibe": "Urban / High-Energy Lounge",
+    "vibe_tags": ["Urban / High-Energy Lounge"],
+    "specialty": "Ackee & Saltfish Spring Rolls",
+    "menu_highlights": ["Ackee & Saltfish Spring Rolls"],
+    "featured": false,
+    "about": "An innovative Caribbean restaurant in Atlanta's Upper West Side, known for creative takes on classic dishes like Ackee & Saltfish Spring Rolls in a high-energy lounge atmosphere."
   }
 ]
