@@ -58,15 +58,13 @@ export function RestaurantsPageSearch({ restaurants, onFilterChange }: Restauran
     return filterByVibe(distanceFilteredRestaurants, selectedVibe);
   }, [distanceFilteredRestaurants, selectedVibe]);
 
-  // Notify parent when filters change (but skip initial mount to avoid false search trigger)
-  const isInitialMount = React.useRef(true);
+  // Notify parent when filters change - only when there's an actual search (distance !== null)
   React.useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-      // Don't call on initial mount - let the parent handle initial state
-      return;
+    // Only notify if there's an actual search (at least one restaurant has distance)
+    const hasSearch = filteredRestaurants.some((r) => r.distance !== null);
+    if (hasSearch) {
+      onFilterChange(filteredRestaurants);
     }
-    onFilterChange(filteredRestaurants);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filteredRestaurants]);
 

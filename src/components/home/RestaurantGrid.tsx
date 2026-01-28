@@ -39,6 +39,11 @@ export function RestaurantGrid({
   const [internalActiveCategory] = React.useState<string>("All");
   const [displayCount, setDisplayCount] = React.useState<number>(ITEMS_PER_PAGE);
   
+  // Initialize display count on mount
+  React.useEffect(() => {
+    setDisplayCount(ITEMS_PER_PAGE);
+  }, []);
+  
   // Use external state if provided, otherwise use internal state or URL params
   const activeCategory = externalActiveCategory ?? internalActiveCategory;
   const activeCity = externalActiveCity ?? urlCityFilter;
