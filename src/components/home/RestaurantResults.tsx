@@ -15,8 +15,15 @@ type RestaurantResultsProps = {
 };
 
 export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
+  const router = useRouter();
+  
   // Check if we're in search mode (has distance data)
   const isSearchMode = restaurants.length > 0 && restaurants[0].distance !== null;
+  
+  const handleSeeAllClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    router.push("/restaurants");
+  };
   
   // In search mode, show all results (already filtered and sorted by distance)
   // Otherwise, show featured restaurants (legacy behavior)
