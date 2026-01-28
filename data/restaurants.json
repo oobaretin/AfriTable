@@ -2483,7 +2483,7 @@
   {
     "id": "katy-003",
     "name": "Astor's Table",
-    "cuisine": "South African",
+    "cuisine": "South African Fusion",
     "region": "South African",
     "price_range": "$$",
     "rating": 4.5,
@@ -2493,11 +2493,11 @@
     "lng": -95.753,
     "phone": "(832) 913-6465",
     "website": "https://astorstable.com/",
-    "vibe": "Casual Boutique / Neighborhood Spot",
-    "vibe_tags": ["Casual Boutique / Neighborhood Spot"],
+    "vibe": "Fine Dining",
+    "vibe_tags": ["Fine Dining"],
     "specialty": "Beef Suya Astor & Peri-Peri Chicken",
     "menu_highlights": ["Beef Suya Astor", "Peri-Peri Chicken"],
-    "vibe_category": "Community Favorites",
+    "vibe_category": "Fine Dining",
     "about": "Chef Casey brings a unique South African flair to Katy. Great for a casual but 'stepped-up' lunch."
   },
   {
