@@ -24,7 +24,8 @@
       "Ndole Soup",
       "Grilled Tilapia",
       "Eru"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "addis-ababa",
@@ -52,7 +53,8 @@
       "Doro Wat",
       "Veggie Combo",
       "Addis Tibs"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "famous-princess",
@@ -78,7 +80,8 @@
       "Ayamashe (Designer) Stew",
       "Abula (Amala)",
       "Jollof Rice"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "omalicha-kitchen",
@@ -104,7 +107,8 @@
       "Egusi Soup",
       "Nkwobi",
       "Seafood Okra"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "kokomo-nyc",
@@ -132,7 +136,8 @@
       "Koko's Island Pasta",
       "Wah Gwan Duck Tacos",
       "Stuffed Plantains"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "zanmi-nyc",
@@ -160,7 +165,8 @@
       "Griot (Fried Pork)",
       "Oxfail Sliders",
       "Bouillon Soup"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "dukunoo-miami",
@@ -195,7 +201,8 @@
     },
     "about": "An upscale, artsy Jamaican destination in Wynwood that invites you to 'come for the food, stay for the vibes.'",
     "our_story": "Named after a traditional sweet treat, Dukunoo offers the 'sweet surprise' of authentic Jamaican wood-fired jerk in a chic, modern setting.",
-    "cultural_roots": "Honors the 'Out of Many, One People' heritage of Jamaica, blending Taino smoke techniques with global presentation."
+    "cultural_roots": "Honors the 'Out of Many, One People' heritage of Jamaica, blending Taino smoke techniques with global presentation.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "apt4b-atlanta",
@@ -226,7 +233,8 @@
     ],
     "vibe_tags": [
       "Fine Dining"
-    ]
+    ],
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "blaqhaus-atlanta",
@@ -254,7 +262,8 @@
       "Jerk Chicken & Waffles",
       "Southern Style Oxtails",
       "Cajun Pasta"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "callaloo-kitchen",
@@ -280,7 +289,8 @@
       "Doubles",
       "Bake and Shark",
       "Curry Buss Up Shut"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "miss-lilys-nyc",
@@ -306,7 +316,8 @@
       "Jerky Grilled Corn",
       "Curry Goat",
       "Hot Pepper Shrimp"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "negrit-houston",
@@ -332,7 +343,8 @@
       "Rum Glazed Pork Belly",
       "Fried Snapper",
       "Sweet Plantain Gnocchi"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "cane-dc",
@@ -354,9 +366,13 @@
     },
     "neighborhood": "H Street Corridor",
     "vibe": "Intimate & Authentic",
-    "vibe_tags": ["Intimate & Authentic"],
+    "vibe_tags": [
+      "Intimate & Authentic"
+    ],
     "specialty": "Tiffin Box with Curry Goat & Paratha",
-    "awards": ["Michelin Bib Gourmand"],
+    "awards": [
+      "Michelin Bib Gourmand"
+    ],
     "about": "Chef Peter Prime brings the soul of Trinidadian night markets to a sleek DC storefront. The 'Tiffin Box' is a legendary multi-layered experience of curries and chutneys.",
     "our_story": "Chef Peter Prime named the restaurant after the sugar cane that shaped the history and cuisine of his native Trinidad.",
     "cultural_roots": "Explores the diverse heritage of Trinidad, highlighting the influence of Indian indentured servants and enslaved Africans on the island's flavors.",
@@ -364,7 +380,8 @@
       "Tiffin Box with Curry Goat & Paratha",
       "Trini Doubles",
       "Cumin-Spiced Pork"
-    ]
+    ],
+    "vibe_category": "Community Favorites"
   },
   {
     "id": "pearls-nyc",
@@ -392,7 +409,8 @@
       "Bake & Shark",
       "Curry Crab & Dumplings",
       "Jerk Catfish"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "appioo-dc",
@@ -420,7 +438,8 @@
       "Banku with Tilapia",
       "Red Red (Bean Stew)",
       "Waakye"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "teranga-nyc",
@@ -449,7 +468,8 @@
     ],
     "vibe_tags": [
       "Cultural Sanctuary"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "mansa-kunda-md",
@@ -475,7 +495,8 @@
       "Benachin (Jollof Rice)",
       "Domoda (Peanut Stew)",
       "Superkanja (Okra Stew)"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "bukom-cafe-dc",
@@ -503,7 +524,8 @@
       "Jollof Rice with Lamb",
       "Fried Plantains",
       "Bukom Wings"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "ponti-ivorian-houston",
@@ -529,7 +551,8 @@
       "Grilled Fish with Attiéké",
       "Aloco (Fried Plantains)",
       "Kedjenou (Slow-cooked Chicken)"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "gold-coast-kitchen-chi",
@@ -555,7 +578,8 @@
       "Egusi with Fufu",
       "Ghanaian Jollof",
       "Fried Croaker Fish"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "afrik-che-houston",
@@ -581,7 +605,8 @@
       "Assorted Meat Stew",
       "Okra Soup",
       "Pounded Yam"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "adulis-ny",
@@ -607,7 +632,8 @@
       "Zigni (Spicy Beef Stew)",
       "Hamli (Sautéed Spinach)",
       "Eritrean Coffee Ceremony"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "kulan-cafe-houston",
@@ -632,7 +658,8 @@
       "Bariis Iskukaris (Spiced Rice)",
       "Roasted Goat (Hilib Ari)",
       "Somali Chai"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "peli-peli-houston",
@@ -659,7 +686,8 @@
       "Espetada (Hanging Meat Skewers)",
       "Bobotie",
       "South African Melktert"
-    ]
+    ],
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "safari-restaurant-mn",
@@ -684,7 +712,8 @@
       "Safari Mango Chicken",
       "Camel Meat (Seasonal)",
       "Suqaar (Sautéed Beef)"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "10-degrees-south-atl",
@@ -711,7 +740,8 @@
       "Sosaties (Curried Lamb Kebabs)",
       "Boerewors",
       "Ostrich Medallions"
-    ]
+    ],
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "nyc-001",
@@ -719,7 +749,7 @@
     "cuisine": "Afro-Caribbean Fine Dining",
     "region": "Caribbean",
     "price_range": "$$$",
-    "rating": 5.0,
+    "rating": 5,
     "address": "10 Lincoln Center Plaza, New York, NY 10023",
     "phone": "(212) 875-5222",
     "website": "https://www.tatiananyc.com/",
@@ -732,10 +762,13 @@
     "menu_highlights": [
       "Wagyu Short Rib Pastrami"
     ],
-    "awards": ["⭐⭐⭐⭐⭐"],
+    "awards": [
+      "⭐⭐⭐⭐⭐"
+    ],
     "quality_factor": "Named the #1 Restaurant in NYC (Kwame Onwuachi)",
     "featured": true,
-    "about": "Elite fine dining at Lincoln Center, where Chef Kwame Onwuachi creates the intersection of heritage and high-fashion dining with specialties like Wagyu Short Rib Pastrami."
+    "about": "Elite fine dining at Lincoln Center, where Chef Kwame Onwuachi creates the intersection of heritage and high-fashion dining with specialties like Wagyu Short Rib Pastrami.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "hou-001",
@@ -753,11 +786,17 @@
       "Modern & High-Design"
     ],
     "specialty": "Trad Bowl (Jollof) & Yassa Grill",
-    "menu_highlights": ["Trad Bowl (Jollof)", "Yassa Grill"],
-    "awards": ["NYT Top 50"],
+    "menu_highlights": [
+      "Trad Bowl (Jollof)",
+      "Yassa Grill"
+    ],
+    "awards": [
+      "NYT Top 50"
+    ],
     "quality_factor": "The \"Gold Standard\" for West African fast-fine dining.",
     "featured": true,
-    "about": "Accessible West African flavors for the modern palate."
+    "about": "Accessible West African flavors for the modern palate.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "nyc-ponty",
@@ -768,7 +807,8 @@
     "rating": 4.5,
     "address": "New York City, NY",
     "phone": "(212) 234-6474",
-    "about": "Authentic West African flavors in a welcoming café setting."
+    "about": "Authentic West African flavors in a welcoming café setting.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "nyc-berber",
@@ -779,7 +819,8 @@
     "rating": 4.5,
     "address": "New York City, NY",
     "phone": "(646) 870-0495",
-    "about": "Traditional North African street food with modern flair."
+    "about": "Traditional North African street food with modern flair.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "hou-002",
@@ -793,7 +834,8 @@
     "about": "The ultimate destination for authentic pounded yam.",
     "vibe_tags": [
       "Premium Traditional"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "nyc-003",
@@ -806,7 +848,8 @@
     "about": "Everything is better when shared with music and coffee.",
     "vibe_tags": [
       "Cinematic Communal"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "atl-001",
@@ -820,7 +863,8 @@
     "about": "A love letter to the coastal heritage of the Gullah people.",
     "vibe_tags": [
       "Soulful & Social"
-    ]
+    ],
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "dc-001",
@@ -833,7 +877,8 @@
     "about": "African food diplomacy served in a fine-dining oasis.",
     "vibe_tags": [
       "Diplomatic Luxury"
-    ]
+    ],
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "dc-maydan",
@@ -844,7 +889,8 @@
     "rating": 4.7,
     "address": "Washington, DC",
     "phone": "(202) 370-3646",
-    "about": "A modern Middle Eastern and North African restaurant with a focus on wood-fired cooking and communal dining."
+    "about": "A modern Middle Eastern and North African restaurant with a focus on wood-fired cooking and communal dining.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "dc-ethiopic",
@@ -855,7 +901,8 @@
     "rating": 4.6,
     "address": "Washington, DC",
     "phone": "(202) 675-2066",
-    "about": "Authentic Ethiopian cuisine in the heart of Washington, DC."
+    "about": "Authentic Ethiopian cuisine in the heart of Washington, DC.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "atl-002",
@@ -869,7 +916,8 @@
     "about": "Where traditional happiness meets contemporary design.",
     "vibe_tags": [
       "Sleek & Modern"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "atl-busy-bee",
@@ -880,7 +928,8 @@
     "rating": 4.5,
     "address": "Atlanta, GA",
     "phone": "(404) 525-9212",
-    "about": "A legendary Atlanta institution serving authentic soul food and Southern comfort classics."
+    "about": "A legendary Atlanta institution serving authentic soul food and Southern comfort classics.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "dc-002",
@@ -893,7 +942,8 @@
     "about": "The ultimate late-night destination for the Nigerian elite.",
     "vibe_tags": [
       "High-End Lounge"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "atl-003",
@@ -906,7 +956,8 @@
     "about": "A plant-based journey through the soul of the West.",
     "vibe_tags": [
       "Artistic & Refined"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "dc-003",
@@ -919,7 +970,8 @@
     "about": "Formerly Zenebech; dining reimagined for kings and queens.",
     "vibe_tags": [
       "Royal Traditional"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "mia-001",
@@ -932,7 +984,8 @@
     "about": "A refined celebration of Haiti's revolutionary flavors.",
     "vibe_tags": [
       "Tropical Elegance"
-    ]
+    ],
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "la-001",
@@ -946,7 +999,8 @@
     "about": "The legendary destination for the finest Dorowat in the West.",
     "vibe_tags": [
       "Intimate & Prestigious"
-    ]
+    ],
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "la-post-beam",
@@ -957,7 +1011,8 @@
     "rating": 4.5,
     "address": "Los Angeles, CA",
     "phone": "(323) 299-5599",
-    "about": "Modern soul food in the heart of Los Angeles."
+    "about": "Modern soul food in the heart of Los Angeles.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "la-blaqhaus-noho",
@@ -968,7 +1023,8 @@
     "rating": 4.5,
     "address": "North Hollywood, Los Angeles, CA",
     "phone": "(818) 980-2527",
-    "about": "A fusion of Southern comfort and Caribbean heat in North Hollywood."
+    "about": "A fusion of Southern comfort and Caribbean heat in North Hollywood.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "oak-001",
@@ -981,7 +1037,8 @@
     "about": "Bringing the heartbeat of Durban to the Bay Area.",
     "vibe_tags": [
       "Modern Heritage"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "la-002",
@@ -994,7 +1051,8 @@
     "about": "Spices that bridge the gap between continents.",
     "vibe_tags": [
       "Eclectic & Bold"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "mia-003",
@@ -1007,7 +1065,8 @@
     "about": "Clean, modern, and undeniably Caribbean.",
     "vibe_tags": [
       "Modern Fast-Casual"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "chi-001",
@@ -1025,11 +1084,17 @@
       "Vibrant & Culturally Rich"
     ],
     "specialty": "Messob Family Platter & Honey Wine",
-    "menu_highlights": ["Messob Family Platter", "Honey Wine"],
-    "awards": ["Michelin Bib Gourmand"],
+    "menu_highlights": [
+      "Messob Family Platter",
+      "Honey Wine"
+    ],
+    "awards": [
+      "Michelin Bib Gourmand"
+    ],
     "quality_factor": "A Chicago institution for elite Ethiopian dining.",
     "featured": true,
-    "about": "Chef Tigist Reda is a culinary ambassador for Ethiopia in the Midwest. Demera offers a polished, full-service experience that is widely considered the best Ethiopian in Chicago."
+    "about": "Chef Tigist Reda is a culinary ambassador for Ethiopia in the Midwest. Demera offers a polished, full-service experience that is widely considered the best Ethiopian in Chicago.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "phi-001",
@@ -1042,7 +1107,8 @@
     "about": "The legendary destination for wood-grilled Diby.",
     "vibe_tags": [
       "Authentic & Renowned"
-    ]
+    ],
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "chi-002",
@@ -1055,7 +1121,8 @@
     "about": "Bringing the peaceful, rich flavors of Gorée Island to the Midwest.",
     "vibe_tags": [
       "Island Heritage"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "phi-002",
@@ -1069,7 +1136,8 @@
     "about": "A cornerstone of Philadelphia's West African culinary scene.",
     "vibe_tags": [
       "Academic & Cultural"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "phi-aksum",
@@ -1080,7 +1148,8 @@
     "rating": 4.5,
     "address": "Philadelphia, PA",
     "phone": "(267) 275-8195",
-    "about": "Authentic Ethiopian cuisine in the heart of Philadelphia."
+    "about": "Authentic Ethiopian cuisine in the heart of Philadelphia.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "chi-003",
@@ -1093,7 +1162,8 @@
     "about": "The heart of the diaspora in the heart of the city.",
     "vibe_tags": [
       "Modern & Spacious"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "chi-virtue",
@@ -1104,7 +1174,8 @@
     "rating": 4.7,
     "address": "Chicago, IL",
     "phone": "(773) 947-8831",
-    "about": "Elevated Southern cuisine with a modern twist."
+    "about": "Elevated Southern cuisine with a modern twist.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "chi-yassa",
@@ -1115,7 +1186,8 @@
     "rating": 4.5,
     "address": "Chicago, IL",
     "phone": "(773) 488-5300",
-    "about": "Authentic Senegalese flavors in the heart of Chicago."
+    "about": "Authentic Senegalese flavors in the heart of Chicago.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "phi-003",
@@ -1128,7 +1200,8 @@
     "about": "Where traditional jerk meets a modern city pulse.",
     "vibe_tags": [
       "Artisanal Caribbean"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "sea-001",
@@ -1149,10 +1222,13 @@
     "menu_highlights": [
       "Hood Sushi & Catfish"
     ],
-    "awards": ["James Beard"],
+    "awards": [
+      "James Beard"
+    ],
     "quality_factor": "Seattle's legendary \"Soul-Fusion\" destination.",
     "featured": true,
-    "about": "An award-winning soul-fusion restaurant in Seattle's Central District, serving innovative dishes like Hood Sushi & Catfish in a vibrant, social atmosphere."
+    "about": "An award-winning soul-fusion restaurant in Seattle's Central District, serving innovative dishes like Hood Sushi & Catfish in a vibrant, social atmosphere.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "sea-meskel",
@@ -1163,7 +1239,8 @@
     "rating": 4.5,
     "address": "Seattle, WA",
     "phone": "(206) 860-7043",
-    "about": "Authentic Ethiopian dining experience in Seattle."
+    "about": "Authentic Ethiopian dining experience in Seattle.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "bos-001",
@@ -1176,7 +1253,8 @@
     "about": "The premier destination for the flavors of the islands.",
     "vibe_tags": [
       "Old World Elegance"
-    ]
+    ],
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "sea-002",
@@ -1189,7 +1267,8 @@
     "about": "The neighborhood heartbeat of Little Ethiopia.",
     "vibe_tags": [
       "Cozy & Authentic"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "bos-002",
@@ -1202,7 +1281,8 @@
     "about": "Elevating West African street food to a fine-dining art.",
     "vibe_tags": [
       "Modern Nigerian"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "sea-003",
@@ -1215,7 +1295,8 @@
     "about": "Authentic hospitality and the perfect cup of coffee.",
     "vibe_tags": [
       "Warm & Traditional"
-    ]
+    ],
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "hou-003",
@@ -1231,7 +1312,8 @@
     "tagline": "The legendary heartbeat of Houston's Jamaican culinary scene.",
     "website": "https://coolrunningsjamaicangrill.com/",
     "featured": false,
-    "about": "The legendary heartbeat of Houston's Jamaican culinary scene."
+    "about": "The legendary heartbeat of Houston's Jamaican culinary scene.",
+    "vibe_category": "Community Favorites"
   },
   {
     "id": "nola-bennachin",
@@ -1242,7 +1324,8 @@
     "rating": 4.5,
     "address": "New Orleans, LA",
     "phone": "(504) 522-1230",
-    "about": "Authentic West African cuisine in the heart of New Orleans."
+    "about": "Authentic West African cuisine in the heart of New Orleans.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "nola-dooky-chase",
@@ -1253,7 +1336,8 @@
     "rating": 4.7,
     "address": "2301 Orleans Ave, New Orleans, LA 70119",
     "phone": "(504) 821-0600",
-    "about": "A legendary Creole restaurant and cultural institution in New Orleans, serving authentic Southern and Creole cuisine."
+    "about": "A legendary Creole restaurant and cultural institution in New Orleans, serving authentic Southern and Creole cuisine.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "nyc-buvette",
@@ -1264,7 +1348,8 @@
     "rating": 4.6,
     "address": "42 Grove St, New York, NY 10014",
     "phone": "(212) 255-3590",
-    "about": "A charming West Village bistro with French-African influences, known for its intimate atmosphere and innovative cuisine."
+    "about": "A charming West Village bistro with French-African influences, known for its intimate atmosphere and innovative cuisine.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "nyc-abyssinia",
@@ -1275,7 +1360,8 @@
     "rating": 4.5,
     "address": "35 W 28th St, New York, NY 10001",
     "phone": "(212) 663-0533",
-    "about": "Authentic Ethiopian cuisine in the heart of Manhattan, serving traditional dishes with fresh injera and bold spices."
+    "about": "Authentic Ethiopian cuisine in the heart of Manhattan, serving traditional dishes with fresh injera and bold spices.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "clt-leah-louise",
@@ -1286,7 +1372,8 @@
     "rating": 4.6,
     "address": "Charlotte, NC",
     "phone": "(980) 299-4496",
-    "about": "A modern juke joint serving Southern and soul food with contemporary flair in Charlotte."
+    "about": "A modern juke joint serving Southern and soul food with contemporary flair in Charlotte.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "sf-teranga-village",
@@ -1297,7 +1384,8 @@
     "rating": 4.5,
     "address": "San Francisco, CA",
     "phone": "(415) 366-0633",
-    "about": "Authentic Senegalese cuisine in San Francisco's The Village, bringing the flavors of Dakar to the Bay Area."
+    "about": "Authentic Senegalese cuisine in San Francisco's The Village, bringing the flavors of Dakar to the Bay Area.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "oak-lala-eritrean",
@@ -1308,7 +1396,8 @@
     "rating": 4.5,
     "address": "Oakland, CA",
     "phone": "(510) 545-6677",
-    "about": "Authentic Eritrean cuisine in Oakland, serving traditional dishes with fresh injera and bold spices."
+    "about": "Authentic Eritrean cuisine in Oakland, serving traditional dishes with fresh injera and bold spices.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "nash-riddim-spice",
@@ -1319,7 +1408,8 @@
     "rating": 4.5,
     "address": "Nashville, TN",
     "phone": "(615) 942-5264",
-    "about": "Authentic Jamaican and Caribbean cuisine in Nashville, bringing the vibrant flavors of the islands to Music City."
+    "about": "Authentic Jamaican and Caribbean cuisine in Nashville, bringing the vibrant flavors of the islands to Music City.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "hou-reggae-hut",
@@ -1330,7 +1420,8 @@
     "rating": 4.5,
     "address": "4814 Almeda Rd, Houston, TX 77004",
     "phone": "(713) 520-7171",
-    "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes."
+    "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "hou-reggae-hut-fm1960",
@@ -1341,7 +1432,8 @@
     "rating": 4.5,
     "address": "954 FM 1960 West, Houston, TX 77090",
     "phone": "(281) 377-1961",
-    "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes."
+    "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "hou-reggae-hut-veterans",
@@ -1352,7 +1444,8 @@
     "rating": 4.5,
     "address": "12005 Veterans Memorial Dr, Ste A, Houston, TX 77067",
     "phone": "(832) 446-3722",
-    "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes."
+    "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "hou-caribbean-hotpot-grill",
@@ -1373,7 +1466,8 @@
       "address": "12005 Veterans Memorial Dr, Ste A, Houston, TX 77067",
       "phone": "(832) 446-3722"
     },
-    "about": "Authentic Caribbean cuisine with vibrant flavors and island vibes. Serving traditional Jamaican and Caribbean dishes in a lively, welcoming atmosphere."
+    "about": "Authentic Caribbean cuisine with vibrant flavors and island vibes. Serving traditional Jamaican and Caribbean dishes in a lively, welcoming atmosphere.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "hou-dakar-street-food",
@@ -1392,7 +1486,8 @@
     "menu_highlights": [
       "Thieboudienne (Fish & Rice)"
     ],
-    "about": "Authentic Senegalese street food in Houston, specializing in traditional Thieboudienne and other West African favorites."
+    "about": "Authentic Senegalese street food in Houston, specializing in traditional Thieboudienne and other West African favorites.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "atl-spice-house-midtown",
@@ -1411,7 +1506,8 @@
     "menu_highlights": [
       "Jerk Chicken Pasta"
     ],
-    "about": "A lively Caribbean fusion restaurant in Midtown Atlanta, known for innovative dishes like Jerk Chicken Pasta in a vibrant, social atmosphere."
+    "about": "A lively Caribbean fusion restaurant in Midtown Atlanta, known for innovative dishes like Jerk Chicken Pasta in a vibrant, social atmosphere.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "nyc-jasmines-caribbean",
@@ -1430,7 +1526,8 @@
     "menu_highlights": [
       "Curry Shrimp & Red Snapper"
     ],
-    "about": "A tropical escape in Hell's Kitchen, serving authentic Caribbean cuisine with specialties like Curry Shrimp and Red Snapper."
+    "about": "A tropical escape in Hell's Kitchen, serving authentic Caribbean cuisine with specialties like Curry Shrimp and Red Snapper.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "chi-garifuna-flava",
@@ -1452,7 +1549,8 @@
       "Belizean Stew Chicken",
       "Panades & Jerk Chicken"
     ],
-    "about": "An authentic, family-owned gem in Marquette Park, serving traditional Belizean cuisine including specialties like Belizean Stew Chicken."
+    "about": "An authentic, family-owned gem in Marquette Park, serving traditional Belizean cuisine including specialties like Belizean Stew Chicken.",
+    "vibe_category": "Community Favorites"
   },
   {
     "id": "dc-st-james",
@@ -1473,7 +1571,8 @@
     "menu_highlights": [
       "Callaloo & Crab"
     ],
-    "about": "A sophisticated and chic modern Caribbean restaurant in the U Street / 14th St area, known for elevated dishes like Callaloo & Crab."
+    "about": "A sophisticated and chic modern Caribbean restaurant in the U Street / 14th St area, known for elevated dishes like Callaloo & Crab.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "la-dulans-crenshaw",
@@ -1494,7 +1593,8 @@
     "menu_highlights": [
       "Smothered Chicken"
     ],
-    "about": "A community landmark in Hyde Park, serving authentic soul food with specialties like Smothered Chicken in a welcoming, family-friendly atmosphere."
+    "about": "A community landmark in Hyde Park, serving authentic soul food with specialties like Smothered Chicken in a welcoming, family-friendly atmosphere.",
+    "vibe_category": "Community Favorites"
   },
   {
     "id": "mia-chef-creole",
@@ -1515,7 +1615,8 @@
     "menu_highlights": [
       "Griot & Pikliz"
     ],
-    "about": "Authentic Haitian cuisine in Little Haiti, serving traditional dishes like Griot & Pikliz in a tropical, authentic atmosphere."
+    "about": "Authentic Haitian cuisine in Little Haiti, serving traditional dishes like Griot & Pikliz in a tropical, authentic atmosphere.",
+    "vibe_category": "Community Favorites"
   },
   {
     "id": "mia-red-rooster-overtown",
@@ -1537,10 +1638,13 @@
       "Coconut Smoked Oxtails",
       "M's Fried Yardbird"
     ],
-    "awards": ["Michelin Bib Gourmand"],
+    "awards": [
+      "Michelin Bib Gourmand"
+    ],
     "quality_factor": "Marcus Samuelsson's tribute to Black culinary history.",
     "featured": true,
-    "about": "Marcus Samuelsson's tribute to Black culinary history. Features a world-class art collection and the famous 'Shrine' Saturday nights for Afrobeats."
+    "about": "Marcus Samuelsson's tribute to Black culinary history. Features a world-class art collection and the famous 'Shrine' Saturday nights for Afrobeats.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "det-001",
@@ -1561,7 +1665,8 @@
     "menu_highlights": [
       "Kuku Na Mali (Chicken & Spinach)"
     ],
-    "about": "An award-winning Burundian restaurant in New Center, serving heartfelt East African cuisine with specialties like Kuku Na Mali in a warm, welcoming atmosphere."
+    "about": "An award-winning Burundian restaurant in New Center, serving heartfelt East African cuisine with specialties like Kuku Na Mali in a warm, welcoming atmosphere.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "hou-006",
@@ -1582,7 +1687,8 @@
     "menu_highlights": [
       "Chili Biscuits & Yardbird"
     ],
-    "about": "A historic and elegant fine dining restaurant in Houston's Museum District, serving elevated Southern cuisine with specialties like Chili Biscuits & Yardbird in a sophisticated setting."
+    "about": "A historic and elegant fine dining restaurant in Houston's Museum District, serving elevated Southern cuisine with specialties like Chili Biscuits & Yardbird in a sophisticated setting.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "chi-ja-grill-hyde-park",
@@ -1603,7 +1709,8 @@
     "menu_highlights": [
       "Curry Goat & Ja' Rum Punch"
     ],
-    "about": "An upscale and energetic Jamaican restaurant in Hyde Park, serving authentic Caribbean cuisine with specialties like Curry Goat & Ja' Rum Punch in a vibrant, sophisticated setting."
+    "about": "An upscale and energetic Jamaican restaurant in Hyde Park, serving authentic Caribbean cuisine with specialties like Curry Goat & Ja' Rum Punch in a vibrant, sophisticated setting.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "atl-irie-mon-cafe",
@@ -1622,7 +1729,8 @@
     "menu_highlights": [
       "Tender Oxtail"
     ],
-    "about": "A casual and consistent Jamaican cafe in Buckhead, serving authentic Caribbean cuisine with specialties like Tender Oxtail in a welcoming, laid-back atmosphere."
+    "about": "A casual and consistent Jamaican cafe in Buckhead, serving authentic Caribbean cuisine with specialties like Tender Oxtail in a welcoming, laid-back atmosphere.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "dc-dogon",
@@ -1636,13 +1744,21 @@
     "website": "https://www.dogonwdc.com/",
     "neighborhood": "The Wharf",
     "vibe": "Sophisticated Waterfront",
-    "vibe_tags": ["Sophisticated Waterfront"],
+    "vibe_tags": [
+      "Sophisticated Waterfront"
+    ],
     "specialty": "Crab Hoe Cakes & Lamb Terrine",
-    "menu_highlights": ["Crab Hoe Cakes", "Lamb Terrine"],
-    "awards": ["Michelin 2025"],
+    "menu_highlights": [
+      "Crab Hoe Cakes",
+      "Lamb Terrine"
+    ],
+    "awards": [
+      "Michelin 2025"
+    ],
     "quality_factor": "High-end Afro-Caribbean by the Potomac.",
     "featured": true,
-    "about": "High-end Afro-Caribbean fine dining by the Potomac, recognized by Michelin 2025."
+    "about": "High-end Afro-Caribbean fine dining by the Potomac, recognized by Michelin 2025.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "nola-dakar",
@@ -1656,13 +1772,20 @@
     "website": "https://www.dakarnola.com/",
     "neighborhood": "Magazine St / Uptown",
     "vibe": "Intimate & Story-Driven",
-    "vibe_tags": ["Intimate & Story-Driven"],
+    "vibe_tags": [
+      "Intimate & Story-Driven"
+    ],
     "specialty": "The Seafood Thieboudienne",
-    "menu_highlights": ["The Seafood Thieboudienne"],
-    "awards": ["2025 Michelin Recommended / James Beard Winner"],
+    "menu_highlights": [
+      "The Seafood Thieboudienne"
+    ],
+    "awards": [
+      "2025 Michelin Recommended / James Beard Winner"
+    ],
     "quality_factor": "Elite Senegalese tasting menu experience.",
     "featured": true,
-    "about": "A single-seating, multi-course dining experience that follows the lineage of West African food to New Orleans. Reservations are highly sought after."
+    "about": "A single-seating, multi-course dining experience that follows the lineage of West African food to New Orleans. Reservations are highly sought after.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "sa-jerk-shack",
@@ -1672,10 +1795,13 @@
     "price_range": "$$",
     "rating": 4.7,
     "address": "San Antonio, TX",
-    "awards": ["Michelin Guide"],
+    "awards": [
+      "Michelin Guide"
+    ],
     "quality_factor": "Texas' only Michelin-recognized Jamaican spot.",
     "featured": true,
-    "about": "Texas' only Michelin-recognized Jamaican restaurant, serving authentic Caribbean cuisine."
+    "about": "Texas' only Michelin-recognized Jamaican restaurant, serving authentic Caribbean cuisine.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "atl-lucia",
@@ -1685,10 +1811,13 @@
     "price_range": "$$$",
     "rating": 4.8,
     "address": "Midtown, Atlanta, GA",
-    "awards": ["2026 Vanguard"],
+    "awards": [
+      "2026 Vanguard"
+    ],
     "quality_factor": "High-end Afro-Caribbean fine dining in Midtown.",
     "featured": true,
-    "about": "High-end Afro-Caribbean fine dining in Midtown Atlanta, recognized as 2026 Vanguard."
+    "about": "High-end Afro-Caribbean fine dining in Midtown Atlanta, recognized as 2026 Vanguard.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "por-kann",
@@ -1702,13 +1831,20 @@
     "website": "https://kannrestaurant.com/",
     "neighborhood": "Central Eastside",
     "vibe": "Elite Wood-Fired Mastery",
-    "vibe_tags": ["Elite Wood-Fired Mastery"],
+    "vibe_tags": [
+      "Elite Wood-Fired Mastery"
+    ],
     "specialty": "Glazed Duck with Cane Sugar & Habanero",
-    "menu_highlights": ["Glazed Duck with Cane Sugar & Habanero"],
-    "awards": ["James Beard Best New Restaurant Winner"],
+    "menu_highlights": [
+      "Glazed Duck with Cane Sugar & Habanero"
+    ],
+    "awards": [
+      "James Beard Best New Restaurant Winner"
+    ],
     "quality_factor": "America's most famous Haitian wood-fired kitchen.",
     "featured": true,
-    "about": "Chef Gregory Gourdet's masterpiece. This is arguably the most famous Haitian restaurant in the world right now, featuring an open kitchen fueled entirely by wood fire."
+    "about": "Chef Gregory Gourdet's masterpiece. This is arguably the most famous Haitian restaurant in the world right now, featuring an open kitchen fueled entirely by wood fire.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "atx-fine-001",
@@ -1722,12 +1858,20 @@
     "website": "https://canjeatx.com/",
     "neighborhood": "East Austin",
     "vibe": "Tropical Chic / High-End",
-    "vibe_tags": ["Tropical Chic / High-End"],
+    "vibe_tags": [
+      "Tropical Chic / High-End"
+    ],
     "specialty": "Wagyu Beef Suya",
-    "menu_highlights": ["Wagyu Beef Suya", "Wild Boar Pepperpot"],
-    "awards": ["James Beard Nominee 2025 (Outstanding Chef)"],
+    "menu_highlights": [
+      "Wagyu Beef Suya",
+      "Wild Boar Pepperpot"
+    ],
+    "awards": [
+      "James Beard Nominee 2025 (Outstanding Chef)"
+    ],
     "featured": true,
-    "about": "Named after the national bird of Guyana, Canje delivers a Michelin-worthy exploration of the Caribbean. The space is vibrant and lush, perfect for an upscale night out on 6th Street."
+    "about": "Named after the national bird of Guyana, Canje delivers a Michelin-worthy exploration of the Caribbean. The space is vibrant and lush, perfect for an upscale night out on 6th Street.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "atx-fine-002",
@@ -1741,11 +1885,17 @@
     "website": "https://www.emberatx.com/",
     "neighborhood": "Seaholm District",
     "vibe": "Sophisticated & Moody",
-    "vibe_tags": ["Sophisticated & Moody"],
+    "vibe_tags": [
+      "Sophisticated & Moody"
+    ],
     "specialty": "Josper-Roasted Prawns & Plantain Sundae",
-    "menu_highlights": ["Josper-Roasted Prawns", "Plantain Sundae"],
+    "menu_highlights": [
+      "Josper-Roasted Prawns",
+      "Plantain Sundae"
+    ],
     "featured": true,
-    "about": "A live-fire culinary theater using a signature Josper oven. The vibe is sleek, dark, and intimate, overlooking Lady Bird Lake—ideal for a formal celebratory dinner."
+    "about": "A live-fire culinary theater using a signature Josper oven. The vibe is sleek, dark, and intimate, overlooking Lady Bird Lake—ideal for a formal celebratory dinner.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "dfw-fine-001",
@@ -1759,11 +1909,17 @@
     "website": "https://aldeez.com/",
     "neighborhood": "North Dallas",
     "vibe": "Upscale Lounge / Nightlife",
-    "vibe_tags": ["Upscale Lounge / Nightlife"],
+    "vibe_tags": [
+      "Upscale Lounge / Nightlife"
+    ],
     "specialty": "Gambian Benachin",
-    "menu_highlights": ["Gambian Benachin", "Oxtail Gravy"],
+    "menu_highlights": [
+      "Gambian Benachin",
+      "Oxtail Gravy"
+    ],
     "featured": false,
-    "about": "A 3,000 sq. ft. creekside oasis that blends authentic West African staples with Caribbean classics. The VIP lounge and live 'Afribbean' Friday nights make this a true destination."
+    "about": "A 3,000 sq. ft. creekside oasis that blends authentic West African staples with Caribbean classics. The VIP lounge and live 'Afribbean' Friday nights make this a true destination.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "dfw-fine-002",
@@ -1777,10 +1933,16 @@
     "website": "https://island-spot.com/",
     "neighborhood": "Oak Cliff / Bishop Arts",
     "vibe": "Cultural & Polished",
-    "vibe_tags": ["Cultural & Polished"],
+    "vibe_tags": [
+      "Cultural & Polished"
+    ],
     "specialty": "Mama Joyce's Oxtails & Jerk BBQ Ribs",
-    "menu_highlights": ["Mama Joyce's Oxtails", "Jerk BBQ Ribs"],
-    "about": "A neighborhood pillar that brings a professional, full-service touch to Jamaican hospitality. Known for their 'Jerk & Jazz' events and deep selection of island rums."
+    "menu_highlights": [
+      "Mama Joyce's Oxtails",
+      "Jerk BBQ Ribs"
+    ],
+    "about": "A neighborhood pillar that brings a professional, full-service touch to Jamaican hospitality. Known for their 'Jerk & Jazz' events and deep selection of island rums.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "hou-fine-001",
@@ -1794,11 +1956,17 @@
     "website": "https://www.islandspice.net/",
     "neighborhood": "West Houston / Copperfield",
     "vibe": "Lively & Tropical",
-    "vibe_tags": ["Lively & Tropical"],
+    "vibe_tags": [
+      "Lively & Tropical"
+    ],
     "specialty": "Creamy Rasta Pasta & Escovitch Fish",
-    "menu_highlights": ["Creamy Rasta Pasta", "Escovitch Fish"],
+    "menu_highlights": [
+      "Creamy Rasta Pasta",
+      "Escovitch Fish"
+    ],
     "featured": false,
-    "about": "A premier Houston destination for those who want a polished dining room that turns into a high-energy lounge at night. The seasoning here is notoriously bold."
+    "about": "A premier Houston destination for those who want a polished dining room that turns into a high-energy lounge at night. The seasoning here is notoriously bold.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "atx-afro-002",
@@ -1810,10 +1978,16 @@
     "address": "Austin, TX",
     "neighborhood": "Austin",
     "vibe": "Elegant / Peaceful",
-    "vibe_tags": ["Elegant / Peaceful"],
+    "vibe_tags": [
+      "Elegant / Peaceful"
+    ],
     "specialty": "Doro Wot & Vegetarian Sampler",
-    "menu_highlights": ["Doro Wot", "Vegetarian Sampler"],
-    "about": "An elegant and peaceful Ethiopian restaurant serving authentic dishes like Doro Wot and a variety of vegetarian options."
+    "menu_highlights": [
+      "Doro Wot",
+      "Vegetarian Sampler"
+    ],
+    "about": "An elegant and peaceful Ethiopian restaurant serving authentic dishes like Doro Wot and a variety of vegetarian options.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "dfw-afro-002",
@@ -1825,10 +1999,15 @@
     "address": "Dallas, TX",
     "neighborhood": "Dallas",
     "vibe": "Chic / Modern Lounge",
-    "vibe_tags": ["Chic / Modern Lounge"],
+    "vibe_tags": [
+      "Chic / Modern Lounge"
+    ],
     "specialty": "Mediterranean-African Seafood",
-    "menu_highlights": ["Mediterranean-African Seafood"],
-    "about": "A chic modern lounge offering global African fusion cuisine with a focus on Mediterranean-African seafood dishes."
+    "menu_highlights": [
+      "Mediterranean-African Seafood"
+    ],
+    "about": "A chic modern lounge offering global African fusion cuisine with a focus on Mediterranean-African seafood dishes.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "chs-fine-001",
@@ -1842,12 +2021,20 @@
     "website": "https://www.bintuatelier.com/",
     "neighborhood": "Downtown Charleston",
     "vibe": "Minimalist & Chef-Forward",
-    "vibe_tags": ["Minimalist & Chef-Forward"],
+    "vibe_tags": [
+      "Minimalist & Chef-Forward"
+    ],
     "specialty": "Heritage Jollof & Goat Egusi with Fufu",
-    "menu_highlights": ["Heritage Jollof", "Goat Egusi with Fufu"],
-    "awards": ["2026 James Beard Semifinalist"],
+    "menu_highlights": [
+      "Heritage Jollof",
+      "Goat Egusi with Fufu"
+    ],
+    "awards": [
+      "2026 James Beard Semifinalist"
+    ],
     "featured": true,
-    "about": "Chef Bintou N'Daw brings a level of precision and elegance to West African staples that matches the legendary fine-dining scene of Charleston."
+    "about": "Chef Bintou N'Daw brings a level of precision and elegance to West African staples that matches the legendary fine-dining scene of Charleston.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "lax-fine-001",
@@ -1861,11 +2048,17 @@
     "website": "https://www.statushollywood.com/",
     "neighborhood": "Hollywood",
     "vibe": "Celebrity Favorite / Sexy Lounge",
-    "vibe_tags": ["Celebrity Favorite / Sexy Lounge"],
+    "vibe_tags": [
+      "Celebrity Favorite / Sexy Lounge"
+    ],
     "specialty": "Sweet Chili Lamb Chops & Oxtail Egg Rolls",
-    "menu_highlights": ["Sweet Chili Lamb Chops", "Oxtail Egg Rolls"],
+    "menu_highlights": [
+      "Sweet Chili Lamb Chops",
+      "Oxtail Egg Rolls"
+    ],
     "featured": false,
-    "about": "Where Hollywood glamour meets authentic island heat. This is the spot for 'Vibe Dining'—the food quality is high-end, and the crowd is impeccably dressed."
+    "about": "Where Hollywood glamour meets authentic island heat. This is the spot for 'Vibe Dining'—the food quality is high-end, and the crowd is impeccably dressed.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "atl-fine-001",
@@ -1879,11 +2072,16 @@
     "website": "https://www.lucianbooksandwine.com/",
     "neighborhood": "Buckhead",
     "vibe": "Elite / Intellectual Chic",
-    "vibe_tags": ["Elite / Intellectual Chic"],
+    "vibe_tags": [
+      "Elite / Intellectual Chic"
+    ],
     "specialty": "Heritage Pork with Black Garlic & Peanuts",
-    "menu_highlights": ["Heritage Pork with Black Garlic & Peanuts"],
+    "menu_highlights": [
+      "Heritage Pork with Black Garlic & Peanuts"
+    ],
     "featured": true,
-    "about": "A sophisticated bookstore-restaurant hybrid in Buckhead. It represents the absolute peak of modern, ingredient-driven dining in Atlanta with a world-class wine program."
+    "about": "A sophisticated bookstore-restaurant hybrid in Buckhead. It represents the absolute peak of modern, ingredient-driven dining in Atlanta with a world-class wine program.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "phi-fine-001",
@@ -1897,12 +2095,19 @@
     "website": "https://www.fridaysaturdaysunday.com/",
     "neighborhood": "Rittenhouse Square",
     "vibe": "Moody / Architectural",
-    "vibe_tags": ["Moody / Architectural"],
+    "vibe_tags": [
+      "Moody / Architectural"
+    ],
     "specialty": "Grilled Quail with African Spices",
-    "menu_highlights": ["Grilled Quail with African Spices"],
-    "awards": ["James Beard Outstanding Restaurant Winner"],
+    "menu_highlights": [
+      "Grilled Quail with African Spices"
+    ],
+    "awards": [
+      "James Beard Outstanding Restaurant Winner"
+    ],
     "featured": true,
-    "about": "Located in a historic Rittenhouse rowhouse, this restaurant offers an eight-course tasting menu that frequently integrates West African and Caribbean seasoning techniques."
+    "about": "Located in a historic Rittenhouse rowhouse, this restaurant offers an eight-course tasting menu that frequently integrates West African and Caribbean seasoning techniques.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "sea-fine-002",
@@ -1916,11 +2121,16 @@
     "website": "https://jerkshackseattle.com/",
     "neighborhood": "Central District",
     "vibe": "Island-Industrial / High Energy",
-    "vibe_tags": ["Island-Industrial / High Energy"],
+    "vibe_tags": [
+      "Island-Industrial / High Energy"
+    ],
     "specialty": "Pimento Wood Smoked Jerk Chicken",
-    "menu_highlights": ["Pimento Wood Smoked Jerk Chicken"],
+    "menu_highlights": [
+      "Pimento Wood Smoked Jerk Chicken"
+    ],
     "featured": false,
-    "about": "Chef Trey Lamont uses high-end techniques to elevate classic street food. The jerk chicken here is seasoned for 48 hours and smoked over authentic pimento wood."
+    "about": "Chef Trey Lamont uses high-end techniques to elevate classic street food. The jerk chicken here is seasoned for 48 hours and smoked over authentic pimento wood.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "sf-fine-001",
@@ -1934,11 +2144,16 @@
     "website": "https://canjeatx.com/",
     "neighborhood": "Mission District",
     "vibe": "Tech-Forward / Avant-Garde",
-    "vibe_tags": ["Tech-Forward / Avant-Garde"],
+    "vibe_tags": [
+      "Tech-Forward / Avant-Garde"
+    ],
     "specialty": "Oxtail Risotto with Scotch Bonnet Oil",
-    "menu_highlights": ["Oxtail Risotto with Scotch Bonnet Oil"],
+    "menu_highlights": [
+      "Oxtail Risotto with Scotch Bonnet Oil"
+    ],
     "featured": false,
-    "about": "While the flagship is in Austin, their 2025/2026 West Coast residency has become the most exclusive ticket for Afro-Caribbean fusion in the Bay Area."
+    "about": "While the flagship is in Austin, their 2025/2026 West Coast residency has become the most exclusive ticket for Afro-Caribbean fusion in the Bay Area.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "hou-002",
@@ -1952,11 +2167,17 @@
     "website": "https://helenkitchen.com/",
     "neighborhood": "South Post Oak",
     "vibe": "Authentic / High-Rated",
-    "vibe_tags": ["Authentic / High-Rated"],
+    "vibe_tags": [
+      "Authentic / High-Rated"
+    ],
     "specialty": "Oxtail & Curry Goat",
-    "menu_highlights": ["Oxtail", "Curry Goat"],
+    "menu_highlights": [
+      "Oxtail",
+      "Curry Goat"
+    ],
     "featured": false,
-    "about": "An authentic Jamaican restaurant in Houston's South Post Oak neighborhood, known for traditional dishes like oxtail and curry goat."
+    "about": "An authentic Jamaican restaurant in Houston's South Post Oak neighborhood, known for traditional dishes like oxtail and curry goat.",
+    "vibe_category": "Community Favorites"
   },
   {
     "id": "katy-001",
@@ -1970,11 +2191,17 @@
     "website": "https://www.wingsnob.com/",
     "neighborhood": "North Fry",
     "vibe": "Casual / High-Quality Takeout",
-    "vibe_tags": ["Casual / High-Quality Takeout"],
+    "vibe_tags": [
+      "Casual / High-Quality Takeout"
+    ],
     "specialty": "Lemon Pepper & Afro-Fusion Dry Rubs",
-    "menu_highlights": ["Lemon Pepper Wings", "Afro-Fusion Dry Rubs"],
+    "menu_highlights": [
+      "Lemon Pepper Wings",
+      "Afro-Fusion Dry Rubs"
+    ],
     "featured": false,
-    "about": "A casual, high-quality takeout spot in Katy specializing in Afro-fusion wings with unique dry rubs and flavors."
+    "about": "A casual, high-quality takeout spot in Katy specializing in Afro-fusion wings with unique dry rubs and flavors.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "lax-002",
@@ -1988,11 +2215,17 @@
     "website": "https://www.luciala.com/",
     "neighborhood": "Fairfax District",
     "vibe": "Elite / Late Night Lounge",
-    "vibe_tags": ["Elite / Late Night Lounge"],
+    "vibe_tags": [
+      "Elite / Late Night Lounge"
+    ],
     "specialty": "Jerk Lobster & Craft Cocktails",
-    "menu_highlights": ["Jerk Lobster", "Craft Cocktails"],
+    "menu_highlights": [
+      "Jerk Lobster",
+      "Craft Cocktails"
+    ],
     "featured": true,
-    "about": "An elite Afro-Caribbean fine dining destination in LA's Fairfax District, known for innovative dishes like Jerk Lobster and craft cocktails in a late-night lounge atmosphere."
+    "about": "An elite Afro-Caribbean fine dining destination in LA's Fairfax District, known for innovative dishes like Jerk Lobster and craft cocktails in a late-night lounge atmosphere.",
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "lax-003",
@@ -2006,11 +2239,17 @@
     "website": "https://www.bridgetownroti.com/",
     "neighborhood": "Arts District",
     "vibe": "Trendy / Award-Winning",
-    "vibe_tags": ["Trendy / Award-Winning"],
+    "vibe_tags": [
+      "Trendy / Award-Winning"
+    ],
     "specialty": "Oxtail Patty & Curry Goat Roti",
-    "menu_highlights": ["Oxtail Patty", "Curry Goat Roti"],
+    "menu_highlights": [
+      "Oxtail Patty",
+      "Curry Goat Roti"
+    ],
     "featured": false,
-    "about": "An award-winning Caribbean American restaurant in LA's Arts District, specializing in authentic roti and patties with a trendy, modern atmosphere."
+    "about": "An award-winning Caribbean American restaurant in LA's Arts District, specializing in authentic roti and patties with a trendy, modern atmosphere.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "sf-001",
@@ -2024,11 +2263,17 @@
     "website": "https://www.terangalf.com/",
     "neighborhood": "Financial District",
     "vibe": "Polished & Health-Conscious",
-    "vibe_tags": ["Polished & Health-Conscious"],
+    "vibe_tags": [
+      "Polished & Health-Conscious"
+    ],
     "specialty": "Baobab Energy Bowls & Yassa Chicken",
-    "menu_highlights": ["Baobab Energy Bowls", "Yassa Chicken"],
+    "menu_highlights": [
+      "Baobab Energy Bowls",
+      "Yassa Chicken"
+    ],
     "featured": false,
-    "about": "A polished, health-conscious Senegalese restaurant in San Francisco's Financial District, offering authentic West African dishes like Baobab Energy Bowls and Yassa Chicken."
+    "about": "A polished, health-conscious Senegalese restaurant in San Francisco's Financial District, offering authentic West African dishes like Baobab Energy Bowls and Yassa Chicken.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "atl-001",
@@ -2042,10 +2287,15 @@
     "website": "https://negrilatl.com/",
     "neighborhood": "Upper West Side",
     "vibe": "Urban / High-Energy Lounge",
-    "vibe_tags": ["Urban / High-Energy Lounge"],
+    "vibe_tags": [
+      "Urban / High-Energy Lounge"
+    ],
     "specialty": "Ackee & Saltfish Spring Rolls",
-    "menu_highlights": ["Ackee & Saltfish Spring Rolls"],
+    "menu_highlights": [
+      "Ackee & Saltfish Spring Rolls"
+    ],
     "featured": false,
-    "about": "An innovative Caribbean restaurant in Atlanta's Upper West Side, known for creative takes on classic dishes like Ackee & Saltfish Spring Rolls in a high-energy lounge atmosphere."
+    "about": "An innovative Caribbean restaurant in Atlanta's Upper West Side, known for creative takes on classic dishes like Ackee & Saltfish Spring Rolls in a high-energy lounge atmosphere.",
+    "vibe_category": "Fine Dining"
   }
 ]

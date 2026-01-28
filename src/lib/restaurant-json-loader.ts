@@ -28,6 +28,7 @@ export type JSONRestaurant = {
   awards?: string[];
   quality_factor?: string;
   featured?: boolean;
+  vibe_category?: "Fine Dining" | "Authentic Staples" | "Community Favorites";
   secondary_location?: {
     name: string;
     address: string;
@@ -187,6 +188,7 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
     specialty: jsonRestaurant.specialty || (jsonRestaurant.menu_highlights && jsonRestaurant.menu_highlights.length > 0 ? jsonRestaurant.menu_highlights[0] : null),
     awards: jsonRestaurant.awards || null,
     quality_factor: jsonRestaurant.quality_factor || null,
+    vibe_category: jsonRestaurant.vibe_category || null,
   };
 }
 
