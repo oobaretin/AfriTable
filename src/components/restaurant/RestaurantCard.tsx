@@ -169,7 +169,7 @@ export function RestaurantCard({
           )}
 
           {/* Neighborhood & Specialty - Elegant Small Text */}
-          {((restaurant as any).neighborhood || (restaurant as any).specialty || ((restaurant as any).menu_highlights && (restaurant as any).menu_highlights.length > 0)) && (
+          {((restaurant as any).neighborhood || (restaurant as any).specialty || ((restaurant as any).menu_highlights && (restaurant as any).menu_highlights.length > 0) || (restaurant as any).awards) && (
             <div className="mb-4 space-y-1">
               {(restaurant as any).neighborhood && (
                 <p className="text-[10px] uppercase tracking-wider text-slate-500 font-medium">
@@ -179,6 +179,11 @@ export function RestaurantCard({
               {((restaurant as any).specialty || ((restaurant as any).menu_highlights && (restaurant as any).menu_highlights.length > 0)) && (
                 <p className="text-[10px] uppercase tracking-wider text-[#C69C2B] font-semibold">
                   {(restaurant as any).specialty || ((restaurant as any).menu_highlights && (restaurant as any).menu_highlights[0])}
+                </p>
+              )}
+              {(restaurant as any).awards && Array.isArray((restaurant as any).awards) && (restaurant as any).awards.length > 0 && (
+                <p className="text-[10px] uppercase tracking-wider text-slate-600 font-bold">
+                  {(restaurant as any).awards.join(" • ")}
                 </p>
               )}
             </div>

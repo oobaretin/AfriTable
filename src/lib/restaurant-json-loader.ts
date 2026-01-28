@@ -25,6 +25,8 @@ export type JSONRestaurant = {
   neighborhood?: string;
   vibe?: string;
   specialty?: string;
+  awards?: string[];
+  quality_factor?: string;
   secondary_location?: {
     name: string;
     address: string;
@@ -182,6 +184,8 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
     neighborhood: jsonRestaurant.neighborhood || null,
     vibe: jsonRestaurant.vibe || null,
     specialty: jsonRestaurant.specialty || (jsonRestaurant.menu_highlights && jsonRestaurant.menu_highlights.length > 0 ? jsonRestaurant.menu_highlights[0] : null),
+    awards: jsonRestaurant.awards || null,
+    quality_factor: jsonRestaurant.quality_factor || null,
   };
 }
 

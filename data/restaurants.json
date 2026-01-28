@@ -714,7 +714,7 @@
     "cuisine": "Afro-Caribbean",
     "region": "Caribbean",
     "price_range": "$$$",
-    "rating": 4.8,
+    "rating": 5.0,
     "address": "10 Lincoln Center Plaza, New York, NY 10023",
     "phone": "(212) 875-5222",
     "website": "https://www.tatiananyc.com/",
@@ -727,17 +727,21 @@
     "menu_highlights": [
       "Wagyu Short Rib Pastrami"
     ],
+    "awards": ["⭐⭐⭐⭐⭐"],
+    "quality_factor": "Named the #1 Restaurant in NYC (Kwame Onwuachi)",
     "about": "Elite fine dining at Lincoln Center, where Chef Kwame Onwuachi creates the intersection of heritage and high-fashion dining with specialties like Wagyu Short Rib Pastrami."
   },
   {
     "id": "hou-001",
-    "name": "ChopnBlok",
+    "name": "ChòpnBlọk",
     "cuisine": "Nigerian / Ghanaian",
     "region": "West African",
     "price_range": "$$$",
     "rating": 4.8,
     "address": "Downtown, Houston, TX",
     "phone": "(281) 747-7500",
+    "awards": ["NYT Top 50"],
+    "quality_factor": "The \"Gold Standard\" for West African fast-fine dining.",
     "about": "Accessible West African flavors for the modern palate.",
     "vibe_tags": [
       "Contemporary Heritage"
@@ -1002,6 +1006,8 @@
     "rating": 4.8,
     "address": "Uptown, Chicago, IL",
     "phone": "(773) 334-8787",
+    "awards": ["Michelin Bib"],
+    "quality_factor": "A Chicago institution for elite Ethiopian dining.",
     "about": "Award-winning flavors served with Chicago's finest hospitality.",
     "vibe_tags": [
       "Upscale Communal"
@@ -1125,6 +1131,8 @@
     "menu_highlights": [
       "Hood Sushi & Catfish"
     ],
+    "awards": ["James Beard"],
+    "quality_factor": "Seattle's legendary \"Soul-Fusion\" destination.",
     "about": "An award-winning soul-fusion restaurant in Seattle's Central District, serving innovative dishes like Hood Sushi & Catfish in a vibrant, social atmosphere."
   },
   {
@@ -1509,6 +1517,8 @@
     "menu_highlights": [
       "Hot Honey Yardbird"
     ],
+    "awards": ["Global Icon"],
+    "quality_factor": "Marcus Samuelsson's Overtown masterpiece.",
     "about": "A luxury, high-energy modern Afro-American restaurant in Overtown, known for elevated dishes like Hot Honey Yardbird in a vibrant, sophisticated setting."
   },
   {
@@ -1592,5 +1602,65 @@
       "Tender Oxtail"
     ],
     "about": "A casual and consistent Jamaican cafe in Buckhead, serving authentic Caribbean cuisine with specialties like Tender Oxtail in a welcoming, laid-back atmosphere."
+  },
+  {
+    "id": "dc-dogon",
+    "name": "Dōgon",
+    "cuisine": "Afro-Caribbean",
+    "region": "Caribbean",
+    "price_range": "$$$",
+    "rating": 4.9,
+    "address": "Washington, DC",
+    "awards": ["Michelin 2025"],
+    "quality_factor": "High-end Afro-Caribbean by the Potomac.",
+    "about": "High-end Afro-Caribbean fine dining by the Potomac, recognized by Michelin 2025."
+  },
+  {
+    "id": "nola-dakar",
+    "name": "Dakar NOLA",
+    "cuisine": "Senegalese",
+    "region": "West African",
+    "price_range": "$$$",
+    "rating": 4.9,
+    "address": "New Orleans, LA",
+    "awards": ["Michelin 2025"],
+    "quality_factor": "Elite Senegalese tasting menu experience.",
+    "about": "Elite Senegalese tasting menu experience in New Orleans, recognized by Michelin 2025."
+  },
+  {
+    "id": "sa-jerk-shack",
+    "name": "The Jerk Shack",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.7,
+    "address": "San Antonio, TX",
+    "awards": ["Michelin Guide"],
+    "quality_factor": "Texas' only Michelin-recognized Jamaican spot.",
+    "about": "Texas' only Michelin-recognized Jamaican restaurant, serving authentic Caribbean cuisine."
+  },
+  {
+    "id": "atl-lucia",
+    "name": "Lucia",
+    "cuisine": "Afro-Caribbean",
+    "region": "Caribbean",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "Midtown, Atlanta, GA",
+    "awards": ["2026 Vanguard"],
+    "quality_factor": "High-end Afro-Caribbean fine dining in Midtown.",
+    "about": "High-end Afro-Caribbean fine dining in Midtown Atlanta, recognized as 2026 Vanguard."
+  },
+  {
+    "id": "por-kann",
+    "name": "Kann",
+    "cuisine": "Haitian",
+    "region": "Caribbean",
+    "price_range": "$$$",
+    "rating": 4.9,
+    "address": "Portland, OR",
+    "awards": ["James Beard"],
+    "quality_factor": "America's most famous Haitian wood-fired kitchen.",
+    "about": "America's most famous Haitian wood-fired kitchen in Portland, recognized by James Beard."
   }
 ]
