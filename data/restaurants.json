@@ -1201,7 +1201,7 @@
   {
     "id": "chi-garifuna-flava",
     "name": "Garifuna Flava",
-    "cuisine": "Belizean/Caribbean",
+    "cuisine": "Belizean",
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.5,
@@ -1209,13 +1209,15 @@
     "phone": "(773) 776-7440",
     "website": "https://www.garifunaflava.com/",
     "neighborhood": "Marquette Park",
-    "vibe_tags": ["Family-Owned Gem"],
-    "menu_highlights": ["Panades & Jerk Chicken"],
-    "about": "A family-owned gem in Marquette Park, serving authentic Belizean and Caribbean cuisine including traditional Panades and Jerk Chicken."
+    "vibe": "Authentic & Family-Owned",
+    "vibe_tags": ["Authentic & Family-Owned"],
+    "specialty": "Belizean Stew Chicken",
+    "menu_highlights": ["Belizean Stew Chicken", "Panades & Jerk Chicken"],
+    "about": "An authentic, family-owned gem in Marquette Park, serving traditional Belizean cuisine including specialties like Belizean Stew Chicken."
   },
   {
     "id": "dc-st-james",
-    "name": "St. James",
+    "name": "St. James - Modern Caribbean",
     "cuisine": "Modern Caribbean",
     "region": "Caribbean",
     "price_range": "$$$",
@@ -1223,10 +1225,12 @@
     "address": "2017 14th St NW, Washington, DC 20009",
     "phone": "(202) 481-1253",
     "website": "https://www.stjames-dc.com/",
-    "neighborhood": "U Street Corridor",
+    "neighborhood": "U Street / 14th St",
+    "vibe": "Sophisticated & Chic",
     "vibe_tags": ["Sophisticated & Chic"],
+    "specialty": "Callaloo & Crab",
     "menu_highlights": ["Callaloo & Crab"],
-    "about": "A sophisticated and chic modern Caribbean restaurant in the U Street Corridor, known for elevated dishes like Callaloo & Crab."
+    "about": "A sophisticated and chic modern Caribbean restaurant in the U Street / 14th St area, known for elevated dishes like Callaloo & Crab."
   },
   {
     "id": "la-dulans-crenshaw",
@@ -1329,5 +1333,20 @@
     "specialty": "Curry Goat & Ja' Rum Punch",
     "menu_highlights": ["Curry Goat & Ja' Rum Punch"],
     "about": "An upscale and energetic Jamaican restaurant in Hyde Park, serving authentic Caribbean cuisine with specialties like Curry Goat & Ja' Rum Punch in a vibrant, sophisticated setting."
+  },
+  {
+    "id": "atl-irie-mon-cafe",
+    "name": "Irie Mon Cafe",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "1800 Peachtree St NW #103, Atlanta, GA 30309",
+    "neighborhood": "Buckhead",
+    "vibe": "Casual & Consistent",
+    "vibe_tags": ["Casual & Consistent"],
+    "specialty": "Tender Oxtail",
+    "menu_highlights": ["Tender Oxtail"],
+    "about": "A casual and consistent Jamaican cafe in Buckhead, serving authentic Caribbean cuisine with specialties like Tender Oxtail in a welcoming, laid-back atmosphere."
   }
 ]
