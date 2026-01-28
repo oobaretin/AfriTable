@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { RestaurantCardWithDistance } from "./RestaurantCardWithDistance";
 import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
 
@@ -15,15 +15,8 @@ type RestaurantResultsProps = {
 };
 
 export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
-  const router = useRouter();
-  
   // Check if we're in search mode (has distance data)
   const isSearchMode = restaurants.length > 0 && restaurants[0].distance !== null;
-  
-  const handleSeeAllClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    router.push("/restaurants");
-  };
   
   // In search mode, show all results (already filtered and sorted by distance)
   // Otherwise, show featured restaurants (legacy behavior)
@@ -109,14 +102,14 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
         {/* See All Destinations Button - Only show in featured mode */}
         {!isSearchMode && (
           <div className="mt-16 flex justify-center">
-            <button
-              onClick={handleSeeAllClick}
-              className="group relative bg-transparent hover:bg-[#C69C2B]/10 border border-[#C69C2B] text-[#C69C2B] text-[10px] font-black px-8 py-4 rounded-full uppercase tracking-widest transition-all duration-500 flex items-center gap-3 hover:shadow-[0_0_15px_rgba(198,156,43,0.4)] cursor-pointer"
-              type="button"
+            <Link
+              href="/restaurants"
+              className="group relative bg-transparent hover:bg-[#C69C2B]/10 border border-[#C69C2B] text-[#C69C2B] text-[10px] font-black px-8 py-4 rounded-full uppercase tracking-widest transition-all duration-500 flex items-center gap-3 hover:shadow-[0_0_15px_rgba(198,156,43,0.4)] cursor-pointer inline-block"
+              prefetch={true}
             >
               <span>See All Destinations</span>
               <span className="text-lg transition-transform duration-500 group-hover:translate-x-1">→</span>
-            </button>
+            </Link>
           </div>
         )}
       </div>
