@@ -215,18 +215,18 @@ export function RestaurantCard({
             </div>
           )}
 
-          <div className="w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-10">
+          <div className="w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80">
             View Details →
           </div>
         </div>
       </Link>
 
       {/* Find Table Button */}
-      <div className="px-5 pb-5 relative z-10">
+      <div className="px-5 pb-5">
         <button
           type="button"
           onClick={handleFindTable}
-          className="w-full rounded-lg bg-[#A33B32] hover:bg-[#A33B32]/90 text-white px-3 py-2.5 text-sm font-bold transition-colors relative z-10"
+          className="w-full rounded-lg bg-[#A33B32] hover:bg-[#A33B32]/90 text-white px-3 py-2.5 text-sm font-bold transition-colors"
         >
           Find Table
         </button>
