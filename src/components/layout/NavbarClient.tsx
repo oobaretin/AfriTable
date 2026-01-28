@@ -20,14 +20,8 @@ function initials(name?: string | null) {
 }
 
 export function NavbarClient({ user, profile }: NavbarClientProps) {
-  const router = useRouter();
   const role = profile?.role ?? "diner";
   const displayName = profile?.full_name ?? user?.email ?? "AfriTable";
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    router.push(href);
-  };
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
