@@ -116,7 +116,27 @@ export function HeroSearch() {
 
   return (
     <section className="relative z-0 min-h-[60vh] max-h-[800px] w-full bg-[#050A18] flex flex-col items-center justify-center overflow-hidden px-4 py-24" id="hero-search">
-      {/* 1. BACKGROUND STRUCTURES (Subtler) - pointer-events-none to prevent blocking */}
+      {/* 1. BACKGROUND PATTERN - Geometric pattern overlay */}
+      <div 
+        className="absolute inset-0 z-0 bg-[#000814] pointer-events-none"
+        style={{
+          backgroundColor: '#000814',
+          backgroundImage: `
+            linear-gradient(30deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
+            linear-gradient(150deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
+            linear-gradient(30deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
+            linear-gradient(150deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
+            linear-gradient(60deg, #003566 25%, transparent 25.5%, transparent 75%, #003566 75%, #003566),
+            linear-gradient(60deg, #003566 25%, transparent 25.5%, transparent 75%, #003566 75%, #003566)`,
+          backgroundSize: '80px 140px',
+          backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px'
+        }}
+      >
+        {/* Shadow vignette for 3D depth effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#000814] opacity-90"></div>
+      </div>
+
+      {/* 2. BACKGROUND STRUCTURES (Subtler) - pointer-events-none to prevent blocking */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[50%] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-indigo-900/20 rounded-full blur-[100px] pointer-events-none"></div>
@@ -131,7 +151,7 @@ export function HeroSearch() {
         ))}
       </div>
 
-      {/* 3. THE CORE ENGINE (RESIZED) */}
+      {/* 4. THE CORE ENGINE (RESIZED) */}
       <div className="relative z-10 flex items-center justify-center w-full max-w-7xl">
         
         {/* LEFT: Typing (Reduced Size) */}
@@ -153,7 +173,7 @@ export function HeroSearch() {
         </div>
       </div>
 
-      {/* 4. FIND TABLE PILL (Consistent Sizing) */}
+      {/* 5. FIND TABLE PILL (Consistent Sizing) */}
       <div className="relative z-30 mt-16 w-full max-w-lg">
         <div className="relative">
           <div className="bg-white rounded-full p-1.5 shadow-2xl flex items-center border border-white/10">
