@@ -143,7 +143,7 @@ export function HeroSearch() {
       </div>
 
       {/* 2. CATCHY WORDS (Smaller & More Spaced) */}
-      <div className="relative z-20 mb-8 flex gap-8 md:gap-16 opacity-30">
+      <div className="relative z-10 mb-8 flex gap-8 md:gap-16 opacity-30">
         {["REDEFINED", "AUTHENTIC", "ANCESTRAL"].map((word, i) => (
           <span key={i} className="text-[10px] font-black text-white uppercase tracking-[0.4em]">
             {word}
@@ -173,8 +173,8 @@ export function HeroSearch() {
         </div>
       </div>
 
-      {/* 5. FIND TABLE PILL (Consistent Sizing) */}
-      <div className="relative z-30 mt-16 w-full max-w-lg">
+      {/* 4. FIND TABLE PILL (Consistent Sizing) */}
+      <div className="relative z-10 mt-16 w-full max-w-lg">
         <div className="relative">
           <div className="bg-white rounded-full p-1.5 shadow-2xl flex items-center border border-white/10">
             <div className="flex-1 flex items-center px-5 gap-3">
