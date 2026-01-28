@@ -9,14 +9,20 @@ type ZipCodeSearchProps = {
   onFilterChange: (filteredRestaurants: JSONRestaurant[]) => void;
 };
 
-// Extract zip code from address string
-function extractZipCode(address: string | unknown): string | null {
-  if (typeof address !== "string") return null;
+// Extract zip code from restaurant (prefer explicit zip field, fallback to address parsing)
+function getRestaurantZipCode(restaurant: JSONRestaurant): string | null {
+  // First, try the explicit zip field
+  if (restaurant.zip) {
+    return restaurant.zip;
+  }
   
-  // Try to match 5-digit zip code pattern
-  // Format: "Street, City, ST 12345" or "Street, City, ST12345"
-  const zipMatch = address.match(/\b(\d{5})\b/);
-  return zipMatch ? zipMatch[1] : null;
+  // Fallback: extract from address string
+  if (typeof restaurant.address === "string") {
+    const zipMatch = restaurant.address.match(/\b(\d{5})\b/);
+    return zipMatch ? zipMatch[1] : null;
+  }
+  
+  return null;
 }
 
 export function ZipCodeSearch({ restaurants, onFilterChange }: ZipCodeSearchProps) {
@@ -31,7 +37,7 @@ export function ZipCodeSearch({ restaurants, onFilterChange }: ZipCodeSearchProp
     if (zipCode.length === 5) {
       // Filter restaurants by zip code
       const filtered = restaurants.filter((restaurant) => {
-        const restaurantZip = extractZipCode(restaurant.address);
+        const restaurantZip = getRestaurantZipCode(restaurant);
         return restaurantZip === zipCode;
       });
       onFilterChange(filtered);

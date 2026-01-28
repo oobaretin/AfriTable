@@ -9,6 +9,9 @@ export type JSONRestaurant = {
   price_range: string;
   rating: number;
   address: string;
+  zip?: string;
+  lat?: number;
+  lng?: number;
   phone?: string;
   website?: string;
   social?: {
