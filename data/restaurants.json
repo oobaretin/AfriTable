@@ -776,6 +776,7 @@
     ],
     "quality_factor": "Named the #1 Restaurant in NYC (Kwame Onwuachi)",
     "featured": true,
+    "vibe_category": "Fine Dining",
     "about": "Elite fine dining at Lincoln Center, where Chef Kwame Onwuachi creates the intersection of heritage and high-fashion dining with specialties like Wagyu Short Rib Pastrami.",
     "vibe_category": "Fine Dining"
   },
@@ -804,6 +805,7 @@
     ],
     "quality_factor": "The \"Gold Standard\" for West African fast-fine dining.",
     "featured": true,
+    "vibe_category": "Fine Dining",
     "about": "Accessible West African flavors for the modern palate.",
     "vibe_category": "Fine Dining"
   },
@@ -1742,7 +1744,7 @@
     "vibe_category": "Authentic Staples"
   },
   {
-    "id": "dc-dogon",
+    "id": "dca-001",
     "name": "Dōgon",
     "cuisine": "Afro-Caribbean Fine Dining",
     "region": "Caribbean",
@@ -1766,6 +1768,7 @@
     ],
     "quality_factor": "High-end Afro-Caribbean by the Potomac.",
     "featured": true,
+    "vibe_category": "Fine Dining",
     "about": "High-end Afro-Caribbean fine dining by the Potomac, recognized by Michelin 2025.",
     "vibe_category": "Fine Dining"
   },
@@ -2046,7 +2049,7 @@
     "vibe_category": "Fine Dining"
   },
   {
-    "id": "lax-fine-001",
+    "id": "lax-001",
     "name": "Status Hollywood",
     "cuisine": "Upscale Jamaican",
     "region": "Caribbean",
@@ -2066,6 +2069,7 @@
       "Oxtail Egg Rolls"
     ],
     "featured": false,
+    "vibe_category": "Fine Dining",
     "about": "Where Hollywood glamour meets authentic island heat. This is the spot for 'Vibe Dining'—the food quality is high-end, and the crowd is impeccably dressed.",
     "vibe_category": "Fine Dining"
   },
@@ -2308,7 +2312,7 @@
     "vibe_category": "Fine Dining"
   },
   {
-    "id": "hou-sta-001",
+    "id": "hou-002",
     "name": "Taste of Nigeria",
     "cuisine": "Authentic Nigerian",
     "region": "West African",
@@ -2389,7 +2393,7 @@
     "vibe_tags": ["Local Gem / Casual"],
     "specialty": "Amala with Ewedu & Gbegiri",
     "menu_highlights": ["Amala with Ewedu & Gbegiri"],
-    "vibe_category": "Community Favorites",
+    "vibe_category": "Authentic Staples",
     "about": "Essential for the Katy community; arguably the best Amala in the area."
   },
   {
@@ -2478,9 +2482,9 @@
     "about": "Primary takeout operation in Westchase/Third Ward area. Fast, affordable, and incredibly consistent."
   },
   {
-    "id": "katy-sta-002",
+    "id": "katy-003",
     "name": "Astor's Table",
-    "cuisine": "South African / Latin Fusion",
+    "cuisine": "South African",
     "region": "South African",
     "price_range": "$$",
     "rating": 4.5,
@@ -2491,7 +2495,7 @@
     "vibe_tags": ["Casual Boutique / Neighborhood Spot"],
     "specialty": "Beef Suya Astor & Peri-Peri Chicken",
     "menu_highlights": ["Beef Suya Astor", "Peri-Peri Chicken"],
-    "vibe_category": "Community Favorites",
+    "vibe_category": "Authentic Staples",
     "about": "Chef Casey brings a unique South African flair to Katy. Great for a casual but 'stepped-up' lunch."
   },
   {
@@ -2529,14 +2533,14 @@
     "about": "The 'Daily Driver' of Ethiopian food. Clean, professional, and has been a staple for years."
   },
   {
-    "id": "hou-sta-012",
+    "id": "hou-003",
     "name": "Aria Suya Kitchen",
     "cuisine": "Nigerian Grill",
     "region": "West African",
     "price_range": "$$",
     "rating": 4.6,
     "address": "6308 Richmond Ave, Houston, TX 77057",
-    "phone": "(832) 831-2947",
+    "phone": "(832) 831-4372",
     "website": "https://ariasuyakitchen.com/",
     "vibe": "Vibe Dining / Semi-Casual",
     "vibe_tags": ["Vibe Dining / Semi-Casual"],
@@ -2580,9 +2584,9 @@
     "about": "A legendary Houston staple. It has national fame from 'Diners, Drive-Ins and Dives' but stays true to its roots."
   },
   {
-    "id": "katy-sta-003",
+    "id": "katy-004",
     "name": "Butter D' Roti",
-    "cuisine": "Trinidadian (Indo-Caribbean)",
+    "cuisine": "Trinidadian",
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.5,
@@ -2840,7 +2844,7 @@
     "about": "An authentic comfort spot in Chicago's Uptown/Washington Park area, specializing in Senegalese grilled fish."
   },
   {
-    "id": "katy-sta-004",
+    "id": "katy-001",
     "name": "Royal Arm Restaurant",
     "cuisine": "Nigerian & Caribbean Fusion",
     "region": "West African",
@@ -2864,7 +2868,7 @@
       "mon_sat": "12:00 PM - 8:00 PM",
       "sun": "Closed"
     },
-    "vibe_category": "Community Favorites",
+    "vibe_category": "Authentic Staples",
     "about": "A local Katy pillar that successfully bridges Nigerian staples with Caribbean favorites. Known for their meticulous preparation of 'swallow' dishes and their standout Designer Rice (Ayamase)."
   }
 ]
