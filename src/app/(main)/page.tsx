@@ -11,7 +11,6 @@ import { HeritageSection } from "@/components/home/HeritageSection";
 import { CommunityFeed } from "@/components/home/CommunityFeed";
 import { SuccessStory } from "@/components/home/SuccessStory";
 import { Leaderboard } from "@/components/home/Leaderboard";
-import { Newsletter } from "@/components/home/Newsletter";
 import { HomepageRestaurantClient } from "@/components/home/HomepageRestaurantClient";
 import * as fs from "node:fs";
 import * as path from "node:path";
@@ -43,9 +42,6 @@ export default async function MainHomePage() {
       
       {/* Hero - Search-First Design */}
       <HeroSearch />
-
-      {/* Newsletter / Coming Soon Section */}
-      <Newsletter />
 
       {/* Restaurant Results with Zip Code Search - Ultimate Dining Gallery */}
       <HomepageRestaurantClient restaurants={restaurantsFromJSON} />
