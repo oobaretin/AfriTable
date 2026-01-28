@@ -10,6 +10,7 @@ type RestaurantGridProps = {
   restaurants: JSONRestaurant[];
   activeCategory?: string;
   activeCity?: string;
+  onCountChange?: (count: number, total: number) => void;
 };
 
 // Helper function to extract city from address string
@@ -25,18 +26,27 @@ function extractCityFromAddress(address: string | unknown): string {
   return "";
 }
 
+const ITEMS_PER_PAGE = 12;
+
 export function RestaurantGrid({ 
   restaurants: jsonRestaurants, 
   activeCategory: externalActiveCategory,
-  activeCity: externalActiveCity
+  activeCity: externalActiveCity,
+  onCountChange
 }: RestaurantGridProps) {
   const searchParams = useSearchParams();
   const urlCityFilter = searchParams.get("city")?.toLowerCase().trim() || "";
   const [internalActiveCategory] = React.useState<string>("All");
+  const [displayCount, setDisplayCount] = React.useState<number>(ITEMS_PER_PAGE);
   
   // Use external state if provided, otherwise use internal state or URL params
   const activeCategory = externalActiveCategory ?? internalActiveCategory;
   const activeCity = externalActiveCity ?? urlCityFilter;
+  
+  // Reset display count when filters change
+  React.useEffect(() => {
+    setDisplayCount(ITEMS_PER_PAGE);
+  }, [activeCategory, activeCity]);
 
   // Helper to check if restaurant matches selected city
   function matchesCity(restaurantCity: string, selectedCity: string): boolean {
@@ -98,6 +108,25 @@ export function RestaurantGrid({
     return filteredJSONRestaurants.map((r) => transformJSONRestaurantToDetail(r));
   }, [filteredJSONRestaurants]);
 
+  // Get restaurants to display (paginated)
+  const displayedRestaurants = React.useMemo(() => {
+    return transformedRestaurants.slice(0, displayCount);
+  }, [transformedRestaurants, displayCount]);
+
+  // Notify parent of count changes
+  React.useEffect(() => {
+    if (onCountChange) {
+      onCountChange(displayedRestaurants.length, transformedRestaurants.length);
+    }
+  }, [displayedRestaurants.length, transformedRestaurants.length, onCountChange]);
+
+  // Load more handler
+  const handleLoadMore = () => {
+    setDisplayCount((prev) => Math.min(prev + ITEMS_PER_PAGE, transformedRestaurants.length));
+  };
+
+  const hasMore = displayedRestaurants.length < transformedRestaurants.length;
+
   // Always show grid structure to prevent layout collapse
   const isLoading = transformedRestaurants.length === 0 && jsonRestaurants.length > 0;
   const hasResults = transformedRestaurants.length > 0;
@@ -115,14 +144,21 @@ export function RestaurantGrid({
             <RestaurantCardSkeleton key={`skeleton-${i}`} />
           ))
         ) : hasResults ? (
-          // Show actual restaurant cards
-          transformedRestaurants.map((restaurant, index) => (
-            <RestaurantCard
+          // Show actual restaurant cards (paginated)
+          displayedRestaurants.map((restaurant, index) => (
+            <div
               key={restaurant.id}
-              restaurant={restaurant}
-              href={`/restaurants/${restaurant.slug}`}
-              index={index}
-            />
+              className="animate-in fade-in duration-500"
+              style={{
+                animationDelay: `${Math.min(index % ITEMS_PER_PAGE, 5) * 50}ms`,
+              }}
+            >
+              <RestaurantCard
+                restaurant={restaurant}
+                href={`/restaurants/${restaurant.slug}`}
+                index={index}
+              />
+            </div>
           ))
         ) : (
           // Show empty state (but keep grid structure)
@@ -136,6 +172,21 @@ export function RestaurantGrid({
           </div>
         )}
       </div>
+
+      {/* Load More Button */}
+      {hasResults && hasMore && (
+        <div className="flex justify-center mt-12">
+          <button
+            onClick={handleLoadMore}
+            className="group relative bg-transparent hover:bg-[#C69C2B]/10 border border-[#C69C2B] text-[#C69C2B] text-sm font-bold px-8 py-4 rounded-full uppercase tracking-widest transition-all duration-500 hover:shadow-[0_0_15px_rgba(198,156,43,0.4)]"
+          >
+            Load More
+            <span className="ml-2 inline-block transition-transform duration-500 group-hover:translate-y-1">
+              ↓
+            </span>
+          </button>
+        </div>
+      )}
     </div>
   );
 }

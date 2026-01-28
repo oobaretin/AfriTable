@@ -1,12 +1,12 @@
 import { Suspense } from "react";
 import Image from "next/image";
-import { CategoryFilterWrapper } from "@/components/home/CategoryFilterWrapper";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 import { RestaurantCardSkeleton } from "@/components/home/RestaurantCardSkeleton";
+import { RestaurantsGridClient } from "./RestaurantsGridClient";
 
 function RestaurantsGrid() {
   const restaurantsFromJSON = loadRestaurantsFromJSON();
-  return <CategoryFilterWrapper restaurants={restaurantsFromJSON} />;
+  return <RestaurantsGridClient restaurants={restaurantsFromJSON} />;
 }
 
 export default function RestaurantsPage() {
@@ -43,9 +43,9 @@ export default function RestaurantsPage() {
               The Full Collection
             </h1>
             
-            {/* Subtitle */}
+            {/* Subtitle - Will be updated dynamically */}
             <p className="text-sm md:text-base text-white/60 tracking-[0.2em] uppercase">
-              63 Destinations Across the Global Diaspora
+              The Full Collection
             </p>
             
             {/* Divider Line */}

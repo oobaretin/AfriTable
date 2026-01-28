@@ -8,9 +8,10 @@ import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
 
 type CategoryFilterWrapperProps = {
   restaurants: JSONRestaurant[];
+  onCountChange?: (count: number, total: number) => void;
 };
 
-export function CategoryFilterWrapper({ restaurants }: CategoryFilterWrapperProps) {
+export function CategoryFilterWrapper({ restaurants, onCountChange }: CategoryFilterWrapperProps) {
   const [activeCategory, setActiveCategory] = React.useState<string>("All");
   const [activeCity, setActiveCity] = React.useState<string>("");
 
@@ -42,6 +43,7 @@ export function CategoryFilterWrapper({ restaurants }: CategoryFilterWrapperProp
           restaurants={restaurants} 
           activeCategory={activeCategory}
           activeCity={activeCity}
+          onCountChange={onCountChange}
         />
       </div>
     </div>
