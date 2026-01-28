@@ -7,7 +7,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { signOutAction } from "@/lib/auth/actions";
-import { signOut } from "@/lib/auth/utils";
 
 type NavbarClientProps = {
   user: any;
@@ -154,7 +153,7 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem asChild>
-                    <form action={signOut} className="w-full">
+                    <form action={signOutAction} className="w-full">
                       <button type="submit" className="w-full text-left">
                         Sign out
                       </button>
