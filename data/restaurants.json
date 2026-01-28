@@ -9,7 +9,10 @@
     "address": "6991 S Texas 6, Houston, TX 77083",
     "phone": "(281) 372-8925",
     "website": "https://chezmichellerestaurant.com",
-    "social": { "instagram": "@chezmichelle_houston", "facebook": "Chez Michelle" },
+    "social": {
+      "instagram": "@chezmichelle_houston",
+      "facebook": "Chez Michelle"
+    },
     "hours": {
       "mon_sat": "12:00 PM - 12:00 AM",
       "sun": "12:00 PM - 10:00 PM"
@@ -17,7 +20,11 @@
     "about": "Authentic African cuisine with a focus on bringing people together. Perfect for late-night Ndole soup.",
     "our_story": "We are passionate about sharing the rich flavors and warm hospitality that define African dining using traditional recipes and fresh ingredients.",
     "cultural_roots": "Food in African culture is a way of expressing love and preserving generations of traditions.",
-    "menu_highlights": ["Ndole Soup", "Grilled Tilapia", "Eru"]
+    "menu_highlights": [
+      "Ndole Soup",
+      "Grilled Tilapia",
+      "Eru"
+    ]
   },
   {
     "id": "addis-ababa",
@@ -29,7 +36,10 @@
     "address": "100 S Central Expy #65, Richardson, TX 75080",
     "phone": "(469) 319-9604",
     "website": "https://addisabebarestauranttx.com",
-    "social": { "instagram": "@addisabebatx", "facebook": "Addis Abeba Richardson" },
+    "social": {
+      "instagram": "@addisabebatx",
+      "facebook": "Addis Abeba Richardson"
+    },
     "hours": {
       "wed_sun": "11:00 AM - 2:00 AM",
       "mon_thu": "11:00 AM - 12:00 AM",
@@ -38,7 +48,11 @@
     "about": "A cozy, inviting hidden gem known for late-night hours and vibrant communal dining.",
     "our_story": "Founded to preserve traditional Habesha recipes where the aroma of berbere and fresh injera welcomes everyone.",
     "cultural_roots": "Honors the 'Agelgil' tradition where sharing a plate signifies bonds of friendship.",
-    "menu_highlights": ["Doro Wat", "Veggie Combo", "Addis Tibs"]
+    "menu_highlights": [
+      "Doro Wat",
+      "Veggie Combo",
+      "Addis Tibs"
+    ]
   },
   {
     "id": "famous-princess",
@@ -50,12 +64,21 @@
     "address": "17036 W Little York Rd, Houston, TX 77084",
     "phone": "(832) 419-5670",
     "website": "https://thefpak.start.page/",
-    "social": { "instagram": "@famousprincesskitchen" },
-    "hours": { "tue_sat": "2:00 PM - 10:00 PM", "sun_mon": "Closed" },
+    "social": {
+      "instagram": "@famousprincesskitchen"
+    },
+    "hours": {
+      "tue_sat": "2:00 PM - 10:00 PM",
+      "sun_mon": "Closed"
+    },
     "about": "High-end Nigerian cuisine specializing in bold spices and meticulous preparation of traditional stews.",
     "our_story": "Showcasing the 'touch of difference' by using the finest ingredients to create stews that taste like home.",
     "cultural_roots": "Celebrates 'Swallow' culture—dishes like Amala and Pounded Yam paired with nutrient-rich soups.",
-    "menu_highlights": ["Ayamashe (Designer) Stew", "Abula (Amala)", "Jollof Rice"]
+    "menu_highlights": [
+      "Ayamashe (Designer) Stew",
+      "Abula (Amala)",
+      "Jollof Rice"
+    ]
   },
   {
     "id": "omalicha-kitchen",
@@ -67,12 +90,21 @@
     "address": "1701 Cypress Creek Pkwy Ste D, Houston, TX 77090",
     "phone": "(281) 781-7209",
     "website": "https://www.omalichakitchen.com",
-    "social": { "instagram": "@omalichakitchen" },
-    "hours": { "mon_sat": "11:00 AM - 10:00 PM", "sun": "Closed" },
+    "social": {
+      "instagram": "@omalichakitchen"
+    },
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "Closed"
+    },
     "about": "A vibrant hub for Igbo delicacies and seafood in a modern, welcoming environment.",
     "our_story": "Dedicated to bringing regional flavors of Eastern Nigeria, like Oha and Afang soups, to Houston.",
     "cultural_roots": "Celebrates the industrious spirit of the Igbo people through fresh, earthy ingredients.",
-    "menu_highlights": ["Egusi Soup", "Nkwobi", "Seafood Okra"]
+    "menu_highlights": [
+      "Egusi Soup",
+      "Nkwobi",
+      "Seafood Okra"
+    ]
   },
   {
     "id": "kokomo-nyc",
@@ -84,7 +116,9 @@
     "address": "65 Kent Ave, Brooklyn, NY 11249",
     "phone": "(347) 572-7598",
     "website": "https://www.kokomonyc.com",
-    "social": { "instagram": "@kokomonyc" },
+    "social": {
+      "instagram": "@kokomonyc"
+    },
     "hours": {
       "mon_wed": "4:00 PM - 11:00 PM",
       "thu_fri": "4:00 PM - 1:00 AM",
@@ -94,7 +128,11 @@
     "about": "A vibrant, multisensory Caribbean experience in Brooklyn known for high energy and bold, refined island flavors.",
     "our_story": "Kokomo was designed to celebrate the joy of the Caribbean through food, music, and art, creating a 'vacation in a meal' for every guest.",
     "cultural_roots": "Inspired by the diverse islands of the West Indies, blending traditional spices with modern Brooklyn flair.",
-    "menu_highlights": ["Koko's Island Pasta", "Wah Gwan Duck Tacos", "Stuffed Plantains"]
+    "menu_highlights": [
+      "Koko's Island Pasta",
+      "Wah Gwan Duck Tacos",
+      "Stuffed Plantains"
+    ]
   },
   {
     "id": "zanmi-nyc",
@@ -106,7 +144,9 @@
     "address": "1206 Nostrand Ave, Brooklyn, NY 11225",
     "phone": "(718) 676-1336",
     "website": "https://www.zanminyc.com",
-    "social": { "instagram": "@zanminyc" },
+    "social": {
+      "instagram": "@zanminyc"
+    },
     "hours": {
       "tue_thu": "12:00 PM - 10:00 PM",
       "fri_sat": "12:00 PM - 11:00 PM",
@@ -116,7 +156,11 @@
     "about": "A soulful Haitian kitchen where 'Zanmi' (meaning 'Friend' in Kreyòl) is the core of the dining experience.",
     "our_story": "Our mission is to showcase the beauty of Haiti through upscale comfort food, moving beyond stereotypes to highlight the depth of our culinary history.",
     "cultural_roots": "Haitian cuisine is a proud blend of African, French, and Taino traditions, celebrated here through slow-stewed meats and aromatic 'epis'.",
-    "menu_highlights": ["Griot (Fried Pork)", "Oxfail Sliders", "Bouillon Soup"]
+    "menu_highlights": [
+      "Griot (Fried Pork)",
+      "Oxfail Sliders",
+      "Bouillon Soup"
+    ]
   },
   {
     "id": "dukunoo-miami",
@@ -128,12 +172,21 @@
     "address": "316 NW 24th St, Miami, FL 33127",
     "phone": "(305) 921-0777",
     "website": "https://www.dukunookitchen.com/",
-    "social": { "instagram": "@dukunookitchen" },
+    "social": {
+      "instagram": "@dukunookitchen"
+    },
     "neighborhood": "Wynwood",
     "vibe": "Vibe Dining / Artsy",
-    "vibe_tags": ["Vibe Dining / Artsy"],
+    "vibe_tags": [
+      "Vibe Dining / Artsy"
+    ],
     "specialty": "Jerk Lamb Chops",
-    "menu_highlights": ["Jerk Lamb Chops", "Fia Bun Jerk Chicken", "Oxtail Shepherd's Pie", "Escovitch Fish"],
+    "menu_highlights": [
+      "Jerk Lamb Chops",
+      "Fia Bun Jerk Chicken",
+      "Oxtail Shepherd's Pie",
+      "Escovitch Fish"
+    ],
     "hours": {
       "tue_thu": "12:00 PM - 11:00 PM",
       "fri_sat": "12:00 PM - 1:00 AM",
@@ -154,7 +207,9 @@
     "address": "2293 Peachtree Rd NW, Atlanta, GA 30309",
     "phone": "(404) 709-2906",
     "website": "https://apt4batl.com",
-    "social": { "instagram": "@apt4batl" },
+    "social": {
+      "instagram": "@apt4batl"
+    },
     "hours": {
       "tue_thu": "5:00 PM - 11:00 PM",
       "fri_sat": "5:00 PM - 12:00 AM",
@@ -164,8 +219,14 @@
     "about": "A retro-cool, vinyl-filled Caribbean hideaway that feels like an intimate Brooklyn apartment party in the 70s.",
     "our_story": "We created a space where music and food are inseparable, featuring one of the largest vinyl collections in the South alongside elite fusion dishes.",
     "cultural_roots": "A 'love letter' to the West Indian diaspora, blending French technique with the soulful spices of the islands.",
-    "menu_highlights": ["Oxtail Hummus", "Tamarind Glazed Short Ribs", "Curry Goat"],
-    "vibe_tags": ["Fine Dining"]
+    "menu_highlights": [
+      "Oxtail Hummus",
+      "Tamarind Glazed Short Ribs",
+      "Curry Goat"
+    ],
+    "vibe_tags": [
+      "Fine Dining"
+    ]
   },
   {
     "id": "blaqhaus-atlanta",
@@ -177,7 +238,9 @@
     "address": "1167 Joseph E. Boone Blvd NW, Atlanta, GA 30314",
     "phone": "(470) 225-8941",
     "website": "https://blaqhaus.co",
-    "social": { "instagram": "@blaqhaus_atl" },
+    "social": {
+      "instagram": "@blaqhaus_atl"
+    },
     "hours": {
       "mon_thu": "4:00 PM - 12:00 AM",
       "fri": "4:00 PM - 2:00 AM",
@@ -187,7 +250,11 @@
     "about": "A fusion of Southern comfort and Caribbean heat, offering a high-energy dining experience in the heart of Atlanta.",
     "our_story": "Blaqhaus was born from the desire to bridge the gap between Soul Food and Island spices, creating a community hub for food and nightlife.",
     "cultural_roots": "Celebrates the historical connection between the American South and the Caribbean islands through shared ingredients like corn, greens, and peppers.",
-    "menu_highlights": ["Jerk Chicken & Waffles", "Southern Style Oxtails", "Cajun Pasta"]
+    "menu_highlights": [
+      "Jerk Chicken & Waffles",
+      "Southern Style Oxtails",
+      "Cajun Pasta"
+    ]
   },
   {
     "id": "callaloo-kitchen",
@@ -199,7 +266,9 @@
     "address": "1639 Flatbush Ave, Brooklyn, NY 11210",
     "phone": "(718) 677-1773",
     "website": "N/A",
-    "social": { "instagram": "@callalookitchen" },
+    "social": {
+      "instagram": "@callalookitchen"
+    },
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "12:00 PM - 7:00 PM"
@@ -207,7 +276,11 @@
     "about": "A no-frills, legendary neighborhood spot serving some of the most authentic Trinidadian street food in NYC.",
     "our_story": "We keep it simple: authentic recipes from Port of Spain, served with speed and heart to our Brooklyn community.",
     "cultural_roots": "Trinidadian cuisine is a unique mix of African and Indian heritage, famous for hand-held delights and complex curries.",
-    "menu_highlights": ["Doubles", "Bake and Shark", "Curry Buss Up Shut"]
+    "menu_highlights": [
+      "Doubles",
+      "Bake and Shark",
+      "Curry Buss Up Shut"
+    ]
   },
   {
     "id": "miss-lilys-nyc",
@@ -219,7 +292,9 @@
     "address": "109 Avenue A, New York, NY 10009",
     "phone": "(212) 812-1482",
     "website": "https://www.misslilys.com",
-    "social": { "instagram": "@misslilys" },
+    "social": {
+      "instagram": "@misslilys"
+    },
     "hours": {
       "mon_fri": "12:00 PM - 12:00 AM",
       "sat_sun": "11:00 AM - 12:00 AM"
@@ -227,7 +302,11 @@
     "about": "A high-energy Jamaican diner and juice bar with a colorful, island-shack aesthetic in the East Village.",
     "our_story": "Miss Lily's is a cultural destination where old-school ska meets modern Caribbean cooking, providing a vibrant escape from the city streets.",
     "cultural_roots": "Honors the roadside 'jerk centers' of Jamaica while adding a cosmopolitan New York energy.",
-    "menu_highlights": ["Jerky Grilled Corn", "Curry Goat", "Hot Pepper Shrimp"]
+    "menu_highlights": [
+      "Jerky Grilled Corn",
+      "Curry Goat",
+      "Hot Pepper Shrimp"
+    ]
   },
   {
     "id": "negrit-houston",
@@ -239,7 +318,9 @@
     "address": "3401 Main St, Houston, TX 77002",
     "phone": "(832) 123-4567",
     "website": "https://negrithouston.com",
-    "social": { "instagram": "@negrithouston" },
+    "social": {
+      "instagram": "@negrithouston"
+    },
     "hours": {
       "tue_sun": "4:00 PM - 11:00 PM",
       "mon": "Closed"
@@ -247,7 +328,11 @@
     "about": "A modern Caribbean lounge in Houston's Midtown specializing in creative cocktails and island-inspired small plates.",
     "our_story": "Negrit was built to offer a sophisticated alternative to island dining, focusing on the craft of the cocktail and the artistry of the platter.",
     "cultural_roots": "A celebration of the 'Black' (Negrit) influence on global cuisine, focusing specifically on the Afro-Caribbean experience.",
-    "menu_highlights": ["Rum Glazed Pork Belly", "Fried Snapper", "Sweet Plantain Gnocchi"]
+    "menu_highlights": [
+      "Rum Glazed Pork Belly",
+      "Fried Snapper",
+      "Sweet Plantain Gnocchi"
+    ]
   },
   {
     "id": "cane-dc",
@@ -259,7 +344,9 @@
     "address": "403 H St NE, Washington, DC 20002",
     "phone": "(202) 675-2011",
     "website": "https://www.cane-dc.com",
-    "social": { "instagram": "@cane_dc" },
+    "social": {
+      "instagram": "@cane_dc"
+    },
     "hours": {
       "mon_thu": "11:30 AM - 9:00 PM",
       "fri_sat": "11:30 AM - 10:00 PM",
@@ -268,7 +355,11 @@
     "about": "Award-winning Trinidadian street food on DC's H Street corridor, focusing on wood-smoked meats and authentic roti.",
     "our_story": "Chef Peter Prime named the restaurant after the sugar cane that shaped the history and cuisine of his native Trinidad.",
     "cultural_roots": "Explores the diverse heritage of Trinidad, highlighting the influence of Indian indentured servants and enslaved Africans on the island's flavors.",
-    "menu_highlights": ["Trini Doubles", "Cumin-Spiced Pork", "Tiffin Box Sampler"]
+    "menu_highlights": [
+      "Trini Doubles",
+      "Cumin-Spiced Pork",
+      "Tiffin Box Sampler"
+    ]
   },
   {
     "id": "pearls-nyc",
@@ -280,7 +371,9 @@
     "address": "178 N 8th St, Brooklyn, NY 11211",
     "phone": "(929) 276-3528",
     "website": "https://pearlsbkly.com",
-    "social": { "instagram": "@pearlsbkly" },
+    "social": {
+      "instagram": "@pearlsbkly"
+    },
     "hours": {
       "tue_fri": "5:00 PM - 11:00 PM",
       "sat": "12:00 PM - 12:00 AM",
@@ -290,7 +383,11 @@
     "about": "A chic Williamsburg spot serving 'Trini-style' seafood and tropical cocktails in a bright, beachy atmosphere.",
     "our_story": "Pearl's is our tribute to the coastal flavors of the islands, designed to bring the warmth of a Caribbean beach house to the middle of Brooklyn.",
     "cultural_roots": "Focuses on the 'Blue Food' (seafood) traditions of the Caribbean, where fresh catch and island spices rule the table.",
-    "menu_highlights": ["Bake & Shark", "Curry Crab & Dumplings", "Jerk Catfish"]
+    "menu_highlights": [
+      "Bake & Shark",
+      "Curry Crab & Dumplings",
+      "Jerk Catfish"
+    ]
   },
   {
     "id": "appioo-dc",
@@ -302,7 +399,9 @@
     "address": "1924 9th St NW, Washington, DC 20001",
     "phone": "(202) 518-3600",
     "website": "http://appiooafricanbargrill.com",
-    "social": { "instagram": "@appioobargrill" },
+    "social": {
+      "instagram": "@appioobargrill"
+    },
     "hours": {
       "tue_thu": "4:00 PM - 10:00 PM",
       "fri_sat": "2:00 PM - 11:30 PM",
@@ -312,7 +411,11 @@
     "about": "A beloved DC staple offering authentic Ghanaian home-style cooking and a lively communal bar scene.",
     "our_story": "Chef Prince Boateng created Appioo to bring the 'chop bar' culture of Accra to the U Street corridor, focusing on recipes passed down through generations.",
     "cultural_roots": "Celebrates the soul of Ghana, where meals like Fufu and Light Soup are not just food, but a centerpiece for community and storytelling.",
-    "menu_highlights": ["Banku with Tilapia", "Red Red (Bean Stew)", "Waakye"]
+    "menu_highlights": [
+      "Banku with Tilapia",
+      "Red Red (Bean Stew)",
+      "Waakye"
+    ]
   },
   {
     "id": "teranga-nyc",
@@ -324,7 +427,9 @@
     "address": "1280 5th Ave, New York, NY 10029",
     "phone": "(646) 335-2468",
     "website": "https://itsteranga.com",
-    "social": { "instagram": "@itsteranga" },
+    "social": {
+      "instagram": "@itsteranga"
+    },
     "hours": {
       "tue_sun": "12:00 PM - 8:00 PM",
       "mon": "Closed"
@@ -332,7 +437,14 @@
     "about": "A modern African superfood café located in The Africa Center, overlooking Central Park.",
     "our_story": "Founded by world-renowned Chef Pierre Thiam, Teranga reflects the Senegalese philosophy of hospitality, offering nutrient-dense bowls based on ancient grains.",
     "cultural_roots": "The word 'Teranga' means 'hospitality' in Wolof. The menu highlights fonio and jollof rice as the foundation of West African agricultural heritage.",
-    "menu_highlights": ["Fonio Grain Bowls", "Yassa Grilled Chicken", "Black Eyed Pea Salad"]
+    "menu_highlights": [
+      "Fonio Grain Bowls",
+      "Yassa Grilled Chicken",
+      "Black Eyed Pea Salad"
+    ],
+    "vibe_tags": [
+      "Cultural Sanctuary"
+    ]
   },
   {
     "id": "mansa-kunda-md",
@@ -344,7 +456,9 @@
     "address": "8000 Flower Ave, Takoma Park, MD 20912",
     "phone": "(301) 589-8222",
     "website": "https://mansakunda.com",
-    "social": { "instagram": "@mansakunda" },
+    "social": {
+      "instagram": "@mansakunda"
+    },
     "hours": {
       "tue_sun": "12:00 PM - 9:00 PM",
       "mon": "Closed"
@@ -352,7 +466,11 @@
     "about": "An upscale dining destination celebrating the rich history and flavors of The Gambia and Senegal.",
     "our_story": "Named after 'Mansa' (King) and 'Kunda' (Home/Family), we strive to treat every guest like royalty while serving authentic dishes from the Jolof Empire roots.",
     "cultural_roots": "Focuses on the deep culinary connection between the land and the river in Senegambian culture, utilizing smoked fish and peanut-based sauces.",
-    "menu_highlights": ["Benachin (Jollof Rice)", "Domoda (Peanut Stew)", "Superkanja (Okra Stew)"]
+    "menu_highlights": [
+      "Benachin (Jollof Rice)",
+      "Domoda (Peanut Stew)",
+      "Superkanja (Okra Stew)"
+    ]
   },
   {
     "id": "bukom-cafe-dc",
@@ -364,7 +482,9 @@
     "address": "2442 18th St NW, Washington, DC 20009",
     "phone": "(202) 265-4600",
     "website": "https://bukomcafe.com",
-    "social": { "instagram": "@bukomcafe" },
+    "social": {
+      "instagram": "@bukomcafe"
+    },
     "hours": {
       "tue_thu": "5:00 PM - 11:00 PM",
       "fri_sat": "5:00 PM - 2:00 AM",
@@ -374,7 +494,11 @@
     "about": "A legendary Adams Morgan haunt known for its spicy West African dishes and live Reggae and Afrobeat music.",
     "our_story": "For over 20 years, Bukom has been the heartbeat of DC's African nightlife, blending authentic spices with a high-energy lounge atmosphere.",
     "cultural_roots": "A melting pot of West African flavors, honoring the late-night dining culture found in the urban hubs of Lagos and Accra.",
-    "menu_highlights": ["Jollof Rice with Lamb", "Fried Plantains", "Bukom Wings"]
+    "menu_highlights": [
+      "Jollof Rice with Lamb",
+      "Fried Plantains",
+      "Bukom Wings"
+    ]
   },
   {
     "id": "ponti-ivorian-houston",
@@ -386,7 +510,9 @@
     "address": "12450 Westheimer Rd, Houston, TX 77077",
     "phone": "(281) 506-7935",
     "website": "N/A",
-    "social": { "instagram": "@pontiskitchen" },
+    "social": {
+      "instagram": "@pontiskitchen"
+    },
     "hours": {
       "tue_sun": "1:00 PM - 9:00 PM",
       "mon": "Closed"
@@ -394,7 +520,11 @@
     "about": "The go-to spot in Houston for authentic Ivorian (Ivory Coast) street food and grilled delicacies.",
     "our_story": "Ponti's was built to satisfy the cravings of the Ivorian diaspora, specializing in the slow-grilled techniques that define the streets of Abidjan.",
     "cultural_roots": "Highlights Ivorian staples like Attiéké (fermented cassava) and Aloco, showing the unique French-African culinary marriage.",
-    "menu_highlights": ["Grilled Fish with Attiéké", "Aloco (Fried Plantains)", "Kedjenou (Slow-cooked Chicken)"]
+    "menu_highlights": [
+      "Grilled Fish with Attiéké",
+      "Aloco (Fried Plantains)",
+      "Kedjenou (Slow-cooked Chicken)"
+    ]
   },
   {
     "id": "gold-coast-kitchen-chi",
@@ -406,7 +536,9 @@
     "address": "6200 N Clark St, Chicago, IL 60660",
     "phone": "(773) 764-1234",
     "website": "N/A",
-    "social": { "instagram": "@goldcoastchicago" },
+    "social": {
+      "instagram": "@goldcoastchicago"
+    },
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "12:00 PM - 8:00 PM"
@@ -414,7 +546,11 @@
     "about": "A Chicago staple for over 20 years, providing a nostalgic taste of Ghana's finest traditional meals.",
     "our_story": "We are one of the oldest African restaurants in the city, dedicated to maintaining the exact flavor profiles of the 'Gold Coast' for our long-time patrons.",
     "cultural_roots": "Roots deep in the Ashanti and Fante cooking traditions, where hearty soups and fufu are the ultimate comfort foods.",
-    "menu_highlights": ["Egusi with Fufu", "Ghanaian Jollof", "Fried Croaker Fish"]
+    "menu_highlights": [
+      "Egusi with Fufu",
+      "Ghanaian Jollof",
+      "Fried Croaker Fish"
+    ]
   },
   {
     "id": "afrik-che-houston",
@@ -426,7 +562,9 @@
     "address": "12030 Bissonnet St, Houston, TX 77099",
     "phone": "(832) 617-8924",
     "website": "N/A",
-    "social": { "instagram": "@afrik_che_houston" },
+    "social": {
+      "instagram": "@afrik_che_houston"
+    },
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
@@ -434,7 +572,11 @@
     "about": "A casual, highly-rated spot known for its consistent quality and generous portions of West African staples.",
     "our_story": "We believe that quality African food should be accessible. Our kitchen focuses on the 'Big Three': Jollof, Soup, and Swallow.",
     "cultural_roots": "Representing the pan-African spirit of Houston's Bissonnet district, where food acts as the universal language.",
-    "menu_highlights": ["Assorted Meat Stew", "Okra Soup", "Pounded Yam"]
+    "menu_highlights": [
+      "Assorted Meat Stew",
+      "Okra Soup",
+      "Pounded Yam"
+    ]
   },
   {
     "id": "adulis-ny",
@@ -446,7 +588,9 @@
     "address": "149-10 45th Ave, Flushing, NY 11355",
     "phone": "(718) 886-2442",
     "website": "N/A",
-    "social": { "instagram": "@adulis_restaurant" },
+    "social": {
+      "instagram": "@adulis_restaurant"
+    },
     "hours": {
       "tue_sun": "12:00 PM - 10:00 PM",
       "mon": "Closed"
@@ -454,7 +598,11 @@
     "about": "An authentic Eritrean dining room in Queens known for its warm hospitality and traditional clay-pot cooking.",
     "our_story": "Named after the ancient port city of Adulis, we aim to bridge the gap between ancient Red Sea history and modern New York through the art of the spice.",
     "cultural_roots": "Eritrean cuisine shares similarities with Ethiopian food but features unique coastal influences and a distinct blend of 'Tsebhi' (stews) served on injera.",
-    "menu_highlights": ["Zigni (Spicy Beef Stew)", "Hamli (Sautéed Spinach)", "Eritrean Coffee Ceremony"]
+    "menu_highlights": [
+      "Zigni (Spicy Beef Stew)",
+      "Hamli (Sautéed Spinach)",
+      "Eritrean Coffee Ceremony"
+    ]
   },
   {
     "id": "kulan-cafe-houston",
@@ -466,14 +614,20 @@
     "address": "8321 Westpark Dr, Houston, TX 77063",
     "phone": "(713) 952-4441",
     "website": "N/A",
-    "social": { "instagram": "@kulancafe_houston" },
+    "social": {
+      "instagram": "@kulancafe_houston"
+    },
     "hours": {
       "mon_sun": "8:00 AM - 10:00 PM"
     },
     "about": "A staple of Houston's Somali community, Kulan Cafe is famous for its massive portions and signature spiced goat.",
     "our_story": "We built Kulan to be a gathering place—a 'Kulan'—where people can start their day with Somali tea and end it with a mountain of rice and tender meat.",
     "cultural_roots": "Somali cuisine is a crossroads of flavors from the Horn of Africa, India, and Italy, characterized by the use of 'Xawaash' spice mix and the inevitable banana served on the side.",
-    "menu_highlights": ["Bariis Iskukaris (Spiced Rice)", "Roasted Goat (Hilib Ari)", "Somali Chai"]
+    "menu_highlights": [
+      "Bariis Iskukaris (Spiced Rice)",
+      "Roasted Goat (Hilib Ari)",
+      "Somali Chai"
+    ]
   },
   {
     "id": "peli-peli-houston",
@@ -485,7 +639,9 @@
     "address": "5085 Westheimer Rd Suite B2515, Houston, TX 77056",
     "phone": "(281) 257-9500",
     "website": "https://www.pelipeli.com",
-    "social": { "instagram": "@pelipeli" },
+    "social": {
+      "instagram": "@pelipeli"
+    },
     "hours": {
       "mon_thu": "11:00 AM - 9:00 PM",
       "fri_sat": "11:00 AM - 10:00 PM",
@@ -494,7 +650,11 @@
     "about": "A high-end dining destination in The Galleria showcasing the 'Rainbow Nation' through bold, Portuguese-influenced flavors.",
     "our_story": "Peli Peli brings the flavors of South Africa to the US, focusing on the bird's eye chili (Piri Piri) and the diverse melting pot of Cape Town's culinary scene.",
     "cultural_roots": "Reflects the 'Rainbow Nation' heritage, blending Dutch, Portuguese, and indigenous African flavors into a unique fusion found nowhere else.",
-    "menu_highlights": ["Espetada (Hanging Meat Skewers)", "Bobotie", "South African Melktert"]
+    "menu_highlights": [
+      "Espetada (Hanging Meat Skewers)",
+      "Bobotie",
+      "South African Melktert"
+    ]
   },
   {
     "id": "safari-restaurant-mn",
@@ -506,14 +666,20 @@
     "address": "3010 4th Ave S, Minneapolis, MN 55408",
     "phone": "(612) 354-3755",
     "website": "https://safari-restaurant.com",
-    "social": { "instagram": "@safarirestaurant" },
+    "social": {
+      "instagram": "@safarirestaurant"
+    },
     "hours": {
       "mon_sun": "11:00 AM - 11:00 PM"
     },
     "about": "An award-winning Somali upscale restaurant that has become a national landmark for East African cuisine in the Midwest.",
     "our_story": "Safari was founded to elevate Somali food from casual cafes to a formal dining experience, proving that our traditional recipes belong in the fine-dining world.",
     "cultural_roots": "Showcases the nomadic heritage of the Somali people, where grilled meats and fragrant rice are staples of hospitality and survival.",
-    "menu_highlights": ["Safari Mango Chicken", "Camel Meat (Seasonal)", "Suqaar (Sautéed Beef)"]
+    "menu_highlights": [
+      "Safari Mango Chicken",
+      "Camel Meat (Seasonal)",
+      "Suqaar (Sautéed Beef)"
+    ]
   },
   {
     "id": "10-degrees-south-atl",
@@ -525,7 +691,9 @@
     "address": "4183 Roswell Rd NE, Atlanta, GA 30342",
     "phone": "(404) 705-8870",
     "website": "https://10degreessouth.com",
-    "social": { "instagram": "@10degreessouth" },
+    "social": {
+      "instagram": "@10degreessouth"
+    },
     "hours": {
       "mon_thu": "5:30 PM - 10:00 PM",
       "fri_sat": "5:30 PM - 11:00 PM",
@@ -534,7 +702,11 @@
     "about": "The first South African fine-dining restaurant in the US, offering a sophisticated taste of Johannesburg in Buckhead.",
     "our_story": "The Anthony family moved from South Africa to Atlanta with a mission to introduce Americans to the 'finer side' of the continent's southern tip.",
     "cultural_roots": "A sophisticated blend of French, Portuguese, and Indian influences that have simmered in South Africa for centuries.",
-    "menu_highlights": ["Sosaties (Curried Lamb Kebabs)", "Boerewors", "Ostrich Medallions"]
+    "menu_highlights": [
+      "Sosaties (Curried Lamb Kebabs)",
+      "Boerewors",
+      "Ostrich Medallions"
+    ]
   },
   {
     "id": "nyc-001",
@@ -548,9 +720,13 @@
     "website": "https://www.tatiananyc.com/",
     "neighborhood": "Lincoln Center",
     "vibe": "Elite Fine Dining",
-    "vibe_tags": ["Elite Fine Dining"],
+    "vibe_tags": [
+      "Elite Fine Dining"
+    ],
     "specialty": "Wagyu Short Rib Pastrami",
-    "menu_highlights": ["Wagyu Short Rib Pastrami"],
+    "menu_highlights": [
+      "Wagyu Short Rib Pastrami"
+    ],
     "about": "Elite fine dining at Lincoln Center, where Chef Kwame Onwuachi creates the intersection of heritage and high-fashion dining with specialties like Wagyu Short Rib Pastrami."
   },
   {
@@ -563,19 +739,9 @@
     "address": "Downtown, Houston, TX",
     "phone": "(281) 747-7500",
     "about": "Accessible West African flavors for the modern palate.",
-    "vibe_tags": ["Contemporary Heritage"]
-  },
-  {
-    "id": "nyc-002",
-    "name": "Teranga",
-    "cuisine": "Senegalese",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "Harlem, New York City, NY",
-    "phone": "(212) 920-4101",
-    "about": "A love letter to the flavors of the Sahel.",
-    "vibe_tags": ["Cultural Sanctuary"]
+    "vibe_tags": [
+      "Contemporary Heritage"
+    ]
   },
   {
     "id": "nyc-ponty",
@@ -609,7 +775,9 @@
     "address": "Westchase, Houston, TX",
     "phone": "(713) 774-2700",
     "about": "The ultimate destination for authentic pounded yam.",
-    "vibe_tags": ["Premium Traditional"]
+    "vibe_tags": [
+      "Premium Traditional"
+    ]
   },
   {
     "id": "nyc-003",
@@ -620,7 +788,9 @@
     "rating": 4.5,
     "address": "Bushwick, New York City, NY",
     "about": "Everything is better when shared with music and coffee.",
-    "vibe_tags": ["Cinematic Communal"]
+    "vibe_tags": [
+      "Cinematic Communal"
+    ]
   },
   {
     "id": "atl-001",
@@ -632,7 +802,9 @@
     "address": "West Midtown, Atlanta, GA",
     "phone": "(404) 228-4897",
     "about": "A love letter to the coastal heritage of the Gullah people.",
-    "vibe_tags": ["Soulful & Social"]
+    "vibe_tags": [
+      "Soulful & Social"
+    ]
   },
   {
     "id": "dc-001",
@@ -643,7 +815,9 @@
     "rating": 4.8,
     "address": "M St / Downtown, Washington D.C., DC",
     "about": "African food diplomacy served in a fine-dining oasis.",
-    "vibe_tags": ["Diplomatic Luxury"]
+    "vibe_tags": [
+      "Diplomatic Luxury"
+    ]
   },
   {
     "id": "dc-maydan",
@@ -677,7 +851,9 @@
     "address": "Briarcliff, Atlanta, GA",
     "phone": "(404) 321-0510",
     "about": "Where traditional happiness meets contemporary design.",
-    "vibe_tags": ["Sleek & Modern"]
+    "vibe_tags": [
+      "Sleek & Modern"
+    ]
   },
   {
     "id": "atl-busy-bee",
@@ -699,7 +875,9 @@
     "rating": 4.5,
     "address": "U Street Corridor, Washington D.C., DC",
     "about": "The ultimate late-night destination for the Nigerian elite.",
-    "vibe_tags": ["High-End Lounge"]
+    "vibe_tags": [
+      "High-End Lounge"
+    ]
   },
   {
     "id": "atl-003",
@@ -710,7 +888,9 @@
     "rating": 4.5,
     "address": "Virginia-Highland, Atlanta, GA",
     "about": "A plant-based journey through the soul of the West.",
-    "vibe_tags": ["Artistic & Refined"]
+    "vibe_tags": [
+      "Artistic & Refined"
+    ]
   },
   {
     "id": "dc-003",
@@ -721,7 +901,9 @@
     "rating": 4.5,
     "address": "Adams Morgan, Washington D.C., DC",
     "about": "Formerly Zenebech; dining reimagined for kings and queens.",
-    "vibe_tags": ["Royal Traditional"]
+    "vibe_tags": [
+      "Royal Traditional"
+    ]
   },
   {
     "id": "mia-001",
@@ -732,7 +914,9 @@
     "rating": 4.8,
     "address": "Little Haiti, Miami, FL",
     "about": "A refined celebration of Haiti's revolutionary flavors.",
-    "vibe_tags": ["Tropical Elegance"]
+    "vibe_tags": [
+      "Tropical Elegance"
+    ]
   },
   {
     "id": "la-001",
@@ -744,7 +928,9 @@
     "address": "Little Ethiopia, Los Angeles, CA",
     "phone": "(323) 938-9304",
     "about": "The legendary destination for the finest Dorowat in the West.",
-    "vibe_tags": ["Intimate & Prestigious"]
+    "vibe_tags": [
+      "Intimate & Prestigious"
+    ]
   },
   {
     "id": "la-post-beam",
@@ -769,18 +955,6 @@
     "about": "A fusion of Southern comfort and Caribbean heat in North Hollywood."
   },
   {
-    "id": "mia-002",
-    "name": "Dukunoo Jamaican Kitchen",
-    "cuisine": "Jamaican",
-    "region": "Caribbean",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "Wynwood, Miami, FL",
-    "phone": "(786) 334-5150",
-    "about": "Come for the jerk, stay for the high-energy Wynwood soul.",
-    "vibe_tags": ["Vibrant Luxury"]
-  },
-  {
     "id": "oak-001",
     "name": "Amawele's",
     "cuisine": "South African",
@@ -789,7 +963,9 @@
     "rating": 4.5,
     "address": "Downtown, San Francisco/Oakland, CA",
     "about": "Bringing the heartbeat of Durban to the Bay Area.",
-    "vibe_tags": ["Modern Heritage"]
+    "vibe_tags": [
+      "Modern Heritage"
+    ]
   },
   {
     "id": "la-002",
@@ -800,7 +976,9 @@
     "rating": 4.5,
     "address": "Hollywood, Los Angeles, CA",
     "about": "Spices that bridge the gap between continents.",
-    "vibe_tags": ["Eclectic & Bold"]
+    "vibe_tags": [
+      "Eclectic & Bold"
+    ]
   },
   {
     "id": "mia-003",
@@ -811,7 +989,9 @@
     "rating": 4.5,
     "address": "The Citadel, Miami, FL",
     "about": "Clean, modern, and undeniably Caribbean.",
-    "vibe_tags": ["Modern Fast-Casual"]
+    "vibe_tags": [
+      "Modern Fast-Casual"
+    ]
   },
   {
     "id": "chi-001",
@@ -823,7 +1003,9 @@
     "address": "Uptown, Chicago, IL",
     "phone": "(773) 334-8787",
     "about": "Award-winning flavors served with Chicago's finest hospitality.",
-    "vibe_tags": ["Upscale Communal"]
+    "vibe_tags": [
+      "Upscale Communal"
+    ]
   },
   {
     "id": "phi-001",
@@ -834,7 +1016,9 @@
     "rating": 4.8,
     "address": "Southwest Philly, Philadelphia, PA",
     "about": "The legendary destination for wood-grilled Diby.",
-    "vibe_tags": ["Authentic & Renowned"]
+    "vibe_tags": [
+      "Authentic & Renowned"
+    ]
   },
   {
     "id": "chi-002",
@@ -845,7 +1029,9 @@
     "rating": 4.5,
     "address": "Kenwood, Chicago, IL",
     "about": "Bringing the peaceful, rich flavors of Gorée Island to the Midwest.",
-    "vibe_tags": ["Island Heritage"]
+    "vibe_tags": [
+      "Island Heritage"
+    ]
   },
   {
     "id": "phi-002",
@@ -857,7 +1043,9 @@
     "address": "University City, Philadelphia, PA",
     "phone": "(215) 387-1970",
     "about": "A cornerstone of Philadelphia's West African culinary scene.",
-    "vibe_tags": ["Academic & Cultural"]
+    "vibe_tags": [
+      "Academic & Cultural"
+    ]
   },
   {
     "id": "phi-aksum",
@@ -879,7 +1067,9 @@
     "rating": 4.5,
     "address": "Uptown, Chicago, IL",
     "about": "The heart of the diaspora in the heart of the city.",
-    "vibe_tags": ["Modern & Spacious"]
+    "vibe_tags": [
+      "Modern & Spacious"
+    ]
   },
   {
     "id": "chi-virtue",
@@ -912,7 +1102,9 @@
     "rating": 4.5,
     "address": "West Philly, Philadelphia, PA",
     "about": "Where traditional jerk meets a modern city pulse.",
-    "vibe_tags": ["Artisanal Caribbean"]
+    "vibe_tags": [
+      "Artisanal Caribbean"
+    ]
   },
   {
     "id": "sea-001",
@@ -926,9 +1118,13 @@
     "website": "https://www.communionseattle.com/",
     "neighborhood": "Central District",
     "vibe": "Award-Winning & Social",
-    "vibe_tags": ["Award-Winning & Social"],
+    "vibe_tags": [
+      "Award-Winning & Social"
+    ],
     "specialty": "Hood Sushi & Catfish",
-    "menu_highlights": ["Hood Sushi & Catfish"],
+    "menu_highlights": [
+      "Hood Sushi & Catfish"
+    ],
     "about": "An award-winning soul-fusion restaurant in Seattle's Central District, serving innovative dishes like Hood Sushi & Catfish in a vibrant, social atmosphere."
   },
   {
@@ -951,7 +1147,9 @@
     "rating": 4.8,
     "address": "Dorchester, Boston, MA",
     "about": "The premier destination for the flavors of the islands.",
-    "vibe_tags": ["Old World Elegance"]
+    "vibe_tags": [
+      "Old World Elegance"
+    ]
   },
   {
     "id": "sea-002",
@@ -962,7 +1160,9 @@
     "rating": 4.5,
     "address": "Central District, Seattle, WA",
     "about": "The neighborhood heartbeat of Little Ethiopia.",
-    "vibe_tags": ["Cozy & Authentic"]
+    "vibe_tags": [
+      "Cozy & Authentic"
+    ]
   },
   {
     "id": "bos-002",
@@ -973,7 +1173,9 @@
     "rating": 4.5,
     "address": "Roxbury, Boston, MA",
     "about": "Elevating West African street food to a fine-dining art.",
-    "vibe_tags": ["Modern Nigerian"]
+    "vibe_tags": [
+      "Modern Nigerian"
+    ]
   },
   {
     "id": "sea-003",
@@ -984,19 +1186,9 @@
     "rating": 4.5,
     "address": "Pinehurst, Seattle, WA",
     "about": "Authentic hospitality and the perfect cup of coffee.",
-    "vibe_tags": ["Warm & Traditional"]
-  },
-  {
-    "id": "bos-003",
-    "name": "Teranga",
-    "cuisine": "Senegalese",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "South End, Boston, MA",
-    "phone": "(617) 266-0003",
-    "about": "A contemporary taste of Dakar in the heart of Boston.",
-    "vibe_tags": ["Chic & Minimalist"]
+    "vibe_tags": [
+      "Warm & Traditional"
+    ]
   },
   {
     "id": "hou-003",
@@ -1145,7 +1337,10 @@
     "address": "954 FM 1960 West, Houston, TX 77090",
     "phone": "(281) 377-1961",
     "website": "https://www.caribbeanhotpotgrill.com/",
-    "vibe_tags": ["Authentic", "Vibrant"],
+    "vibe_tags": [
+      "Authentic",
+      "Vibrant"
+    ],
     "secondary_location": {
       "name": "Veterans Memorial",
       "address": "12005 Veterans Memorial Dr, Ste A, Houston, TX 77067",
@@ -1164,8 +1359,12 @@
     "phone": "(832) 831-5074",
     "website": "https://www.dakarstreetfood.com/",
     "neighborhood": "Westchase",
-    "vibe_tags": ["Authentic & Casual"],
-    "menu_highlights": ["Thieboudienne (Fish & Rice)"],
+    "vibe_tags": [
+      "Authentic & Casual"
+    ],
+    "menu_highlights": [
+      "Thieboudienne (Fish & Rice)"
+    ],
     "about": "Authentic Senegalese street food in Houston, specializing in traditional Thieboudienne and other West African favorites."
   },
   {
@@ -1179,8 +1378,12 @@
     "phone": "(404) 343-4416",
     "website": "http://spicehouseatl.com/",
     "neighborhood": "Midtown",
-    "vibe_tags": ["Lively & Social"],
-    "menu_highlights": ["Jerk Chicken Pasta"],
+    "vibe_tags": [
+      "Lively & Social"
+    ],
+    "menu_highlights": [
+      "Jerk Chicken Pasta"
+    ],
     "about": "A lively Caribbean fusion restaurant in Midtown Atlanta, known for innovative dishes like Jerk Chicken Pasta in a vibrant, social atmosphere."
   },
   {
@@ -1194,8 +1397,12 @@
     "phone": "(646) 964-5337",
     "website": "https://www.jasminescaribbeancuisine.com/",
     "neighborhood": "Hell's Kitchen",
-    "vibe_tags": ["Tropical Escape"],
-    "menu_highlights": ["Curry Shrimp & Red Snapper"],
+    "vibe_tags": [
+      "Tropical Escape"
+    ],
+    "menu_highlights": [
+      "Curry Shrimp & Red Snapper"
+    ],
     "about": "A tropical escape in Hell's Kitchen, serving authentic Caribbean cuisine with specialties like Curry Shrimp and Red Snapper."
   },
   {
@@ -1210,9 +1417,14 @@
     "website": "https://www.garifunaflava.com/",
     "neighborhood": "Marquette Park",
     "vibe": "Authentic & Family-Owned",
-    "vibe_tags": ["Authentic & Family-Owned"],
+    "vibe_tags": [
+      "Authentic & Family-Owned"
+    ],
     "specialty": "Belizean Stew Chicken",
-    "menu_highlights": ["Belizean Stew Chicken", "Panades & Jerk Chicken"],
+    "menu_highlights": [
+      "Belizean Stew Chicken",
+      "Panades & Jerk Chicken"
+    ],
     "about": "An authentic, family-owned gem in Marquette Park, serving traditional Belizean cuisine including specialties like Belizean Stew Chicken."
   },
   {
@@ -1227,9 +1439,13 @@
     "website": "https://www.stjames-dc.com/",
     "neighborhood": "U Street / 14th St",
     "vibe": "Sophisticated & Chic",
-    "vibe_tags": ["Sophisticated & Chic"],
+    "vibe_tags": [
+      "Sophisticated & Chic"
+    ],
     "specialty": "Callaloo & Crab",
-    "menu_highlights": ["Callaloo & Crab"],
+    "menu_highlights": [
+      "Callaloo & Crab"
+    ],
     "about": "A sophisticated and chic modern Caribbean restaurant in the U Street / 14th St area, known for elevated dishes like Callaloo & Crab."
   },
   {
@@ -1244,9 +1460,13 @@
     "website": "https://dulans-crenshaw.com/",
     "neighborhood": "Hyde Park",
     "vibe": "Community Landmark",
-    "vibe_tags": ["Community Landmark"],
+    "vibe_tags": [
+      "Community Landmark"
+    ],
     "specialty": "Smothered Chicken",
-    "menu_highlights": ["Smothered Chicken"],
+    "menu_highlights": [
+      "Smothered Chicken"
+    ],
     "about": "A community landmark in Hyde Park, serving authentic soul food with specialties like Smothered Chicken in a welcoming, family-friendly atmosphere."
   },
   {
@@ -1261,9 +1481,13 @@
     "website": "http://chefcreole.com/",
     "neighborhood": "Little Haiti",
     "vibe": "Tropical & Authentic",
-    "vibe_tags": ["Tropical & Authentic"],
+    "vibe_tags": [
+      "Tropical & Authentic"
+    ],
     "specialty": "Griot & Pikliz",
-    "menu_highlights": ["Griot & Pikliz"],
+    "menu_highlights": [
+      "Griot & Pikliz"
+    ],
     "about": "Authentic Haitian cuisine in Little Haiti, serving traditional dishes like Griot & Pikliz in a tropical, authentic atmosphere."
   },
   {
@@ -1278,9 +1502,13 @@
     "website": "https://redroosterovertown.com/",
     "neighborhood": "Overtown",
     "vibe": "Luxury & High Energy",
-    "vibe_tags": ["Luxury & High Energy"],
+    "vibe_tags": [
+      "Luxury & High Energy"
+    ],
     "specialty": "Hot Honey Yardbird",
-    "menu_highlights": ["Hot Honey Yardbird"],
+    "menu_highlights": [
+      "Hot Honey Yardbird"
+    ],
     "about": "A luxury, high-energy modern Afro-American restaurant in Overtown, known for elevated dishes like Hot Honey Yardbird in a vibrant, sophisticated setting."
   },
   {
@@ -1295,9 +1523,13 @@
     "website": "https://www.baobabfare.com/",
     "neighborhood": "New Center",
     "vibe": "Award-Winning & Heartfelt",
-    "vibe_tags": ["Award-Winning & Heartfelt"],
+    "vibe_tags": [
+      "Award-Winning & Heartfelt"
+    ],
     "specialty": "Kuku Na Mali (Chicken & Spinach)",
-    "menu_highlights": ["Kuku Na Mali (Chicken & Spinach)"],
+    "menu_highlights": [
+      "Kuku Na Mali (Chicken & Spinach)"
+    ],
     "about": "An award-winning Burundian restaurant in New Center, serving heartfelt East African cuisine with specialties like Kuku Na Mali in a warm, welcoming atmosphere."
   },
   {
@@ -1312,9 +1544,13 @@
     "website": "https://lucilleshouston.com/",
     "neighborhood": "Museum District",
     "vibe": "Historic & Elegant",
-    "vibe_tags": ["Historic & Elegant"],
+    "vibe_tags": [
+      "Historic & Elegant"
+    ],
     "specialty": "Chili Biscuits & Yardbird",
-    "menu_highlights": ["Chili Biscuits & Yardbird"],
+    "menu_highlights": [
+      "Chili Biscuits & Yardbird"
+    ],
     "about": "A historic and elegant fine dining restaurant in Houston's Museum District, serving elevated Southern cuisine with specialties like Chili Biscuits & Yardbird in a sophisticated setting."
   },
   {
@@ -1329,9 +1565,13 @@
     "website": "https://www.jagrill.com/",
     "neighborhood": "Hyde Park",
     "vibe": "Upscale & Energetic",
-    "vibe_tags": ["Upscale & Energetic"],
+    "vibe_tags": [
+      "Upscale & Energetic"
+    ],
     "specialty": "Curry Goat & Ja' Rum Punch",
-    "menu_highlights": ["Curry Goat & Ja' Rum Punch"],
+    "menu_highlights": [
+      "Curry Goat & Ja' Rum Punch"
+    ],
     "about": "An upscale and energetic Jamaican restaurant in Hyde Park, serving authentic Caribbean cuisine with specialties like Curry Goat & Ja' Rum Punch in a vibrant, sophisticated setting."
   },
   {
@@ -1344,9 +1584,13 @@
     "address": "1800 Peachtree St NW #103, Atlanta, GA 30309",
     "neighborhood": "Buckhead",
     "vibe": "Casual & Consistent",
-    "vibe_tags": ["Casual & Consistent"],
+    "vibe_tags": [
+      "Casual & Consistent"
+    ],
     "specialty": "Tender Oxtail",
-    "menu_highlights": ["Tender Oxtail"],
+    "menu_highlights": [
+      "Tender Oxtail"
+    ],
     "about": "A casual and consistent Jamaican cafe in Buckhead, serving authentic Caribbean cuisine with specialties like Tender Oxtail in a welcoming, laid-back atmosphere."
   }
 ]

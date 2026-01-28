@@ -57,11 +57,11 @@ export default function RestaurantsPage() {
       </div>
 
       {/* Restaurant Grid - Shows filtered results or all restaurants */}
-      <div className="pb-16 bg-[#050A18] min-h-[100vh]">
-        <div className="mx-auto max-w-6xl px-6">
+      <div className="pb-16 bg-[#050A18] min-h-[100vh] flex flex-col">
+        <div className="mx-auto max-w-6xl px-6 flex-1 flex flex-col">
           <Suspense
             fallback={
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
                 {Array.from({ length: 6 }).map((_, i) => (
                   <RestaurantCardSkeleton key={`suspense-skeleton-${i}`} />
                 ))}

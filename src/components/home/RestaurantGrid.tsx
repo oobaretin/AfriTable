@@ -132,11 +132,11 @@ export function RestaurantGrid({
   const hasResults = transformedRestaurants.length > 0;
 
   return (
-    <div className="w-full min-h-[100vh]">
+    <div className="w-full min-h-[100vh] flex flex-col">
       {/* Restaurant Grid - Always display grid structure */}
       <div 
         key={`${activeCategory}-${activeCity}`}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-1"
       >
         {isLoading ? (
           // Show skeleton loaders while filtering
