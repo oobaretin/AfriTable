@@ -4,6 +4,7 @@ import * as React from "react";
 import { X } from "lucide-react";
 import Image from "next/image";
 import type { RestaurantRow } from "@/components/restaurant/RestaurantCard";
+import { formatPhoneNumber, normalizePhoneForTel } from "@/lib/phone-utils";
 
 type BookingModalProps = {
   isOpen: boolean;
@@ -87,6 +88,22 @@ export function BookingModal({ isOpen, onClose, restaurant }: BookingModalProps)
             {/* Restaurant Address and Contact Concierge Section */}
             {restaurant && (
               <div className="w-full pt-6 border-t border-white/10 space-y-4">
+                {/* Neighborhood and Vibe */}
+                {((restaurant as any).neighborhood || (restaurant as any).vibe || (restaurant as any).vibe_tags) && (
+                  <div className="flex flex-wrap items-center gap-2 pb-3">
+                    {(restaurant as any).neighborhood && (
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-white/10 text-xs font-medium text-white/80">
+                        📍 {(restaurant as any).neighborhood}
+                      </span>
+                    )}
+                    {((restaurant as any).vibe || ((restaurant as any).vibe_tags && (restaurant as any).vibe_tags.length > 0)) && (
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-[#C69C2B]/20 text-xs font-medium text-[#C69C2B]">
+                        ✨ {(restaurant as any).vibe || ((restaurant as any).vibe_tags && (restaurant as any).vibe_tags[0])}
+                      </span>
+                    )}
+                  </div>
+                )}
+
                 {/* Address */}
                 <div className="text-sm text-white/80 leading-relaxed">
                   {typeof restaurant.address === "string" 
@@ -127,10 +144,10 @@ export function BookingModal({ isOpen, onClose, restaurant }: BookingModalProps)
                         {(restaurant as any).secondary_location.address}
                       </div>
                       <a 
-                        href={`tel:${(restaurant as any).secondary_location.phone.replace(/\D/g, "")}`}
+                        href={`tel:${normalizePhoneForTel((restaurant as any).secondary_location.phone)}`}
                         className="text-lg font-light text-white tracking-wide hover:text-[#C69C2B] transition-colors underline underline-offset-2 decoration-[#C69C2B]/50 hover:decoration-[#C69C2B]"
                       >
-                        {(restaurant as any).secondary_location.phone}
+                        {formatPhoneNumber((restaurant as any).secondary_location.phone)}
                       </a>
                     </div>
                   </div>

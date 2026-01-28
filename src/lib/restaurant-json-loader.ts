@@ -22,6 +22,9 @@ export type JSONRestaurant = {
   menu_highlights?: string[];
   images?: string[];
   vibe_tags?: string[];
+  neighborhood?: string;
+  vibe?: string;
+  specialty?: string;
   secondary_location?: {
     name: string;
     address: string;
@@ -176,6 +179,9 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
     vibe_tags: jsonRestaurant.vibe_tags || null,
     region: jsonRestaurant.region || null, // Include region field for color mapping
     secondary_location: jsonRestaurant.secondary_location || null,
+    neighborhood: jsonRestaurant.neighborhood || null,
+    vibe: jsonRestaurant.vibe || null,
+    specialty: jsonRestaurant.specialty || (jsonRestaurant.menu_highlights && jsonRestaurant.menu_highlights.length > 0 ? jsonRestaurant.menu_highlights[0] : null),
   };
 }
 
