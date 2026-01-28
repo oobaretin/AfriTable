@@ -7,15 +7,26 @@ export function StickySearch() {
   const [isSticky, setIsSticky] = React.useState(false);
 
   React.useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      const heroSearch = document.getElementById("hero-search");
-      if (!heroSearch) return;
-      
-      const heroBottom = heroSearch.getBoundingClientRect().bottom;
-      setIsSticky(heroBottom < 0);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const heroSearch = document.getElementById("hero-search");
+          if (!heroSearch) {
+            ticking = false;
+            return;
+          }
+          
+          const heroBottom = heroSearch.getBoundingClientRect().bottom;
+          setIsSticky(heroBottom < 0);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll(); // Check initial state
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

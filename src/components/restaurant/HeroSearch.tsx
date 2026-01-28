@@ -115,9 +115,9 @@ export function HeroSearch() {
   }
 
   return (
-    <section className="relative z-0 min-h-[80vh] w-full bg-[#000814] flex flex-col items-center justify-center px-4" id="hero-search">
+    <section className="relative z-0 min-h-[80vh] w-full bg-[#000814] flex flex-col items-center justify-center px-4" id="hero-search" style={{ transform: 'translateZ(0)' }}>
       {/* 1. 3D ISOMETRIC HEXAGON PATTERN - Hero section only */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#000814]">
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#000814]" style={{ willChange: 'auto' }}>
         {/* The Isometric Pattern */}
         <div 
           className="absolute inset-0 opacity-40"
@@ -131,11 +131,13 @@ export function HeroSearch() {
               linear-gradient(60deg, #003566 25%, transparent 25.5%, transparent 75%, #003566 75%, #003566)
             `,
             backgroundSize: '40px 70px',
-            backgroundPosition: '0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px'
+            backgroundPosition: '0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px',
+            transform: 'translateZ(0)',
+            backfaceVisibility: 'hidden'
           }}
         />
         {/* The Deep Shadow Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#000814]/50 to-[#000814]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#000814]/50 to-[#000814]" style={{ transform: 'translateZ(0)' }}></div>
       </div>
 
       {/* 2. CATCHY WORDS (Smaller & More Spaced) */}

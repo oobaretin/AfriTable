@@ -2,10 +2,17 @@
 @import "tw-animate-css";
 
 /* Prevent horizontal scroll and zoom issues */
-html,
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   width: 100%;
+  /* Prevent scroll glitches */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
 }
 
 /* Ensure buttons and interactive elements are always clickable */
