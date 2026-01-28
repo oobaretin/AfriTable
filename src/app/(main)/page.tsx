@@ -4,7 +4,6 @@ import { Separator } from "@/components/ui/separator";
 import { HeroSearch } from "@/components/restaurant/HeroSearch";
 import { Reveal } from "@/components/layout/Reveal";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
-import { RestaurantResults } from "@/components/home/RestaurantResults";
 import { RestaurantOwnerCTA } from "@/components/home/RestaurantOwnerCTA";
 import { LocalPulse } from "@/components/home/LocalPulse";
 import { StickySearch } from "@/components/home/StickySearch";
@@ -13,6 +12,7 @@ import { CommunityFeed } from "@/components/home/CommunityFeed";
 import { SuccessStory } from "@/components/home/SuccessStory";
 import { Leaderboard } from "@/components/home/Leaderboard";
 import { Newsletter } from "@/components/home/Newsletter";
+import { HomepageRestaurantClient } from "@/components/home/HomepageRestaurantClient";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
@@ -47,8 +47,8 @@ export default async function MainHomePage() {
       {/* Newsletter / Coming Soon Section */}
       <Newsletter />
 
-      {/* Restaurant Results - Ultimate Dining Gallery */}
-      <RestaurantResults restaurants={restaurantsFromJSON} />
+      {/* Restaurant Results with Zip Code Search - Ultimate Dining Gallery */}
+      <HomepageRestaurantClient restaurants={restaurantsFromJSON} />
 
       {/* Brand Logo Bridge - Premium Separator */}
       <div className="py-12 bg-[#050A18]">

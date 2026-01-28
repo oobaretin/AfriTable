@@ -32,7 +32,17 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
   const { openDrawer } = useBookingDrawer();
 
   // Show only 4 featured restaurants initially for minimalist feel
+  // If restaurants are filtered (e.g., by zip code), show all filtered results
   const displayedRestaurants = React.useMemo(() => {
+    // If we have fewer restaurants than the full dataset, they're likely filtered
+    // Show all filtered results (they're already filtered by zip code)
+    // We'll use a threshold: if less than 50 restaurants, assume it's a filtered set
+    const FULL_DATASET_SIZE = 50; // Approximate full dataset size
+    if (restaurants.length < FULL_DATASET_SIZE && restaurants.length > 0) {
+      return restaurants;
+    }
+    
+    // Otherwise, show only 4 featured restaurants for minimalist feel
     // Get all featured restaurants
     const allFeatured = restaurants.filter(isFeatured);
     
@@ -65,7 +75,21 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
 
 
   if (displayedRestaurants.length === 0) {
-    return null;
+    return (
+      <section className="pt-24 pb-0 bg-[#050A18] px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center py-20">
+            <h2 className="text-2xl md:text-3xl font-serif text-[#C69C2B] font-normal mb-4">
+              Coming Soon to Your Area
+            </h2>
+            <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+              We&apos;re working on expanding our network of authentic African and Caribbean restaurants. 
+              Join our waitlist to be notified when we add restaurants near you.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
   }
 
   return (
