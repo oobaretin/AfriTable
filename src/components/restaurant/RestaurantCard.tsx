@@ -218,12 +218,19 @@ export function RestaurantCard({
               {displayCity}
             </div>
           )}
-
-          <div className="w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-50 pointer-events-auto">
-            View Details →
-          </div>
         </div>
       </Link>
+
+      {/* View Details - separate link so it always receives clicks */}
+      <div className="px-5 pb-2">
+        <Link
+          href={safeHref}
+          className="block w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-20 pointer-events-auto touch-manipulation cursor-pointer"
+          prefetch={false}
+        >
+          View Details →
+        </Link>
+      </div>
 
       {/* Find Table Button */}
       <div className="px-5 pb-5">

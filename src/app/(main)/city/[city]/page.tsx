@@ -147,7 +147,7 @@ export default async function CityPage({
           {/* Restaurant list */}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {restaurants.map((r) => (
-              <RestaurantCard key={r.id} restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
+              <RestaurantCard key={r.id} restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug || r.id)}`} />
             ))}
           </div>
         </Container>
