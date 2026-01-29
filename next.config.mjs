@@ -34,16 +34,15 @@ const nextConfig = {
   },
   async headers() {
     const isDev = process.env.NODE_ENV !== "production";
-    // Some libraries (e.g., react-hook-form, zod) may require unsafe-eval in production
-    // We allow it but monitor for security implications
     const csp = [
       "default-src 'self'",
-      // Next.js needs inline scripts/styles; some form libraries need eval
-      `script-src 'self' 'unsafe-inline' 'unsafe-eval'`,
+      // We add Supabase and Vercel specific domains to the allowed list
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.supabase.co https://vercel.live",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: https:",
+      "img-src 'self' data: https: blob:",
       "font-src 'self' data: https:",
-      "connect-src 'self' https: wss:",
+      // connect-src must allow Supabase for database calls
+      "connect-src 'self' https: wss: https://*.supabase.co",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
