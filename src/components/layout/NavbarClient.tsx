@@ -128,11 +128,11 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
                     </>
                   ) : (
                     <>
-                      <Button asChild variant="ghost" className="justify-start">
-                        <Link href="/login" prefetch={false}>Sign in</Link>
+                      <Button asChild variant="ghost" className="justify-start pointer-events-auto cursor-pointer relative z-50">
+                        <Link href="/login" prefetch={false} className="pointer-events-auto">Sign in</Link>
                       </Button>
-                      <Button asChild className="justify-start">
-                        <Link href="/signup" prefetch={false}>Sign up</Link>
+                      <Button asChild className="justify-start pointer-events-auto cursor-pointer relative z-50">
+                        <Link href="/signup" prefetch={false} className="pointer-events-auto">Sign up</Link>
                       </Button>
                     </>
                   )}
@@ -154,25 +154,25 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
                       <span className="max-w-[160px] truncate">{displayName}</span>
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-56">
+                  <DropdownMenuContent align="end" className="w-56 pointer-events-auto">
                     <DropdownMenuLabel>Account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     {role === "restaurant_owner" ? (
                       <DropdownMenuItem asChild>
-                        <Link href="/dashboard" prefetch={false} className="pointer-events-auto">Dashboard</Link>
+                        <Link href="/dashboard" prefetch={false} className="pointer-events-auto cursor-pointer">Dashboard</Link>
                       </DropdownMenuItem>
                     ) : (
                       <DropdownMenuItem asChild>
-                        <Link href="/reservations" prefetch={false} className="pointer-events-auto">My Reservations</Link>
+                        <Link href="/reservations" prefetch={false} className="pointer-events-auto cursor-pointer">My Reservations</Link>
                       </DropdownMenuItem>
                     )}
                     <DropdownMenuItem asChild>
-                      <Link href="/profile" prefetch={false} className="pointer-events-auto">Profile</Link>
+                      <Link href="/profile" prefetch={false} className="pointer-events-auto cursor-pointer">Profile</Link>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem asChild>
-                      <form action={signOutAction} className="w-full">
-                        <button type="submit" className="w-full text-left">
+                      <form action={signOutAction} className="w-full pointer-events-auto">
+                        <button type="submit" className="w-full text-left pointer-events-auto cursor-pointer">
                           Sign out
                         </button>
                       </form>
