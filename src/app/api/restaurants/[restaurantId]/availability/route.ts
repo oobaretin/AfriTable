@@ -107,8 +107,17 @@ function pickOperatingHours(...candidates: OperatingHour[][]): OperatingHour[] {
   return DEFAULT_OPERATING_HOURS;
 }
 
-export async function GET(request: Request, context: { params: { restaurantId: string } }) {
-  const restaurantId = context.params.restaurantId;
+const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+export async function GET(
+  request: Request,
+  context: { params: Promise<{ restaurantId: string }> | { restaurantId: string } },
+) {
+  const params = context.params as Promise<{ restaurantId: string }> | { restaurantId: string };
+  const restaurantIdParam = typeof (params as Promise<{ restaurantId: string }>).then === "function"
+    ? (await (params as Promise<{ restaurantId: string }>)).restaurantId
+    : (params as { restaurantId: string }).restaurantId;
+
   const url = new URL(request.url);
 
   const parsed = querySchema.safeParse({
@@ -126,67 +135,89 @@ export async function GET(request: Request, context: { params: { restaurantId: s
     return NextResponse.json({ error: "invalid_party_size" }, { status: 400 });
   }
 
-  const supabase = createSupabaseAdminClient();
+  try {
+    const supabase = createSupabaseAdminClient();
 
-  // Ensure restaurant exists and is active (avoid leaking inactive restaurants).
-  const { data: restaurant, error: restaurantError } = await supabase
-    .from("restaurants")
-    .select("id,is_active,hours")
-    .eq("id", restaurantId)
-    .maybeSingle();
+    // Resolve slug to id when param looks like a slug (e.g. "apt4b-atlanta").
+    let restaurantId = restaurantIdParam;
+    if (!UUID_REGEX.test(restaurantIdParam)) {
+      const { data: bySlug } = await supabase
+        .from("restaurants")
+        .select("id")
+        .eq("slug", restaurantIdParam)
+        .maybeSingle();
+      if (bySlug?.id) restaurantId = bySlug.id;
+    }
 
-  if (restaurantError) return NextResponse.json({ error: "restaurant_lookup_failed" }, { status: 500 });
-  if (!restaurant || !restaurant.is_active) return NextResponse.json({ error: "not_found" }, { status: 404 });
+    // Ensure restaurant exists and is active (avoid leaking inactive restaurants).
+    const { data: restaurant, error: restaurantError } = await supabase
+      .from("restaurants")
+      .select("id,is_active,hours")
+      .eq("id", restaurantId)
+      .maybeSingle();
 
-  const [{ data: settings }, { data: tables }, { data: reservations }] = await Promise.all([
-    supabase
-      .from("availability_settings")
-      .select("slot_duration_minutes,operating_hours")
-      .eq("restaurant_id", restaurantId)
-      .maybeSingle(),
-    supabase
-      .from("restaurant_tables")
-      .select("capacity,is_active")
-      .eq("restaurant_id", restaurantId)
-      .eq("is_active", true),
-    supabase
-      .from("reservations")
-      .select("reservation_time,status")
-      .eq("restaurant_id", restaurantId)
-      .eq("reservation_date", dateStr)
-      .in("status", ["pending", "confirmed", "seated"]),
-  ]);
+    if (restaurantError) {
+      console.error("[availability] restaurant lookup error:", restaurantError);
+      return NextResponse.json({ error: "restaurant_lookup_failed" }, { status: 500 });
+    }
+        if (!restaurant || !restaurant.is_active) return NextResponse.json({ error: "not_found" }, { status: 404 });
 
-  const slotDurationMinutes = settings?.slot_duration_minutes ?? 90;
-  const operatingHours = pickOperatingHours(
-    normalizeOperatingHours(settings?.operating_hours),
-    normalizeOperatingHours((restaurant as any)?.hours),
-  );
+    const [{ data: settings }, { data: tables }, { data: reservations }] = await Promise.all([
+      supabase
+        .from("availability_settings")
+        .select("slot_duration_minutes,operating_hours")
+        .eq("restaurant_id", restaurantId)
+        .maybeSingle(),
+      supabase
+        .from("restaurant_tables")
+        .select("capacity,is_active")
+        .eq("restaurant_id", restaurantId)
+        .eq("is_active", true),
+      supabase
+        .from("reservations")
+        .select("reservation_time,status")
+        .eq("restaurant_id", restaurantId)
+        .eq("reservation_date", dateStr)
+        .in("status", ["pending", "confirmed", "seated"]),
+    ]);
 
-  const eligibleTableCount =
-    (tables ?? []).filter((t: any) => (t?.capacity ?? 0) >= partySize && t?.is_active !== false).length;
+    const slotDurationMinutes = settings?.slot_duration_minutes ?? 90;
+    const operatingHours = pickOperatingHours(
+      normalizeOperatingHours(settings?.operating_hours),
+      normalizeOperatingHours((restaurant as any)?.hours),
+    );
 
-  // Map reservation counts by exact HH:mm (best-effort; no table assignment in schema).
-  const reservationCountsByTime: Record<string, number> = {};
-  for (const r of reservations ?? []) {
-    const time = String((r as any).reservation_time).slice(0, 5);
-    reservationCountsByTime[time] = (reservationCountsByTime[time] ?? 0) + 1;
+    const eligibleTableCount =
+      (tables ?? []).filter((t: any) => (t?.capacity ?? 0) >= partySize && t?.is_active !== false).length;
+
+    // Map reservation counts by exact HH:mm (best-effort; no table assignment in schema).
+    const reservationCountsByTime: Record<string, number> = {};
+    for (const r of reservations ?? []) {
+      const time = String((r as any).reservation_time).slice(0, 5);
+      reservationCountsByTime[time] = (reservationCountsByTime[time] ?? 0) + 1;
+    }
+
+    const slots = calculateAvailableTimeSlots({
+      date: new Date(dateStr + "T00:00:00"),
+      operatingHours,
+      slotDurationMinutes,
+      eligibleTableCount,
+      reservationCountsByTime,
+    });
+
+    return NextResponse.json({
+      date: dateStr,
+      partySize,
+      slotDurationMinutes,
+      eligibleTableCount,
+      slots,
+    });
+  } catch (err) {
+    console.error("[availability] error:", err);
+    return NextResponse.json(
+      { error: err instanceof Error ? err.message : "availability_failed" },
+      { status: 500 },
+    );
   }
-
-  const slots = calculateAvailableTimeSlots({
-    date: new Date(dateStr + "T00:00:00"),
-    operatingHours,
-    slotDurationMinutes,
-    eligibleTableCount,
-    reservationCountsByTime,
-  });
-
-  return NextResponse.json({
-    date: dateStr,
-    partySize,
-    slotDurationMinutes,
-    eligibleTableCount,
-    slots,
-  });
 }
 

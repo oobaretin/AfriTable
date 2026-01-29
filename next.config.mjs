@@ -46,6 +46,7 @@ const nextConfig = {
       "font-src 'self' data: https:",
       // connect-src must allow Supabase for database calls
       "connect-src 'self' https: wss: https://*.supabase.co",
+      "frame-src 'self' https://www.google.com https://maps.google.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
