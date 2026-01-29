@@ -141,12 +141,17 @@ export async function GET(
     // Resolve slug to id when param looks like a slug (e.g. "apt4b-atlanta").
     let restaurantId = restaurantIdParam;
     if (!UUID_REGEX.test(restaurantIdParam)) {
-      const { data: bySlug } = await supabase
+      const { data: bySlug, error: slugError } = await supabase
         .from("restaurants")
         .select("id")
         .eq("slug", restaurantIdParam)
         .maybeSingle();
-      if (bySlug?.id) restaurantId = bySlug.id;
+      if (slugError) {
+        console.error("[availability] slug lookup error:", slugError);
+        return NextResponse.json({ error: "restaurant_lookup_failed" }, { status: 500 });
+      }
+      if (!bySlug?.id) return NextResponse.json({ error: "not_found" }, { status: 404 });
+      restaurantId = bySlug.id;
     }
 
     // Ensure restaurant exists and is active (avoid leaking inactive restaurants).
@@ -213,11 +218,12 @@ export async function GET(
       slots,
     });
   } catch (err) {
-    console.error("[availability] error:", err);
-    return NextResponse.json(
-      { error: err instanceof Error ? err.message : "availability_failed" },
-      { status: 500 },
-    );
+    const message = err instanceof Error ? err.message : "";
+    console.error("[availability] error:", message || err);
+    const isConfigError = /missing environment variable|supabase|service role/i.test(message);
+    const status = isConfigError ? 503 : 500;
+    const safeError = isConfigError ? "service_unavailable" : (message || "availability_failed");
+    return NextResponse.json({ error: safeError }, { status });
   }
 }
 
