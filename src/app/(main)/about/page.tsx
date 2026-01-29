@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ContactAndMap } from "@/components/home/ContactAndMap";
+import { PLACEHOLDERS } from "@/lib/placeholders";
 
 export default function AboutPage() {
   return (
@@ -121,9 +122,11 @@ export default function AboutPage() {
             {/* Head of Growth */}
             <div className="text-center">
               <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg">
-                <img 
-                  src="/api/placeholder/200/200" 
+                <Image 
+                  src={PLACEHOLDERS.square(200)}
                   alt="Head of Growth" 
+                  width={200}
+                  height={200}
                   className="w-full h-full object-cover"
                 />
               </div>
