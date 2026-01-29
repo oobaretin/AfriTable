@@ -124,7 +124,7 @@ export function HeroSearch({ sectionId }: HeroSearchProps = {}) {
   }
 
   return (
-    <section className="relative z-0 min-h-[80vh] w-full bg-[#000814] flex flex-col items-center justify-center px-4" id="hero-search" style={{ transform: 'translateZ(0)' }}>
+    <section className="relative z-0 min-h-[80vh] w-full bg-[#000814] flex flex-col items-center justify-center px-4" id={sectionIdValue} style={{ transform: 'translateZ(0)' }}>
       {/* 1. 3D ISOMETRIC HEXAGON PATTERN - Hero section only */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#000814]" style={{ willChange: 'auto' }}>
         {/* The Isometric Pattern */}
