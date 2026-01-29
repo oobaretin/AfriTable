@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { Apple, Instagram, Smartphone, Twitter, Youtube } from "lucide-react";
 import FooterExpandedLists from "@/components/layout/FooterExpandedLists";
@@ -9,12 +8,12 @@ import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-brand-dark text-white relative z-[90]">
+    <footer className="border-t bg-brand-dark text-white relative z-[90] pointer-events-auto">
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-12">
           {/* Brand */}
           <div className="md:col-span-4">
-            <Link href="/" className="inline-flex items-center gap-2 relative z-[90] pointer-events-auto" prefetch={false}>
+            <a href="/" className="inline-flex items-center gap-2 relative z-[90] pointer-events-auto">
               <Image
                 src="/logo.png"
                 alt="AfriTable"
@@ -23,7 +22,7 @@ export default function Footer() {
                 className="h-16 w-auto object-contain md:h-[68px]"
               />
               <span className="sr-only">AfriTable</span>
-            </Link>
+            </a>
             <p className="mt-3 text-sm text-slate-300">
               Discover and reserve authentic African &amp; Caribbean dining experiences across America.
             </p>
@@ -78,69 +77,69 @@ export default function Footer() {
             <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Discover</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants" prefetch={false}>
-                Find restaurants
-              </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?city=Houston%2C%20TX" prefetch={false}>
-                Houston
-              </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?city=Atlanta%2C%20GA" prefetch={false}>
-                Atlanta
-              </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?city=New%20York%2C%20NY" prefetch={false}>
-                New York City
-              </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?cuisine=Nigerian" prefetch={false}>
-                Nigerian cuisine
-              </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-10 pointer-events-auto" href="/restaurants?cuisine=Jamaican" prefetch={false}>
-                Jamaican cuisine
-              </Link>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants">
+                  Find restaurants
+                </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants?city=Houston%2C%20TX">
+                  Houston
+                </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants?city=Atlanta%2C%20GA">
+                  Atlanta
+                </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants?city=New%20York%2C%20NY">
+                  New York City
+                </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants?cuisine=Nigerian">
+                  Nigerian cuisine
+                </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants?cuisine=Jamaican">
+                  Jamaican cuisine
+                </a>
               </div>
             </div>
 
             <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">For restaurants</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/restaurant-signup" prefetch={false}>
-                Join AfriTable
-              </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/dashboard" prefetch={false}>
-                Owner dashboard
-              </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/about" prefetch={false}>
-                Why AfriTable
-              </Link>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurant-signup">
+                  Join AfriTable
+                </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/dashboard">
+                  Owner dashboard
+                </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/about">
+                  Why AfriTable
+                </a>
               </div>
             </div>
 
             <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Company</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/about" prefetch={false}>
-                About
-              </Link>
-              <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="mailto:support@afritable.com">
-                Contact support
-              </a>
-              <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="mailto:partners@afritable.com">
-                Partnerships
-              </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/about">
+                  About
+                </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="mailto:support@afritable.com">
+                  Contact support
+                </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="mailto:partners@afritable.com">
+                  Partnerships
+                </a>
               </div>
             </div>
 
             <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Legal</div>
               <div className="mt-2 grid gap-1.5 leading-6">
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/terms" prefetch={false}>
-                Terms
-              </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/privacy" prefetch={false}>
-                Privacy
-              </Link>
-              <Link className="text-slate-400 hover:text-white hover:underline underline-offset-4" href="/cookies" prefetch={false}>
-                Cookies
-              </Link>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/terms">
+                  Terms
+                </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/privacy">
+                  Privacy
+                </a>
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/cookies">
+                  Cookies
+                </a>
               </div>
             </div>
           </div>
@@ -164,15 +163,15 @@ export default function Footer() {
         <div className="mt-10 flex flex-col gap-3 border-t border-slate-800 pt-6 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} AfriTable. All rights reserved.</div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/terms" prefetch={false}>
+            <a className="hover:text-white hover:underline underline-offset-4" href="/terms">
               Terms
-            </Link>
-            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/privacy" prefetch={false}>
+            </a>
+            <a className="hover:text-white hover:underline underline-offset-4" href="/privacy">
               Privacy
-            </Link>
-            <Link className="hover:text-white hover:underline underline-offset-4 relative z-[90] pointer-events-auto" href="/cookies" prefetch={false}>
+            </a>
+            <a className="hover:text-white hover:underline underline-offset-4" href="/cookies">
               Cookies
-            </Link>
+            </a>
           </div>
         </div>
       </div>

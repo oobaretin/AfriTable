@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 
 const TOP_CITIES: { label: string; href: string }[] = [
   { label: "Houston", href: "/restaurants?city=Houston%2C%20TX" },
@@ -50,13 +49,13 @@ function List({
       <div className="text-xs font-semibold uppercase tracking-wide text-foreground/90">{title}</div>
       <div className="grid gap-1.5 sm:grid-cols-2">
         {visible.map((i) => (
-          <Link
+          <a
             key={i.href}
-            className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4"
+            className="text-muted-foreground hover:text-foreground hover:underline underline-offset-4 block"
             href={i.href}
           >
             {i.label}
-          </Link>
+          </a>
         ))}
       </div>
       {items.length > initialCount ? (
