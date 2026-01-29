@@ -215,7 +215,7 @@ export function RestaurantCard({
             </div>
           )}
 
-          <div className="w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80">
+          <div className="w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-50 pointer-events-auto">
             View Details →
           </div>
         </div>
