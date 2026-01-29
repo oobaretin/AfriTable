@@ -122,6 +122,8 @@ export function ZipCodeSearch({ restaurants, onFilterChange }: ZipCodeSearchProp
       <div className="relative">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
         <input
+          id="zip-code-search"
+          name="zipCode"
           type="text"
           inputMode="numeric"
           pattern="[0-9]*"
@@ -130,6 +132,7 @@ export function ZipCodeSearch({ restaurants, onFilterChange }: ZipCodeSearchProp
           placeholder="Enter your zip code"
           maxLength={5}
           className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-[#C69C2B]/50 focus:ring-2 focus:ring-[#C69C2B]/20 transition-all duration-300"
+          aria-label="Enter zip code to find nearby restaurants"
         />
       </div>
       {zipCode.length > 0 && zipCode.length < 5 && (

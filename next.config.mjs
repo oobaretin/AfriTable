@@ -34,10 +34,12 @@ const nextConfig = {
   },
   async headers() {
     const isDev = process.env.NODE_ENV !== "production";
+    // Some libraries (e.g., react-hook-form, zod) may require unsafe-eval in production
+    // We allow it but monitor for security implications
     const csp = [
       "default-src 'self'",
-      // Next.js needs inline scripts/styles; dev needs eval for HMR.
-      `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
+      // Next.js needs inline scripts/styles; some form libraries need eval
+      `script-src 'self' 'unsafe-inline' 'unsafe-eval'`,
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https:",
       "font-src 'self' data: https:",

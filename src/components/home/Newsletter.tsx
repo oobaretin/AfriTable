@@ -67,6 +67,8 @@ export function Newsletter() {
               <div className="flex-1 relative">
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
                 <input
+                  id="home-newsletter-email"
+                  name="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -74,6 +76,7 @@ export function Newsletter() {
                   required
                   disabled={isSubmitting}
                   className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-[#C69C2B]/50 focus:ring-2 focus:ring-[#C69C2B]/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  aria-label="Enter your email for newsletter"
                 />
               </div>
               <button

@@ -85,12 +85,15 @@ export function RestaurantSearchBar({ restaurants }: RestaurantSearchBarProps) {
       <div className="relative">
         <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <Input
+          id="restaurant-search"
+          name="restaurant-search"
           type="text"
           placeholder="Search by restaurant name, city, or cuisine..."
           value={searchQuery}
           onChange={handleInputChange}
           onFocus={() => setIsOpen(true)}
           className="pl-10 pr-10"
+          aria-label="Search restaurants"
         />
         {searchQuery && (
           <Button

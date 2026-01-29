@@ -178,6 +178,8 @@ export function HeroSearch() {
             <div className="flex-1 flex items-center px-5 gap-3">
               <span className="text-slate-400 text-sm" role="img" aria-label="Location">📍</span>
               <input
+                id="hero-city-search"
+                name="city"
                 ref={inputRef}
                 type="text"
                 placeholder="Where are you eating?"
@@ -201,6 +203,7 @@ export function HeroSearch() {
                   }
                 }}
                 className="w-full py-2.5 bg-transparent outline-none font-bold text-slate-800 text-sm placeholder:text-slate-300"
+                aria-label="Search by city"
               />
             </div>
             <button
