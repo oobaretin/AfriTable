@@ -47,6 +47,9 @@ export async function GET(
     headers: {
       "Content-Type": "image/svg+xml",
       "Cache-Control": "public, max-age=31536000, immutable",
+      // Prevent Next.js image optimization from intercepting this route
+      "X-Content-Type-Options": "nosniff",
+      "Vary": "Accept",
     },
   });
 }

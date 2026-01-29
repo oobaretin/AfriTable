@@ -31,6 +31,9 @@ const nextConfig = {
       { protocol: "https", hostname: "source.unsplash.com" },
       { protocol: "https", hostname: "via.placeholder.com" },
     ],
+    // Allow SVG images (for placeholder API)
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   async headers() {
     const isDev = process.env.NODE_ENV !== "production";

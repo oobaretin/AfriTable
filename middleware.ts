@@ -112,8 +112,9 @@ export const config = {
       - favicon
       - next internals
       - css/js map files (dev)
+      - placeholder API route (handled separately)
     */
-    "/((?!_next/|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|css|js|map)$).*)",
+    "/((?!_next/|favicon.ico|api/placeholder|.*\\.(?:svg|png|jpg|jpeg|gif|webp|css|js|map)$).*)",
   ],
 };
 

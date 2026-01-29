@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { PLACEHOLDERS } from "@/lib/placeholders";
 
 export function SuccessStory() {
   const [bookingGrowth, setBookingGrowth] = React.useState(0);
@@ -78,11 +79,10 @@ export function SuccessStory() {
               {/* Replace with a real photo of a partner chef in their kitchen */}
               <div className="relative w-full aspect-[600/700]">
                 <Image
-                  src="/api/placeholder/600/700"
+                  src={PLACEHOLDERS.large}
                   alt="Chef Partner"
                   fill
                   className="object-cover scale-105"
-                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-8 left-8">

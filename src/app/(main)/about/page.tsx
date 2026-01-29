@@ -138,12 +138,11 @@ export default function AboutPage() {
             <div className="text-center">
               <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg relative">
                 <Image 
-                  src="/api/placeholder/200/200" 
+                  src={PLACEHOLDERS.square(200)}
                   alt="Community Lead" 
                   width={200}
                   height={200}
                   className="w-full h-full object-cover"
-                  unoptimized
                 />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Community Lead</h3>

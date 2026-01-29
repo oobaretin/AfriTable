@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
+import { PLACEHOLDERS } from "@/lib/placeholders";
 
 type ChefsRecommendationProps = {
   dishName?: string;
@@ -106,7 +107,7 @@ export function ChefsRecommendation({
   const fallback = getCuisineBasedQuote(cuisine, restaurantName);
   const finalDishName = dishName || fallback.dishName;
   const finalQuote = quote || fallback.quote;
-  const finalImage = dishImage || "/api/placeholder/200/200";
+  const finalImage = dishImage || PLACEHOLDERS.square(200);
 
   return (
     <div className="bg-brand-paper rounded-[2rem] p-8 border border-brand-bronze/10 relative overflow-hidden">
@@ -120,7 +121,6 @@ export function ChefsRecommendation({
             width={128}
             height={128}
             className="w-full h-full object-cover"
-            unoptimized={finalImage.startsWith("/api/placeholder")}
           />
         </div>
         <div>
