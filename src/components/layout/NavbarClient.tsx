@@ -54,13 +54,12 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
             >
               Restaurants
             </Link>
-            <Link 
+            <a 
               href="/about" 
               className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto"
-              prefetch={false}
             >
               About
-            </Link>
+            </a>
           </nav>
         </div>
 
