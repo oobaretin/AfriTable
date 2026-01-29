@@ -26,9 +26,11 @@ const AVAILABLE_CITIES = [
 type HeroSearchProps = {
   /** When provided, used as the section id (e.g. "hero-search" for scroll detection). Omit when rendering a second instance (e.g. sticky bar) to avoid duplicate ids. */
   sectionId?: string;
+  /** "full" = full hero section (default). "sticky" = search pill only for the sticky bar. */
+  variant?: "full" | "sticky";
 };
 
-export function HeroSearch({ sectionId }: HeroSearchProps = {}) {
+export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const instanceId = React.useId();
@@ -121,6 +123,79 @@ export function HeroSearch({ sectionId }: HeroSearchProps = {}) {
     } else {
       router.push("/restaurants");
     }
+  }
+
+  const searchPill = (
+    <div className="relative w-full">
+      <div className="bg-white rounded-full p-1.5 shadow-md flex items-center border border-slate-200 min-w-0">
+        <div className="flex-1 flex items-center px-4 md:px-5 gap-2 md:gap-3 min-w-0">
+          <span className="text-slate-400 text-sm shrink-0" role="img" aria-label="Location">📍</span>
+          <input
+            id={cityInputId}
+            name="city"
+            ref={inputRef}
+            type="text"
+            placeholder="Where are you eating?"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            onFocus={() => {
+              if (suggestions.length > 0 && city.trim().length > 0) {
+                setShowSuggestions(true);
+              }
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                if (showSuggestions && suggestions.length > 0) {
+                  setCity(suggestions[0]);
+                  setShowSuggestions(false);
+                } else {
+                  handleSearch();
+                }
+              } else if (e.key === "Escape") {
+                setShowSuggestions(false);
+              }
+            }}
+            className="w-full min-w-0 py-2 md:py-2.5 bg-transparent outline-none font-bold text-slate-800 text-sm placeholder:text-slate-400"
+            aria-label="Search by city"
+          />
+        </div>
+        <button
+          type="button"
+          onClick={handleSearch}
+          className="bg-[#111] text-white px-4 md:px-6 py-2.5 md:py-3 rounded-full font-black uppercase tracking-widest text-[9px] shrink-0 hover:bg-[#A33B32] transition-all pointer-events-auto cursor-pointer"
+        >
+          Find Table
+        </button>
+      </div>
+      {showSuggestions && suggestions.length > 0 && (
+        <div
+          ref={suggestionsRef}
+          className="absolute top-full mt-2 w-full bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden z-50"
+        >
+          {suggestions.map((suggestion, idx) => (
+            <button
+              key={idx}
+              type="button"
+              onClick={() => {
+                setCity(suggestion);
+                setShowSuggestions(false);
+                handleSearch();
+              }}
+              className="w-full px-4 py-3 text-left text-slate-800 hover:bg-slate-100 transition-colors border-b border-slate-100 last:border-b-0"
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-[#A33B32] text-sm">📍</span>
+                <span className="font-bold text-sm">{suggestion}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+
+  if (variant === "sticky") {
+    return <div className="w-full max-w-3xl mx-auto">{searchPill}</div>;
   }
 
   return (

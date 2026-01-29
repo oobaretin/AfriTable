@@ -37,7 +37,7 @@ export function StickySearch() {
     <div className="fixed top-24 left-0 right-0 z-40 bg-white shadow-lg border-b border-slate-200 px-6 py-4 animate-in slide-in-from-top duration-300">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row gap-2 bg-white p-2 rounded-xl shadow-md max-w-3xl mx-auto">
-          <HeroSearch />
+          <HeroSearch variant="sticky" />
         </div>
       </div>
     </div>
