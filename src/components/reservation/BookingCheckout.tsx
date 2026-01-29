@@ -35,6 +35,7 @@ type BookingCheckoutProps = {
 
 export function BookingCheckout({ restaurant, bookingDetails }: BookingCheckoutProps) {
   const router = useRouter();
+  const formId = React.useId();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [showConfetti, setShowConfetti] = React.useState(false);
 
@@ -136,11 +137,11 @@ export function BookingCheckout({ restaurant, bookingDetails }: BookingCheckoutP
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">
+                  <Label htmlFor={`${formId}-firstName`} className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">
                     First Name
                   </Label>
                   <Input
-                    id="firstName"
+                    id={`${formId}-firstName`}
                     type="text"
                     required
                     value={formData.firstName}
@@ -150,11 +151,11 @@ export function BookingCheckout({ restaurant, bookingDetails }: BookingCheckoutP
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">
+                  <Label htmlFor={`${formId}-lastName`} className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">
                     Last Name
                   </Label>
                   <Input
-                    id="lastName"
+                    id={`${formId}-lastName`}
                     type="text"
                     required
                     value={formData.lastName}
@@ -166,11 +167,11 @@ export function BookingCheckout({ restaurant, bookingDetails }: BookingCheckoutP
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">
+                <Label htmlFor={`${formId}-email`} className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">
                   Email Address
                 </Label>
                 <Input
-                  id="email"
+                  id={`${formId}-email`}
                   type="email"
                   required
                   value={formData.email}
@@ -181,11 +182,11 @@ export function BookingCheckout({ restaurant, bookingDetails }: BookingCheckoutP
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="phone" className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">
+                <Label htmlFor={`${formId}-phone`} className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">
                   Phone Number
                 </Label>
                 <Input
-                  id="phone"
+                  id={`${formId}-phone`}
                   type="tel"
                   required
                   minLength={7}
@@ -197,11 +198,11 @@ export function BookingCheckout({ restaurant, bookingDetails }: BookingCheckoutP
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="specialRequests" className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">
+                <Label htmlFor={`${formId}-specialRequests`} className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2">
                   Special Notes (Optional)
                 </Label>
                 <Textarea
-                  id="specialRequests"
+                  id={`${formId}-specialRequests`}
                   value={formData.specialRequests}
                   onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
                   className="w-full p-4 rounded-2xl border border-slate-200 bg-white focus:ring-2 focus:ring-brand-bronze outline-none font-medium h-32 resize-none"

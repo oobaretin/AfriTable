@@ -48,6 +48,7 @@ function getRestaurantCoordinates(restaurant: JSONRestaurant): { lat: number; ln
 }
 
 export function ZipCodeSearch({ restaurants, onFilterChange }: ZipCodeSearchProps) {
+  const zipInputId = React.useId();
   const [zipCode, setZipCode] = React.useState("");
   const [radius, setRadius] = React.useState(10); // Default 10 miles
 
@@ -122,7 +123,7 @@ export function ZipCodeSearch({ restaurants, onFilterChange }: ZipCodeSearchProp
       <div className="relative">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
         <input
-          id="zip-code-search"
+          id={`${zipInputId}-zip-code-search`}
           name="zipCode"
           type="text"
           inputMode="numeric"

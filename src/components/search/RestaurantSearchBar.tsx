@@ -35,6 +35,7 @@ function extractCity(address: string): string {
 }
 
 export function RestaurantSearchBar({ restaurants }: RestaurantSearchBarProps) {
+  const searchInputId = React.useId();
   const [searchQuery, setSearchQuery] = React.useState("");
   const [isOpen, setIsOpen] = React.useState(false);
   const searchRef = React.useRef<HTMLDivElement>(null);
@@ -85,7 +86,7 @@ export function RestaurantSearchBar({ restaurants }: RestaurantSearchBarProps) {
       <div className="relative">
         <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <Input
-          id="main-search"
+          id={`${searchInputId}-main-search`}
           name="search"
           type="text"
           placeholder="Search by restaurant name, city, or cuisine..."

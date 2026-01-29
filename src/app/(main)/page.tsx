@@ -41,7 +41,7 @@ export default async function MainHomePage() {
       <StickySearch />
       
       {/* Hero - Search-First Design */}
-      <HeroSearch />
+      <HeroSearch sectionId="hero-search" />
 
       {/* Restaurant Results - Featured Restaurants Only */}
       <div id="restaurants-section">

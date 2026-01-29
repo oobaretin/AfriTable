@@ -20,6 +20,10 @@ export function PhotoUploadDialog({
   reservationId,
   onUploadComplete,
 }: PhotoUploadDialogProps) {
+  const fieldId = React.useId();
+  const photoId = `${fieldId}-photo`;
+  const reviewId = `${fieldId}-review`;
+
   const [open, setOpen] = React.useState(false);
   const [file, setFile] = React.useState<File | null>(null);
   const [preview, setPreview] = React.useState<string | null>(null);
@@ -88,7 +92,7 @@ export function PhotoUploadDialog({
         </DialogHeader>
         <div className="space-y-4">
           <div>
-            <Label htmlFor="photo">Meal Photo</Label>
+            <Label htmlFor={photoId}>Meal Photo</Label>
             <div className="mt-2">
               {preview ? (
                 <div className="relative aspect-square w-full rounded-lg overflow-hidden border border-slate-200">
@@ -116,7 +120,7 @@ export function PhotoUploadDialog({
               )}
               <Input
                 ref={fileInputRef}
-                id="photo"
+                id={photoId}
                 type="file"
                 accept="image/*"
                 onChange={handleFileChange}
@@ -126,9 +130,9 @@ export function PhotoUploadDialog({
           </div>
 
           <div>
-            <Label htmlFor="review">Review (Optional)</Label>
+            <Label htmlFor={reviewId}>Review (Optional)</Label>
             <Textarea
-              id="review"
+              id={reviewId}
               placeholder="Share your experience..."
               value={reviewText}
               onChange={(e) => setReviewText(e.target.value)}

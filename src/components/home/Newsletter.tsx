@@ -4,6 +4,7 @@ import * as React from "react";
 import { Mail } from "lucide-react";
 
 export function Newsletter() {
+  const emailInputId = React.useId();
   const [email, setEmail] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
@@ -67,7 +68,7 @@ export function Newsletter() {
               <div className="flex-1 relative">
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
                 <input
-                  id="home-newsletter-email"
+                  id={`${emailInputId}-home-newsletter-email`}
                   name="email"
                   type="email"
                   value={email}

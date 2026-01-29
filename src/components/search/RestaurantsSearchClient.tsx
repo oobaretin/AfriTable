@@ -37,6 +37,7 @@ const CUISINES = [
 export function RestaurantsSearchClient() {
   const router = useRouter();
   const sp = useSearchParams();
+  const searchFormId = React.useId();
 
   const [city, setCity] = React.useState(sp.get("city") ?? "");
   const [zip, setZip] = React.useState(sp.get("zip") ?? "");
@@ -102,8 +103,8 @@ export function RestaurantsSearchClient() {
     <div className="grid gap-5">
       <div className="grid gap-2">
         <div className="text-sm font-medium">Location</div>
-        <Input id="search-city" name="city" value={city} onChange={(e) => setCity(e.target.value)} placeholder="City (e.g. Atlanta, GA)" aria-label="Filter by city" />
-        <Input id="search-zip" name="zip" value={zip} onChange={(e) => setZip(e.target.value)} placeholder="ZIP (e.g. 30303)" aria-label="Filter by zip code" />
+        <Input id={`${searchFormId}-search-city`} name="city" value={city} onChange={(e) => setCity(e.target.value)} placeholder="City (e.g. Atlanta, GA)" aria-label="Filter by city" />
+        <Input id={`${searchFormId}-search-zip`} name="zip" value={zip} onChange={(e) => setZip(e.target.value)} placeholder="ZIP (e.g. 30303)" aria-label="Filter by zip code" />
       </div>
 
       <div className="grid gap-2">

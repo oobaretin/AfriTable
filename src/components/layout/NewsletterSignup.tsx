@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 const schema = z.object({ email: z.string().email() });
 
 export default function NewsletterSignup() {
+  const emailInputId = React.useId();
   const [email, setEmail] = React.useState("");
   const [loading, setLoading] = React.useState(false);
 
@@ -51,7 +52,7 @@ export default function NewsletterSignup() {
       </div>
       <div className="flex flex-col gap-2 sm:flex-row">
         <Input
-          id="newsletter-email"
+          id={`${emailInputId}-newsletter-email`}
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}

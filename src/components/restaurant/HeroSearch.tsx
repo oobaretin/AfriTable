@@ -23,9 +23,18 @@ const AVAILABLE_CITIES = [
   "Oakland",
 ];
 
-export function HeroSearch() {
+type HeroSearchProps = {
+  /** When provided, used as the section id (e.g. "hero-search" for scroll detection). Omit when rendering a second instance (e.g. sticky bar) to avoid duplicate ids. */
+  sectionId?: string;
+};
+
+export function HeroSearch({ sectionId }: HeroSearchProps = {}) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const instanceId = React.useId();
+  const sectionIdValue = sectionId ?? `${instanceId}-hero-search`;
+  const cityInputId = `${instanceId}-hero-city-search`;
+
   const [index, setIndex] = React.useState(0);
   const [displayText, setDisplayText] = React.useState("");
   const [isDeleting, setIsDeleting] = React.useState(false);
@@ -178,7 +187,7 @@ export function HeroSearch() {
             <div className="flex-1 flex items-center px-5 gap-3">
               <span className="text-slate-400 text-sm" role="img" aria-label="Location">📍</span>
               <input
-                id="hero-city-search"
+                id={cityInputId}
                 name="city"
                 ref={inputRef}
                 type="text"

@@ -40,6 +40,7 @@ function Stars({ value, onChange }: { value: number; onChange: (v: number) => vo
 
 export function WriteReviewModal({ restaurantSlug, restaurantName }: WriteReviewModalProps) {
   const router = useRouter();
+  const reviewCommentId = `${React.useId()}-review-comment`;
   const [open, setOpen] = React.useState(false);
   const [rating, setRating] = React.useState(5);
   const [comment, setComment] = React.useState("");
@@ -80,11 +81,11 @@ export function WriteReviewModal({ restaurantSlug, restaurantName }: WriteReview
             <Stars value={rating} onChange={setRating} />
           </div>
           <div>
-            <Label htmlFor="review-comment" className="mb-2 block">
+            <Label htmlFor={reviewCommentId} className="mb-2 block">
               Your Review
             </Label>
             <Textarea
-              id="review-comment"
+              id={reviewCommentId}
               placeholder="Tell others about your experience..."
               value={comment}
               onChange={(e) => setComment(e.target.value)}
