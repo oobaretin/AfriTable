@@ -120,6 +120,7 @@ export function ChefsRecommendation({
             width={128}
             height={128}
             className="w-full h-full object-cover"
+            unoptimized={finalImage.startsWith("/api/placeholder")}
           />
         </div>
         <div>

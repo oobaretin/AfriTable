@@ -82,6 +82,7 @@ export function SuccessStory() {
                   alt="Chef Partner"
                   fill
                   className="object-cover scale-105"
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-8 left-8">

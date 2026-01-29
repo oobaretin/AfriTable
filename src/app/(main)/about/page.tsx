@@ -143,6 +143,7 @@ export default function AboutPage() {
                   width={200}
                   height={200}
                   className="w-full h-full object-cover"
+                  unoptimized
                 />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Community Lead</h3>

@@ -31,6 +31,7 @@ export function ShareStamp({ restaurant, mealImage, reviewText }: ShareStampProp
           className={`object-cover transition-transform duration-700 ${isHovered ? "scale-110" : ""}`}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          unoptimized={!mealImage || mealImage.startsWith("/api/placeholder")}
         />
         {/* The Digital Watermark Overlay */}
         <div className="absolute top-4 right-4 h-16 w-16 opacity-90 backdrop-blur-sm bg-white/20 rounded-full flex items-center justify-center border border-white/30 rotate-12">
