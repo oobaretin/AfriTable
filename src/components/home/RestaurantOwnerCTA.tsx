@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 export function RestaurantOwnerCTA() {
   return (
@@ -45,12 +44,12 @@ export function RestaurantOwnerCTA() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/join-as-restaurant" className="btn-bronze px-8 py-4 rounded-xl font-bold text-white uppercase tracking-widest text-sm text-center">
+              <a href="/join-as-restaurant" className="btn-bronze px-8 py-4 rounded-xl font-bold text-white uppercase tracking-widest text-sm text-center pointer-events-auto cursor-pointer">
                 Get Started for Free
-              </Link>
-              <Button asChild variant="outline" className="rounded-xl bg-white/5 px-8 py-4 font-bold text-white border border-white/10 transition-all hover:bg-white/10">
-                <Link href="/contact">Talk to Sales</Link>
-              </Button>
+              </a>
+              <a href="/contact" className="inline-flex items-center justify-center rounded-xl bg-white/5 px-8 py-4 font-bold text-white border border-white/10 transition-all hover:bg-white/10 pointer-events-auto cursor-pointer">
+                Talk to Sales
+              </a>
             </div>
           </div>
 
