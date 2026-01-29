@@ -131,15 +131,15 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
                   <DropdownMenuSeparator />
                   {role === "restaurant_owner" ? (
                     <DropdownMenuItem asChild>
-                      <Link href="/dashboard" prefetch={false} className="pointer-events-auto cursor-pointer">Dashboard</Link>
+                      <a href="/dashboard" className="pointer-events-auto cursor-pointer">Dashboard</a>
                     </DropdownMenuItem>
                   ) : (
                     <DropdownMenuItem asChild>
-                      <Link href="/reservations" prefetch={false} className="pointer-events-auto cursor-pointer">My Reservations</Link>
+                      <a href="/reservations" className="pointer-events-auto cursor-pointer">My Reservations</a>
                     </DropdownMenuItem>
                   )}
                   <DropdownMenuItem asChild>
-                    <Link href="/profile" prefetch={false} className="pointer-events-auto cursor-pointer">Profile</Link>
+                    <a href="/profile" className="pointer-events-auto cursor-pointer">Profile</a>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem asChild>
