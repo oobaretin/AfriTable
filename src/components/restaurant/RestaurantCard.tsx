@@ -124,7 +124,11 @@ export function RestaurantCard({
         : "border-slate-100"
     }`}>
       {/* Image Container */}
-      <Link href={safeHref} className="block relative z-10 pointer-events-auto" prefetch={false}>
+      <Link
+        href={safeHref}
+        className="block relative z-10 pointer-events-auto touch-manipulation"
+        prefetch={false}
+      >
         <div className="relative w-full overflow-hidden aspect-[4/3] bg-white/5">
           <Image
             src={imgSrc}

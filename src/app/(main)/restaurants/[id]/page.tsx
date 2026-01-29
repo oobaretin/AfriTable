@@ -831,7 +831,10 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
           <div className="flex gap-4 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {(similar.length ? similar : []).map((r: any) => (
               <div key={r.id} className="w-[280px] shrink-0 snap-start md:w-[300px]">
-                <RestaurantCard restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
+                <RestaurantCard
+                  restaurant={r}
+                  href={`/restaurants/${encodeURIComponent(r.slug || r.id)}`}
+                />
               </div>
             ))}
             {!similar.length ? (

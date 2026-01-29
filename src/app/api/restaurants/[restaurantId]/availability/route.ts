@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { format } from "date-fns";
-import { createSupabaseAdminClient } from "@/lib/supabase/server";
+import { createSupabasePublicClient } from "@/lib/supabase/public";
 import type { OperatingHour } from "@/lib/reservation/availability";
 import { calculateAvailableTimeSlots } from "@/lib/reservation/availability";
 
@@ -113,10 +113,11 @@ export async function GET(
   request: Request,
   context: { params: Promise<{ restaurantId: string }> | { restaurantId: string } },
 ) {
-  const params = context.params as Promise<{ restaurantId: string }> | { restaurantId: string };
-  const restaurantIdParam = typeof (params as Promise<{ restaurantId: string }>).then === "function"
-    ? (await (params as Promise<{ restaurantId: string }>)).restaurantId
-    : (params as { restaurantId: string }).restaurantId;
+  const resolvedParams = await Promise.resolve(context.params);
+  const restaurantIdParam = resolvedParams?.restaurantId?.trim();
+  if (!restaurantIdParam) {
+    return NextResponse.json({ error: "invalid_restaurant" }, { status: 400 });
+  }
 
   const url = new URL(request.url);
 
@@ -136,13 +137,13 @@ export async function GET(
   }
 
   try {
-    const supabase = createSupabaseAdminClient();
+    const supabase = createSupabasePublicClient();
 
-    // Resolve slug to id when param looks like a slug (e.g. "apt4b-atlanta").
+    // Use same view as restaurant page (restaurants_with_rating) for consistent RLS.
     let restaurantId = restaurantIdParam;
     if (!UUID_REGEX.test(restaurantIdParam)) {
       const { data: bySlug, error: slugError } = await supabase
-        .from("restaurants")
+        .from("restaurants_with_rating")
         .select("id")
         .eq("slug", restaurantIdParam)
         .maybeSingle();
@@ -154,9 +155,8 @@ export async function GET(
       restaurantId = bySlug.id;
     }
 
-    // Ensure restaurant exists and is active (avoid leaking inactive restaurants).
     const { data: restaurant, error: restaurantError } = await supabase
-      .from("restaurants")
+      .from("restaurants_with_rating")
       .select("id,is_active,hours")
       .eq("id", restaurantId)
       .maybeSingle();
@@ -165,7 +165,7 @@ export async function GET(
       console.error("[availability] restaurant lookup error:", restaurantError);
       return NextResponse.json({ error: "restaurant_lookup_failed" }, { status: 500 });
     }
-        if (!restaurant || !restaurant.is_active) return NextResponse.json({ error: "not_found" }, { status: 404 });
+    if (!restaurant || !restaurant.is_active) return NextResponse.json({ error: "not_found" }, { status: 404 });
 
     const [{ data: settings }, { data: tables }, { data: reservations }] = await Promise.all([
       supabase
@@ -220,7 +220,7 @@ export async function GET(
   } catch (err) {
     const message = err instanceof Error ? err.message : "";
     console.error("[availability] error:", message || err);
-    const isConfigError = /missing environment variable|supabase|service role/i.test(message);
+    const isConfigError = /missing environment variable/i.test(message);
     const status = isConfigError ? 503 : 500;
     const safeError = isConfigError ? "service_unavailable" : (message || "availability_failed");
     return NextResponse.json({ error: safeError }, { status });
