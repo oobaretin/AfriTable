@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
 import { ExternalLink } from "lucide-react";
 
@@ -76,13 +75,12 @@ export function RestaurantCardWithDistance({ restaurant, distance }: RestaurantC
 
       {/* Actions */}
       <div className="flex gap-3 mt-6">
-        <Link
+        <a
           href={`/restaurants/${encodeURIComponent((restaurant as { slug?: string }).slug || restaurant.id)}`}
-          className="flex-1 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors text-center relative z-50 pointer-events-auto cursor-pointer touch-manipulation"
-          prefetch={false}
+          className="flex-1 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors text-center relative z-50 pointer-events-auto cursor-pointer touch-manipulation block"
         >
           View Details
-        </Link>
+        </a>
         {restaurant.website && (
           <a
             href={restaurant.website}

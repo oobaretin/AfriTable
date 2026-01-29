@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import type { Database } from "@db/database.types";
 import { useBookingDrawer } from "@/contexts/BookingDrawerContext";
@@ -123,11 +122,10 @@ export function RestaurantCard({
         ? "border-[#C69C2B]/40 shadow-[0_0_20px_rgba(198,156,43,0.15)] hover:shadow-[0_0_30px_rgba(198,156,43,0.25)]" 
         : "border-slate-100"
     }`}>
-      {/* Image Container */}
-      <Link
+      {/* Image/content: use <a> for full navigation so restaurant page always matches URL (avoids RSC state showing wrong restaurant) */}
+      <a
         href={safeHref}
         className="block relative z-10 pointer-events-auto touch-manipulation"
-        prefetch={false}
       >
         <div className="relative w-full overflow-hidden aspect-[4/3] bg-white/5">
           <Image
@@ -219,17 +217,16 @@ export function RestaurantCard({
             </div>
           )}
         </div>
-      </Link>
+      </a>
 
-      {/* View Details - separate link so it always receives clicks */}
+      {/* View Details - use <a> for full navigation so URL and content always match (avoids RSC router state mismatch) */}
       <div className="px-5 pb-2">
-        <Link
+        <a
           href={safeHref}
           className="block w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-20 pointer-events-auto touch-manipulation cursor-pointer"
-          prefetch={false}
         >
           View Details →
-        </Link>
+        </a>
       </div>
 
       {/* Find Table Button */}
