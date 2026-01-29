@@ -1,9 +1,9 @@
 "use client";
 
-import { BookingModal } from "./BookingModal";
+import { BookingDrawer } from "./BookingDrawer";
 import { useBookingDrawer } from "@/contexts/BookingDrawerContext";
 
 export function BookingDrawerWrapper() {
   const { isOpen, closeDrawer, restaurant } = useBookingDrawer();
-  return <BookingModal isOpen={isOpen} onClose={closeDrawer} restaurant={restaurant} />;
+  return <BookingDrawer isOpen={isOpen} onClose={closeDrawer} restaurant={restaurant} />;
 }
