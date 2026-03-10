@@ -55,7 +55,7 @@ export function ContactAndMap() {
   }
 
   return (
-    <section className="py-24 px-6 bg-white overflow-hidden">
+    <section className="py-24 px-6 bg-white overflow-visible" aria-label="Contact form and map">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           
@@ -89,34 +89,43 @@ export function ContactAndMap() {
               ))}
             </div>
 
-            {/* Notify Me Form */}
+            {/* Contact / Notify Me Form - all inputs have id and name for accessibility and console */}
             <div className="mb-12 p-6 rounded-2xl border border-brand-bronze/10 bg-brand-paper">
-              <h4 className="text-sm font-black text-brand-dark mb-4 uppercase tracking-tight">
+              <h4 id="contact-form-heading" className="text-sm font-black text-brand-dark mb-4 uppercase tracking-tight">
                 Notify Me When We Launch
               </h4>
-              <form onSubmit={handleNotifyMe} className="space-y-3">
-                <Select value={selectedCity} onValueChange={setSelectedCity} required>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Select your city" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {cities.map((city) => (
-                      <SelectItem key={city} value={city}>
-                        {city}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+              <form onSubmit={handleNotifyMe} className="space-y-3" aria-labelledby="contact-form-heading">
+                <input type="hidden" name="city" value={selectedCity} aria-hidden readOnly />
+                <div>
+                  <label htmlFor="contact-city" className="sr-only">Select your city</label>
+                  <Select value={selectedCity} onValueChange={setSelectedCity} required>
+                    <SelectTrigger id="contact-city" className="w-full" aria-label="Select your city">
+                      <SelectValue placeholder="Select your city" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {cities.map((city) => (
+                        <SelectItem key={city} value={city}>
+                          {city}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
                 <div className="flex gap-2">
+                  <label htmlFor="contact-email" className="sr-only">Your email</label>
                   <Input
+                    id="contact-email"
+                    name="email"
                     type="email"
                     placeholder="Your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     className="flex-1"
+                    autoComplete="email"
+                    aria-label="Your email"
                   />
-                  <Button type="submit" disabled={loading} className="btn-bronze whitespace-nowrap">
+                  <Button type="submit" disabled={loading} className="btn-bronze whitespace-nowrap" aria-label={loading ? "Submitting" : "Notify Me"}>
                     {loading ? "..." : "Notify Me"}
                   </Button>
                 </div>
@@ -152,40 +161,19 @@ export function ContactAndMap() {
             </div>
           </div>
 
-          {/* Right: Stylized Map Visual */}
-          <div className="relative">
-            <div className="aspect-square bg-brand-paper rounded-[3rem] border border-brand-bronze/5 relative overflow-hidden group">
-              {/* Map Background Pattern */}
-              <div className="absolute inset-0 opacity-10 grayscale hover:grayscale-0 transition-all duration-700 bg-[url('https://www.transparenttextures.com/patterns/world-map.png')] bg-center bg-no-repeat bg-contain"></div>
-              
-              {/* Map Pins (Simulated) */}
-              <div className="absolute top-1/4 left-1/3 animate-bounce">
-                <div className="h-4 w-4 rounded-full bg-brand-mutedRed shadow-[0_0_15px_rgba(163,59,50,0.5)]"></div>
-              </div>
-              <div className="absolute bottom-1/3 right-1/4 animate-bounce" style={{ animationDelay: "150ms" }}>
-                <div className="h-4 w-4 rounded-full bg-brand-forest shadow-[0_0_15px_rgba(45,90,39,0.5)]"></div>
-              </div>
-              <div className="absolute top-1/2 right-1/2 animate-bounce" style={{ animationDelay: "300ms" }}>
-                <div className="h-4 w-4 rounded-full bg-brand-ochre shadow-[0_0_15px_rgba(198,156,43,0.5)]"></div>
-              </div>
-
-              {/* Stats Overlay */}
-              <div className="absolute bottom-8 left-8 right-8 bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-white shadow-xl">
-                 <p className="text-[10px] font-black uppercase text-brand-bronze mb-2">Network Status</p>
-                 <div className="flex justify-between items-end">
-                    <div>
-                       <p className="text-2xl font-black text-brand-dark">Launching</p>
-                       <p className="text-xs font-bold text-slate-500">Spring 2026</p>
-                    </div>
-                    <div className="text-right">
-                       <p className="text-sm font-black text-brand-forest">95% Ready</p>
-                       <div className="w-24 h-1.5 bg-slate-200 rounded-full mt-1 overflow-hidden">
-                          <div className="h-full bg-brand-forest w-[95%] transition-all duration-500"></div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-            </div>
+          {/* Right: Google Maps Embed - Houston, TX with dark-mode filter to match dark blue theme */}
+          <div className="w-full h-[450px] rounded-2xl border border-white/10 overflow-hidden bg-[#000814]">
+            <iframe
+              title="AfriTable - Houston, TX"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221448.2578125!2d-95.3698!3d29.7604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d74def889065!2sHouston%2C%20TX%2C%20USA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            />
           </div>
 
         </div>
