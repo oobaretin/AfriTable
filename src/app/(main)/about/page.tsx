@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { ContactAndMap } from "@/components/home/ContactAndMap";
-import { PLACEHOLDERS } from "@/lib/placeholders";
 
 export default function AboutPage() {
   return (
@@ -89,70 +88,79 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Meet the Team Section */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-black text-slate-900 mb-4">Meet the Team</h2>
-            <div className="h-1 w-20 bg-orange-600 mx-auto"></div>
-            <p className="mt-4 text-lg text-slate-600">
-              The passionate people building AfriTable
+      {/* Meet the Founder Section - 3D dark blue theme to match Hero */}
+      <section className="py-24 px-6 bg-[#000814] relative overflow-hidden">
+        {/* Subtle isometric-style background accent */}
+        <div
+          className="absolute inset-0 opacity-20 pointer-events-none"
+          style={{
+            backgroundImage: `
+              linear-gradient(30deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d),
+              linear-gradient(150deg, #001d3d 12%, transparent 12.5%, transparent 87%, #001d3d 87.5%, #001d3d)
+            `,
+            backgroundSize: "60px 104px",
+            backgroundPosition: "0 0, 30px 52px",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#000814]/30 to-[#000814] pointer-events-none" />
+
+        <div className="max-w-2xl mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">
+              The Visionary Behind AfriTable
+            </h2>
+            <p className="text-slate-400 text-sm font-semibold uppercase tracking-widest">
+              Meet the Founder
             </p>
+            <div className="h-1 w-16 bg-[#C69C2B] mx-auto mt-4 rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Founder */}
-            <div className="text-center">
-              <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg relative">
-                <Image 
-                  src="/api/placeholder/200/200" 
-                  alt="Founder" 
-                  width={200}
-                  height={200}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Founder</h3>
-              <p className="text-sm text-slate-500 mb-4">Leadership & Vision</p>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Building the platform that connects the diaspora with authentic culinary experiences.
-              </p>
+          {/* Single centered founder card */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-10 shadow-2xl shadow-black/20 flex flex-col items-center text-center">
+            <div className="mb-6 w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden ring-4 ring-[#C69C2B]/30 ring-offset-4 ring-offset-[#000814] shadow-xl flex-shrink-0">
+              <Image
+                src="/api/placeholder/400/400"
+                alt="Founder of AfriTable"
+                width={400}
+                height={400}
+                className="w-full h-full object-cover"
+              />
             </div>
-
-            {/* Head of Growth */}
-            <div className="text-center">
-              <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg">
-                <Image 
-                  src={PLACEHOLDERS.square(200)}
-                  alt="Head of Growth" 
-                  width={200}
-                  height={200}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Head of Growth</h3>
-              <p className="text-sm text-slate-500 mb-4">Marketing & Expansion</p>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Growing our community of restaurants and diners across cities.
-              </p>
-            </div>
-
-            {/* Community Lead */}
-            <div className="text-center">
-              <div className="mb-6 mx-auto w-48 h-48 rounded-full bg-slate-200 overflow-hidden shadow-lg relative">
-                <Image 
-                  src={PLACEHOLDERS.square(200)}
-                  alt="Community Lead" 
-                  width={200}
-                  height={200}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Community Lead</h3>
-              <p className="text-sm text-slate-500 mb-4">Engagement & Support</p>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Fostering connections between restaurants and their communities.
-              </p>
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-1">Founder &amp; CEO</h3>
+            <p className="text-[#C69C2B] text-sm font-semibold mb-6">AfriTable</p>
+            <p className="text-slate-300 leading-relaxed max-w-lg mb-8">
+              I built AfriTable from a deep love for authentic Jamaican dining and the wider Caribbean and African table. 
+              There&apos;s nothing like the real thing—jerk that tastes of pimento and smoke, oxtail that falls off the bone, 
+              and the warmth of food made with generations of tradition. I started this platform so that the diaspora and 
+              every curious diner can find and book those experiences easily. Our food is a language of love; AfriTable 
+              is here to make sure it always has a seat at the table.
+            </p>
+            {/* Social links */}
+            <div className="flex items-center justify-center gap-4">
+              <a
+                href="https://www.linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white hover:bg-[#C69C2B]/20 hover:border-[#C69C2B]/50 transition-colors text-sm font-semibold"
+                aria-label="LinkedIn"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="https://www.instagram.com/yourhandle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white hover:bg-[#C69C2B]/20 hover:border-[#C69C2B]/50 transition-colors text-sm font-semibold"
+                aria-label="Instagram"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+                Instagram
+              </a>
             </div>
           </div>
         </div>
