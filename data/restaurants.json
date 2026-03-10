@@ -224,22 +224,19 @@
       "mon": "Closed"
     },
     "vibe": "Sexy & Musical",
-    "vibe_tags": ["Sexy & Musical"],
+    "vibe_tags": [
+      "Fine Dining"
+    ],
     "specialty": "Vinyl & Jerk Chicken",
-    "menu_highlights": ["Jerk Chicken"],
-    "vibe_category": "Authentic Staples",
-    "about": "A retro-cool, vinyl-filled Caribbean hideaway that feels like an intimate Brooklyn apartment party in the 70s.",
-    "our_story": "We created a space where music and food are inseparable, featuring one of the largest vinyl collections in the South alongside elite fusion dishes.",
-    "cultural_roots": "A 'love letter' to the West Indian diaspora, blending French technique with the soulful spices of the islands.",
     "menu_highlights": [
       "Oxtail Hummus",
       "Tamarind Glazed Short Ribs",
       "Curry Goat"
     ],
-    "vibe_tags": [
-      "Fine Dining"
-    ],
-    "vibe_category": "Fine Dining"
+    "vibe_category": "Fine Dining",
+    "about": "A retro-cool, vinyl-filled Caribbean hideaway that feels like an intimate Brooklyn apartment party in the 70s.",
+    "our_story": "We created a space where music and food are inseparable, featuring one of the largest vinyl collections in the South alongside elite fusion dishes.",
+    "cultural_roots": "A 'love letter' to the West Indian diaspora, blending French technique with the soulful spices of the islands."
   },
   {
     "id": "blaqhaus-atlanta",
@@ -494,7 +491,9 @@
       "mon": "Closed"
     },
     "vibe": "Cultural Education",
-    "vibe_tags": ["Cultural Education"],
+    "vibe_tags": [
+      "Cultural Education"
+    ],
     "specialty": "Senegalese Domoda",
     "vibe_category": "Authentic Staples",
     "about": "An upscale dining destination celebrating the rich history and flavors of The Gambia and Senegal.",
@@ -504,8 +503,7 @@
       "Benachin (Jollof Rice)",
       "Domoda (Peanut Stew)",
       "Superkanja (Okra Stew)"
-    ],
-    "vibe_category": "Authentic Staples"
+    ]
   },
   {
     "id": "bukom-cafe-dc",
@@ -645,22 +643,26 @@
     "vibe_category": "Authentic Staples"
   },
   {
-    "id": "kulan-cafe-houston",
+    "id": "kulan-cafe",
     "name": "Kulan Cafe",
-    "cuisine": "Somali",
+    "cuisine": "East African",
     "region": "East African",
-    "price_range": "$",
-    "rating": 4.5,
-    "address": "8321 Westpark Dr, Houston, TX 77063",
-    "phone": "(713) 952-4441",
-    "website": "N/A",
-    "social": {
-      "instagram": "@kulancafe_houston"
-    },
+    "price_range": "$$",
+    "rating": 4.8,
+    "address": "3821 S George Mason Dr, Falls Church, VA 22041",
+    "phone": "(703) 998-2525",
+    "website": "https://kulanrestaurant.wordpress.com",
+    "social": {},
     "hours": {
-      "mon_sun": "8:00 AM - 10:00 PM"
+      "monday": "12:00 PM - 10:00 PM",
+      "tuesday": "12:00 PM - 10:00 PM",
+      "wednesday": "12:00 PM - 10:00 PM",
+      "thursday": "12:00 PM - 10:00 PM",
+      "friday": "12:00 PM - 10:00 PM",
+      "saturday": "12:00 PM - 10:00 PM",
+      "sunday": "12:00 PM - 10:00 PM"
     },
-    "about": "A staple of Houston's Somali community, Kulan Cafe is famous for its massive portions and signature spiced goat.",
+    "about": "East African restaurant in Build America Plaza. Kulan Cafe is famous for its massive portions and signature spiced goat, plus Somali tea and rice dishes.",
     "our_story": "We built Kulan to be a gathering place—a 'Kulan'—where people can start their day with Somali tea and end it with a mountain of rice and tender meat.",
     "cultural_roots": "Somali cuisine is a crossroads of flavors from the Horn of Africa, India, and Italy, characterized by the use of 'Xawaash' spice mix and the inevitable banana served on the side.",
     "menu_highlights": [
@@ -1756,7 +1758,7 @@
     "rating": 4.9,
     "address": "800 Maine Ave SW, Washington, DC 20024",
     "zip": "20024",
-    "lat": 38.880,
+    "lat": 38.88,
     "lng": -77.022,
     "phone": "(202) 978-1320",
     "website": "https://www.dogonwdc.com/",
@@ -2066,7 +2068,7 @@
     "rating": 4.7,
     "address": "1612 N Cahuenga Blvd, Los Angeles, CA 90028",
     "zip": "90028",
-    "lat": 34.100,
+    "lat": 34.1,
     "lng": -118.329,
     "phone": "(323) 450-9311",
     "website": "https://www.statushollywood.com/",
@@ -2312,9 +2314,14 @@
     "phone": "(713) 589-9055",
     "website": "https://tasteofnigeria.com/",
     "vibe": "Vibrant & Culturally Rich",
-    "vibe_tags": ["Vibrant & Culturally Rich"],
+    "vibe_tags": [
+      "Vibrant & Culturally Rich"
+    ],
     "specialty": "Jollof Rice & Beef Suya",
-    "menu_highlights": ["Jollof Rice", "Beef Suya"],
+    "menu_highlights": [
+      "Jollof Rice",
+      "Beef Suya"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "A major player in the Houston scene, known for traditional flavors."
   },
@@ -2332,9 +2339,14 @@
     "phone": "(832) 834-3141",
     "website": "https://komchop.com/",
     "vibe": "Modern Casual / Family-Friendly",
-    "vibe_tags": ["Modern Casual / Family-Friendly"],
+    "vibe_tags": [
+      "Modern Casual / Family-Friendly"
+    ],
     "specialty": "Grilled Fish & Efo Riro",
-    "menu_highlights": ["Grilled Fish", "Efo Riro"],
+    "menu_highlights": [
+      "Grilled Fish",
+      "Efo Riro"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "Very consistent quality; a go-to for Westheimer locals."
   },
@@ -2352,9 +2364,14 @@
     "phone": "(713) 270-7070",
     "website": "https://fingerlickinghtx.com/",
     "vibe": "Lively / High-Volume",
-    "vibe_tags": ["Lively / High-Volume"],
+    "vibe_tags": [
+      "Lively / High-Volume"
+    ],
     "specialty": "Pounded Yam & Egusi Soup",
-    "menu_highlights": ["Pounded Yam", "Egusi Soup"],
+    "menu_highlights": [
+      "Pounded Yam",
+      "Egusi Soup"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "Famous for their generous portions and 'at-home' taste."
   },
@@ -2369,9 +2386,14 @@
     "phone": "(346) 319-3837",
     "website": "https://sarabellcalabarrestaurant.com/",
     "vibe": "Warm / Boutique Dining",
-    "vibe_tags": ["Warm / Boutique Dining"],
+    "vibe_tags": [
+      "Warm / Boutique Dining"
+    ],
     "specialty": "Edikang Ikong & Afang Soup",
-    "menu_highlights": ["Edikang Ikong", "Afang Soup"],
+    "menu_highlights": [
+      "Edikang Ikong",
+      "Afang Soup"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "Specializes in the rich, seafood-heavy dishes of the Calabar region."
   },
@@ -2389,9 +2411,13 @@
     "phone": "(281) 665-1216",
     "website": "https://amalajointonline.com/",
     "vibe": "Local Gem / Casual",
-    "vibe_tags": ["Local Gem / Casual"],
+    "vibe_tags": [
+      "Local Gem / Casual"
+    ],
     "specialty": "Amala with Ewedu & Gbegiri",
-    "menu_highlights": ["Amala with Ewedu & Gbegiri"],
+    "menu_highlights": [
+      "Amala with Ewedu & Gbegiri"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "Essential for the Katy community; arguably the best Amala in the area."
   },
@@ -2406,9 +2432,13 @@
     "phone": "(281) 741-2661",
     "website": "https://amalazone.com/",
     "vibe": "Modern / Clean & Sleek",
-    "vibe_tags": ["Modern / Clean & Sleek"],
+    "vibe_tags": [
+      "Modern / Clean & Sleek"
+    ],
     "specialty": "Abula (Amala, Ewedu, Gbegiri)",
-    "menu_highlights": ["Abula (Amala, Ewedu, Gbegiri)"],
+    "menu_highlights": [
+      "Abula (Amala, Ewedu, Gbegiri)"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "High-quality presentation and a very clean, inviting space."
   },
@@ -2423,9 +2453,14 @@
     "phone": "(832) 532-7561",
     "website": "https://grainsandsolids.com/",
     "vibe": "Boutique Cafe / Health-Conscious",
-    "vibe_tags": ["Boutique Cafe / Health-Conscious"],
+    "vibe_tags": [
+      "Boutique Cafe / Health-Conscious"
+    ],
     "specialty": "Red Rice & Designer Stew",
-    "menu_highlights": ["Red Rice", "Designer Stew"],
+    "menu_highlights": [
+      "Red Rice",
+      "Designer Stew"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "Focuses on high-quality grains and a more 'cafe' style experience."
   },
@@ -2440,9 +2475,14 @@
     "phone": "(832) 831-2947",
     "website": "https://order.online/store/chef-benny-african-restaurant-houston-1523235",
     "vibe": "Welcoming / Authentic",
-    "vibe_tags": ["Welcoming / Authentic"],
+    "vibe_tags": [
+      "Welcoming / Authentic"
+    ],
     "specialty": "Asun (Spicy Goat) & Jollof Rice",
-    "menu_highlights": ["Asun (Spicy Goat)", "Jollof Rice"],
+    "menu_highlights": [
+      "Asun (Spicy Goat)",
+      "Jollof Rice"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "Widely praised for the bold spice levels and consistent seasoning."
   },
@@ -2457,9 +2497,14 @@
     "phone": "(832) 251-5151",
     "website": "http://afrikikohouston.com/",
     "vibe": "Unassuming / Local Favorite",
-    "vibe_tags": ["Unassuming / Local Favorite"],
+    "vibe_tags": [
+      "Unassuming / Local Favorite"
+    ],
     "specialty": "Waakye & Groundnut Soup",
-    "menu_highlights": ["Waakye", "Groundnut Soup"],
+    "menu_highlights": [
+      "Waakye",
+      "Groundnut Soup"
+    ],
     "vibe_category": "Community Favorites",
     "about": "A legendary family-owned spot for over 15 years. It's the gold standard for Ghanaian comfort food in SW Houston."
   },
@@ -2474,9 +2519,14 @@
     "phone": "(832) 831-2947",
     "website": "https://www.dakarstreetfood.com/",
     "vibe": "Counter-Service / Takeout Hub",
-    "vibe_tags": ["Counter-Service / Takeout Hub"],
+    "vibe_tags": [
+      "Counter-Service / Takeout Hub"
+    ],
     "specialty": "Thieboudienne & Nem (Spring Rolls)",
-    "menu_highlights": ["Thieboudienne", "Nem (Spring Rolls)"],
+    "menu_highlights": [
+      "Thieboudienne",
+      "Nem (Spring Rolls)"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "Primary takeout operation in Westchase/Third Ward area. Fast, affordable, and incredibly consistent."
   },
@@ -2494,9 +2544,14 @@
     "phone": "(832) 913-6465",
     "website": "https://astorstable.com/",
     "vibe": "Fine Dining",
-    "vibe_tags": ["Fine Dining"],
+    "vibe_tags": [
+      "Fine Dining"
+    ],
     "specialty": "Beef Suya Astor & Peri-Peri Chicken",
-    "menu_highlights": ["Beef Suya Astor", "Peri-Peri Chicken"],
+    "menu_highlights": [
+      "Beef Suya Astor",
+      "Peri-Peri Chicken"
+    ],
     "vibe_category": "Fine Dining",
     "about": "Chef Casey brings a unique South African flair to Katy. Great for a casual but 'stepped-up' lunch."
   },
@@ -2511,9 +2566,14 @@
     "phone": "(281) 265-1550",
     "website": "https://www.suyahut.com/",
     "vibe": "Specialized / Street Food Vibe",
-    "vibe_tags": ["Specialized / Street Food Vibe"],
+    "vibe_tags": [
+      "Specialized / Street Food Vibe"
+    ],
     "specialty": "Authentic Beef & Chicken Suya",
-    "menu_highlights": ["Authentic Beef Suya", "Chicken Suya"],
+    "menu_highlights": [
+      "Authentic Beef Suya",
+      "Chicken Suya"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "If you just want suya and jollof for a Tuesday night, this is the most reliable spot in the area."
   },
@@ -2528,9 +2588,14 @@
     "phone": "(713) 782-5220",
     "website": "http://www.bluenileethiopian.com/",
     "vibe": "Quiet / Traditional",
-    "vibe_tags": ["Quiet / Traditional"],
+    "vibe_tags": [
+      "Quiet / Traditional"
+    ],
     "specialty": "Doro Wat & Injera Platters",
-    "menu_highlights": ["Doro Wat", "Injera Platters"],
+    "menu_highlights": [
+      "Doro Wat",
+      "Injera Platters"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "The 'Daily Driver' of Ethiopian food. Clean, professional, and has been a staple for years."
   },
@@ -2548,9 +2613,14 @@
     "phone": "(832) 831-4372",
     "website": "https://ariasuyakitchen.com/",
     "vibe": "Daily Driver",
-    "vibe_tags": ["Daily Driver"],
+    "vibe_tags": [
+      "Daily Driver"
+    ],
     "specialty": "Grilled Lamb Chops & Jollof",
-    "menu_highlights": ["Grilled Lamb Chops", "Jollof"],
+    "menu_highlights": [
+      "Grilled Lamb Chops",
+      "Jollof"
+    ],
     "vibe_category": "Community Favorites",
     "about": "Slightly more 'upscale' than a standard joint, but still very much a regular spot for the Galleria crowd."
   },
@@ -2565,9 +2635,13 @@
     "phone": "(713) 589-9055",
     "website": "https://jollofriceking.com/",
     "vibe": "Fast-Casual / Reliable",
-    "vibe_tags": ["Fast-Casual / Reliable"],
+    "vibe_tags": [
+      "Fast-Casual / Reliable"
+    ],
     "specialty": "Smoky Jollof Rice",
-    "menu_highlights": ["Smoky Jollof Rice"],
+    "menu_highlights": [
+      "Smoky Jollof Rice"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "Owned by the same team as 'Taste of Nigeria.' This is their high-speed, high-volume operation."
   },
@@ -2582,9 +2656,14 @@
     "phone": "(713) 777-1566",
     "website": "https://coolrunningsjamaicangrill.com/",
     "vibe": "Island Vibes / Highly Popular",
-    "vibe_tags": ["Island Vibes / Highly Popular"],
+    "vibe_tags": [
+      "Island Vibes / Highly Popular"
+    ],
     "specialty": "Brown Stew Snapper & Escovitch Fish",
-    "menu_highlights": ["Brown Stew Snapper", "Escovitch Fish"],
+    "menu_highlights": [
+      "Brown Stew Snapper",
+      "Escovitch Fish"
+    ],
     "vibe_category": "Community Favorites",
     "about": "A legendary Houston staple. It has national fame from 'Diners, Drive-Ins and Dives' but stays true to its roots."
   },
@@ -2602,9 +2681,14 @@
     "phone": "(832) 437-0570",
     "website": "https://butterdroti.com/",
     "vibe": "Cottage / Authentic Takeout",
-    "vibe_tags": ["Cottage / Authentic Takeout"],
+    "vibe_tags": [
+      "Cottage / Authentic Takeout"
+    ],
     "specialty": "Buss-up-Shut Roti & Chicken Curry",
-    "menu_highlights": ["Buss-up-Shut Roti", "Chicken Curry"],
+    "menu_highlights": [
+      "Buss-up-Shut Roti",
+      "Chicken Curry"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "One of the few spots in Katy for authentic Trinidadian Roti. It's a true hidden gem for those in the know."
   },
@@ -2619,9 +2703,14 @@
     "phone": "(713) 453-3222",
     "website": "https://fabaceaeafrican.com/",
     "vibe": "Modern / Bright & Clean",
-    "vibe_tags": ["Modern / Bright & Clean"],
+    "vibe_tags": [
+      "Modern / Bright & Clean"
+    ],
     "specialty": "Abula & Designer Stew",
-    "menu_highlights": ["Abula", "Designer Stew"],
+    "menu_highlights": [
+      "Abula",
+      "Designer Stew"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "Consistently ranked as one of the best for Yoruba-style Nigerian food. Their designer stew is a fan favorite."
   },
@@ -2636,9 +2725,14 @@
     "phone": "(713) 334-0000",
     "website": "https://lucyhouston.com/",
     "vibe": "Upscale Lounge / Cultural Hub",
-    "vibe_tags": ["Upscale Lounge / Cultural Hub"],
+    "vibe_tags": [
+      "Upscale Lounge / Cultural Hub"
+    ],
     "specialty": "Lucy Special Tibs & Veggie Platter",
-    "menu_highlights": ["Lucy Special Tibs", "Veggie Platter"],
+    "menu_highlights": [
+      "Lucy Special Tibs",
+      "Veggie Platter"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "The perfect 'bridge' between a daily driver and a night out. It has great energy and some of the best tibs in town."
   },
@@ -2653,9 +2747,14 @@
     "phone": "(281) 201-1634",
     "website": "https://nyammingsfusionbistro.com/",
     "vibe": "Casual & Friendly",
-    "vibe_tags": ["Casual & Friendly"],
+    "vibe_tags": [
+      "Casual & Friendly"
+    ],
     "specialty": "Curry Goat & Oxtail Mac n Cheese",
-    "menu_highlights": ["Curry Goat", "Oxtail Mac n Cheese"],
+    "menu_highlights": [
+      "Curry Goat",
+      "Oxtail Mac n Cheese"
+    ],
     "vibe_category": "Community Favorites",
     "about": "Perfect for the Richmond/Katy border. They specialize in 'fusion' comfort food that keeps people coming back."
   },
@@ -2670,9 +2769,14 @@
     "phone": "(713) 222-2600",
     "website": "http://www.caribbeanhotpotgrill.com/",
     "vibe": "Hearty & No-Frills",
-    "vibe_tags": ["Hearty & No-Frills"],
+    "vibe_tags": [
+      "Hearty & No-Frills"
+    ],
     "specialty": "Curry Chicken & Stewed Beef",
-    "menu_highlights": ["Curry Chicken", "Stewed Beef"],
+    "menu_highlights": [
+      "Curry Chicken",
+      "Stewed Beef"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "Famous for their massive portions and affordability. It's a true worker's lunch spot."
   },
@@ -2686,9 +2790,13 @@
     "address": "Harlem, New York, NY",
     "neighborhood": "Little Senegal (Harlem)",
     "vibe": "Legendary Staple",
-    "vibe_tags": ["Legendary Staple"],
+    "vibe_tags": [
+      "Legendary Staple"
+    ],
     "specialty": "Mafe",
-    "menu_highlights": ["Mafe"],
+    "menu_highlights": [
+      "Mafe"
+    ],
     "vibe_category": "Community Favorites",
     "about": "A legendary staple in Harlem's Little Senegal, known for authentic Senegalese dishes like Mafe."
   },
@@ -2702,9 +2810,13 @@
     "address": "Brooklyn, NY",
     "neighborhood": "Bed-Stuy",
     "vibe": "Brooklyn Cool",
-    "vibe_tags": ["Brooklyn Cool"],
+    "vibe_tags": [
+      "Brooklyn Cool"
+    ],
     "specialty": "Goat Pepper Soup",
-    "menu_highlights": ["Goat Pepper Soup"],
+    "menu_highlights": [
+      "Goat Pepper Soup"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "A Brooklyn cool spot in Bed-Stuy, serving authentic Nigerian dishes like Goat Pepper Soup."
   },
@@ -2718,9 +2830,13 @@
     "address": "Midtown, New York, NY",
     "neighborhood": "Midtown",
     "vibe": "Midtown Escape",
-    "vibe_tags": ["Midtown Escape"],
+    "vibe_tags": [
+      "Midtown Escape"
+    ],
     "specialty": "Jazzy Pasta",
-    "menu_highlights": ["Jazzy Pasta"],
+    "menu_highlights": [
+      "Jazzy Pasta"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "A Midtown escape serving Caribbean fusion dishes like Jazzy Pasta."
   },
@@ -2734,9 +2850,13 @@
     "address": "H Street Corridor, Washington, DC",
     "neighborhood": "H Street Corridor",
     "vibe": "Ghanaian Social",
-    "vibe_tags": ["Ghanaian Social"],
+    "vibe_tags": [
+      "Ghanaian Social"
+    ],
     "specialty": "Kelewele",
-    "menu_highlights": ["Kelewele"],
+    "menu_highlights": [
+      "Kelewele"
+    ],
     "vibe_category": "Community Favorites",
     "about": "A Ghanaian social hub in DC's H Street Corridor, known for authentic dishes like Kelewele."
   },
@@ -2750,9 +2870,13 @@
     "address": "Silver Spring, MD",
     "neighborhood": "Silver Spring",
     "vibe": "Best in DC",
-    "vibe_tags": ["Best in DC"],
+    "vibe_tags": [
+      "Best in DC"
+    ],
     "specialty": "Injera Platters",
-    "menu_highlights": ["Injera Platters"],
+    "menu_highlights": [
+      "Injera Platters"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "Considered the best Ethiopian restaurant in the DC area, specializing in authentic Injera platters."
   },
@@ -2766,9 +2890,14 @@
     "address": "Inglewood, CA",
     "neighborhood": "Inglewood",
     "vibe": "Inglewood Legend",
-    "vibe_tags": ["Inglewood Legend"],
+    "vibe_tags": [
+      "Inglewood Legend"
+    ],
     "specialty": "Egusi & Fufu",
-    "menu_highlights": ["Egusi", "Fufu"],
+    "menu_highlights": [
+      "Egusi",
+      "Fufu"
+    ],
     "vibe_category": "Community Favorites",
     "about": "An Inglewood legend serving authentic Nigerian dishes like Egusi and Fufu."
   },
@@ -2782,9 +2911,13 @@
     "address": "Little Ethiopia (Fairfax), Los Angeles, CA",
     "neighborhood": "Little Ethiopia (Fairfax)",
     "vibe": "Historic Staple",
-    "vibe_tags": ["Historic Staple"],
+    "vibe_tags": [
+      "Historic Staple"
+    ],
     "specialty": "Ethiopian Shared Plates",
-    "menu_highlights": ["Ethiopian Shared Plates"],
+    "menu_highlights": [
+      "Ethiopian Shared Plates"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "A historic staple in LA's Little Ethiopia, known for authentic Ethiopian shared plates."
   },
@@ -2797,9 +2930,13 @@
     "rating": 4.5,
     "address": "Los Angeles, CA",
     "vibe": "Mobile Quality",
-    "vibe_tags": ["Mobile Quality"],
+    "vibe_tags": [
+      "Mobile Quality"
+    ],
     "specialty": "Cameroonian Puff Puff",
-    "menu_highlights": ["Cameroonian Puff Puff"],
+    "menu_highlights": [
+      "Cameroonian Puff Puff"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "A mobile-quality spot serving authentic Cameroonian dishes like Puff Puff."
   },
@@ -2813,9 +2950,14 @@
     "address": "Peachtree Corners, GA",
     "neighborhood": "Peachtree Corners",
     "vibe": "West African Fusion",
-    "vibe_tags": ["West African Fusion"],
+    "vibe_tags": [
+      "West African Fusion"
+    ],
     "specialty": "Attiéké & Tilapia",
-    "menu_highlights": ["Attiéké", "Tilapia"],
+    "menu_highlights": [
+      "Attiéké",
+      "Tilapia"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "A West African fusion spot in Peachtree Corners, specializing in dishes like Attiéké and Tilapia."
   },
@@ -2829,9 +2971,13 @@
     "address": "Buckhead, Atlanta, GA",
     "neighborhood": "Buckhead",
     "vibe": "Upscale Casual",
-    "vibe_tags": ["Upscale Casual"],
+    "vibe_tags": [
+      "Upscale Casual"
+    ],
     "specialty": "Caribbean Brunch",
-    "menu_highlights": ["Caribbean Brunch"],
+    "menu_highlights": [
+      "Caribbean Brunch"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "An upscale casual spot in Buckhead, known for Caribbean brunch offerings."
   },
@@ -2845,9 +2991,13 @@
     "address": "Uptown / Washington Park, Chicago, IL",
     "neighborhood": "Uptown / Washington Park",
     "vibe": "Authentic Comfort",
-    "vibe_tags": ["Authentic Comfort"],
+    "vibe_tags": [
+      "Authentic Comfort"
+    ],
     "specialty": "Senegalese Grilled Fish",
-    "menu_highlights": ["Senegalese Grilled Fish"],
+    "menu_highlights": [
+      "Senegalese Grilled Fish"
+    ],
     "vibe_category": "Authentic Staples",
     "about": "An authentic comfort spot in Chicago's Uptown/Washington Park area, specializing in Senegalese grilled fish."
   },
@@ -2866,7 +3016,9 @@
     "website": "https://royalarmrestaurant.com/",
     "neighborhood": "Cinco Ranch / Falcon Rock",
     "vibe": "Warm, Family-Friendly & Vibrant",
-    "vibe_tags": ["Warm, Family-Friendly & Vibrant"],
+    "vibe_tags": [
+      "Warm, Family-Friendly & Vibrant"
+    ],
     "specialty": "Egusi (Melon Stew) with Pounded Yam & Ayamase (Designer Rice)",
     "menu_highlights": [
       "Egusi (Melon Stew) with Pounded Yam",
@@ -2881,5 +3033,95 @@
     },
     "vibe_category": "Authentic Staples",
     "about": "A local Katy pillar that successfully bridges Nigerian staples with Caribbean favorites. Known for their meticulous preparation of 'swallow' dishes and their standout Designer Rice (Ayamase)."
+  },
+  {
+    "social": {},
+    "hours": {},
+    "about": "",
+    "our_story": "",
+    "cultural_roots": "",
+    "menu_highlights": [],
+    "vibe_category": "Authentic Staples",
+    "id": "bunna-cafe-nyc",
+    "name": "Bunna Cafe",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "1084 Flushing Ave, Brooklyn, NY 11237",
+    "phone": "(347) 295-2227",
+    "website": "https://bunnacafe.com"
+  },
+  {
+    "social": {},
+    "hours": {},
+    "about": "",
+    "our_story": "",
+    "cultural_roots": "",
+    "menu_highlights": [],
+    "vibe_category": "Authentic Staples",
+    "id": "swahili-village-dc",
+    "name": "Swahili Village",
+    "cuisine": "Kenyan / East African",
+    "region": "East African",
+    "price_range": "$$$",
+    "rating": 4.8,
+    "address": "1990 M St NW, Washington, DC 20036",
+    "phone": "(202) 714-9457",
+    "website": "https://swahilivillages.com"
+  },
+  {
+    "social": {},
+    "hours": {},
+    "about": "",
+    "our_story": "",
+    "cultural_roots": "",
+    "menu_highlights": [],
+    "vibe_category": "Authentic Staples",
+    "id": "iyanze-uptown",
+    "name": "Iyanze Bar & Cafe",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "4623 N Broadway, Chicago, IL 60640",
+    "phone": "(773) 633-2364",
+    "website": "https://iyanzeonline.com"
+  },
+  {
+    "social": {},
+    "hours": {},
+    "about": "",
+    "our_story": "",
+    "cultural_roots": "",
+    "menu_highlights": [],
+    "vibe_category": "Authentic Staples",
+    "id": "ubuntu-atl",
+    "name": "Ubuntu",
+    "cuisine": "West African (Vegan)",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "1050 Howell Mill Rd, Atlanta, GA 30318",
+    "phone": "(404) 937-3331",
+    "website": "https://www.ubuntualatl.com"
+  },
+  {
+    "social": {},
+    "hours": {},
+    "about": "",
+    "our_story": "",
+    "cultural_roots": "",
+    "menu_highlights": [],
+    "vibe_category": "Authentic Staples",
+    "id": "dakar-street-food-hou",
+    "name": "Dakar Street Food",
+    "cuisine": "Senegalese",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.5,
+    "address": "2923 Walnut Bend Ln, Houston, TX 77042",
+    "phone": "(832) 831-5074",
+    "website": "https://www.dakarstreetfood.com/"
   }
 ]
