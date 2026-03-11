@@ -21,14 +21,19 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
   const [email, setEmail] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  // Set default date to tomorrow
+  // Set default date to tomorrow and default time to 7:00 PM when drawer opens
   React.useEffect(() => {
-    if (isOpen && !date) {
-      const tomorrow = new Date();
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      setDate(tomorrow.toISOString().split("T")[0]);
+    if (isOpen) {
+      if (!date) {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        setDate(tomorrow.toISOString().split("T")[0]);
+      }
+      if (!time) {
+        setTime("19:00");
+      }
     }
-  }, [isOpen, date]);
+  }, [isOpen, date, time]);
 
   // Reset form when drawer closes
   React.useEffect(() => {
@@ -192,7 +197,8 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
                 onChange={(e) => setDate(e.target.value)}
                 min={new Date().toISOString().split("T")[0]}
                 required
-                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors"
+                style={{ colorScheme: "dark" }}
+                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors [&::-webkit-calendar-picker-indicator]:opacity-100 [&::-webkit-calendar-picker-indicator]:invert"
               />
             </div>
 
@@ -206,7 +212,8 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
                 required
-                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors"
+                style={{ colorScheme: "dark" }}
+                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors [&::-webkit-datetime-edit]:text-white [&::-webkit-datetime-edit-ampm-field]:text-white [&::-webkit-calendar-picker-indicator]:opacity-100 [&::-webkit-calendar-picker-indicator]:invert"
               />
             </div>
 
