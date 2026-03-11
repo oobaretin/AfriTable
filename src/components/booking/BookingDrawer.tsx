@@ -13,6 +13,18 @@ type BookingDrawerProps = {
 
 type DrawerStep = "booking" | "waitlist" | "thankyou";
 
+type AvailabilitySlot = { time: string; availableTables: number; status: "available" | "limited" | "unavailable" };
+
+function formatTimeHHmm(hhmm: string): string {
+  const [hStr, mStr] = hhmm.split(":");
+  const h = parseInt(hStr ?? "0", 10);
+  const m = parseInt(mStr ?? "0", 10);
+  if (h === 12) return `12:${String(m).padStart(2, "0")} PM`;
+  if (h === 0) return `12:${String(m).padStart(2, "0")} AM`;
+  if (h > 12) return `${h - 12}:${String(m).padStart(2, "0")} PM`;
+  return `${h}:${String(m).padStart(2, "0")} AM`;
+}
+
 export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProps) {
   const [date, setDate] = React.useState("");
   const [time, setTime] = React.useState("");
@@ -20,20 +32,79 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
   const [step, setStep] = React.useState<DrawerStep>("booking");
   const [email, setEmail] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [slots, setSlots] = React.useState<AvailabilitySlot[]>([]);
+  const [slotsLoading, setSlotsLoading] = React.useState(false);
+  const [slotsError, setSlotsError] = React.useState<string | null>(null);
 
-  // Set default date to tomorrow and default time to 7:00 PM when drawer opens
+  const restaurantId = restaurant ? (restaurant as any).slug ?? restaurant.id : "";
+
+  // Set default date to tomorrow when drawer opens
   React.useEffect(() => {
-    if (isOpen) {
-      if (!date) {
-        const tomorrow = new Date();
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        setDate(tomorrow.toISOString().split("T")[0]);
-      }
-      if (!time) {
-        setTime("19:00");
-      }
+    if (isOpen && !date) {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      setDate(tomorrow.toISOString().split("T")[0]);
     }
-  }, [isOpen, date, time]);
+  }, [isOpen, date]);
+
+  // Fetch availability when restaurant, date, or party size changes
+  React.useEffect(() => {
+    if (!isOpen || !restaurantId || !date) {
+      setSlots([]);
+      setSlotsError(null);
+      return;
+    }
+    let cancelled = false;
+    setSlotsLoading(true);
+    setSlotsError(null);
+    fetch(
+      `/api/restaurants/${encodeURIComponent(restaurantId)}/availability?date=${encodeURIComponent(date)}&partySize=${encodeURIComponent(partySize)}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (cancelled) return;
+        if (data?.error) {
+          setSlotsError(data.error === "not_found" ? "Availability not set for this restaurant." : "Could not load times.");
+          setSlots([]);
+          return;
+        }
+        const list = Array.isArray(data?.slots) ? data.slots : [];
+        setSlots(list);
+        setSlotsError(null);
+        // If current time is not in the new list, set to first available/limited slot or clear
+        setTime((prev) => {
+          const selectable = list.filter((s: AvailabilitySlot) => s.status !== "unavailable");
+          const hasPrev = selectable.some((s: AvailabilitySlot) => s.time === prev);
+          if (hasPrev) return prev;
+          const first = selectable[0];
+          return first ? first.time : "";
+        });
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setSlotsError("Could not load times.");
+          setSlots([]);
+        }
+      })
+      .finally(() => {
+        if (!cancelled) setSlotsLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [isOpen, restaurantId, date, partySize]);
+
+  // When we have slots and no time selected, default to first available
+  React.useEffect(() => {
+    if (time || !slots.length || slotsLoading) return;
+    const first = slots.find((s) => s.status !== "unavailable");
+    if (first) setTime(first.time);
+  }, [slots, slotsLoading, time]);
+
+  // When no availability from API (fallback mode) and time empty, default to 7:00 PM
+  React.useEffect(() => {
+    if (!slotsLoading && slots.length === 0 && date && !time) setTime("19:00");
+  }, [slotsLoading, slots.length, date, time]);
 
   // Reset form when drawer closes
   React.useEffect(() => {
@@ -44,6 +115,8 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
       setStep("booking");
       setEmail("");
       setIsSubmitting(false);
+      setSlots([]);
+      setSlotsError(null);
     }
   }, [isOpen]);
 
@@ -202,19 +275,51 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
               />
             </div>
 
-            {/* Time Input */}
+            {/* Time: select from available slots or fallback to time input */}
             <div>
               <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
                 Time
               </label>
-              <input
-                type="time"
-                value={time}
-                onChange={(e) => setTime(e.target.value)}
-                required
-                style={{ colorScheme: "dark" }}
-                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors [&::-webkit-datetime-edit]:text-white [&::-webkit-datetime-edit-ampm-field]:text-white [&::-webkit-calendar-picker-indicator]:opacity-100 [&::-webkit-calendar-picker-indicator]:invert"
-              />
+              {slotsLoading ? (
+                <p className="text-white/60 text-sm py-2">Loading available times…</p>
+              ) : (() => {
+                  const selectableSlots = slots.filter((s) => s.status !== "unavailable");
+                  if (selectableSlots.length > 0) {
+                    return (
+                      <select
+                        value={time}
+                        onChange={(e) => setTime(e.target.value)}
+                        required
+                        className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors appearance-none cursor-pointer"
+                      >
+                        <option value="" className="bg-[#050A18] text-white">
+                          Select a time
+                        </option>
+                        {selectableSlots.map((slot) => (
+                          <option key={slot.time} value={slot.time} className="bg-[#050A18] text-white">
+                            {formatTimeHHmm(slot.time)}
+                            {slot.status === "limited" ? " (few tables)" : ""}
+                          </option>
+                        ))}
+                      </select>
+                    );
+                  }
+                  return (
+                    <>
+                      {slotsError && (
+                        <p className="text-white/50 text-xs mb-2">{slotsError}</p>
+                      )}
+                      <input
+                        type="time"
+                        value={time}
+                        onChange={(e) => setTime(e.target.value)}
+                        required
+                        style={{ colorScheme: "dark" }}
+                        className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors [&::-webkit-datetime-edit]:text-white [&::-webkit-datetime-edit-ampm-field]:text-white [&::-webkit-calendar-picker-indicator]:opacity-100 [&::-webkit-calendar-picker-indicator]:invert"
+                      />
+                    </>
+                  );
+                })()}
             </div>
 
             {/* Guests Input */}
