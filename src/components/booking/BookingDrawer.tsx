@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import Image from "next/image";
 import type { RestaurantRow } from "@/components/restaurant/RestaurantCard";
@@ -26,6 +27,7 @@ function formatTimeHHmm(hhmm: string): string {
 }
 
 export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProps) {
+  const router = useRouter();
   const [date, setDate] = React.useState("");
   const [time, setTime] = React.useState("");
   const [partySize, setPartySize] = React.useState("2");
@@ -134,10 +136,16 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
 
   const handleBookingSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!restaurant) return;
+    if (!restaurant || !date || !time) return;
 
-    // Transition to Founding Member waitlist
-    setStep("waitlist");
+    // Same flow as View Details: go to reservation page with selected date, time, party
+    const params = new URLSearchParams();
+    params.set("restaurant", restaurantId);
+    params.set("date", date);
+    params.set("time", time);
+    params.set("party", partySize);
+    onClose();
+    router.push(`/reservations/new?${params.toString()}`);
   };
 
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
@@ -259,7 +267,26 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
           <div className="flex-1 transition-all duration-300">
             {step === "booking" && (
             <form onSubmit={handleBookingSubmit} className="p-8 space-y-10">
-            {/* Date Input */}
+            {/* Guests – same order as View Details (ReservationWidget) */}
+            <div>
+              <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
+                Guests
+              </label>
+              <select
+                value={partySize}
+                onChange={(e) => setPartySize(e.target.value)}
+                required
+                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors appearance-none cursor-pointer"
+              >
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((size) => (
+                  <option key={size} value={size} className="bg-[#050A18] text-white">
+                    {size} {size === 1 ? "Guest" : "Guests"}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Date */}
             <div>
               <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
                 Date
@@ -322,32 +349,13 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
                 })()}
             </div>
 
-            {/* Guests Input */}
-            <div>
-              <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
-                Guests
-              </label>
-              <select
-                value={partySize}
-                onChange={(e) => setPartySize(e.target.value)}
-                required
-                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors appearance-none cursor-pointer"
-              >
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((size) => (
-                  <option key={size} value={size} className="bg-[#050A18] text-white">
-                    {size} {size === 1 ? "Guest" : "Guests"}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Submit Button */}
+            {/* Submit – same outcome as View Details: go to reservation flow */}
             <div className="pt-8">
               <button
                 type="submit"
                 className="w-full bg-[#A33B32] hover:bg-[#A33B32]/90 text-white text-sm font-black px-8 py-5 rounded-full uppercase tracking-widest transition-all"
               >
-                Confirm Reservation
+                Find a Table
               </button>
             </div>
           </form>
