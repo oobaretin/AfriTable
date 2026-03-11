@@ -2,13 +2,38 @@
 
 import * as React from "react";
 
+const STORAGE_KEY = "afritable_founders_note_seen";
+
+function hasSeenFoundersNote(): boolean {
+  if (typeof window === "undefined") return true;
+  try {
+    return localStorage.getItem(STORAGE_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function markFoundersNoteSeen(): void {
+  try {
+    localStorage.setItem(STORAGE_KEY, "1");
+  } catch {
+    // ignore
+  }
+}
+
 export function FoundersNote() {
   const [isVisible, setIsVisible] = React.useState(false);
 
   React.useEffect(() => {
-    // Show the note 2 seconds after the user lands
+    if (hasSeenFoundersNote()) return;
+    // Show the note once, 2 seconds after the user lands
     const timer = setTimeout(() => setIsVisible(true), 2000);
     return () => clearTimeout(timer);
+  }, []);
+
+  const handleDismiss = React.useCallback(() => {
+    markFoundersNoteSeen();
+    setIsVisible(false);
   }, []);
 
   if (!isVisible) return null;
@@ -24,7 +49,7 @@ export function FoundersNote() {
         </div>
 
         <button 
-          onClick={() => setIsVisible(false)}
+          onClick={handleDismiss}
           className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors"
           aria-label="Close"
         >
@@ -47,7 +72,7 @@ export function FoundersNote() {
         </p>
 
         <button 
-          onClick={() => setIsVisible(false)}
+          onClick={handleDismiss}
           className="w-full btn-bronze py-2 rounded-lg text-xs font-bold text-white uppercase tracking-widest shadow-md shadow-brand-bronze/20"
         >
           Let&apos;s Explore
