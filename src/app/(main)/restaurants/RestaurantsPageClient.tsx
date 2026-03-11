@@ -16,22 +16,17 @@ type RestaurantsPageClientProps = {
 };
 
 export function RestaurantsPageClient({ restaurants }: RestaurantsPageClientProps) {
-  const [filteredRestaurants, setFilteredRestaurants] = React.useState<RestaurantWithDistance[] | null>(null);
-  const [isSearchActive, setIsSearchActive] = React.useState(false);
+  // Hold the current list from search (vibe-filtered; may include distance when zip is entered)
+  const [filteredRestaurants, setFilteredRestaurants] = React.useState<RestaurantWithDistance[]>(
+    () => restaurants.map((r) => ({ restaurant: r, distance: null }))
+  );
 
   const handleFilterChange = React.useCallback((filtered: RestaurantWithDistance[]) => {
-    // Check if search is active (has distance data, meaning zip code was entered)
-    // Only consider it a search if at least one restaurant has a non-null distance
-    const hasSearch = filtered.length > 0 && filtered.some((r) => r.distance !== null);
-    
-    setIsSearchActive(hasSearch);
-    if (hasSearch) {
-      setFilteredRestaurants(filtered);
-    } else {
-      // Reset to null when search is cleared - this will show the regular grid
-      setFilteredRestaurants(null);
-    }
+    setFilteredRestaurants(filtered);
   }, []);
+
+  const isSearchActive = filteredRestaurants.length > 0 && filteredRestaurants.some((r) => r.distance !== null);
+  const restaurantsForGrid = filteredRestaurants.map((r) => r.restaurant);
 
   return (
     <>
@@ -41,11 +36,11 @@ export function RestaurantsPageClient({ restaurants }: RestaurantsPageClientProp
         onFilterChange={handleFilterChange}
       />
 
-      {/* Show search results if search is active, otherwise show regular grid */}
-      {isSearchActive && filteredRestaurants ? (
+      {/* Zip search with distances: show results list; otherwise show grid with vibe-filtered restaurants */}
+      {isSearchActive ? (
         <RestaurantResults restaurants={filteredRestaurants} />
       ) : (
-        <RestaurantsGridClient restaurants={restaurants} />
+        <RestaurantsGridClient restaurants={restaurantsForGrid} />
       )}
     </>
   );

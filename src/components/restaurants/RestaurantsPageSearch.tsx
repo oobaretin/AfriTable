@@ -10,7 +10,7 @@ type RestaurantWithDistance = {
   distance: number | null;
 };
 
-type VibeOption = "All" | "Fine Dining" | "Authentic Staples" | "Daily Driver";
+type VibeOption = "All" | "Fine Dining" | "Authentic Staples" | "Community Favorites" | "Daily Driver";
 
 type RestaurantsPageSearchProps = {
   restaurants: JSONRestaurant[];
@@ -36,6 +36,9 @@ function filterByVibe(
     if (vibe === "Authentic Staples" && restaurant.vibe_category === "Authentic Staples") {
       return true;
     }
+    if (vibe === "Community Favorites" && restaurant.vibe_category === "Community Favorites") {
+      return true;
+    }
     
     // Check vibe field for "Daily Driver"
     if (vibe === "Daily Driver") {
@@ -58,15 +61,10 @@ export function RestaurantsPageSearch({ restaurants, onFilterChange }: Restauran
     return filterByVibe(distanceFilteredRestaurants, selectedVibe);
   }, [distanceFilteredRestaurants, selectedVibe]);
 
-  // Notify parent when filters change - only when there's an actual search (distance !== null)
+  // Notify parent whenever the filtered list changes (vibe + zip). Parent decides search vs grid by presence of distance.
   React.useEffect(() => {
-    // Only notify if there's an actual search (at least one restaurant has distance)
-    const hasSearch = filteredRestaurants.some((r) => r.distance !== null);
-    if (hasSearch) {
-      onFilterChange(filteredRestaurants);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filteredRestaurants]);
+    onFilterChange(filteredRestaurants);
+  }, [filteredRestaurants, onFilterChange]);
 
   const handleDistanceFilterChange = (filtered: RestaurantWithDistance[]) => {
     setDistanceFilteredRestaurants(filtered);

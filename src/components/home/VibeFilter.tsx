@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-type VibeOption = "All" | "Fine Dining" | "Authentic Staples" | "Daily Driver";
+type VibeOption = "All" | "Fine Dining" | "Authentic Staples" | "Community Favorites" | "Daily Driver";
 
 type VibeFilterProps = {
   selectedVibe: VibeOption;
@@ -10,7 +10,7 @@ type VibeFilterProps = {
 };
 
 export function VibeFilter({ selectedVibe, onVibeChange }: VibeFilterProps) {
-  const vibes: VibeOption[] = ["All", "Fine Dining", "Authentic Staples", "Daily Driver"];
+  const vibes: VibeOption[] = ["All", "Fine Dining", "Authentic Staples", "Community Favorites", "Daily Driver"];
 
   return (
     <div className="flex flex-wrap items-center justify-center gap-3">

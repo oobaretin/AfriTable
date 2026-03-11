@@ -11,7 +11,7 @@ type RestaurantWithDistance = {
   distance: number | null;
 };
 
-type VibeOption = "All" | "Fine Dining" | "Authentic Staples" | "Daily Driver";
+type VibeOption = "All" | "Fine Dining" | "Authentic Staples" | "Community Favorites" | "Daily Driver";
 
 type HomepageRestaurantClientProps = {
   restaurants: JSONRestaurant[];
@@ -34,6 +34,9 @@ function filterByVibe(
       return true;
     }
     if (vibe === "Authentic Staples" && restaurant.vibe_category === "Authentic Staples") {
+      return true;
+    }
+    if (vibe === "Community Favorites" && restaurant.vibe_category === "Community Favorites") {
       return true;
     }
     
