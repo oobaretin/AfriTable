@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import type { Database } from "@db/database.types";
-import { useBookingDrawer } from "@/contexts/BookingDrawerContext";
 
 export type RestaurantRow = Database["public"]["Tables"]["restaurants"]["Row"] & {
   // optional denormalized fields for UI
@@ -28,7 +27,6 @@ export function RestaurantCard({
   index?: number;
   isFeatured?: boolean;
 }) {
-  const { openDrawer } = useBookingDrawer();
   const safeHref = href ?? `/restaurants/${encodeURIComponent(restaurant.slug || restaurant.id)}`;
   const cuisines = Array.isArray(restaurant.cuisine_types) ? restaurant.cuisine_types : [];
   const price = "$".repeat(Math.max(1, Math.min(4, restaurant.price_range ?? 1)));
@@ -51,12 +49,6 @@ export function RestaurantCard({
     }
   }
 
-  const handleFindTable = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    openDrawer(restaurant);
-  };
-  
   // Get rating
   const rating = restaurant.avg_rating ?? null;
   
@@ -219,25 +211,14 @@ export function RestaurantCard({
         </div>
       </a>
 
-      {/* View Details - use <a> for full navigation so URL and content always match (avoids RSC router state mismatch) */}
-      <div className="px-5 pb-2">
+      {/* View Details - use <a> for full navigation; reserve table form is on the detail page */}
+      <div className="px-5 pb-5">
         <a
           href={safeHref}
           className="block w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-20 pointer-events-auto touch-manipulation cursor-pointer"
         >
           View Details →
         </a>
-      </div>
-
-      {/* Find Table Button */}
-      <div className="px-5 pb-5">
-        <button
-          type="button"
-          onClick={handleFindTable}
-          className="w-full rounded-lg bg-[#A33B32] hover:bg-[#A33B32]/90 text-white px-3 py-2.5 text-sm font-bold transition-colors pointer-events-auto cursor-pointer relative z-10"
-        >
-          Find Table
-        </button>
       </div>
 
       {onQuickReserve && (
