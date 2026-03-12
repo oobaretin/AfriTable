@@ -29,7 +29,8 @@ const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   icons: {
-    icon: "/logo.png",
+    icon: [{ url: "/logo.png", type: "image/png" }],
+    apple: "/logo.png",
   },
   title: {
     default: siteTitle,
