@@ -955,21 +955,6 @@
     "state": "TX"
   },
   {
-    "id": "atl-003",
-    "name": "Ubuntu",
-    "cuisine": "West African (Vegan)",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "Virginia-Highland, Atlanta, GA",
-    "about": "A plant-based journey through the soul of the West.",
-    "vibe_tags": [
-      "Artistic & Refined"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX"
-  },
-  {
     "id": "dc-003",
     "name": "Elfegne",
     "cuisine": "Ethiopian",
@@ -3086,5 +3071,108 @@
     "phone": "(404) 937-3331",
     "website": "https://www.ubuntualatl.com",
     "state": "GA"
+  },
+  {
+    "id": "aduke-nigerian-la",
+    "name": "Aduke Nigerian Cuisine",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Inglewood, CA",
+    "about": "Best Suya & Fufu in Inglewood.",
+    "state": "CA"
+  },
+  {
+    "id": "ile-bistro-la",
+    "name": "ILÉ Bistro",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Los Angeles, CA",
+    "about": "Chef Eros's Home-style Concept.",
+    "state": "CA"
+  },
+  {
+    "id": "ts-buka-arlington",
+    "name": "T's Buka",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Arlington, TX",
+    "about": "Dallas-area favorite (also has a food truck).",
+    "state": "TX"
+  },
+  {
+    "id": "tailat-kitchen-austin",
+    "name": "Tailat Kitchen",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "state": "TX",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "2101 W Pecan St #105, Pflugerville, TX 78660",
+    "phone": "(512) 809-4839",
+    "website": "https://tailatkitchen.com",
+    "about": "Authentic Jollof & Whole Grilled Tilapia."
+  },
+  {
+    "id": "lady-t-kitchen-austin",
+    "name": "Lady T Kitchen",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "state": "TX",
+    "price_range": "$$",
+    "rating": 4.6,
+    "address": "12407 MoPac Expy, Austin, TX 78758",
+    "phone": "(512) 552-7779",
+    "website": "http://ladytkitchen.com",
+    "about": "Major local hub for traditional swallows."
+  },
+  {
+    "id": "bamboo-walk-brooklyn",
+    "name": "Bamboo Walk",
+    "cuisine": "Caribbean",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Brooklyn, NY",
+    "about": "Famous for East Flatbush vibes.",
+    "state": "NY"
+  },
+  {
+    "id": "cocobreeze-oakland",
+    "name": "Cocobreeze",
+    "cuisine": "Trinidadian",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Oakland, CA",
+    "about": "35+ years of authentic island recipes.",
+    "state": "CA"
+  },
+  {
+    "id": "blackstar-kebab-seattle",
+    "name": "BlackStar Kebab",
+    "cuisine": "Ghanaian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Seattle, WA",
+    "about": "Seattle's premier Ghanaian spot.",
+    "state": "WA"
+  },
+  {
+    "id": "48th-street-grille-philly",
+    "name": "48th Street Grille",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "Philadelphia, PA",
+    "about": "West Philly institution.",
+    "state": "PA"
   }
 ]
