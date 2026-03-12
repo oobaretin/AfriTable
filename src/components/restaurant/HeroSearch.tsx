@@ -102,27 +102,21 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
   }, [displayText, isDeleting, index]);
 
   function handleSearch() {
-    // If on homepage, try to scroll to restaurants section
-    if (window.location.pathname === "/") {
+    const cityTrimmed = city.trim();
+    // If user entered a city, always go to restaurants page with city filter (so the filter actually applies)
+    if (cityTrimmed) {
+      router.push(`/restaurants?city=${encodeURIComponent(cityTrimmed)}`);
+      return;
+    }
+    // No city: on homepage scroll to restaurants section, otherwise go to restaurants page
+    if (typeof window !== "undefined" && window.location.pathname === "/") {
       const restaurantsSection = document.getElementById("restaurants-section");
       if (restaurantsSection) {
         restaurantsSection.scrollIntoView({ behavior: "smooth" });
-        // Update URL with city filter if provided
-        if (city.trim()) {
-          const params = new URLSearchParams(searchParams.toString());
-          params.set("city", city.trim());
-          router.push(`/?${params.toString()}`, { scroll: false });
-        }
         return;
       }
     }
-    
-    // Otherwise, navigate to /restaurants page with city filter
-    if (city.trim()) {
-      router.push(`/restaurants?city=${encodeURIComponent(city.trim())}`);
-    } else {
-      router.push("/restaurants");
-    }
+    router.push("/restaurants");
   }
 
   const searchPill = (
