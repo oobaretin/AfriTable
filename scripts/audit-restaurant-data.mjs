@@ -21,6 +21,17 @@ const missingWebsite = [];
 const badWebsite = [];
 const addressNoZip = [];
 const missingState = [];
+const missingHours = [];
+
+function hasValidHours(r) {
+  const h = r.hours;
+  if (!h || typeof h !== "object") return false;
+  const vals = Object.values(h).filter(Boolean);
+  if (vals.length === 0) return false;
+  const str = JSON.stringify(h).toLowerCase();
+  if (str.includes("coming soon")) return false;
+  return true;
+}
 
 data.forEach((r, i) => {
   if (!r.phone || !String(r.phone).trim()) missingPhone.push({ i, id: r.id, name: r.name, city: r.address?.split(",").slice(-2)?.[0]?.trim() });
@@ -28,6 +39,7 @@ data.forEach((r, i) => {
   else if (r.website && !urlRe.test(String(r.website))) badWebsite.push({ i, id: r.id, name: r.name, website: r.website });
   if (r.address && typeof r.address === "string" && !zipRe.test(r.address)) addressNoZip.push({ i, id: r.id, name: r.name, address: r.address });
   if (!r.state || !String(r.state).trim()) missingState.push({ i, id: r.id, name: r.name });
+  if (!hasValidHours(r)) missingHours.push({ i, id: r.id, name: r.name, address: r.address });
 });
 
 console.log("=== Restaurant data audit (data/restaurants.json) ===\n");
@@ -46,7 +58,11 @@ if (addressNoZip.length > 15) console.log("  ... and", addressNoZip.length - 15,
 console.log("\nMissing state:", missingState.length);
 missingState.forEach((x) => console.log("  -", x.name, "|", x.id));
 
+console.log("\nMissing or empty hours (shows 'Hours coming soon' on site):", missingHours.length);
+missingHours.forEach((x) => console.log("  -", x.name, "|", x.id, "|", (x.address || "").slice(0, 45)));
+
 console.log("\n--- Summary ---");
 console.log("Entries needing phone research:", missingPhone.length);
 console.log("Entries needing website research:", missingWebsite.length);
 console.log("Entries needing full address:", addressNoZip.length);
+console.log("Entries needing hours research:", missingHours.length);

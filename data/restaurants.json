@@ -780,7 +780,12 @@
     "featured": true,
     "vibe_category": "Fine Dining",
     "about": "Elite fine dining at Lincoln Center, where Chef Kwame Onwuachi creates the intersection of heritage and high-fashion dining with specialties like Wagyu Short Rib Pastrami.",
-    "state": "NY"
+    "state": "NY",
+    "hours": {
+      "tue_sat": "5:00 PM - 10:00 PM",
+      "sun": "Closed",
+      "mon": "Closed"
+    }
   },
   {
     "id": "hou-001",
@@ -795,6 +800,10 @@
     "lng": -95.366,
     "phone": "(713) 223-0103",
     "website": "https://www.chopnblok.com/",
+    "hours": {
+      "sun_wed": "11:00 AM - 9:00 PM",
+      "thu_sat": "11:00 AM - 10:00 PM"
+    },
     "neighborhood": "POST Houston / Downtown",
     "vibe": "Modern & High-Design",
     "vibe_tags": [
@@ -829,11 +838,23 @@
       "Premium Traditional"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "tue_fri": "11:30 AM - 8:00 PM",
+      "sat": "1:00 PM - 9:00 PM",
+      "sun": "1:00 PM - 6:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "social": {},
-    "hours": {},
+    "hours": {
+      "mon": "12:00 PM - 10:00 PM",
+      "tue": "Closed",
+      "wed_thu": "12:00 PM - 10:00 PM",
+      "fri_sat": "12:00 PM - 11:00 PM",
+      "sun": "12:00 PM - 10:00 PM"
+    },
     "about": "",
     "our_story": "",
     "cultural_roots": "",
@@ -860,6 +881,11 @@
     "address": "822 Marietta St NW, Atlanta, GA 30318",
     "phone": "(404) 228-4897",
     "website": "https://www.virgilsgullahkitchen.com",
+    "hours": {
+      "mon_thu": "11:00 AM - 10:00 PM",
+      "fri_sat": "11:00 AM - 12:00 AM",
+      "sun": "11:00 AM - 10:00 PM"
+    },
     "about": "A love letter to the coastal heritage of the Gullah people. West Midtown.",
     "vibe_tags": [
       "Soulful & Social"
@@ -869,7 +895,10 @@
   },
   {
     "social": {},
-    "hours": {},
+    "hours": {
+      "sun_thu": "11:00 AM - 12:00 AM",
+      "fri_sat": "11:00 AM - 2:00 AM"
+    },
     "about": "",
     "our_story": "",
     "cultural_roots": "",
@@ -896,6 +925,11 @@
     "address": "401 H St NE, Washington, DC 20002",
     "phone": "(202) 675-2066",
     "website": "https://www.ethiopicrestaurant.com",
+    "hours": {
+      "tue_thu": "5:00 PM - 10:00 PM",
+      "fri_sun": "12:00 PM - 10:00 PM",
+      "mon": "Closed"
+    },
     "about": "Authentic Ethiopian cuisine in the heart of Washington, DC. First Ethiopian on the H Street Corridor.",
     "vibe_category": "Authentic Staples",
     "state": "DC"
@@ -910,6 +944,10 @@
     "address": "3086 Briarcliff Rd NE, Atlanta, GA 30329",
     "phone": "(404) 929-0011",
     "website": "https://destaethiopiankitchen.com",
+    "hours": {
+      "sun_thu": "11:00 AM - 9:00 PM",
+      "fri_sat": "11:00 AM - 10:00 PM"
+    },
     "about": "Where traditional happiness meets contemporary design. Authentic Ethiopian since 2006; also Westside Village location.",
     "vibe_tags": [
       "Sleek & Modern"
@@ -926,6 +964,9 @@
     "rating": 4.5,
     "address": "810 Martin Luther King Jr Dr SW, Atlanta, GA 30314",
     "phone": "(404) 525-9212",
+    "hours": {
+      "mon_sun": "11:00 AM - 7:00 PM"
+    },
     "about": "A legendary Atlanta institution since 1947. Michelin Bib Gourmand & James Beard Award winner; soul food and Southern comfort.",
     "vibe_category": "Authentic Staples",
     "state": "GA"
@@ -945,7 +986,11 @@
       "Intimate & Prestigious"
     ],
     "vibe_category": "Fine Dining",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "fri_sun": "6:00 PM - 9:00 PM",
+      "mon_thu": "Closed"
+    }
   },
   {
     "id": "la-daily-003",
@@ -967,7 +1012,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Cameroonian food truck; jollof, suya, puff puff. Wed–Sat 11:30am–9:30pm; catering (323) 607-9586.",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "la-blaqhaus-noho",
@@ -981,7 +1030,12 @@
     "website": "https://blaqhaus.co",
     "about": "Southern comfort and Caribbean heat; weekend brunch, Rum Room Thu–Sat. Women-owned.",
     "vibe_category": "Authentic Staples",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon_thu": "5:00 PM - 10:00 PM",
+      "fri_sat": "5:00 PM - 12:00 AM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "oak-001",
@@ -997,7 +1051,11 @@
       "Modern Heritage"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon_fri": "11:00 AM - 9:00 PM",
+      "sat_sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "chi-001",
@@ -1009,6 +1067,11 @@
     "address": "4801 N Broadway, Chicago, IL 60640",
     "phone": "(773) 334-8888",
     "website": "https://www.demerachicago.com/",
+    "hours": {
+      "sun": "11:30 AM - 8:30 PM",
+      "mon_thu": "4:00 PM - 8:30 PM",
+      "fri_sat": "11:30 AM - 9:30 PM"
+    },
     "neighborhood": "Uptown",
     "vibe": "Vibrant & Culturally Rich",
     "vibe_tags": [
@@ -1043,7 +1106,10 @@
       "Authentic & Renowned"
     ],
     "vibe_category": "Fine Dining",
-    "state": "PA"
+    "state": "PA",
+    "hours": {
+      "mon_sun": "8:00 AM - 1:00 AM"
+    }
   },
   {
     "id": "chi-002",
@@ -1059,7 +1125,14 @@
       "Island Heritage"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "IL"
+    "state": "IL",
+    "hours": {
+      "mon": "11:00 AM - 9:00 PM",
+      "wed": "11:00 AM - 9:00 PM",
+      "thu_sat": "11:00 AM - 10:00 PM",
+      "sun": "11:00 AM - 9:00 PM",
+      "tue": "Closed"
+    }
   },
   {
     "id": "phi-002",
@@ -1075,7 +1148,11 @@
       "Academic & Cultural"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "PA"
+    "state": "PA",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "1:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "chi-003",
@@ -1092,7 +1169,10 @@
       "Modern & Spacious"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "IL"
+    "state": "IL",
+    "hours": {
+      "mon_sun": "11:00 AM - 8:00 PM"
+    }
   },
   {
     "id": "chi-yassa",
@@ -1106,7 +1186,12 @@
     "website": "https://yassaafricanrestaurant.com",
     "about": "Authentic Senegalese since 2004; yassa chicken, jollof, grilled fish. Bronzeville; catering & live music.",
     "vibe_category": "Authentic Staples",
-    "state": "IL"
+    "state": "IL",
+    "hours": {
+      "mon_thu": "11:00 AM - 10:00 PM",
+      "fri_sat": "11:00 AM - 11:00 PM",
+      "sun": "11:00 AM - 10:00 PM"
+    }
   },
   {
     "id": "phi-003",
@@ -1121,7 +1206,11 @@
       "Artisanal Caribbean"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "PA"
+    "state": "PA",
+    "hours": {
+      "mon_sat": "9:00 AM - 11:00 PM",
+      "sun": "10:00 AM - 10:00 PM"
+    }
   },
   {
     "id": "sea-001",
@@ -1149,7 +1238,11 @@
     "featured": true,
     "about": "An award-winning soul-fusion restaurant in Seattle's Central District, serving innovative dishes like Hood Sushi & Catfish in a vibrant, social atmosphere.",
     "vibe_category": "Fine Dining",
-    "state": "WA"
+    "state": "WA",
+    "hours": {
+      "thu_sun": "5:00 PM - 10:00 PM",
+      "mon_wed": "Closed"
+    }
   },
   {
     "id": "sea-meskel",
@@ -1163,7 +1256,11 @@
     "website": "https://meskelethiopian.com",
     "about": "30+ years in Central District; injera, kitfo, doro wat. Little Addis Ababa.",
     "vibe_category": "Authentic Staples",
-    "state": "WA"
+    "state": "WA",
+    "hours": {
+      "tue_sun": "4:00 PM - 9:30 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "bos-001",
@@ -1174,6 +1271,11 @@
     "rating": 4.8,
     "address": "266 Bowdoin St, Boston, MA 02121",
     "website": "https://restaurantcesaria.com",
+    "hours": {
+      "mon_wed": "11:00 AM - 10:00 PM",
+      "thu_sat": "11:00 AM - 11:00 PM",
+      "sun": "11:00 AM - 10:00 PM"
+    },
     "about": "Cape Verdean since 2002; katchupa, live morna. Named for Cesaria Evora.",
     "vibe_tags": [
       "Old World Elegance"
@@ -1191,6 +1293,9 @@
     "address": "2715 E Cherry St B, Seattle, WA 98122",
     "phone": "(206) 328-0404",
     "website": "https://www.cafeselam.com",
+    "hours": {
+      "mon_sun": "10:00 AM - 9:00 PM"
+    },
     "about": "20+ years; house-made injera, organic. Central District. Catering.",
     "vibe_tags": [
       "Cozy & Authentic"
@@ -1207,6 +1312,13 @@
     "rating": 4.5,
     "address": "185 Dudley St, Boston, MA 02119",
     "phone": "(617) 708-0245",
+    "hours": {
+      "tue_wed": "12:00 PM - 9:00 PM",
+      "thu": "12:00 PM - 12:00 AM",
+      "fri_sat": "12:00 PM - 9:00 PM",
+      "sun": "2:00 PM - 8:00 PM",
+      "mon": "Closed"
+    },
     "about": "Beef suya, jollof, egusi; Best of Boston. Chef Cecelia Lizotte.",
     "vibe_tags": [
       "Modern Nigerian"
@@ -1229,7 +1341,16 @@
       "Warm & Traditional"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "WA"
+    "state": "WA",
+    "hours": {
+      "mon": "11:00 AM - 8:30 PM",
+      "tue": "11:00 AM - 8:30 PM",
+      "thu": "11:00 AM - 8:30 PM",
+      "fri": "11:00 AM - 8:30 PM",
+      "sat": "11:00 AM - 9:00 PM",
+      "wed": "Closed",
+      "sun": "Closed"
+    }
   },
   {
     "id": "hou-sta-014",
@@ -1252,7 +1373,11 @@
     ],
     "vibe_category": "Community Favorites",
     "about": "A legendary Houston staple. It has national fame from 'Diners, Drive-Ins and Dives' but stays true to its roots.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "nola-bennachin",
@@ -1266,7 +1391,12 @@
     "website": "https://www.bennachinrestaurant.com",
     "about": "Authentic West African (Gambian & Cameroonian) in the French Quarter since 1992.",
     "vibe_category": "Authentic Staples",
-    "state": "LA"
+    "state": "LA",
+    "hours": {
+      "wed_thu": "11:00 AM - 8:00 PM",
+      "fri_sun": "11:00 AM - 9:00 PM",
+      "mon_tue": "Closed"
+    }
   },
   {
     "id": "nola-dooky-chase",
@@ -1280,7 +1410,14 @@
     "website": "https://www.dookychaserestaurants.com",
     "about": "Historic Creole institution since 1941 in Treme; civil rights gathering place.",
     "vibe_category": "Fine Dining",
-    "state": "LA"
+    "state": "LA",
+    "hours": {
+      "tue_thu": "11:00 AM - 3:00 PM",
+      "fri": "11:00 AM - 9:00 PM",
+      "sat": "5:30 PM - 9:00 PM",
+      "sun": "Closed",
+      "mon": "Closed"
+    }
   },
   {
     "id": "nyc-abyssinia",
@@ -1293,7 +1430,11 @@
     "phone": "(212) 663-0533",
     "about": "Authentic Ethiopian cuisine in the heart of Manhattan, serving traditional dishes with fresh injera and bold spices.",
     "vibe_category": "Authentic Staples",
-    "state": "NY"
+    "state": "NY",
+    "hours": {
+      "tue_sun": "11:00 AM - 10:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "sf-teranga-village",
@@ -1307,7 +1448,12 @@
     "website": "https://www.terangafoods.com",
     "about": "Senegalese by Chef Nafy Flatley; Maafe bowl, jollof, tamarind chicken. Mon–Fri 10:30am–3pm.",
     "vibe_category": "Authentic Staples",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon_fri": "10:30 AM - 3:00 PM",
+      "sat": "Closed",
+      "sun": "Closed"
+    }
   },
   {
     "id": "oak-lala-eritrean",
@@ -1321,7 +1467,12 @@
     "website": "https://cafeeritreadafrique.com",
     "about": "Eritrean in Temescal (also listed as Cafe Eritrea D'Afrique).",
     "vibe_category": "Authentic Staples",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon": "11:00 AM - 10:00 PM",
+      "wed_sun": "11:00 AM - 10:00 PM",
+      "tue": "Closed"
+    }
   },
   {
     "id": "nash-riddim-spice",
@@ -1335,7 +1486,11 @@
     "website": "https://riddimnspice.com",
     "about": "Jamaican brothers; jerk chicken, Rum Room Thu–Sat. North Nashville.",
     "vibe_category": "Authentic Staples",
-    "state": "TN"
+    "state": "TN",
+    "hours": {
+      "tue_sun": "11:00 AM - 9:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "hou-reggae-hut",
@@ -1349,7 +1504,10 @@
     "website": "https://reggaehutcafe.com",
     "about": "Caribbean & soul; brown stew fish, jerk chicken, patties. Black-owned.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sun": "11:00 AM - 10:00 PM"
+    }
   },
   {
     "id": "hou-caribbean-hotpot-grill",
@@ -1372,7 +1530,11 @@
     },
     "about": "Authentic Caribbean cuisine with vibrant flavors and island vibes. Serving traditional Jamaican and Caribbean dishes in a lively, welcoming atmosphere.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "hou-reggae-hut-veterans",
@@ -1385,11 +1547,17 @@
     "phone": "(832) 446-3722",
     "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sun": "11:00 AM - 10:00 PM"
+    }
   },
   {
     "social": {},
-    "hours": {},
+    "hours": {
+      "mon": "11:00 AM - 8:30 PM",
+      "tue_sun": "11:00 AM - 9:30 PM"
+    },
     "about": "",
     "our_story": "",
     "cultural_roots": "",
@@ -1425,7 +1593,12 @@
     ],
     "about": "A lively Caribbean fusion restaurant in Midtown Atlanta, known for innovative dishes like Jerk Chicken Pasta in a vibrant, social atmosphere.",
     "vibe_category": "Fine Dining",
-    "state": "GA"
+    "state": "GA",
+    "hours": {
+      "mon_thu": "11:00 AM - 10:00 PM",
+      "fri_sat": "11:00 AM - 11:00 PM",
+      "sun": "11:00 AM - 9:00 PM"
+    }
   },
   {
     "id": "nyc-jasmines-caribbean",
@@ -1446,7 +1619,10 @@
     ],
     "about": "A tropical escape in Hell's Kitchen, serving authentic Caribbean cuisine with specialties like Curry Shrimp and Red Snapper.",
     "vibe_category": "Authentic Staples",
-    "state": "NY"
+    "state": "NY",
+    "hours": {
+      "mon_sun": "12:00 PM - 10:00 PM"
+    }
   },
   {
     "id": "chi-garifuna-flava",
@@ -1470,7 +1646,11 @@
     ],
     "about": "An authentic, family-owned gem in Marquette Park, serving traditional Belizean cuisine including specialties like Belizean Stew Chicken.",
     "vibe_category": "Community Favorites",
-    "state": "IL"
+    "state": "IL",
+    "hours": {
+      "wed_sun": "12:00 PM - 8:00 PM",
+      "mon_tue": "Closed"
+    }
   },
   {
     "id": "dc-st-james",
@@ -1493,7 +1673,13 @@
     ],
     "about": "A sophisticated and chic modern Caribbean restaurant in the U Street / 14th St area, known for elevated dishes like Callaloo & Crab.",
     "vibe_category": "Fine Dining",
-    "state": "DC"
+    "state": "DC",
+    "hours": {
+      "tue_thu": "5:30 PM - 10:00 PM",
+      "fri_sat": "5:30 PM - 11:00 PM",
+      "sun": "12:00 PM - 9:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "la-dulans-crenshaw",
@@ -1516,7 +1702,13 @@
     ],
     "about": "A community landmark in Hyde Park, serving authentic soul food with specialties like Smothered Chicken in a welcoming, family-friendly atmosphere.",
     "vibe_category": "Community Favorites",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "tue_thu": "11:00 AM - 8:00 PM",
+      "fri_sat": "11:00 AM - 9:00 PM",
+      "sun": "11:00 AM - 8:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "mia-chef-creole",
@@ -1539,7 +1731,12 @@
     ],
     "about": "Authentic Haitian cuisine in Little Haiti, serving traditional dishes like Griot & Pikliz in a tropical, authentic atmosphere.",
     "vibe_category": "Community Favorites",
-    "state": "FL"
+    "state": "FL",
+    "hours": {
+      "mon_wed": "11:00 AM - 9:00 PM",
+      "thu_sat": "11:00 AM - 10:00 PM",
+      "sun": "Closed"
+    }
   },
   {
     "id": "mia-red-rooster-overtown",
@@ -1568,7 +1765,14 @@
     "featured": true,
     "about": "Marcus Samuelsson's tribute to Black culinary history. Features a world-class art collection and the famous 'Shrine' Saturday nights for Afrobeats.",
     "vibe_category": "Fine Dining",
-    "state": "FL"
+    "state": "FL",
+    "hours": {
+      "wed_thu": "4:00 PM - 10:00 PM",
+      "fri": "4:00 PM - 11:00 PM",
+      "sat": "11:00 AM - 11:00 PM",
+      "sun": "11:00 AM - 10:00 PM",
+      "mon_tue": "Closed"
+    }
   },
   {
     "id": "det-001",
@@ -1591,7 +1795,11 @@
     ],
     "about": "An award-winning Burundian restaurant in New Center, serving heartfelt East African cuisine with specialties like Kuku Na Mali in a warm, welcoming atmosphere.",
     "vibe_category": "Authentic Staples",
-    "state": "MI"
+    "state": "MI",
+    "hours": {
+      "tue_sun": "11:00 AM - 9:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "hou-006",
@@ -1614,7 +1822,13 @@
     ],
     "about": "A historic and elegant fine dining restaurant in Houston's Museum District, serving elevated Southern cuisine with specialties like Chili Biscuits & Yardbird in a sophisticated setting.",
     "vibe_category": "Fine Dining",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "tue_thu": "11:00 AM - 9:00 PM",
+      "fri_sat": "11:00 AM - 10:00 PM",
+      "sun": "10:00 AM - 3:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "chi-ja-grill-hyde-park",
@@ -1637,7 +1851,11 @@
     ],
     "about": "An upscale and energetic Jamaican restaurant in Hyde Park, serving authentic Caribbean cuisine with specialties like Curry Goat & Ja' Rum Punch in a vibrant, sophisticated setting.",
     "vibe_category": "Fine Dining",
-    "state": "IL"
+    "state": "IL",
+    "hours": {
+      "sun_thu": "11:00 AM - 9:00 PM",
+      "fri_sat": "11:00 AM - 10:00 PM"
+    }
   },
   {
     "id": "atl-irie-mon-cafe",
@@ -1660,7 +1878,12 @@
     ],
     "about": "Jamaican; jerk chicken, ackee & saltfish. Catering, food truck at 530 Joseph E Lowery Blvd.",
     "vibe_category": "Authentic Staples",
-    "state": "GA"
+    "state": "GA",
+    "hours": {
+      "mon_thu": "10:00 AM - 9:00 PM",
+      "fri_sat": "10:00 AM - 10:00 PM",
+      "sun": "Closed"
+    }
   },
   {
     "id": "dca-001",
@@ -1675,6 +1898,11 @@
     "lng": -77.022,
     "phone": "(202) 978-1320",
     "website": "https://www.dogonwdc.com/",
+    "hours": {
+      "tue_sat": "5:00 PM - 10:00 PM",
+      "sun": "Closed",
+      "mon": "Closed"
+    },
     "neighborhood": "The Wharf",
     "vibe": "Sophisticated Waterfront",
     "vibe_tags": [
@@ -1720,7 +1948,12 @@
     "featured": true,
     "about": "A single-seating, multi-course dining experience that follows the lineage of West African food to New Orleans. Reservations are highly sought after.",
     "vibe_category": "Fine Dining",
-    "state": "LA"
+    "state": "LA",
+    "hours": {
+      "tue_sat": "4:30 PM - 10:00 PM",
+      "sun": "Closed",
+      "mon": "Closed"
+    }
   },
   {
     "id": "sa-jerk-shack",
@@ -1739,7 +1972,12 @@
     "featured": true,
     "about": "Chef Nicola Blaque; jerk chicken, curry, patties. Michelin Bib Gourmand.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_thu": "11:00 AM - 8:00 PM",
+      "fri_sat": "11:00 AM - 9:00 PM",
+      "sun": "11:00 AM - 4:00 PM"
+    }
   },
   {
     "id": "pdx-001",
@@ -1754,6 +1992,12 @@
     "lng": -122.656,
     "phone": "(503) 702-0290",
     "website": "https://kannrestaurant.com/",
+    "hours": {
+      "tue_thu": "4:00 PM - 10:00 PM",
+      "fri_sat": "4:00 PM - 11:00 PM",
+      "sun": "4:00 PM - 10:00 PM",
+      "mon": "Closed"
+    },
     "neighborhood": "Central Eastside",
     "vibe": "Elite Wood-Fired Mastery",
     "vibe_tags": [
@@ -1798,7 +2042,11 @@
     "featured": true,
     "about": "Named after the national bird of Guyana, Canje delivers a Michelin-worthy exploration of the Caribbean. The space is vibrant and lush, perfect for an upscale night out on 6th Street.",
     "vibe_category": "Fine Dining",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "sun_wed": "5:00 PM - 10:00 PM",
+      "thu_sat": "5:00 PM - 12:00 AM"
+    }
   },
   {
     "id": "atx-fine-002",
@@ -1823,7 +2071,11 @@
     "featured": true,
     "about": "A live-fire culinary theater using a signature Josper oven. The vibe is sleek, dark, and intimate, overlooking Lady Bird Lake—ideal for a formal celebratory dinner.",
     "vibe_category": "Fine Dining",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "5:00 PM - 10:00 PM",
+      "sun": "5:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "dfw-fine-001",
@@ -1848,7 +2100,11 @@
     "featured": false,
     "about": "A 3,000 sq. ft. creekside oasis that blends authentic West African staples with Caribbean classics. The VIP lounge and live 'Afribbean' Friday nights make this a true destination.",
     "vibe_category": "Fine Dining",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_fri": "5:00 PM - 2:00 AM",
+      "sat_sun": "1:00 PM - 2:00 AM"
+    }
   },
   {
     "id": "dfw-fine-002",
@@ -1872,7 +2128,12 @@
     ],
     "about": "A neighborhood pillar that brings a professional, full-service touch to Jamaican hospitality. Known for their 'Jerk & Jazz' events and deep selection of island rums.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_thu": "11:00 AM - 9:00 PM",
+      "fri_sat": "11:00 AM - 10:00 PM",
+      "sun": "11:00 AM - 3:00 PM"
+    }
   },
   {
     "id": "hou-fine-001",
@@ -1897,7 +2158,11 @@
     "featured": false,
     "about": "A premier Houston destination for those who want a polished dining room that turns into a high-energy lounge at night. The seasoning here is notoriously bold.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "atx-afro-002",
@@ -1921,7 +2186,11 @@
     ],
     "about": "Family-owned; fluffy injera, doro wat, tej. Live music.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "sun_thu": "11:00 AM - 9:00 PM",
+      "fri_sat": "11:00 AM - 10:00 PM"
+    }
   },
   {
     "id": "dfw-afro-002",
@@ -1944,7 +2213,11 @@
     ],
     "about": "African-Mediterranean fusion; Rasta Pasta, suya, brunch, live music. Opened 2024.",
     "vibe_category": "Fine Dining",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "chs-fine-001",
@@ -1972,7 +2245,12 @@
     "featured": true,
     "about": "Chef Bintou N'Daw brings a level of precision and elegance to West African staples that matches the legendary fine-dining scene of Charleston.",
     "vibe_category": "Fine Dining",
-    "state": "SC"
+    "state": "SC",
+    "hours": {
+      "thu_sun": "5:00 PM - 10:00 PM",
+      "mon": "Closed",
+      "tue_wed": "Closed"
+    }
   },
   {
     "id": "lax-001",
@@ -2000,7 +2278,11 @@
     "featured": false,
     "vibe_category": "Fine Dining",
     "about": "Where Hollywood glamour meets authentic island heat. This is the spot for 'Vibe Dining'—the food quality is high-end, and the crowd is impeccably dressed.",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "tue_sun": "5:00 PM - 11:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "atl-fine-001",
@@ -2024,7 +2306,12 @@
     "featured": true,
     "about": "A sophisticated bookstore-restaurant hybrid in Buckhead. It represents the absolute peak of modern, ingredient-driven dining in Atlanta with a world-class wine program.",
     "vibe_category": "Fine Dining",
-    "state": "GA"
+    "state": "GA",
+    "hours": {
+      "tue_sat": "5:00 PM - 10:00 PM",
+      "sun": "11:00 AM - 9:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "phi-fine-001",
@@ -2051,7 +2338,11 @@
     "featured": true,
     "about": "Located in a historic Rittenhouse rowhouse, this restaurant offers an eight-course tasting menu that frequently integrates West African and Caribbean seasoning techniques.",
     "vibe_category": "Fine Dining",
-    "state": "PA"
+    "state": "PA",
+    "hours": {
+      "wed_sun": "5:00 PM - 11:00 PM",
+      "mon_tue": "Closed"
+    }
   },
   {
     "id": "sea-fine-002",
@@ -2075,7 +2366,10 @@
     "featured": false,
     "about": "Chef Trey Lamont uses high-end techniques to elevate classic street food. The jerk chicken here is seasoned for 48 hours and smoked over authentic pimento wood.",
     "vibe_category": "Fine Dining",
-    "state": "WA"
+    "state": "WA",
+    "hours": {
+      "mon_sun": "11:00 AM - 9:00 PM"
+    }
   },
   {
     "id": "hou-008",
@@ -2100,7 +2394,11 @@
     "featured": false,
     "about": "An authentic Jamaican restaurant in Houston's South Post Oak neighborhood, known for traditional dishes like oxtail and curry goat.",
     "vibe_category": "Community Favorites",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "lax-002",
@@ -2125,7 +2423,11 @@
     "featured": true,
     "about": "An elite Afro-Caribbean fine dining destination in LA's Fairfax District, known for innovative dishes like Jerk Lobster and craft cocktails in a late-night lounge atmosphere.",
     "vibe_category": "Fine Dining",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "tue_sun": "5:00 PM - 10:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "lax-003",
@@ -2150,7 +2452,11 @@
     "featured": false,
     "about": "An award-winning Caribbean American restaurant in LA's Arts District, specializing in authentic roti and patties with a trendy, modern atmosphere.",
     "vibe_category": "Authentic Staples",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "tue_sun": "11:00 AM - 10:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "sf-001",
@@ -2175,7 +2481,12 @@
     "featured": false,
     "about": "A polished, health-conscious Senegalese restaurant in San Francisco's Financial District, offering authentic West African dishes like Baobab Energy Bowls and Yassa Chicken.",
     "vibe_category": "Authentic Staples",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon_fri": "10:30 AM - 3:00 PM",
+      "sat": "Closed",
+      "sun": "Closed"
+    }
   },
   {
     "id": "atl-001",
@@ -2187,6 +2498,11 @@
     "address": "999 Chattahoochee Ave, Atlanta, GA 30318",
     "phone": "(404) 464-7159",
     "website": "https://negrilatl.com/",
+    "hours": {
+      "wed_fri": "12:00 PM - 10:00 PM",
+      "sat_sun": "12:00 PM - 10:00 PM",
+      "mon_tue": "Closed"
+    },
     "neighborhood": "Upper West Side",
     "vibe": "Urban / High-Energy Lounge",
     "vibe_tags": [
@@ -2225,7 +2541,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "A major player in the Houston scene, known for traditional flavors.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "hou-005",
@@ -2251,7 +2571,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Very consistent quality; a go-to for Westheimer locals.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "hou-004",
@@ -2277,7 +2601,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Famous for their generous portions and 'at-home' taste.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "hou-sta-004",
@@ -2300,7 +2628,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Specializes in the rich, seafood-heavy dishes of the Calabar region.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "Closed"
+    }
   },
   {
     "id": "katy-002",
@@ -2325,7 +2657,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Essential for the Katy community; arguably the best Amala in the area.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "hou-sta-005",
@@ -2347,7 +2683,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "High-quality presentation and a very clean, inviting space.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "hou-sta-007",
@@ -2370,7 +2710,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Widely praised for the bold spice levels and consistent seasoning.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "Closed"
+    }
   },
   {
     "id": "hou-sta-008",
@@ -2393,7 +2737,11 @@
     ],
     "vibe_category": "Community Favorites",
     "about": "A legendary family-owned spot for over 15 years. It's the gold standard for Ghanaian comfort food in SW Houston.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "hou-sta-009",
@@ -2416,7 +2764,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Primary takeout operation in Westchase/Third Ward area. Fast, affordable, and incredibly consistent.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "Closed"
+    }
   },
   {
     "id": "katy-003",
@@ -2442,7 +2794,11 @@
     ],
     "vibe_category": "Fine Dining",
     "about": "Chef Casey brings a unique South African flair to Katy. Great for a casual but 'stepped-up' lunch.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "tue_sun": "11:00 AM - 9:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "hou-sta-010",
@@ -2465,7 +2821,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "If you just want suya and jollof for a Tuesday night, this is the most reliable spot in the area.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "hou-sta-011",
@@ -2488,7 +2848,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "The 'Daily Driver' of Ethiopian food. Clean, professional, and has been a staple for years.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "tue_sun": "11:00 AM - 10:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "hou-003",
@@ -2514,7 +2878,11 @@
     ],
     "vibe_category": "Community Favorites",
     "about": "Slightly more 'upscale' than a standard joint, but still very much a regular spot for the Galleria crowd.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "hou-sta-013",
@@ -2536,7 +2904,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Owned by the same team as 'Taste of Nigeria.' This is their high-speed, high-volume operation.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "Closed"
+    }
   },
   {
     "id": "katy-004",
@@ -2562,7 +2934,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "One of the few spots in Katy for authentic Trinidadian Roti. It's a true hidden gem for those in the know.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "tue_sun": "11:00 AM - 9:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "hou-sta-016",
@@ -2585,7 +2961,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Consistently ranked as one of the best for Yoruba-style Nigerian food. Their designer stew is a fan favorite.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "Closed"
+    }
   },
   {
     "id": "hou-sta-017",
@@ -2597,6 +2977,12 @@
     "address": "6800 Westheimer Rd, Houston, TX 77057",
     "phone": "(713) 334-0000",
     "website": "https://lucyhouston.com/",
+    "hours": {
+      "tue_thu": "11:00 AM - 11:00 PM",
+      "fri_sat": "11:00 AM - 2:00 AM",
+      "sun": "11:00 AM - 11:00 PM",
+      "mon": "Closed"
+    },
     "vibe": "Upscale Lounge / Cultural Hub",
     "vibe_tags": [
       "Upscale Lounge / Cultural Hub"
@@ -2631,7 +3017,11 @@
     ],
     "vibe_category": "Community Favorites",
     "about": "Perfect for the Richmond/Katy border. They specialize in 'fusion' comfort food that keeps people coming back.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "hou-sta-018",
@@ -2654,7 +3044,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Famous for their massive portions and affordability. It's a true worker's lunch spot.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "nyc-daily-001",
@@ -2677,7 +3071,10 @@
     ],
     "vibe_category": "Community Favorites",
     "about": "Legendary Senegalese in Harlem since 1994; lamb mafe, chicken yassa, grilled fish. Halal.",
-    "state": "NY"
+    "state": "NY",
+    "hours": {
+      "mon_sun": "1:30 PM - 11:30 PM"
+    }
   },
   {
     "id": "nyc-daily-002",
@@ -2700,7 +3097,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Best Nigerian in NY; akara, suya, jollof, amala. Bed-Stuy.",
-    "state": "NY"
+    "state": "NY",
+    "hours": {
+      "mon_fri": "11:00 AM - 9:00 PM",
+      "sat_sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "nyc-daily-003",
@@ -2723,7 +3124,10 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Black-owned, woman-owned. Oxtail, jerk wings, ackee & saltfish. Restaurant Row.",
-    "state": "NY"
+    "state": "NY",
+    "hours": {
+      "mon_sun": "12:00 PM - 10:00 PM"
+    }
   },
   {
     "id": "dc-daily-001",
@@ -2746,7 +3150,14 @@
     ],
     "vibe_category": "Community Favorites",
     "about": "Ghanaian cuisine by Chef Prince Matey; African drinks, sports bar, live bands & DJs on weekends.",
-    "state": "DC"
+    "state": "DC",
+    "hours": {
+      "tue_thu": "4:00 PM - 10:00 PM",
+      "fri": "4:00 PM - 11:30 PM",
+      "sat": "2:00 PM - 11:30 PM",
+      "sun": "2:00 PM - 10:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "dc-daily-002",
@@ -2769,7 +3180,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Considered the best Ethiopian in the DC area; also DC location. Authentic Injera platters.",
-    "state": "MD"
+    "state": "MD",
+    "hours": {
+      "mon_wed": "4:00 PM - 8:00 PM",
+      "thu_sun": "11:00 AM - 9:00 PM"
+    }
   },
   {
     "id": "la-daily-001",
@@ -2792,7 +3207,11 @@
     ],
     "vibe_category": "Community Favorites",
     "about": "Nigerian fufu, egusi, jollof; viral on TikTok. Inglewood legend.",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "11:00 AM - 7:00 PM"
+    }
   },
   {
     "id": "la-daily-002",
@@ -2815,7 +3234,13 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Historic staple on Ethiopian Row since 1985; vegetarian-friendly and traditional meat dishes.",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon": "11:00 AM - 10:00 PM",
+      "tue": "4:00 PM - 10:00 PM",
+      "wed_sun": "11:00 AM - 10:00 PM",
+      "fri_sat": "11:00 AM - 11:00 PM"
+    }
   },
   {
     "id": "atl-daily-001",
@@ -2839,7 +3264,13 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Jollof, waakye, pounded yam & egusi, suya. Wed–Sun. Live entertainment, patio.",
-    "state": "GA"
+    "state": "GA",
+    "hours": {
+      "tue_fri": "11:00 AM - 9:00 PM",
+      "sat": "12:00 PM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "atl-daily-002",
@@ -2862,7 +3293,11 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Caribbean brunch house; jerk chicken, mango French toast, bottomless mimosas. Embry Hills.",
-    "state": "GA"
+    "state": "GA",
+    "hours": {
+      "wed_sun": "11:00 AM - 5:00 PM",
+      "mon_tue": "Closed"
+    }
   },
   {
     "id": "chi-daily-001",
@@ -2885,7 +3320,12 @@
     ],
     "vibe_category": "Authentic Staples",
     "about": "Senegalese since 2004; yassa chicken, jollof, grilled fish. Catering, live music.",
-    "state": "IL"
+    "state": "IL",
+    "hours": {
+      "mon_thu": "11:00 AM - 10:00 PM",
+      "fri_sat": "11:00 AM - 11:00 PM",
+      "sun": "11:00 AM - 10:00 PM"
+    }
   },
   {
     "id": "katy-001",
@@ -2923,7 +3363,9 @@
   },
   {
     "social": {},
-    "hours": {},
+    "hours": {
+      "mon_sun": "11:00 AM - 8:00 PM"
+    },
     "about": "",
     "our_story": "",
     "cultural_roots": "",
@@ -2942,7 +3384,10 @@
   },
   {
     "social": {},
-    "hours": {},
+    "hours": {
+      "tue_sun": "11:00 AM - 9:00 PM",
+      "mon": "Closed"
+    },
     "about": "",
     "our_story": "",
     "cultural_roots": "",
@@ -2969,7 +3414,11 @@
     "address": "909 W Manchester Blvd, Inglewood, CA 90301",
     "website": "https://adukenigeriancuisine.com",
     "about": "Best Suya & Fufu in Inglewood. Homemade from scratch; vegan/vegetarian options.",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "ts-buka-arlington",
@@ -2982,7 +3431,11 @@
     "phone": "(682) 276-6400",
     "website": "https://www.tsbuka.com",
     "about": "Jollof, egusi, amala; Dallas-area favorite. Delivery available.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "tailat-kitchen-austin",
@@ -2995,6 +3448,10 @@
     "address": "2101 W Pecan St #105, Pflugerville, TX 78660",
     "phone": "(512) 809-4839",
     "website": "https://tailatkitchen.com",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "Closed"
+    },
     "about": "Authentic Jollof & Whole Grilled Tilapia."
   },
   {
@@ -3008,6 +3465,10 @@
     "address": "12407 MoPac Expy, Austin, TX 78758",
     "phone": "(512) 552-7779",
     "website": "http://ladytkitchen.com",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "Closed"
+    },
     "about": "Major local hub for traditional swallows."
   },
   {
@@ -3038,7 +3499,11 @@
     "rating": 4.5,
     "address": "2370 High St, Oakland, CA 94601",
     "about": "Oakland's only Trinidadian; roti wraps, curry goat pelau, pholourie. Chef Ann; Wed–Sat 11am–8pm.",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "blackstar-kebab-seattle",
@@ -3051,7 +3516,11 @@
     "phone": "(206) 499-4019",
     "website": "https://www.blackstarkebab.com",
     "about": "Seattle's premier Ghanaian spot. Food truck with traditional family recipes—chicken, beef, lamb kebabs, jollof rice, sweet plantains; organic ingredients.",
-    "state": "WA"
+    "state": "WA",
+    "hours": {
+      "tue_sun": "11:00 AM - 9:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "48th-street-grille-philly",
@@ -3064,7 +3533,11 @@
     "phone": "(267) 244-4764",
     "website": "https://48thstreetgrille.com",
     "about": "West Philly institution. Casual Caribbean & American; BYOB (wine/champagne/beer); catering; Visit Philly Top Cajun & Caribbean.",
-    "state": "PA"
+    "state": "PA",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "tsehay-dc",
@@ -3076,6 +3549,10 @@
     "address": "2429 18th St NW, Washington, DC 20009",
     "phone": "(202) 808-8952",
     "website": "https://www.tsehaydc.com",
+    "hours": {
+      "mon_wed": "4:00 PM - 10:00 PM",
+      "thu_sun": "12:00 PM - 10:00 PM"
+    },
     "about": "Woman-owned; Michelin-recognized. Fresh teff injera, tibs, shiro; strong vegan menu. Adams Morgan.",
     "state": "DC"
   },
@@ -3090,7 +3567,11 @@
     "phone": "(703) 962-0437",
     "website": "https://www.discoverferu.com",
     "about": "Opened 2023; brunch & traditional dishes. Family recipes from owner's mother (30+ years).",
-    "state": "DC"
+    "state": "DC",
+    "hours": {
+      "tue_sun": "11:00 AM - 10:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "little-lagos-atl",
@@ -3103,7 +3584,11 @@
     "phone": "(404) 835-2465",
     "website": "https://littlelagosatl.com",
     "about": "ATL's #1 Nigerian; jollof, egusi, beef suya. Late hours, outdoor seating. Black-owned.",
-    "state": "GA"
+    "state": "GA",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "baba-jollof-houston",
@@ -3116,7 +3601,11 @@
     "phone": "(346) 900-6832",
     "website": "https://babajloungeandrestaurant.com",
     "about": "Authentic Nigerian; jollof, ayamase, egusi, okro. BYOB, vegan options.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "Closed"
+    }
   },
   {
     "id": "komchop-houston",
@@ -3129,7 +3618,11 @@
     "phone": "(281) 741-3571",
     "website": "https://www.komchop.com",
     "about": "Some of the best jollof in Houston; banga, soups. Counter service, large portions.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "native-pot-houston",
@@ -3142,7 +3635,11 @@
     "phone": "(832) 359-3779",
     "website": "https://nativepotrestaurant.com",
     "about": "Jollof, dodo, seasoned meats and fish made fresh daily.",
-    "state": "TX"
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "vees-brooklyn",
@@ -3154,7 +3651,11 @@
     "address": "896 Nostrand Ave, Brooklyn, NY 11225",
     "phone": "(718) 363-3826",
     "about": "30+ years; oxtail, cow foot soup, ackee & saltfish. Generous portions, meals from $7. Crown Heights.",
-    "state": "NY"
+    "state": "NY",
+    "hours": {
+      "mon_sat": "12:00 PM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "irie-caribbean-brooklyn",
@@ -3166,7 +3667,11 @@
     "address": "126 Utica Ave, Brooklyn, NY 11213",
     "website": "http://www.iriecaribbeankitchen.com",
     "about": "Best Jamaican in Bed-Stuy; oxtail, generous portions. Delivery & dine-in.",
-    "state": "NY"
+    "state": "NY",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "tesfa-ethiopian-chicago",
@@ -3179,7 +3684,11 @@
     "phone": "(312) 698-4481",
     "website": "https://tesfacuisine.com",
     "about": "Family-run; injera, kitfo, tibs. Edgewater. Vegetarian, vegan, gluten-free options.",
-    "state": "IL"
+    "state": "IL",
+    "hours": {
+      "tue_sun": "11:00 AM - 10:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "badou-senegalese-chicago",
@@ -3191,7 +3700,11 @@
     "address": "1947 W Howard St, Chicago, IL 60626",
     "website": "https://badousenegalesecuisine.com",
     "about": "Yassa chicken, mafe, jollof. Vegan options. Rogers Park.",
-    "state": "IL"
+    "state": "IL",
+    "hours": {
+      "tue_sun": "11:00 AM - 9:00 PM",
+      "mon": "Closed"
+    }
   },
   {
     "id": "two-hommes-inglewood",
@@ -3204,7 +3717,11 @@
     "phone": "(424) 227-6266",
     "website": "https://twohommes.com",
     "about": "Afro-centric; California meets West African. Honey berbere chicken, jollof, root beer short ribs. Thu–Mon.",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 8:00 PM"
+    }
   },
   {
     "id": "blessed-tropical-inglewood",
@@ -3215,7 +3732,11 @@
     "rating": 4.5,
     "address": "901 S Prairie Ave, Inglewood, CA 90301",
     "about": "Black-owned, veteran-owned. Oxtail, curry goat, jerk chicken. Outdoor seating, happy hour.",
-    "state": "CA"
+    "state": "CA",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    }
   },
   {
     "id": "selam-ethiopian-chicago",
@@ -3228,6 +3749,10 @@
     "phone": "(773) 271-4300",
     "website": "https://www.orderselamethiopiankitchen.com",
     "about": "Communal platters, organic ingredients. Full bar, late-night Fri–Sat. Uptown.",
-    "state": "IL"
+    "state": "IL",
+    "hours": {
+      "tue_sun": "11:00 AM - 10:00 PM",
+      "mon": "Closed"
+    }
   }
 ]
