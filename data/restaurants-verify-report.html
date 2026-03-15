@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurant data verification – Google Maps</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 1rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.25rem; }
+    p { color: #444; }
+    ul { list-style: none; padding: 0; }
+    li { margin-bottom: 0.75rem; padding: 0.5rem; border-radius: 6px; background: #f5f5f5; }
+    li.needs { background: #fff8e6; }
+    a.maps { display: inline-block; margin-top: 0.25rem; color: #1967d2; font-weight: 500; }
+    a.maps:hover { text-decoration: underline; }
+    .meta { font-size: 0.875rem; color: #666; }
+    .badge { font-size: 0.7rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: #e0e0e0; margin-left: 0.25rem; }
+    .badge.missing { background: #ffcdd2; }
+  </style>
+</head>
+<body>
+  <h1>Verify restaurant data via Google Maps</h1>
+  <p>Click <strong>Verify on Google Maps</strong> to open each place on Google Maps. Compare address, phone, website, and hours with <code>data/restaurants.json</code> and update the JSON as needed.</p>
+  <p><strong>21</strong> of 147 entries need verification (missing phone, website, or full address).</p>
+  <ul>
+    
+    <li class="">
+      <strong>Chez Michelle Restaurant</strong>
+      
+      <div class="meta">6991 S Texas 6, Houston, TX 77083  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Chez%20Michelle%20Restaurant%206991%20S%20Texas%206%2C%20Houston%2C%20TX%2077083" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Addis Ababa Ethiopian Restaurant</strong>
+      
+      <div class="meta">100 S Central Expy #65, Richardson, TX 75080  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Addis%20Ababa%20Ethiopian%20Restaurant%20100%20S%20Central%20Expy%20%2365%2C%20Richardson%2C%20TX%2075080" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Famous Princess African Kitchen</strong>
+      
+      <div class="meta">17036 W Little York Rd, Houston, TX 77084  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Famous%20Princess%20African%20Kitchen%2017036%20W%20Little%20York%20Rd%2C%20Houston%2C%20TX%2077084" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Omalicha Kitchen</strong>
+      
+      <div class="meta">1701 Cypress Creek Pkwy Ste D, Houston, TX 77090  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Omalicha%20Kitchen%201701%20Cypress%20Creek%20Pkwy%20Ste%20D%2C%20Houston%2C%20TX%2077090" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Kokomo</strong>
+      
+      <div class="meta">65 Kent Ave, Brooklyn, NY 11249  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Kokomo%2065%20Kent%20Ave%2C%20Brooklyn%2C%20NY%2011249" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>DJONDJON</strong>
+      
+      <div class="meta">1206 Nostrand Ave, Brooklyn, NY 11225  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=DJONDJON%201206%20Nostrand%20Ave%2C%20Brooklyn%2C%20NY%2011225" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Dukunoo Jamaican Kitchen</strong>
+      
+      <div class="meta">316 NW 24th St, Miami, FL 33127  · FL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Dukunoo%20Jamaican%20Kitchen%20316%20NW%2024th%20St%2C%20Miami%2C%20FL%2033127" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Apt 4B</strong>
+      
+      <div class="meta">2293 Peachtree Rd NW, Atlanta, GA 30309  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Apt%204B%202293%20Peachtree%20Rd%20NW%2C%20Atlanta%2C%20GA%2030309" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Blaqhaus</strong>
+      
+      <div class="meta">1167 Joseph E. Boone Blvd NW, Atlanta, GA 30314  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Blaqhaus%201167%20Joseph%20E.%20Boone%20Blvd%20NW%2C%20Atlanta%2C%20GA%2030314" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Callaloo Trinidadian Kitchen</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">1639 Flatbush Ave, Brooklyn, NY 11210  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Callaloo%20Trinidadian%20Kitchen%201639%20Flatbush%20Ave%2C%20Brooklyn%2C%20NY%2011210" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Miss Lily's 7A</strong>
+      
+      <div class="meta">109 Avenue A, New York, NY 10009  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Miss%20Lily's%207A%20109%20Avenue%20A%2C%20New%20York%2C%20NY%2010009" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Negrit</strong>
+      
+      <div class="meta">3401 Main St, Houston, TX 77002  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Negrit%203401%20Main%20St%2C%20Houston%2C%20TX%2077002" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Cane</strong>
+      
+      <div class="meta">403 H St NE, Washington, DC 20002  · DC</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Cane%20403%20H%20St%20NE%2C%20Washington%2C%20DC%2020002" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Pearl's</strong>
+      
+      <div class="meta">178 N 8th St, Brooklyn, NY 11211  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Pearl's%20178%20N%208th%20St%2C%20Brooklyn%2C%20NY%2011211" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Appioo African Bar &amp; Grill</strong>
+      
+      <div class="meta">1924 9th St NW, Washington, DC 20001  · DC</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Appioo%20African%20Bar%20%26%20Grill%201924%209th%20St%20NW%2C%20Washington%2C%20DC%2020001" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Teranga</strong>
+      
+      <div class="meta">1280 5th Ave, New York, NY 10029  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Teranga%201280%205th%20Ave%2C%20New%20York%2C%20NY%2010029" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Mansa Kunda</strong>
+      
+      <div class="meta">8000 Flower Ave, Takoma Park, MD 20912  · MD</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Mansa%20Kunda%208000%20Flower%20Ave%2C%20Takoma%20Park%2C%20MD%2020912" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Bukom Cafe</strong>
+      
+      <div class="meta">2442 18th St NW, Washington, DC 20009  · DC</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Bukom%20Cafe%202442%2018th%20St%20NW%2C%20Washington%2C%20DC%2020009" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Ponti's Ivorian Kitchen</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">12450 Westheimer Rd, Houston, TX 77077  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Ponti's%20Ivorian%20Kitchen%2012450%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077077" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Gold Coast African Restaurant</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">6200 N Clark St, Chicago, IL 60660  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Gold%20Coast%20African%20Restaurant%206200%20N%20Clark%20St%2C%20Chicago%2C%20IL%2060660" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Afrik-CHe Kitchen</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">12030 Bissonnet St, Houston, TX 77099  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Afrik-CHe%20Kitchen%2012030%20Bissonnet%20St%2C%20Houston%2C%20TX%2077099" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Adulis</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">149-10 45th Ave, Flushing, NY 11355  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Adulis%20149-10%2045th%20Ave%2C%20Flushing%2C%20NY%2011355" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Kulan Cafe</strong>
+      
+      <div class="meta">3821 S George Mason Dr, Falls Church, VA 22041  · VA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Kulan%20Cafe%203821%20S%20George%20Mason%20Dr%2C%20Falls%20Church%2C%20VA%2022041" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Safari Restaurant</strong>
+      
+      <div class="meta">3010 4th Ave S, Minneapolis, MN 55408  · MN</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Safari%20Restaurant%203010%204th%20Ave%20S%2C%20Minneapolis%2C%20MN%2055408" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>10 Degrees South</strong>
+      
+      <div class="meta">4183 Roswell Rd NE, Atlanta, GA 30342  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=10%20Degrees%20South%204183%20Roswell%20Rd%20NE%2C%20Atlanta%2C%20GA%2030342" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Tatiana by Kwame Onwuachi</strong>
+      
+      <div class="meta">10 Lincoln Center Plaza, New York, NY 10023  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Tatiana%20by%20Kwame%20Onwuachi%2010%20Lincoln%20Center%20Plaza%2C%20New%20York%2C%20NY%2010023" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>ChòpnBlọk</strong>
+      
+      <div class="meta">401 Franklin St Suite 1325, Houston, TX 77201  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Ch%C3%B2pnBl%E1%BB%8Dk%20401%20Franklin%20St%20Suite%201325%2C%20Houston%2C%20TX%2077201" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Ariya Cuisine</strong>
+      
+      <div class="meta">6357 Westheimer Rd, Houston, TX 77057  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Ariya%20Cuisine%206357%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077057" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Bunna Cafe</strong>
+      
+      <div class="meta">1084 Flushing Ave, Brooklyn, NY 11237  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Bunna%20Cafe%201084%20Flushing%20Ave%2C%20Brooklyn%2C%20NY%2011237" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Virgil's Gullah Kitchen</strong>
+      
+      <div class="meta">822 Marietta St NW, Atlanta, GA 30318  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Virgil's%20Gullah%20Kitchen%20822%20Marietta%20St%20NW%2C%20Atlanta%2C%20GA%2030318" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Swahili Village</strong>
+      
+      <div class="meta">1990 M St NW, Washington, DC 20036  · DC</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Swahili%20Village%201990%20M%20St%20NW%2C%20Washington%2C%20DC%2020036" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Ethiopic</strong>
+      
+      <div class="meta">401 H St NE, Washington, DC 20002  · DC</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Ethiopic%20401%20H%20St%20NE%2C%20Washington%2C%20DC%2020002" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Desta</strong>
+      
+      <div class="meta">3086 Briarcliff Rd NE, Atlanta, GA 30329  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Desta%203086%20Briarcliff%20Rd%20NE%2C%20Atlanta%2C%20GA%2030329" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Busy Bee Cafe</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">810 Martin Luther King Jr Dr SW, Atlanta, GA 30314  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Busy%20Bee%20Cafe%20810%20Martin%20Luther%20King%20Jr%20Dr%20SW%2C%20Atlanta%2C%20GA%2030314" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Meals by Genet</strong>
+      
+      <div class="meta">1053 S Fairfax Ave, Los Angeles, CA 90019  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Meals%20by%20Genet%201053%20S%20Fairfax%20Ave%2C%20Los%20Angeles%2C%20CA%2090019" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>African Chop</strong>
+      
+      <div class="meta">3150 Wilshire Blvd, Los Angeles, CA 90010  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=African%20Chop%203150%20Wilshire%20Blvd%2C%20Los%20Angeles%2C%20CA%2090010" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>BlaqHaus NoHo</strong>
+      
+      <div class="meta">11671 Victory Blvd, North Hollywood, CA 91606  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=BlaqHaus%20NoHo%2011671%20Victory%20Blvd%2C%20North%20Hollywood%2C%20CA%2091606" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Amawele's</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">101 Spear St, San Francisco, CA 94105  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Amawele's%20101%20Spear%20St%2C%20San%20Francisco%2C%20CA%2094105" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Demera Ethiopian</strong>
+      
+      <div class="meta">4801 N Broadway, Chicago, IL 60640  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Demera%20Ethiopian%204801%20N%20Broadway%2C%20Chicago%2C%20IL%2060640" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>African Small Pot</strong>
+      
+      <div class="meta">6133 Woodland Ave, Philadelphia, PA 19142  · PA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=African%20Small%20Pot%206133%20Woodland%20Ave%2C%20Philadelphia%2C%20PA%2019142" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Gorée Cuisine</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">1126 E 47th St, Chicago, IL 60653  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Gor%C3%A9e%20Cuisine%201126%20E%2047th%20St%2C%20Chicago%2C%20IL%2060653" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Kilimandjaro</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">4301 Chestnut St, Philadelphia, PA 19104  · PA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Kilimandjaro%204301%20Chestnut%20St%2C%20Philadelphia%2C%20PA%2019104" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Iyanze</strong>
+      
+      <div class="meta">4623 N Broadway, Chicago, IL 60640  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Iyanze%204623%20N%20Broadway%2C%20Chicago%2C%20IL%2060640" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Yassa African Restaurant</strong>
+      
+      <div class="meta">3511 S King Dr, Chicago, IL 60653  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Yassa%20African%20Restaurant%203511%20S%20King%20Dr%2C%20Chicago%2C%20IL%2060653" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Quality Taste</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">4002 Lancaster Ave, Philadelphia, PA 19104  · PA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Quality%20Taste%204002%20Lancaster%20Ave%2C%20Philadelphia%2C%20PA%2019104" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Communion R&amp;B</strong>
+      
+      <div class="meta">2350 E Union St, Seattle, WA 98122  · WA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Communion%20R%26B%202350%20E%20Union%20St%2C%20Seattle%2C%20WA%2098122" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Meskel Ethiopian</strong>
+      
+      <div class="meta">2605 E Cherry St, Seattle, WA 98122  · WA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Meskel%20Ethiopian%202605%20E%20Cherry%20St%2C%20Seattle%2C%20WA%2098122" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Cesaria</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">266 Bowdoin St, Boston, MA 02121  · MA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Cesaria%20266%20Bowdoin%20St%2C%20Boston%2C%20MA%2002121" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Cafe Selam</strong>
+      
+      <div class="meta">2715 E Cherry St B, Seattle, WA 98122  · WA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20Selam%202715%20E%20Cherry%20St%20B%2C%20Seattle%2C%20WA%2098122" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Suya Joint</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">185 Dudley St, Boston, MA 02119  · MA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Suya%20Joint%20185%20Dudley%20St%2C%20Boston%2C%20MA%2002119" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Jebena Cafe</strong>
+      
+      <div class="meta">1510 NE 117th St, Seattle, WA 98125  · WA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Jebena%20Cafe%201510%20NE%20117th%20St%2C%20Seattle%2C%20WA%2098125" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Cool Runnings Jamaican Grill</strong>
+      
+      <div class="meta">8270 W Bellfort Ave, Houston, TX 77071  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Cool%20Runnings%20Jamaican%20Grill%208270%20W%20Bellfort%20Ave%2C%20Houston%2C%20TX%2077071" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Bennachin</strong>
+      
+      <div class="meta">1212 Royal St, New Orleans, LA 70116  · LA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Bennachin%201212%20Royal%20St%2C%20New%20Orleans%2C%20LA%2070116" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Dooky Chase's</strong>
+      
+      <div class="meta">2301 Orleans Ave, New Orleans, LA 70119  · LA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Dooky%20Chase's%202301%20Orleans%20Ave%2C%20New%20Orleans%2C%20LA%2070119" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Abyssinia</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">35 W 28th St, New York, NY 10001  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Abyssinia%2035%20W%2028th%20St%2C%20New%20York%2C%20NY%2010001" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Teranga (The Village)</strong>
+      
+      <div class="meta">4 Embarcadero Center, San Francisco, CA 94111  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Teranga%20(The%20Village)%204%20Embarcadero%20Center%2C%20San%20Francisco%2C%20CA%2094111" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Lala's Eritrean</strong>
+      
+      <div class="meta">4069 Telegraph Ave, Oakland, CA 94609  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Lala's%20Eritrean%204069%20Telegraph%20Ave%2C%20Oakland%2C%20CA%2094609" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Riddim n' Spice</strong>
+      
+      <div class="meta">2116 Meharry Blvd, Nashville, TN 37208  · TN</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Riddim%20n'%20Spice%202116%20Meharry%20Blvd%2C%20Nashville%2C%20TN%2037208" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Reggae Hut</strong>
+      
+      <div class="meta">4814 Almeda Rd, Houston, TX 77004  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Reggae%20Hut%204814%20Almeda%20Rd%2C%20Houston%2C%20TX%2077004" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Caribbean Hotpot Grill</strong>
+      
+      <div class="meta">954 FM 1960 West, Houston, TX 77090  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Caribbean%20Hotpot%20Grill%20954%20FM%201960%20West%2C%20Houston%2C%20TX%2077090" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Reggae Hut (Veterans Memorial)</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">12005 Veterans Memorial Dr, Ste A, Houston, TX 77067  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Reggae%20Hut%20(Veterans%20Memorial)%2012005%20Veterans%20Memorial%20Dr%2C%20Ste%20A%2C%20Houston%2C%20TX%2077067" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Dakar Street Food</strong>
+      
+      <div class="meta">2923 Walnut Bend Ln, Houston, TX 77042  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Dakar%20Street%20Food%202923%20Walnut%20Bend%20Ln%2C%20Houston%2C%20TX%2077042" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Spice House Midtown</strong>
+      
+      <div class="meta">375 14th St NW, Atlanta, GA 30318  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Spice%20House%20Midtown%20375%2014th%20St%20NW%2C%20Atlanta%2C%20GA%2030318" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Jasmine's Caribbean Cuisine</strong>
+      
+      <div class="meta">371 W 46th St, New York, NY 10036  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Jasmine's%20Caribbean%20Cuisine%20371%20W%2046th%20St%2C%20New%20York%2C%20NY%2010036" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Garifuna Flava</strong>
+      
+      <div class="meta">2518 W 63rd St, Chicago, IL 60629  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Garifuna%20Flava%202518%20W%2063rd%20St%2C%20Chicago%2C%20IL%2060629" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>St. James - Modern Caribbean</strong>
+      
+      <div class="meta">2017 14th St NW, Washington, DC 20009  · DC</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=St.%20James%20-%20Modern%20Caribbean%202017%2014th%20St%20NW%2C%20Washington%2C%20DC%2020009" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Dulan's on Crenshaw</strong>
+      
+      <div class="meta">4859 Crenshaw Blvd, Los Angeles, CA 90043  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Dulan's%20on%20Crenshaw%204859%20Crenshaw%20Blvd%2C%20Los%20Angeles%2C%20CA%2090043" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Chef Creole</strong>
+      
+      <div class="meta">200 NW 54th St, Miami, FL 33127  · FL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Chef%20Creole%20200%20NW%2054th%20St%2C%20Miami%2C%20FL%2033127" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Red Rooster Overtown</strong>
+      
+      <div class="meta">920 NW 2nd Ave, Miami, FL 33136  · FL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Red%20Rooster%20Overtown%20920%20NW%202nd%20Ave%2C%20Miami%2C%20FL%2033136" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Baobab Fare</strong>
+      
+      <div class="meta">6568 Woodward Ave, Detroit, MI 48202  · MI</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Baobab%20Fare%206568%20Woodward%20Ave%2C%20Detroit%2C%20MI%2048202" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Lucille's</strong>
+      
+      <div class="meta">5512 La Branch St, Houston, TX 77004  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Lucille's%205512%20La%20Branch%20St%2C%20Houston%2C%20TX%2077004" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Ja' Grill Hyde Park</strong>
+      
+      <div class="meta">1510 E Harper Ct, Chicago, IL 60615  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Ja'%20Grill%20Hyde%20Park%201510%20E%20Harper%20Ct%2C%20Chicago%2C%20IL%2060615" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Irie Mon Cafe</strong>
+      
+      <div class="meta">1800 Peachtree St NW #103, Atlanta, GA 30309  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Irie%20Mon%20Cafe%201800%20Peachtree%20St%20NW%20%23103%2C%20Atlanta%2C%20GA%2030309" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Dōgon</strong>
+      
+      <div class="meta">800 Maine Ave SW, Washington, DC 20024  · DC</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=D%C5%8Dgon%20800%20Maine%20Ave%20SW%2C%20Washington%2C%20DC%2020024" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Dakar NOLA</strong>
+      
+      <div class="meta">3814 Magazine St, New Orleans, LA 70115  · LA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Dakar%20NOLA%203814%20Magazine%20St%2C%20New%20Orleans%2C%20LA%2070115" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>The Jerk Shack</strong>
+      
+      <div class="meta">10234 TX-151 Suite 103, San Antonio, TX 78251  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Jerk%20Shack%2010234%20TX-151%20Suite%20103%2C%20San%20Antonio%2C%20TX%2078251" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Kann</strong>
+      
+      <div class="meta">548 SE Ash St, Portland, OR 97214  · OR</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Kann%20548%20SE%20Ash%20St%2C%20Portland%2C%20OR%2097214" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Canje</strong>
+      
+      <div class="meta">1914 E 6th St Ste C, Austin, TX 78702  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Canje%201914%20E%206th%20St%20Ste%20C%2C%20Austin%2C%20TX%2078702" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Ember Kitchen</strong>
+      
+      <div class="meta">800 W Cesar Chavez St Ste PP110, Austin, TX 78701  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Ember%20Kitchen%20800%20W%20Cesar%20Chavez%20St%20Ste%20PP110%2C%20Austin%2C%20TX%2078701" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Aldeez Afribbean</strong>
+      
+      <div class="meta">3950 Rosemeade Pkwy Ste 100, Dallas, TX 75287  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Aldeez%20Afribbean%203950%20Rosemeade%20Pkwy%20Ste%20100%2C%20Dallas%2C%20TX%2075287" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>The Island Spot (Oak Cliff)</strong>
+      
+      <div class="meta">309 W Jefferson Blvd, Dallas, TX 75208  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Island%20Spot%20(Oak%20Cliff)%20309%20W%20Jefferson%20Blvd%2C%20Dallas%2C%20TX%2075208" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Island Spice Bar &amp; Grill</strong>
+      
+      <div class="meta">17802 W Little York Rd, Houston, TX 77084  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Island%20Spice%20Bar%20%26%20Grill%2017802%20W%20Little%20York%20Rd%2C%20Houston%2C%20TX%2077084" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Habesha Ethiopian</strong>
+      
+      <div class="meta">6019 N Interstate 35, Austin, TX 78723  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Habesha%20Ethiopian%206019%20N%20Interstate%2035%2C%20Austin%2C%20TX%2078723" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Cafe Nubia</strong>
+      
+      <div class="meta">3920 Rosemeade Pkwy #100, Dallas, TX 75287  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20Nubia%203920%20Rosemeade%20Pkwy%20%23100%2C%20Dallas%2C%20TX%2075287" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Bintü Atelier</strong>
+      
+      <div class="meta">8D Line St, Charleston, SC 29403  · SC</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Bint%C3%BC%20Atelier%208D%20Line%20St%2C%20Charleston%2C%20SC%2029403" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Status Hollywood</strong>
+      
+      <div class="meta">1612 N Cahuenga Blvd, Los Angeles, CA 90028  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Status%20Hollywood%201612%20N%20Cahuenga%20Blvd%2C%20Los%20Angeles%2C%20CA%2090028" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Lucian Books and Wine</strong>
+      
+      <div class="meta">3003 Peachtree Rd NE Ste 300, Atlanta, GA 30305  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Lucian%20Books%20and%20Wine%203003%20Peachtree%20Rd%20NE%20Ste%20300%2C%20Atlanta%2C%20GA%2030305" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Friday Saturday Sunday</strong>
+      
+      <div class="meta">261 S 21st St, Philadelphia, PA 19103  · PA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Friday%20Saturday%20Sunday%20261%20S%2021st%20St%2C%20Philadelphia%2C%20PA%2019103" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Jerk Shack</strong>
+      
+      <div class="meta">1133 24th Ave Ste N, Seattle, WA 98122  · WA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Jerk%20Shack%201133%2024th%20Ave%20Ste%20N%2C%20Seattle%2C%20WA%2098122" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Helen's Kitchen</strong>
+      
+      <div class="meta">14608 S Post Oak Rd, Houston, TX 77045  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Helen's%20Kitchen%2014608%20S%20Post%20Oak%20Rd%2C%20Houston%2C%20TX%2077045" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Lucia</strong>
+      
+      <div class="meta">351 N Fairfax Ave, Los Angeles, CA 90036  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Lucia%20351%20N%20Fairfax%20Ave%2C%20Los%20Angeles%2C%20CA%2090036" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Bridgetown Roti</strong>
+      
+      <div class="meta">672 S Santa Fe Ave, Los Angeles, CA 90021  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Bridgetown%20Roti%20672%20S%20Santa%20Fe%20Ave%2C%20Los%20Angeles%2C%20CA%2090021" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Teranga</strong>
+      
+      <div class="meta">1 Embarcadero Center, San Francisco, CA 94111  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Teranga%201%20Embarcadero%20Center%2C%20San%20Francisco%2C%20CA%2094111" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Negril ATL</strong>
+      
+      <div class="meta">999 Chattahoochee Ave, Atlanta, GA 30318  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Negril%20ATL%20999%20Chattahoochee%20Ave%2C%20Atlanta%2C%20GA%2030318" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Taste of Nigeria</strong>
+      
+      <div class="meta">6362 Windsor Lakes Dr, Houston, TX 77024  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Taste%20of%20Nigeria%206362%20Windsor%20Lakes%20Dr%2C%20Houston%2C%20TX%2077024" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Komchop</strong>
+      
+      <div class="meta">10050 Westheimer Rd, Houston, TX 77042  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Komchop%2010050%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077042" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Finger Licking 2.0</strong>
+      
+      <div class="meta">9815 Bissonnet St, Houston, TX 77036  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Finger%20Licking%202.0%209815%20Bissonnet%20St%2C%20Houston%2C%20TX%2077036" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Sarabell Calabar</strong>
+      
+      <div class="meta">9218 Bissonnet St, Houston, TX 77074  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Sarabell%20Calabar%209218%20Bissonnet%20St%2C%20Houston%2C%20TX%2077074" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Amala Joint</strong>
+      
+      <div class="meta">1251 Pin Oak Rd, Katy, TX 77494  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Amala%20Joint%201251%20Pin%20Oak%20Rd%2C%20Katy%2C%20TX%2077494" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Amala Zone</strong>
+      
+      <div class="meta">14815 Westheimer Rd, Houston, TX 77082  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Amala%20Zone%2014815%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077082" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Chef Benny</strong>
+      
+      <div class="meta">10010 Bissonnet St, Houston, TX 77036  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Chef%20Benny%2010010%20Bissonnet%20St%2C%20Houston%2C%20TX%2077036" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Afrikiko</strong>
+      
+      <div class="meta">9420 Richmond Ave. Ste. E, Houston, TX 77063  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Afrikiko%209420%20Richmond%20Ave.%20Ste.%20E%2C%20Houston%2C%20TX%2077063" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Dakar Street Food</strong>
+      
+      <div class="meta">2616 Blodgett St, Houston, TX 77004  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Dakar%20Street%20Food%202616%20Blodgett%20St%2C%20Houston%2C%20TX%2077004" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Astor's Table</strong>
+      
+      <div class="meta">1590 S Mason Rd, Katy, TX 77450  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Astor's%20Table%201590%20S%20Mason%20Rd%2C%20Katy%2C%20TX%2077450" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Suya Hut</strong>
+      
+      <div class="meta">11720 W Airport Blvd, Meadows Place, TX 77477  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Suya%20Hut%2011720%20W%20Airport%20Blvd%2C%20Meadows%20Place%2C%20TX%2077477" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Blue Nile Ethiopian</strong>
+      
+      <div class="meta">9400 Richmond Ave, Houston, TX 77063  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Blue%20Nile%20Ethiopian%209400%20Richmond%20Ave%2C%20Houston%2C%20TX%2077063" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Aria Suya Kitchen</strong>
+      
+      <div class="meta">6308 Richmond Ave, Houston, TX 77057  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Aria%20Suya%20Kitchen%206308%20Richmond%20Ave%2C%20Houston%2C%20TX%2077057" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Jollof Rice King</strong>
+      
+      <div class="meta">5231 Bellaire Blvd, Bellaire, TX 77401  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Jollof%20Rice%20King%205231%20Bellaire%20Blvd%2C%20Bellaire%2C%20TX%2077401" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Butter D' Roti</strong>
+      
+      <div class="meta">3710 Deepwind Bay Ct, Katy, TX 77493  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Butter%20D'%20Roti%203710%20Deepwind%20Bay%20Ct%2C%20Katy%2C%20TX%2077493" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Fabaceae African Cuisine</strong>
+      
+      <div class="meta">12611 Woodforest Blvd Ste A, Houston, TX 77015  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Fabaceae%20African%20Cuisine%2012611%20Woodforest%20Blvd%20Ste%20A%2C%20Houston%2C%20TX%2077015" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Lucy Ethiopian Restaurant &amp; Lounge</strong>
+      
+      <div class="meta">6800 Westheimer Rd, Houston, TX 77057  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Lucy%20Ethiopian%20Restaurant%20%26%20Lounge%206800%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077057" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Nyammings Fusion Bistro</strong>
+      
+      <div class="meta">10411 Harlem Rd, Richmond, TX 77406  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Nyammings%20Fusion%20Bistro%2010411%20Harlem%20Rd%2C%20Richmond%2C%20TX%2077406" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Caribbean Hotpot Grill</strong>
+      
+      <div class="meta">5601 Navigation Blvd, Houston, TX 77011  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Caribbean%20Hotpot%20Grill%205601%20Navigation%20Blvd%2C%20Houston%2C%20TX%2077011" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Africa Kine</strong>
+      
+      <div class="meta">2267 Adam Clayton Powell Jr Blvd, New York, NY 10027  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Africa%20Kine%202267%20Adam%20Clayton%20Powell%20Jr%20Blvd%2C%20New%20York%2C%20NY%2010027" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Buka</strong>
+      
+      <div class="meta">946 Fulton St, Brooklyn, NY 11238  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Buka%20946%20Fulton%20St%2C%20Brooklyn%2C%20NY%2011238" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Jasmine's Caribbean</strong>
+      
+      <div class="meta">371 W 46th St, New York, NY 10036  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Jasmine's%20Caribbean%20371%20W%2046th%20St%2C%20New%20York%2C%20NY%2010036" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Appioo Bar &amp; Grill</strong>
+      
+      <div class="meta">1924 9th St NW, Washington, DC 20001  · DC</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Appioo%20Bar%20%26%20Grill%201924%209th%20St%20NW%2C%20Washington%2C%20DC%2020001" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Chercher</strong>
+      
+      <div class="meta">4921 Bethesda Ave, Bethesda, MD 20814  · MD</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Chercher%204921%20Bethesda%20Ave%2C%20Bethesda%2C%20MD%2020814" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Veronica's Kitchen</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">524 W Manchester Blvd, Inglewood, CA 90301  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Veronica's%20Kitchen%20524%20W%20Manchester%20Blvd%2C%20Inglewood%2C%20CA%2090301" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Rosalind's</strong>
+      
+      <div class="meta">1044 S Fairfax Ave, Los Angeles, CA 90019  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Rosalind's%201044%20S%20Fairfax%20Ave%2C%20Los%20Angeles%2C%20CA%2090019" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Cafe Songhai</strong>
+      
+      <div class="meta">3380 Holcomb Bridge Rd, Peachtree Corners, GA 30092  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20Songhai%203380%20Holcomb%20Bridge%20Rd%2C%20Peachtree%20Corners%2C%20GA%2030092" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Belle &amp; Lily's</strong>
+      
+      <div class="meta">3350 Chamblee Tucker Rd, Atlanta, GA 30341  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Belle%20%26%20Lily's%203350%20Chamblee%20Tucker%20Rd%2C%20Atlanta%2C%20GA%2030341" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Yassa African Restaurant</strong>
+      
+      <div class="meta">3511 S King Dr, Chicago, IL 60653  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Yassa%20African%20Restaurant%203511%20S%20King%20Dr%2C%20Chicago%2C%20IL%2060653" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Royal Arm Restaurant</strong>
+      
+      <div class="meta">23010 Highland Knolls Dr Ste C, Katy, TX 77494  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Royal%20Arm%20Restaurant%2023010%20Highland%20Knolls%20Dr%20Ste%20C%2C%20Katy%2C%20TX%2077494" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Iyanze Bar &amp; Cafe</strong>
+      
+      <div class="meta">4623 N Broadway, Chicago, IL 60640  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Iyanze%20Bar%20%26%20Cafe%204623%20N%20Broadway%2C%20Chicago%2C%20IL%2060640" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Ubuntu</strong>
+      
+      <div class="meta">1050 Howell Mill Rd, Atlanta, GA 30318  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Ubuntu%201050%20Howell%20Mill%20Rd%2C%20Atlanta%2C%20GA%2030318" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Aduke Nigerian Cuisine</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">909 W Manchester Blvd, Inglewood, CA 90301  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Aduke%20Nigerian%20Cuisine%20909%20W%20Manchester%20Blvd%2C%20Inglewood%2C%20CA%2090301" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>T's Buka</strong>
+      
+      <div class="meta">807 E Arkansas Ln, Arlington, TX 76010  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=T's%20Buka%20807%20E%20Arkansas%20Ln%2C%20Arlington%2C%20TX%2076010" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Tailat Kitchen</strong>
+      
+      <div class="meta">2101 W Pecan St #105, Pflugerville, TX 78660  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Tailat%20Kitchen%202101%20W%20Pecan%20St%20%23105%2C%20Pflugerville%2C%20TX%2078660" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Lady T Kitchen</strong>
+      
+      <div class="meta">12407 MoPac Expy, Austin, TX 78758  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Lady%20T%20Kitchen%2012407%20MoPac%20Expy%2C%20Austin%2C%20TX%2078758" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Bamboo Walk</strong>
+      
+      <div class="meta">1343 Utica Ave, Brooklyn, NY 11203  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Bamboo%20Walk%201343%20Utica%20Ave%2C%20Brooklyn%2C%20NY%2011203" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Cocobreeze</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">2370 High St, Oakland, CA 94601  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Cocobreeze%202370%20High%20St%2C%20Oakland%2C%20CA%2094601" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>BlackStar Kebab</strong>
+      
+      <div class="meta">1144 NW 52nd St, Seattle, WA 98107  · WA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=BlackStar%20Kebab%201144%20NW%2052nd%20St%2C%20Seattle%2C%20WA%2098107" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>48th Street Grille</strong>
+      
+      <div class="meta">310 S 48th St, Philadelphia, PA 19143  · PA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=48th%20Street%20Grille%20310%20S%2048th%20St%2C%20Philadelphia%2C%20PA%2019143" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Tsehay Ethiopian Restaurant &amp; Bar</strong>
+      
+      <div class="meta">2429 18th St NW, Washington, DC 20009  · DC</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Tsehay%20Ethiopian%20Restaurant%20%26%20Bar%202429%2018th%20St%20NW%2C%20Washington%2C%20DC%2020009" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Feru Ethiopian Cuisine</strong>
+      
+      <div class="meta">1128 H St NE, Washington, DC 20002  · DC</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Feru%20Ethiopian%20Cuisine%201128%20H%20St%20NE%2C%20Washington%2C%20DC%2020002" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Little Lagos</strong>
+      
+      <div class="meta">3979 Buford Hwy NE Suite 112, Atlanta, GA 30345  · GA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Little%20Lagos%203979%20Buford%20Hwy%20NE%20Suite%20112%2C%20Atlanta%2C%20GA%2030345" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Baba Jollof</strong>
+      
+      <div class="meta">8330 W Bellfort Ave Ste C, Houston, TX 77071  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Baba%20Jollof%208330%20W%20Bellfort%20Ave%20Ste%20C%2C%20Houston%2C%20TX%2077071" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Komchop</strong>
+      
+      <div class="meta">14144 Westheimer Rd #120, Houston, TX 77077  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Komchop%2014144%20Westheimer%20Rd%20%23120%2C%20Houston%2C%20TX%2077077" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Native Pot Restaurant</strong>
+      
+      <div class="meta">2022 Wilcrest Dr, Houston, TX 77042  · TX</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Native%20Pot%20Restaurant%202022%20Wilcrest%20Dr%2C%20Houston%2C%20TX%2077042" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Vee's</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">896 Nostrand Ave, Brooklyn, NY 11225  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Vee's%20896%20Nostrand%20Ave%2C%20Brooklyn%2C%20NY%2011225" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Irie Caribbean Kitchen</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">126 Utica Ave, Brooklyn, NY 11213  · NY</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Irie%20Caribbean%20Kitchen%20126%20Utica%20Ave%2C%20Brooklyn%2C%20NY%2011213" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Tesfa Ethiopian Cuisine</strong>
+      
+      <div class="meta">5352 N Broadway, Chicago, IL 60640  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Tesfa%20Ethiopian%20Cuisine%205352%20N%20Broadway%2C%20Chicago%2C%20IL%2060640" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Badou Senegalese Cuisine</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">1947 W Howard St, Chicago, IL 60626  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Badou%20Senegalese%20Cuisine%201947%20W%20Howard%20St%2C%20Chicago%2C%20IL%2060626" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Two Hommés</strong>
+      
+      <div class="meta">902 N La Brea Ave, Inglewood, CA 90302  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Two%20Homm%C3%A9s%20902%20N%20La%20Brea%20Ave%2C%20Inglewood%2C%20CA%2090302" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="needs">
+      <strong>Blessed Tropical Jamaican Cuisine</strong>
+      <span class="badge missing">needs check</span>
+      <div class="meta">901 S Prairie Ave, Inglewood, CA 90301  · CA</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Blessed%20Tropical%20Jamaican%20Cuisine%20901%20S%20Prairie%20Ave%2C%20Inglewood%2C%20CA%2090301" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+    <li class="">
+      <strong>Selam Ethiopian Kitchen</strong>
+      
+      <div class="meta">4543 N Broadway, Chicago, IL 60640  · IL</div>
+      <a class="maps" href="https://www.google.com/maps/search/?api=1&amp;query=Selam%20Ethiopian%20Kitchen%204543%20N%20Broadway%2C%20Chicago%2C%20IL%2060640" target="_blank" rel="noopener">Verify on Google Maps →</a>
+    </li>
+  </ul>
+</body>
+</html>

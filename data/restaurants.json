@@ -285,7 +285,7 @@
     "rating": 4.7,
     "address": "1639 Flatbush Ave, Brooklyn, NY 11210",
     "phone": "(718) 677-1773",
-    "website": "N/A",
+    "website": "",
     "social": {
       "instagram": "@callalookitchen"
     },
@@ -561,7 +561,7 @@
     "rating": 4.5,
     "address": "12450 Westheimer Rd, Houston, TX 77077",
     "phone": "(281) 506-7935",
-    "website": "N/A",
+    "website": "",
     "social": {
       "instagram": "@pontiskitchen"
     },
@@ -589,7 +589,7 @@
     "rating": 4.3,
     "address": "6200 N Clark St, Chicago, IL 60660",
     "phone": "(773) 764-1234",
-    "website": "N/A",
+    "website": "",
     "social": {
       "instagram": "@goldcoastchicago"
     },
@@ -617,7 +617,7 @@
     "rating": 4.6,
     "address": "12030 Bissonnet St, Houston, TX 77099",
     "phone": "(832) 617-8924",
-    "website": "N/A",
+    "website": "",
     "social": {
       "instagram": "@afrik_che_houston"
     },
@@ -645,7 +645,7 @@
     "rating": 4.6,
     "address": "149-10 45th Ave, Flushing, NY 11355",
     "phone": "(718) 886-2442",
-    "website": "N/A",
+    "website": "",
     "social": {
       "instagram": "@adulis_restaurant"
     },
@@ -815,28 +815,16 @@
     "state": "TX"
   },
   {
-    "id": "nyc-berber",
-    "name": "Berber Street Food",
-    "cuisine": "North African",
-    "region": "North African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "New York City, NY",
-    "phone": "(646) 870-0495",
-    "about": "Traditional North African street food with modern flair.",
-    "vibe_category": "Authentic Staples",
-    "state": "TX"
-  },
-  {
     "id": "hou-007",
     "name": "Ariya Cuisine",
     "cuisine": "Nigerian",
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Westchase, Houston, TX",
-    "phone": "(713) 774-2700",
-    "about": "The ultimate destination for authentic pounded yam.",
+    "address": "6357 Westheimer Rd, Houston, TX 77057",
+    "phone": "(832) 831-4372",
+    "website": "https://www.ariasuyakitchen.com",
+    "about": "Nigerian suya and West African dishes in Galleria/Westchase (also known as Aria Suya Kitchen).",
     "vibe_tags": [
       "Premium Traditional"
     ],
@@ -869,14 +857,15 @@
     "region": "West African",
     "price_range": "$$$",
     "rating": 4.8,
-    "address": "West Midtown, Atlanta, GA",
+    "address": "822 Marietta St NW, Atlanta, GA 30318",
     "phone": "(404) 228-4897",
-    "about": "A love letter to the coastal heritage of the Gullah people.",
+    "website": "https://www.virgilsgullahkitchen.com",
+    "about": "A love letter to the coastal heritage of the Gullah people. West Midtown.",
     "vibe_tags": [
       "Soulful & Social"
     ],
     "vibe_category": "Fine Dining",
-    "state": "TX"
+    "state": "GA"
   },
   {
     "social": {},
@@ -904,11 +893,12 @@
     "region": "East African",
     "price_range": "$$",
     "rating": 4.6,
-    "address": "Washington, DC",
+    "address": "401 H St NE, Washington, DC 20002",
     "phone": "(202) 675-2066",
-    "about": "Authentic Ethiopian cuisine in the heart of Washington, DC.",
+    "website": "https://www.ethiopicrestaurant.com",
+    "about": "Authentic Ethiopian cuisine in the heart of Washington, DC. First Ethiopian on the H Street Corridor.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "DC"
   },
   {
     "id": "atl-002",
@@ -917,14 +907,15 @@
     "region": "East African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Briarcliff, Atlanta, GA",
-    "phone": "(404) 321-0510",
-    "about": "Where traditional happiness meets contemporary design.",
+    "address": "3086 Briarcliff Rd NE, Atlanta, GA 30329",
+    "phone": "(404) 929-0011",
+    "website": "https://destaethiopiankitchen.com",
+    "about": "Where traditional happiness meets contemporary design. Authentic Ethiopian since 2006; also Westside Village location.",
     "vibe_tags": [
       "Sleek & Modern"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "GA"
   },
   {
     "id": "atl-busy-bee",
@@ -933,56 +924,11 @@
     "region": "Southern",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Atlanta, GA",
+    "address": "810 Martin Luther King Jr Dr SW, Atlanta, GA 30314",
     "phone": "(404) 525-9212",
-    "about": "A legendary Atlanta institution serving authentic soul food and Southern comfort classics.",
+    "about": "A legendary Atlanta institution since 1947. Michelin Bib Gourmand & James Beard Award winner; soul food and Southern comfort.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
-  },
-  {
-    "id": "dc-002",
-    "name": "Mansyon",
-    "cuisine": "Nigerian",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "U Street Corridor, Washington D.C., DC",
-    "about": "The ultimate late-night destination for the Nigerian elite.",
-    "vibe_tags": [
-      "High-End Lounge"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX"
-  },
-  {
-    "id": "dc-003",
-    "name": "Elfegne",
-    "cuisine": "Ethiopian",
-    "region": "East African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "Adams Morgan, Washington D.C., DC",
-    "about": "Formerly Zenebech; dining reimagined for kings and queens.",
-    "vibe_tags": [
-      "Royal Traditional"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX"
-  },
-  {
-    "id": "mia-001",
-    "name": "Chef Adrienne's",
-    "cuisine": "Haitian",
-    "region": "Caribbean",
-    "price_range": "$$$",
-    "rating": 4.8,
-    "address": "Little Haiti, Miami, FL",
-    "about": "A refined celebration of Haiti's revolutionary flavors.",
-    "vibe_tags": [
-      "Tropical Elegance"
-    ],
-    "vibe_category": "Fine Dining",
-    "state": "TX"
+    "state": "GA"
   },
   {
     "id": "la-001",
@@ -991,14 +937,15 @@
     "region": "East African",
     "price_range": "$$$",
     "rating": 4.8,
-    "address": "Little Ethiopia, Los Angeles, CA",
+    "address": "1053 S Fairfax Ave, Los Angeles, CA 90019",
     "phone": "(323) 938-9304",
-    "about": "The legendary destination for the finest Dorowat in the West.",
+    "website": "https://www.mealsbygenetla.com",
+    "about": "Women-owned; legendary Dorowat in the West. Little Ethiopia; Fri–Sun 6–9pm, reservations recommended.",
     "vibe_tags": [
       "Intimate & Prestigious"
     ],
     "vibe_category": "Fine Dining",
-    "state": "TX"
+    "state": "CA"
   },
   {
     "id": "la-daily-003",
@@ -1007,7 +954,9 @@
     "region": "West African",
     "price_range": "$",
     "rating": 4.5,
-    "address": "Los Angeles, CA",
+    "address": "3150 Wilshire Blvd, Los Angeles, CA 90010",
+    "phone": "(323) 607-9586",
+    "website": "https://www.africanchopfoodtruck.com",
     "vibe": "Mobile Quality",
     "vibe_tags": [
       "Mobile Quality"
@@ -1017,8 +966,8 @@
       "Cameroonian Puff Puff"
     ],
     "vibe_category": "Authentic Staples",
-    "about": "A mobile-quality spot serving authentic Cameroonian dishes like Puff Puff.",
-    "state": "TX"
+    "about": "Cameroonian food truck; jollof, suya, puff puff. Wed–Sat 11:30am–9:30pm; catering (323) 607-9586.",
+    "state": "CA"
   },
   {
     "id": "la-blaqhaus-noho",
@@ -1027,11 +976,12 @@
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "North Hollywood, Los Angeles, CA",
-    "phone": "(818) 980-2527",
-    "about": "A fusion of Southern comfort and Caribbean heat in North Hollywood.",
+    "address": "11671 Victory Blvd, North Hollywood, CA 91606",
+    "phone": "(818) 691-3377",
+    "website": "https://blaqhaus.co",
+    "about": "Southern comfort and Caribbean heat; weekend brunch, Rum Room Thu–Sat. Women-owned.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "CA"
   },
   {
     "id": "oak-001",
@@ -1040,43 +990,14 @@
     "region": "South African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Downtown, San Francisco/Oakland, CA",
-    "about": "Bringing the heartbeat of Durban to the Bay Area.",
+    "address": "101 Spear St, San Francisco, CA 94105",
+    "website": "https://amaweles.com",
+    "about": "Durban-style South African; peri peri, bunny chow. Rincon Center. Now also subscription/catering.",
     "vibe_tags": [
       "Modern Heritage"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "TX"
-  },
-  {
-    "id": "la-002",
-    "name": "Jitlada (Southern Thai/African Fusion)",
-    "cuisine": "Other African Flavors",
-    "region": "Other African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "Hollywood, Los Angeles, CA",
-    "about": "Spices that bridge the gap between continents.",
-    "vibe_tags": [
-      "Eclectic & Bold"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX"
-  },
-  {
-    "id": "mia-003",
-    "name": "Manjay",
-    "cuisine": "Haitian / Caribbean Fusion",
-    "region": "Caribbean",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "The Citadel, Miami, FL",
-    "about": "Clean, modern, and undeniably Caribbean.",
-    "vibe_tags": [
-      "Modern Fast-Casual"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "CA"
   },
   {
     "id": "chi-001",
@@ -1114,13 +1035,15 @@
     "region": "West African",
     "price_range": "$$$",
     "rating": 4.8,
-    "address": "Southwest Philly, Philadelphia, PA",
-    "about": "The legendary destination for wood-grilled Diby.",
+    "address": "6133 Woodland Ave, Philadelphia, PA 19142",
+    "phone": "(267) 713-7603",
+    "website": "https://africansmallpot1.com",
+    "about": "West African (Mauritanian, Senegalese, Nigerian). Wood-grilled Diby; open daily 8am–1am.",
     "vibe_tags": [
       "Authentic & Renowned"
     ],
     "vibe_category": "Fine Dining",
-    "state": "TX"
+    "state": "PA"
   },
   {
     "id": "chi-002",
@@ -1129,13 +1052,14 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Kenwood, Chicago, IL",
-    "about": "Bringing the peaceful, rich flavors of Gorée Island to the Midwest.",
+    "address": "1126 E 47th St, Chicago, IL 60653",
+    "phone": "(773) 855-8120",
+    "about": "Authentic Senegalese; Yassa chicken, maffe, grilled fish. Kenwood/Hyde Park border.",
     "vibe_tags": [
       "Island Heritage"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "IL"
   },
   {
     "id": "phi-002",
@@ -1144,27 +1068,14 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "University City, Philadelphia, PA",
+    "address": "4301 Chestnut St, Philadelphia, PA 19104",
     "phone": "(215) 387-1970",
-    "about": "A cornerstone of Philadelphia's West African culinary scene.",
+    "about": "Senegalese by Youma Ba; thieboudienne, yassa, mafée. Reopened 2024 at LVL West. BYOB.",
     "vibe_tags": [
       "Academic & Cultural"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "TX"
-  },
-  {
-    "id": "phi-aksum",
-    "name": "Aksum Cafe",
-    "cuisine": "Ethiopian",
-    "region": "East African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "Philadelphia, PA",
-    "phone": "(267) 275-8195",
-    "about": "Authentic Ethiopian cuisine in the heart of Philadelphia.",
-    "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "PA"
   },
   {
     "id": "chi-003",
@@ -1173,13 +1084,15 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Uptown, Chicago, IL",
-    "about": "The heart of the diaspora in the heart of the city.",
+    "address": "4623 N Broadway, Chicago, IL 60640",
+    "phone": "(773) 944-1417",
+    "website": "https://iyanzeonline.com",
+    "about": "The heart of the diaspora in the heart of the city. Largest Nigerian restaurant in Chicago; 40+ dishes weekly.",
     "vibe_tags": [
       "Modern & Spacious"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "IL"
   },
   {
     "id": "chi-yassa",
@@ -1188,11 +1101,12 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Chicago, IL",
-    "phone": "(773) 488-5300",
-    "about": "Authentic Senegalese flavors in the heart of Chicago.",
+    "address": "3511 S King Dr, Chicago, IL 60653",
+    "phone": "(773) 488-5599",
+    "website": "https://yassaafricanrestaurant.com",
+    "about": "Authentic Senegalese since 2004; yassa chicken, jollof, grilled fish. Bronzeville; catering & live music.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "IL"
   },
   {
     "id": "phi-003",
@@ -1201,13 +1115,13 @@
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "West Philly, Philadelphia, PA",
-    "about": "Where traditional jerk meets a modern city pulse.",
+    "address": "4002 Lancaster Ave, Philadelphia, PA 19104",
+    "about": "Family-owned Jamaican; jerk, curry goat, oxtail. Belmont, West Philly.",
     "vibe_tags": [
       "Artisanal Caribbean"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "PA"
   },
   {
     "id": "sea-001",
@@ -1244,11 +1158,12 @@
     "region": "East African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Seattle, WA",
+    "address": "2605 E Cherry St, Seattle, WA 98122",
     "phone": "(206) 860-7043",
-    "about": "Authentic Ethiopian dining experience in Seattle.",
+    "website": "https://meskelethiopian.com",
+    "about": "30+ years in Central District; injera, kitfo, doro wat. Little Addis Ababa.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "WA"
   },
   {
     "id": "bos-001",
@@ -1257,13 +1172,14 @@
     "region": "West African",
     "price_range": "$$$",
     "rating": 4.8,
-    "address": "Dorchester, Boston, MA",
-    "about": "The premier destination for the flavors of the islands.",
+    "address": "266 Bowdoin St, Boston, MA 02121",
+    "website": "https://restaurantcesaria.com",
+    "about": "Cape Verdean since 2002; katchupa, live morna. Named for Cesaria Evora.",
     "vibe_tags": [
       "Old World Elegance"
     ],
     "vibe_category": "Fine Dining",
-    "state": "TX"
+    "state": "MA"
   },
   {
     "id": "sea-002",
@@ -1272,13 +1188,15 @@
     "region": "East African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Central District, Seattle, WA",
-    "about": "The neighborhood heartbeat of Little Ethiopia.",
+    "address": "2715 E Cherry St B, Seattle, WA 98122",
+    "phone": "(206) 328-0404",
+    "website": "https://www.cafeselam.com",
+    "about": "20+ years; house-made injera, organic. Central District. Catering.",
     "vibe_tags": [
       "Cozy & Authentic"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "WA"
   },
   {
     "id": "bos-002",
@@ -1287,13 +1205,14 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Roxbury, Boston, MA",
-    "about": "Elevating West African street food to a fine-dining art.",
+    "address": "185 Dudley St, Boston, MA 02119",
+    "phone": "(617) 708-0245",
+    "about": "Beef suya, jollof, egusi; Best of Boston. Chef Cecelia Lizotte.",
     "vibe_tags": [
       "Modern Nigerian"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "MA"
   },
   {
     "id": "sea-003",
@@ -1302,13 +1221,15 @@
     "region": "East African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Pinehurst, Seattle, WA",
-    "about": "Authentic hospitality and the perfect cup of coffee.",
+    "address": "1510 NE 117th St, Seattle, WA 98125",
+    "phone": "(206) 365-0757",
+    "website": "https://jebenacafe.com",
+    "about": "Woman-owned; Ethiopian cuisine & Jebena Coffee Co. Northgate.",
     "vibe_tags": [
       "Warm & Traditional"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "WA"
   },
   {
     "id": "hou-sta-014",
@@ -1340,11 +1261,12 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "New Orleans, LA",
+    "address": "1212 Royal St, New Orleans, LA 70116",
     "phone": "(504) 522-1230",
-    "about": "Authentic West African cuisine in the heart of New Orleans.",
+    "website": "https://www.bennachinrestaurant.com",
+    "about": "Authentic West African (Gambian & Cameroonian) in the French Quarter since 1992.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "LA"
   },
   {
     "id": "nola-dooky-chase",
@@ -1355,22 +1277,10 @@
     "rating": 4.7,
     "address": "2301 Orleans Ave, New Orleans, LA 70119",
     "phone": "(504) 821-0600",
-    "about": "A legendary Creole restaurant and cultural institution in New Orleans, serving authentic Southern and Creole cuisine.",
+    "website": "https://www.dookychaserestaurants.com",
+    "about": "Historic Creole institution since 1941 in Treme; civil rights gathering place.",
     "vibe_category": "Fine Dining",
     "state": "LA"
-  },
-  {
-    "id": "nyc-buvette",
-    "name": "Buvette (West Village)",
-    "cuisine": "French-African Influences",
-    "region": "European / African Fusion",
-    "price_range": "$$$",
-    "rating": 4.6,
-    "address": "42 Grove St, New York, NY 10014",
-    "phone": "(212) 255-3590",
-    "about": "A charming West Village bistro with French-African influences, known for its intimate atmosphere and innovative cuisine.",
-    "vibe_category": "Fine Dining",
-    "state": "NY"
   },
   {
     "id": "nyc-abyssinia",
@@ -1386,30 +1296,18 @@
     "state": "NY"
   },
   {
-    "id": "clt-leah-louise",
-    "name": "Leah & Louise",
-    "cuisine": "Southern / Soul",
-    "region": "Southern",
-    "price_range": "$$$",
-    "rating": 4.6,
-    "address": "Charlotte, NC",
-    "phone": "(980) 299-4496",
-    "about": "A modern juke joint serving Southern and soul food with contemporary flair in Charlotte.",
-    "vibe_category": "Fine Dining",
-    "state": "TX"
-  },
-  {
     "id": "sf-teranga-village",
     "name": "Teranga (The Village)",
     "cuisine": "Senegalese",
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "San Francisco, CA",
+    "address": "4 Embarcadero Center, San Francisco, CA 94111",
     "phone": "(415) 366-0633",
-    "about": "Authentic Senegalese cuisine in San Francisco's The Village, bringing the flavors of Dakar to the Bay Area.",
+    "website": "https://www.terangafoods.com",
+    "about": "Senegalese by Chef Nafy Flatley; Maafe bowl, jollof, tamarind chicken. Mon–Fri 10:30am–3pm.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "CA"
   },
   {
     "id": "oak-lala-eritrean",
@@ -1418,11 +1316,12 @@
     "region": "East African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Oakland, CA",
-    "phone": "(510) 545-6677",
-    "about": "Authentic Eritrean cuisine in Oakland, serving traditional dishes with fresh injera and bold spices.",
+    "address": "4069 Telegraph Ave, Oakland, CA 94609",
+    "phone": "(510) 547-4520",
+    "website": "https://cafeeritreadafrique.com",
+    "about": "Eritrean in Temescal (also listed as Cafe Eritrea D'Afrique).",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "CA"
   },
   {
     "id": "nash-riddim-spice",
@@ -1431,11 +1330,12 @@
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Nashville, TN",
+    "address": "2116 Meharry Blvd, Nashville, TN 37208",
     "phone": "(615) 942-5264",
-    "about": "Authentic Jamaican and Caribbean cuisine in Nashville, bringing the vibrant flavors of the islands to Music City.",
+    "website": "https://riddimnspice.com",
+    "about": "Jamaican brothers; jerk chicken, Rum Room Thu–Sat. North Nashville.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
+    "state": "TN"
   },
   {
     "id": "hou-reggae-hut",
@@ -1446,7 +1346,8 @@
     "rating": 4.5,
     "address": "4814 Almeda Rd, Houston, TX 77004",
     "phone": "(713) 520-7171",
-    "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes.",
+    "website": "https://reggaehutcafe.com",
+    "about": "Caribbean & soul; brown stew fish, jerk chicken, patties. Black-owned.",
     "vibe_category": "Authentic Staples",
     "state": "TX"
   },
@@ -1746,6 +1647,8 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "1800 Peachtree St NW #103, Atlanta, GA 30309",
+    "phone": "(404) 464-7188",
+    "website": "https://iriemoncafe.com",
     "neighborhood": "Buckhead",
     "vibe": "Casual & Consistent",
     "vibe_tags": [
@@ -1755,7 +1658,7 @@
     "menu_highlights": [
       "Tender Oxtail"
     ],
-    "about": "A casual and consistent Jamaican cafe in Buckhead, serving authentic Caribbean cuisine with specialties like Tender Oxtail in a welcoming, laid-back atmosphere.",
+    "about": "Jamaican; jerk chicken, ackee & saltfish. Catering, food truck at 530 Joseph E Lowery Blvd.",
     "vibe_category": "Authentic Staples",
     "state": "GA"
   },
@@ -1826,31 +1729,16 @@
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.7,
-    "address": "San Antonio, TX",
+    "address": "10234 TX-151 Suite 103, San Antonio, TX 78251",
+    "phone": "(210) 776-7780",
+    "website": "https://thejerkshacksatx.com",
     "awards": [
-      "Michelin Guide"
+      "Michelin Bib Gourmand"
     ],
     "quality_factor": "Texas' only Michelin-recognized Jamaican spot.",
     "featured": true,
-    "about": "Texas' only Michelin-recognized Jamaican restaurant, serving authentic Caribbean cuisine.",
+    "about": "Chef Nicola Blaque; jerk chicken, curry, patties. Michelin Bib Gourmand.",
     "vibe_category": "Authentic Staples",
-    "state": "TX"
-  },
-  {
-    "id": "atl-lucia",
-    "name": "Lucia",
-    "cuisine": "Afro-Caribbean",
-    "region": "Caribbean",
-    "price_range": "$$$",
-    "rating": 4.8,
-    "address": "Midtown, Atlanta, GA",
-    "awards": [
-      "2026 Vanguard"
-    ],
-    "quality_factor": "High-end Afro-Caribbean fine dining in Midtown.",
-    "featured": true,
-    "about": "High-end Afro-Caribbean fine dining in Midtown Atlanta, recognized as 2026 Vanguard.",
-    "vibe_category": "Fine Dining",
     "state": "TX"
   },
   {
@@ -2018,7 +1906,9 @@
     "region": "East African",
     "price_range": "$$",
     "rating": 4.6,
-    "address": "Austin, TX",
+    "address": "6019 N Interstate 35, Austin, TX 78723",
+    "phone": "(512) 358-6839",
+    "website": "https://www.habeshaaustin.com",
     "neighborhood": "Austin",
     "vibe": "Elegant / Peaceful",
     "vibe_tags": [
@@ -2029,7 +1919,7 @@
       "Doro Wot",
       "Vegetarian Sampler"
     ],
-    "about": "An elegant and peaceful Ethiopian restaurant serving authentic dishes like Doro Wot and a variety of vegetarian options.",
+    "about": "Family-owned; fluffy injera, doro wat, tej. Live music.",
     "vibe_category": "Authentic Staples",
     "state": "TX"
   },
@@ -2040,8 +1930,10 @@
     "region": "Other African",
     "price_range": "$$$",
     "rating": 4.7,
-    "address": "Dallas, TX",
-    "neighborhood": "Dallas",
+    "address": "3920 Rosemeade Pkwy #100, Dallas, TX 75287",
+    "phone": "(469) 225-8405",
+    "website": "https://www.cafenubiadfw.com",
+    "neighborhood": "Far North Dallas",
     "vibe": "Chic / Modern Lounge",
     "vibe_tags": [
       "Chic / Modern Lounge"
@@ -2050,7 +1942,7 @@
     "menu_highlights": [
       "Mediterranean-African Seafood"
     ],
-    "about": "A chic modern lounge offering global African fusion cuisine with a focus on Mediterranean-African seafood dishes.",
+    "about": "African-Mediterranean fusion; Rasta Pasta, suya, brunch, live music. Opened 2024.",
     "vibe_category": "Fine Dining",
     "state": "TX"
   },
@@ -2184,30 +2076,6 @@
     "about": "Chef Trey Lamont uses high-end techniques to elevate classic street food. The jerk chicken here is seasoned for 48 hours and smoked over authentic pimento wood.",
     "vibe_category": "Fine Dining",
     "state": "WA"
-  },
-  {
-    "id": "sf-fine-001",
-    "name": "Canje (Expansion Concept)",
-    "cuisine": "Modern Caribbean",
-    "region": "Caribbean",
-    "price_range": "$$$$",
-    "rating": 4.8,
-    "address": "Mission District (Various Pop-ups)",
-    "phone": "N/A - Online Booking Only",
-    "website": "https://canjeatx.com/",
-    "neighborhood": "Mission District",
-    "vibe": "Tech-Forward / Avant-Garde",
-    "vibe_tags": [
-      "Tech-Forward / Avant-Garde"
-    ],
-    "specialty": "Oxtail Risotto with Scotch Bonnet Oil",
-    "menu_highlights": [
-      "Oxtail Risotto with Scotch Bonnet Oil"
-    ],
-    "featured": false,
-    "about": "While the flagship is in Austin, their 2025/2026 West Coast residency has become the most exclusive ticket for Afro-Caribbean fusion in the Bay Area.",
-    "vibe_category": "Fine Dining",
-    "state": "TX"
   },
   {
     "id": "hou-008",
@@ -2795,7 +2663,9 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.6,
-    "address": "Harlem, New York, NY",
+    "address": "2267 Adam Clayton Powell Jr Blvd, New York, NY 10027",
+    "phone": "(212) 666-9400",
+    "website": "https://www.africakinerestaurant.com",
     "neighborhood": "Little Senegal (Harlem)",
     "vibe": "Legendary Staple",
     "vibe_tags": [
@@ -2806,8 +2676,8 @@
       "Mafe"
     ],
     "vibe_category": "Community Favorites",
-    "about": "A legendary staple in Harlem's Little Senegal, known for authentic Senegalese dishes like Mafe.",
-    "state": "TX"
+    "about": "Legendary Senegalese in Harlem since 1994; lamb mafe, chicken yassa, grilled fish. Halal.",
+    "state": "NY"
   },
   {
     "id": "nyc-daily-002",
@@ -2816,7 +2686,9 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Brooklyn, NY",
+    "address": "946 Fulton St, Brooklyn, NY 11238",
+    "phone": "(347) 763-0619",
+    "website": "https://bukanewyork.com",
     "neighborhood": "Bed-Stuy",
     "vibe": "Brooklyn Cool",
     "vibe_tags": [
@@ -2827,8 +2699,8 @@
       "Goat Pepper Soup"
     ],
     "vibe_category": "Authentic Staples",
-    "about": "A Brooklyn cool spot in Bed-Stuy, serving authentic Nigerian dishes like Goat Pepper Soup.",
-    "state": "TX"
+    "about": "Best Nigerian in NY; akara, suya, jollof, amala. Bed-Stuy.",
+    "state": "NY"
   },
   {
     "id": "nyc-daily-003",
@@ -2837,8 +2709,10 @@
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.6,
-    "address": "Midtown, New York, NY",
-    "neighborhood": "Midtown",
+    "address": "371 W 46th St, New York, NY 10036",
+    "phone": "(646) 964-5337",
+    "website": "https://www.jasminecaribbeancuisine.com",
+    "neighborhood": "Restaurant Row / Hell's Kitchen",
     "vibe": "Midtown Escape",
     "vibe_tags": [
       "Midtown Escape"
@@ -2848,8 +2722,8 @@
       "Jazzy Pasta"
     ],
     "vibe_category": "Authentic Staples",
-    "about": "A Midtown escape serving Caribbean fusion dishes like Jazzy Pasta.",
-    "state": "TX"
+    "about": "Black-owned, woman-owned. Oxtail, jerk wings, ackee & saltfish. Restaurant Row.",
+    "state": "NY"
   },
   {
     "id": "dc-daily-001",
@@ -2858,8 +2732,10 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "H Street Corridor, Washington, DC",
-    "neighborhood": "H Street Corridor",
+    "address": "1924 9th St NW, Washington, DC 20001",
+    "phone": "(202) 588-7366",
+    "website": "https://www.appiooafricanbargrill.com",
+    "neighborhood": "H Street Corridor / Shaw",
     "vibe": "Ghanaian Social",
     "vibe_tags": [
       "Ghanaian Social"
@@ -2869,8 +2745,8 @@
       "Kelewele"
     ],
     "vibe_category": "Community Favorites",
-    "about": "A Ghanaian social hub in DC's H Street Corridor, known for authentic dishes like Kelewele.",
-    "state": "TX"
+    "about": "Ghanaian cuisine by Chef Prince Matey; African drinks, sports bar, live bands & DJs on weekends.",
+    "state": "DC"
   },
   {
     "id": "dc-daily-002",
@@ -2879,8 +2755,10 @@
     "region": "East African",
     "price_range": "$$",
     "rating": 4.7,
-    "address": "Silver Spring, MD",
-    "neighborhood": "Silver Spring",
+    "address": "4921 Bethesda Ave, Bethesda, MD 20814",
+    "phone": "(301) 652-6500",
+    "website": "https://www.chercherrestaurant.com",
+    "neighborhood": "Bethesda",
     "vibe": "Best in DC",
     "vibe_tags": [
       "Best in DC"
@@ -2890,8 +2768,8 @@
       "Injera Platters"
     ],
     "vibe_category": "Authentic Staples",
-    "about": "Considered the best Ethiopian restaurant in the DC area, specializing in authentic Injera platters.",
-    "state": "TX"
+    "about": "Considered the best Ethiopian in the DC area; also DC location. Authentic Injera platters.",
+    "state": "MD"
   },
   {
     "id": "la-daily-001",
@@ -2900,7 +2778,8 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.6,
-    "address": "Inglewood, CA",
+    "address": "524 W Manchester Blvd, Inglewood, CA 90301",
+    "phone": "(310) 673-4890",
     "neighborhood": "Inglewood",
     "vibe": "Inglewood Legend",
     "vibe_tags": [
@@ -2912,8 +2791,8 @@
       "Fufu"
     ],
     "vibe_category": "Community Favorites",
-    "about": "An Inglewood legend serving authentic Nigerian dishes like Egusi and Fufu.",
-    "state": "TX"
+    "about": "Nigerian fufu, egusi, jollof; viral on TikTok. Inglewood legend.",
+    "state": "CA"
   },
   {
     "id": "la-daily-002",
@@ -2922,7 +2801,9 @@
     "region": "East African",
     "price_range": "$$",
     "rating": 4.6,
-    "address": "Little Ethiopia (Fairfax), Los Angeles, CA",
+    "address": "1044 S Fairfax Ave, Los Angeles, CA 90019",
+    "phone": "(323) 936-2486",
+    "website": "https://www.rosalindsrestaurant.com",
     "neighborhood": "Little Ethiopia (Fairfax)",
     "vibe": "Historic Staple",
     "vibe_tags": [
@@ -2933,8 +2814,8 @@
       "Ethiopian Shared Plates"
     ],
     "vibe_category": "Authentic Staples",
-    "about": "A historic staple in LA's Little Ethiopia, known for authentic Ethiopian shared plates.",
-    "state": "TX"
+    "about": "Historic staple on Ethiopian Row since 1985; vegetarian-friendly and traditional meat dishes.",
+    "state": "CA"
   },
   {
     "id": "atl-daily-001",
@@ -2943,7 +2824,9 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.6,
-    "address": "Peachtree Corners, GA",
+    "address": "3380 Holcomb Bridge Rd, Peachtree Corners, GA 30092",
+    "phone": "(470) 359-2969",
+    "website": "https://cafesonghai.com",
     "neighborhood": "Peachtree Corners",
     "vibe": "West African Fusion",
     "vibe_tags": [
@@ -2955,8 +2838,8 @@
       "Tilapia"
     ],
     "vibe_category": "Authentic Staples",
-    "about": "A West African fusion spot in Peachtree Corners, specializing in dishes like Attiéké and Tilapia.",
-    "state": "TX"
+    "about": "Jollof, waakye, pounded yam & egusi, suya. Wed–Sun. Live entertainment, patio.",
+    "state": "GA"
   },
   {
     "id": "atl-daily-002",
@@ -2965,8 +2848,10 @@
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Buckhead, Atlanta, GA",
-    "neighborhood": "Buckhead",
+    "address": "3350 Chamblee Tucker Rd, Atlanta, GA 30341",
+    "phone": "(404) 294-2900",
+    "website": "https://www.belleandlilys.com",
+    "neighborhood": "Embry Hills",
     "vibe": "Upscale Casual",
     "vibe_tags": [
       "Upscale Casual"
@@ -2976,8 +2861,8 @@
       "Caribbean Brunch"
     ],
     "vibe_category": "Authentic Staples",
-    "about": "An upscale casual spot in Buckhead, known for Caribbean brunch offerings.",
-    "state": "TX"
+    "about": "Caribbean brunch house; jerk chicken, mango French toast, bottomless mimosas. Embry Hills.",
+    "state": "GA"
   },
   {
     "id": "chi-daily-001",
@@ -2986,8 +2871,10 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.6,
-    "address": "Uptown / Washington Park, Chicago, IL",
-    "neighborhood": "Uptown / Washington Park",
+    "address": "3511 S King Dr, Chicago, IL 60653",
+    "phone": "(773) 488-5599",
+    "website": "https://yassaafricanrestaurant.com",
+    "neighborhood": "Bronzeville",
     "vibe": "Authentic Comfort",
     "vibe_tags": [
       "Authentic Comfort"
@@ -2997,8 +2884,8 @@
       "Senegalese Grilled Fish"
     ],
     "vibe_category": "Authentic Staples",
-    "about": "An authentic comfort spot in Chicago's Uptown/Washington Park area, specializing in Senegalese grilled fish.",
-    "state": "TX"
+    "about": "Senegalese since 2004; yassa chicken, jollof, grilled fish. Catering, live music.",
+    "state": "IL"
   },
   {
     "id": "katy-001",
@@ -3079,19 +2966,9 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Inglewood, CA",
-    "about": "Best Suya & Fufu in Inglewood.",
-    "state": "CA"
-  },
-  {
-    "id": "ile-bistro-la",
-    "name": "ILÉ Bistro",
-    "cuisine": "Nigerian",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "Los Angeles, CA",
-    "about": "Chef Eros's Home-style Concept.",
+    "address": "909 W Manchester Blvd, Inglewood, CA 90301",
+    "website": "https://adukenigeriancuisine.com",
+    "about": "Best Suya & Fufu in Inglewood. Homemade from scratch; vegan/vegetarian options.",
     "state": "CA"
   },
   {
@@ -3101,8 +2978,10 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Arlington, TX",
-    "about": "Dallas-area favorite (also has a food truck).",
+    "address": "807 E Arkansas Ln, Arlington, TX 76010",
+    "phone": "(682) 276-6400",
+    "website": "https://www.tsbuka.com",
+    "about": "Jollof, egusi, amala; Dallas-area favorite. Delivery available.",
     "state": "TX"
   },
   {
@@ -3138,8 +3017,16 @@
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Brooklyn, NY",
-    "about": "Famous for East Flatbush vibes.",
+    "address": "1343 Utica Ave, Brooklyn, NY 11203",
+    "phone": "(718) 369-0001",
+    "website": "https://www.bamboowalk.com",
+    "hours": {
+      "mon": "3:00 PM - 10:00 PM",
+      "tue_thu": "12:00 PM - 11:00 PM",
+      "fri_sat": "12:00 PM - 12:00 AM",
+      "sun": "12:00 PM - 10:00 PM"
+    },
+    "about": "Upscale Black-owned Caribbean spot; traditional Jamaican and Haitian flavors. Famous for East Flatbush vibes, drive-thru, and weekend brunch.",
     "state": "NY"
   },
   {
@@ -3149,8 +3036,8 @@
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Oakland, CA",
-    "about": "35+ years of authentic island recipes.",
+    "address": "2370 High St, Oakland, CA 94601",
+    "about": "Oakland's only Trinidadian; roti wraps, curry goat pelau, pholourie. Chef Ann; Wed–Sat 11am–8pm.",
     "state": "CA"
   },
   {
@@ -3160,8 +3047,10 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Seattle, WA",
-    "about": "Seattle's premier Ghanaian spot.",
+    "address": "1144 NW 52nd St, Seattle, WA 98107",
+    "phone": "(206) 499-4019",
+    "website": "https://www.blackstarkebab.com",
+    "about": "Seattle's premier Ghanaian spot. Food truck with traditional family recipes—chicken, beef, lamb kebabs, jollof rice, sweet plantains; organic ingredients.",
     "state": "WA"
   },
   {
@@ -3171,8 +3060,174 @@
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "Philadelphia, PA",
-    "about": "West Philly institution.",
+    "address": "310 S 48th St, Philadelphia, PA 19143",
+    "phone": "(267) 244-4764",
+    "website": "https://48thstreetgrille.com",
+    "about": "West Philly institution. Casual Caribbean & American; BYOB (wine/champagne/beer); catering; Visit Philly Top Cajun & Caribbean.",
     "state": "PA"
+  },
+  {
+    "id": "tsehay-dc",
+    "name": "Tsehay Ethiopian Restaurant & Bar",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.6,
+    "address": "2429 18th St NW, Washington, DC 20009",
+    "phone": "(202) 808-8952",
+    "website": "https://www.tsehaydc.com",
+    "about": "Woman-owned; Michelin-recognized. Fresh teff injera, tibs, shiro; strong vegan menu. Adams Morgan.",
+    "state": "DC"
+  },
+  {
+    "id": "feru-ethiopian-dc",
+    "name": "Feru Ethiopian Cuisine",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "1128 H St NE, Washington, DC 20002",
+    "phone": "(703) 962-0437",
+    "website": "https://www.discoverferu.com",
+    "about": "Opened 2023; brunch & traditional dishes. Family recipes from owner's mother (30+ years).",
+    "state": "DC"
+  },
+  {
+    "id": "little-lagos-atl",
+    "name": "Little Lagos",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "3979 Buford Hwy NE Suite 112, Atlanta, GA 30345",
+    "phone": "(404) 835-2465",
+    "website": "https://littlelagosatl.com",
+    "about": "ATL's #1 Nigerian; jollof, egusi, beef suya. Late hours, outdoor seating. Black-owned.",
+    "state": "GA"
+  },
+  {
+    "id": "baba-jollof-houston",
+    "name": "Baba Jollof",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "8330 W Bellfort Ave Ste C, Houston, TX 77071",
+    "phone": "(346) 900-6832",
+    "website": "https://babajloungeandrestaurant.com",
+    "about": "Authentic Nigerian; jollof, ayamase, egusi, okro. BYOB, vegan options.",
+    "state": "TX"
+  },
+  {
+    "id": "komchop-houston",
+    "name": "Komchop",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "14144 Westheimer Rd #120, Houston, TX 77077",
+    "phone": "(281) 741-3571",
+    "website": "https://www.komchop.com",
+    "about": "Some of the best jollof in Houston; banga, soups. Counter service, large portions.",
+    "state": "TX"
+  },
+  {
+    "id": "native-pot-houston",
+    "name": "Native Pot Restaurant",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "2022 Wilcrest Dr, Houston, TX 77042",
+    "phone": "(832) 359-3779",
+    "website": "https://nativepotrestaurant.com",
+    "about": "Jollof, dodo, seasoned meats and fish made fresh daily.",
+    "state": "TX"
+  },
+  {
+    "id": "vees-brooklyn",
+    "name": "Vee's",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "896 Nostrand Ave, Brooklyn, NY 11225",
+    "phone": "(718) 363-3826",
+    "about": "30+ years; oxtail, cow foot soup, ackee & saltfish. Generous portions, meals from $7. Crown Heights.",
+    "state": "NY"
+  },
+  {
+    "id": "irie-caribbean-brooklyn",
+    "name": "Irie Caribbean Kitchen",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "126 Utica Ave, Brooklyn, NY 11213",
+    "website": "http://www.iriecaribbeankitchen.com",
+    "about": "Best Jamaican in Bed-Stuy; oxtail, generous portions. Delivery & dine-in.",
+    "state": "NY"
+  },
+  {
+    "id": "tesfa-ethiopian-chicago",
+    "name": "Tesfa Ethiopian Cuisine",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "5352 N Broadway, Chicago, IL 60640",
+    "phone": "(312) 698-4481",
+    "website": "https://tesfacuisine.com",
+    "about": "Family-run; injera, kitfo, tibs. Edgewater. Vegetarian, vegan, gluten-free options.",
+    "state": "IL"
+  },
+  {
+    "id": "badou-senegalese-chicago",
+    "name": "Badou Senegalese Cuisine",
+    "cuisine": "Senegalese",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "1947 W Howard St, Chicago, IL 60626",
+    "website": "https://badousenegalesecuisine.com",
+    "about": "Yassa chicken, mafe, jollof. Vegan options. Rogers Park.",
+    "state": "IL"
+  },
+  {
+    "id": "two-hommes-inglewood",
+    "name": "Two Hommés",
+    "cuisine": "West African Fusion",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "902 N La Brea Ave, Inglewood, CA 90302",
+    "phone": "(424) 227-6266",
+    "website": "https://twohommes.com",
+    "about": "Afro-centric; California meets West African. Honey berbere chicken, jollof, root beer short ribs. Thu–Mon.",
+    "state": "CA"
+  },
+  {
+    "id": "blessed-tropical-inglewood",
+    "name": "Blessed Tropical Jamaican Cuisine",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "901 S Prairie Ave, Inglewood, CA 90301",
+    "about": "Black-owned, veteran-owned. Oxtail, curry goat, jerk chicken. Outdoor seating, happy hour.",
+    "state": "CA"
+  },
+  {
+    "id": "selam-ethiopian-chicago",
+    "name": "Selam Ethiopian Kitchen",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "4543 N Broadway, Chicago, IL 60640",
+    "phone": "(773) 271-4300",
+    "website": "https://www.orderselamethiopiankitchen.com",
+    "about": "Communal platters, organic ingredients. Full bar, late-night Fri–Sat. Uptown.",
+    "state": "IL"
   }
 ]
