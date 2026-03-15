@@ -90,7 +90,7 @@ const HOURS_MAP = {
   "katy-003": { tue_sun: "11:00 AM - 9:00 PM", mon: "Closed" },
   "hou-sta-010": { mon_sat: "11:00 AM - 9:00 PM", sun: "12:00 PM - 8:00 PM" },
   "hou-sta-011": { tue_sun: "11:00 AM - 10:00 PM", mon: "Closed" },
-  "hou-003": { mon_sat: "11:00 AM - 9:00 PM", sun: "12:00 PM - 8:00 PM" },
+  "hou-003": { tue_thu: "11:30 AM - 8:30 PM", fri: "11:30 AM - 9:30 PM", sat: "12:00 PM - 9:30 PM", sun: "1:00 PM - 6:00 PM", mon: "Closed" },
   "hou-sta-013": { mon_sat: "11:00 AM - 9:00 PM", sun: "Closed" },
   "katy-004": { tue_sun: "11:00 AM - 9:00 PM", mon: "Closed" },
   "hou-sta-016": { mon_sat: "11:00 AM - 9:00 PM", sun: "Closed" },

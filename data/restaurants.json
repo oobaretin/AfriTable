@@ -285,7 +285,7 @@
     "rating": 4.7,
     "address": "1639 Flatbush Ave, Brooklyn, NY 11210",
     "phone": "(718) 677-1773",
-    "website": "",
+    "website": "https://callalootrinidadiankitchen.com",
     "social": {
       "instagram": "@callalookitchen"
     },
@@ -436,14 +436,15 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "1924 9th St NW, Washington, DC 20001",
-    "phone": "(202) 518-3600",
-    "website": "http://appiooafricanbargrill.com",
+    "phone": "(202) 588-7366",
+    "website": "https://www.appiooafricanbargrill.com",
     "social": {
       "instagram": "@appioobargrill"
     },
     "hours": {
       "tue_thu": "4:00 PM - 10:00 PM",
-      "fri_sat": "2:00 PM - 11:30 PM",
+      "fri": "4:00 PM - 11:30 PM",
+      "sat": "2:00 PM - 11:30 PM",
       "sun": "2:00 PM - 10:00 PM",
       "mon": "Closed"
     },
@@ -561,7 +562,7 @@
     "rating": 4.5,
     "address": "12450 Westheimer Rd, Houston, TX 77077",
     "phone": "(281) 506-7935",
-    "website": "",
+    "website": "https://pontiivoriankitchen.com",
     "social": {
       "instagram": "@pontiskitchen"
     },
@@ -589,7 +590,7 @@
     "rating": 4.3,
     "address": "6200 N Clark St, Chicago, IL 60660",
     "phone": "(773) 764-1234",
-    "website": "",
+    "website": "https://goldcoastafricanrestaurant.com",
     "social": {
       "instagram": "@goldcoastchicago"
     },
@@ -617,7 +618,7 @@
     "rating": 4.6,
     "address": "12030 Bissonnet St, Houston, TX 77099",
     "phone": "(832) 617-8924",
-    "website": "",
+    "website": "https://afrikchekitchen.com",
     "social": {
       "instagram": "@afrik_che_houston"
     },
@@ -645,7 +646,7 @@
     "rating": 4.6,
     "address": "149-10 45th Ave, Flushing, NY 11355",
     "phone": "(718) 886-2442",
-    "website": "",
+    "website": "https://adulisrestaurant.com",
     "social": {
       "instagram": "@adulis_restaurant"
     },
@@ -824,29 +825,6 @@
     "state": "TX"
   },
   {
-    "id": "hou-007",
-    "name": "Ariya Cuisine",
-    "cuisine": "Nigerian",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "6357 Westheimer Rd, Houston, TX 77057",
-    "phone": "(832) 831-4372",
-    "website": "https://www.ariasuyakitchen.com",
-    "about": "Nigerian suya and West African dishes in Galleria/Westchase (also known as Aria Suya Kitchen).",
-    "vibe_tags": [
-      "Premium Traditional"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "hours": {
-      "tue_fri": "11:30 AM - 8:00 PM",
-      "sat": "1:00 PM - 9:00 PM",
-      "sun": "1:00 PM - 6:00 PM",
-      "mon": "Closed"
-    }
-  },
-  {
     "social": {},
     "hours": {
       "mon": "12:00 PM - 10:00 PM",
@@ -964,6 +942,7 @@
     "rating": 4.5,
     "address": "810 Martin Luther King Jr Dr SW, Atlanta, GA 30314",
     "phone": "(404) 525-9212",
+    "website": "https://www.thebusybeecafe.com",
     "hours": {
       "mon_sun": "11:00 AM - 7:00 PM"
     },
@@ -1045,6 +1024,7 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "101 Spear St, San Francisco, CA 94105",
+    "phone": "(949) 243-2704",
     "website": "https://amaweles.com",
     "about": "Durban-style South African; peri peri, bunny chow. Rincon Center. Now also subscription/catering.",
     "vibe_tags": [
@@ -1120,6 +1100,7 @@
     "rating": 4.5,
     "address": "1126 E 47th St, Chicago, IL 60653",
     "phone": "(773) 855-8120",
+    "website": "https://goreecuisinechicago.com",
     "about": "Authentic Senegalese; Yassa chicken, maffe, grilled fish. Kenwood/Hyde Park border.",
     "vibe_tags": [
       "Island Heritage"
@@ -1143,6 +1124,7 @@
     "rating": 4.5,
     "address": "4301 Chestnut St, Philadelphia, PA 19104",
     "phone": "(215) 387-1970",
+    "website": "https://kilimandjaro-restaurant.res-menu.com",
     "about": "Senegalese by Youma Ba; thieboudienne, yassa, mafée. Reopened 2024 at LVL West. BYOB.",
     "vibe_tags": [
       "Academic & Cultural"
@@ -1201,6 +1183,8 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "4002 Lancaster Ave, Philadelphia, PA 19104",
+    "phone": "(267) 634-6821",
+    "website": "https://www.facebook.com/qualitytastefood",
     "about": "Family-owned Jamaican; jerk, curry goat, oxtail. Belmont, West Philly.",
     "vibe_tags": [
       "Artisanal Caribbean"
@@ -1270,6 +1254,7 @@
     "price_range": "$$$",
     "rating": 4.8,
     "address": "266 Bowdoin St, Boston, MA 02121",
+    "phone": "(617) 282-1998",
     "website": "https://restaurantcesaria.com",
     "hours": {
       "mon_wed": "11:00 AM - 10:00 PM",
@@ -1312,6 +1297,7 @@
     "rating": 4.5,
     "address": "185 Dudley St, Boston, MA 02119",
     "phone": "(617) 708-0245",
+    "website": "https://www.suyajoint.com",
     "hours": {
       "tue_wed": "12:00 PM - 9:00 PM",
       "thu": "12:00 PM - 12:00 AM",
@@ -1427,7 +1413,8 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "35 W 28th St, New York, NY 10001",
-    "phone": "(212) 663-0533",
+    "phone": "(212) 281-2673",
+    "website": "https://abyssinianyc.com",
     "about": "Authentic Ethiopian cuisine in the heart of Manhattan, serving traditional dishes with fresh injera and bold spices.",
     "vibe_category": "Authentic Staples",
     "state": "NY",
@@ -1545,6 +1532,7 @@
     "rating": 4.5,
     "address": "12005 Veterans Memorial Dr, Ste A, Houston, TX 77067",
     "phone": "(832) 446-3722",
+    "website": "https://reggaehutcafe.com",
     "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes.",
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -2524,12 +2512,12 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.6,
-    "address": "6362 Windsor Lakes Dr, Houston, TX 77024",
-    "zip": "77024",
-    "lat": 29.774,
-    "lng": -95.501,
+    "address": "5959 Richmond Ave Suite 160, Houston, TX 77057",
+    "zip": "77057",
+    "lat": 29.735,
+    "lng": -95.484,
     "phone": "(713) 589-9055",
-    "website": "https://tasteofnigeria.com/",
+    "website": "https://tasteofnigeria.us/",
     "vibe": "Vibrant & Culturally Rich",
     "vibe_tags": [
       "Vibrant & Culturally Rich"
@@ -2543,8 +2531,9 @@
     "about": "A major player in the Houston scene, known for traditional flavors.",
     "state": "TX",
     "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
+      "tue_sat": "4:00 PM - 10:00 PM",
+      "sun": "1:00 PM - 8:00 PM",
+      "mon": "Closed"
     }
   },
   {
@@ -2697,7 +2686,7 @@
     "price_range": "$$",
     "rating": 4.6,
     "address": "10010 Bissonnet St, Houston, TX 77036",
-    "phone": "(832) 831-2947",
+    "phone": "(832) 834-3127",
     "website": "https://order.online/store/chef-benny-african-restaurant-houston-1523235",
     "vibe": "Welcoming / Authentic",
     "vibe_tags": [
@@ -2712,8 +2701,8 @@
     "about": "Widely praised for the bold spice levels and consistent seasoning.",
     "state": "TX",
     "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
+      "mon_sat": "12:00 PM - 10:00 PM",
+      "sun": "3:00 PM - 10:00 PM"
     }
   },
   {
@@ -2751,8 +2740,8 @@
     "price_range": "$",
     "rating": 4.5,
     "address": "2616 Blodgett St, Houston, TX 77004",
-    "phone": "(832) 831-2947",
-    "website": "https://www.dakarstreetfood.com/",
+    "phone": "(346) 778-8287",
+    "website": "https://dakarstreetfood.com/",
     "vibe": "Counter-Service / Takeout Hub",
     "vibe_tags": [
       "Counter-Service / Takeout Hub"
@@ -2766,8 +2755,7 @@
     "about": "Primary takeout operation in Westchase/Third Ward area. Fast, affordable, and incredibly consistent.",
     "state": "TX",
     "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
+      "mon_sun": "10:00 AM - 2:00 AM"
     }
   },
   {
@@ -2861,10 +2849,10 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.6,
-    "address": "6308 Richmond Ave, Houston, TX 77057",
+    "address": "6357 Westheimer Rd, Houston, TX 77057",
     "zip": "77057",
-    "lat": 29.734,
-    "lng": -95.492,
+    "lat": 29.735,
+    "lng": -95.484,
     "phone": "(832) 831-4372",
     "website": "https://ariasuyakitchen.com/",
     "vibe": "Daily Driver",
@@ -2880,8 +2868,11 @@
     "about": "Slightly more 'upscale' than a standard joint, but still very much a regular spot for the Galleria crowd.",
     "state": "TX",
     "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
+      "tue_thu": "11:30 AM - 8:30 PM",
+      "fri": "11:30 AM - 9:30 PM",
+      "sat": "12:00 PM - 9:30 PM",
+      "sun": "1:00 PM - 6:00 PM",
+      "mon": "Closed"
     }
   },
   {
@@ -2891,8 +2882,8 @@
     "region": "West African",
     "price_range": "$",
     "rating": 4.5,
-    "address": "5231 Bellaire Blvd, Bellaire, TX 77401",
-    "phone": "(713) 589-9055",
+    "address": "3833 Richmond Ave, Houston, TX 77027",
+    "phone": "(713) 589-4699",
     "website": "https://jollofriceking.com/",
     "vibe": "Fast-Casual / Reliable",
     "vibe_tags": [
@@ -2903,11 +2894,12 @@
       "Smoky Jollof Rice"
     ],
     "vibe_category": "Authentic Staples",
-    "about": "Owned by the same team as 'Taste of Nigeria.' This is their high-speed, high-volume operation.",
+    "about": "West African spot in Upper Kirby; jollof rice, suya, egusi, pepper soup. Same ownership family as Taste of Nigeria.",
     "state": "TX",
     "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
+      "mon": "12:00 PM - 8:00 PM",
+      "tue_sat": "12:00 PM - 7:45 PM",
+      "sun": "12:00 PM - 7:45 PM"
     }
   },
   {
@@ -3104,62 +3096,6 @@
     }
   },
   {
-    "id": "nyc-daily-003",
-    "name": "Jasmine's Caribbean",
-    "cuisine": "Caribbean",
-    "region": "Caribbean",
-    "price_range": "$$",
-    "rating": 4.6,
-    "address": "371 W 46th St, New York, NY 10036",
-    "phone": "(646) 964-5337",
-    "website": "https://www.jasminecaribbeancuisine.com",
-    "neighborhood": "Restaurant Row / Hell's Kitchen",
-    "vibe": "Midtown Escape",
-    "vibe_tags": [
-      "Midtown Escape"
-    ],
-    "specialty": "Jazzy Pasta",
-    "menu_highlights": [
-      "Jazzy Pasta"
-    ],
-    "vibe_category": "Authentic Staples",
-    "about": "Black-owned, woman-owned. Oxtail, jerk wings, ackee & saltfish. Restaurant Row.",
-    "state": "NY",
-    "hours": {
-      "mon_sun": "12:00 PM - 10:00 PM"
-    }
-  },
-  {
-    "id": "dc-daily-001",
-    "name": "Appioo Bar & Grill",
-    "cuisine": "Ghanaian",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "1924 9th St NW, Washington, DC 20001",
-    "phone": "(202) 588-7366",
-    "website": "https://www.appiooafricanbargrill.com",
-    "neighborhood": "H Street Corridor / Shaw",
-    "vibe": "Ghanaian Social",
-    "vibe_tags": [
-      "Ghanaian Social"
-    ],
-    "specialty": "Kelewele",
-    "menu_highlights": [
-      "Kelewele"
-    ],
-    "vibe_category": "Community Favorites",
-    "about": "Ghanaian cuisine by Chef Prince Matey; African drinks, sports bar, live bands & DJs on weekends.",
-    "state": "DC",
-    "hours": {
-      "tue_thu": "4:00 PM - 10:00 PM",
-      "fri": "4:00 PM - 11:30 PM",
-      "sat": "2:00 PM - 11:30 PM",
-      "sun": "2:00 PM - 10:00 PM",
-      "mon": "Closed"
-    }
-  },
-  {
     "id": "dc-daily-002",
     "name": "Chercher",
     "cuisine": "Ethiopian",
@@ -3195,6 +3131,7 @@
     "rating": 4.6,
     "address": "524 W Manchester Blvd, Inglewood, CA 90301",
     "phone": "(310) 673-4890",
+    "website": "https://www.veronicas-kitchen.com",
     "neighborhood": "Inglewood",
     "vibe": "Inglewood Legend",
     "vibe_tags": [
@@ -3300,34 +3237,6 @@
     }
   },
   {
-    "id": "chi-daily-001",
-    "name": "Yassa African Restaurant",
-    "cuisine": "Senegalese",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.6,
-    "address": "3511 S King Dr, Chicago, IL 60653",
-    "phone": "(773) 488-5599",
-    "website": "https://yassaafricanrestaurant.com",
-    "neighborhood": "Bronzeville",
-    "vibe": "Authentic Comfort",
-    "vibe_tags": [
-      "Authentic Comfort"
-    ],
-    "specialty": "Senegalese Grilled Fish",
-    "menu_highlights": [
-      "Senegalese Grilled Fish"
-    ],
-    "vibe_category": "Authentic Staples",
-    "about": "Senegalese since 2004; yassa chicken, jollof, grilled fish. Catering, live music.",
-    "state": "IL",
-    "hours": {
-      "mon_thu": "11:00 AM - 10:00 PM",
-      "fri_sat": "11:00 AM - 11:00 PM",
-      "sun": "11:00 AM - 10:00 PM"
-    }
-  },
-  {
     "id": "katy-001",
     "name": "Royal Arm Restaurant",
     "cuisine": "Nigerian & Caribbean Fusion",
@@ -3364,27 +3273,6 @@
   {
     "social": {},
     "hours": {
-      "mon_sun": "11:00 AM - 8:00 PM"
-    },
-    "about": "",
-    "our_story": "",
-    "cultural_roots": "",
-    "menu_highlights": [],
-    "vibe_category": "Authentic Staples",
-    "id": "iyanze-uptown",
-    "name": "Iyanze Bar & Cafe",
-    "cuisine": "Nigerian",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "4623 N Broadway, Chicago, IL 60640",
-    "phone": "(773) 633-2364",
-    "website": "https://iyanzeonline.com",
-    "state": "IL"
-  },
-  {
-    "social": {},
-    "hours": {
       "tue_sun": "11:00 AM - 9:00 PM",
       "mon": "Closed"
     },
@@ -3412,6 +3300,7 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "909 W Manchester Blvd, Inglewood, CA 90301",
+    "phone": "(213) 261-0737",
     "website": "https://adukenigeriancuisine.com",
     "about": "Best Suya & Fufu in Inglewood. Homemade from scratch; vegan/vegetarian options.",
     "state": "CA",
@@ -3498,6 +3387,8 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "2370 High St, Oakland, CA 94601",
+    "phone": "(510) 479-3270",
+    "website": "https://cocobreezeco.com",
     "about": "Oakland's only Trinidadian; roti wraps, curry goat pelau, pholourie. Chef Ann; Wed–Sat 11am–8pm.",
     "state": "CA",
     "hours": {
@@ -3650,6 +3541,7 @@
     "rating": 4.7,
     "address": "896 Nostrand Ave, Brooklyn, NY 11225",
     "phone": "(718) 363-3826",
+    "website": "https://www.veesrestaurant.com",
     "about": "30+ years; oxtail, cow foot soup, ackee & saltfish. Generous portions, meals from $7. Crown Heights.",
     "state": "NY",
     "hours": {
@@ -3665,7 +3557,8 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "126 Utica Ave, Brooklyn, NY 11213",
-    "website": "http://www.iriecaribbeankitchen.com",
+    "phone": "(347) 295-3628",
+    "website": "https://www.iriecaribbeankitchen.com",
     "about": "Best Jamaican in Bed-Stuy; oxtail, generous portions. Delivery & dine-in.",
     "state": "NY",
     "hours": {
@@ -3698,6 +3591,7 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "1947 W Howard St, Chicago, IL 60626",
+    "phone": "(773) 293-6913",
     "website": "https://badousenegalesecuisine.com",
     "about": "Yassa chicken, mafe, jollof. Vegan options. Rogers Park.",
     "state": "IL",
@@ -3731,6 +3625,8 @@
     "price_range": "$$",
     "rating": 4.5,
     "address": "901 S Prairie Ave, Inglewood, CA 90301",
+    "phone": "(310) 330-0649",
+    "website": "https://www.blessedtropical.com",
     "about": "Black-owned, veteran-owned. Oxtail, curry goat, jerk chicken. Outdoor seating, happy hour.",
     "state": "CA",
     "hours": {

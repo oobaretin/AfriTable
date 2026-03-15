@@ -73,6 +73,7 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
     const hoursObj = jsonRestaurant.hours as Record<string, string>;
     const dayMap: Array<[string, number]> = [
       ["monday", 1],
+      ["mon", 1],
       ["tue", 2],
       ["tuesday", 2],
       ["wed", 3],
