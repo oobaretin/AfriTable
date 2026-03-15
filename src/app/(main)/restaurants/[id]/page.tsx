@@ -16,7 +16,7 @@ import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { ReviewsSection } from "@/components/restaurant/ReviewsSection";
 import { generateDefaultContent } from "@/lib/restaurant-content-helpers";
 import { formatTimeRange12h } from "@/lib/utils/time-format";
-import { getRestaurantByIdFromJSON } from "@/lib/restaurant-json-loader-server";
+import { getRestaurantByIdFromJSON, getSimilarRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 
 type RestaurantDetail = {
@@ -329,11 +329,18 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
   }
   console.log(`[RestaurantPage] ✅ Successfully loaded restaurant: "${restaurant.name}" (${restaurant.id || restaurant.slug})`);
 
-  const [operatingHours, reviews, similar] = await Promise.all([
+  const [operatingHours, reviews, similarFromDb] = await Promise.all([
     getOperatingHours(restaurant.id, restaurant.hours),
     getReviews(restaurant.id),
     getSimilarRestaurants(restaurant.id, restaurant.cuisine_types),
   ]);
+
+  // Fallback: when Supabase has no/few restaurants, use JSON for "You might also like"
+  let similar = similarFromDb;
+  if (!similar.length) {
+    const fromJson = getSimilarRestaurantsFromJSON(restaurant.id, restaurant.cuisine_types || [], 6);
+    similar = fromJson.map((r) => transformJSONRestaurantToDetail(r));
+  }
 
   const addrStr = addressToString(restaurant.address);
   const todays = todayHours(operatingHours);

@@ -42,3 +42,36 @@ export function getRestaurantByIdFromJSON(id: string): JSONRestaurant | null {
   const restaurants = loadRestaurantsFromJSON();
   return restaurants.find((r) => r.id === id) || null;
 }
+
+/**
+ * Get up to 6 similar restaurants from JSON by cuisine/region match, excluding current id.
+ * Used when Supabase similar list is empty (e.g. app uses JSON as source of truth).
+ */
+export function getSimilarRestaurantsFromJSON(
+  currentId: string,
+  cuisineTypes: string[],
+  limit = 6
+): JSONRestaurant[] {
+  const all = loadRestaurantsFromJSON();
+  const rest = all.filter((r) => r.id && r.id !== currentId);
+  if (rest.length === 0) return [];
+
+  const lower = (s: string) => (s || "").toLowerCase();
+  const cuisineSet = new Set((cuisineTypes || []).map(lower));
+
+  const matching =
+    cuisineSet.size > 0
+      ? rest.filter((r) => {
+          const c = lower(r.cuisine || "");
+          const reg = lower(r.region || "");
+          return (
+            cuisineSet.has(c) ||
+            cuisineSet.has(reg) ||
+            [...cuisineSet].some((t) => c.includes(t) || reg.includes(t))
+          );
+        })
+      : rest;
+
+  const byRating = [...matching].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+  return byRating.slice(0, limit);
+}
