@@ -2,6 +2,9 @@ import "server-only";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
+// Bundled fallback so "You might also like" works when data/ is not on disk (e.g. Vercel serverless)
+import restaurantsBundled from "../../data/restaurants.json";
+
 export type JSONRestaurant = {
   id: string;
   name: string;
@@ -30,12 +33,14 @@ export function loadRestaurantsFromJSON(): JSONRestaurant[] {
     const filePath = path.join(process.cwd(), "data", "restaurants.json");
     if (fs.existsSync(filePath)) {
       const fileContent = fs.readFileSync(filePath, "utf-8");
-      return JSON.parse(fileContent);
+      const parsed = JSON.parse(fileContent);
+      if (Array.isArray(parsed) && parsed.length > 0) return parsed as JSONRestaurant[];
     }
   } catch (error) {
     console.error("[RestaurantJSONLoader] Error loading restaurants.json:", error);
   }
-  return [];
+  // Use bundled data so similar restaurants work in production (data/ may not exist on serverless)
+  return Array.isArray(restaurantsBundled) ? (restaurantsBundled as JSONRestaurant[]) : [];
 }
 
 export function getRestaurantByIdFromJSON(id: string): JSONRestaurant | null {
