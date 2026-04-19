@@ -28,14 +28,16 @@ export function LocalPulse({ messages }: LocalPulseProps) {
 
   return (
     <div className="bg-gradient-to-r from-orange-50 to-yellow-50 border-y border-orange-200 py-4 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto space-y-2">
         <div className="flex items-center gap-3 text-sm md:text-base">
-          <span className="text-2xl animate-pulse">{currentMessage.emoji}</span>
+          <span className="text-2xl shrink-0 animate-pulse" aria-hidden="true">
+            {currentMessage.emoji}
+          </span>
           <p className="flex-1 text-slate-700 font-medium">
             <span className="font-bold text-orange-600">{currentMessage.city && `${currentMessage.city}: `}</span>
             {currentMessage.text}
           </p>
-          <div className="hidden md:flex gap-1">
+          <div className="hidden md:flex gap-1 shrink-0" aria-hidden="true">
             {messages.map((_, idx) => (
               <div
                 key={idx}
@@ -46,6 +48,9 @@ export function LocalPulse({ messages }: LocalPulseProps) {
             ))}
           </div>
         </div>
+        <p className="text-[11px] text-slate-500 md:text-xs md:pl-11">
+          Highlights rotate for inspiration; they are not live booking totals unless labeled otherwise.
+        </p>
       </div>
     </div>
   );

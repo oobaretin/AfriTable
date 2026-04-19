@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 
 const CUISINES = ["NIGERIAN", "SENEGALESE", "HAITIAN", "ETHIOPIAN", "JAMAICAN"];
@@ -218,10 +219,13 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#000814]/50 to-[#000814]" style={{ transform: 'translateZ(0)' }}></div>
       </div>
 
-      {/* 2. CATCHY WORDS (Smaller & More Spaced) */}
-      <div className="relative z-10 mb-8 flex gap-8 md:gap-16 opacity-30">
+      {/* 2. CATCHY WORDS — readable on small screens (avoid merged “wordwordword”) */}
+      <div className="relative z-10 mb-8 flex flex-wrap justify-center gap-x-4 gap-y-2 px-2 opacity-30 sm:gap-x-8 md:gap-x-16">
         {["REDEFINED", "AUTHENTIC", "ANCESTRAL"].map((word, i) => (
-          <span key={i} className="text-[10px] font-black text-white uppercase tracking-[0.4em]">
+          <span
+            key={i}
+            className="text-[10px] font-black text-white uppercase tracking-[0.12em] sm:tracking-[0.22em] md:tracking-[0.32em]"
+          >
             {word}
           </span>
         ))}
@@ -260,7 +264,7 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
                 name="city"
                 ref={inputRef}
                 type="text"
-                placeholder="Where are you eating?"
+                placeholder="City or restaurant name"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
                 onFocus={() => {
@@ -281,12 +285,14 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
                   }
                 }}
                 className="w-full py-2.5 bg-transparent outline-none font-bold text-slate-800 text-sm placeholder:text-slate-300"
-                aria-label="Search by city"
+                aria-label="Search by city or restaurant name"
               />
             </div>
             <button
+              type="button"
               onClick={handleSearch}
               className="bg-[#111] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-[9px] hover:bg-[#A33B32] transition-all pointer-events-auto cursor-pointer relative z-30"
+              aria-label="Find restaurants for the location you entered"
             >
               Find Table
             </button>
@@ -316,6 +322,18 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
               ))}
             </div>
           )}
+        </div>
+        <div className="relative z-10 mt-6 flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-4">
+          <Link
+            href="/restaurants"
+            className="text-sm font-bold text-white/90 underline-offset-4 transition-colors hover:text-white hover:underline"
+          >
+            Browse all restaurants
+          </Link>
+          <span className="hidden text-white/35 sm:inline" aria-hidden="true">
+            ·
+          </span>
+          <span className="text-xs text-white/55">No city in mind? See the full directory.</span>
         </div>
       </div>
     </section>

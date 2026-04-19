@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Apple, Instagram, Smartphone, Twitter, Youtube } from "lucide-react";
+import { Instagram, Twitter, Youtube } from "lucide-react";
 import FooterExpandedLists from "@/components/layout/FooterExpandedLists";
 import NewsletterSignup from "@/components/layout/NewsletterSignup";
-import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
@@ -57,18 +56,16 @@ export default function Footer() {
             </div>
 
             <div className="mt-6 grid gap-2">
-              <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Get the app</div>
-              <div className="flex flex-wrap gap-2">
-                <Button variant="outline" size="sm" className="gap-2 bg-slate-800/60 border-slate-700 text-slate-300 hover:bg-slate-700 hover:text-white">
-                  <Apple className="h-4 w-4" />
-                  App Store
-                </Button>
-                <Button variant="outline" size="sm" className="gap-2 bg-slate-800/60 border-slate-700 text-slate-300 hover:bg-slate-700 hover:text-white">
-                  <Smartphone className="h-4 w-4" />
-                  Google Play
-                </Button>
-              </div>
-              <div className="text-xs text-slate-400">Coming soon • join the newsletter for launch updates.</div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Mobile app</div>
+              <p className="text-sm text-slate-400">
+                iOS and Android apps are not live yet. Get launch updates through the newsletter below—no spam.
+              </p>
+              <a
+                href="#footer-newsletter"
+                className="text-sm font-semibold text-amber-400/90 underline-offset-4 hover:text-amber-300 hover:underline"
+              >
+                Join the mailing list →
+              </a>
             </div>
           </div>
 
@@ -152,7 +149,7 @@ export default function Footer() {
               <FooterExpandedLists />
             </div>
           </div>
-          <div className="md:col-span-5">
+          <div className="md:col-span-5" id="footer-newsletter">
             <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 shadow-sm">
               <NewsletterSignup />
             </div>

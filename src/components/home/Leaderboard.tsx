@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -82,8 +83,18 @@ export function Leaderboard() {
                 ))}
               </div>
             ) : ambassadors.length === 0 ? (
-              <div className="px-8 py-12 text-center text-slate-400">
-                <p className="text-sm italic">No ambassadors yet. Be the first to explore!</p>
+              <div className="px-8 py-14 text-center text-slate-500">
+                <p className="text-base font-medium text-slate-700">Be the first on the board</p>
+                <p className="mt-2 max-w-md mx-auto text-sm leading-relaxed">
+                  Dine, collect stamps on your AfriTable passport, and climb the ranks as more neighbors join the
+                  community.
+                </p>
+                <Link
+                  href="/passport"
+                  className="mt-6 inline-flex text-sm font-bold uppercase tracking-widest text-brand-bronze underline-offset-4 hover:text-brand-dark hover:underline"
+                >
+                  Open your passport →
+                </Link>
               </div>
             ) : (
               <div className="divide-y divide-slate-50">

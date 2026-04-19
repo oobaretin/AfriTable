@@ -101,7 +101,9 @@ export default async function MainHomePage() {
           <Reveal>
             <div className="text-center">
               <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">How it works</h2>
-              <p className="mt-2 text-muted-foreground">A premium booking experience in three simple steps.</p>
+              <p className="mt-2 text-muted-foreground">
+                From discovery to checkout in three steps—built for diaspora dining.
+              </p>
             </div>
           </Reveal>
 
@@ -116,7 +118,8 @@ export default async function MainHomePage() {
               {
                 number: 2,
                 title: "Reserve",
-                description: "Real-time availability. Your table is actually there when you arrive.",
+                description:
+                  "See open times, pick party size, and confirm in a few taps. On-platform partners sync real table capacity.",
                 icon: "🗓️",
               },
               {
