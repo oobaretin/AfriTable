@@ -1,5 +1,5 @@
 import { config } from "dotenv";
-import { scrapeAllAfricanCaribbeanRestaurants } from "./scrape-with-serpapi";
+import { estimateSerpSearchesPerMetro, scrapeAllAfricanCaribbeanRestaurants } from "./scrape-with-serpapi";
 import { NATIONWIDE_SCRAPE_CITIES, type ScrapeCity } from "./nationwide-scrape-cities";
 import * as fs from "fs";
 import * as path from "path";
@@ -47,6 +47,22 @@ async function scrapeMultipleCities(cityNames?: string[]) {
 
   if (args.length === 0) {
     console.log("ℹ️  No args: scraping legacy 8 metros. For full nationwide list: tsx lib/scrape-city.ts nationwide\n");
+  }
+
+  const perMetro = estimateSerpSearchesPerMetro();
+  const estTotal = citiesToScrape.length * perMetro;
+  /** Typical SerpAPI free-plan monthly allowance — used only for a preflight heads-up. */
+  const typicalFreeMonthlyCap = 250;
+  if (estTotal > typicalFreeMonthlyCap) {
+    console.warn(
+      `\n⚠️  Estimated SerpAPI searches this run: ~${estTotal} (${citiesToScrape.length} metros × ~${perMetro}/metro).`,
+    );
+    console.warn(
+      `   Typical free tier is ~${typicalFreeMonthlyCap}/month. Add to .env.local: SERPAPI_FREE_TIER=1 (caps place lookups),`,
+    );
+    console.warn(`   and/or SERPAPI_SKIP_PLACE_DETAILS=1 (~13 searches/metro), or scrape fewer cities (e.g. Phoenix only).\n`);
+  } else {
+    console.log(`\n💳 Estimated SerpAPI searches this run: ~${estTotal} (${citiesToScrape.length} × ~${perMetro}) — within a typical 250/mo free tier if the dashboard is near zero.\n`);
   }
 
   console.log(`🌍 Scraping ${citiesToScrape.length} cities...\n`);

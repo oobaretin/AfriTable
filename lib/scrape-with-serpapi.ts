@@ -6,6 +6,26 @@ import * as path from "path";
 // Load environment variables from .env.local
 config({ path: path.join(process.cwd(), ".env.local") });
 
+const MAP_QUERY_COUNT = 13;
+
+/** Free tier (~250 searches/mo): cap place lookups. See .env.example */
+export function getSerpPlaceDetailLimit(): { max: number; skip: boolean } {
+  const skip = /^1|true|yes$/i.test(String(process.env.SERPAPI_SKIP_PLACE_DETAILS ?? ""));
+  if (skip) return { max: 0, skip: true };
+  const free = /^1|true|yes$/i.test(String(process.env.SERPAPI_FREE_TIER ?? ""));
+  const raw = process.env.SERPAPI_MAX_PLACE_DETAILS;
+  const fallback = free ? 5 : 50;
+  const parsed = raw !== undefined && String(raw).trim() !== "" ? parseInt(String(raw), 10) : NaN;
+  const max = Number.isFinite(parsed) ? Math.min(50, Math.max(0, parsed)) : fallback;
+  return { max, skip: false };
+}
+
+/** Rough SerpAPI search count for one metro (each map query + each place = 1 search). */
+export function estimateSerpSearchesPerMetro(): number {
+  const { max, skip } = getSerpPlaceDetailLimit();
+  return MAP_QUERY_COUNT + (skip ? 0 : max);
+}
+
 async function scrapeGoogleMaps(query: string, coordinates?: string) {
   try {
     const apiKey = process.env.SERPAPI_KEY;
@@ -50,6 +70,11 @@ async function getPlaceDetails(placeId: string) {
 }
 
 async function scrapeAllAfricanCaribbeanRestaurants(location: string = "Houston, TX", coordinates?: string) {
+  const { max: maxPlaceDetails, skip: skipPlaceDetails } = getSerpPlaceDetailLimit();
+  console.log(
+    `\n💳 SerpAPI budget: ~${MAP_QUERY_COUNT} map searches + ${skipPlaceDetails ? "0" : `up to ${maxPlaceDetails}`} place lookups per metro (≈${estimateSerpSearchesPerMetro()} searches max). Set SERPAPI_FREE_TIER=1 or SERPAPI_SKIP_PLACE_DETAILS=1 to save quota.\n`,
+  );
+
   const queries = [
     "Nigerian restaurants",
     "Ethiopian restaurants",
@@ -91,31 +116,35 @@ async function scrapeAllAfricanCaribbeanRestaurants(location: string = "Houston,
 
   console.log(`📊 Unique restaurants: ${uniqueRestaurants.length}`);
 
-  // Get detailed info for each restaurant
-  console.log("\n🔍 Fetching detailed information...\n");
-  const detailedRestaurants = [];
+  const detailedRestaurants: { basic: any; details: any }[] = [];
 
-  for (let i = 0; i < Math.min(uniqueRestaurants.length, 50); i++) {
-    const restaurant = uniqueRestaurants[i];
+  if (skipPlaceDetails || maxPlaceDetails === 0) {
+    console.log("\n⏭️  Skipping place-detail lookups (saves SerpAPI searches). Using map result fields only.\n");
+  } else {
+    console.log("\n🔍 Fetching detailed information...\n");
+    for (let i = 0; i < Math.min(uniqueRestaurants.length, maxPlaceDetails); i++) {
+      const restaurant = uniqueRestaurants[i];
 
-    if (restaurant.place_id) {
-      console.log(`${i + 1}/${uniqueRestaurants.length}: ${restaurant.title}`);
-      const details = await getPlaceDetails(restaurant.place_id);
+      if (restaurant.place_id) {
+        console.log(`${i + 1}/${Math.min(uniqueRestaurants.length, maxPlaceDetails)}: ${restaurant.title}`);
+        const details = await getPlaceDetails(restaurant.place_id);
 
-      if (details) {
-        detailedRestaurants.push({
-          basic: restaurant,
-          details: details,
-        });
+        if (details) {
+          detailedRestaurants.push({
+            basic: restaurant,
+            details: details,
+          });
+        }
+
+        await new Promise((resolve) => setTimeout(resolve, 1500));
       }
-
-      // Rate limit
-      await new Promise((resolve) => setTimeout(resolve, 1500));
     }
   }
 
-  // Convert to AfriTable format
-  const formattedRestaurants = detailedRestaurants.map((r) => convertToAfriTableFormat(r.basic, r.details));
+  const formattedRestaurants =
+    detailedRestaurants.length > 0
+      ? detailedRestaurants.map((r) => convertToAfriTableFormat(r.basic, r.details))
+      : uniqueRestaurants.slice(0, Math.min(uniqueRestaurants.length, 40)).map((b) => convertToAfriTableFormat(b, null));
 
   // Ensure data directory exists
   const dataDir = path.join(process.cwd(), "data");
