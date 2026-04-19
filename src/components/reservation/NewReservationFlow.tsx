@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -19,6 +19,7 @@ import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { buildCalendarLinks, buildICS } from "@/lib/email/calendar";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { useAvailability } from "@/components/reservation/AvailabilityChecker";
+import { isSlotSelectable, pickNearestSelectableSlot } from "@/lib/reservation/slot-selection";
 
 // Simple US phone validation (accepts +1, parentheses, spaces, dashes)
 const phoneRegex = /^\+?1?\s*\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
@@ -59,6 +60,7 @@ type Confirmation = {
 
 export function NewReservationFlow({ summary }: { summary: ReservationSummary }) {
   const router = useRouter();
+  const pathname = usePathname();
   const params = useSearchParams();
 
   const restaurantSlug = params.get("restaurant") ?? summary.restaurant.slug;
@@ -114,8 +116,28 @@ export function NewReservationFlow({ summary }: { summary: ReservationSummary })
     date: date ?? format(new Date(), "yyyy-MM-dd"),
     partySize: party ?? "2",
   });
-  const currentSlot = availability.data?.slots?.find((s) => s.time === time) ?? null;
-  const isTimeAvailable = Boolean(currentSlot && currentSlot.status !== "unavailable" && currentSlot.availableTables > 0);
+
+  const slots = availability.data?.slots ?? [];
+  const currentSlot = time ? slots.find((s) => s.time === time) ?? null : null;
+  const isTimeAvailable = Boolean(
+    currentSlot && currentSlot.status !== "unavailable" && currentSlot.availableTables > 0,
+  );
+
+  // Align URL time with real slot starts (widget static times can pick e.g. 21:00 when last slot is 20:30).
+  React.useEffect(() => {
+    if (!date || !time || !availability.isSuccess || availability.isError) return;
+    const slotList = availability.data?.slots ?? [];
+    if (!slotList.length) return;
+    const replacement = pickNearestSelectableSlot(time, slotList);
+    if (!replacement || replacement.time === time) return;
+    const next = new URLSearchParams(params.toString());
+    next.set("time", replacement.time);
+    router.replace(`${pathname}?${next.toString()}`, { scroll: false });
+  }, [date, time, availability.isSuccess, availability.isError, availability.data, pathname, router, params]);
+
+  const selectableSlots = slots.filter(isSlotSelectable);
+  const showAvailabilityProblem =
+    !availability.isPending && availability.isFetched && Boolean(time) && !isTimeAvailable;
 
   async function submit(values: GuestValues) {
     if (!date || !time || !party) {
@@ -205,11 +227,17 @@ export function NewReservationFlow({ summary }: { summary: ReservationSummary })
                 <CardDescription>Tell us who we should expect at the table.</CardDescription>
               </CardHeader>
               <CardContent className="grid gap-6">
-                {!availability.isLoading && !isTimeAvailable ? (
+                {showAvailabilityProblem ? (
                   <Alert variant="destructive">
-                    <AlertTitle>No availability for {time}</AlertTitle>
+                    <AlertTitle>
+                      {availability.isSuccess && slots.length > 0 && selectableSlots.length === 0
+                        ? "No openings for this party size"
+                        : `No availability for ${time}`}
+                    </AlertTitle>
                     <AlertDescription>
-                      This time is no longer available. Please go back and pick a different time.
+                      {availability.isSuccess && slots.length > 0 && selectableSlots.length === 0
+                        ? "This restaurant has no bookable tables for your party size on this date. Try fewer guests, another day, or go back to pick a different time."
+                        : "That time does not match an available table slot. Please go back and choose a time from the list, or wait a moment while we adjust your selection."}
                     </AlertDescription>
                   </Alert>
                 ) : null}

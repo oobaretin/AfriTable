@@ -65,12 +65,19 @@ export function ReservationWidget({
     refetchInterval: 30_000,
   });
 
-  React.useEffect(() => {
-    setSelectedTime(null);
-  }, [dateStr, partySize]);
-
   const slots = data?.slots ?? [];
-  const availableSlots = slots.filter((s) => s.status !== "unavailable");
+
+  // Keep selection aligned with API slot rows (date / party / slots change).
+  React.useEffect(() => {
+    if (isLoading || error || !data?.slots?.length) return;
+    if (selectedTime) {
+      const slot = data.slots.find((s) => s.time === selectedTime);
+      const ok = slot && slot.status !== "unavailable" && slot.availableTables > 0;
+      if (ok) return;
+    }
+    const first = data.slots.find((s) => s.status !== "unavailable" && s.availableTables > 0);
+    setSelectedTime(first?.time ?? null);
+  }, [dateStr, partySize, data, isLoading, error, selectedTime]);
 
   const handleReserve = () => {
     if (!selectedTime || !restaurantSlug) return;
@@ -89,19 +96,6 @@ export function ReservationWidget({
       router.push(`/reservations/new?${params.toString()}`);
     }, 2000);
   };
-
-  // Generate time options (7:00 PM - 10:30 PM in 30-min intervals)
-  const timeOptions = React.useMemo(() => {
-    const times: string[] = [];
-    for (let h = 19; h <= 22; h++) {
-      for (const m of [0, 30]) {
-        const hh = String(h).padStart(2, "0");
-        const mm = String(m).padStart(2, "0");
-        times.push(`${hh}:${mm}`);
-      }
-    }
-    return times;
-  }, []);
 
   // Format date for display
   const displayDate = date ? format(date, "MMMM d, yyyy") : "";
@@ -204,27 +198,40 @@ export function ReservationWidget({
             <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Time</label>
             {isLoading ? (
               <Skeleton className="h-[42px] w-full rounded-xl" />
-            ) : (
+            ) : error ? (
+              <select
+                disabled
+                className="w-full rounded-xl border border-slate-200 p-3 text-sm font-medium bg-slate-50 text-slate-500"
+                aria-label="Time"
+              >
+                <option value="">Load times to continue</option>
+              </select>
+            ) : slots.length > 0 ? (
               <select
                 value={selectedTime || ""}
                 onChange={(e) => setSelectedTime(e.target.value || null)}
                 className="w-full rounded-xl border border-slate-200 p-3 text-sm font-medium focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all bg-white"
+                aria-label="Time"
               >
                 <option value="">Select time</option>
-                {availableSlots.length > 0 ? (
-                  availableSlots.map((slot) => (
-                    <option key={slot.time} value={slot.time}>
+                {slots.map((slot) => {
+                  const bookable = slot.status !== "unavailable" && slot.availableTables > 0;
+                  return (
+                    <option key={slot.time} value={slot.time} disabled={!bookable}>
                       {formatTime12h(slot.time)}
-                      {slot.status === "limited" && " (Limited)"}
+                      {slot.status === "limited" && bookable ? " (Limited)" : ""}
+                      {!bookable ? " (Unavailable)" : ""}
                     </option>
-                  ))
-                ) : (
-                  timeOptions.map((time) => (
-                    <option key={time} value={time}>
-                      {formatTime12h(time)}
-                    </option>
-                  ))
-                )}
+                  );
+                })}
+              </select>
+            ) : (
+              <select
+                disabled
+                className="w-full rounded-xl border border-slate-200 p-3 text-sm font-medium bg-slate-50 text-slate-500"
+                aria-label="Time"
+              >
+                <option value="">No times for this date</option>
               </select>
             )}
           </div>
