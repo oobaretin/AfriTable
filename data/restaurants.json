@@ -2203,9 +2203,61 @@
     "vibe_category": "Fine Dining",
     "state": "TX",
     "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
+      "mon": "Closed",
+      "tue": "Closed",
+      "wed": "5:00 PM - 11:00 PM",
+      "thu": "5:00 PM - 12:00 AM",
+      "fri": "5:00 PM - 2:00 AM",
+      "sat": "11:00 AM - 2:00 AM",
+      "sun": "11:00 AM - 11:00 PM"
     }
+  },
+  {
+    "id": "dfw-shuri-001",
+    "name": "Shuri African Restaurant",
+    "cuisine": "Nigerian / West African",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.6,
+    "address": "9410 Walnut St Ste 115, Dallas, TX 75243",
+    "phone": "(972) 863-8820",
+    "website": "https://shuriafricanrestaurant.shop/",
+    "neighborhood": "Northeast Dallas",
+    "vibe": "Warm & Casual",
+    "vibe_tags": ["Counter Service", "Family Portions"],
+    "specialty": "Egusi & jollof",
+    "menu_highlights": ["Egusi soup", "Jollof rice", "Goat pepper soup"],
+    "about": "Counter-service West African kitchen known for generous portions and staples like egusi, fufu, and pepper soup.",
+    "vibe_category": "Authentic Staples",
+    "state": "TX",
+    "hours": {
+      "mon_sat": "11:00 AM - 10:00 PM",
+      "sun": "12:00 PM - 9:00 PM"
+    },
+    "social": {}
+  },
+  {
+    "id": "den-whittier-001",
+    "name": "Whittier Cafe",
+    "cuisine": "Ethiopian / East African",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "1710 E 25th Ave, Denver, CO 80205",
+    "phone": "(720) 550-7440",
+    "website": "https://www.whittiercafe.com/",
+    "neighborhood": "Whittier / Five Points",
+    "vibe": "Community & Coffee",
+    "vibe_tags": ["Coffee Ceremony", "Activist-Friendly Space"],
+    "specialty": "Sunday East African coffee ceremony",
+    "menu_highlights": ["Ethiopian espresso", "African wines & beers", "Sunday coffee ceremony"],
+    "about": "Denver's African espresso bar—Ethiopian and East African coffees, light fare, Sunday traditional coffee ceremony.",
+    "vibe_category": "Community Favorites",
+    "state": "CO",
+    "hours": {
+      "mon_sun": "7:00 AM - 7:00 PM"
+    },
+    "social": {}
   },
   {
     "id": "chs-fine-001",

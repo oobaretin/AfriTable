@@ -1,0 +1,18 @@
+[
+  {
+    "id": "den-grilling-jerk-001",
+    "name": "Grilling Jerk Island",
+    "note": "Opened Nov 2025 per Denver Post. Jamaican jerk & plates at 2231 Bruce Randolph Ave, Denver. Add phone + hours from Google Maps or site before publishing to restaurants.json.",
+    "city": "Denver, CO",
+    "cuisine": "Jamaican",
+    "source": "https://www.denverpost.com/2026/03/31/grilling-jerk-island-jamaican-restaurant-denver/"
+  },
+  {
+    "id": "research-miami-more",
+    "name": "(Research queue) South Florida",
+    "note": "Catalog has few FL rows vs diaspora size. Candidates: more Haitian/Nigerian strips in North Miami, Broward—verify each before add.",
+    "city": "Miami metro",
+    "cuisine": "Various",
+    "source": "internal-gap-analysis"
+  }
+]
