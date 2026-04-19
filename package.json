@@ -13,6 +13,7 @@
     "seed:restaurants": "node scripts/seed-restaurants.mjs",
     "seed:houston": "node scripts/seed-restaurants.mjs data/seed/houston-restaurants.json",
     "report:top-metro-afrocarib": "node scripts/report-top-metro-afrocarib.mjs",
+    "count:combined": "node scripts/count-json-supabase-combined.mjs",
     "vibes:normalize": "node scripts/normalize-vibe-categories.mjs",
     "data:nationwide-pass": "node scripts/normalize-vibe-categories.mjs && node scripts/append-nationwide-coverage-restaurants.mjs && node scripts/report-top-metro-afrocarib.mjs",
     "scrape:nationwide": "tsx lib/scrape-city.ts nationwide",
