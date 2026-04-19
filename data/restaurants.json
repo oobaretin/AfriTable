@@ -3857,5 +3857,1270 @@
     ],
     "vibe_category": "Authentic Staples",
     "state": "CA"
+  },
+  {
+    "id": "zola-cultural-kitchen-mesa",
+    "name": "Zola Cultural Kitchen",
+    "cuisine": "East African",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "6209 E Main St, Mesa, AZ 85206",
+    "phone": "(602) 562-5403",
+    "website": "https://zolacuturalkitchen.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic East African restaurant in Mesa. Experience traditional East African flavors and hospitality at Zola Cultural Kitchen.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "AZ",
+    "google_place_id": "ChIJaatd9_SvK4cRPBVYfbpcDNE",
+    "lat": 33.415323799999996,
+    "lng": -111.6972339
+  },
+  {
+    "id": "angels-naija-cuisine-phoenix",
+    "name": "Angel's Naija Cuisine",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.3,
+    "address": "4813 N 27th Ave, Phoenix, AZ 85017",
+    "phone": "(313) 818-9331",
+    "website": "http://www.angelsnaijacuisineaz.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Phoenix. Experience traditional African flavors and hospitality at Angel's Naija Cuisine.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "AZ",
+    "google_place_id": "ChIJw0DZTC1tK4cRLaoJlFm20sA",
+    "lat": 33.507928199999995,
+    "lng": -112.1165443
+  },
+  {
+    "id": "authentic-liberian-cuisine-phoenix",
+    "name": "Authentic Liberian Cuisine",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.4,
+    "address": "7017 N 19th Ave, Phoenix, AZ 85021",
+    "phone": "(602) 813-9025",
+    "website": "https://authenticliberiancuisineaz.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Phoenix. Experience traditional African flavors and hospitality at Authentic Liberian Cuisine.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "AZ",
+    "google_place_id": "ChIJdaHRjWNtK4cRNPnyxIe8o8s",
+    "lat": 33.5392157,
+    "lng": -112.0986088
+  },
+  {
+    "id": "naija-soul-kitchen-phoenix",
+    "name": "Naija Soul Kitchen",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$$",
+    "rating": 4.8,
+    "address": "3801 S Central Ave, Phoenix, AZ 85040",
+    "phone": "(602) 577-2285",
+    "website": "http://www.naijasoulkitchen.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Phoenix. Experience traditional African flavors and hospitality at Naija Soul Kitchen.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "AZ",
+    "google_place_id": "ChIJQ8E3-NgRK4cRDiEA7jLQ3r0",
+    "lat": 33.412151,
+    "lng": -112.0731917
+  },
+  {
+    "id": "karibu-restaurant-glendale",
+    "name": "KARIBU RESTAURANT",
+    "cuisine": "East African",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "4935 W Glendale Ave #1, Glendale, AZ 85301",
+    "phone": "(602) 489-1267",
+    "website": "https://www.kaributaste.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic East African restaurant in Glendale. Experience traditional East African flavors and hospitality at KARIBU RESTAURANT.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "AZ",
+    "google_place_id": "ChIJQTIFMutrK4cR366nLDFKfJI",
+    "lat": 33.5379629,
+    "lng": -112.165954
+  },
+  {
+    "id": "all-african-cuisines-santa-ana",
+    "name": "All African Cuisines",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "325 N Tustin Ave, Santa Ana, CA 92705",
+    "phone": "(949) 556-6748",
+    "website": "http://www.allafricanstores.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Santa Ana. Experience traditional African flavors and hospitality at All African Cuisines.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA",
+    "google_place_id": "ChIJPwJKWrXf3IARbxITf2qUSpg",
+    "lat": 33.7477257,
+    "lng": -117.83385129999999
+  },
+  {
+    "id": "saaraloges-kitchen-riverside",
+    "name": "Saaraloge's Kitchen",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.6,
+    "address": "11711 Collett Ave, Riverside, CA 92505",
+    "phone": "(951) 347-5726",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Riverside. Experience traditional West African flavors and hospitality at Saaraloge's Kitchen.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA",
+    "google_place_id": "ChIJtbyieNu33IARHuLBwGQZ2YY",
+    "lat": 33.9060266,
+    "lng": -117.4960662
+  },
+  {
+    "id": "mama-wales-rice-moreno-valley",
+    "name": "Mama Wale's Rice",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4,
+    "address": "22500 Town Cir #2136, Moreno Valley, CA 92553",
+    "phone": "(951) 379-0007",
+    "website": "https://www.mamawalesrice.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Moreno Valley. Experience traditional African flavors and hospitality at Mama Wale's Rice.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA",
+    "google_place_id": "ChIJd41wieil3IARjfxjPax3rMU",
+    "lat": 33.938383699999996,
+    "lng": -117.2709321
+  },
+  {
+    "id": "tonges-taste-menifee",
+    "name": "Tonge's Taste",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "25195 Desert Sage Dr, Menifee, CA 92586",
+    "phone": "(951) 456-8880",
+    "website": "https://www.tongestaste.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Menifee. Experience traditional African flavors and hospitality at Tonge's Taste.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA",
+    "google_place_id": "ChIJrwQwMaTL3IARlwxOH7xLKe4",
+    "lat": 33.7230651,
+    "lng": -117.2198464
+  },
+  {
+    "id": "nok-grill-moreno-valley",
+    "name": "Nok Grill",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "23424 Rolanda Dr, Moreno Valley, CA 92553",
+    "phone": "(951) 335-6526",
+    "website": "https://nokgrill.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Moreno Valley. Experience traditional West African flavors and hospitality at Nok Grill.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA",
+    "google_place_id": "ChIJXc3yS8an3IARvq-FR9Hpq54",
+    "lat": 33.9234267,
+    "lng": -117.253716
+  },
+  {
+    "id": "taste-of-east-african-minneapolis",
+    "name": "Taste Of East African",
+    "cuisine": "East African",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "313 W Lake St, Minneapolis, MN 55408",
+    "phone": "(612) 351-2669",
+    "website": "https://tasteofeastafricanmn.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic East African restaurant in Minneapolis. Experience traditional East African flavors and hospitality at Taste Of East African.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MN",
+    "google_place_id": "ChIJawIOaVUn9ocRxvmby_9F_ww",
+    "lat": 44.9482043,
+    "lng": -93.2837778
+  },
+  {
+    "id": "lagos-cafe-crystal",
+    "name": "Lagos Cafe",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.3,
+    "address": "2700 Douglas Dr N #2700, Crystal, MN 55422",
+    "phone": "(763) 332-1301",
+    "website": "https://www.lagoscafe.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=4446484662174933262",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Crystal. Experience traditional West African flavors and hospitality at Lagos Cafe.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MN",
+    "google_place_id": "ChIJoRpBluk1s1IRbnj9CGY1LHM",
+    "lat": 45.007506799999994,
+    "lng": -93.3590272
+  },
+  {
+    "id": "joe-nya-african-restaurant-minneapolis",
+    "name": "Joe & Nya African Restaurant",
+    "cuisine": "East African",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.6,
+    "address": "1831 Nicollet Ave, Minneapolis, MN 55403",
+    "phone": "(612) 405-5439",
+    "website": "https://joenyaafrican.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic East African restaurant in Minneapolis. Experience traditional East African flavors and hospitality at Joe & Nya African Restaurant.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MN",
+    "google_place_id": "ChIJ6ZYCuq8zs1IRj9i8O0W6kic",
+    "lat": 44.9644441,
+    "lng": -93.2776013
+  },
+  {
+    "id": "oga-madam-kitchen-minneapolis",
+    "name": "Oga madam kitchen",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.2,
+    "address": "6000 Shingle Creek Pkwy, Minneapolis, MN 55430",
+    "phone": "(763) 200-5773",
+    "website": "https://ogamadam.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Minneapolis. Experience traditional African flavors and hospitality at Oga madam kitchen.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MN",
+    "google_place_id": "ChIJE2lwEFQxs1IRrxIcFZQJOyE",
+    "lat": 45.064457,
+    "lng": -93.30903599999999
+  },
+  {
+    "id": "falastin-cafe-minneapolis",
+    "name": "Falastin Cafe",
+    "cuisine": "East African",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.8,
+    "address": "2910 Pleasant Ave suite 114, Minneapolis, MN 55408",
+    "phone": "(612) 491-8901",
+    "website": "https://falastincafe.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic East African restaurant in Minneapolis. Experience traditional East African flavors and hospitality at Falastin Cafe.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MN",
+    "google_place_id": "ChIJTagitnEn9ocRYi6PIxdYwAI",
+    "lat": 44.9486974,
+    "lng": -93.2815169
+  },
+  {
+    "id": "deemeta-nigerian-cuisine-aloha",
+    "name": "DeeMeta Nigerian Cuisine",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "3695 SW 185th Ave, Aloha, OR 97078",
+    "phone": "(503) 468-9938",
+    "website": "https://www.naijacuisine.deemetacatering.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Nigerian restaurant in Aloha. Experience traditional Nigerian flavors and hospitality at DeeMeta Nigerian Cuisine.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "OR",
+    "google_place_id": "ChIJp8POFAAPlVQRwjDpvm-cdpQ",
+    "lat": 45.4930847,
+    "lng": -122.86753549999999
+  },
+  {
+    "id": "amaye-international-restaurant-portland",
+    "name": "AMAYE International Restaurant",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "8000 NE Glisan St, Portland, OR 97213",
+    "phone": "(503) 252-0264",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Portland. Experience traditional African flavors and hospitality at AMAYE International Restaurant.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "OR",
+    "google_place_id": "ChIJA-5j81ShlVQRRvQRYAJHlXA",
+    "lat": 45.526291099999995,
+    "lng": -122.58130949999999
+  },
+  {
+    "id": "alleamin-african-kitchen-portland",
+    "name": "Alleamin African Kitchen",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.9,
+    "address": "458 SE 185th Ave STE 105, Portland, OR 97233",
+    "phone": "(503) 328-8175",
+    "website": "https://bit.ly/4afw6As",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Portland. Experience traditional African flavors and hospitality at Alleamin African Kitchen.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "OR",
+    "google_place_id": "ChIJDSKW7bajlVQRaHZdBU8qfCA",
+    "lat": 45.5197267,
+    "lng": -122.47201679999999
+  },
+  {
+    "id": "akadi-pdx-portland",
+    "name": "AKADI PDX",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.7,
+    "address": "1001 SE Division St, Portland, OR 97202",
+    "phone": "(971) 271-7072",
+    "website": "http://www.akadipdx.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Portland. Experience traditional West African flavors and hospitality at AKADI PDX.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "OR",
+    "google_place_id": "ChIJC7DL2T6nlVQRpC_x2azbJyc",
+    "lat": 45.5050683,
+    "lng": -122.65541119999999
+  },
+  {
+    "id": "black-star-grill-portland",
+    "name": "Black Star Grill",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "110 NW 10th Ave, Portland, OR 97209",
+    "phone": "(503) 206-5993",
+    "website": "https://www.blackstargrill.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Portland. Experience traditional West African flavors and hospitality at Black Star Grill.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "OR",
+    "google_place_id": "ChIJWZq0ORQKlVQRaiHmQH8gpjg",
+    "lat": 45.5238902,
+    "lng": -122.6809875
+  },
+  {
+    "id": "madina-restaurant-nashville",
+    "name": "Madina restaurant",
+    "cuisine": "East African",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "611 Murfreesboro Pike, Nashville, TN 37210",
+    "phone": "(615) 915-4749",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic East African restaurant in Nashville. Experience traditional East African flavors and hospitality at Madina restaurant.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TN",
+    "google_place_id": "ChIJqZn93BlpZIgRek7BRrCmoIY",
+    "lat": 36.140713,
+    "lng": -86.740049
+  },
+  {
+    "id": "street-injera-authentic-east-african-cuisine-nashville",
+    "name": "Street Injera Authentic East African Cuisine",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "614 18th Avenue N, Nashville, TN 37203",
+    "phone": "(615) 546-0789",
+    "website": "https://www.streetinjera.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Ethiopian restaurant in Nashville. Experience traditional Ethiopian flavors and hospitality at Street Injera Authentic East African Cuisine.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TN",
+    "google_place_id": "ChIJ67pQtmlnZIgRbqh7oG5AlGs",
+    "lat": 36.1618383,
+    "lng": -86.8023887
+  },
+  {
+    "id": "paradiz-african-restaurant-madison",
+    "name": "Paradiz African restaurant",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "1613 Comanche Run, Madison, TN 37115",
+    "phone": "(615) 829-3932",
+    "website": "https://www.paradizafricanrestaurant.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Madison. Experience traditional African flavors and hospitality at Paradiz African restaurant.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TN",
+    "google_place_id": "ChIJ31BR0D9BZIgRFyoH8xPcLAU",
+    "lat": 36.2381481,
+    "lng": -86.65534079999999
+  },
+  {
+    "id": "molyd-african-cuisine-murfreesboro",
+    "name": "Molyd African Cuisine",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.9,
+    "address": "752 E Northfield Blvd, Murfreesboro, TN 37130",
+    "phone": "(629) 238-6451",
+    "website": "https://www.molydroyale.com/order-online",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Murfreesboro. Experience traditional African flavors and hospitality at Molyd African Cuisine.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TN",
+    "google_place_id": "ChIJf1uwIYcHZIgRRdsCtEoqUbM",
+    "lat": 35.8681377,
+    "lng": -86.37397
+  },
+  {
+    "id": "nicos-lounge-restaurant-and-bar-nashville",
+    "name": "Nico's Lounge Restaurant and Bar",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4,
+    "address": "4750 Nolensville Pk, Nashville, TN 37211",
+    "phone": "(615) 835-2966",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Nashville. Experience traditional African flavors and hospitality at Nico's Lounge Restaurant and Bar.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TN",
+    "google_place_id": "ChIJKW_HVL9vZIgRPlrQPdSKLuY",
+    "lat": 36.0667095,
+    "lng": -86.7169294
+  },
+  {
+    "id": "peekay-restaurant-burlington",
+    "name": "Peekay Restaurant",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "710 Sunset Rd, Burlington, NJ 08016",
+    "phone": "(848) 235-8760",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Burlington. Experience traditional African flavors and hospitality at Peekay Restaurant.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "NJ",
+    "google_place_id": "ChIJedxSWZNPwYkRLeU3bvYxZys",
+    "lat": 40.050340899999995,
+    "lng": -74.8672747
+  },
+  {
+    "id": "divine-time-nigerian-cusinie-upper-darby-township",
+    "name": "Divine Time Nigerian Cusinie",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.6,
+    "address": "48 Garrett Rd, Upper Darby Township, PA 19082",
+    "phone": "(610) 352-1968",
+    "website": "https://www.divinetimenigeriacusinie.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Nigerian restaurant in Upper Darby Township. Experience traditional Nigerian flavors and hospitality at Divine Time Nigerian Cusinie.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "PA",
+    "google_place_id": "ChIJv8D2mN3BxokRYJdpZJBR8w0",
+    "lat": 39.96071,
+    "lng": -75.2620568
+  },
+  {
+    "id": "adji-jollof-rice-kitchen-camden",
+    "name": "Adji jollof rice kitchen",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 5,
+    "address": "1152 Haddon Ave, Camden, NJ 08103",
+    "phone": "(856) 408-3115",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Camden. Experience traditional African flavors and hospitality at Adji jollof rice kitchen.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "NJ",
+    "google_place_id": "ChIJER3d3pnJxokRWwTpr1gQ970",
+    "lat": 39.933417299999995,
+    "lng": -75.1045917
+  },
+  {
+    "id": "chrisettas-kitchen-catering-west-chester",
+    "name": "Chrisetta's Kitchen (Catering )",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "130 W Miner St, West Chester, PA 19382",
+    "phone": "(215) 931-8907",
+    "website": "https://chrisettaskitchen.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in West Chester. Experience traditional African flavors and hospitality at Chrisetta's Kitchen (Catering ).",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "PA",
+    "google_place_id": "ChIJbbLc68_FxokR3uDKKeXLeqU",
+    "lat": 39.957320599999996,
+    "lng": -75.60580519999999
+  },
+  {
+    "id": "ayomee-s-african-kitchen-sicklerville",
+    "name": "Ayomee’s African Kitchen",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.9,
+    "address": "6 Pittman Pl, Sicklerville, NJ 08081",
+    "phone": "(561) 612-9876",
+    "website": "https://www.ayomeatery.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Sicklerville. Experience traditional African flavors and hospitality at Ayomee’s African Kitchen.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "NJ",
+    "google_place_id": "ChIJ79Gk5BkrwYkRTWVT-6v9Ib0",
+    "lat": 39.704217799999995,
+    "lng": -74.95629819999999
+  },
+  {
+    "id": "kokomma-nigerian-african-cuisine-lynn",
+    "name": "Kokomma Nigerian African Cuisine",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 5,
+    "address": "56 Central Square, Lynn, MA 01901",
+    "phone": "(617) 394-8176",
+    "website": "http://www.kokommaeats.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Nigerian restaurant in Lynn. Experience traditional Nigerian flavors and hospitality at Kokomma Nigerian African Cuisine.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MA",
+    "google_place_id": "ChIJFbn-b_Jt44kRviPcVIVIHlU",
+    "lat": 42.4639217,
+    "lng": -70.9451897
+  },
+  {
+    "id": "obosa-restaurant-roslindale",
+    "name": "Obosa Restaurant",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.4,
+    "address": "146 Belgrade Ave, Roslindale, MA 02131",
+    "phone": "(617) 327-3700",
+    "website": "http://www.obosafoods.net/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Roslindale. Experience traditional African flavors and hospitality at Obosa Restaurant.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MA",
+    "google_place_id": "ChIJayNb1dx_44kRQSLBAUaWnAQ",
+    "lat": 42.286097399999996,
+    "lng": -71.1367909
+  },
+  {
+    "id": "pelloma-nigerian-cuisine-mattapan",
+    "name": "Pelloma Nigerian Cuisine",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 3.9,
+    "address": "924 Morton St, Mattapan, MA 02126",
+    "phone": "(617) 315-9115",
+    "website": "https://pellomacuisine.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Nigerian restaurant in Mattapan. Experience traditional Nigerian flavors and hospitality at Pelloma Nigerian Cuisine.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MA",
+    "google_place_id": "ChIJaznn1UF744kRKDR4XWTQN4A",
+    "lat": 42.2806449,
+    "lng": -71.0828368
+  },
+  {
+    "id": "sentie-s-kitchen-southborough",
+    "name": "Sentie’s Kitchen",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$$",
+    "rating": 4.9,
+    "address": "21 Turnpike Rd, Southborough, MA 01772",
+    "phone": "(508) 927-8011",
+    "website": "https://www.sentieskitchen.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Southborough. Experience traditional African flavors and hospitality at Sentie’s Kitchen.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MA",
+    "google_place_id": "ChIJv-v7anaL44kRyecEdrPqbgU",
+    "lat": 42.2966966,
+    "lng": -71.49630379999999
+  },
+  {
+    "id": "9jagrills-oakland",
+    "name": "9JAGRILLS",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "303 Broadway, Oakland, CA 94607",
+    "phone": "(510) 844-4829",
+    "website": "http://www.9jagrills.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Oakland. Experience traditional West African flavors and hospitality at 9JAGRILLS.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA",
+    "google_place_id": "ChIJ2XOlWMaHj4AR1HSYmN-TMYk",
+    "lat": 37.797098999999996,
+    "lng": -122.2760113
+  },
+  {
+    "id": "swahili-spot-oakland",
+    "name": "Swahili Spot",
+    "cuisine": "East African",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.9,
+    "address": "1327 Peralta St, Oakland, CA 94607",
+    "phone": "(510) 978-9495",
+    "website": "https://www.swahilispot.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic East African restaurant in Oakland. Experience traditional East African flavors and hospitality at Swahili Spot.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA",
+    "google_place_id": "ChIJwSDUcN1_hYARzF_NWsSfkfA",
+    "lat": 37.811237299999995,
+    "lng": -122.29424909999999
+  },
+  {
+    "id": "ruths-buka-oakland",
+    "name": "Ruth's Buka",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.2,
+    "address": "5250 Foothill Blvd, Oakland, CA 94601",
+    "phone": "(510) 698-4086",
+    "website": "https://www.ruthsbuka.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Oakland. Experience traditional African flavors and hospitality at Ruth's Buka.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA",
+    "google_place_id": "ChIJpYFR7G2Gj4ARYLI0fiQd5Cs",
+    "lat": 37.7728606,
+    "lng": -122.2017862
+  },
+  {
+    "id": "kendejah-restaurant-san-leandro",
+    "name": "Kendejah Restaurant",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.5,
+    "address": "197 Pelton Center Way, San Leandro, CA 94577",
+    "phone": "(510) 756-6049",
+    "website": "https://kendejahrestaurant.com/?utm_source=google",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in San Leandro. Experience traditional West African flavors and hospitality at Kendejah Restaurant.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA",
+    "google_place_id": "ChIJGeIns5WPj4AR3-uaaPAX_RQ",
+    "lat": 37.722603899999996,
+    "lng": -122.15465669999999
+  },
+  {
+    "id": "teranga-4-embarcadero-ctr",
+    "name": "Teranga",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.9,
+    "address": "level facing water fountain, 4 Embarcadero Ctr, AZ 77000",
+    "phone": "(415) 879-8372",
+    "website": "http://www.terangafoods.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in 4 Embarcadero Ctr. Experience traditional African flavors and hospitality at Teranga.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "AZ",
+    "google_place_id": "ChIJ__9PC0Z-j4AR7nthHBJUHwg",
+    "lat": 37.7950917,
+    "lng": -122.3957435
+  },
+  {
+    "id": "baobab-fare-detroit",
+    "name": "Baobab Fare",
+    "cuisine": "East African",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "6568 Woodward Ave Suite 100, Detroit, MI 48202",
+    "phone": "(313) 265-3093",
+    "website": "http://www.baobabfare.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic East African restaurant in Detroit. Experience traditional East African flavors and hospitality at Baobab Fare.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MI",
+    "google_place_id": "ChIJGylPe3nTJIgRkpVk2bxRz0A",
+    "lat": 42.3701364,
+    "lng": -83.07296889999999
+  },
+  {
+    "id": "mimi-s-nook-nigerian-cuisine-livonia",
+    "name": "Mimi’s Nook Nigerian Cuisine",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "19586 Middlebelt Rd, Livonia, MI 48152",
+    "phone": "(248) 516-3187",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Nigerian restaurant in Livonia. Experience traditional Nigerian flavors and hospitality at Mimi’s Nook Nigerian Cuisine.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MI",
+    "google_place_id": "ChIJc08ix8W1JIgRZmyCrVmxdvo",
+    "lat": 42.4311882,
+    "lng": -83.3353607
+  },
+  {
+    "id": "detroit-jollof-nigerian-cuisine-detroit",
+    "name": "Detroit Jollof Nigerian Cuisine",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "3181 3rd Ave, Detroit, MI 48201",
+    "phone": "(313) 385-6226",
+    "website": "https://www.detroitjollof.com/order-online",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Nigerian restaurant in Detroit. Experience traditional Nigerian flavors and hospitality at Detroit Jollof Nigerian Cuisine.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MI",
+    "google_place_id": "ChIJQ_HmEfTTJIgRCc43FyLY7_A",
+    "lat": 42.3426525,
+    "lng": -83.0645521
+  },
+  {
+    "id": "fork-in-nigeria-detroit",
+    "name": "Fork In Nigeria",
+    "cuisine": "East African",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.2,
+    "address": "19228 Livernois, Detroit, MI 48221",
+    "phone": "(313) 285-8546",
+    "website": "http://forkinnigeria.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic East African restaurant in Detroit. Experience traditional East African flavors and hospitality at Fork In Nigeria.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MI",
+    "google_place_id": "ChIJEfKGP4PPJIgRkyBl9bXeETM",
+    "lat": 42.4333491,
+    "lng": -83.141295
+  },
+  {
+    "id": "matys-cuisine-detroit",
+    "name": "Maty's Cuisine",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.5,
+    "address": "21611 Grand River Ave, Detroit, MI 48219",
+    "phone": "(313) 472-5885",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Detroit. Experience traditional West African flavors and hospitality at Maty's Cuisine.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "MI",
+    "google_place_id": "ChIJ973uDPS1JIgRPt0ABqPKhgc",
+    "lat": 42.4153419,
+    "lng": -83.2555105
+  },
+  {
+    "id": "house-of-naku-seattle",
+    "name": "House of Naku",
+    "cuisine": "West African",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "4611 36th Ave SW, Seattle, WA 98126",
+    "phone": "(206) 489-6238",
+    "website": "http://www.houseofnaku.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Seattle. Experience traditional West African flavors and hospitality at House of Naku.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "WA",
+    "google_place_id": "ChIJz8wu4ZxBkFQRdh1FyNdWIkI",
+    "lat": 47.5617161,
+    "lng": -122.3779386
+  },
+  {
+    "id": "pdj-pass-d-jollof-nigerian-restaurant-seattle",
+    "name": "PDJ (Pass D Jollof) Nigerian Restaurant",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.2,
+    "address": "209 1st Ave S, Seattle, WA 98104",
+    "phone": "(206) 337-6217",
+    "website": "https://passdjollof.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Nigerian restaurant in Seattle. Experience traditional Nigerian flavors and hospitality at PDJ (Pass D Jollof) Nigerian Restaurant.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "WA",
+    "google_place_id": "ChIJ03i4unAVkFQRRhsbo4vfi1I",
+    "lat": 47.600513799999995,
+    "lng": -122.3345987
+  },
+  {
+    "id": "east-african-restaurant-seatac",
+    "name": "East African restaurant",
+    "cuisine": "East African",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "15211 Military Rd S, SeaTac, WA 98188",
+    "phone": "(206) 268-0922",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic East African restaurant in SeaTac. Experience traditional East African flavors and hospitality at East African restaurant.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "WA",
+    "google_place_id": "ChIJr1eqDzlDkFQRG2IslUmAcKc",
+    "lat": 47.4666189,
+    "lng": -122.2889378
+  },
+  {
+    "id": "rafiki-restaurant-and-lounge-kent",
+    "name": "Rafiki Restaurant and Lounge",
+    "cuisine": "East African",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.5,
+    "address": "226 1st Ave S, Kent, WA 98032",
+    "phone": "(253) 981-3550",
+    "website": "http://rafikirestaurantandlounge.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic East African restaurant in Kent. Experience traditional East African flavors and hospitality at Rafiki Restaurant and Lounge.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "WA",
+    "google_place_id": "ChIJVVWl1VVZkFQR-OH0BV0CVnI",
+    "lat": 47.3801748,
+    "lng": -122.23332219999999
+  },
+  {
+    "id": "gold-coast-kitchen-seattle",
+    "name": "Gold Coast Kitchen",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.5,
+    "address": "1009 Boren Ave, Seattle, WA 98104",
+    "phone": "(206) 535-4584",
+    "website": "https://www.goldcoastsea.com/",
+    "hours": {
+      "mon_sat": "11:00 - 22:00 (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Seattle. Experience traditional African flavors and hospitality at Gold Coast Kitchen.",
+    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "WA",
+    "google_place_id": "ChIJRyqqYaJrkFQRvNC0hnSHE-A",
+    "lat": 47.609530299999996,
+    "lng": -122.3256416
   }
 ]

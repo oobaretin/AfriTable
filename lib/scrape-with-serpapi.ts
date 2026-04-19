@@ -171,13 +171,59 @@ async function scrapeAllAfricanCaribbeanRestaurants(location: string = "Houston,
   return formattedRestaurants;
 }
 
+function inferStateFromZipCity(zip: string, city: string, fallback: string): string {
+  const z3 = parseInt(String(zip || "").replace(/\D/g, "").slice(0, 3), 10);
+  if (Number.isFinite(z3)) {
+    if (z3 >= 850 && z3 <= 865) return "AZ";
+    if (z3 >= 900 && z3 <= 966) return "CA";
+    if (z3 >= 550 && z3 <= 567) return "MN";
+    if (z3 >= 970 && z3 <= 978) return "OR";
+    if (z3 >= 370 && z3 <= 385) return "TN";
+  }
+  const c = String(city || "").toLowerCase();
+  const az = new Set([
+    "phoenix",
+    "mesa",
+    "tempe",
+    "scottsdale",
+    "chandler",
+    "gilbert",
+    "glendale",
+    "peoria",
+    "surprise",
+  ]);
+  const ca = new Set([
+    "riverside",
+    "corona",
+    "moreno valley",
+    "san bernardino",
+    "fontana",
+    "ontario",
+    "colton",
+    "rancho cucamonga",
+    "murrieta",
+    "redlands",
+    "rialto",
+  ]);
+  if (az.has(c)) return "AZ";
+  if (ca.has(c)) return "CA";
+  if (c === "minneapolis" || c === "saint paul" || c === "st. paul") return "MN";
+  if (c === "portland") return "OR";
+  if (c === "nashville") return "TN";
+  return fallback;
+}
+
 function convertToAfriTableFormat(basic: any, details: any) {
-  // Parse address
+  // Parse address (Google often: street, city, ST 12345, USA)
   const addressParts = (basic.address || "").split(",").map((s: string) => s.trim());
   const street = addressParts[0] || "";
   const city = addressParts[1] || "Houston";
-  const stateZip = addressParts[2] || "TX";
-  const zip = stateZip.match(/\d{5}/)?.[0] || "77000";
+  const stateZipRaw = addressParts[2] || "";
+  const zip = stateZipRaw.match(/\d{5}/)?.[0] || "";
+  const stateLetters = stateZipRaw.replace(/\d{5}.*$/, "").trim();
+  const stateFromLine = /^[A-Z]{2}$/i.test(stateLetters) ? stateLetters.toUpperCase() : "";
+  const state = stateFromLine || inferStateFromZipCity(zip, city, "TX");
+  const zipOut = zip || (state === "TX" ? "77000" : "");
 
   // Determine cuisine types
   const cuisineTypes = determineCuisineTypes(basic.title, basic.type);
@@ -194,8 +240,8 @@ function convertToAfriTableFormat(basic: any, details: any) {
     address: {
       street,
       city,
-      state: "TX",
-      zip,
+      state,
+      zip: zipOut,
       coordinates: {
         lat: basic.latitude || basic.gps_coordinates?.latitude,
         lng: basic.longitude || basic.gps_coordinates?.longitude,
@@ -203,7 +249,7 @@ function convertToAfriTableFormat(basic: any, details: any) {
     },
     phone: basic.phone || details?.phone,
     website: basic.website || details?.website,
-    description: generateDescription(basic.title, cuisineTypes, details),
+    description: generateDescription(basic.title, cuisineTypes, details, city),
     price_range: parsePriceRange(basic.price || details?.price),
     hours,
     google_rating: basic.rating,
@@ -274,9 +320,10 @@ function parsePriceRange(price?: string): number {
   return Math.min(Math.max(dollarCount, 1), 4);
 }
 
-function generateDescription(name: string, cuisines: string[], details: any): string {
+function generateDescription(name: string, cuisines: string[], details: any, city: string): string {
   const cuisineStr = cuisines[0] || "African";
-  const baseDesc = `Authentic ${cuisineStr} restaurant in Houston.`;
+  const place = city || "Houston";
+  const baseDesc = `Authentic ${cuisineStr} restaurant in ${place}.`;
 
   if (details?.description) {
     return details.description;
