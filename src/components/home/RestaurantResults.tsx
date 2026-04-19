@@ -25,17 +25,13 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
       return restaurants;
     }
     
-    // Legacy: Show only 4 featured restaurants for minimalist feel
+    // Homepage passes a curated short list (e.g. multi-state spotlight) — show all of it.
     const FULL_DATASET_SIZE = 50;
     if (restaurants.length < FULL_DATASET_SIZE && restaurants.length > 0) {
       return restaurants;
     }
-    
-    // Filter for featured restaurants (price_range === "$$$")
-    const featured = restaurants.filter(
-      (r) => r.restaurant.price_range === "$$$"
-    );
-    
+
+    const featured = restaurants.filter((r) => r.restaurant.price_range === "$$$");
     return featured.slice(0, 4);
   }, [restaurants, isSearchMode]);
 
@@ -76,20 +72,27 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
         ) : (
           <div className="mb-16 border-l-4 border-[#A33B32] pl-8">
             <h2 className="text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.5em] mb-2">
-              Selected Destinations
+              Nationwide spotlight
             </h2>
             <h3 className="text-4xl font-black text-white uppercase tracking-tighter italic">
-              Featured Establishments
+              Across the country
             </h3>
+            <p className="mt-3 max-w-2xl text-sm text-white/60 md:text-base">
+              A rotating slice of highly rated spots from different states—explore every city on AfriTable.
+            </p>
           </div>
         )}
 
         {/* Restaurant Grid */}
-        <div className={`grid gap-6 ${
-          isSearchMode 
-            ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" 
-            : "grid-cols-1 md:grid-cols-2"
-        }`}>
+        <div
+          className={`grid gap-6 ${
+            isSearchMode
+              ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+              : displayedRestaurants.length > 4
+                ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                : "grid-cols-1 md:grid-cols-2"
+          }`}
+        >
           {displayedRestaurants.map((item) => (
             <RestaurantCardWithDistance
               key={item.restaurant.id}

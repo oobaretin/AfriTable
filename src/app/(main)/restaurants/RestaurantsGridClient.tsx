@@ -24,9 +24,9 @@ export function RestaurantsGridClient({ restaurants }: RestaurantsGridClientProp
         <div className="mx-auto max-w-6xl px-6">
           <p className="text-center text-sm md:text-base text-white/50 tracking-[0.1em] uppercase">
             {displayCount > 0 && totalCount > 0 ? (
-              <>Showing {displayCount} of {totalCount} Destinations</>
+              <>Showing {displayCount} of {totalCount} destinations</>
             ) : (
-              <>{totalCount} Destinations Across the Global Diaspora</>
+              <>{totalCount} destinations across the United States</>
             )}
           </p>
         </div>

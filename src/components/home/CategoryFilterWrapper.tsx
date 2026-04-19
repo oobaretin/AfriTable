@@ -13,15 +13,38 @@ type CategoryFilterWrapperProps = {
   onCountChange?: (count: number, total: number) => void;
 };
 
-/** Normalize URL city param to display format (e.g. "houston" -> "Houston", "new york city" -> "NYC"). */
+/** Map URL `?city=` values to CityFilter labels (must stay in sync with CityFilter + RestaurantGrid.matchesCity). */
 function cityFromUrlToDisplay(urlCity: string): string {
-  const lower = urlCity.toLowerCase().trim();
-  if (!lower) return "";
-  if (lower === "nyc" || lower === "new york city" || lower.includes("new york")) return "NYC";
-  if (lower === "dc" || lower === "washington" || lower.includes("washington")) return "DC";
-  if (lower === "la" || lower.includes("los angeles")) return "LA";
-  if (lower.includes("philadelphia")) return "Philadelphia";
-  return urlCity.trim().replace(/\b\w/g, (c) => c.toUpperCase());
+  const raw = urlCity.trim();
+  if (!raw) return "";
+  const lower = raw.toLowerCase();
+  const first = lower.split(",")[0].trim();
+
+  if (first === "nyc" || first === "new york city" || first === "new york" || first === "brooklyn" || first === "manhattan")
+    return "NYC";
+  if (first === "dc" || first === "washington" || first === "washington d.c" || first === "washington dc") return "DC";
+  if (first === "la" || first === "los angeles") return "LA";
+  if (first.includes("philadelphia") || first === "philly") return "Philadelphia";
+  if (first === "houston") return "Houston";
+  if (first === "atlanta") return "Atlanta";
+  if (first === "miami") return "Miami";
+  if (first === "chicago") return "Chicago";
+  if (first === "seattle") return "Seattle";
+  if (first === "new orleans") return "New Orleans";
+  if (first === "dallas") return "Dallas";
+  if (first === "boston") return "Boston";
+  if (first === "denver") return "Denver";
+  if (first === "austin") return "Austin";
+  if (first === "san francisco") return "San Francisco";
+  if (first === "oakland") return "Oakland";
+  if (first === "minneapolis") return "Minneapolis";
+  if (first === "portland") return "Portland";
+  if (first === "detroit") return "Detroit";
+  if (first === "nashville") return "Nashville";
+  if (first === "charleston") return "Charleston";
+  if (first === "san antonio") return "San Antonio";
+
+  return raw.split(",")[0].trim().replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 export function CategoryFilterWrapper({ restaurants, onCountChange }: CategoryFilterWrapperProps) {

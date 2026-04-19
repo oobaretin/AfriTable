@@ -21,9 +21,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteName = "AfriTable";
-const siteTitle = "AfriTable - Discover & Reserve African & Caribbean Restaurants";
+const siteTitle = "AfriTable — African & Caribbean dining across the United States";
 const siteDescription =
-  "Book authentic African and Caribbean dining experiences across America. Discover Nigerian, Ethiopian, Ghanaian, Jamaican, and more.";
+  "Discover and reserve vetted African and Caribbean restaurants nationwide—from Houston and DC to Miami, Seattle, and beyond.";
 const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {

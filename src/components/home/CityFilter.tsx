@@ -12,8 +12,20 @@ const cities = [
   "Miami",
   "Chicago",
   "LA",
+  "Dallas",
   "Philadelphia",
   "Seattle",
+  "Boston",
+  "Denver",
+  "Austin",
+  "San Francisco",
+  "Oakland",
+  "Minneapolis",
+  "Portland",
+  "Detroit",
+  "Nashville",
+  "Charleston",
+  "San Antonio",
   "New Orleans",
 ];
 
@@ -53,7 +65,7 @@ export function CityFilter({ activeCity, setActiveCity }: CityFilterProps) {
           />
           
           {/* Dropdown Menu */}
-          <div className="absolute right-0 top-full mt-2 z-20 bg-[#050A18] border border-[#C69C2B]/30 rounded-lg shadow-xl min-w-[160px] overflow-hidden">
+          <div className="absolute right-0 top-full z-20 mt-2 max-h-[min(70vh,22rem)] min-w-[200px] overflow-y-auto rounded-lg border border-[#C69C2B]/30 bg-[#050A18] shadow-xl">
             {cities.map((city) => (
               <button
                 key={city}

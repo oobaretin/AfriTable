@@ -43,7 +43,7 @@ export default async function MainHomePage() {
       {/* Hero - Search-First Design */}
       <HeroSearch sectionId="hero-search" />
 
-      {/* Restaurant Results - Featured Restaurants Only */}
+      {/* Restaurant spotlight — multi-state coverage */}
       <div id="restaurants-section">
         <HomepageRestaurantSimple restaurants={restaurantsFromJSON} />
       </div>
@@ -85,13 +85,24 @@ export default async function MainHomePage() {
       <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-20">
         <Reveal>
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Trending cities</h2>
-            <p className="mt-2 text-muted-foreground">Discover African & Caribbean restaurants by city.</p>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Explore by city</h2>
+            <p className="mt-2 text-muted-foreground">
+              Top metros in our nationwide directory, ranked by how many vetted listings we have today—tap through to
+              the full grid.
+            </p>
           </div>
         </Reveal>
 
         <Reveal className="mt-6">
           <TrendingCitiesClient restaurants={restaurantsFromJSON} />
+        </Reveal>
+        <Reveal className="mt-6 flex justify-center">
+          <a
+            href="/restaurants"
+            className="text-sm font-semibold text-orange-700 underline-offset-4 hover:underline dark:text-orange-400"
+          >
+            View all cities &amp; cuisines →
+          </a>
         </Reveal>
       </section>
 
