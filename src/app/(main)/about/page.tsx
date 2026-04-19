@@ -20,13 +20,14 @@ export default function AboutPage() {
       {/* The Story Section */}
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
-            <Image 
-              src="/api/placeholder/600/800" 
-              alt="Culinary tradition" 
-              width={600}
-              height={800}
-              className="w-full h-full object-cover"
+          <div className="overflow-hidden rounded-3xl shadow-2xl rotate-2 transition-transform duration-500 hover:rotate-0">
+            <Image
+              src="/images/about-community-dining.png"
+              alt="Four guests sharing a meal in a warm Jamaican and African themed dining room—jerk chicken, rice and peas, plantains, stews, and island sodas on the table—the kind of night out AfriTable helps people discover and reserve."
+              width={1024}
+              height={558}
+              className="aspect-[1024/558] w-full object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
           

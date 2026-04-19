@@ -9,7 +9,7 @@ import { LocalPulse } from "@/components/home/LocalPulse";
 import { StickySearch } from "@/components/home/StickySearch";
 import { HeritageSection } from "@/components/home/HeritageSection";
 import { CommunityFeed } from "@/components/home/CommunityFeed";
-import { SuccessStory } from "@/components/home/SuccessStory";
+import { PartnerWithUsSection } from "@/components/home/PartnerWithUsSection";
 import { Leaderboard } from "@/components/home/Leaderboard";
 import { HomepageRestaurantSimple } from "@/components/home/HomepageRestaurantSimple";
 import * as fs from "node:fs";
@@ -181,8 +181,8 @@ export default async function MainHomePage() {
       {/* Community Feed */}
       <CommunityFeed />
 
-      {/* Success Story */}
-      <SuccessStory />
+      {/* Partner CTA — honest positioning, no fabricated testimonials */}
+      <PartnerWithUsSection />
 
       {/* Ambassador's Circle Leaderboard */}
       <Reveal>

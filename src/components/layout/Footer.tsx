@@ -2,13 +2,12 @@
 
 import Image from "next/image";
 import { Instagram, Twitter, Youtube } from "lucide-react";
-import FooterExpandedLists from "@/components/layout/FooterExpandedLists";
 import NewsletterSignup from "@/components/layout/NewsletterSignup";
 
 export default function Footer() {
   return (
     <footer className="border-t bg-brand-dark text-white relative z-[90] pointer-events-auto">
-      <div className="mx-auto max-w-6xl px-6 py-14">
+      <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
         <div className="grid gap-10 md:grid-cols-12">
           {/* Brand */}
           <div className="md:col-span-4">
@@ -18,12 +17,12 @@ export default function Footer() {
                 alt="AfriTable"
                 width={320}
                 height={80}
-                className="h-16 w-auto object-contain md:h-[68px]"
+                className="h-14 w-auto object-contain md:h-16"
               />
               <span className="sr-only">AfriTable</span>
             </a>
             <p className="mt-3 text-sm text-slate-300">
-              Discover and reserve authentic African &amp; Caribbean dining experiences across America.
+              Discover and reserve African &amp; Caribbean dining across the United States.
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a
@@ -55,42 +54,28 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="mt-6 grid gap-2">
-              <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Mobile app</div>
-              <p className="text-sm text-slate-400">
-                iOS and Android apps are not live yet. Get launch updates through the newsletter below—no spam.
-              </p>
+            <p className="mt-6 text-xs text-slate-500">
+              Mobile apps are not live yet.{" "}
               <a
                 href="#footer-newsletter"
-                className="text-sm font-semibold text-amber-400/90 underline-offset-4 hover:text-amber-300 hover:underline"
+                className="font-semibold text-amber-400/90 underline-offset-4 hover:text-amber-300 hover:underline"
               >
-                Join the mailing list →
+                Get launch updates
               </a>
-            </div>
+              .
+            </p>
           </div>
 
-          {/* Link columns */}
-          <div className="grid gap-6 sm:grid-cols-2 md:col-span-8 md:grid-cols-4">
+          {/* Link columns — three clusters; legal lives in the bottom bar only */}
+          <div className="grid gap-8 sm:grid-cols-2 md:col-span-8 md:grid-cols-3 md:gap-6">
             <div className="text-sm">
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Discover</div>
               <div className="mt-2 grid gap-1.5 leading-6">
                 <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants">
-                  Find restaurants
+                  Explore the directory
                 </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants?city=Houston%2C%20TX">
-                  Houston
-                </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants?city=Atlanta%2C%20GA">
-                  Atlanta
-                </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants?city=New%20York%2C%20NY">
-                  New York City
-                </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants?cuisine=Nigerian">
-                  Nigerian cuisine
-                </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurants?cuisine=Jamaican">
-                  Jamaican cuisine
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/submit-restaurant">
+                  Suggest a restaurant
                 </a>
               </div>
             </div>
@@ -110,7 +95,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="text-sm">
+            <div className="text-sm sm:col-span-2 md:col-span-1">
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Company</div>
               <div className="mt-2 grid gap-1.5 leading-6">
                 <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/about">
@@ -124,36 +109,14 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-
-            <div className="text-sm">
-              <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">Legal</div>
-              <div className="mt-2 grid gap-1.5 leading-6">
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/terms">
-                  Terms
-                </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/privacy">
-                  Privacy
-                </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/cookies">
-                  Cookies
-                </a>
-              </div>
-            </div>
           </div>
         </div>
 
         <div className="mt-10 border-t border-slate-800 pt-10">
-          <div className="grid gap-10 md:grid-cols-12">
-          <div className="md:col-span-7">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
-              <FooterExpandedLists />
-            </div>
-          </div>
-          <div className="md:col-span-5" id="footer-newsletter">
+          <div className="mx-auto max-w-lg" id="footer-newsletter">
             <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 shadow-sm">
               <NewsletterSignup />
             </div>
-          </div>
           </div>
         </div>
 
@@ -175,4 +138,3 @@ export default function Footer() {
     </footer>
   );
 }
-
