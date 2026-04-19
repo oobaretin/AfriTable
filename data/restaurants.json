@@ -2224,9 +2224,16 @@
     "website": "https://shuriafricanrestaurant.shop/",
     "neighborhood": "Northeast Dallas",
     "vibe": "Warm & Casual",
-    "vibe_tags": ["Counter Service", "Family Portions"],
+    "vibe_tags": [
+      "Counter Service",
+      "Family Portions"
+    ],
     "specialty": "Egusi & jollof",
-    "menu_highlights": ["Egusi soup", "Jollof rice", "Goat pepper soup"],
+    "menu_highlights": [
+      "Egusi soup",
+      "Jollof rice",
+      "Goat pepper soup"
+    ],
     "about": "Counter-service West African kitchen known for generous portions and staples like egusi, fufu, and pepper soup.",
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -2248,9 +2255,16 @@
     "website": "https://www.whittiercafe.com/",
     "neighborhood": "Whittier / Five Points",
     "vibe": "Community & Coffee",
-    "vibe_tags": ["Coffee Ceremony", "Activist-Friendly Space"],
+    "vibe_tags": [
+      "Coffee Ceremony",
+      "Activist-Friendly Space"
+    ],
     "specialty": "Sunday East African coffee ceremony",
-    "menu_highlights": ["Ethiopian espresso", "African wines & beers", "Sunday coffee ceremony"],
+    "menu_highlights": [
+      "Ethiopian espresso",
+      "African wines & beers",
+      "Sunday coffee ceremony"
+    ],
     "about": "Denver's African espresso bar—Ethiopian and East African coffees, light fare, Sunday traditional coffee ceremony.",
     "vibe_category": "Community Favorites",
     "state": "CO",
@@ -3359,7 +3373,8 @@
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "12:00 PM - 8:00 PM"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "ts-buka-arlington",
@@ -3376,7 +3391,8 @@
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "12:00 PM - 8:00 PM"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "tailat-kitchen-austin",
@@ -3393,7 +3409,8 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic Jollof & Whole Grilled Tilapia."
+    "about": "Authentic Jollof & Whole Grilled Tilapia.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "lady-t-kitchen-austin",
@@ -3410,7 +3427,8 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Major local hub for traditional swallows."
+    "about": "Major local hub for traditional swallows.",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "bamboo-walk-brooklyn",
@@ -3429,7 +3447,8 @@
       "sun": "12:00 PM - 10:00 PM"
     },
     "about": "Upscale Black-owned Caribbean spot; traditional Jamaican and Haitian flavors. Famous for East Flatbush vibes, drive-thru, and weekend brunch.",
-    "state": "NY"
+    "state": "NY",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "cocobreeze-oakland",
@@ -3446,7 +3465,8 @@
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "12:00 PM - 8:00 PM"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "blackstar-kebab-seattle",
@@ -3463,7 +3483,8 @@
     "hours": {
       "tue_sun": "11:00 AM - 9:00 PM",
       "mon": "Closed"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "48th-street-grille-philly",
@@ -3480,7 +3501,8 @@
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "12:00 PM - 9:00 PM"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "tsehay-dc",
@@ -3497,7 +3519,8 @@
       "thu_sun": "12:00 PM - 10:00 PM"
     },
     "about": "Woman-owned; Michelin-recognized. Fresh teff injera, tibs, shiro; strong vegan menu. Adams Morgan.",
-    "state": "DC"
+    "state": "DC",
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "feru-ethiopian-dc",
@@ -3514,7 +3537,8 @@
     "hours": {
       "tue_sun": "11:00 AM - 10:00 PM",
       "mon": "Closed"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "little-lagos-atl",
@@ -3531,7 +3555,8 @@
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "12:00 PM - 9:00 PM"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "baba-jollof-houston",
@@ -3548,7 +3573,8 @@
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "komchop-houston",
@@ -3565,7 +3591,9 @@
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "12:00 PM - 9:00 PM"
-    }
+    },
+    "vibe_category": "Community Favorites",
+    "vibe": "Fast-casual Nigerian bowls and mains — easy daily driver pick for Houston."
   },
   {
     "id": "native-pot-houston",
@@ -3582,7 +3610,8 @@
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "12:00 PM - 8:00 PM"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "vees-brooklyn",
@@ -3599,7 +3628,9 @@
     "hours": {
       "mon_sat": "12:00 PM - 10:00 PM",
       "sun": "12:00 PM - 9:00 PM"
-    }
+    },
+    "vibe_category": "Authentic Staples",
+    "vibe": "Casual counter-service Jamaican — patties, bowls, and platters locals use as a daily driver spot."
   },
   {
     "id": "irie-caribbean-brooklyn",
@@ -3616,7 +3647,8 @@
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "12:00 PM - 9:00 PM"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "tesfa-ethiopian-chicago",
@@ -3633,7 +3665,8 @@
     "hours": {
       "tue_sun": "11:00 AM - 10:00 PM",
       "mon": "Closed"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "badou-senegalese-chicago",
@@ -3650,7 +3683,8 @@
     "hours": {
       "tue_sun": "11:00 AM - 9:00 PM",
       "mon": "Closed"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "two-hommes-inglewood",
@@ -3667,7 +3701,8 @@
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "12:00 PM - 8:00 PM"
-    }
+    },
+    "vibe_category": "Fine Dining"
   },
   {
     "id": "blessed-tropical-inglewood",
@@ -3684,7 +3719,8 @@
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "12:00 PM - 9:00 PM"
-    }
+    },
+    "vibe_category": "Authentic Staples"
   },
   {
     "id": "selam-ethiopian-chicago",
@@ -3701,6 +3737,125 @@
     "hours": {
       "tue_sun": "11:00 AM - 10:00 PM",
       "mon": "Closed"
-    }
+    },
+    "vibe_category": "Authentic Staples"
+  },
+  {
+    "id": "abyssinia-phoenix",
+    "name": "Abyssinia Restaurant and Cafe",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "842 E Indian School Rd, Phoenix, AZ 85014",
+    "phone": "(602) 795-4113",
+    "website": "https://ethiopianrestaurantinphoenixaz.com",
+    "hours": {
+      "mon_sat": "10:00 AM - 10:00 PM",
+      "sun": "1:00 PM - 10:00 PM"
+    },
+    "about": "Classic Ethiopian plates, injera, and vegan options in central Phoenix.",
+    "our_story": "Serving the Valley with traditional recipes and Ethiopian coffee ceremony.",
+    "cultural_roots": "Habesha hospitality and shared platters.",
+    "menu_highlights": [
+      "Doro wat",
+      "Veggie combo",
+      "Tibs"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "AZ"
+  },
+  {
+    "id": "authentic-ethio-mcdowell-phoenix",
+    "name": "Authentic Ethio African Kitchen & Bar",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.6,
+    "address": "1740 E McDowell Rd, Phoenix, AZ 85006",
+    "phone": "(602) 252-2286",
+    "hours": {
+      "mon_sun": "11:00 AM - 9:00 PM"
+    },
+    "about": "Ethiopian kitchen and bar near the heart of Phoenix with takeout and delivery.",
+    "our_story": "Focused on spice-forward stews and fresh injera for the downtown corridor.",
+    "cultural_roots": "East African comfort food for the diaspora community.",
+    "menu_highlights": [
+      "Kitfo",
+      "Lamb tibs",
+      "Shiro"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "AZ"
+  },
+  {
+    "id": "ethiopian-famous-tempe",
+    "name": "Ethiopian Famous Restaurant",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.4,
+    "address": "933 E University Dr #112, Tempe, AZ 85288",
+    "hours": {
+      "mon_sun": "11:00 AM - 9:00 PM"
+    },
+    "about": "Tempe-area Ethiopian spot known for vegetarian combos and hearty meat stews.",
+    "our_story": "Carrying Habesha flavors for students and families near ASU.",
+    "cultural_roots": "Shared injera platters and bold berbere seasoning.",
+    "menu_highlights": [
+      "Veggie combo",
+      "Beef tibs",
+      "Sambusa"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "AZ"
+  },
+  {
+    "id": "island-breeze-colton",
+    "name": "Island Breeze Jamaican Cuisine",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "1063 S Mount Vernon Ave, Colton, CA 92324",
+    "phone": "(909) 514-0771",
+    "website": "https://www.ibjamaicancuisine.com",
+    "hours": {
+      "mon_sat": "11:00 AM - 8:00 PM",
+      "sun": "Closed"
+    },
+    "about": "Inland Empire Jamaican kitchen with jerk, oxtail, and island sides.",
+    "our_story": "Family-run recipes bringing Kingston-style heat to Colton.",
+    "cultural_roots": "Caribbean soul food for community gatherings.",
+    "menu_highlights": [
+      "Jerk chicken",
+      "Curry goat",
+      "Oxtail"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA"
+  },
+  {
+    "id": "island-breeze-san-bernardino",
+    "name": "Island Breeze Jamaican Cuisine (San Bernardino)",
+    "cuisine": "Jamaican",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.4,
+    "address": "763 W Highland Ave, San Bernardino, CA 92405",
+    "hours": {
+      "mon_wed": "11:00 AM - 6:00 PM",
+      "thu_sat": "11:00 AM - 6:30 PM"
+    },
+    "about": "Second location serving classic Jamaican plates and lunch specials.",
+    "our_story": "Same island flavors for San Bernardino and Riverside County diners.",
+    "cultural_roots": "Roots cooking with spice and patience.",
+    "menu_highlights": [
+      "Brown stew chicken",
+      "Curry shrimp",
+      "Plantains"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA"
   }
 ]

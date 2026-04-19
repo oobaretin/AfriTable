@@ -1,0 +1,1537 @@
+{
+  "generatedAt": "2026-04-19T22:08:49.676Z",
+  "source": "data/restaurants.json",
+  "note": "Afro/Caribbean heuristic on cuisine/region/name/about; metro from city tokens in address. Rows outside top-15 metros listed separately.",
+  "metros": [
+    {
+      "rank": 1,
+      "metro": "New York-Newark-Jersey City (NY-NJ-PA)",
+      "counts": {
+        "All": 16,
+        "Fine Dining": 1,
+        "Authentic Staples": 13,
+        "Community Favorites": 1,
+        "Daily Driver": 1,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "kokomo-nyc",
+          "name": "Kokomo",
+          "cuisine": "Caribbean Fusion",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "65 Kent Ave, Brooklyn, NY 11249"
+        },
+        {
+          "id": "zanmi-nyc",
+          "name": "DJONDJON",
+          "cuisine": "Haitian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1206 Nostrand Ave, Brooklyn, NY 11225"
+        },
+        {
+          "id": "callaloo-kitchen",
+          "name": "Callaloo Trinidadian Kitchen",
+          "cuisine": "Trinidadian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1639 Flatbush Ave, Brooklyn, NY 11210"
+        },
+        {
+          "id": "miss-lilys-nyc",
+          "name": "Miss Lily's 7A",
+          "cuisine": "Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "109 Avenue A, New York, NY 10009"
+        },
+        {
+          "id": "pearls-nyc",
+          "name": "Pearl's",
+          "cuisine": "Trinidadian Fusion",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "178 N 8th St, Brooklyn, NY 11211"
+        },
+        {
+          "id": "teranga-nyc",
+          "name": "Teranga",
+          "cuisine": "Senegalese",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1280 5th Ave, New York, NY 10029"
+        },
+        {
+          "id": "adulis-ny",
+          "name": "Adulis",
+          "cuisine": "Eritrean",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "149-10 45th Ave, Flushing, NY 11355"
+        },
+        {
+          "id": "nyc-001",
+          "name": "Tatiana by Kwame Onwuachi",
+          "cuisine": "Afro-Caribbean",
+          "vibe_category": "Fine Dining",
+          "vibe": "Michelin Star Tier / High-Fashion",
+          "effectiveVibe": "Fine Dining",
+          "address": "10 Lincoln Center Plaza, New York, NY 10023"
+        },
+        {
+          "id": "bunna-cafe-nyc",
+          "name": "Bunna Cafe",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1084 Flushing Ave, Brooklyn, NY 11237"
+        },
+        {
+          "id": "nyc-abyssinia",
+          "name": "Abyssinia",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "35 W 28th St, New York, NY 10001"
+        },
+        {
+          "id": "nyc-jasmines-caribbean",
+          "name": "Jasmine's Caribbean Cuisine",
+          "cuisine": "Caribbean",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "371 W 46th St, New York, NY 10036"
+        },
+        {
+          "id": "nyc-daily-001",
+          "name": "Africa Kine",
+          "cuisine": "Senegalese",
+          "vibe_category": "Community Favorites",
+          "vibe": "Legendary Staple",
+          "effectiveVibe": "Community Favorites",
+          "address": "2267 Adam Clayton Powell Jr Blvd, New York, NY 10027"
+        },
+        {
+          "id": "nyc-daily-002",
+          "name": "Buka",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Brooklyn Cool",
+          "effectiveVibe": "Authentic Staples",
+          "address": "946 Fulton St, Brooklyn, NY 11238"
+        },
+        {
+          "id": "bamboo-walk-brooklyn",
+          "name": "Bamboo Walk",
+          "cuisine": "Caribbean",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1343 Utica Ave, Brooklyn, NY 11203"
+        },
+        {
+          "id": "vees-brooklyn",
+          "name": "Vee's",
+          "cuisine": "Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Casual counter-service Jamaican — patties, bowls, and platters locals use as a daily driver spot.",
+          "effectiveVibe": "Daily Driver",
+          "address": "896 Nostrand Ave, Brooklyn, NY 11225"
+        },
+        {
+          "id": "irie-caribbean-brooklyn",
+          "name": "Irie Caribbean Kitchen",
+          "cuisine": "Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "126 Utica Ave, Brooklyn, NY 11213"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "metro": "Los Angeles-Long Beach-Anaheim (CA)",
+      "counts": {
+        "All": 11,
+        "Fine Dining": 4,
+        "Authentic Staples": 6,
+        "Community Favorites": 1,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "la-001",
+          "name": "Meals by Genet",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Fine Dining",
+          "vibe": null,
+          "effectiveVibe": "Fine Dining",
+          "address": "1053 S Fairfax Ave, Los Angeles, CA 90019"
+        },
+        {
+          "id": "la-daily-003",
+          "name": "African Chop",
+          "cuisine": "Cameroonian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Mobile Quality",
+          "effectiveVibe": "Authentic Staples",
+          "address": "3150 Wilshire Blvd, Los Angeles, CA 90010"
+        },
+        {
+          "id": "la-blaqhaus-noho",
+          "name": "BlaqHaus NoHo",
+          "cuisine": "Southern-Caribbean",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "11671 Victory Blvd, North Hollywood, CA 91606"
+        },
+        {
+          "id": "lax-001",
+          "name": "Status Hollywood",
+          "cuisine": "Upscale Jamaican",
+          "vibe_category": "Fine Dining",
+          "vibe": "Celebrity Favorite / Sexy Lounge",
+          "effectiveVibe": "Fine Dining",
+          "address": "1612 N Cahuenga Blvd, Los Angeles, CA 90028"
+        },
+        {
+          "id": "lax-002",
+          "name": "Lucia",
+          "cuisine": "Afro-Caribbean Fine Dining",
+          "vibe_category": "Fine Dining",
+          "vibe": "Elite / Late Night Lounge",
+          "effectiveVibe": "Fine Dining",
+          "address": "351 N Fairfax Ave, Los Angeles, CA 90036"
+        },
+        {
+          "id": "lax-003",
+          "name": "Bridgetown Roti",
+          "cuisine": "Caribbean American",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Trendy / Award-Winning",
+          "effectiveVibe": "Authentic Staples",
+          "address": "672 S Santa Fe Ave, Los Angeles, CA 90021"
+        },
+        {
+          "id": "la-daily-001",
+          "name": "Veronica's Kitchen",
+          "cuisine": "Nigerian",
+          "vibe_category": "Community Favorites",
+          "vibe": "Inglewood Legend",
+          "effectiveVibe": "Community Favorites",
+          "address": "524 W Manchester Blvd, Inglewood, CA 90301"
+        },
+        {
+          "id": "la-daily-002",
+          "name": "Rosalind's",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Historic Staple",
+          "effectiveVibe": "Authentic Staples",
+          "address": "1044 S Fairfax Ave, Los Angeles, CA 90019"
+        },
+        {
+          "id": "aduke-nigerian-la",
+          "name": "Aduke Nigerian Cuisine",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "909 W Manchester Blvd, Inglewood, CA 90301"
+        },
+        {
+          "id": "two-hommes-inglewood",
+          "name": "Two Hommés",
+          "cuisine": "West African Fusion",
+          "vibe_category": "Fine Dining",
+          "vibe": null,
+          "effectiveVibe": "Fine Dining",
+          "address": "902 N La Brea Ave, Inglewood, CA 90302"
+        },
+        {
+          "id": "blessed-tropical-inglewood",
+          "name": "Blessed Tropical Jamaican Cuisine",
+          "cuisine": "Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "901 S Prairie Ave, Inglewood, CA 90301"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "metro": "Chicago-Naperville-Elgin (IL-IN-WI)",
+      "counts": {
+        "All": 10,
+        "Fine Dining": 2,
+        "Authentic Staples": 7,
+        "Community Favorites": 1,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "gold-coast-kitchen-chi",
+          "name": "Gold Coast African Restaurant",
+          "cuisine": "Ghanaian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "6200 N Clark St, Chicago, IL 60660"
+        },
+        {
+          "id": "chi-001",
+          "name": "Demera Ethiopian",
+          "cuisine": "Ethiopian (Fine Dining)",
+          "vibe_category": "Fine Dining",
+          "vibe": "Vibrant & Culturally Rich",
+          "effectiveVibe": "Fine Dining",
+          "address": "4801 N Broadway, Chicago, IL 60640"
+        },
+        {
+          "id": "chi-002",
+          "name": "Gorée Cuisine",
+          "cuisine": "Senegalese",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1126 E 47th St, Chicago, IL 60653"
+        },
+        {
+          "id": "chi-003",
+          "name": "Iyanze",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "4623 N Broadway, Chicago, IL 60640"
+        },
+        {
+          "id": "chi-yassa",
+          "name": "Yassa African Restaurant",
+          "cuisine": "Senegalese",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "3511 S King Dr, Chicago, IL 60653"
+        },
+        {
+          "id": "chi-garifuna-flava",
+          "name": "Garifuna Flava",
+          "cuisine": "Belizean",
+          "vibe_category": "Community Favorites",
+          "vibe": "Authentic & Family-Owned",
+          "effectiveVibe": "Community Favorites",
+          "address": "2518 W 63rd St, Chicago, IL 60629"
+        },
+        {
+          "id": "chi-ja-grill-hyde-park",
+          "name": "Ja' Grill Hyde Park",
+          "cuisine": "Jamaican",
+          "vibe_category": "Fine Dining",
+          "vibe": "Upscale & Energetic",
+          "effectiveVibe": "Fine Dining",
+          "address": "1510 E Harper Ct, Chicago, IL 60615"
+        },
+        {
+          "id": "tesfa-ethiopian-chicago",
+          "name": "Tesfa Ethiopian Cuisine",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "5352 N Broadway, Chicago, IL 60640"
+        },
+        {
+          "id": "badou-senegalese-chicago",
+          "name": "Badou Senegalese Cuisine",
+          "cuisine": "Senegalese",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1947 W Howard St, Chicago, IL 60626"
+        },
+        {
+          "id": "selam-ethiopian-chicago",
+          "name": "Selam Ethiopian Kitchen",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "4543 N Broadway, Chicago, IL 60640"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "metro": "Dallas-Fort Worth-Arlington (TX)",
+      "counts": {
+        "All": 6,
+        "Fine Dining": 2,
+        "Authentic Staples": 4,
+        "Community Favorites": 0,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "addis-ababa",
+          "name": "Addis Ababa Ethiopian Restaurant",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "100 S Central Expy #65, Richardson, TX 75080"
+        },
+        {
+          "id": "dfw-fine-001",
+          "name": "Aldeez Afribbean",
+          "cuisine": "West African / Caribbean Fusion",
+          "vibe_category": "Fine Dining",
+          "vibe": "Upscale Lounge / Nightlife",
+          "effectiveVibe": "Fine Dining",
+          "address": "3950 Rosemeade Pkwy Ste 100, Dallas, TX 75287"
+        },
+        {
+          "id": "dfw-fine-002",
+          "name": "The Island Spot (Oak Cliff)",
+          "cuisine": "Authentic Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Cultural & Polished",
+          "effectiveVibe": "Authentic Staples",
+          "address": "309 W Jefferson Blvd, Dallas, TX 75208"
+        },
+        {
+          "id": "dfw-afro-002",
+          "name": "Cafe Nubia",
+          "cuisine": "Global African Fusion",
+          "vibe_category": "Fine Dining",
+          "vibe": "Chic / Modern Lounge",
+          "effectiveVibe": "Fine Dining",
+          "address": "3920 Rosemeade Pkwy #100, Dallas, TX 75287"
+        },
+        {
+          "id": "dfw-shuri-001",
+          "name": "Shuri African Restaurant",
+          "cuisine": "Nigerian / West African",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Warm & Casual",
+          "effectiveVibe": "Authentic Staples",
+          "address": "9410 Walnut St Ste 115, Dallas, TX 75243"
+        },
+        {
+          "id": "ts-buka-arlington",
+          "name": "T's Buka",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "807 E Arkansas Ln, Arlington, TX 76010"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "metro": "Houston-Pasadena-The Woodlands (TX)",
+      "counts": {
+        "All": 37,
+        "Fine Dining": 2,
+        "Authentic Staples": 29,
+        "Community Favorites": 4,
+        "Daily Driver": 2,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "chez-michelle",
+          "name": "Chez Michelle Restaurant",
+          "cuisine": "Cameroonian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "6991 S Texas 6, Houston, TX 77083"
+        },
+        {
+          "id": "famous-princess",
+          "name": "Famous Princess African Kitchen",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "17036 W Little York Rd, Houston, TX 77084"
+        },
+        {
+          "id": "omalicha-kitchen",
+          "name": "Omalicha Kitchen",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1701 Cypress Creek Pkwy Ste D, Houston, TX 77090"
+        },
+        {
+          "id": "negrit-houston",
+          "name": "Negrit",
+          "cuisine": "Caribbean Fusion",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "3401 Main St, Houston, TX 77002"
+        },
+        {
+          "id": "ponti-ivorian-houston",
+          "name": "Ponti's Ivorian Kitchen",
+          "cuisine": "Ivorian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "12450 Westheimer Rd, Houston, TX 77077"
+        },
+        {
+          "id": "afrik-che-houston",
+          "name": "Afrik-CHe Kitchen",
+          "cuisine": "West African",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "12030 Bissonnet St, Houston, TX 77099"
+        },
+        {
+          "id": "hou-001",
+          "name": "ChòpnBlọk",
+          "cuisine": "West African (Fast-Fine)",
+          "vibe_category": "Fine Dining",
+          "vibe": "Modern & High-Design",
+          "effectiveVibe": "Fine Dining",
+          "address": "401 Franklin St Suite 1325, Houston, TX 77201"
+        },
+        {
+          "id": "hou-sta-014",
+          "name": "Cool Runnings Jamaican Grill",
+          "cuisine": "Jamaican (Traditional)",
+          "vibe_category": "Community Favorites",
+          "vibe": "Island Vibes / Highly Popular",
+          "effectiveVibe": "Community Favorites",
+          "address": "8270 W Bellfort Ave, Houston, TX 77071"
+        },
+        {
+          "id": "hou-reggae-hut",
+          "name": "Reggae Hut",
+          "cuisine": "Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "4814 Almeda Rd, Houston, TX 77004"
+        },
+        {
+          "id": "hou-caribbean-hotpot-grill",
+          "name": "Caribbean Hotpot Grill",
+          "cuisine": "Jamaican / Caribbean",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "954 FM 1960 West, Houston, TX 77090"
+        },
+        {
+          "id": "hou-reggae-hut-veterans",
+          "name": "Reggae Hut (Veterans Memorial)",
+          "cuisine": "Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "12005 Veterans Memorial Dr, Ste A, Houston, TX 77067"
+        },
+        {
+          "id": "dakar-street-food-hou",
+          "name": "Dakar Street Food",
+          "cuisine": "Senegalese",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "2923 Walnut Bend Ln, Houston, TX 77042"
+        },
+        {
+          "id": "hou-fine-001",
+          "name": "Island Spice Bar & Grill",
+          "cuisine": "Caribbean Fusion",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Lively & Tropical",
+          "effectiveVibe": "Authentic Staples",
+          "address": "17802 W Little York Rd, Houston, TX 77084"
+        },
+        {
+          "id": "hou-008",
+          "name": "Helen's Kitchen",
+          "cuisine": "Jamaican",
+          "vibe_category": "Community Favorites",
+          "vibe": "Authentic / High-Rated",
+          "effectiveVibe": "Community Favorites",
+          "address": "14608 S Post Oak Rd, Houston, TX 77045"
+        },
+        {
+          "id": "hou-002",
+          "name": "Taste of Nigeria",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Vibrant & Culturally Rich",
+          "effectiveVibe": "Authentic Staples",
+          "address": "5959 Richmond Ave Suite 160, Houston, TX 77057"
+        },
+        {
+          "id": "hou-005",
+          "name": "Komchop",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Modern Casual / Family-Friendly",
+          "effectiveVibe": "Authentic Staples",
+          "address": "10050 Westheimer Rd, Houston, TX 77042"
+        },
+        {
+          "id": "hou-004",
+          "name": "Finger Licking 2.0",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Lively / High-Volume",
+          "effectiveVibe": "Authentic Staples",
+          "address": "9815 Bissonnet St, Houston, TX 77036"
+        },
+        {
+          "id": "hou-sta-004",
+          "name": "Sarabell Calabar",
+          "cuisine": "Nigerian (Calabar Specialties)",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Warm / Boutique Dining",
+          "effectiveVibe": "Authentic Staples",
+          "address": "9218 Bissonnet St, Houston, TX 77074"
+        },
+        {
+          "id": "katy-002",
+          "name": "Amala Joint",
+          "cuisine": "Nigerian (Yoruba)",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Local Gem / Casual",
+          "effectiveVibe": "Authentic Staples",
+          "address": "1251 Pin Oak Rd, Katy, TX 77494"
+        },
+        {
+          "id": "hou-sta-005",
+          "name": "Amala Zone",
+          "cuisine": "Nigerian / Grill",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Modern / Clean & Sleek",
+          "effectiveVibe": "Authentic Staples",
+          "address": "14815 Westheimer Rd, Houston, TX 77082"
+        },
+        {
+          "id": "hou-sta-007",
+          "name": "Chef Benny",
+          "cuisine": "Nigerian / Comfort Food",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Welcoming / Authentic",
+          "effectiveVibe": "Authentic Staples",
+          "address": "10010 Bissonnet St, Houston, TX 77036"
+        },
+        {
+          "id": "hou-sta-008",
+          "name": "Afrikiko",
+          "cuisine": "Authentic Ghanaian",
+          "vibe_category": "Community Favorites",
+          "vibe": "Unassuming / Local Favorite",
+          "effectiveVibe": "Community Favorites",
+          "address": "9420 Richmond Ave. Ste. E, Houston, TX 77063"
+        },
+        {
+          "id": "hou-sta-009",
+          "name": "Dakar Street Food",
+          "cuisine": "Senegalese / West African",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Counter-Service / Takeout Hub",
+          "effectiveVibe": "Authentic Staples",
+          "address": "2616 Blodgett St, Houston, TX 77004"
+        },
+        {
+          "id": "katy-003",
+          "name": "Astor's Table",
+          "cuisine": "South African Fusion",
+          "vibe_category": "Fine Dining",
+          "vibe": "Fine Dining",
+          "effectiveVibe": "Fine Dining",
+          "address": "1590 S Mason Rd, Katy, TX 77450"
+        },
+        {
+          "id": "hou-sta-010",
+          "name": "Suya Hut",
+          "cuisine": "Northern Nigerian (Hausa Style)",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Specialized / Street Food Vibe",
+          "effectiveVibe": "Authentic Staples",
+          "address": "11720 W Airport Blvd, Meadows Place, TX 77477"
+        },
+        {
+          "id": "hou-sta-011",
+          "name": "Blue Nile Ethiopian",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Quiet / Traditional",
+          "effectiveVibe": "Authentic Staples",
+          "address": "9400 Richmond Ave, Houston, TX 77063"
+        },
+        {
+          "id": "hou-003",
+          "name": "Aria Suya Kitchen",
+          "cuisine": "Nigerian Grill",
+          "vibe_category": "Community Favorites",
+          "vibe": "Daily Driver",
+          "effectiveVibe": "Daily Driver",
+          "address": "6357 Westheimer Rd, Houston, TX 77057"
+        },
+        {
+          "id": "hou-sta-013",
+          "name": "Jollof Rice King",
+          "cuisine": "Nigerian (Takeout Focus)",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Fast-Casual / Reliable",
+          "effectiveVibe": "Authentic Staples",
+          "address": "3833 Richmond Ave, Houston, TX 77027"
+        },
+        {
+          "id": "katy-004",
+          "name": "Butter D' Roti",
+          "cuisine": "Trinidadian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Cottage / Authentic Takeout",
+          "effectiveVibe": "Authentic Staples",
+          "address": "3710 Deepwind Bay Ct, Katy, TX 77493"
+        },
+        {
+          "id": "hou-sta-016",
+          "name": "Fabaceae African Cuisine",
+          "cuisine": "Nigerian (Gourmet Daily)",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Modern / Bright & Clean",
+          "effectiveVibe": "Authentic Staples",
+          "address": "12611 Woodforest Blvd Ste A, Houston, TX 77015"
+        },
+        {
+          "id": "hou-sta-017",
+          "name": "Lucy Ethiopian Restaurant & Lounge",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Upscale Lounge / Cultural Hub",
+          "effectiveVibe": "Authentic Staples",
+          "address": "6800 Westheimer Rd, Houston, TX 77057"
+        },
+        {
+          "id": "rich-sta-001",
+          "name": "Nyammings Fusion Bistro",
+          "cuisine": "Caribbean Fusion",
+          "vibe_category": "Community Favorites",
+          "vibe": "Casual & Friendly",
+          "effectiveVibe": "Community Favorites",
+          "address": "10411 Harlem Rd, Richmond, TX 77406"
+        },
+        {
+          "id": "hou-sta-018",
+          "name": "Caribbean Hotpot Grill",
+          "cuisine": "Pan-Caribbean",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Hearty & No-Frills",
+          "effectiveVibe": "Authentic Staples",
+          "address": "5601 Navigation Blvd, Houston, TX 77011"
+        },
+        {
+          "id": "katy-001",
+          "name": "Royal Arm Restaurant",
+          "cuisine": "Nigerian & Caribbean Fusion",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Warm, Family-Friendly & Vibrant",
+          "effectiveVibe": "Authentic Staples",
+          "address": "23010 Highland Knolls Dr Ste C, Katy, TX 77494"
+        },
+        {
+          "id": "baba-jollof-houston",
+          "name": "Baba Jollof",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "8330 W Bellfort Ave Ste C, Houston, TX 77071"
+        },
+        {
+          "id": "komchop-houston",
+          "name": "Komchop",
+          "cuisine": "Nigerian",
+          "vibe_category": "Community Favorites",
+          "vibe": "Fast-casual Nigerian bowls and mains — easy daily driver pick for Houston.",
+          "effectiveVibe": "Daily Driver",
+          "address": "14144 Westheimer Rd #120, Houston, TX 77077"
+        },
+        {
+          "id": "native-pot-houston",
+          "name": "Native Pot Restaurant",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "2022 Wilcrest Dr, Houston, TX 77042"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "metro": "Atlanta-Sandy Springs-Alpharetta (GA)",
+      "counts": {
+        "All": 13,
+        "Fine Dining": 6,
+        "Authentic Staples": 7,
+        "Community Favorites": 0,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "apt4b-atlanta",
+          "name": "Apt 4B",
+          "cuisine": "Caribbean Fusion",
+          "vibe_category": "Fine Dining",
+          "vibe": "Sexy & Musical",
+          "effectiveVibe": "Fine Dining",
+          "address": "2293 Peachtree Rd NW, Atlanta, GA 30309"
+        },
+        {
+          "id": "blaqhaus-atlanta",
+          "name": "Blaqhaus",
+          "cuisine": "Southern-Caribbean",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1167 Joseph E. Boone Blvd NW, Atlanta, GA 30314"
+        },
+        {
+          "id": "10-degrees-south-atl",
+          "name": "10 Degrees South",
+          "cuisine": "South African",
+          "vibe_category": "Fine Dining",
+          "vibe": null,
+          "effectiveVibe": "Fine Dining",
+          "address": "4183 Roswell Rd NE, Atlanta, GA 30342"
+        },
+        {
+          "id": "atl-004",
+          "name": "Virgil's Gullah Kitchen",
+          "cuisine": "Gullah Geechee / West African Roots",
+          "vibe_category": "Fine Dining",
+          "vibe": null,
+          "effectiveVibe": "Fine Dining",
+          "address": "822 Marietta St NW, Atlanta, GA 30318"
+        },
+        {
+          "id": "atl-002",
+          "name": "Desta",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "3086 Briarcliff Rd NE, Atlanta, GA 30329"
+        },
+        {
+          "id": "atl-spice-house-midtown",
+          "name": "Spice House Midtown",
+          "cuisine": "Caribbean Fusion",
+          "vibe_category": "Fine Dining",
+          "vibe": null,
+          "effectiveVibe": "Fine Dining",
+          "address": "375 14th St NW, Atlanta, GA 30318"
+        },
+        {
+          "id": "atl-irie-mon-cafe",
+          "name": "Irie Mon Cafe",
+          "cuisine": "Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Casual & Consistent",
+          "effectiveVibe": "Authentic Staples",
+          "address": "1800 Peachtree St NW #103, Atlanta, GA 30309"
+        },
+        {
+          "id": "atl-fine-001",
+          "name": "Lucian Books and Wine",
+          "cuisine": "Modern Afro-European Fusion",
+          "vibe_category": "Fine Dining",
+          "vibe": "Elite / Intellectual Chic",
+          "effectiveVibe": "Fine Dining",
+          "address": "3003 Peachtree Rd NE Ste 300, Atlanta, GA 30305"
+        },
+        {
+          "id": "atl-001",
+          "name": "Negril ATL",
+          "cuisine": "Innovative Caribbean",
+          "vibe_category": "Fine Dining",
+          "vibe": "Urban / High-Energy Lounge",
+          "effectiveVibe": "Fine Dining",
+          "address": "999 Chattahoochee Ave, Atlanta, GA 30318"
+        },
+        {
+          "id": "atl-daily-001",
+          "name": "Cafe Songhai",
+          "cuisine": "West African Fusion",
+          "vibe_category": "Authentic Staples",
+          "vibe": "West African Fusion",
+          "effectiveVibe": "Authentic Staples",
+          "address": "3380 Holcomb Bridge Rd, Peachtree Corners, GA 30092"
+        },
+        {
+          "id": "atl-daily-002",
+          "name": "Belle & Lily's",
+          "cuisine": "Caribbean",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Upscale Casual",
+          "effectiveVibe": "Authentic Staples",
+          "address": "3350 Chamblee Tucker Rd, Atlanta, GA 30341"
+        },
+        {
+          "id": "ubuntu-atl",
+          "name": "Ubuntu",
+          "cuisine": "West African (Vegan)",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1050 Howell Mill Rd, Atlanta, GA 30318"
+        },
+        {
+          "id": "little-lagos-atl",
+          "name": "Little Lagos",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "3979 Buford Hwy NE Suite 112, Atlanta, GA 30345"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "metro": "Washington-Arlington-Alexandria (DC-VA-MD-WV)",
+      "counts": {
+        "All": 12,
+        "Fine Dining": 2,
+        "Authentic Staples": 9,
+        "Community Favorites": 1,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "cane-dc",
+          "name": "Cane",
+          "cuisine": "Trinidadian (Street-to-Table)",
+          "vibe_category": "Community Favorites",
+          "vibe": "Intimate & Authentic",
+          "effectiveVibe": "Community Favorites",
+          "address": "403 H St NE, Washington, DC 20002"
+        },
+        {
+          "id": "appioo-dc",
+          "name": "Appioo African Bar & Grill",
+          "cuisine": "Ghanaian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1924 9th St NW, Washington, DC 20001"
+        },
+        {
+          "id": "mansa-kunda-md",
+          "name": "Mansa Kunda",
+          "cuisine": "Senegambian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Cultural Education",
+          "effectiveVibe": "Authentic Staples",
+          "address": "8000 Flower Ave, Takoma Park, MD 20912"
+        },
+        {
+          "id": "bukom-cafe-dc",
+          "name": "Bukom Cafe",
+          "cuisine": "West African Fusion",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "2442 18th St NW, Washington, DC 20009"
+        },
+        {
+          "id": "kulan-cafe",
+          "name": "Kulan Cafe",
+          "cuisine": "East African",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "3821 S George Mason Dr, Falls Church, VA 22041"
+        },
+        {
+          "id": "swahili-village-dc",
+          "name": "Swahili Village",
+          "cuisine": "Kenyan / East African",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1990 M St NW, Washington, DC 20036"
+        },
+        {
+          "id": "dc-ethiopic",
+          "name": "Ethiopic",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "401 H St NE, Washington, DC 20002"
+        },
+        {
+          "id": "dc-st-james",
+          "name": "St. James - Modern Caribbean",
+          "cuisine": "Modern Caribbean",
+          "vibe_category": "Fine Dining",
+          "vibe": "Sophisticated & Chic",
+          "effectiveVibe": "Fine Dining",
+          "address": "2017 14th St NW, Washington, DC 20009"
+        },
+        {
+          "id": "dca-001",
+          "name": "Dōgon",
+          "cuisine": "Afro-Caribbean Fine Dining",
+          "vibe_category": "Fine Dining",
+          "vibe": "Sophisticated Waterfront",
+          "effectiveVibe": "Fine Dining",
+          "address": "800 Maine Ave SW, Washington, DC 20024"
+        },
+        {
+          "id": "dc-daily-002",
+          "name": "Chercher",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Best in DC",
+          "effectiveVibe": "Authentic Staples",
+          "address": "4921 Bethesda Ave, Bethesda, MD 20814"
+        },
+        {
+          "id": "tsehay-dc",
+          "name": "Tsehay Ethiopian Restaurant & Bar",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "2429 18th St NW, Washington, DC 20009"
+        },
+        {
+          "id": "feru-ethiopian-dc",
+          "name": "Feru Ethiopian Cuisine",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1128 H St NE, Washington, DC 20002"
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "metro": "Miami-Fort Lauderdale-West Palm Beach (FL)",
+      "counts": {
+        "All": 3,
+        "Fine Dining": 2,
+        "Authentic Staples": 0,
+        "Community Favorites": 1,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "dukunoo-miami",
+          "name": "Dukunoo Jamaican Kitchen",
+          "cuisine": "Jamaican",
+          "vibe_category": "Fine Dining",
+          "vibe": "Vibe Dining / Artsy",
+          "effectiveVibe": "Fine Dining",
+          "address": "316 NW 24th St, Miami, FL 33127"
+        },
+        {
+          "id": "mia-chef-creole",
+          "name": "Chef Creole",
+          "cuisine": "Haitian",
+          "vibe_category": "Community Favorites",
+          "vibe": "Tropical & Authentic",
+          "effectiveVibe": "Community Favorites",
+          "address": "200 NW 54th St, Miami, FL 33127"
+        },
+        {
+          "id": "mia-red-rooster-overtown",
+          "name": "Red Rooster Overtown",
+          "cuisine": "Afro-American / Caribbean",
+          "vibe_category": "Fine Dining",
+          "vibe": "Cultural Landmark / Vibrant Art",
+          "effectiveVibe": "Fine Dining",
+          "address": "920 NW 2nd Ave, Miami, FL 33136"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "metro": "Philadelphia-Camden-Wilmington (PA-NJ-DE-MD)",
+      "counts": {
+        "All": 5,
+        "Fine Dining": 2,
+        "Authentic Staples": 3,
+        "Community Favorites": 0,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "phi-001",
+          "name": "African Small Pot",
+          "cuisine": "Senegalese / Mauritanian",
+          "vibe_category": "Fine Dining",
+          "vibe": null,
+          "effectiveVibe": "Fine Dining",
+          "address": "6133 Woodland Ave, Philadelphia, PA 19142"
+        },
+        {
+          "id": "phi-002",
+          "name": "Kilimandjaro",
+          "cuisine": "Senegalese / West African",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "4301 Chestnut St, Philadelphia, PA 19104"
+        },
+        {
+          "id": "phi-003",
+          "name": "Quality Taste",
+          "cuisine": "Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "4002 Lancaster Ave, Philadelphia, PA 19104"
+        },
+        {
+          "id": "phi-fine-001",
+          "name": "Friday Saturday Sunday",
+          "cuisine": "Modern Diaspora / American",
+          "vibe_category": "Fine Dining",
+          "vibe": "Moody / Architectural",
+          "effectiveVibe": "Fine Dining",
+          "address": "261 S 21st St, Philadelphia, PA 19103"
+        },
+        {
+          "id": "48th-street-grille-philly",
+          "name": "48th Street Grille",
+          "cuisine": "Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "310 S 48th St, Philadelphia, PA 19143"
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "metro": "Phoenix-Mesa-Chandler (AZ)",
+      "counts": {
+        "All": 3,
+        "Fine Dining": 0,
+        "Authentic Staples": 3,
+        "Community Favorites": 0,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "abyssinia-phoenix",
+          "name": "Abyssinia Restaurant and Cafe",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "842 E Indian School Rd, Phoenix, AZ 85014"
+        },
+        {
+          "id": "authentic-ethio-mcdowell-phoenix",
+          "name": "Authentic Ethio African Kitchen & Bar",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1740 E McDowell Rd, Phoenix, AZ 85006"
+        },
+        {
+          "id": "ethiopian-famous-tempe",
+          "name": "Ethiopian Famous Restaurant",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "933 E University Dr #112, Tempe, AZ 85288"
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "metro": "Boston-Cambridge-Newton (MA-NH)",
+      "counts": {
+        "All": 2,
+        "Fine Dining": 1,
+        "Authentic Staples": 1,
+        "Community Favorites": 0,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "bos-001",
+          "name": "Cesaria",
+          "cuisine": "Cape Verdean / West African",
+          "vibe_category": "Fine Dining",
+          "vibe": null,
+          "effectiveVibe": "Fine Dining",
+          "address": "266 Bowdoin St, Boston, MA 02121"
+        },
+        {
+          "id": "bos-002",
+          "name": "Suya Joint",
+          "cuisine": "Nigerian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "185 Dudley St, Boston, MA 02119"
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "metro": "Riverside-San Bernardino-Ontario (CA)",
+      "counts": {
+        "All": 2,
+        "Fine Dining": 0,
+        "Authentic Staples": 2,
+        "Community Favorites": 0,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "island-breeze-colton",
+          "name": "Island Breeze Jamaican Cuisine",
+          "cuisine": "Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1063 S Mount Vernon Ave, Colton, CA 92324"
+        },
+        {
+          "id": "island-breeze-san-bernardino",
+          "name": "Island Breeze Jamaican Cuisine (San Bernardino)",
+          "cuisine": "Jamaican",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "763 W Highland Ave, San Bernardino, CA 92405"
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "metro": "San Francisco-Oakland-Fremont (CA)",
+      "counts": {
+        "All": 5,
+        "Fine Dining": 0,
+        "Authentic Staples": 5,
+        "Community Favorites": 0,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "oak-001",
+          "name": "Amawele's",
+          "cuisine": "South African",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "101 Spear St, San Francisco, CA 94105"
+        },
+        {
+          "id": "sf-teranga-village",
+          "name": "Teranga (The Village)",
+          "cuisine": "Senegalese",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "4 Embarcadero Center, San Francisco, CA 94111"
+        },
+        {
+          "id": "oak-lala-eritrean",
+          "name": "Lala's Eritrean",
+          "cuisine": "Eritrean",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "4069 Telegraph Ave, Oakland, CA 94609"
+        },
+        {
+          "id": "sf-001",
+          "name": "Teranga",
+          "cuisine": "Senegalese / West African",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Polished & Health-Conscious",
+          "effectiveVibe": "Authentic Staples",
+          "address": "1 Embarcadero Center, San Francisco, CA 94111"
+        },
+        {
+          "id": "cocobreeze-oakland",
+          "name": "Cocobreeze",
+          "cuisine": "Trinidadian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "2370 High St, Oakland, CA 94601"
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "metro": "Detroit-Warren-Dearborn (MI)",
+      "counts": {
+        "All": 1,
+        "Fine Dining": 0,
+        "Authentic Staples": 1,
+        "Community Favorites": 0,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "det-001",
+          "name": "Baobab Fare",
+          "cuisine": "Burundian",
+          "vibe_category": "Authentic Staples",
+          "vibe": "Award-Winning & Heartfelt",
+          "effectiveVibe": "Authentic Staples",
+          "address": "6568 Woodward Ave, Detroit, MI 48202"
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "metro": "Seattle-Tacoma-Bellevue (WA)",
+      "counts": {
+        "All": 6,
+        "Fine Dining": 2,
+        "Authentic Staples": 4,
+        "Community Favorites": 0,
+        "Daily Driver": 0,
+        "(uncategorized)": 0
+      },
+      "rows": [
+        {
+          "id": "sea-001",
+          "name": "Communion R&B",
+          "cuisine": "Soul-Fusion",
+          "vibe_category": "Fine Dining",
+          "vibe": "Award-Winning & Social",
+          "effectiveVibe": "Fine Dining",
+          "address": "2350 E Union St, Seattle, WA 98122"
+        },
+        {
+          "id": "sea-meskel",
+          "name": "Meskel Ethiopian",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "2605 E Cherry St, Seattle, WA 98122"
+        },
+        {
+          "id": "sea-002",
+          "name": "Cafe Selam",
+          "cuisine": "Ethiopian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "2715 E Cherry St B, Seattle, WA 98122"
+        },
+        {
+          "id": "sea-003",
+          "name": "Jebena Cafe",
+          "cuisine": "Ethiopian / Eritrean",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1510 NE 117th St, Seattle, WA 98125"
+        },
+        {
+          "id": "sea-fine-002",
+          "name": "Jerk Shack",
+          "cuisine": "Modern Caribbean",
+          "vibe_category": "Fine Dining",
+          "vibe": "Island-Industrial / High Energy",
+          "effectiveVibe": "Fine Dining",
+          "address": "1133 24th Ave Ste N, Seattle, WA 98122"
+        },
+        {
+          "id": "blackstar-kebab-seattle",
+          "name": "BlackStar Kebab",
+          "cuisine": "Ghanaian",
+          "vibe_category": "Authentic Staples",
+          "vibe": null,
+          "effectiveVibe": "Authentic Staples",
+          "address": "1144 NW 52nd St, Seattle, WA 98107"
+        }
+      ]
+    }
+  ],
+  "afrocaribOutsideTop15Metros": [
+    {
+      "id": "safari-restaurant-mn",
+      "name": "Safari Restaurant",
+      "cityHint": "3010 4th ave s | minneapolis",
+      "address": "3010 4th Ave S, Minneapolis, MN 55408",
+      "cuisine": "Somali",
+      "vibe_category": "Authentic Staples",
+      "vibe_text": null,
+      "effectiveVibe": "Authentic Staples"
+    },
+    {
+      "id": "nola-bennachin",
+      "name": "Bennachin",
+      "cityHint": "1212 royal st | new orleans",
+      "address": "1212 Royal St, New Orleans, LA 70116",
+      "cuisine": "West African",
+      "vibe_category": "Authentic Staples",
+      "vibe_text": null,
+      "effectiveVibe": "Authentic Staples"
+    },
+    {
+      "id": "nash-riddim-spice",
+      "name": "Riddim n' Spice",
+      "cityHint": "2116 meharry blvd | nashville",
+      "address": "2116 Meharry Blvd, Nashville, TN 37208",
+      "cuisine": "Jamaican / Caribbean",
+      "vibe_category": "Authentic Staples",
+      "vibe_text": null,
+      "effectiveVibe": "Authentic Staples"
+    },
+    {
+      "id": "nola-dakar",
+      "name": "Dakar NOLA",
+      "cityHint": "3814 magazine st | new orleans",
+      "address": "3814 Magazine St, New Orleans, LA 70115",
+      "cuisine": "Senegalese Tasting Menu",
+      "vibe_category": "Fine Dining",
+      "vibe_text": "Intimate & Story-Driven",
+      "effectiveVibe": "Fine Dining"
+    },
+    {
+      "id": "sa-jerk-shack",
+      "name": "The Jerk Shack",
+      "cityHint": "10234 tx-151 suite 103 | san antonio",
+      "address": "10234 TX-151 Suite 103, San Antonio, TX 78251",
+      "cuisine": "Jamaican",
+      "vibe_category": "Authentic Staples",
+      "vibe_text": null,
+      "effectiveVibe": "Authentic Staples"
+    },
+    {
+      "id": "pdx-001",
+      "name": "Kann",
+      "cityHint": "548 se ash st | portland",
+      "address": "548 SE Ash St, Portland, OR 97214",
+      "cuisine": "Haitian Fine Dining",
+      "vibe_category": "Fine Dining",
+      "vibe_text": "Elite Wood-Fired Mastery",
+      "effectiveVibe": "Fine Dining"
+    },
+    {
+      "id": "atx-fine-001",
+      "name": "Canje",
+      "cityHint": "1914 e 6th st ste c | austin",
+      "address": "1914 E 6th St Ste C, Austin, TX 78702",
+      "cuisine": "Elevated Caribbean/African Diaspora",
+      "vibe_category": "Fine Dining",
+      "vibe_text": "Tropical Chic / High-End",
+      "effectiveVibe": "Fine Dining"
+    },
+    {
+      "id": "atx-fine-002",
+      "name": "Ember Kitchen",
+      "cityHint": "800 w cesar chavez st ste pp110 | austin",
+      "address": "800 W Cesar Chavez St Ste PP110, Austin, TX 78701",
+      "cuisine": "Latin-Caribbean Fusion",
+      "vibe_category": "Fine Dining",
+      "vibe_text": "Sophisticated & Moody",
+      "effectiveVibe": "Fine Dining"
+    },
+    {
+      "id": "atx-afro-002",
+      "name": "Habesha Ethiopian",
+      "cityHint": "6019 n interstate 35 | austin",
+      "address": "6019 N Interstate 35, Austin, TX 78723",
+      "cuisine": "Authentic Ethiopian",
+      "vibe_category": "Authentic Staples",
+      "vibe_text": "Elegant / Peaceful",
+      "effectiveVibe": "Authentic Staples"
+    },
+    {
+      "id": "den-whittier-001",
+      "name": "Whittier Cafe",
+      "cityHint": "1710 e 25th ave | denver",
+      "address": "1710 E 25th Ave, Denver, CO 80205",
+      "cuisine": "Ethiopian / East African",
+      "vibe_category": "Community Favorites",
+      "vibe_text": "Community & Coffee",
+      "effectiveVibe": "Community Favorites"
+    },
+    {
+      "id": "chs-fine-001",
+      "name": "Bintü Atelier",
+      "cityHint": "8d line st | charleston",
+      "address": "8D Line St, Charleston, SC 29403",
+      "cuisine": "Modern West African",
+      "vibe_category": "Fine Dining",
+      "vibe_text": "Minimalist & Chef-Forward",
+      "effectiveVibe": "Fine Dining"
+    },
+    {
+      "id": "tailat-kitchen-austin",
+      "name": "Tailat Kitchen",
+      "cityHint": "2101 w pecan st #105 | pflugerville",
+      "address": "2101 W Pecan St #105, Pflugerville, TX 78660",
+      "cuisine": "Nigerian",
+      "vibe_category": "Authentic Staples",
+      "vibe_text": null,
+      "effectiveVibe": "Authentic Staples"
+    },
+    {
+      "id": "lady-t-kitchen-austin",
+      "name": "Lady T Kitchen",
+      "cityHint": "12407 mopac expy | austin",
+      "address": "12407 MoPac Expy, Austin, TX 78758",
+      "cuisine": "Nigerian",
+      "vibe_category": "Authentic Staples",
+      "vibe_text": null,
+      "effectiveVibe": "Authentic Staples"
+    }
+  ]
+}
