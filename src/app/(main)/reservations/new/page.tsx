@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { NewReservationFlow } from "@/components/reservation/NewReservationFlow";
+import { getRestaurantByIdFromJSON } from "@/lib/restaurant-json-loader-server";
+import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 
 async function getRestaurantBySlug(slug: string) {
   const supabase = createSupabaseServerClient();
@@ -20,22 +22,43 @@ export default async function NewReservationPage({
   const slug = searchParams.restaurant;
   if (!slug) notFound();
 
-  const restaurant = await getRestaurantBySlug(slug);
-  if (!restaurant || !restaurant.is_active) notFound();
+  const dbRestaurant = await getRestaurantBySlug(slug);
+  if (dbRestaurant?.is_active) {
+    const a: any = dbRestaurant.address ?? {};
+    const addressStr = [a.street, a.city, a.state, a.zip].filter(Boolean).join(", ");
+    return (
+      <NewReservationFlow
+        summary={{
+          restaurant: {
+            id: dbRestaurant.id,
+            slug: dbRestaurant.slug,
+            name: dbRestaurant.name,
+            address: addressStr || "Address coming soon",
+            phone: dbRestaurant.phone,
+            image: (dbRestaurant.images ?? [])[0] ?? null,
+          },
+        }}
+      />
+    );
+  }
 
-  const a: any = restaurant.address ?? {};
+  const jsonRestaurant = getRestaurantByIdFromJSON(slug);
+  if (!jsonRestaurant) notFound();
+
+  const detail = transformJSONRestaurantToDetail(jsonRestaurant) as any;
+  const a: any = detail.address ?? {};
   const addressStr = [a.street, a.city, a.state, a.zip].filter(Boolean).join(", ");
 
   return (
     <NewReservationFlow
       summary={{
         restaurant: {
-          id: restaurant.id,
-          slug: restaurant.slug,
-          name: restaurant.name,
+          id: detail.id,
+          slug: detail.slug ?? detail.id,
+          name: detail.name,
           address: addressStr || "Address coming soon",
-          phone: restaurant.phone,
-          image: (restaurant.images ?? [])[0] ?? null,
+          phone: detail.phone,
+          image: (detail.images ?? [])[0] ?? null,
         },
       }}
     />

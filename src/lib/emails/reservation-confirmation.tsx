@@ -27,16 +27,24 @@ export type ReservationConfirmationEmailProps = {
   guestName: string;
   specialRequests?: string | null;
   addToCalendarUrl: string;
+  /** When false, omit modify/cancel links (e.g. catalog restaurants not stored in AfriTable DB). */
+  showManageLinks?: boolean;
+  /** Catalog listings: guest request is forwarded; restaurant confirms directly. */
+  confirmationKind?: "confirmed" | "request";
 };
 
 export function ReservationConfirmationEmail(props: ReservationConfirmationEmailProps) {
+  const showManageLinks = props.showManageLinks !== false;
+  const isRequest = props.confirmationKind === "request";
   const modifyUrl = `${props.appBaseUrl}/reservations/${props.reservationId}/modify`;
   const cancelUrl = `${props.appBaseUrl}/reservations/${props.reservationId}/cancel`;
 
   return (
     <Html>
       <Head />
-      <Preview>Your reservation is confirmed — AfriTable</Preview>
+      <Preview>
+        {isRequest ? "We received your table request — AfriTable" : "Your reservation is confirmed — AfriTable"}
+      </Preview>
       <Body style={styles.body}>
         <Container style={styles.container}>
           <Section style={styles.brandRow}>
@@ -49,10 +57,20 @@ export function ReservationConfirmationEmail(props: ReservationConfirmationEmail
             />
           </Section>
 
-          <Heading style={styles.h1}>Your reservation is confirmed!</Heading>
+          <Heading style={styles.h1}>
+            {isRequest ? "We received your table request!" : "Your reservation is confirmed!"}
+          </Heading>
           <Text style={styles.p}>
-            Hi {props.guestName}, we’ve reserved your table at{" "}
-            <strong>{props.restaurantName}</strong>.
+            {isRequest ? (
+              <>
+                Hi {props.guestName}, we&apos;ve sent your request to <strong>{props.restaurantName}</strong>. They may
+                confirm by phone or email — your confirmation code below is for your records.
+              </>
+            ) : (
+              <>
+                Hi {props.guestName}, we’ve reserved your table at <strong>{props.restaurantName}</strong>.
+              </>
+            )}
           </Text>
 
           <Section style={styles.card}>
@@ -112,17 +130,24 @@ export function ReservationConfirmationEmail(props: ReservationConfirmationEmail
             </Button>
           </Section>
 
-          <Text style={styles.pSmall}>
-            Need to make changes?
-            <br />
-            <Link href={modifyUrl} style={styles.link}>
-              Modify reservation
-            </Link>{" "}
-            •{" "}
-            <Link href={cancelUrl} style={styles.linkDanger}>
-              Cancel reservation
-            </Link>
-          </Text>
+          {showManageLinks ? (
+            <Text style={styles.pSmall}>
+              Need to make changes?
+              <br />
+              <Link href={modifyUrl} style={styles.link}>
+                Modify reservation
+              </Link>{" "}
+              •{" "}
+              <Link href={cancelUrl} style={styles.linkDanger}>
+                Cancel reservation
+              </Link>
+            </Text>
+          ) : (
+            <Text style={styles.pSmall}>
+              To change or cancel, contact the restaurant directly or reach AfriTable support — this listing is not yet
+              connected to online reservation management.
+            </Text>
+          )}
 
           <Hr style={styles.hr} />
           <Text style={styles.footer}>

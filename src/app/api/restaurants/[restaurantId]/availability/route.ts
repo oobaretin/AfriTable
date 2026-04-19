@@ -4,6 +4,8 @@ import { format } from "date-fns";
 import { createSupabasePublicClient } from "@/lib/supabase/public";
 import type { OperatingHour } from "@/lib/reservation/availability";
 import { calculateAvailableTimeSlots } from "@/lib/reservation/availability";
+import { getRestaurantByIdFromJSON, type JSONRestaurant } from "@/lib/restaurant-json-loader-server";
+import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 
 const querySchema = z.object({
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
@@ -109,6 +111,36 @@ function pickOperatingHours(...candidates: OperatingHour[][]): OperatingHour[] {
 
 const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
+/** Slots from catalog JSON when the restaurant is not in Supabase (e.g. hou-003). */
+function catalogAvailabilityFromJSON(
+  dateStr: string,
+  partySize: number,
+  jsonRestaurant: JSONRestaurant,
+): NextResponse {
+  const detail = transformJSONRestaurantToDetail(jsonRestaurant) as { hours?: unknown };
+  const operatingHours = pickOperatingHours(
+    normalizeOperatingHours(detail.hours),
+    DEFAULT_OPERATING_HOURS,
+  );
+  const eligibleTableCount = 24;
+  const slots = calculateAvailableTimeSlots({
+    date: new Date(dateStr + "T00:00:00"),
+    operatingHours,
+    slotDurationMinutes: 90,
+    eligibleTableCount,
+    reservationCountsByTime: {},
+  });
+
+  return NextResponse.json({
+    date: dateStr,
+    partySize,
+    slotDurationMinutes: 90,
+    eligibleTableCount,
+    slots,
+    source: "catalog",
+  });
+}
+
 export async function GET(
   request: Request,
   context: { params: Promise<{ restaurantId: string }> | { restaurantId: string } },
@@ -151,8 +183,13 @@ export async function GET(
         console.error("[availability] slug lookup error:", slugError);
         return NextResponse.json({ error: "restaurant_lookup_failed" }, { status: 500 });
       }
-      if (!bySlug?.id) return NextResponse.json({ error: "not_found" }, { status: 404 });
-      restaurantId = bySlug.id;
+      if (bySlug?.id) {
+        restaurantId = bySlug.id;
+      } else {
+        const jsonRestaurant = getRestaurantByIdFromJSON(restaurantIdParam);
+        if (!jsonRestaurant) return NextResponse.json({ error: "not_found" }, { status: 404 });
+        return catalogAvailabilityFromJSON(dateStr, partySize, jsonRestaurant);
+      }
     }
 
     const { data: restaurant, error: restaurantError } = await supabase
