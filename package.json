@@ -22,6 +22,7 @@
     "verify:production": "node scripts/verify-production.mjs",
     "scrape:serpapi": "tsx lib/scrape-with-serpapi.ts",
     "scrape:city": "tsx lib/scrape-city.ts",
+    "scrape:monthly-batch": "tsx lib/scrape-city.ts Phoenix Riverside Minneapolis Nashville Portland",
     "import:json": "tsx lib/import-from-json.ts",
     "find:duplicates": "node scripts/find-duplicates.mjs",
     "remove:duplicates": "node scripts/remove-duplicates.mjs",
