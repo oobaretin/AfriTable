@@ -63,7 +63,11 @@ export default function PrivacyPage() {
         <li><strong>Objection:</strong> Object to certain processing activities where applicable</li>
       </ul>
       <p>
-        To exercise these rights, please contact us through your account settings or email us at privacy@afritable.com.
+        To exercise these rights, please contact us through your account settings or email us at{" "}
+        <a href="mailto:therealtasteofafrica@gmail.com" className="underline underline-offset-2 hover:text-slate-900">
+          therealtasteofafrica@gmail.com
+        </a>
+        .
       </p>
     </LegalPage>
   );

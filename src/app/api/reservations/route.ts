@@ -1,8 +1,8 @@
 import { randomUUID } from "node:crypto";
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { Resend } from "resend";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
+import { sendReactEmail } from "@/lib/email/send-react-email";
 import { buildCalendarLinks, buildICS } from "@/lib/email/calendar";
 import { ReservationConfirmationEmail } from "@/lib/emails/reservation-confirmation";
 import { rateLimitOrPass } from "@/lib/security/rateLimit";
@@ -25,12 +25,6 @@ const payloadSchema = z.object({
   smsOptIn: z.boolean().optional().default(false),
   createAccount: z.boolean().optional().default(false),
 });
-
-function requireEnv(name: string): string {
-  const v = process.env[name];
-  if (!v) throw new Error(`Missing environment variable: ${name}`);
-  return v;
-}
 
 export async function POST(request: Request) {
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
@@ -103,7 +97,6 @@ export async function POST(request: Request) {
     const addressStr = [a.street, a.city, a.state, a.zip].filter(Boolean).join(", ");
 
     try {
-      const resend = new Resend(requireEnv("RESEND_API_KEY"));
       const appBaseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
       const start = new Date(`${body.date}T${body.time}:00`);
       const links = buildCalendarLinks({
@@ -123,8 +116,7 @@ export async function POST(request: Request) {
         durationMinutes: 90,
       });
 
-      await resend.emails.send({
-        from: requireEnv("RESEND_FROM_EMAIL"),
+      await sendReactEmail({
         to: body.guest.email,
         subject: `Table request received: ${detail.name}`,
         react: ReservationConfirmationEmail({
@@ -146,7 +138,7 @@ export async function POST(request: Request) {
         attachments: [
           {
             filename: `afritable-request-${confirmationCode}.ics`,
-            content: Buffer.from(ics).toString("base64"),
+            content: Buffer.from(ics, "utf-8"),
           },
         ],
       });
@@ -275,7 +267,6 @@ export async function POST(request: Request) {
 
   // Send confirmation email (best-effort)
   try {
-    const resend = new Resend(requireEnv("RESEND_API_KEY"));
     const appBaseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
     const start = new Date(`${body.date}T${body.time}:00`);
     const links = buildCalendarLinks({
@@ -295,8 +286,7 @@ export async function POST(request: Request) {
       durationMinutes: 90,
     });
 
-    await resend.emails.send({
-      from: requireEnv("RESEND_FROM_EMAIL"),
+    await sendReactEmail({
       to: body.guest.email,
       subject: `Reservation confirmed: ${restaurant.name}`,
       react: ReservationConfirmationEmail({
@@ -316,7 +306,7 @@ export async function POST(request: Request) {
       attachments: [
         {
           filename: `afritable-reservation-${confirmationCode}.ics`,
-          content: Buffer.from(ics).toString("base64"),
+          content: Buffer.from(ics, "utf-8"),
         },
       ],
     });

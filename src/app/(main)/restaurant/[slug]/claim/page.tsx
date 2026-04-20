@@ -81,7 +81,7 @@ export default async function ClaimRestaurantPage({ params }: { params: { slug: 
                   This listing has already been claimed. If this is your business, contact support to verify ownership.
                 </div>
                 <Button asChild variant="outline">
-                  <a href="mailto:support@afritable.com">Contact support</a>
+                  <a href="mailto:therealtasteofafrica@gmail.com">Contact support</a>
                 </Button>
               </>
             ) : (

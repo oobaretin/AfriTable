@@ -1,14 +1,8 @@
 import "server-only";
 
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
+import { sendSmtpMail } from "@/lib/email/smtp";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
-
-function requireEnv(name: string): string {
-  const v = process.env[name];
-  if (!v) throw new Error(`Missing environment variable: ${name}`);
-  return v;
-}
 
 export async function POST(request: Request, context: { params: { id: string } }) {
   const restaurantId = context.params.id;
@@ -35,10 +29,8 @@ export async function POST(request: Request, context: { params: { id: string } }
   if (!to) return NextResponse.redirect(new URL("/admin/restaurants/pending", request.url));
 
   const appBaseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
-  const resend = new Resend(requireEnv("RESEND_API_KEY"));
 
-  await resend.emails.send({
-    from: requireEnv("RESEND_FROM_EMAIL"),
+  await sendSmtpMail({
     to,
     subject: `Welcome to AfriTable — ${String((restaurant as any).name)}`,
     html: `<div style="font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto;line-height:1.6">

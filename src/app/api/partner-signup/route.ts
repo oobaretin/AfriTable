@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { escapeHtml, sendSiteInboxNotification } from "@/lib/email/site-inbox";
 
 const partnerSignupSchema = z.object({
   businessName: z.string().min(2),
@@ -23,21 +24,15 @@ export async function POST(request: Request) {
 
     const data = parsed.data;
 
-    // TODO: Store in database or send to email service
-    // For now, just log and return success
-    console.log("[Partner Signup]", {
-      businessName: data.businessName,
-      cuisineType: data.cuisineType,
-      contactName: data.contactName,
-      email: data.email,
-      phone: data.phone,
-      timestamp: new Date().toISOString(),
+    await sendSiteInboxNotification({
+      subject: `[AfriTable] Partner application: ${data.businessName}`,
+      htmlBody: `<p><strong>Business:</strong> ${escapeHtml(data.businessName)}</p>
+<p><strong>Cuisine:</strong> ${escapeHtml(data.cuisineType)}</p>
+<p><strong>Contact name:</strong> ${escapeHtml(data.contactName)}</p>
+<p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
+<p><strong>Phone:</strong> ${escapeHtml(data.phone)}</p>`,
+      replyTo: data.email,
     });
-
-    // In production, you would:
-    // 1. Save to database (e.g., a partner_submissions table)
-    // 2. Send notification email to admin team
-    // 3. Send confirmation email to the applicant
 
     return NextResponse.json({
       success: true,

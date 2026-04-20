@@ -101,10 +101,10 @@ export default function Footer() {
                 <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/about">
                   About
                 </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="mailto:support@afritable.com">
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="mailto:therealtasteofafrica@gmail.com">
                   Contact support
                 </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="mailto:partners@afritable.com">
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="mailto:therealtasteofafrica@gmail.com">
                   Partnerships
                 </a>
               </div>

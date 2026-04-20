@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { escapeHtml, sendSiteInboxNotification } from "@/lib/email/site-inbox";
 import { rateLimitOrPass } from "@/lib/security/rateLimit";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 
@@ -59,6 +60,22 @@ export async function POST(request: Request) {
   } catch {
     // best-effort
   }
+
+  const p = parsed.data;
+  const cuisines = p.cuisine_types?.length ? p.cuisine_types.join(", ") : "—";
+  await sendSiteInboxNotification({
+    subject: `[AfriTable] Restaurant suggestion: ${p.name}`,
+    htmlBody: `<p><strong>Submission ID:</strong> ${escapeHtml(String((data as { id?: string })?.id ?? ""))}</p>
+<p><strong>Name:</strong> ${escapeHtml(p.name)}</p>
+<p><strong>Location:</strong> ${escapeHtml(p.city)}, ${escapeHtml(p.state)}</p>
+<p><strong>Cuisine types:</strong> ${escapeHtml(cuisines)}</p>
+<p><strong>Submitted by:</strong> ${escapeHtml(p.submitted_by_email)}</p>
+${p.address ? `<p><strong>Address:</strong> ${escapeHtml(p.address)}</p>` : ""}
+${p.phone ? `<p><strong>Phone:</strong> ${escapeHtml(p.phone)}</p>` : ""}
+${p.website ? `<p><strong>Website:</strong> ${escapeHtml(p.website)}</p>` : ""}
+${p.notes ? `<p><strong>Notes:</strong><br/>${escapeHtml(p.notes).replace(/\n/g, "<br/>")}</p>` : ""}`,
+    replyTo: p.submitted_by_email,
+  });
 
   return NextResponse.json({ ok: true, submission: data });
 }

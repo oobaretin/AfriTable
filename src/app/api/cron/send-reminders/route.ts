@@ -1,15 +1,9 @@
 import { NextResponse } from "next/server";
 import { addDays, format } from "date-fns";
-import { Resend } from "resend";
+import { sendReactEmail } from "@/lib/email/send-react-email";
 import { createSupabaseAdminClient } from "@/lib/supabase/server";
 import { ReservationReminderEmail } from "@/lib/emails/reservation-reminder";
 import { ReviewRequestEmail } from "@/lib/emails/review-request";
-
-function requireEnv(name: string): string {
-  const v = process.env[name];
-  if (!v) throw new Error(`Missing environment variable: ${name}`);
-  return v;
-}
 
 function requireCronSecret(request: Request) {
   const secret = process.env.CRON_SECRET;
@@ -26,8 +20,6 @@ export async function POST(request: Request) {
   }
 
   const appBaseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
-  const resend = new Resend(requireEnv("RESEND_API_KEY"));
-  const from = requireEnv("RESEND_FROM_EMAIL");
   const supabase = createSupabaseAdminClient();
 
   const tomorrow = format(addDays(new Date(), 1), "yyyy-MM-dd");
@@ -74,8 +66,7 @@ export async function POST(request: Request) {
     const rest = restMap.get((r as any).restaurant_id);
     if (!rest) continue;
 
-    await resend.emails.send({
-      from,
+    const reminderSent = await sendReactEmail({
       to: email,
       subject: `Reminder: Your reservation at ${rest.name} tomorrow`,
       react: ReservationReminderEmail({
@@ -88,8 +79,10 @@ export async function POST(request: Request) {
       }),
     });
 
-    await supabase.from("reservation_notifications").insert({ reservation_id: (r as any).id, type: keyType });
-    sentReminders += 1;
+    if (reminderSent.ok) {
+      await supabase.from("reservation_notifications").insert({ reservation_id: (r as any).id, type: keyType });
+      sentReminders += 1;
+    }
   }
 
   let sentReviews = 0;
@@ -109,15 +102,16 @@ export async function POST(request: Request) {
     const rest = restMap.get((r as any).restaurant_id);
     if (!rest) continue;
 
-    await resend.emails.send({
-      from,
+    const reviewSent = await sendReactEmail({
       to: email,
       subject: `How was your experience at ${rest.name}?`,
       react: ReviewRequestEmail({ appBaseUrl, restaurantName: rest.name, reservationId: (r as any).id }),
     });
 
-    await supabase.from("reservation_notifications").insert({ reservation_id: (r as any).id, type: keyType });
-    sentReviews += 1;
+    if (reviewSent.ok) {
+      await supabase.from("reservation_notifications").insert({ reservation_id: (r as any).id, type: keyType });
+      sentReviews += 1;
+    }
   }
 
   return NextResponse.json({ ok: true, sentReminders, sentReviews, tomorrow, yesterday });

@@ -140,8 +140,8 @@ export function ContactAndMap() {
             </div>
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-slate-400">General Inquiries</p>
-              <a href="mailto:hello@afritable.com" className="font-bold text-brand-dark transition-colors hover:text-brand-bronze">
-                hello@afritable.com
+              <a href="mailto:therealtasteofafrica@gmail.com" className="font-bold text-brand-dark transition-colors hover:text-brand-bronze">
+                therealtasteofafrica@gmail.com
               </a>
             </div>
           </div>
@@ -151,8 +151,8 @@ export function ContactAndMap() {
             </div>
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Partnerships</p>
-              <a href="mailto:partners@afritable.com" className="font-bold text-brand-dark transition-colors hover:text-brand-bronze">
-                partners@afritable.com
+              <a href="mailto:therealtasteofafrica@gmail.com" className="font-bold text-brand-dark transition-colors hover:text-brand-bronze">
+                therealtasteofafrica@gmail.com
               </a>
             </div>
           </div>

@@ -1,15 +1,9 @@
 import { NextResponse } from "next/server";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 import { requireAuth } from "@/lib/auth/utils";
-import { Resend } from "resend";
+import { sendReactEmail } from "@/lib/email/send-react-email";
 import { ReservationConfirmationEmail } from "@/lib/emails/reservation-confirmation";
 import { buildCalendarLinks, buildICS } from "@/lib/email/calendar";
-
-function requireEnv(name: string): string {
-  const v = process.env[name];
-  if (!v) throw new Error(`Missing environment variable: ${name}`);
-  return v;
-}
 
 export async function DELETE(_request: Request, context: { params: { id: string } }) {
   const user = await requireAuth("/login?redirectTo=/reservations");
@@ -60,9 +54,7 @@ export async function DELETE(_request: Request, context: { params: { id: string 
         durationMinutes: 90,
       });
 
-      const resend = new Resend(requireEnv("RESEND_API_KEY"));
-      await resend.emails.send({
-        from: requireEnv("RESEND_FROM_EMAIL"),
+      await sendReactEmail({
         to: reservation.guest_email ?? user.email ?? "",
         subject: `Reservation cancelled: ${restaurant.name}`,
         react: ReservationConfirmationEmail({
@@ -82,7 +74,7 @@ export async function DELETE(_request: Request, context: { params: { id: string 
         attachments: [
           {
             filename: `afritable-cancelled-${String(reservation.id).split("-")[0].toUpperCase()}.ics`,
-            content: Buffer.from(ics).toString("base64"),
+            content: Buffer.from(ics, "utf-8"),
           },
         ],
       });

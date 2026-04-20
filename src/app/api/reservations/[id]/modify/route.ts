@@ -3,7 +3,7 @@ import { z } from "zod";
 import { addHours, isBefore } from "date-fns";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 import { requireAuth } from "@/lib/auth/utils";
-import { Resend } from "resend";
+import { sendReactEmail } from "@/lib/email/send-react-email";
 import { ReservationConfirmationEmail } from "@/lib/emails/reservation-confirmation";
 import { buildCalendarLinks, buildICS } from "@/lib/email/calendar";
 
@@ -12,12 +12,6 @@ const payloadSchema = z.object({
   time: z.string().regex(/^\d{2}:\d{2}$/),
   partySize: z.union([z.number().int().min(1).max(20), z.literal("20+")]),
 });
-
-function requireEnv(name: string): string {
-  const v = process.env[name];
-  if (!v) throw new Error(`Missing environment variable: ${name}`);
-  return v;
-}
 
 export async function PATCH(request: Request, context: { params: { id: string } }) {
   const user = await requireAuth("/login?redirectTo=/reservations");
@@ -110,9 +104,7 @@ export async function PATCH(request: Request, context: { params: { id: string } 
         start,
         durationMinutes: 90,
       });
-      const resend = new Resend(requireEnv("RESEND_API_KEY"));
-      await resend.emails.send({
-        from: requireEnv("RESEND_FROM_EMAIL"),
+      await sendReactEmail({
         to: reservation.guest_email ?? user.email ?? "",
         subject: `Reservation updated: ${restaurant.name}`,
         react: ReservationConfirmationEmail({
@@ -129,7 +121,7 @@ export async function PATCH(request: Request, context: { params: { id: string } 
           specialRequests: reservation.special_requests,
           addToCalendarUrl: links.google,
         }),
-        attachments: [{ filename: `afritable-updated.ics`, content: Buffer.from(ics).toString("base64") }],
+        attachments: [{ filename: `afritable-updated.ics`, content: Buffer.from(ics, "utf-8") }],
       });
     }
   } catch {

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { Resend } from "resend";
+import { escapeHtml, sendSiteInboxNotification } from "@/lib/email/site-inbox";
+import { sendSmtpMail } from "@/lib/email/smtp";
 import { rateLimitOrPass } from "@/lib/security/rateLimit";
 import { getWelcomeEmailHTML } from "@/lib/emails/welcome-email";
 
@@ -8,12 +9,6 @@ const schema = z.object({
   email: z.string().email(),
   source: z.string().max(80).optional(),
 });
-
-function requireEnv(name: string): string {
-  const v = process.env[name];
-  if (!v) throw new Error(`Missing environment variable: ${name}`);
-  return v;
-}
 
 export async function POST(request: Request) {
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
@@ -29,61 +24,32 @@ export async function POST(request: Request) {
   const parsed = schema.safeParse(json);
   if (!parsed.success) return NextResponse.json({ error: "invalid_payload" }, { status: 400 });
 
-  const resend = new Resend(requireEnv("RESEND_API_KEY"));
-  const audienceId = requireEnv("RESEND_AUDIENCE_ID");
-
-  // Add contact to audience. If it already exists, update it (idempotent).
   const email = parsed.data.email;
-  const properties = parsed.data.source ? { source: parsed.data.source } : undefined;
 
-  const created = await resend.contacts.create({ email, audienceId, properties });
-  if ((created as any)?.error) {
-    const err = (created as any).error as { message?: string; name?: string; statusCode?: number } | undefined;
-    const isAlready =
-      err?.name === "already_exists" ||
-      err?.statusCode === 409 ||
-      String(err?.message ?? "").toLowerCase().includes("already");
+  await sendSiteInboxNotification({
+    subject: `[AfriTable] Newsletter signup: ${email}`,
+    htmlBody: `<p>New newsletter subscriber: <strong>${escapeHtml(email)}</strong></p>
+${parsed.data.source ? `<p><strong>Source:</strong> ${escapeHtml(parsed.data.source)}</p>` : ""}`,
+    replyTo: email,
+  });
 
-    if (!isAlready) {
-      return NextResponse.json(
-        { error: "subscribe_failed", message: err?.message || "Could not subscribe." },
-        { status: 400 }
-      );
-    }
+  // Welcome email to subscriber (best-effort, SMTP — no Resend audience)
+  try {
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+    const html = getWelcomeEmailHTML({
+      logoUrl: `${appUrl}/logo.png`,
+      restaurantsUrl: `${appUrl}/restaurants`,
+      appUrl,
+      unsubscribeUrl: `${appUrl}/unsubscribe?email=${encodeURIComponent(email)}`,
+    });
 
-    // Ensure the contact is present/up-to-date in the audience.
-    const updated = await resend.contacts.update({ email, audienceId, properties });
-    if ((updated as any)?.error) {
-      const uerr = (updated as any).error as { message?: string } | undefined;
-      return NextResponse.json(
-        { error: "subscribe_failed", message: uerr?.message || "Could not subscribe." },
-        { status: 400 }
-      );
-    }
-  }
-
-  // Send welcome email (best-effort)
-  const from = process.env.RESEND_FROM_EMAIL;
-  if (from) {
-    try {
-      const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
-      const html = getWelcomeEmailHTML({
-        logoUrl: `${appUrl}/logo.png`,
-        restaurantsUrl: `${appUrl}/restaurants`,
-        appUrl,
-        unsubscribeUrl: `${appUrl}/unsubscribe?email=${encodeURIComponent(email)}`,
-      });
-
-      await resend.emails.send({
-        from,
-        to: email,
-        subject: "Welcome to AfriTable",
-        html,
-      });
-    } catch (error) {
-      // best-effort: log but don't fail the request
-      console.error("Failed to send welcome email:", error);
-    }
+    await sendSmtpMail({
+      to: email,
+      subject: "Welcome to AfriTable",
+      html,
+    });
+  } catch (error) {
+    console.error("Failed to send welcome email:", error);
   }
 
   return NextResponse.json({ ok: true });

@@ -46,7 +46,7 @@ export function RestaurantOwnerCTA() {
               <a href="/join-as-restaurant" className="btn-bronze px-8 py-4 rounded-xl font-bold text-white uppercase tracking-widest text-sm text-center pointer-events-auto cursor-pointer">
                 Get Started for Free
               </a>
-              <a href="/contact" className="inline-flex items-center justify-center rounded-xl bg-white/5 px-8 py-4 font-bold text-white border border-white/10 transition-all hover:bg-white/10 pointer-events-auto cursor-pointer">
+              <a href="mailto:therealtasteofafrica@gmail.com" className="inline-flex items-center justify-center rounded-xl bg-white/5 px-8 py-4 font-bold text-white border border-white/10 transition-all hover:bg-white/10 pointer-events-auto cursor-pointer">
                 Talk to Sales
               </a>
             </div>
