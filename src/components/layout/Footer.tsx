@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Instagram, Twitter, Youtube } from "lucide-react";
 import NewsletterSignup from "@/components/layout/NewsletterSignup";
+import { mailto, SITE_CONTACT } from "@/lib/site-contact";
 
 export default function Footer() {
   return (
@@ -101,10 +102,10 @@ export default function Footer() {
                 <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/about">
                   About
                 </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="mailto:therealtasteofafrica@gmail.com">
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href={mailto(SITE_CONTACT.support)}>
                   Contact support
                 </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="mailto:therealtasteofafrica@gmail.com">
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href={mailto(SITE_CONTACT.partners)}>
                   Partnerships
                 </a>
               </div>

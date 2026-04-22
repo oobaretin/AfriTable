@@ -22,13 +22,14 @@ export function isSmtpConfigured(): boolean {
   return Boolean(host && user && pass);
 }
 
+/** From header for SMTP sends. Prefer `EMAIL_FROM` (e.g. noreply@afritable.com if your provider allows). With Gmail SMTP, Gmail typically requires the authenticated account address. */
 export function getDefaultMailFrom(): string {
   return (
     process.env.EMAIL_FROM?.trim() ||
     process.env.SMTP_FROM?.trim() ||
     process.env.GMAIL_USER?.trim() ||
     process.env.SMTP_USER?.trim() ||
-    "therealtasteofafrica@gmail.com"
+    ""
   );
 }
 
@@ -82,6 +83,10 @@ export async function sendSmtpMail(input: SendSmtpMailInput): Promise<{ ok: bool
   }
 
   const from = getDefaultMailFrom();
+  if (!from) {
+    console.warn("sendSmtpMail: set EMAIL_FROM or GMAIL_USER (or SMTP_USER) so the From address is defined.");
+    return { ok: false };
+  }
 
   try {
     const transport = createTransport();

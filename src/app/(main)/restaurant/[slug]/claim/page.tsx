@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { mailto, SITE_CONTACT } from "@/lib/site-contact";
 
 export default async function ClaimRestaurantPage({ params }: { params: { slug: string } }) {
   const supabaseAdmin = createSupabaseAdminClient();
@@ -81,7 +82,7 @@ export default async function ClaimRestaurantPage({ params }: { params: { slug: 
                   This listing has already been claimed. If this is your business, contact support to verify ownership.
                 </div>
                 <Button asChild variant="outline">
-                  <a href="mailto:therealtasteofafrica@gmail.com">Contact support</a>
+                  <a href={mailto(SITE_CONTACT.support)}>Contact support</a>
                 </Button>
               </>
             ) : (

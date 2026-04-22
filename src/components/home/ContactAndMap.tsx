@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { mailto, SITE_CONTACT } from "@/lib/site-contact";
 
 const cities = ["Houston", "Atlanta", "New York", "Los Angeles", "Dallas", "DC", "Chicago", "Miami", "Philadelphia", "Boston"];
 
@@ -140,8 +141,8 @@ export function ContactAndMap() {
             </div>
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-slate-400">General Inquiries</p>
-              <a href="mailto:therealtasteofafrica@gmail.com" className="font-bold text-brand-dark transition-colors hover:text-brand-bronze">
-                therealtasteofafrica@gmail.com
+              <a href={mailto(SITE_CONTACT.hello)} className="font-bold text-brand-dark transition-colors hover:text-brand-bronze">
+                {SITE_CONTACT.hello}
               </a>
             </div>
           </div>
@@ -151,8 +152,8 @@ export function ContactAndMap() {
             </div>
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Partnerships</p>
-              <a href="mailto:therealtasteofafrica@gmail.com" className="font-bold text-brand-dark transition-colors hover:text-brand-bronze">
-                therealtasteofafrica@gmail.com
+              <a href={mailto(SITE_CONTACT.partners)} className="font-bold text-brand-dark transition-colors hover:text-brand-bronze">
+                {SITE_CONTACT.partners}
               </a>
             </div>
           </div>

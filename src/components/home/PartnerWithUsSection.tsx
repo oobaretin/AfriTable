@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { mailto, SITE_CONTACT } from "@/lib/site-contact";
 
 const pillars = [
   {
@@ -56,7 +57,7 @@ export function PartnerWithUsSection() {
             </div>
             <p className="mt-6 text-xs text-slate-500">
               Already on the map?{" "}
-              <a href="mailto:therealtasteofafrica@gmail.com" className="font-semibold text-slate-300 underline-offset-4 hover:underline">
+              <a href={mailto(SITE_CONTACT.partnerships)} className="font-semibold text-slate-300 underline-offset-4 hover:underline">
                 Contact the team
               </a>{" "}
               for onboarding or press.

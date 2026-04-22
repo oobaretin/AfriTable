@@ -1,4 +1,5 @@
 import { LegalPage } from "@/components/legal/LegalPage";
+import { mailto, SITE_CONTACT } from "@/lib/site-contact";
 
 export const metadata = {
   title: "Privacy Policy",
@@ -64,8 +65,8 @@ export default function PrivacyPage() {
       </ul>
       <p>
         To exercise these rights, please contact us through your account settings or email us at{" "}
-        <a href="mailto:therealtasteofafrica@gmail.com" className="underline underline-offset-2 hover:text-slate-900">
-          therealtasteofafrica@gmail.com
+        <a href={mailto(SITE_CONTACT.privacy)} className="underline underline-offset-2 hover:text-slate-900">
+          {SITE_CONTACT.privacy}
         </a>
         .
       </p>
