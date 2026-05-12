@@ -3,6 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database } from "@db/database.types";
+import { assertSupabaseJwtShape } from "./validate-jwt";
 
 function requireEnv(name: string): string {
   const value = process.env[name];
@@ -18,6 +19,7 @@ function requireEnv(name: string): string {
 export function createSupabaseServerClient(): SupabaseClient<Database> {
   const url = requireEnv("NEXT_PUBLIC_SUPABASE_URL");
   const anonKey = requireEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY");
+  assertSupabaseJwtShape(anonKey, "NEXT_PUBLIC_SUPABASE_ANON_KEY", "anon");
 
   const cookieStore = cookies();
 
@@ -49,6 +51,7 @@ export function createSupabaseServerClient(): SupabaseClient<Database> {
 export function createSupabaseAdminClient(): SupabaseClient {
   const url = requireEnv("NEXT_PUBLIC_SUPABASE_URL");
   const serviceRoleKey = requireEnv("SUPABASE_SERVICE_ROLE_KEY");
+  assertSupabaseJwtShape(serviceRoleKey, "SUPABASE_SERVICE_ROLE_KEY", "service_role");
 
   return createClient<Database>(url, serviceRoleKey, {
     auth: {

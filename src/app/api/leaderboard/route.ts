@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 
 // Cache for 24 hours
 const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
@@ -61,9 +61,12 @@ export async function GET() {
       return NextResponse.json({ ambassadors: [] });
     }
 
-    // Fetch user profiles
+    // Fetch user profiles via service role: the anon RLS policy on `profiles` is
+    // tightened to self-only (see migration 034). Server-side enrichment uses
+    // the admin client with whitelisted public-safe columns — never phone/role.
     const userIds = userStamps.map((u) => u.user_id);
-    const { data: profiles, error: profileError } = await supabase
+    const adminSupabase = createSupabaseAdminClient();
+    const { data: profiles, error: profileError } = await adminSupabase
       .from("profiles")
       .select("id, full_name, city, avatar_url")
       .in("id", userIds);

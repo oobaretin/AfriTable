@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database } from "@db/database.types";
+import { assertSupabaseJwtShape } from "./validate-jwt";
 
 function requireEnv(name: string): string {
   const v = process.env[name];
@@ -15,6 +16,7 @@ function requireEnv(name: string): string {
 export function createSupabasePublicClient(): SupabaseClient<Database> {
   const url = requireEnv("NEXT_PUBLIC_SUPABASE_URL");
   const anonKey = requireEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY");
+  assertSupabaseJwtShape(anonKey, "NEXT_PUBLIC_SUPABASE_ANON_KEY", "anon");
   
   return createClient<Database>(url, anonKey, {
     auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },

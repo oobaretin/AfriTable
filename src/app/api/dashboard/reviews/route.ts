@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 import { requireRestaurantOwner } from "@/lib/dashboard/auth";
 
 export async function GET() {
@@ -18,9 +18,13 @@ export async function GET() {
     return NextResponse.json({ error: "query_failed", message: error.message }, { status: 500 });
   }
 
-  // Fetch user names for all reviews
+  // Fetch user names via service role: the anon RLS policy on `profiles` is
+  // tightened to self-only (see migration 034). Owners need diners' names for
+  // their own reviews, so server-side enrichment uses the admin client and
+  // returns only the whitelisted full_name column.
   const userIds = Array.from(new Set((reviews ?? []).map((r: any) => r.user_id)));
-  const { data: profiles } = await supabase
+  const adminSupabase = createSupabaseAdminClient();
+  const { data: profiles } = await adminSupabase
     .from("profiles")
     .select("id, full_name")
     .in("id", userIds);
