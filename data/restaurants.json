@@ -4841,32 +4841,6 @@
     "lng": -122.15465669999999
   },
   {
-    "id": "teranga-4-embarcadero-ctr",
-    "name": "Teranga",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.9,
-    "address": "level facing water fountain, 4 Embarcadero Ctr, AZ 77000",
-    "phone": "(415) 879-8372",
-    "website": "http://www.terangafoods.com/",
-    "hours": {
-      "mon_sat": "11:00 - 22:00 (confirm)",
-      "sun": "Varies"
-    },
-    "about": "Authentic African restaurant in 4 Embarcadero Ctr. Experience traditional African flavors and hospitality at Teranga.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "AZ",
-    "google_place_id": "ChIJ__9PC0Z-j4AR7nthHBJUHwg",
-    "lat": 37.7950917,
-    "lng": -122.3957435
-  },
-  {
     "id": "baobab-fare-detroit",
     "name": "Baobab Fare",
     "cuisine": "East African",
@@ -5491,21 +5465,21 @@
     "region": "West African",
     "price_range": "$",
     "rating": 4.6,
-    "address": "601 Lexington Avenue, 153 E 53rd St, AZ 77000",
+    "address": "601 Lexington Avenue, 153 E 53rd St, New York, NY 10022",
     "phone": "(332) 910-8138",
     "website": "https://itsteranga.com/",
     "hours": {
       "mon_sat": "11:00 - 22:00 (confirm)",
       "sun": "Varies"
     },
-    "about": "Authentic West African restaurant in 153 E 53rd St. Experience traditional West African flavors and hospitality at Teranga Midtown.",
+    "about": "Authentic West African restaurant in New York. Experience traditional West African flavors and hospitality at Teranga Midtown.",
     "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
     "cultural_roots": "Diaspora dining in the United States.",
     "menu_highlights": [
       "Call for seasonal specials"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "AZ",
+    "state": "NY",
     "google_place_id": "ChIJi-bJgEtZwokRFayt5jCnQz0",
     "lat": 40.758362,
     "lng": -73.9698216

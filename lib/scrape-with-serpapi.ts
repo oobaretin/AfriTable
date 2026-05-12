@@ -214,16 +214,40 @@ function inferStateFromZipCity(zip: string, city: string, fallback: string): str
 }
 
 function convertToAfriTableFormat(basic: any, details: any) {
-  // Parse address (Google often: street, city, ST 12345, USA)
-  const addressParts = (basic.address || "").split(",").map((s: string) => s.trim());
-  const street = addressParts[0] || "";
-  const city = addressParts[1] || "Houston";
-  const stateZipRaw = addressParts[2] || "";
-  const zip = stateZipRaw.match(/\d{5}/)?.[0] || "";
-  const stateLetters = stateZipRaw.replace(/\d{5}.*$/, "").trim();
-  const stateFromLine = /^[A-Z]{2}$/i.test(stateLetters) ? stateLetters.toUpperCase() : "";
-  const state = stateFromLine || inferStateFromZipCity(zip, city, "TX");
-  const zipOut = zip || (state === "TX" ? "77000" : "");
+  // Parse address. Google Maps shapes seen in the wild:
+  //   3-part:  "<street>, <city>, <ST> <zip>"
+  //   4-part:  "<street>, <sub-address>, <city>, <ST> <zip>"   (cross-street / suite / building)
+  //   5-part:  "<street>, ..., <city>, <ST> <zip>, USA"
+  // Strategy: trim trailing "USA", then anchor on the END — state+zip is always last,
+  // city is always second-to-last, everything before is the street line.
+  const rawParts = String(basic.address || "")
+    .split(",")
+    .map((s: string) => s.trim())
+    .filter((s: string) => s.length > 0 && !/^USA$/i.test(s));
+
+  let street = "";
+  let city = "";
+  let stateFromLine = "";
+  let zip = "";
+  if (rawParts.length >= 3) {
+    const last = rawParts[rawParts.length - 1];
+    const m = last.match(/^([A-Z]{2})\s*(\d{5})?$/i);
+    if (m) {
+      stateFromLine = m[1].toUpperCase();
+      zip = m[2] || "";
+    } else {
+      zip = last.match(/\b(\d{5})\b/)?.[1] || "";
+    }
+    city = rawParts[rawParts.length - 2] || "";
+    street = rawParts.slice(0, rawParts.length - 2).join(", ");
+  } else if (rawParts.length === 2) {
+    street = rawParts[0];
+    city = rawParts[1];
+  } else {
+    street = rawParts[0] || "";
+  }
+  const state = stateFromLine || inferStateFromZipCity(zip, city, "");
+  const zipOut = zip || "";
 
   // Determine cuisine types
   const cuisineTypes = determineCuisineTypes(basic.title, basic.type);

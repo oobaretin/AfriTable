@@ -42,6 +42,9 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Cursor IDE session state (debug logs, etc.)
+.cursor/
+
 # vercel
 .vercel
 
