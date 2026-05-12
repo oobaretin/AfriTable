@@ -27,6 +27,7 @@
 # local import/seed outputs (never commit)
 import-credentials.txt
 import-results.json
+data/import-dry-run.json
 
 # scraped data (never commit)
 data/serpapi-*.json
