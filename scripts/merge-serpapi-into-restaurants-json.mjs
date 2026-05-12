@@ -32,7 +32,27 @@ function normalizeAddressLine(addr) {
     .trim();
 }
 
+/**
+ * Resolve a US 2-letter state code.
+ *
+ * Resolution order (most-trusted first):
+ *   1. serpState from the upstream SerpAPI extractor, if it's a 2-letter
+ *      uppercase code. Trusted as-is — the scraper now anchors parsing on
+ *      the end of the address (state+zip is always last), so misclassifying
+ *      state is extremely rare. Historically this function defaulted to
+ *      "TX" upstream and used `serpState !== "TX"` to detect "bad" rows,
+ *      which silently demoted actually-Texas restaurants to AZ when their
+ *      city/zip weren't in the small whitelists. That branch is gone.
+ *   2. ZIP3 lookup against a curated set of ranges we've encountered.
+ *   3. City lookup against curated sets for known metros.
+ *   4. Empty string if none of the above match. Callers must accept that
+ *      state can be empty for unrecognized rows rather than picking an
+ *      arbitrary default.
+ */
 function inferState(city, zip, serpState) {
+  const upstream = String(serpState || "").trim().toUpperCase();
+  if (/^[A-Z]{2}$/.test(upstream)) return upstream;
+
   const z3 = parseInt(String(zip || "").replace(/\D/g, "").slice(0, 3), 10);
   if (Number.isFinite(z3)) {
     if (z3 >= 850 && z3 <= 865) return "AZ";
@@ -49,8 +69,7 @@ function inferState(city, zip, serpState) {
   if (c === "minneapolis" || c === "saint paul" || c === "st. paul") return "MN";
   if (c === "portland") return "OR";
   if (c === "nashville") return "TN";
-  if (serpState && serpState.length === 2 && serpState !== "TX") return serpState;
-  return "AZ";
+  return "";
 }
 
 function priceNumToStr(n) {
