@@ -9,6 +9,7 @@ import CookieConsentBanner from "@/components/layout/CookieConsentBanner";
 import { FoundersNote } from "@/components/home/FoundersNote";
 import { BookingDrawerProvider } from "@/contexts/BookingDrawerContext";
 import { BookingDrawerWrapper } from "@/components/booking/BookingDrawerWrapper";
+import { getAppBaseUrl } from "@/lib/app-url";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,7 +25,7 @@ const siteName = "AfriTable";
 const siteTitle = "AfriTable — African & Caribbean dining across the United States";
 const siteDescription =
   "Discover and reserve vetted African and Caribbean restaurants nationwide—from Houston and DC to Miami, Seattle, and beyond.";
-const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+const siteUrl = getAppBaseUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
