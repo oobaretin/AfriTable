@@ -59,65 +59,29 @@ async function main() {
 
   console.log(`📊 Total restaurants: ${restaurants.length}\n`);
 
-  // Group by normalized name
-  const byName = new Map();
+  // Same name in different cities is NOT a duplicate — require name + address
+  console.log("🔍 Checking for duplicates by name + address...\n");
+  const byAddressName = new Map();
   for (const r of restaurants) {
-    const normalized = normalizeName(r.name);
-    if (!byName.has(normalized)) {
-      byName.set(normalized, []);
-    }
-    byName.get(normalized).push(r);
+    const key = `${normalizeName(r.name)}|${getAddressString(r.address)}`;
+    if (key.endsWith("|")) continue;
+    if (!byAddressName.has(key)) byAddressName.set(key, []);
+    byAddressName.get(key).push(r);
   }
 
-  // Find duplicates
   const duplicates = [];
-  for (const [normalizedName, group] of byName.entries()) {
-    if (group.length > 1) {
-      duplicates.push({ normalizedName, group });
-    }
+  for (const [key, group] of byAddressName.entries()) {
+    if (group.length > 1) duplicates.push({ key, group });
   }
 
   if (duplicates.length === 0) {
-    console.log("✅ No duplicates found by name!\n");
-    
-    // Also check by address + name combination
-    console.log("🔍 Checking for duplicates by address + name...\n");
-    const byAddressName = new Map();
-    for (const r of restaurants) {
-      const key = `${normalizeName(r.name)}|${getAddressString(r.address)}`;
-      if (!byAddressName.has(key)) {
-        byAddressName.set(key, []);
-      }
-      byAddressName.get(key).push(r);
-    }
-
-    const addressDuplicates = [];
-    for (const [key, group] of byAddressName.entries()) {
-      if (group.length > 1) {
-        addressDuplicates.push({ key, group });
-      }
-    }
-
-    if (addressDuplicates.length === 0) {
-      console.log("✅ No duplicates found by address + name either!\n");
-      return;
-    }
-
-    console.log(`⚠️  Found ${addressDuplicates.length} duplicate groups by address + name:\n`);
-    for (const { key, group } of addressDuplicates) {
-      console.log(`📌 "${group[0].name}" (${group.length} entries)`);
-      group.forEach((r, i) => {
-        const addr = getAddressString(r.address);
-        console.log(`   ${i + 1}. ${r.slug} | ${addr || "No address"} | Rating: ${r.external_avg_rating || "N/A"} | Created: ${r.created_at}`);
-      });
-      console.log();
-    }
+    console.log("✅ No duplicates found by name + address!\n");
     return;
   }
 
   console.log(`⚠️  Found ${duplicates.length} duplicate groups:\n`);
 
-  for (const { normalizedName, group } of duplicates) {
+  for (const { key, group } of duplicates) {
     console.log(`📌 "${group[0].name}" (${group.length} entries)`);
     group.forEach((r, i) => {
       const addr = getAddressString(r.address);
@@ -134,7 +98,7 @@ async function main() {
 
   // Determine which to keep (prefer: more data, better rating, older, active)
   const toDelete = [];
-  for (const { normalizedName, group } of duplicates) {
+  for (const { group } of duplicates) {
     // Sort by: active first, then by rating (higher), then by review count, then by creation date (older)
     const sorted = [...group].sort((a, b) => {
       if (a.is_active !== b.is_active) return b.is_active - a.is_active;

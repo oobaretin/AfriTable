@@ -50,22 +50,22 @@ async function main() {
     process.exit(1);
   }
 
-  // Group by normalized name
-  const byName = new Map();
-  for (const r of restaurants) {
-    const normalized = normalizeName(r.name);
-    if (!byName.has(normalized)) {
-      byName.set(normalized, []);
-    }
-    byName.get(normalized).push(r);
+  function getAddressString(address) {
+    if (!address || typeof address !== "object") return "";
+    return `${address.street || ""} ${address.city || ""}`.trim().toLowerCase();
   }
 
-  // Find duplicates
+  const byAddressName = new Map();
+  for (const r of restaurants) {
+    const key = `${normalizeName(r.name)}|${getAddressString(r.address)}`;
+    if (key.endsWith("|")) continue;
+    if (!byAddressName.has(key)) byAddressName.set(key, []);
+    byAddressName.get(key).push(r);
+  }
+
   const duplicates = [];
-  for (const [normalizedName, group] of byName.entries()) {
-    if (group.length > 1) {
-      duplicates.push({ normalizedName, group });
-    }
+  for (const [, group] of byAddressName.entries()) {
+    if (group.length > 1) duplicates.push({ group });
   }
 
   if (duplicates.length === 0) {
@@ -79,7 +79,7 @@ async function main() {
   const toDelete = [];
   const toKeep = [];
 
-  for (const { normalizedName, group } of duplicates) {
+  for (const { group } of duplicates) {
     // Sort by: active first, then by rating (higher), then by review count, then by creation date (older)
     const sorted = [...group].sort((a, b) => {
       if (a.is_active !== b.is_active) return b.is_active - a.is_active;

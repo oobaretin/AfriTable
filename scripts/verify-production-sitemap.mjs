@@ -2,14 +2,11 @@
 /**
  * Compare production sitemap URL count vs expected (local Supabase probe).
  */
-import fs from "node:fs";
-import path from "node:path";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 import { createClient } from "@supabase/supabase-js";
 
-const LOG_PATH = path.join(process.cwd(), ".cursor", "debug-fc91e6.log");
 const PROD_BASE = "https://afri-table.com";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -24,21 +21,6 @@ function loadEnv() {
     }
   } catch {}
   return env;
-}
-
-function agentLog(message, data) {
-  const line = JSON.stringify({
-    sessionId: "fc91e6",
-    runId: "sitemap-verify",
-    hypothesisId: "S1",
-    location: "verify-production-sitemap.mjs",
-    message,
-    data,
-    timestamp: Date.now(),
-  });
-  try {
-    fs.appendFileSync(LOG_PATH, `${line}\n`);
-  } catch {}
 }
 
 async function main() {
@@ -64,16 +46,6 @@ async function main() {
   const verdict =
     totalUrls >= 500 && restaurantUrls >= dbActive - 20 ? "PASS" : "FAIL";
 
-  agentLog("production sitemap probe", {
-    dbActive,
-    totalUrls,
-    restaurantUrls,
-    cache,
-    age,
-    status: res.status,
-    verdict,
-  });
-
   console.log("Production sitemap verification");
   console.log(`  DB active restaurants: ${dbActive}`);
   console.log(`  sitemap.xml <url> count:  ${totalUrls}`);
@@ -88,7 +60,6 @@ async function main() {
 }
 
 main().catch((e) => {
-  agentLog("error", { message: e.message });
   console.error(e);
   process.exit(1);
 });

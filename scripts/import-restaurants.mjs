@@ -141,8 +141,10 @@ async function importRestaurants(filePath) {
     try {
       if (!name) throw new Error("Missing restaurant.name");
       const city = restaurant?.address?.city || "city";
+      const catalogSlug =
+        typeof restaurant?.sources?.catalog_id === "string" ? restaurant.sources.catalog_id.trim() : "";
       const baseSlug = slugify(name);
-      let slug = `${baseSlug}-${slugify(city)}`;
+      let slug = catalogSlug || `${baseSlug}-${slugify(city)}`;
 
       // Ensure slug is unique enough.
       const { data: existing } = await supabase.from("restaurants").select("id").eq("slug", slug).maybeSingle();

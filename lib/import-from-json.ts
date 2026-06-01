@@ -163,8 +163,11 @@ async function importRestaurants(filePath: string) {
 
   for (const restaurant of restaurants) {
     try {
+      const catalogSlug = normalizeOptionalString(
+        (restaurant.sources as Record<string, unknown> | undefined)?.catalog_id,
+      );
       const baseSlug = slugify(restaurant.name);
-      let slug = `${baseSlug}-${slugify(restaurant.address.city)}`;
+      let slug = catalogSlug ?? `${baseSlug}-${slugify(restaurant.address.city)}`;
 
       const { data: existing } = await supabase.from("restaurants").select("id").eq("slug", slug).maybeSingle();
       if (existing) slug += `-${Date.now()}`;

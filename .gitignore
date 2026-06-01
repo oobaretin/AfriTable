@@ -28,6 +28,8 @@
 import-credentials.txt
 import-results.json
 data/import-dry-run.json
+data/consolidate-report.json
+data/missing-catalog-import.json
 
 # scraped data (never commit)
 data/serpapi-*.json
