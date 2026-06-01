@@ -8798,5 +8798,1001 @@
     "google_place_id": "ChIJbR_U0RhpXIYRhmQuqxHVxZQ",
     "lat": 29.5462971,
     "lng": -98.615595
+  },
+  {
+    "id": "safari-houston",
+    "name": "Safari",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.1,
+    "address": "10014 Bissonnet St, Houston, TX 77036",
+    "phone": "+1 713-541-4436",
+    "website": "https://thesafarirestaurant.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Classic Nigerian spot with a long history in Houston, serving traditional dishes like egusi, jollof rice, and suya. A community favorite.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "lucy-houston",
+    "name": "Lucy",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.4,
+    "address": "6800 Southwest Fwy, Houston, TX 77074",
+    "phone": "+1 713-334-0000",
+    "website": "http://www.lucyhouston.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Lucy.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "bahel-ethiopian-mart-and-dining-houston",
+    "name": "Bahel Ethiopian Mart and Dining",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.6,
+    "address": "6509 Chimney Rock Rd, Houston, TX 77081",
+    "phone": "(713) 234-6527",
+    "website": "http://www.bahelmart.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Bahel Ethiopian Mart and Kitchen serves authentic Ethiopian cuisine with quality ingredients and traditional dishes in a welcoming space. Experience authentic flavors in Houston. Bahel Ethiopian Mart and Kitchen would be honored to provide our services for your next event.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "afrikiko-houston",
+    "name": "Afrikiko",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.4,
+    "address": "9625 Bissonnet St, Houston, TX 77036",
+    "phone": "+1 713-773-1400",
+    "website": "http://afrikikohouston.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Afrikiko.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "dee-titolat-african-restaurant-houston",
+    "name": "Dee Titolat African Restaurant",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "11965 Bissonnet St STE 110, Houston, TX 77099",
+    "phone": "(281) 372-6173",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Dee Titolat African Restaurant.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "vertex-houston",
+    "name": "Vertex",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.9,
+    "address": "6580 Southwest Fwy Suite C, Houston, TX 77074",
+    "phone": "(281) 989-4399",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Vertex.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "marie-african-flavors",
+    "name": "Marie African Flavors",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$$",
+    "rating": 3.5,
+    "address": "12600 Bissonnet St Ste A7, Houston, TX 77099",
+    "phone": "+1 832-771-8778",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "African restaurant featuring jollof rice, grilled fish, and more.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "afro-caribbean-grill",
+    "name": "Afro Caribbean Grill",
+    "cuisine": "African",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.2,
+    "address": "1903 Blodgett St, Houston, TX 77004",
+    "phone": "+1 713-804-2764",
+    "website": "https://afrocaribbeangrill.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "West African and Caribbean fusion featuring suya, jerk, and more, with catering.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "osuma-suya-houston",
+    "name": "Osuma Suya",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.6,
+    "address": "3306 S Texas 6 Unit 100, Houston, TX 77082",
+    "phone": "(346) 357-3778",
+    "website": "https://www.osumasuya.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Osuma Suya.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "nini-kitchen-houston",
+    "name": "Nini Kitchen",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.6,
+    "address": "7627 Cook Rd, Houston, TX 77072",
+    "phone": "(832) 235-8526",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Nini Kitchen.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "sabo-suya-houston",
+    "name": "Sabo Suya",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.3,
+    "address": "9405 Country Creek St, Houston, TX 77036",
+    "phone": "(832) 768-5973",
+    "website": "http://sabosuya.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Sabo Suya.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "ethio-coffee-and-souk-houston",
+    "name": "Ethio Coffee and Souk",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "6580 Southwest Fwy Suite # B, Houston, TX 77074",
+    "phone": "(713) 829-9974",
+    "website": "https://www.facebook.com/coffeeshopandsouk",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Ethio Coffee and Souk.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "fabaceae-african-cuisine",
+    "name": "Fabaceae African Cuisine",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.2,
+    "address": "10023 S Main St Bldg 7, Houston, TX 77025",
+    "phone": "+1 512-840-0855",
+    "website": "http://www.fabaceaecuisine.com",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Nigerian cuisine focused on classic dishes.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "blue-nile-ethiopian-restaurant",
+    "name": "Blue Nile Ethiopian Restaurant",
+    "cuisine": "Ethiopian",
+    "region": "African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "7770 Southwest Fwy, Houston, TX 77074",
+    "phone": "+1 713-774-3000",
+    "website": "https://www.bluenilerestaurant.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Blue Nile Ethiopian Restaurant located in the River Oaks neighborhood of Houston, TX. We have been nominated as one of the best ethnic restaurant among the Houston community. Food lovers will enjoy the unique taste of Ethiopian dishes.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "bantu-house",
+    "name": "Bantu House",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$$$",
+    "rating": 4.7,
+    "address": "22224 Northwest Fwy, Ste B, Cypress, TX 77429",
+    "phone": "+1 713-360-8333",
+    "website": "http://bantuhouse.com",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Celebrates diverse African culinary heritage with regional dishes and cultural vibe.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "ch-pnbl-k-houston-1769474644390",
+    "name": "ChòpnBlọk",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.6,
+    "address": "507 Westheimer Rd, Houston, TX 77006",
+    "phone": "(832) 962-4500",
+    "website": "https://chopnblok.co/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at ChòpnBlọk.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "rodo-nigerian-cuisine-richmond",
+    "name": "Rodo Nigerian Cuisine",
+    "cuisine": "Nigerian",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "16805 Bissonnet St, Richmond, TX 77407",
+    "phone": "(281) 302-5274",
+    "website": "https://rodonigeriancuisine.com/?utm_source=google",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Nigerian restaurant in Houston. Experience traditional Nigerian flavors and hospitality at Rodo Nigerian Cuisine.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "sarabell-calabar-restaurant-buffet-houston",
+    "name": "Sarabell Calabar Restaurant & Buffet",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$$",
+    "rating": 4.7,
+    "address": "9801 Bissonnet St Suite C, Houston, TX 77036",
+    "phone": "(713) 814-5253",
+    "website": "https://sarabellcalabarrestaurant.com/?utm_source=google",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Sarabell Calabar Restaurant & Buffet.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "delights-ghanaian-cuisine-houston",
+    "name": "Delight's Ghanaian Cuisine",
+    "cuisine": "Ghanaian",
+    "region": "West African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "14524 Piping Rock Ln, Houston, TX 77077",
+    "phone": "(281) 995-1958",
+    "website": "https://order.spoton.com/so-delights-delight-kitchen-3629/houston-tx/6532c4ce2cb4e2003dd65e05",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Ghanaian restaurant in Houston. Experience traditional Ghanaian flavors and hospitality at Delight's Ghanaian Cuisine.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "suya-on-the-spot-houston",
+    "name": "Suya on the spot",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.4,
+    "address": "3418 S Texas 6 Suite C, Houston, TX 77082",
+    "phone": "(346) 252-3158",
+    "website": "http://suyaonthespot.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Suya on the spot.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "abula-hotpot-houston",
+    "name": "Abula HotPot",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.5,
+    "address": "12703 Alief Clodine Rd, Houston, TX 77082",
+    "phone": "(832) 303-4591",
+    "website": "https://abulahotpottx.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Abula HotPot.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "amala-joint-houston",
+    "name": "Amala Joint",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.4,
+    "address": "6271 S Texas 6, Houston, TX 77083",
+    "phone": "(281) 721-2982",
+    "website": "http://www.amalajointhouston.com/?utm_source=gmb&utm_medium=website",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Amala Joint.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "adulis-houston",
+    "name": "Adulis",
+    "cuisine": "Eritrean",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "5800 Bellaire Blvd #102, Houston, TX 77081",
+    "phone": "(346) 571-0966",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Eritrean restaurant in Houston. Experience traditional Eritrean flavors and hospitality at Adulis.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "blue-nile-houston",
+    "name": "Blue Nile",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.5,
+    "address": "3030 Audley St, Houston, TX 77098",
+    "phone": "(713) 814-5101",
+    "website": "https://bluenilerestaurant.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Blue Nile.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "kenna-houston",
+    "name": "Kenna",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.6,
+    "address": "6121 Hillcroft Ave c1, Houston, TX 77081",
+    "phone": "(346) 319-5845",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Kenna.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "harar-ethiopian-restaurant-houston",
+    "name": "Harar Ethiopian Restaurant",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.8,
+    "address": "5506 Bellaire Blvd ste c, Houston, TX 77081",
+    "phone": "(713) 485-0378",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Harar Ethiopian Restaurant.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "selam-houston",
+    "name": "Selam",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$$",
+    "rating": 5,
+    "address": "5701 Bellaire Blvd d, Houston, TX 77081",
+    "phone": "(832) 790-3266",
+    "website": "https://selamspecialty.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Selam.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "ewatomi-houston",
+    "name": "Ewatomi",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.5,
+    "address": "15000 Bellaire Blvd ste q, Houston, TX 77083",
+    "phone": "(346) 433-9338",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Ewatomi.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "sheba-houston",
+    "name": "Sheba",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.7,
+    "address": "6121 Hillcroft Ave Suite N, Houston, TX 77081",
+    "phone": "(713) 995-6768",
+    "website": "https://shebatx.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Sheba.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "horn-of-africa-houston",
+    "name": "Horn of Africa",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 4.3,
+    "address": "5930 Renwick Dr Suite B, Houston, TX 77081",
+    "phone": "(713) 838-1111",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Horn of Africa.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "nazareth-cafe-houston",
+    "name": "Nazareth Cafe",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 3.8,
+    "address": "6617 Chimney Rock Rd, Houston, TX 77081",
+    "phone": "(713) 218-9883",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Nazareth Cafe.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "traditional-food-restaurant-houston",
+    "name": "Traditional Food Restaurant",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.3,
+    "address": "11214 Plainfield St # B, Houston, TX 77031",
+    "phone": "(713) 270-7610",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Traditional Food Restaurant.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "komchop-houston",
+    "name": "Komchop",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.1,
+    "address": "14144 Westheimer Rd #120, Houston, TX 77077",
+    "phone": "(281) 741-3571",
+    "website": "https://www.komchop.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Komchop.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "cafe-de-vivre-houston",
+    "name": "Cafe De Vivre",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.5,
+    "address": "14165 Bissonnet St Suite P, Houston, TX 77083",
+    "phone": "(832) 665-7757",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Cafe De Vivre.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "glam-divine-treats-houston",
+    "name": "Glam Divine Treats",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.6,
+    "address": "6788 Synott Rd, Houston, TX 77083",
+    "phone": "(346) 335-7116",
+    "website": "https://glamdivinetreatssoulnafricanfood.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Glam Divine Treats.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "unique-african-cuisine-houston",
+    "name": "Unique African Cuisine",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.3,
+    "address": "6101 Wilcrest Dr, Houston, TX 77072",
+    "phone": "(281) 575-1665",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Unique African Cuisine.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "glozi-calabar-restaurant-and-african-cuisine-houston",
+    "name": "Glozi Calabar Restaurant and African Cuisine.",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.9,
+    "address": "12825 Westheimer Rd, Houston, TX 77077",
+    "phone": "(346) 414-1929",
+    "website": "https://www.glozicalabarrestaurant.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Glozi Calabar Restaurant and African Cuisine..",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "grill-master-african-restaurant-houston",
+    "name": "Grill master African Restaurant",
+    "cuisine": "African",
+    "region": "African",
+    "price_range": "$$",
+    "rating": 5,
+    "address": "9755 S Kirkwood Rd D, Houston, TX 77099",
+    "phone": "(346) 491-5054",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Grill master African Restaurant.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "authentic-african-restaurant-bar-houston",
+    "name": "Authentic African Restaurant & Bar",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$",
+    "rating": 4.4,
+    "address": "9705 Synott Rd suite 107, Houston, TX 77083",
+    "phone": "(832) 529-9010",
+    "website": "https://authenticafricanfoods.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Authentic African Restaurant & Bar.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "somali-restaurant-syracuse",
+    "name": "Somali Restaurant",
+    "cuisine": "Somali",
+    "region": "East African",
+    "price_range": "$",
+    "rating": 5,
+    "address": "656 N Salina St, Syracuse, NY 13208",
+    "phone": "(315) 218-6025",
+    "website": "https://www.somali-restaurant.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Somali restaurant in Houston. Experience traditional Somali flavors and hospitality at Somali Restaurant.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "NY"
+  },
+  {
+    "id": "somali-halal-store-mechanicsburg",
+    "name": "Somali Halal store",
+    "cuisine": "Somali",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 5,
+    "address": "5247 Simpson Ferry Rd, Mechanicsburg, TX 17050",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic Somali restaurant in Houston. Experience traditional Somali flavors and hospitality at Somali Halal store.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "dakar-street-food-blodgett-houston",
+    "name": "Dakar Street Food @BLODGETT",
+    "cuisine": "West African",
+    "region": "African",
+    "price_range": "$$",
+    "rating": 4.9,
+    "address": "2616 Blodgett St, Houston, TX 77004",
+    "phone": "(346) 778-8287",
+    "website": "https://dakarstreetfood.com/?utm_source=google",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Dakar Street Food @BLODGETT.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
+  },
+  {
+    "id": "sf-001",
+    "name": "Teranga",
+    "cuisine": "Senegalese / West African",
+    "region": "West African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "1 Embarcadero Center, San Francisco, CA 94111",
+    "phone": "(415) 655-9051",
+    "website": "https://www.terangalf.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "A polished, health-conscious Senegalese restaurant in San Francisco's Financial District, offering authentic West African dishes like Baobab Energy Bowls and Yassa Chicken.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "CA"
+  },
+  {
+    "id": "hou-sta-018",
+    "name": "Caribbean Hotpot Grill",
+    "cuisine": "Pan-Caribbean",
+    "region": "Caribbean",
+    "price_range": "$",
+    "rating": 4.5,
+    "address": "5601 Navigation Blvd, Houston, TX 77011",
+    "phone": "(713) 222-2600",
+    "website": "http://www.caribbeanhotpotgrill.com/",
+    "hours": {
+      "mon_sat": "11:00 AM - 9:00 PM (confirm)",
+      "sun": "Varies"
+    },
+    "about": "Famous for their massive portions and affordability. It's a true worker's lunch spot.",
+    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
+    "cultural_roots": "Diaspora dining in the United States.",
+    "menu_highlights": [
+      "Call for seasonal specials"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX"
   }
 ]
