@@ -24,21 +24,6 @@ import { dirname, resolve } from "node:path";
 import { randomUUID } from "node:crypto";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const SESSION_ID = "fc91e6";
-const RUN_ID = `auth-probe-${Date.now()}`;
-const DEBUG_ENDPOINT = "http://127.0.0.1:7668/ingest/f4aec2f7-622b-445a-95fa-99041b9558b2";
-
-async function log(hypothesisId, location, message, data) {
-  try {
-    await fetch(DEBUG_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": SESSION_ID },
-      body: JSON.stringify({ sessionId: SESSION_ID, runId: RUN_ID, hypothesisId, location, message, data, timestamp: Date.now() }),
-    });
-  } catch {
-    /* never block */
-  }
-}
 
 function loadEnv() {
   const env = { ...process.env };
@@ -88,13 +73,6 @@ try {
     .eq("id", createdUserId)
     .maybeSingle();
 
-  await log("A1", "probe-auth-flow.mjs:A1", "signup + auto-profile", {
-    userId: createdUserId,
-    profileExists: Boolean(profile),
-    profileError: profErr?.message ?? null,
-    profileSnapshot: profile,
-    verdict: profile && profile.role === "diner" ? "PASS" : "FAIL",
-  });
   console.log(`A1 signup + auto-profile: userId=${createdUserId} profile=${profile ? "yes" : "NO"} role=${profile?.role ?? "?"}`);
   if (!profile) throw new Error("handle_new_user trigger did not create profile");
 
@@ -121,12 +99,6 @@ try {
     .eq("id", createdUserId)
     .maybeSingle();
 
-  await log("A2", "probe-auth-flow.mjs:A2", "user SELECTs own profile", {
-    rowReturned: Boolean(ownRow),
-    error: ownErr?.message ?? null,
-    matchesSelf: ownRow?.id === createdUserId,
-    verdict: ownRow?.id === createdUserId ? "PASS" : "FAIL",
-  });
   console.log(`A2 SELECT own profile: row=${ownRow ? "yes" : "NO"} err=${ownErr?.code ?? "none"}`);
 
   // A3 — user CANNOT SELECT another user's profile
@@ -136,12 +108,6 @@ try {
       .select("id, full_name, role")
       .eq("id", otherUserId)
       .maybeSingle();
-    await log("A3", "probe-auth-flow.mjs:A3", "user SELECTs OTHER profile", {
-      otherIdTried: otherUserId,
-      rowReturned: Boolean(otherRow),
-      errorCode: otherErr?.code ?? null,
-      verdict: !otherRow ? "PASS" : "FAIL — cross-user read still possible",
-    });
     console.log(`A3 SELECT other profile: row=${otherRow ? "LEAK" : "denied"} err=${otherErr?.code ?? "none"}`);
   } else {
     console.log(`A3 SKIPPED: no other user available`);
@@ -149,11 +115,6 @@ try {
 
   // A4 — current_user_role() returns 'diner' (proves SECURITY DEFINER fix works for auth'd callers)
   const { data: roleViaRpc, error: roleErr } = await userClient.rpc("current_user_role");
-  await log("A4", "probe-auth-flow.mjs:A4", "current_user_role() for auth'd user", {
-    role: roleViaRpc,
-    error: roleErr?.message ?? null,
-    verdict: roleViaRpc === "diner" ? "PASS" : "FAIL",
-  });
   console.log(`A4 current_user_role(): ${roleViaRpc ?? "(null)"} err=${roleErr?.code ?? "none"}`);
 
   // A5 — upgrade role to restaurant_owner via admin, then check user sees it on next read
@@ -169,15 +130,9 @@ try {
     .eq("id", createdUserId)
     .maybeSingle();
   const { data: roleViaRpcAfter } = await userClient.rpc("current_user_role");
-  await log("A5", "probe-auth-flow.mjs:A5", "role upgrade visibility", {
-    profileRowRole: afterUpgrade?.role,
-    rpcRole: roleViaRpcAfter,
-    verdict: afterUpgrade?.role === "restaurant_owner" && roleViaRpcAfter === "restaurant_owner" ? "PASS" : "FAIL",
-  });
   console.log(`A5 role upgrade: profileRow=${afterUpgrade?.role ?? "?"} rpc=${roleViaRpcAfter ?? "?"}`);
 } catch (err) {
   console.error(`PROBE ERROR: ${err?.message ?? err}`);
-  await log("ERROR", "probe-auth-flow.mjs:catch", "probe threw", { error: String(err?.message ?? err) });
 } finally {
   // A6 — cleanup. Delete test user; verify profile row also gone (FK cascade).
   if (createdUserId) {
@@ -187,11 +142,6 @@ try {
       .select("id")
       .eq("id", createdUserId)
       .maybeSingle();
-    await log("A6", "probe-auth-flow.mjs:A6", "cleanup cascade", {
-      deleteUserError: delErr?.message ?? null,
-      profileRowStillExists: Boolean(profAfterDelete),
-      verdict: !delErr && !profAfterDelete ? "PASS" : "FAIL",
-    });
     console.log(`A6 cleanup: deleteUser=${delErr ? "FAIL " + delErr.message : "OK"} profileGone=${!profAfterDelete}`);
   }
   console.log("\nProbe complete.");

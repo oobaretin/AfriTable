@@ -26,21 +26,6 @@ import { fileURLToPath } from "node:url";
 import { dirname, resolve, isAbsolute } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const SESSION_ID = "fc91e6";
-const RUN_ID = `apply-${Date.now()}`;
-const DEBUG_ENDPOINT = "http://127.0.0.1:7668/ingest/f4aec2f7-622b-445a-95fa-99041b9558b2";
-
-async function log(hypothesisId, location, message, data) {
-  try {
-    await fetch(DEBUG_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": SESSION_ID },
-      body: JSON.stringify({ sessionId: SESSION_ID, runId: RUN_ID, hypothesisId, location, message, data, timestamp: Date.now() }),
-    });
-  } catch {
-    // never break the apply on log failure
-  }
-}
 
 function loadEnv() {
   const env = { ...process.env };
@@ -90,14 +75,6 @@ console.log(`Applying ${migrationPath}`);
 console.log(`Target project ref: ${projectRef}`);
 console.log("");
 
-// #region agent log
-await log("APPLY", "apply-migration-via-mgmt-api.mjs:pre", "applying migration via mgmt api", {
-  projectRef,
-  migrationFile: migrationPath.replace(__dirname + "/..", ""),
-  sqlByteLength: sql.length,
-});
-// #endregion
-
 const endpoint = `https://api.supabase.com/v1/projects/${projectRef}/database/query`;
 const startMs = Date.now();
 let response, bodyText;
@@ -119,15 +96,6 @@ try {
 const elapsedMs = Date.now() - startMs;
 console.log(`HTTP ${response.status} ${response.statusText}  (${elapsedMs}ms)`);
 console.log(`Body: ${bodyText.slice(0, 800)}${bodyText.length > 800 ? "..." : ""}`);
-
-// #region agent log
-await log("APPLY", "apply-migration-via-mgmt-api.mjs:response", "mgmt api response", {
-  httpStatus: response.status,
-  ok: response.ok,
-  elapsedMs,
-  bodyPreview: bodyText.slice(0, 300),
-});
-// #endregion
 
 if (!response.ok) {
   console.error("\nApply FAILED. Common causes:");

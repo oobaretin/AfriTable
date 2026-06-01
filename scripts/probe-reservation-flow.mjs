@@ -21,21 +21,6 @@ import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const SESSION_ID = "fc91e6";
-const RUN_ID = `r-probe-${Date.now()}`;
-const DEBUG_ENDPOINT = "http://127.0.0.1:7668/ingest/f4aec2f7-622b-445a-95fa-99041b9558b2";
-
-async function log(hypothesisId, location, message, data) {
-  try {
-    await fetch(DEBUG_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": SESSION_ID },
-      body: JSON.stringify({ sessionId: SESSION_ID, runId: RUN_ID, hypothesisId, location, message, data, timestamp: Date.now() }),
-    });
-  } catch {
-    // never block on log failure
-  }
-}
 
 function loadEnv() {
   const env = { ...process.env };
@@ -59,14 +44,12 @@ const { count: activeCount } = await admin
   .from("restaurants")
   .select("id", { count: "exact", head: true })
   .eq("is_active", true);
-await log("R1", "probe-reservation-flow.mjs:R1", "active restaurants count", { count: activeCount });
 console.log(`R1 active DB restaurants: ${activeCount}`);
 
 // R2: count with availability_settings
 const { count: settingsCount } = await admin
   .from("availability_settings")
   .select("restaurant_id", { count: "exact", head: true });
-await log("R2", "probe-reservation-flow.mjs:R2", "availability_settings count", { count: settingsCount });
 console.log(`R2 restaurants with availability_settings: ${settingsCount}  (need >0 for ANY bookings)`);
 
 // R3: count with at least one table
@@ -75,9 +58,6 @@ const { data: tablesByRestaurant } = await admin
   .select("restaurant_id")
   .eq("is_active", true);
 const restaurantsWithTables = new Set((tablesByRestaurant ?? []).map((r) => r.restaurant_id));
-await log("R3", "probe-reservation-flow.mjs:R3", "restaurants with at least 1 active table", {
-  count: restaurantsWithTables.size,
-});
 console.log(`R3 restaurants with ≥1 active table:      ${restaurantsWithTables.size}`);
 
 // R4: restaurants with availability_settings AND operating_hours non-empty AND ≥1 table
@@ -88,21 +68,11 @@ const viable = (settingsRows ?? []).filter((s) => {
   const ops = Array.isArray(s.operating_hours) ? s.operating_hours : [];
   return ops.length > 0 && restaurantsWithTables.has(s.restaurant_id);
 });
-await log("R4", "probe-reservation-flow.mjs:R4", "viable for online booking", {
-  count: viable.length,
-  sampleIds: viable.slice(0, 5).map((v) => v.restaurant_id),
-});
 console.log(`R4 restaurants viable for online booking: ${viable.length}  (have settings + tables + operating_hours)`);
 
 // R5: operating_hours coverage profile for first 3 viable candidates
 for (const v of viable.slice(0, 3)) {
   const dows = (v.operating_hours ?? []).map((o) => o.day_of_week);
-  await log("R5", "probe-reservation-flow.mjs:R5", "viable candidate profile", {
-    restaurantId: v.restaurant_id,
-    dowCoverage: dows,
-    slotMin: v.slot_duration_minutes,
-    maxParty: v.max_party_size,
-  });
   console.log(`R5 candidate ${v.restaurant_id} dow=${JSON.stringify(dows)} slot=${v.slot_duration_minutes}m maxParty=${v.max_party_size}`);
 }
 
@@ -143,15 +113,6 @@ if (viable.length === 0) {
       p_special_requests: "internal probe — safe to ignore",
       p_occasion: null,
       p_user_id: null,
-    });
-    await log("R6", "probe-reservation-flow.mjs:R6", "RPC dry run", {
-      candidate: candidate.restaurant_id,
-      date: target.date,
-      time: tt,
-      ok: !rpcErr,
-      errorCode: rpcErr?.code ?? null,
-      errorMessage: rpcErr?.message ?? null,
-      reservationId: rpc?.id ?? null,
     });
     if (rpcErr) {
       console.log(`R6 RPC error: code=${rpcErr.code} msg=${rpcErr.message}`);
