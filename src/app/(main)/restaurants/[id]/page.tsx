@@ -177,6 +177,26 @@ function todayHours(operatingHours: any, date = new Date()) {
   return { label: formatTimeRange12h(open, close), openNow, hasHours: true };
 }
 
+const UUID_RE =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+function isUuid(value: string): boolean {
+  return UUID_RE.test(value);
+}
+
+/** Resolve catalog slug to Supabase UUID for reviews, hours, and similar-restaurant queries. */
+async function resolveSupabaseRestaurantId(slugOrId: string): Promise<string | null> {
+  if (isUuid(slugOrId)) return slugOrId;
+  const supabase = createSupabasePublicClient();
+  const { data } = await supabase
+    .from("restaurants")
+    .select("id")
+    .eq("slug", slugOrId)
+    .eq("is_active", true)
+    .maybeSingle();
+  return data?.id ?? null;
+}
+
 async function getRestaurantById(id: string): Promise<RestaurantDetail | null> {
   // First, try to load from restaurants.json by id
   const jsonRestaurant = getRestaurantByIdFromJSON(id);
@@ -265,11 +285,14 @@ async function getSimilarRestaurants(restaurantId: string, cuisines: string[]) {
   const supabase = createSupabasePublicClient();
   if (!Array.isArray(cuisines) || cuisines.length === 0) return [];
 
+  const dbId = isUuid(restaurantId) ? restaurantId : await resolveSupabaseRestaurantId(restaurantId);
+  if (!dbId) return [];
+
   const { data } = await supabase
     .from("restaurants_with_rating")
     .select("id,name,slug,cuisine_types,price_range,address,images,avg_rating,review_count,is_active,created_at")
     .eq("is_active", true)
-    .neq("id", restaurantId)
+    .neq("id", dbId)
     // best-effort: filter in app (json/array contains differs across drivers)
     .order("avg_rating", { ascending: false, nullsFirst: false })
     .order("created_at", { ascending: false })
@@ -329,16 +352,20 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
   }
   console.log(`[RestaurantPage] ✅ Successfully loaded restaurant: "${restaurant.name}" (${restaurant.id || restaurant.slug})`);
 
+  const catalogSlug = restaurant.slug || id;
+  const dbRestaurantId =
+    (isUuid(restaurant.id) ? restaurant.id : null) ?? (await resolveSupabaseRestaurantId(catalogSlug));
+
   const [operatingHours, reviews, similarFromDb] = await Promise.all([
-    getOperatingHours(restaurant.id, restaurant.hours),
-    getReviews(restaurant.id),
-    getSimilarRestaurants(restaurant.id, restaurant.cuisine_types),
+    dbRestaurantId ? getOperatingHours(dbRestaurantId, restaurant.hours) : Promise.resolve([]),
+    dbRestaurantId ? getReviews(dbRestaurantId) : Promise.resolve([]),
+    getSimilarRestaurants(dbRestaurantId ?? catalogSlug, restaurant.cuisine_types),
   ]);
 
   // Fallback: when Supabase has no/few restaurants, use JSON for "You might also like"
   let similar = similarFromDb;
   if (!similar.length) {
-    const fromJson = getSimilarRestaurantsFromJSON(restaurant.id, restaurant.cuisine_types || [], 6);
+    const fromJson = getSimilarRestaurantsFromJSON(catalogSlug, restaurant.cuisine_types || [], 6);
     similar = fromJson.map((r) => transformJSONRestaurantToDetail(r));
   }
 

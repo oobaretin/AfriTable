@@ -168,7 +168,7 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
     id: jsonRestaurant.id,
     name: jsonRestaurant.name,
     slug: jsonRestaurant.id, // Use id as slug
-    cuisine_types: [jsonRestaurant.cuisine],
+    cuisine_types: [jsonRestaurant.cuisine, jsonRestaurant.region].filter(Boolean),
     price_range: priceRangeMap[jsonRestaurant.price_range] || 2,
     description: jsonRestaurant.about || null,
     our_story: jsonRestaurant.our_story || null,

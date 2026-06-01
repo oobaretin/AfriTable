@@ -64,19 +64,16 @@ export function getSimilarRestaurantsFromJSON(
   const lower = (s: string) => (s || "").toLowerCase();
   const cuisineSet = new Set((cuisineTypes || []).map(lower));
 
-  const matching =
-    cuisineSet.size > 0
-      ? rest.filter((r) => {
-          const c = lower(r.cuisine || "");
-          const reg = lower(r.region || "");
-          return (
-            cuisineSet.has(c) ||
-            cuisineSet.has(reg) ||
-            [...cuisineSet].some((t) => c.includes(t) || reg.includes(t))
-          );
-        })
-      : rest;
+  const matchesCuisine = (c: string, reg: string) =>
+    cuisineSet.size === 0 ||
+    cuisineSet.has(c) ||
+    cuisineSet.has(reg) ||
+    [...cuisineSet].some((t) => c.includes(t) || t.includes(c) || reg.includes(t) || t.includes(reg));
 
-  const byRating = [...matching].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+  const matching = rest.filter((r) => matchesCuisine(lower(r.cuisine || ""), lower(r.region || "")));
+
+  // Prefer cuisine matches; otherwise show top-rated peers (same as Supabase path).
+  const pool = matching.length > 0 ? matching : rest;
+  const byRating = [...pool].sort((a, b) => (b.rating || 0) - (a.rating || 0));
   return byRating.slice(0, limit);
 }
