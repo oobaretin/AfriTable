@@ -3347,7 +3347,8 @@
       "wed_sun": "11:00 AM - 5:00 PM",
       "mon_tue": "Closed"
     },
-    "google_search_url": "https://www.google.com/search?q=Belle%20%26%20Lily's%2C%203350%20Chamblee%20Tucker%20Rd%2C%20Atlanta%2C%20GA%2030341"
+    "google_search_url": "https://www.google.com/search?q=Belle%20%26%20Lily's%2C%203350%20Chamblee%20Tucker%20Rd%2C%20Atlanta%2C%20GA%2030341",
+    "website": "https://www.belleandlilys.com"
   },
   {
     "id": "katy-001",
@@ -3997,7 +3998,8 @@
     "google_place_id": "ChIJdaHRjWNtK4cRNPnyxIe8o8s",
     "lat": 33.5392157,
     "lng": -112.0986088,
-    "google_search_url": "https://www.google.com/search?q=Authentic%20Liberian%20Cuisine%2C%207017%20N%2019th%20Ave%2C%20Phoenix%2C%20AZ%2085021"
+    "google_search_url": "https://www.google.com/search?q=Authentic%20Liberian%20Cuisine%2C%207017%20N%2019th%20Ave%2C%20Phoenix%2C%20AZ%2085021",
+    "website": "https://authentic-liberian-cuisine.square.site"
   },
   {
     "id": "naija-soul-kitchen-phoenix",
@@ -4453,7 +4455,8 @@
     "google_place_id": "ChIJWZq0ORQKlVQRaiHmQH8gpjg",
     "lat": 45.5238902,
     "lng": -122.6809875,
-    "google_search_url": "https://www.google.com/search?q=Black%20Star%20Grill%2C%20110%20NW%2010th%20Ave%2C%20Portland%2C%20OR%2097209"
+    "google_search_url": "https://www.google.com/search?q=Black%20Star%20Grill%2C%20110%20NW%2010th%20Ave%2C%20Portland%2C%20OR%2097209",
+    "website": "https://www.blackstargrill.com"
   },
   {
     "id": "madina-restaurant-nashville",
@@ -6863,7 +6866,8 @@
     "google_place_id": "ChIJRwipfhAdMYgRCTNYphaYn5k",
     "lat": 41.4344608,
     "lng": -81.4987718,
-    "google_search_url": "https://www.google.com/search?q=Choukouya%20Resto-Bar%2C%204620%20Richmond%20Rd%20%23292%2C%20Cleveland%2C%20OH%2044128"
+    "google_search_url": "https://www.google.com/search?q=Choukouya%20Resto-Bar%2C%204620%20Richmond%20Rd%20%23292%2C%20Cleveland%2C%20OH%2044128",
+    "website": "https://www.choukouyarestobar.com"
   },
   {
     "id": "sandra-aduke-s-kitchen-cleveland",
@@ -7235,7 +7239,8 @@
     "google_place_id": "ChIJfyDx5BldK4gR3uiIElVOiHg",
     "lat": 43.4563236,
     "lng": -79.6842547,
-    "google_search_url": "https://www.google.com/search?q=Bunmi%20%E1%BB%8Cl%E1%BB%8D%CC%81b%E1%BA%B9%CC%80%2C%20187%20Cross%20Ave%20unit%205%2C%20Oakville%2C%20ON%20L6J%203J3%2C"
+    "google_search_url": "https://www.google.com/search?q=Bunmi%20%E1%BB%8Cl%E1%BB%8D%CC%81b%E1%BA%B9%CC%80%2C%20187%20Cross%20Ave%20unit%205%2C%20Oakville%2C%20ON%20L6J%203J3%2C%20%20",
+    "website": "https://bunmiolobe.ca"
   },
   {
     "id": "pats-delicious-nigeria-restaurant-columbus",
@@ -8545,7 +8550,8 @@
     "google_place_id": "ChIJK9Hjdnp754gRgDzlt1vxaf0",
     "lat": 28.5038204,
     "lng": -81.3765488,
-    "google_search_url": "https://www.google.com/search?q=Flavors%20Nigerian%20Restaurant%2C%203530%20S%20Orange%20Ave%2C%20Orlando%2C%20FL%2032806"
+    "google_search_url": "https://www.google.com/search?q=Flavors%20Nigerian%20Restaurant%2C%203530%20S%20Orange%20Ave%2C%20Orlando%2C%20FL%2032806",
+    "website": "https://www.flavorsnigerianrestaurant.com"
   },
   {
     "id": "selam-ethiopian-eritrean-cuisine-orlando",
@@ -9134,7 +9140,8 @@
     "google_place_id": "ChIJbR_U0RhpXIYRhmQuqxHVxZQ",
     "lat": 29.5462971,
     "lng": -98.615595,
-    "google_search_url": "https://www.google.com/search?q=AfroTex%20Grill%20-%20BOWLS%2C%20BURRITOS%20%26%20SUYA%20PLATES%2C%206422%20Babcock%20Rd%20Suit%20101%2C%20San%20Antonio%2C%20TX%2078249"
+    "google_search_url": "https://www.google.com/search?q=AfroTex%20Grill%20-%20BOWLS%2C%20BURRITOS%20%26%20SUYA%20PLATES%2C%206422%20Babcock%20Rd%20Suit%20101%2C%20San%20Antonio%2C%20TX%2078249",
+    "website": "https://afrotexgrill.square.site"
   },
   {
     "id": "safari-houston",
