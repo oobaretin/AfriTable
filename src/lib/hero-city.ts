@@ -64,6 +64,13 @@ const CITY_ALIAS_TO_FILTER: Record<string, HeroFilterCity> = {
   "san antonio": "San Antonio",
 };
 
+/** Primary city token from filter label or `City, ST` URL values. */
+export function primaryCityToken(selected: string): string {
+  const s = selected.trim().toLowerCase();
+  if (!s) return "";
+  return s.split(",")[0].trim();
+}
+
 /** Map URL `?city=` values to CityFilter labels. */
 export function cityFromUrlToDisplay(urlCity: string): string {
   const raw = urlCity.trim();

@@ -11,10 +11,15 @@ import { cityFromUrlToDisplay } from "@/lib/hero-city";
 
 type CategoryFilterWrapperProps = {
   restaurants: JSONRestaurant[];
+  distanceById?: Map<string, number>;
   onCountChange?: (count: number, total: number) => void;
 };
 
-export function CategoryFilterWrapper({ restaurants, onCountChange }: CategoryFilterWrapperProps) {
+export function CategoryFilterWrapper({
+  restaurants,
+  distanceById,
+  onCountChange,
+}: CategoryFilterWrapperProps) {
   const searchParams = useSearchParams();
   const urlCity = searchParams.get("city")?.trim() || "";
   const [activeCategory, setActiveCategory] = React.useState<string>("All");
@@ -55,10 +60,11 @@ export function CategoryFilterWrapper({ restaurants, onCountChange }: CategoryFi
 
       {/* Restaurant Grid with shared filter state */}
       <div className="pt-6">
-        <RestaurantGrid 
-          restaurants={restaurants} 
+        <RestaurantGrid
+          restaurants={restaurants}
           activeCategory={activeCategory}
           activeCity={activeCity}
+          distanceById={distanceById}
           onCountChange={onCountChange}
         />
       </div>

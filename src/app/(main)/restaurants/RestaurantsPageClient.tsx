@@ -3,7 +3,6 @@
 import * as React from "react";
 import { RestaurantsPageSearch } from "@/components/restaurants/RestaurantsPageSearch";
 import { RestaurantsGridClient } from "./RestaurantsGridClient";
-import { RestaurantResults } from "@/components/home/RestaurantResults";
 import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
 
 type RestaurantWithDistance = {
@@ -25,8 +24,17 @@ export function RestaurantsPageClient({ restaurants }: RestaurantsPageClientProp
     setFilteredRestaurants(filtered);
   }, []);
 
-  const isSearchActive = filteredRestaurants.length > 0 && filteredRestaurants.some((r) => r.distance !== null);
   const restaurantsForGrid = filteredRestaurants.map((r) => r.restaurant);
+
+  const distanceById = React.useMemo(() => {
+    const map = new Map<string, number>();
+    for (const item of filteredRestaurants) {
+      if (item.distance != null) {
+        map.set(item.restaurant.id, item.distance);
+      }
+    }
+    return map;
+  }, [filteredRestaurants]);
 
   return (
     <>
@@ -36,12 +44,10 @@ export function RestaurantsPageClient({ restaurants }: RestaurantsPageClientProp
         onFilterChange={handleFilterChange}
       />
 
-      {/* Zip search with distances: show results list; otherwise show grid with vibe-filtered restaurants */}
-      {isSearchActive ? (
-        <RestaurantResults restaurants={filteredRestaurants} />
-      ) : (
-        <RestaurantsGridClient restaurants={restaurantsForGrid} />
-      )}
+      <RestaurantsGridClient
+        restaurants={restaurantsForGrid}
+        distanceById={distanceById}
+      />
     </>
   );
 }

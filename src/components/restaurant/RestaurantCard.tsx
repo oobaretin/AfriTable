@@ -53,6 +53,13 @@ export function RestaurantCard({
 
   // Get rating
   const rating = restaurant.avg_rating ?? null;
+  const distanceMiles = restaurant.distance_miles ?? null;
+  const distanceLabel =
+    distanceMiles != null
+      ? distanceMiles < 1
+        ? `${(distanceMiles * 5280).toFixed(0)} ft away`
+        : `${distanceMiles.toFixed(1)} mi away`
+      : null;
   
   // Get cuisine and region (if available)
   const cuisine = cuisines.length > 0 ? cuisines[0] : "";
@@ -166,6 +173,10 @@ export function RestaurantCard({
               </div>
             )}
           </div>
+
+          {distanceLabel && (
+            <p className="mb-2 text-sm font-semibold text-[#A67C00]">{distanceLabel}</p>
+          )}
 
           {cuisine && (
             <p className="mb-3 text-sm font-medium">

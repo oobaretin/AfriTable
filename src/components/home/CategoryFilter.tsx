@@ -2,7 +2,20 @@
 
 import * as React from "react";
 
-const categories = ["All", "Nigerian", "Ethiopian", "Jamaican", "Haitian", "Ghanaian", "Senegalese", "Kenyan", "Somali", "Eritrean"];
+const categories = [
+  "All",
+  "African",
+  "Caribbean",
+  "Nigerian",
+  "Ethiopian",
+  "Jamaican",
+  "Haitian",
+  "Ghanaian",
+  "Senegalese",
+  "Kenyan",
+  "Somali",
+  "Eritrean",
+];
 
 type CategoryFilterProps = {
   activeCategory: string;

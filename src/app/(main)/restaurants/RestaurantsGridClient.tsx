@@ -6,9 +6,10 @@ import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
 
 type RestaurantsGridClientProps = {
   restaurants: JSONRestaurant[];
+  distanceById?: Map<string, number>;
 };
 
-export function RestaurantsGridClient({ restaurants }: RestaurantsGridClientProps) {
+export function RestaurantsGridClient({ restaurants, distanceById }: RestaurantsGridClientProps) {
   const [displayCount, setDisplayCount] = useState<number>(0);
   const [totalCount, setTotalCount] = useState<number>(restaurants.length);
 
@@ -32,8 +33,9 @@ export function RestaurantsGridClient({ restaurants }: RestaurantsGridClientProp
         </div>
       </div>
 
-      <CategoryFilterWrapper 
-        restaurants={restaurants} 
+      <CategoryFilterWrapper
+        restaurants={restaurants}
+        distanceById={distanceById}
         onCountChange={handleCountChange}
       />
     </>
