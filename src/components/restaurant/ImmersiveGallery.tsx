@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
+import { RestaurantCoverImage } from "@/components/restaurant/RestaurantCoverImage";
 
 type ImmersiveGalleryProps = {
   images: string[];
@@ -40,10 +40,9 @@ export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryPro
       {/* Main large image - left side */}
       <div className="md:col-span-2 h-full overflow-hidden rounded-l-3xl group cursor-pointer">
         <div className="relative w-full h-full">
-          <Image
+          <RestaurantCoverImage
             src={mainImage}
             alt={`${restaurantName} - Main`}
-            fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
@@ -54,10 +53,9 @@ export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryPro
       <div className="grid grid-rows-2 gap-2 md:col-span-1">
         <div className="h-full overflow-hidden rounded-tr-3xl md:rounded-none group cursor-pointer">
           <div className="relative w-full h-full">
-            <Image
+            <RestaurantCoverImage
               src={secondImage}
               alt={`${restaurantName} - Interior`}
-              fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 25vw"
             />
@@ -65,10 +63,9 @@ export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryPro
         </div>
         <div className="h-full overflow-hidden group cursor-pointer">
           <div className="relative w-full h-full">
-            <Image
+            <RestaurantCoverImage
               src={thirdImage}
               alt={`${restaurantName} - Plating`}
-              fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 25vw"
             />
@@ -79,10 +76,9 @@ export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryPro
       {/* Tall image - right side (hidden on mobile) */}
       <div className="hidden md:block h-full overflow-hidden rounded-r-3xl group cursor-pointer">
         <div className="relative w-full h-full">
-          <Image
+          <RestaurantCoverImage
             src={fourthImage}
             alt={`${restaurantName} - Atmosphere`}
-            fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"
             sizes="25vw"
           />

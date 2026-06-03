@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { RestaurantCoverImage } from "@/components/restaurant/RestaurantCoverImage";
 import { format, isAfter, isBefore, parseISO } from "date-fns";
 import { formatTime12h } from "@/lib/utils/time-format";
 import { resolveRestaurantImageUrl } from "@/lib/restaurant-image";
@@ -279,12 +279,14 @@ export function DinerDashboard() {
                       className="group flex items-center gap-3 p-2 rounded-lg hover:bg-white transition-colors cursor-pointer"
                     >
                       <div className="h-12 w-12 rounded-lg bg-slate-200 overflow-hidden flex-shrink-0">
-                        <Image
+                        <RestaurantCoverImage
                           src={imageSrc}
                           alt={restaurant?.name || ""}
+                          fill={false}
                           width={48}
                           height={48}
                           className="object-cover h-full w-full"
+                          sizes="48px"
                         />
                       </div>
                       <div className="flex-1 min-w-0">

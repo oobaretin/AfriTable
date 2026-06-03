@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
+import { RestaurantCoverImage } from "@/components/restaurant/RestaurantCoverImage";
 import { useRouter } from "next/navigation";
 import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
@@ -228,13 +228,14 @@ export function BookingCheckout({ restaurant, bookingDetails }: BookingCheckoutP
           {/* Right Side: Order Summary (2 Columns) */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-[2.5rem] p-8 shadow-xl border border-slate-100 sticky top-12">
-              <Image
-                src={restaurantImage}
-                alt={restaurant.name}
-                width={400}
-                height={250}
-                className="w-full h-40 object-cover rounded-3xl mb-6"
-              />
+              <div className="relative w-full h-40 mb-6 rounded-3xl overflow-hidden">
+                <RestaurantCoverImage
+                  src={restaurantImage}
+                  alt={restaurant.name}
+                  className="object-cover rounded-3xl"
+                  sizes="400px"
+                />
+              </div>
               <h3 className="text-2xl font-black text-brand-dark uppercase tracking-tighter mb-1">
                 {restaurant.name}
               </h3>

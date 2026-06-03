@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import type { Database } from "@db/database.types";
 import { resolveRestaurantImageUrl } from "@/lib/restaurant-image";
+import { RestaurantCoverImage } from "@/components/restaurant/RestaurantCoverImage";
 
 export type RestaurantRow = Database["public"]["Tables"]["restaurants"]["Row"] & {
   // optional denormalized fields for UI
@@ -41,9 +41,6 @@ export function RestaurantCard({
   
   // Priority loading: featured items or first 6 images get priority
   const shouldPriorityLoad = isFeatured || index < 6;
-  
-  // Generate a simple blur placeholder (base64 encoded 1x1 transparent pixel with blur)
-  const blurDataURL = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
   
   // Extract city from address if it's a string
   let displayCity = cityLabel;
@@ -125,16 +122,12 @@ export function RestaurantCard({
         className="block relative z-10 pointer-events-auto touch-manipulation"
       >
         <div className="relative w-full overflow-hidden aspect-[4/3] bg-white/5">
-          <Image
+          <RestaurantCoverImage
             src={imgSrc}
             alt={restaurant.name}
-            fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority={shouldPriorityLoad}
             loading={shouldPriorityLoad ? undefined : "lazy"}
-            placeholder="blur"
-            blurDataURL={blurDataURL}
           />
           {/* Gold Star for Featured */}
           {isFeatured && (

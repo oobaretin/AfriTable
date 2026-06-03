@@ -1,6 +1,6 @@
 /**
  * Restaurant card/detail imagery. Catalog entries without real photos use the
- * AfriTable branded placeholder (4:3) — not generic stock photos.
+ * AfriTable branded placeholder (4:3) until venue photos are added.
  */
 
 /** Card-sized AfriTable brand art (matches og-image palette, correct aspect ratio). */
@@ -9,7 +9,16 @@ export const RESTAURANT_BRAND_PLACEHOLDER = "/restaurant-card-placeholder.svg";
 /** Legacy wide OG asset — still accepted if present in data. */
 export const RESTAURANT_LEGACY_PLACEHOLDER = "/og-image.svg";
 
+const BRAND_PATHS = new Set([RESTAURANT_BRAND_PLACEHOLDER, RESTAURANT_LEGACY_PLACEHOLDER]);
+
 const STOCK_UNSPLASH_PREFIX = "https://images.unsplash.com/";
+
+/** Local SVG placeholders must bypass `next/image` optimization (optimizer returns null/400). */
+export function isAfriTableBrandImage(src: string): boolean {
+  const s = src.trim();
+  if (BRAND_PATHS.has(s)) return true;
+  return s.endsWith("/restaurant-card-placeholder.svg") || s.endsWith("/og-image.svg");
+}
 
 function isStockPlaceholder(url: string): boolean {
   return url.startsWith(STOCK_UNSPLASH_PREFIX);

@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import { PLACEHOLDERS } from "@/lib/placeholders";
+import { RestaurantCoverImage } from "@/components/restaurant/RestaurantCoverImage";
 
 type ChefsRecommendationProps = {
   dishName?: string;
@@ -115,12 +115,14 @@ export function ChefsRecommendation({
       <h3 className="text-xs font-black text-brand-bronze uppercase tracking-[0.2em] mb-6">The Chef&apos;s Choice</h3>
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="w-32 h-32 rounded-2xl overflow-hidden rotate-3 shadow-lg flex-shrink-0">
-          <Image
+          <RestaurantCoverImage
             src={finalImage}
             alt={finalDishName}
+            fill={false}
             width={128}
             height={128}
             className="w-full h-full object-cover"
+            sizes="128px"
           />
         </div>
         <div>
