@@ -50,7 +50,9 @@ function toHHmm(timeStr: string): string | null {
 function parseHoursFromHtml(text: string): OperatingHour[] {
   const hours: OperatingHour[] = [];
   try {
-    const jsonLdMatches = text.match(/<script[^>]*type=["']application\/ld\+json["'][^>]*>(.*?)<\/script>/gis);
+    const jsonLdMatches = text.match(
+      /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
+    );
     if (jsonLdMatches) {
       for (const match of jsonLdMatches) {
         try {
