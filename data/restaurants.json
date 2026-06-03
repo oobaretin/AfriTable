@@ -3034,36 +3034,6 @@
     "google_search_url": "https://www.google.com/search?q=Jollof%20Rice%20King%2C%203833%20Richmond%20Ave%2C%20Houston%2C%20TX%2077027"
   },
   {
-    "id": "katy-004",
-    "name": "Butter D' Roti",
-    "cuisine": "Trinidadian",
-    "region": "Caribbean",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "3710 Deepwind Bay Ct, Katy, TX 77493",
-    "zip": "77493",
-    "lat": 29.805,
-    "lng": -95.824,
-    "phone": "(832) 437-0570",
-    "vibe": "Cottage / Authentic Takeout",
-    "vibe_tags": [
-      "Cottage / Authentic Takeout"
-    ],
-    "specialty": "Buss-up-Shut Roti & Chicken Curry",
-    "menu_highlights": [
-      "Buss-up-Shut Roti",
-      "Chicken Curry"
-    ],
-    "vibe_category": "Authentic Staples",
-    "about": "One of the few spots in Katy for authentic Trinidadian Roti. It's a true hidden gem for those in the know.",
-    "state": "TX",
-    "hours": {
-      "tue_sun": "11:00 AM - 9:00 PM",
-      "mon": "Closed"
-    },
-    "google_search_url": "https://www.google.com/search?q=Butter%20D'%20Roti%2C%203710%20Deepwind%20Bay%20Ct%2C%20Katy%2C%20TX%2077493"
-  },
-  {
     "id": "hou-sta-016",
     "name": "Fabaceae African Cuisine",
     "cuisine": "Nigerian (Gourmet Daily)",
@@ -5856,32 +5826,6 @@
     "website": "https://aronafoodplace.com"
   },
   {
-    "id": "street-suya-dallas",
-    "name": "Street Suya",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.9,
-    "address": "1499 Regal Row, Dallas, TX 75247",
-    "phone": "(469) 319-1228",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in Dallas. Experience traditional African flavors and hospitality at Street Suya.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "AZ",
-    "google_place_id": "ChIJf39xrZidToYR6KsXdaK9J20",
-    "lat": 32.8348843,
-    "lng": -96.8782809,
-    "google_search_url": "https://www.google.com/search?q=Street%20Suya%2C%201499%20Regal%20Row%2C%20Dallas%2C%20TX%2075247"
-  },
-  {
     "id": "fufudelight-suya-kitchen-arlington",
     "name": "Fufudelight& Suya Kitchen",
     "cuisine": "West African",
@@ -6096,32 +6040,6 @@
     "google_search_url": "https://www.google.com/search?q=Vicky's%20Bubbly%20Cafe%2C%206732%20S%20Crenshaw%20Blvd%20%2312%2C%20Los%20Angeles%2C%20CA%2090043"
   },
   {
-    "id": "golden-hands-cameroonian-food-los-angeles",
-    "name": "Golden hands Cameroonian food",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.7,
-    "address": "6426 2nd Ave, Los Angeles, CA 90043",
-    "phone": "(562) 338-4666",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in Los Angeles. Experience traditional African flavors and hospitality at Golden hands Cameroonian food.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "CA",
-    "google_place_id": "ChIJRWzXQ8G5woAReyU9Camf7ls",
-    "lat": 33.981139299999995,
-    "lng": -118.3194319,
-    "google_search_url": "https://www.google.com/search?q=Golden%20hands%20Cameroonian%20food%2C%206426%202nd%20Ave%2C%20Los%20Angeles%2C%20CA%2090043"
-  },
-  {
     "id": "flavors-from-afar-hollywood",
     "name": "Flavors from Afar",
     "cuisine": "African",
@@ -6334,32 +6252,6 @@
     "lat": 40.6368872,
     "lng": -73.9524346,
     "google_search_url": "https://www.google.com/search?q=K%C3%A1y%E1%BB%8D%CC%80d%C3%A9%20Restaurant%20Mirage%2C%20563%20E%2026th%20St%2C%20Brooklyn%2C%20NY%2011210"
-  },
-  {
-    "id": "nigerian-suya-tinz-newark",
-    "name": "NIGERIAN SUYA & TINZ",
-    "cuisine": "Nigerian",
-    "region": "West African",
-    "price_range": "$",
-    "rating": 4.8,
-    "address": "382 Clinton Pl Apartment 3, Newark, NJ 07112",
-    "phone": "(973) 350-6339",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic Nigerian restaurant in Newark. Experience traditional Nigerian flavors and hospitality at NIGERIAN SUYA & TINZ.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "NJ",
-    "google_place_id": "ChIJL6KPEABTwokRtp_nBNepCH0",
-    "lat": 40.7105302,
-    "lng": -74.2158407,
-    "google_search_url": "https://www.google.com/search?q=NIGERIAN%20SUYA%20%26%20TINZ%2C%20382%20Clinton%20Pl%20Apartment%203%2C%20Newark%2C%20NJ%2007112"
   },
   {
     "id": "flavors-of-east-africa-san-diego",
@@ -7005,32 +6897,6 @@
     "google_search_url": "https://www.google.com/search?q=Arike%20African%20Cuisine%20Catering%20services%20(catering%20only)%2C%208512%20Saybrook%20Dr%2C%20Cleveland%2C%20OH%2044144"
   },
   {
-    "id": "alice-fufulicious-maple-heights",
-    "name": "Alice Fufulicious",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$$",
-    "rating": 3,
-    "address": "16631 Broadway Ave, Maple Heights, OH 44137",
-    "phone": "(216) 215-8461",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in Maple Heights. Experience traditional African flavors and hospitality at Alice Fufulicious.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "OH",
-    "google_place_id": "ChIJ88F73EXjMIgRJeJZwcnKShI",
-    "lat": 41.410995899999996,
-    "lng": -81.5633489,
-    "google_search_url": "https://www.google.com/search?q=Alice%20Fufulicious%2C%2016631%20Broadway%20Ave%2C%20Maple%20Heights%2C%20OH%2044137"
-  },
-  {
     "id": "momos-kebab-moroccan-cleveland-heights",
     "name": "MoMo's Kebab | Moroccan",
     "cuisine": "African",
@@ -7136,31 +7002,6 @@
     "lng": -81.488529,
     "google_search_url": "https://www.google.com/search?q=ToyinTudun%20Nigerian%20Cuisine%2C%20561%20Chittenden%20St%2C%20Akron%2C%20OH%2044306",
     "website": "https://toyintudunnigeriancuisine.com"
-  },
-  {
-    "id": "ayobami-african-food-no-dine-in-catering-only-euclid",
-    "name": "Ayobami African Food (no dine-in, Catering only)",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$$",
-    "rating": 5,
-    "address": "404 Halle Dr, Euclid, OH 44132",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in Euclid. Experience traditional African flavors and hospitality at Ayobami African Food (no dine-in, Catering only).",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "OH",
-    "google_place_id": "ChIJTZl4ao-rMYgRn_UvzMew6yI",
-    "lat": 41.5033366,
-    "lng": -81.6205598,
-    "google_search_url": "https://www.google.com/search?q=Ayobami%20African%20Food%20(no%20dine-in%2C%20Catering%20only)%2C%20404%20Halle%20Dr%2C%20Euclid%2C%20OH%2044132"
   },
   {
     "id": "primo-african-quisine-cleveland",
@@ -7806,32 +7647,6 @@
     "google_search_url": "https://www.google.com/search?q=International%20Delicious%20Kitchen%20.%2C%205763%20Karl%20Rd%2C%20Columbus%2C%20OH%2043229"
   },
   {
-    "id": "intercontinental-african-nigerian-restaurant-columbus",
-    "name": "🇳🇬🇳🇬Intercontinental African Nigerian Restaurant🇳🇬🇺🇸",
-    "cuisine": "Nigerian",
-    "region": "West African",
-    "price_range": "$",
-    "rating": 4.6,
-    "address": "5777 Cleveland Ave, Columbus, OH 43231",
-    "phone": "(614) 259-3951",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic Nigerian restaurant in Columbus. Experience traditional Nigerian flavors and hospitality at 🇳🇬🇳🇬Intercontinental African Nigerian Restaurant🇳🇬🇺🇸.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "OH",
-    "google_place_id": "ChIJ64GF-imLOIgRIBIQw1V4RWA",
-    "lat": 40.0888734,
-    "lng": -82.95149289999999,
-    "google_search_url": "https://www.google.com/search?q=%F0%9F%87%B3%F0%9F%87%AC%F0%9F%87%B3%F0%9F%87%ACIntercontinental%20African%20Nigerian%20Restaurant%F0%9F%87%B3%F0%9F%87%AC%F0%9F%87%BA%F0%9F%87%B8%2C%205777%20Cleveland%20Ave%2C%20Columbus%2C%20OH%2043231"
-  },
-  {
     "id": "safina-world-restaurant-columbus",
     "name": "Safina World Restaurant",
     "cuisine": "African",
@@ -8044,32 +7859,6 @@
     "lat": 39.7674224,
     "lng": -86.3397403,
     "google_search_url": "https://www.google.com/search?q=NathMary%20Kitchen%2C%20291%20Shiloh%20Crossing%20Dr%2C%20Avon%2C%20IN%2046123"
-  },
-  {
-    "id": "afro-pastries-indianapolis",
-    "name": "Afro Pastries",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$$",
-    "rating": 4.9,
-    "address": "3840 Beaconsfield Ln, Indianapolis, IN 46228",
-    "phone": "(317) 986-3695",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in Indianapolis. Experience traditional African flavors and hospitality at Afro Pastries.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "IN",
-    "google_place_id": "ChIJjxHKfzxXa4gR6-wMuYfWSjI",
-    "lat": 39.825300899999995,
-    "lng": -86.2208635,
-    "google_search_url": "https://www.google.com/search?q=Afro%20Pastries%2C%203840%20Beaconsfield%20Ln%2C%20Indianapolis%2C%20IN%2046228"
   },
   {
     "id": "mega-suya-bar-grill-indianapolis",
@@ -8392,58 +8181,6 @@
     "lat": 36.0986018,
     "lng": -115.1361431,
     "google_search_url": "https://www.google.com/search?q=Nigerian%20Cuisine%20by%20MJ%2C%205006%20S%20Maryland%20Pkwy%20Suit%2011%2C%20Las%20Vegas%2C%20NV%2089119"
-  },
-  {
-    "id": "karyi-kitchens-new-orleans",
-    "name": "Karyi Kitchens",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.9,
-    "address": "201 St Charles Ave ste 213, New Orleans, LA 70170",
-    "phone": "(504) 699-6339",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in New Orleans. Experience traditional African flavors and hospitality at Karyi Kitchens.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "LA",
-    "google_place_id": "ChIJFyCuOe-nIIYRTDtqRLMpoi8",
-    "lat": 29.951845199999998,
-    "lng": -90.0700464,
-    "google_search_url": "https://www.google.com/search?q=Karyi%20Kitchens%2C%20201%20St%20Charles%20Ave%20ste%20213%2C%20New%20Orleans%2C%20LA%2070170"
-  },
-  {
-    "id": "jollofinnola-slidell",
-    "name": "Jollofinnola",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.9,
-    "address": "5341 Bypass Breeze Dr, Slidell, LA 70461",
-    "phone": "(573) 810-1782",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in Slidell. Experience traditional African flavors and hospitality at Jollofinnola.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "LA",
-    "google_place_id": "ChIJ741yRGHhnYgRqmV2iHngzSc",
-    "lat": 30.2162027,
-    "lng": -89.7628857,
-    "google_search_url": "https://www.google.com/search?q=Jollofinnola%2C%205341%20Bypass%20Breeze%20Dr%2C%20Slidell%2C%20LA%2070461"
   },
   {
     "id": "addis-nola-new-orleans",
@@ -9404,29 +9141,6 @@
     "google_search_url": "https://www.google.com/search?q=Sabo%20Suya%2C%209405%20Country%20Creek%20St%2C%20Houston%2C%20TX%2077036"
   },
   {
-    "id": "ethio-coffee-and-souk-houston",
-    "name": "Ethio Coffee and Souk",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.7,
-    "address": "6580 Southwest Fwy Suite # B, Houston, TX 77074",
-    "phone": "(713) 829-9974",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Ethio Coffee and Souk.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Ethio%20Coffee%20and%20Souk%2C%206580%20Southwest%20Fwy%20Suite%20%23%20B%2C%20Houston%2C%20TX%2077074"
-  },
-  {
     "id": "fabaceae-african-cuisine",
     "name": "Fabaceae African Cuisine",
     "cuisine": "Nigerian",
@@ -10082,28 +9796,6 @@
     "vibe_category": "Authentic Staples",
     "state": "NY",
     "google_search_url": "https://www.google.com/search?q=Somali%20Restaurant%2C%20656%20N%20Salina%20St%2C%20Syracuse%2C%20NY%2013208"
-  },
-  {
-    "id": "somali-halal-store-mechanicsburg",
-    "name": "Somali Halal store",
-    "cuisine": "Somali",
-    "region": "East African",
-    "price_range": "$$",
-    "rating": 5,
-    "address": "5247 Simpson Ferry Rd, Mechanicsburg, TX 17050",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic Somali restaurant in Houston. Experience traditional Somali flavors and hospitality at Somali Halal store.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Somali%20Halal%20store%2C%205247%20Simpson%20Ferry%20Rd%2C%20Mechanicsburg%2C%20TX%2017050"
   },
   {
     "id": "dakar-street-food-blodgett-houston",
