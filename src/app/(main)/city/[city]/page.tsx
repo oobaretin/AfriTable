@@ -9,6 +9,10 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { Button } from "@/components/ui/button";
+import {
+  buildRestaurantsDirectoryHref,
+  filtersFromCityLabel,
+} from "@/lib/restaurant-filter-url";
 
 function titleCaseFromSlug(slug: string) {
   return slug
@@ -104,7 +108,9 @@ export default async function CityPage({
             }
             right={
               <Button asChild variant="outline">
-                <Link href={`/restaurants?city=${encodeURIComponent(cityLabel)}`}>Open full search</Link>
+                <Link href={buildRestaurantsDirectoryHref(filtersFromCityLabel(cityLabel))}>
+                  Open full search
+                </Link>
               </Button>
             }
           />

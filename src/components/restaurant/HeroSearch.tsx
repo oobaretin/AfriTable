@@ -3,7 +3,11 @@
 import * as React from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { filterCitySuggestions, normalizeCityForSearch } from "@/lib/hero-city";
+import { filterCitySuggestions } from "@/lib/hero-city";
+import {
+  buildRestaurantsDirectoryHref,
+  filtersFromHeroSearchInput,
+} from "@/lib/restaurant-filter-url";
 import { useHeroSearchCity } from "@/components/restaurant/HeroSearchCityContext";
 
 const CUISINES = ["NIGERIAN", "SENEGALESE", "HAITIAN", "ETHIOPIAN", "JAMAICAN"];
@@ -87,16 +91,16 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
 
   function handleSearch(cityOverride?: string) {
     const raw = (cityOverride ?? city).trim();
-    const canonicalCity = raw ? normalizeCityForSearch(raw) : null;
+    const partial = filtersFromHeroSearchInput(raw);
 
-    if (raw && canonicalCity) {
-      setCity(canonicalCity);
-      router.push(`/restaurants?city=${encodeURIComponent(canonicalCity)}`);
+    if (partial.city) {
+      setCity(partial.city);
+      router.push(buildRestaurantsDirectoryHref(partial));
       return;
     }
 
-    if (raw) {
-      router.push(`/restaurants?q=${encodeURIComponent(raw)}`);
+    if (partial.q) {
+      router.push(buildRestaurantsDirectoryHref(partial));
       return;
     }
 
@@ -107,7 +111,7 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
         return;
       }
     }
-    router.push("/restaurants");
+    router.push(buildRestaurantsDirectoryHref());
   }
 
   function onEnterKey() {
@@ -287,7 +291,7 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
         {searchPill}
         <div className="relative z-10 mt-6 flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-4">
           <Link
-            href="/restaurants"
+            href={buildRestaurantsDirectoryHref()}
             className="text-sm font-bold text-white/90 underline-offset-4 transition-colors hover:text-white hover:underline"
           >
             Browse all restaurants

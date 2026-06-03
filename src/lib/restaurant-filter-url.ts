@@ -1,4 +1,4 @@
-import { cityFromUrlToDisplay } from "@/lib/hero-city";
+import { cityFromUrlToDisplay, normalizeCityForSearch } from "@/lib/hero-city";
 import type { VibeFilterOption } from "@/lib/restaurant-list-filters";
 
 export type RestaurantFilterState = {
@@ -94,6 +94,38 @@ export function buildRestaurantFilterSearchParams(
   }
 
   return params;
+}
+
+/** Map hero / sticky search input to directory filter params. */
+export function filtersFromHeroSearchInput(input: string): Partial<RestaurantFilterState> {
+  const raw = input.trim();
+  if (!raw) return {};
+
+  const city = normalizeCityForSearch(raw);
+  if (city) {
+    return { city };
+  }
+
+  return { q: raw };
+}
+
+/** Canonical link to `/restaurants` with optional filter query string. */
+export function buildRestaurantsDirectoryHref(
+  partial: Partial<RestaurantFilterState> = {},
+  basePath = "/restaurants",
+): string {
+  const merged: RestaurantFilterState = {
+    ...DEFAULT_RESTAURANT_FILTERS,
+    ...partial,
+  };
+  const qs = buildRestaurantFilterSearchParams(merged).toString();
+  return qs ? `${basePath}?${qs}` : basePath;
+}
+
+/** Parse a city label from trending cards or legacy links into filter state. */
+export function filtersFromCityLabel(label: string): Partial<RestaurantFilterState> {
+  const city = cityFromUrlToDisplay(label);
+  return city ? { city } : {};
 }
 
 type ReadonlyURLSearchParams = {

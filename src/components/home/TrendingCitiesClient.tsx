@@ -5,6 +5,10 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/layout/Reveal";
+import {
+  buildRestaurantsDirectoryHref,
+  filtersFromCityLabel,
+} from "@/lib/restaurant-filter-url";
 
 type Restaurant = {
   id: string;
@@ -169,7 +173,10 @@ export function TrendingCitiesClient({ restaurants }: TrendingCitiesClientProps)
 
         return (
           <Reveal key={cityGroup.city}>
-            <Link href={`/restaurants?city=${encodeURIComponent(cityGroup.displayName)}`} className="block">
+            <Link
+              href={buildRestaurantsDirectoryHref(filtersFromCityLabel(cityGroup.displayName))}
+              className="block"
+            >
               <Card className="group h-full transition-all hover:shadow-md">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg">{cityGroup.displayName}</CardTitle>

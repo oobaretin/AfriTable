@@ -6,6 +6,7 @@ import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 import type { FilteredRestaurantResult } from "@/hooks/use-restaurant-filters";
 import { useRestaurantFiltersContext } from "@/contexts/restaurant-filters-context";
+import { buildRestaurantsDirectoryHref } from "@/lib/restaurant-filter-url";
 
 type RestaurantGridProps = {
   filteredResults: FilteredRestaurantResult[];
@@ -86,7 +87,7 @@ export function RestaurantGrid({ filteredResults, onCountChange }: RestaurantGri
                 : "Try another city, cuisine, or browse the full nationwide directory."}
             </p>
             <Link
-              href="/restaurants"
+              href={buildRestaurantsDirectoryHref()}
               className="inline-flex rounded-full border border-[#C69C2B] px-6 py-3 text-sm font-bold uppercase tracking-widest text-[#C69C2B] transition-colors hover:bg-[#C69C2B]/10"
             >
               Browse all restaurants
