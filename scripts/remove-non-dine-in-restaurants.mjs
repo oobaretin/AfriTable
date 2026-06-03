@@ -31,6 +31,17 @@ const REMOVE = {
     "Takeaway-focused food vendor, not a sit-down restaurant",
   "street-suya-dallas": "Industrial address; street suya stand, not dine-in",
   "jollofinnola-slidell": "Residential-area address; home-based operator",
+  "la-daily-003": "Cameroonian food truck; mobile vendor, not sit-down dine-in",
+  "fannoh-flavor-african-food-truck-miami":
+    "Food truck in name; no sit-down restaurant",
+  "arike-african-cuisine-catering-services-catering-only-cleveland":
+    "Catering only (in name and listing)",
+  "chrisettas-kitchen-catering-west-chester":
+    "Catering operator (in name); not a dine-in venue",
+  "ayomee-s-african-kitchen-sicklerville":
+    "Residential address; home-based operator",
+  "delights-ghanaian-cuisine-houston":
+    "Residential address; home-based operator",
 };
 
 function requireEnv(n) {

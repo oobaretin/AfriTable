@@ -1111,36 +1111,6 @@
     ]
   },
   {
-    "id": "la-daily-003",
-    "name": "African Chop",
-    "cuisine": "Cameroonian",
-    "region": "West African",
-    "price_range": "$",
-    "rating": 4.5,
-    "address": "3150 Wilshire Blvd, Los Angeles, CA 90010",
-    "phone": "(323) 607-9586",
-    "website": "https://www.africanchopfoodtruck.com",
-    "vibe": "Mobile Quality",
-    "vibe_tags": [
-      "Mobile Quality"
-    ],
-    "specialty": "Cameroonian Puff Puff",
-    "menu_highlights": [
-      "Cameroonian Puff Puff"
-    ],
-    "vibe_category": "Authentic Staples",
-    "about": "Cameroonian food truck; jollof, suya, puff puff. Wed–Sat 11:30am–9:30pm; catering (323) 607-9586.",
-    "state": "CA",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "google_search_url": "https://www.google.com/search?q=African%20Chop%2C%203150%20Wilshire%20Blvd%2C%20Los%20Angeles%2C%20CA%2090010",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "la-blaqhaus-noho",
     "name": "BlaqHaus NoHo",
     "cuisine": "Southern-Caribbean",
@@ -5160,65 +5130,6 @@
     ]
   },
   {
-    "id": "chrisettas-kitchen-catering-west-chester",
-    "name": "Chrisetta's Kitchen (Catering )",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.8,
-    "address": "130 W Miner St, West Chester, PA 19382",
-    "phone": "(215) 931-8907",
-    "website": "https://chrisettaskitchen.com/",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in West Chester. Experience traditional African flavors and hospitality at Chrisetta's Kitchen (Catering ).",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "PA",
-    "google_place_id": "ChIJbbLc68_FxokR3uDKKeXLeqU",
-    "lat": 39.957320599999996,
-    "lng": -75.60580519999999,
-    "google_search_url": "https://www.google.com/search?q=Chrisetta's%20Kitchen%20(Catering%20)%2C%20130%20W%20Miner%20St%2C%20West%20Chester%2C%20PA%2019382",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
-    "id": "ayomee-s-african-kitchen-sicklerville",
-    "name": "Ayomee’s African Kitchen",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.9,
-    "address": "6 Pittman Pl, Sicklerville, NJ 08081",
-    "phone": "(561) 612-9876",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in Sicklerville. Experience traditional African flavors and hospitality at Ayomee’s African Kitchen.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "NJ",
-    "google_place_id": "ChIJ79Gk5BkrwYkRTWVT-6v9Ib0",
-    "lat": 39.704217799999995,
-    "lng": -74.95629819999999,
-    "google_search_url": "https://www.google.com/search?q=Ayomee%E2%80%99s%20African%20Kitchen%2C%206%20Pittman%20Pl%2C%20Sicklerville%2C%20NJ%2008081",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "kokomma-nigerian-african-cuisine-lynn",
     "name": "Kokomma Nigerian African Cuisine",
     "cuisine": "Nigerian",
@@ -6891,36 +6802,6 @@
     ]
   },
   {
-    "id": "fannoh-flavor-african-food-truck-miami",
-    "name": "Fannoh Flavor African Food Truck",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.3,
-    "address": "77 NE 64th St, Miami, FL 33138",
-    "phone": "(413) 277-8061",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in Miami. Experience traditional African flavors and hospitality at Fannoh Flavor African Food Truck.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "FL",
-    "google_place_id": "ChIJzT20DVCx2YgRRYGyT6FGaF4",
-    "lat": 25.834719699999997,
-    "lng": -80.1944663,
-    "google_search_url": "https://www.google.com/search?q=Fannoh%20Flavor%20African%20Food%20Truck%2C%2077%20NE%2064th%20St%2C%20Miami%2C%20FL%2033138",
-    "website": "https://fannoh-flavor-african-food-truck.nearmee.net",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "k-y-d-restaurant-mirage-brooklyn",
     "name": "Káyọ̀dé Restaurant Mirage",
     "cuisine": "African",
@@ -7630,36 +7511,6 @@
     "lng": -81.81486079999999,
     "google_search_url": "https://www.google.com/search?q=Habesha%20Ethiopian%20and%20Eritrean%20Restaurant%2C%2016860%20Lorain%20Ave%2C%20Cleveland%2C%20OH%2044111",
     "website": "https://habeshacle.com",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
-    "id": "arike-african-cuisine-catering-services-catering-only-cleveland",
-    "name": "Arike African Cuisine Catering services (catering only)",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$$",
-    "rating": 4.8,
-    "address": "8512 Saybrook Dr, Cleveland, OH 44144",
-    "phone": "(216) 200-9894",
-    "website": "http://www.arikeafricancuisine.com/",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in Cleveland. Experience traditional African flavors and hospitality at Arike African Cuisine Catering services (catering only).",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "OH",
-    "google_place_id": "ChIJR64Vw2DvMIgRki0NfSYTQBg",
-    "lat": 41.4244023,
-    "lng": -81.7447614,
-    "google_search_url": "https://www.google.com/search?q=Arike%20African%20Cuisine%20Catering%20services%20(catering%20only)%2C%208512%20Saybrook%20Dr%2C%20Cleveland%2C%20OH%2044144",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
@@ -10234,32 +10085,6 @@
     "vibe_category": "Authentic Staples",
     "state": "TX",
     "google_search_url": "https://www.google.com/search?q=Sarabell%20Calabar%20Restaurant%20%26%20Buffet%2C%209801%20Bissonnet%20St%20Suite%20C%2C%20Houston%2C%20TX%2077036",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
-    "id": "delights-ghanaian-cuisine-houston",
-    "name": "Delight's Ghanaian Cuisine",
-    "cuisine": "Ghanaian",
-    "region": "West African",
-    "price_range": "$",
-    "rating": 4.8,
-    "address": "14524 Piping Rock Ln, Houston, TX 77077",
-    "phone": "(281) 995-1958",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic Ghanaian restaurant in Houston. Experience traditional Ghanaian flavors and hospitality at Delight's Ghanaian Cuisine.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Delight's%20Ghanaian%20Cuisine%2C%2014524%20Piping%20Rock%20Ln%2C%20Houston%2C%20TX%2077077",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
