@@ -9761,14 +9761,18 @@
     "address": "6422 Babcock Rd Suit 101, San Antonio, TX 78249",
     "phone": "(210) 800-2950",
     "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
+      "mon": "Closed",
+      "tue_fri": "11:00 AM - 7:00 PM",
+      "sat": "11:00 AM - 9:00 PM",
+      "sun": "12:00 PM - 6:00 PM"
     },
-    "about": "Authentic West African restaurant in San Antonio. Experience traditional West African flavors and hospitality at AfroTex Grill - BOWLS, BURRITOS & SUYA PLATES.",
+    "about": "West African street food meets Tex-Mex fusion near UTSA. Suya plates, jollof bowls, burritos, dine-in, pickup, and delivery.",
     "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
     "cultural_roots": "Diaspora dining in the United States.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Chicken Suya Plate",
+      "Jollof rice bowls",
+      "Burritos"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -9776,7 +9780,7 @@
     "lat": 29.5462971,
     "lng": -98.615595,
     "google_search_url": "https://www.google.com/search?q=AfroTex%20Grill%20-%20BOWLS%2C%20BURRITOS%20%26%20SUYA%20PLATES%2C%206422%20Babcock%20Rd%20Suit%20101%2C%20San%20Antonio%2C%20TX%2078249",
-    "website": "https://afrotexgrill.square.site",
+    "website": "https://afrotexgrill.com/",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
