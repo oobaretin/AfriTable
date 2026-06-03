@@ -40,6 +40,8 @@
     "backfill:google-search": "tsx scripts/backfill-google-search-links.ts",
     "discover:websites": "tsx scripts/discover-restaurant-websites.ts --needs-website",
     "cleanup:websites": "tsx scripts/cleanup-invalid-websites.ts",
+    "sync:websites": "node scripts/sync-catalog-websites-to-supabase.mjs",
+    "apply:researched-websites": "node scripts/apply-researched-websites.mjs",
     "find:duplicates": "node scripts/find-duplicates.mjs",
     "remove:duplicates": "node scripts/remove-duplicates.mjs",
     "verify:restaurants": "node scripts/verify-production-restaurants.mjs",

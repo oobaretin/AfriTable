@@ -55,6 +55,8 @@ const BLOCKED_HOST_PATTERNS = [
   "agncy.dev",
   "ubuntu.com",
   "communityliving.",
+  "visitwindsor",
+  "visitwindsoressex",
 ];
 
 const AGGREGATOR_PATH = /\/(menu|order|delivery|reviews?|listing)/i;
@@ -65,12 +67,18 @@ export function buildWebsiteSearchQueries(name: string, addressLine?: string): s
   const cityState = parts.length >= 2 ? parts.slice(-2).join(" ") : addressLine || "";
   const city = parts.length >= 2 ? parts[parts.length - 2] : parts[0] || "";
 
+  const short = shortBrandName(name);
   const queries = [
     `${name} restaurant ${cityState}`,
-    `${name} ${city} restaurant website`,
-    `${name} restaurant ${cityState} official website`,
+    `${short} ${city} restaurant website`,
+    `${short} restaurant ${cityState}`,
+    `${name} ${city} official website`,
     `${name} ${cityState}`,
   ];
+  if (/\bTX\b/i.test(cityState) || /\bTexas\b/i.test(addressLine || "")) {
+    queries.push(`${short} ${city} restauranttx`);
+    queries.push(`${short} restaurant texas website`);
+  }
   return [...new Set(queries.map((q) => q.replace(/\s+/g, " ").trim()).filter(Boolean))];
 }
 
@@ -101,7 +109,26 @@ export function isBlockedWebsiteUrl(url: string): boolean {
 const GENERIC_WORDS = new Set([
   "the", "and", "bar", "grill", "cafe", "kitchen", "restaurant", "house", "place", "food",
   "african", "caribbean", "ethiopian", "nigerian", "jamaican", "international", "cuisine",
+  "rice", "soul", "taste", "halal", "store", "shop", "master", "traditional", "unique",
+  "golden", "little", "east", "west", "north", "south",
 ]);
+
+/** Cuisine/country words alone must not match unrelated domains (e.g. ayansomaliancuisine.com). */
+const ETHNICITY_ONLY = new Set([
+  "somali", "ethiopian", "nigerian", "ghanaian", "jamaican", "liberian", "kenyan", "ivorian",
+  "senegalese", "congolese", "ugandan", "tanzanian", "moroccan", "egyptian", "haitian",
+  "caribbean", "african",
+]);
+
+/** Strip generic suffixes for search queries closer to how users Google. */
+export function shortBrandName(name: string): string {
+  return name
+    .replace(
+      /\s+(restaurant|kitchen|cafe|grill|bar|lounge|eatery|bistro|and\s+bar|no\s+dine.+)$/i,
+      "",
+    )
+    .trim();
+}
 
 function nameTokens(name: string): string[] {
   return name
@@ -124,11 +151,17 @@ function tokenMatchesHost(token: string, hostCompact: string): boolean {
 export function hostMatchesRestaurantName(host: string, restaurantName: string): boolean {
   const hostCompact = host.toLowerCase().replace(/^www\./, "").replace(/[^a-z0-9]/g, "");
   const tokens = nameTokens(restaurantName);
+  const WEAK_SINGLE = new Set(["rice", "soul", "food", "taste", "halal", "store", "shop", "gold", "east", "west"]);
   if (tokens.length) {
-    if (tokens.some((t) => tokenMatchesHost(t, hostCompact))) return true;
-    const matched = tokens.filter((t) => t.length >= 4 && tokenMatchesHost(t, hostCompact)).length;
-    if (matched >= 2) return true;
+    const matched = tokens.filter((t) => t.length >= 4 && tokenMatchesHost(t, hostCompact));
+    if (matched.length >= 2) return true;
+    if (matched.length === 1) {
+      const t = matched[0];
+      if (WEAK_SINGLE.has(t) || ETHNICITY_ONLY.has(t)) return false;
+      return true;
+    }
   }
+  if (/stores?/.test(hostCompact) && !/store|shop/i.test(restaurantName)) return false;
   const compact = restaurantName.toLowerCase().replace(/[^a-z0-9]/g, "");
   return compact.length >= 6 && hostCompact.includes(compact.slice(0, 8));
 }
@@ -172,29 +205,64 @@ export function pickBestWebsite(candidates: string[], restaurantName: string): s
   }
 }
 
-export async function discoverViaDuckDuckGo(query: string): Promise<string[]> {
-  const searchUrl = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(query)}`;
-  const response = await fetch(searchUrl, {
-    headers: {
-      "User-Agent": "Mozilla/5.0 (compatible; AfriTable/1.0; +https://afri-table.com)",
-      Accept: "text/html",
-    },
-    signal: AbortSignal.timeout(15000),
-  });
-  if (!response.ok) return [];
+const SEARCH_HEADERS = {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  Accept: "text/html,application/xhtml+xml",
+  "Accept-Language": "en-US,en;q=0.9",
+};
 
-  const html = await response.text();
+function extractUrlsFromSearchHtml(html: string): string[] {
   const urls: string[] = [];
-  const re = /uddg=([^&"'<>]+)/g;
+  const uddg = /uddg=([^&"'<>]+)/g;
   let m: RegExpExecArray | null;
-  while ((m = re.exec(html))) {
+  while ((m = uddg.exec(html))) {
     try {
       urls.push(decodeURIComponent(m[1]));
     } catch {
       /* skip */
     }
   }
+  const direct = /class="result__a"[^>]*href="([^"]+)"/g;
+  while ((m = direct.exec(html))) {
+    const href = m[1];
+    if (href.startsWith("http")) urls.push(href);
+  }
+  const bingLinks = /<li class="b_algo"[\s\S]*?<a href="(https?:\/\/[^"]+)"/gi;
+  while ((m = bingLinks.exec(html))) {
+    urls.push(m[1]);
+  }
   return urls;
+}
+
+async function fetchSearchHtml(getUrl: string, postBody?: string): Promise<string> {
+  const init: RequestInit = {
+    headers: SEARCH_HEADERS,
+    signal: AbortSignal.timeout(15000),
+  };
+  if (postBody) {
+    init.method = "POST";
+    init.headers = { ...SEARCH_HEADERS, "Content-Type": "application/x-www-form-urlencoded" };
+    init.body = postBody;
+  }
+  const response = await fetch(getUrl, init);
+  if (!response.ok) return "";
+  return response.text();
+}
+
+export async function discoverViaDuckDuckGo(query: string): Promise<string[]> {
+  const q = encodeURIComponent(query);
+  let html = await fetchSearchHtml(`https://html.duckduckgo.com/html/?q=${q}`);
+  let urls = extractUrlsFromSearchHtml(html);
+  if (!urls.length) {
+    html = await fetchSearchHtml("https://html.duckduckgo.com/html/", `q=${q}`);
+    urls = extractUrlsFromSearchHtml(html);
+  }
+  return urls;
+}
+
+export async function discoverViaBing(query: string): Promise<string[]> {
+  const html = await fetchSearchHtml(`https://www.bing.com/search?q=${encodeURIComponent(query)}`);
+  return extractUrlsFromSearchHtml(html);
 }
 
 export async function discoverViaSerpApi(
@@ -257,6 +325,11 @@ export async function discoverRestaurantWebsite(
       if (batch.length) source = "duckduckgo";
     }
 
+    if (!batch.length) {
+      batch = await discoverViaBing(query);
+      if (batch.length) source = "bing";
+    }
+
     if (batch.length) {
       candidates = [...candidates, ...batch];
       usedQuery = query;
@@ -266,7 +339,7 @@ export async function discoverRestaurantWebsite(
       }
     }
 
-    await new Promise((r) => setTimeout(r, 400));
+    await new Promise((r) => setTimeout(r, 800));
   }
 
   const website = pickBestWebsite(candidates, name);

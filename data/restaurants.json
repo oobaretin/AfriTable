@@ -87,7 +87,8 @@
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Famous%20Princess%20African%20Kitchen%2C%2017036%20W%20Little%20York%20Rd%2C%20Houston%2C%20TX%2077084"
+    "google_search_url": "https://www.google.com/search?q=Famous%20Princess%20African%20Kitchen%2C%2017036%20W%20Little%20York%20Rd%2C%20Houston%2C%20TX%2077084",
+    "website": "https://www.thefpak.com"
   },
   {
     "id": "omalicha-kitchen",
@@ -215,7 +216,8 @@
     "cultural_roots": "Honors the 'Out of Many, One People' heritage of Jamaica, blending Taino smoke techniques with global presentation.",
     "vibe_category": "Fine Dining",
     "state": "FL",
-    "google_search_url": "https://www.google.com/search?q=Dukunoo%20Jamaican%20Kitchen%2C%20316%20NW%2024th%20St%2C%20Miami%2C%20FL%2033127"
+    "google_search_url": "https://www.google.com/search?q=Dukunoo%20Jamaican%20Kitchen%2C%20316%20NW%2024th%20St%2C%20Miami%2C%20FL%2033127",
+    "website": "https://dukunoowynwood.com"
   },
   {
     "id": "apt4b-atlanta",
@@ -250,7 +252,8 @@
     "our_story": "We created a space where music and food are inseparable, featuring one of the largest vinyl collections in the South alongside elite fusion dishes.",
     "cultural_roots": "A 'love letter' to the West Indian diaspora, blending French technique with the soulful spices of the islands.",
     "state": "GA",
-    "google_search_url": "https://www.google.com/search?q=Apt%204B%2C%202293%20Peachtree%20Rd%20NW%2C%20Atlanta%2C%20GA%2030309"
+    "google_search_url": "https://www.google.com/search?q=Apt%204B%2C%202293%20Peachtree%20Rd%20NW%2C%20Atlanta%2C%20GA%2030309",
+    "website": "https://apt4batl.com"
   },
   {
     "id": "blaqhaus-atlanta",
@@ -406,7 +409,8 @@
     ],
     "vibe_category": "Community Favorites",
     "state": "DC",
-    "google_search_url": "https://www.google.com/search?q=Cane%2C%20403%20H%20St%20NE%2C%20Washington%2C%20DC%2020002"
+    "google_search_url": "https://www.google.com/search?q=Cane%2C%20403%20H%20St%20NE%2C%20Washington%2C%20DC%2020002",
+    "website": "https://www.cane-dc.com"
   },
   {
     "id": "pearls-nyc",
@@ -655,7 +659,7 @@
     "vibe_category": "Authentic Staples",
     "state": "TX",
     "google_search_url": "https://www.google.com/search?q=Afrik-CHe%20Kitchen%2C%2012030%20Bissonnet%20St%2C%20Houston%2C%20TX%2077099",
-    "website": "https://afrikkitchen.shop"
+    "website": "https://afrikikohouston.com"
   },
   {
     "id": "adulis-ny",
@@ -695,7 +699,6 @@
     "rating": 4.8,
     "address": "3821 S George Mason Dr, Falls Church, VA 22041",
     "phone": "(703) 998-2525",
-    "website": "https://kulanrestaurant.wordpress.com",
     "social": {},
     "hours": {
       "monday": "12:00 PM - 10:00 PM",
@@ -716,7 +719,8 @@
     ],
     "vibe_category": "Authentic Staples",
     "state": "VA",
-    "google_search_url": "https://www.google.com/search?q=Kulan%20Cafe%2C%203821%20S%20George%20Mason%20Dr%2C%20Falls%20Church%2C%20VA%2022041"
+    "google_search_url": "https://www.google.com/search?q=Kulan%20Cafe%2C%203821%20S%20George%20Mason%20Dr%2C%20Falls%20Church%2C%20VA%2022041",
+    "website": "https://kulanrestaurant.wordpress.com"
   },
   {
     "id": "safari-restaurant-mn",
@@ -896,7 +900,8 @@
     ],
     "vibe_category": "Fine Dining",
     "state": "GA",
-    "google_search_url": "https://www.google.com/search?q=Virgil's%20Gullah%20Kitchen%2C%20822%20Marietta%20St%20NW%2C%20Atlanta%2C%20GA%2030318"
+    "google_search_url": "https://www.google.com/search?q=Virgil's%20Gullah%20Kitchen%2C%20822%20Marietta%20St%20NW%2C%20Atlanta%2C%20GA%2030318",
+    "website": "https://www.virgilsgullahkitchen.com"
   },
   {
     "social": {},
@@ -918,7 +923,8 @@
     "address": "1990 M St NW, Washington, DC 20036",
     "phone": "(202) 714-9457",
     "state": "DC",
-    "google_search_url": "https://www.google.com/search?q=Swahili%20Village%2C%201990%20M%20St%20NW%2C%20Washington%2C%20DC%2020036"
+    "google_search_url": "https://www.google.com/search?q=Swahili%20Village%2C%201990%20M%20St%20NW%2C%20Washington%2C%20DC%2020036",
+    "website": "https://www.swahilivillages.com"
   },
   {
     "id": "dc-ethiopic",
@@ -1068,7 +1074,8 @@
       "mon_fri": "11:00 AM - 9:00 PM",
       "sat_sun": "12:00 PM - 9:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=Amawele's%2C%20101%20Spear%20St%2C%20San%20Francisco%2C%20CA%2094105"
+    "google_search_url": "https://www.google.com/search?q=Amawele's%2C%20101%20Spear%20St%2C%20San%20Francisco%2C%20CA%2094105",
+    "website": "https://amaweles.com"
   },
   {
     "id": "chi-001",
@@ -1148,7 +1155,8 @@
       "sun": "11:00 AM - 9:00 PM",
       "tue": "Closed"
     },
-    "google_search_url": "https://www.google.com/search?q=Gor%C3%A9e%20Cuisine%2C%201126%20E%2047th%20St%2C%20Chicago%2C%20IL%2060653"
+    "google_search_url": "https://www.google.com/search?q=Gor%C3%A9e%20Cuisine%2C%201126%20E%2047th%20St%2C%20Chicago%2C%20IL%2060653",
+    "website": "https://www.goreecuisine.com"
   },
   {
     "id": "phi-002",
@@ -1232,7 +1240,8 @@
       "mon_sat": "9:00 AM - 11:00 PM",
       "sun": "10:00 AM - 10:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=Quality%20Taste%2C%204002%20Lancaster%20Ave%2C%20Philadelphia%2C%20PA%2019104"
+    "google_search_url": "https://www.google.com/search?q=Quality%20Taste%2C%204002%20Lancaster%20Ave%2C%20Philadelphia%2C%20PA%2019104",
+    "website": "https://www.qualitytastejamaicanrestaurant.com"
   },
   {
     "id": "sea-001",
@@ -1352,7 +1361,8 @@
     ],
     "vibe_category": "Authentic Staples",
     "state": "MA",
-    "google_search_url": "https://www.google.com/search?q=Suya%20Joint%2C%20185%20Dudley%20St%2C%20Boston%2C%20MA%2002119"
+    "google_search_url": "https://www.google.com/search?q=Suya%20Joint%2C%20185%20Dudley%20St%2C%20Boston%2C%20MA%2002119",
+    "website": "https://suyajoint.com"
   },
   {
     "id": "sea-003",
@@ -1650,7 +1660,8 @@
       "fri_sat": "11:00 AM - 11:00 PM",
       "sun": "11:00 AM - 9:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=Spice%20House%20Midtown%2C%20375%2014th%20St%20NW%2C%20Atlanta%2C%20GA%2030318"
+    "google_search_url": "https://www.google.com/search?q=Spice%20House%20Midtown%2C%20375%2014th%20St%20NW%2C%20Atlanta%2C%20GA%2030318",
+    "website": "https://www.spicehouseatl.com"
   },
   {
     "id": "nyc-jasmines-caribbean",
@@ -1674,7 +1685,8 @@
     "hours": {
       "mon_sun": "12:00 PM - 10:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=Jasmine's%20Caribbean%20Cuisine%2C%20371%20W%2046th%20St%2C%20New%20York%2C%20NY%2010036"
+    "google_search_url": "https://www.google.com/search?q=Jasmine's%20Caribbean%20Cuisine%2C%20371%20W%2046th%20St%2C%20New%20York%2C%20NY%2010036",
+    "website": "https://www.jasminecaribbeancuisine.com"
   },
   {
     "id": "chi-garifuna-flava",
@@ -1732,7 +1744,8 @@
       "sun": "12:00 PM - 9:00 PM",
       "mon": "Closed"
     },
-    "google_search_url": "https://www.google.com/search?q=St.%20James%20-%20Modern%20Caribbean%2C%202017%2014th%20St%20NW%2C%20Washington%2C%20DC%2020009"
+    "google_search_url": "https://www.google.com/search?q=St.%20James%20-%20Modern%20Caribbean%2C%202017%2014th%20St%20NW%2C%20Washington%2C%20DC%2020009",
+    "website": "https://stjames-dc.com"
   },
   {
     "id": "la-dulans-crenshaw",
@@ -1942,7 +1955,8 @@
       "fri_sat": "10:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "google_search_url": "https://www.google.com/search?q=Irie%20Mon%20Cafe%2C%201800%20Peachtree%20St%20NW%20%23103%2C%20Atlanta%2C%20GA%2030309"
+    "google_search_url": "https://www.google.com/search?q=Irie%20Mon%20Cafe%2C%201800%20Peachtree%20St%20NW%20%23103%2C%20Atlanta%2C%20GA%2030309",
+    "website": "https://www.iriemoncafe.com"
   },
   {
     "id": "dca-001",
@@ -1979,7 +1993,8 @@
     "vibe_category": "Fine Dining",
     "about": "High-end Afro-Caribbean fine dining by the Potomac, recognized by Michelin 2025.",
     "state": "DC",
-    "google_search_url": "https://www.google.com/search?q=D%C5%8Dgon%2C%20800%20Maine%20Ave%20SW%2C%20Washington%2C%20DC%2020024"
+    "google_search_url": "https://www.google.com/search?q=D%C5%8Dgon%2C%20800%20Maine%20Ave%20SW%2C%20Washington%2C%20DC%2020024",
+    "website": "https://www.salamanderdc.com/dining/dogon/"
   },
   {
     "id": "nola-dakar",
@@ -2037,7 +2052,8 @@
       "fri_sat": "11:00 AM - 9:00 PM",
       "sun": "11:00 AM - 4:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=The%20Jerk%20Shack%2C%2010234%20TX-151%20Suite%20103%2C%20San%20Antonio%2C%20TX%2078251"
+    "google_search_url": "https://www.google.com/search?q=The%20Jerk%20Shack%2C%2010234%20TX-151%20Suite%20103%2C%20San%20Antonio%2C%20TX%2078251",
+    "website": "https://thejerkshacksatx.com"
   },
   {
     "id": "pdx-001",
@@ -2051,7 +2067,6 @@
     "lat": 45.517,
     "lng": -122.656,
     "phone": "(503) 702-0290",
-    "website": "https://kannrestaurant.com/",
     "hours": {
       "tue_thu": "4:00 PM - 10:00 PM",
       "fri_sat": "4:00 PM - 11:00 PM",
@@ -2075,7 +2090,8 @@
     "about": "Chef Gregory Gourdet's masterpiece. This is arguably the most famous Haitian restaurant in the world right now, featuring an open kitchen fueled entirely by wood fire.",
     "vibe_category": "Fine Dining",
     "state": "OR",
-    "google_search_url": "https://www.google.com/search?q=Kann%2C%20548%20SE%20Ash%20St%2C%20Portland%2C%20OR%2097214"
+    "google_search_url": "https://www.google.com/search?q=Kann%2C%20548%20SE%20Ash%20St%2C%20Portland%2C%20OR%2097214",
+    "website": "https://kannrestaurant.com"
   },
   {
     "id": "atx-fine-001",
@@ -2107,7 +2123,8 @@
       "sun_wed": "5:00 PM - 10:00 PM",
       "thu_sat": "5:00 PM - 12:00 AM"
     },
-    "google_search_url": "https://www.google.com/search?q=Canje%2C%201914%20E%206th%20St%20Ste%20C%2C%20Austin%2C%20TX%2078702"
+    "google_search_url": "https://www.google.com/search?q=Canje%2C%201914%20E%206th%20St%20Ste%20C%2C%20Austin%2C%20TX%2078702",
+    "website": "https://canjeatx.com"
   },
   {
     "id": "atx-fine-002",
@@ -2136,7 +2153,8 @@
       "mon_sat": "5:00 PM - 10:00 PM",
       "sun": "5:00 PM - 9:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=Ember%20Kitchen%2C%20800%20W%20Cesar%20Chavez%20St%20Ste%20PP110%2C%20Austin%2C%20TX%2078701"
+    "google_search_url": "https://www.google.com/search?q=Ember%20Kitchen%2C%20800%20W%20Cesar%20Chavez%20St%20Ste%20PP110%2C%20Austin%2C%20TX%2078701",
+    "website": "https://www.emberatx.com"
   },
   {
     "id": "dfw-fine-001",
@@ -2225,7 +2243,8 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "12:00 PM - 9:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=Island%20Spice%20Bar%20%26%20Grill%2C%2017802%20W%20Little%20York%20Rd%2C%20Houston%2C%20TX%2077084"
+    "google_search_url": "https://www.google.com/search?q=Island%20Spice%20Bar%20%26%20Grill%2C%2017802%20W%20Little%20York%20Rd%2C%20Houston%2C%20TX%2077084",
+    "website": "https://www.islandspicehouston.com"
   },
   {
     "id": "atx-afro-002",
@@ -2419,7 +2438,8 @@
       "tue_sun": "5:00 PM - 11:00 PM",
       "mon": "Closed"
     },
-    "google_search_url": "https://www.google.com/search?q=Status%20Hollywood%2C%201612%20N%20Cahuenga%20Blvd%2C%20Los%20Angeles%2C%20CA%2090028"
+    "google_search_url": "https://www.google.com/search?q=Status%20Hollywood%2C%201612%20N%20Cahuenga%20Blvd%2C%20Los%20Angeles%2C%20CA%2090028",
+    "website": "https://www.statushollywood.com"
   },
   {
     "id": "atl-fine-001",
@@ -2508,7 +2528,8 @@
     "hours": {
       "mon_sun": "11:00 AM - 9:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=Jerk%20Shack%2C%201133%2024th%20Ave%20Ste%20N%2C%20Seattle%2C%20WA%2098122"
+    "google_search_url": "https://www.google.com/search?q=Jerk%20Shack%2C%201133%2024th%20Ave%20Ste%20N%2C%20Seattle%2C%20WA%2098122",
+    "website": "https://www.jerkshackseattle.com"
   },
   {
     "id": "hou-008",
@@ -2548,7 +2569,6 @@
     "rating": 4.8,
     "address": "351 N Fairfax Ave, Los Angeles, CA 90036",
     "phone": "(323) 424-3055",
-    "website": "https://www.luciala.com/",
     "neighborhood": "Fairfax District",
     "vibe": "Elite / Late Night Lounge",
     "vibe_tags": [
@@ -2567,7 +2587,8 @@
       "tue_sun": "5:00 PM - 10:00 PM",
       "mon": "Closed"
     },
-    "google_search_url": "https://www.google.com/search?q=Lucia%2C%20351%20N%20Fairfax%20Ave%2C%20Los%20Angeles%2C%20CA%2090036"
+    "google_search_url": "https://www.google.com/search?q=Lucia%2C%20351%20N%20Fairfax%20Ave%2C%20Los%20Angeles%2C%20CA%2090036",
+    "website": "https://www.luciala.com"
   },
   {
     "id": "lax-003",
@@ -2720,7 +2741,8 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "12:00 PM - 8:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=Finger%20Licking%202.0%2C%209815%20Bissonnet%20St%2C%20Houston%2C%20TX%2077036"
+    "google_search_url": "https://www.google.com/search?q=Finger%20Licking%202.0%2C%209815%20Bissonnet%20St%2C%20Houston%2C%20TX%2077036",
+    "website": "https://fingerlickinghtx.com"
   },
   {
     "id": "hou-sta-004",
@@ -3078,7 +3100,6 @@
     "rating": 4.6,
     "address": "6800 Westheimer Rd, Houston, TX 77057",
     "phone": "(713) 334-0000",
-    "website": "https://lucyhouston.com/",
     "hours": {
       "tue_thu": "11:00 AM - 11:00 PM",
       "fri_sat": "11:00 AM - 2:00 AM",
@@ -3097,7 +3118,8 @@
     "vibe_category": "Authentic Staples",
     "about": "The perfect 'bridge' between a daily driver and a night out. It has great energy and some of the best tibs in town.",
     "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Lucy%20Ethiopian%20Restaurant%20%26%20Lounge%2C%206800%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077057"
+    "google_search_url": "https://www.google.com/search?q=Lucy%20Ethiopian%20Restaurant%20%26%20Lounge%2C%206800%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077057",
+    "website": "https://lucyhouston.com"
   },
   {
     "id": "rich-sta-001",
@@ -3382,7 +3404,8 @@
     "address": "1050 Howell Mill Rd, Atlanta, GA 30318",
     "phone": "(404) 937-3331",
     "state": "GA",
-    "google_search_url": "https://www.google.com/search?q=Ubuntu%2C%201050%20Howell%20Mill%20Rd%2C%20Atlanta%2C%20GA%2030318"
+    "google_search_url": "https://www.google.com/search?q=Ubuntu%2C%201050%20Howell%20Mill%20Rd%2C%20Atlanta%2C%20GA%2030318",
+    "website": "https://ubuntubarandgrill.com"
   },
   {
     "id": "aduke-nigerian-la",
@@ -3438,7 +3461,8 @@
     },
     "about": "Authentic Jollof & Whole Grilled Tilapia.",
     "vibe_category": "Authentic Staples",
-    "google_search_url": "https://www.google.com/search?q=Tailat%20Kitchen%2C%202101%20W%20Pecan%20St%20%23105%2C%20Pflugerville%2C%20TX%2078660"
+    "google_search_url": "https://www.google.com/search?q=Tailat%20Kitchen%2C%202101%20W%20Pecan%20St%20%23105%2C%20Pflugerville%2C%20TX%2078660",
+    "website": "https://tailatkitchen.com"
   },
   {
     "id": "lady-t-kitchen-austin",
@@ -3477,7 +3501,8 @@
     "about": "Upscale Black-owned Caribbean spot; traditional Jamaican and Haitian flavors. Famous for East Flatbush vibes, drive-thru, and weekend brunch.",
     "state": "NY",
     "vibe_category": "Authentic Staples",
-    "google_search_url": "https://www.google.com/search?q=Bamboo%20Walk%2C%201343%20Utica%20Ave%2C%20Brooklyn%2C%20NY%2011203"
+    "google_search_url": "https://www.google.com/search?q=Bamboo%20Walk%2C%201343%20Utica%20Ave%2C%20Brooklyn%2C%20NY%2011203",
+    "website": "https://www.bamboowalk.com"
   },
   {
     "id": "cocobreeze-oakland",
@@ -3564,7 +3589,6 @@
     "rating": 4.5,
     "address": "1128 H St NE, Washington, DC 20002",
     "phone": "(703) 962-0437",
-    "website": "https://www.discoverferu.com",
     "about": "Opened 2023; brunch & traditional dishes. Family recipes from owner's mother (30+ years).",
     "state": "DC",
     "hours": {
@@ -3572,7 +3596,8 @@
       "mon": "Closed"
     },
     "vibe_category": "Authentic Staples",
-    "google_search_url": "https://www.google.com/search?q=Feru%20Ethiopian%20Cuisine%2C%201128%20H%20St%20NE%2C%20Washington%2C%20DC%2020002"
+    "google_search_url": "https://www.google.com/search?q=Feru%20Ethiopian%20Cuisine%2C%201128%20H%20St%20NE%2C%20Washington%2C%20DC%2020002",
+    "website": "https://www.discoverferu.com"
   },
   {
     "id": "little-lagos-atl",
@@ -3609,7 +3634,8 @@
       "sun": "Closed"
     },
     "vibe_category": "Authentic Staples",
-    "google_search_url": "https://www.google.com/search?q=Baba%20Jollof%2C%208330%20W%20Bellfort%20Ave%20Ste%20C%2C%20Houston%2C%20TX%2077071"
+    "google_search_url": "https://www.google.com/search?q=Baba%20Jollof%2C%208330%20W%20Bellfort%20Ave%20Ste%20C%2C%20Houston%2C%20TX%2077071",
+    "website": "https://babajloungeandrestaurant.com"
   },
   {
     "id": "native-pot-houston",
@@ -3647,7 +3673,8 @@
     },
     "vibe_category": "Authentic Staples",
     "vibe": "Casual counter-service Jamaican — patties, bowls, and platters locals use as a daily driver spot.",
-    "google_search_url": "https://www.google.com/search?q=Vee's%2C%20896%20Nostrand%20Ave%2C%20Brooklyn%2C%20NY%2011225"
+    "google_search_url": "https://www.google.com/search?q=Vee's%2C%20896%20Nostrand%20Ave%2C%20Brooklyn%2C%20NY%2011225",
+    "website": "https://www.veesrestaurant.com"
   },
   {
     "id": "irie-caribbean-brooklyn",
@@ -3677,7 +3704,6 @@
     "rating": 4.5,
     "address": "5352 N Broadway, Chicago, IL 60640",
     "phone": "(312) 698-4481",
-    "website": "https://tesfacuisine.com",
     "about": "Family-run; injera, kitfo, tibs. Edgewater. Vegetarian, vegan, gluten-free options.",
     "state": "IL",
     "hours": {
@@ -3687,7 +3713,8 @@
       "sun": "11:00 AM - 8:00 PM"
     },
     "vibe_category": "Authentic Staples",
-    "google_search_url": "https://www.google.com/search?q=Tesfa%20Ethiopian%20Cuisine%2C%205352%20N%20Broadway%2C%20Chicago%2C%20IL%2060640"
+    "google_search_url": "https://www.google.com/search?q=Tesfa%20Ethiopian%20Cuisine%2C%205352%20N%20Broadway%2C%20Chicago%2C%20IL%2060640",
+    "website": "https://tesfacuisine.com"
   },
   {
     "id": "badou-senegalese-chicago",
@@ -3717,7 +3744,6 @@
     "rating": 4.5,
     "address": "902 N La Brea Ave, Inglewood, CA 90302",
     "phone": "(424) 227-6266",
-    "website": "https://twohommes.com",
     "about": "Afro-centric; California meets West African. Honey berbere chicken, jollof, root beer short ribs. Thu–Mon.",
     "state": "CA",
     "hours": {
@@ -3725,7 +3751,8 @@
       "sun": "12:00 PM - 8:00 PM"
     },
     "vibe_category": "Fine Dining",
-    "google_search_url": "https://www.google.com/search?q=Two%20Homm%C3%A9s%2C%20902%20N%20La%20Brea%20Ave%2C%20Inglewood%2C%20CA%2090302"
+    "google_search_url": "https://www.google.com/search?q=Two%20Homm%C3%A9s%2C%20902%20N%20La%20Brea%20Ave%2C%20Inglewood%2C%20CA%2090302",
+    "website": "https://twohommes.com"
   },
   {
     "id": "blessed-tropical-inglewood",
@@ -3863,7 +3890,8 @@
     ],
     "vibe_category": "Authentic Staples",
     "state": "CA",
-    "google_search_url": "https://www.google.com/search?q=Island%20Breeze%20Jamaican%20Cuisine%2C%201063%20S%20Mount%20Vernon%20Ave%2C%20Colton%2C%20CA%2092324"
+    "google_search_url": "https://www.google.com/search?q=Island%20Breeze%20Jamaican%20Cuisine%2C%201063%20S%20Mount%20Vernon%20Ave%2C%20Colton%2C%20CA%2092324",
+    "website": "https://www.ibjamaicancuisine.com"
   },
   {
     "id": "island-breeze-san-bernardino",
@@ -3887,7 +3915,8 @@
     ],
     "vibe_category": "Authentic Staples",
     "state": "CA",
-    "google_search_url": "https://www.google.com/search?q=Island%20Breeze%20Jamaican%20Cuisine%20(San%20Bernardino)%2C%20763%20W%20Highland%20Ave%2C%20San%20Bernardino%2C%20CA%2092405"
+    "google_search_url": "https://www.google.com/search?q=Island%20Breeze%20Jamaican%20Cuisine%20(San%20Bernardino)%2C%20763%20W%20Highland%20Ave%2C%20San%20Bernardino%2C%20CA%2092405",
+    "website": "https://www.ibjamaicancuisine.com"
   },
   {
     "id": "zola-cultural-kitchen-mesa",
@@ -3898,7 +3927,7 @@
     "rating": 4.7,
     "address": "6209 E Main St, Mesa, AZ 85206",
     "phone": "(602) 562-5403",
-    "website": "https://zolacuturalkitchen.com/",
+    "website": "https://zolacuturalkitchen.com",
     "hours": {
       "mon_thu": "11:00 AM - 9:00 PM",
       "fri_sat": "11:00 AM - 10:00 PM",
@@ -4154,7 +4183,8 @@
     "google_place_id": "ChIJXc3yS8an3IARvq-FR9Hpq54",
     "lat": 33.9234267,
     "lng": -117.253716,
-    "google_search_url": "https://www.google.com/search?q=Nok%20Grill%2C%2023424%20Rolanda%20Dr%2C%20Moreno%20Valley%2C%20CA%2092553"
+    "google_search_url": "https://www.google.com/search?q=Nok%20Grill%2C%2023424%20Rolanda%20Dr%2C%20Moreno%20Valley%2C%20CA%2092553",
+    "website": "https://nokgrill.com"
   },
   {
     "id": "taste-of-east-african-minneapolis",
@@ -4234,7 +4264,8 @@
     "google_place_id": "ChIJ6ZYCuq8zs1IRj9i8O0W6kic",
     "lat": 44.9644441,
     "lng": -93.2776013,
-    "google_search_url": "https://www.google.com/search?q=Joe%20%26%20Nya%20African%20Restaurant%2C%201831%20Nicollet%20Ave%2C%20Minneapolis%2C%20MN%2055403"
+    "google_search_url": "https://www.google.com/search?q=Joe%20%26%20Nya%20African%20Restaurant%2C%201831%20Nicollet%20Ave%2C%20Minneapolis%2C%20MN%2055403",
+    "website": "https://joenyaafrican.com"
   },
   {
     "id": "oga-madam-kitchen-minneapolis",
@@ -4395,7 +4426,8 @@
     "google_place_id": "ChIJC7DL2T6nlVQRpC_x2azbJyc",
     "lat": 45.5050683,
     "lng": -122.65541119999999,
-    "google_search_url": "https://www.google.com/search?q=AKADI%20PDX%2C%201001%20SE%20Division%20St%2C%20Portland%2C%20OR%2097202"
+    "google_search_url": "https://www.google.com/search?q=AKADI%20PDX%2C%201001%20SE%20Division%20St%2C%20Portland%2C%20OR%2097202",
+    "website": "https://www.akadipdx.com"
   },
   {
     "id": "black-star-grill-portland",
@@ -4421,8 +4453,7 @@
     "google_place_id": "ChIJWZq0ORQKlVQRaiHmQH8gpjg",
     "lat": 45.5238902,
     "lng": -122.6809875,
-    "google_search_url": "https://www.google.com/search?q=Black%20Star%20Grill%2C%20110%20NW%2010th%20Ave%2C%20Portland%2C%20OR%2097209",
-    "website": "https://blackrestaurantweeks.com"
+    "google_search_url": "https://www.google.com/search?q=Black%20Star%20Grill%2C%20110%20NW%2010th%20Ave%2C%20Portland%2C%20OR%2097209"
   },
   {
     "id": "madina-restaurant-nashville",
@@ -4636,7 +4667,8 @@
     "google_place_id": "ChIJER3d3pnJxokRWwTpr1gQ970",
     "lat": 39.933417299999995,
     "lng": -75.1045917,
-    "google_search_url": "https://www.google.com/search?q=Adji%20jollof%20rice%20kitchen%2C%201152%20Haddon%20Ave%2C%20Camden%2C%20NJ%2008103"
+    "google_search_url": "https://www.google.com/search?q=Adji%20jollof%20rice%20kitchen%2C%201152%20Haddon%20Ave%2C%20Camden%2C%20NJ%2008103",
+    "website": "https://thejollofkitchen.com"
   },
   {
     "id": "chrisettas-kitchen-catering-west-chester",
@@ -4727,7 +4759,6 @@
     "rating": 4.4,
     "address": "146 Belgrade Ave, Roslindale, MA 02131",
     "phone": "(617) 327-3700",
-    "website": "http://www.obosafoods.net/",
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
@@ -4743,7 +4774,8 @@
     "google_place_id": "ChIJayNb1dx_44kRQSLBAUaWnAQ",
     "lat": 42.286097399999996,
     "lng": -71.1367909,
-    "google_search_url": "https://www.google.com/search?q=Obosa%20Restaurant%2C%20146%20Belgrade%20Ave%2C%20Roslindale%2C%20MA%2002131"
+    "google_search_url": "https://www.google.com/search?q=Obosa%20Restaurant%2C%20146%20Belgrade%20Ave%2C%20Roslindale%2C%20MA%2002131",
+    "website": "http://www.obosafoods.net"
   },
   {
     "id": "pelloma-nigerian-cuisine-mattapan",
@@ -4932,7 +4964,8 @@
     "google_place_id": "ChIJc08ix8W1JIgRZmyCrVmxdvo",
     "lat": 42.4311882,
     "lng": -83.3353607,
-    "google_search_url": "https://www.google.com/search?q=Mimi%E2%80%99s%20Nook%20Nigerian%20Cuisine%2C%2019586%20Middlebelt%20Rd%2C%20Livonia%2C%20MI%2048152"
+    "google_search_url": "https://www.google.com/search?q=Mimi%E2%80%99s%20Nook%20Nigerian%20Cuisine%2C%2019586%20Middlebelt%20Rd%2C%20Livonia%2C%20MI%2048152",
+    "website": "https://mimisnook.com"
   },
   {
     "id": "detroit-jollof-nigerian-cuisine-detroit",
@@ -5255,7 +5288,8 @@
     "google_place_id": "ChIJmbBWdZMJ9YgRKHBjMVUO_rI",
     "lat": 33.8587743,
     "lng": -84.30912959999999,
-    "google_search_url": "https://www.google.com/search?q=BoumBoumAtl%2C%203979%20Buford%20Hwy%20NE%20%23%20111%2C%20Atlanta%2C%20GA%2030345"
+    "google_search_url": "https://www.google.com/search?q=BoumBoumAtl%2C%203979%20Buford%20Hwy%20NE%20%23%20111%2C%20Atlanta%2C%20GA%2030345",
+    "website": "https://boumboumrestaurant.com"
   },
   {
     "id": "mama-j-nigerian-restaurant-marietta",
@@ -5442,7 +5476,8 @@
     "google_place_id": "ChIJ6fVE7-dZwokRs36v832cIoc",
     "lat": 40.7503629,
     "lng": -73.97613299999999,
-    "google_search_url": "https://www.google.com/search?q=d%C3%B9nd%C3%BA%2C%20140%20E%2041st%20St%2C%20New%20York%2C%20NY%2010017"
+    "google_search_url": "https://www.google.com/search?q=d%C3%B9nd%C3%BA%2C%20140%20E%2041st%20St%2C%20New%20York%2C%20NY%2010017",
+    "website": "https://eatdundu.com"
   },
   {
     "id": "olaides-kitchen-jersey-city-jersey-city",
@@ -5495,8 +5530,7 @@
     "google_place_id": "ChIJRRvTTQBbwokRVcsL610X46Y",
     "lat": 40.715494799999995,
     "lng": -73.9934822,
-    "google_search_url": "https://www.google.com/search?q=D.%20Salam%20African%20Cuisine%2C%2089%20Canal%20St%2C%20New%20York%2C%20NY%2010002",
-    "website": "https://salam-restaurant.square.site"
+    "google_search_url": "https://www.google.com/search?q=D.%20Salam%20African%20Cuisine%2C%2089%20Canal%20St%2C%20New%20York%2C%20NY%2010002"
   },
   {
     "id": "lagos-tsq-new-york",
@@ -5507,7 +5541,6 @@
     "rating": 4.2,
     "address": "727 7th Ave, New York, NY 10019",
     "phone": "(212) 281-0500",
-    "website": "https://www.lagosnyc.com/",
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
@@ -5523,7 +5556,8 @@
     "google_place_id": "ChIJG9u1qKtZwokR28mb77l_8Jc",
     "lat": 40.7600011,
     "lng": -73.9836749,
-    "google_search_url": "https://www.google.com/search?q=Lagos%20TSQ%2C%20727%207th%20Ave%2C%20New%20York%2C%20NY%2010019"
+    "google_search_url": "https://www.google.com/search?q=Lagos%20TSQ%2C%20727%207th%20Ave%2C%20New%20York%2C%20NY%2010019",
+    "website": "https://www.lagosnyc.com"
   },
   {
     "id": "teranga-midtown-153-e-53rd-st",
@@ -5629,7 +5663,8 @@
     "google_place_id": "ChIJMYVu2nZfCysRRWB3bbPOwOc",
     "lat": 35.2277594,
     "lng": -80.83820999999999,
-    "google_search_url": "https://www.google.com/search?q=Serengeti%20Kitchen%2C%20224%20E%207th%20St%2C%20Charlotte%2C%20NC%2028202"
+    "google_search_url": "https://www.google.com/search?q=Serengeti%20Kitchen%2C%20224%20E%207th%20St%2C%20Charlotte%2C%20NC%2028202",
+    "website": "https://serengetichef.com"
   },
   {
     "id": "zoewees-charlotte",
@@ -5958,7 +5993,6 @@
     "rating": 4.8,
     "address": "3645 Cypress Creek Pkwy #368, Houston, TX 77068",
     "phone": "(281) 891-3383",
-    "website": "https://hunanwestafricancuisine.com/",
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
@@ -6161,8 +6195,7 @@
     "google_place_id": "ChIJfSx0faup2YgR9uOaq9hliE8",
     "lat": 26.046446,
     "lng": -80.2299338,
-    "google_search_url": "https://www.google.com/search?q=Bliss%20Africa%2C%206305%20Stirling%20Rd%2C%20Davie%2C%20FL%2033314",
-    "website": "https://blisscookhouseflorida.com"
+    "google_search_url": "https://www.google.com/search?q=Bliss%20Africa%2C%206305%20Stirling%20Rd%2C%20Davie%2C%20FL%2033314"
   },
   {
     "id": "savor-wynwood-miami",
@@ -6508,8 +6541,7 @@
     "google_place_id": "ChIJUQNL_LnXwogRpbWabTAzaJk",
     "lat": 27.840419899999997,
     "lng": -82.38093909999999,
-    "google_search_url": "https://www.google.com/search?q=Taste%20Of%20Lagos%2C%2011130%20US-41%2C%20Gibsonton%2C%20FL%2033534",
-    "website": "https://tastesoflagos.com"
+    "google_search_url": "https://www.google.com/search?q=Taste%20Of%20Lagos%2C%2011130%20US-41%2C%20Gibsonton%2C%20FL%2033534"
   },
   {
     "id": "steaming-pots-west-africa-cuisine-mobile-1-tampa",
@@ -6697,7 +6729,8 @@
     "google_place_id": "ChIJx4NieGLPRIYRAToKFqDKKuY",
     "lat": 30.4328984,
     "lng": -97.6565602,
-    "google_search_url": "https://www.google.com/search?q=gladwin%20kitchen%2C%20800%20Sawbuck%20Dr%2C%20Pflugerville%2C%20TX%2078660"
+    "google_search_url": "https://www.google.com/search?q=gladwin%20kitchen%2C%20800%20Sawbuck%20Dr%2C%20Pflugerville%2C%20TX%2078660",
+    "website": "https://www.gladwinbrothers.com"
   },
   {
     "id": "suyaverse-grillhouse-austin",
@@ -6750,7 +6783,8 @@
     "google_place_id": "ChIJibdbOaHLRIYRK93zuU9XUJA",
     "lat": 30.3130587,
     "lng": -97.6906571,
-    "google_search_url": "https://www.google.com/search?q=Tailat%20Kitchen%20(Nigerian%20Cuisine)%2C%205933%20Westminster%20Dr%2C%20Austin%2C%20TX%2078723"
+    "google_search_url": "https://www.google.com/search?q=Tailat%20Kitchen%20(Nigerian%20Cuisine)%2C%205933%20Westminster%20Dr%2C%20Austin%2C%20TX%2078723",
+    "website": "https://tailatkitchen.com"
   },
   {
     "id": "kitchen234-nigerian-restaurant-austin",
@@ -6935,7 +6969,8 @@
     "google_place_id": "ChIJaQt-gTrtMIgRPZLSAWBKDSE",
     "lat": 41.4506905,
     "lng": -81.81486079999999,
-    "google_search_url": "https://www.google.com/search?q=Habesha%20Ethiopian%20and%20Eritrean%20Restaurant%2C%2016860%20Lorain%20Ave%2C%20Cleveland%2C%20OH%2044111"
+    "google_search_url": "https://www.google.com/search?q=Habesha%20Ethiopian%20and%20Eritrean%20Restaurant%2C%2016860%20Lorain%20Ave%2C%20Cleveland%2C%20OH%2044111",
+    "website": "https://habeshacle.com"
   },
   {
     "id": "arike-african-cuisine-catering-services-catering-only-cleveland",
@@ -6999,7 +7034,6 @@
     "rating": 4.7,
     "address": "2199 Lee Rd, Cleveland Heights, OH 44118",
     "phone": "(216) 932-3512",
-    "website": "http://momokebab.com/",
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
@@ -7015,7 +7049,8 @@
     "google_place_id": "ChIJT0f6HVL8MIgRvp8Vud9F2-c",
     "lat": 41.499965599999996,
     "lng": -81.565124,
-    "google_search_url": "https://www.google.com/search?q=MoMo's%20Kebab%20%7C%20Moroccan%2C%202199%20Lee%20Rd%2C%20Cleveland%20Heights%2C%20OH%2044118"
+    "google_search_url": "https://www.google.com/search?q=MoMo's%20Kebab%20%7C%20Moroccan%2C%202199%20Lee%20Rd%2C%20Cleveland%20Heights%2C%20OH%2044118",
+    "website": "https://momoskebab.com"
   },
   {
     "id": "taste-of-jamaica-cleveland",
@@ -7172,7 +7207,8 @@
     "google_place_id": "ChIJcw-VTo0rO4gRBBp7haYU4ac",
     "lat": 42.259682999999995,
     "lng": -82.9677583,
-    "google_search_url": "https://www.google.com/search?q=StreetGrillz%20Windsor%2C%204185%20Walker%20Rd%20%23100%2C%20Windsor%2C%20ON%20N8W%203T6%2C"
+    "google_search_url": "https://www.google.com/search?q=StreetGrillz%20Windsor%2C%204185%20Walker%20Rd%20%23100%2C%20Windsor%2C%20ON%20N8W%203T6%2C%20%20",
+    "website": "https://streetgrillz.ca"
   },
   {
     "id": "bunmi-l-b-on-l6j-3j3",
@@ -7183,7 +7219,6 @@
     "rating": 4.9,
     "address": "187 Cross Ave unit 5, Oakville, ON L6J 3J3,  ",
     "phone": "+1 647-649-7188",
-    "website": "https://www.bunmiolobe.com/",
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
@@ -7345,7 +7380,6 @@
     "rating": 4.3,
     "address": "2317 Lee Rd, Cleveland Heights, OH 44118",
     "phone": "(216) 932-9100",
-    "website": "http://www.tastefoodwine.com/",
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
@@ -7695,7 +7729,6 @@
     "rating": 4.1,
     "address": "2041 Davidson Ave, Bronx, NY 10453",
     "phone": "(718) 584-8500",
-    "website": "https://accra-ny.shop/",
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
@@ -8229,7 +8262,6 @@
     "rating": 4.9,
     "address": "3920 W Charleston Blvd # A, Las Vegas, NV 89102",
     "phone": "(702) 722-2524",
-    "website": "http://www.lebongoutchezfa.com/",
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
@@ -8538,7 +8570,8 @@
     "google_place_id": "ChIJlRcsLyB-54gR8Sj7b5iRv-E",
     "lat": 28.4067451,
     "lng": -81.4502335,
-    "google_search_url": "https://www.google.com/search?q=Selam%20Ethiopian%20%26%20Eritrean%20Cuisine%2C%205494%20Central%20Florida%20Pkwy%2C%20Orlando%2C%20FL%2032821"
+    "google_search_url": "https://www.google.com/search?q=Selam%20Ethiopian%20%26%20Eritrean%20Cuisine%2C%205494%20Central%20Florida%20Pkwy%2C%20Orlando%2C%20FL%2032821",
+    "website": "https://www.selamorlando.com"
   },
   {
     "id": "kalalou-signature-orlando",
@@ -8645,7 +8678,8 @@
     "google_place_id": "ChIJYZC8dOpfrIkRdT9stANRzWA",
     "lat": 35.7768983,
     "lng": -78.6267962,
-    "google_search_url": "https://www.google.com/search?q=Hady's%20Restaurant%20%7C%20International%20Cuisine%2C%20717%20E%20Martin%20St%20Suite%20199%2C%20Raleigh%2C%20NC%2027601"
+    "google_search_url": "https://www.google.com/search?q=Hady's%20Restaurant%20%7C%20International%20Cuisine%2C%20717%20E%20Martin%20St%20Suite%20199%2C%20Raleigh%2C%20NC%2027601",
+    "website": "https://hadysrestaurant.com"
   },
   {
     "id": "nigeria-kitchen-llc-wake-forest",
@@ -8897,7 +8931,6 @@
     "rating": 4.7,
     "address": "1151 S Redwood Rd Suite 108, Salt Lake City, UT 84104",
     "phone": "(801) 975-6356",
-    "website": "https://noorslc.com/",
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
@@ -9134,7 +9167,6 @@
     "rating": 4.4,
     "address": "6800 Southwest Fwy, Houston, TX 77074",
     "phone": "+1 713-334-0000",
-    "website": "http://www.lucyhouston.com/",
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
@@ -9147,7 +9179,8 @@
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Lucy%2C%206800%20Southwest%20Fwy%2C%20Houston%2C%20TX%2077074"
+    "google_search_url": "https://www.google.com/search?q=Lucy%2C%206800%20Southwest%20Fwy%2C%20Houston%2C%20TX%2077074",
+    "website": "https://lucyhouston.com"
   },
   {
     "id": "bahel-ethiopian-mart-and-dining-houston",
@@ -9465,7 +9498,6 @@
     "rating": 4.6,
     "address": "507 Westheimer Rd, Houston, TX 77006",
     "phone": "(832) 962-4500",
-    "website": "https://chopnblok.co/",
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
@@ -9478,7 +9510,8 @@
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Ch%C3%B2pnBl%E1%BB%8Dk%2C%20507%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077006"
+    "google_search_url": "https://www.google.com/search?q=Ch%C3%B2pnBl%E1%BB%8Dk%2C%20507%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077006",
+    "website": "https://chopnblok.co"
   },
   {
     "id": "rodo-nigerian-cuisine-richmond",
@@ -9689,8 +9722,7 @@
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Kenna%2C%206121%20Hillcroft%20Ave%20c1%2C%20Houston%2C%20TX%2077081",
-    "website": "https://kennacafe.com"
+    "google_search_url": "https://www.google.com/search?q=Kenna%2C%206121%20Hillcroft%20Ave%20c1%2C%20Houston%2C%20TX%2077081"
   },
   {
     "id": "harar-ethiopian-restaurant-houston",
@@ -9724,7 +9756,6 @@
     "rating": 5,
     "address": "5701 Bellaire Blvd d, Houston, TX 77081",
     "phone": "(832) 790-3266",
-    "website": "https://selamspecialty.com/",
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
@@ -9783,8 +9814,7 @@
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Sheba%2C%206121%20Hillcroft%20Ave%20Suite%20N%2C%20Houston%2C%20TX%2077081",
-    "website": "https://sheba.gotoeat.net"
+    "google_search_url": "https://www.google.com/search?q=Sheba%2C%206121%20Hillcroft%20Ave%20Suite%20N%2C%20Houston%2C%20TX%2077081"
   },
   {
     "id": "horn-of-africa-houston",
@@ -10110,7 +10140,8 @@
     ],
     "vibe_category": "Authentic Staples",
     "state": "CA",
-    "google_search_url": "https://www.google.com/search?q=Teranga%2C%201%20Embarcadero%20Center%2C%20San%20Francisco%2C%20CA%2094111"
+    "google_search_url": "https://www.google.com/search?q=Teranga%2C%201%20Embarcadero%20Center%2C%20San%20Francisco%2C%20CA%2094111",
+    "website": "https://www.terangafoods.com"
   },
   {
     "id": "hou-sta-018",

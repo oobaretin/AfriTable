@@ -123,7 +123,7 @@ async function main() {
       row.status = "not_found";
       console.log("  ⚠️  No website candidate\n");
       report.results.push(row);
-      await new Promise((r) => setTimeout(r, 1200));
+      await new Promise((r) => setTimeout(r, 2200));
       continue;
     }
 
@@ -152,7 +152,7 @@ async function main() {
     }
 
     report.results.push(row);
-    await new Promise((r) => setTimeout(r, 1200));
+    await new Promise((r) => setTimeout(r, 2200));
   }
 
   if (!dryRun) {
