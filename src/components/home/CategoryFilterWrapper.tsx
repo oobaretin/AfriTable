@@ -1,18 +1,24 @@
 "use client";
 
 import * as React from "react";
-import { CategoryFilter } from "./CategoryFilter";
-import { CityFilter } from "./CityFilter";
 import { RestaurantGrid } from "./RestaurantGrid";
 import { StaffPicks } from "./StaffPicks";
+import { RestaurantDirectoryFilterBar } from "@/components/restaurants/RestaurantDirectoryFilterBar";
 import { useRestaurantFiltersContext } from "@/contexts/restaurant-filters-context";
 
-type CategoryFilterWrapperProps = {
-  onCountChange?: (count: number, total: number) => void;
-};
+export function CategoryFilterWrapper() {
+  const { filteredResults } = useRestaurantFiltersContext();
+  const [displayCount, setDisplayCount] = React.useState(0);
+  const [totalCount, setTotalCount] = React.useState(filteredResults.length);
 
-export function CategoryFilterWrapper({ onCountChange }: CategoryFilterWrapperProps) {
-  const { filters, setCity, setCuisine, filteredResults } = useRestaurantFiltersContext();
+  React.useEffect(() => {
+    setTotalCount(filteredResults.length);
+  }, [filteredResults.length]);
+
+  const handleCountChange = (count: number, total: number) => {
+    setDisplayCount(count);
+    setTotalCount(total);
+  };
 
   const restaurants = React.useMemo(
     () => filteredResults.map((item) => item.restaurant),
@@ -21,28 +27,36 @@ export function CategoryFilterWrapper({ onCountChange }: CategoryFilterWrapperPr
 
   return (
     <div className="w-full">
-      <div className="sticky top-0 z-30 bg-[#050A18]/80 backdrop-blur-md border-b border-white/10 py-4">
+      <div className="bg-[#000814] px-6 pb-4 pt-2 text-center">
+        <h2 className="font-serif text-xl font-normal text-[#C69C2B] md:text-2xl">
+          Explore the directory
+        </h2>
+        <p className="mx-auto mt-2 max-w-xl text-sm text-white/60">
+          Filter by name, city, cuisine, vibe, or zip code. All filters work together and update the URL so you can
+          share your search.
+        </p>
+      </div>
+
+      <RestaurantDirectoryFilterBar />
+
+      <div className="bg-[#050A18] pb-4 pt-3">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              <CategoryFilter
-                activeCategory={filters.cuisine}
-                setActiveCategory={setCuisine}
-              />
-            </div>
-            <div className="flex-shrink-0">
-              <CityFilter activeCity={filters.city} setActiveCity={setCity} />
-            </div>
-          </div>
+          <p className="text-center text-sm uppercase tracking-[0.1em] text-white/50 md:text-base">
+            {displayCount > 0 && totalCount > 0 ? (
+              <>Showing {displayCount} of {totalCount} destinations</>
+            ) : (
+              <>{totalCount} destinations across the United States</>
+            )}
+          </p>
         </div>
       </div>
 
-      <div className="pt-6">
+      <div className="mx-auto max-w-6xl px-6 pt-4">
         <StaffPicks restaurants={restaurants} />
       </div>
 
-      <div className="pt-6">
-        <RestaurantGrid filteredResults={filteredResults} onCountChange={onCountChange} />
+      <div className="mx-auto max-w-6xl px-6 pt-6">
+        <RestaurantGrid filteredResults={filteredResults} onCountChange={handleCountChange} />
       </div>
     </div>
   );

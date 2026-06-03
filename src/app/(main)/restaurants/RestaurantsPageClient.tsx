@@ -3,7 +3,6 @@
 import * as React from "react";
 import { Suspense } from "react";
 import { RestaurantFiltersProvider } from "@/contexts/restaurant-filters-context";
-import { RestaurantsPageSearch } from "@/components/restaurants/RestaurantsPageSearch";
 import { RestaurantsGridClient } from "./RestaurantsGridClient";
 import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
 
@@ -14,7 +13,6 @@ type RestaurantsPageClientProps = {
 function RestaurantsPageContent({ restaurants }: RestaurantsPageClientProps) {
   return (
     <RestaurantFiltersProvider restaurants={restaurants}>
-      <RestaurantsPageSearch />
       <RestaurantsGridClient />
     </RestaurantFiltersProvider>
   );
@@ -24,7 +22,7 @@ export function RestaurantsPageClient({ restaurants }: RestaurantsPageClientProp
   return (
     <Suspense
       fallback={
-        <div className="py-24 text-center text-sm text-white/50 uppercase tracking-widest">
+        <div className="py-24 text-center text-sm uppercase tracking-widest text-white/50">
           Loading restaurants…
         </div>
       }

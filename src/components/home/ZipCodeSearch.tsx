@@ -19,6 +19,8 @@ type ZipCodeSearchProps = {
   radius?: number;
   onZipChange?: (zip: string) => void;
   onRadiusChange?: (radius: number) => void;
+  /** Compact layout for the directory sticky filter bar. */
+  compact?: boolean;
 };
 
 export function ZipCodeSearch({
@@ -28,6 +30,7 @@ export function ZipCodeSearch({
   radius: controlledRadius,
   onZipChange,
   onRadiusChange,
+  compact = false,
 }: ZipCodeSearchProps) {
   const zipInputId = React.useId();
   const isControlled = onZipChange != null;
@@ -81,9 +84,9 @@ export function ZipCodeSearch({
   }, [isControlled, zipCode, radius, restaurants, onFilterChange]);
 
   return (
-    <div className="w-full max-w-2xl mx-auto space-y-6">
+    <div className={compact ? "space-y-3" : "w-full max-w-2xl mx-auto space-y-6"}>
       <div className="relative">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
+        <Search className={`absolute left-3 top-1/2 -translate-y-1/2 text-white/40 ${compact ? "h-4 w-4" : "h-5 w-5 left-4"}`} />
         <input
           id={`${zipInputId}-zip-code-search`}
           name="zipCode"
@@ -92,21 +95,29 @@ export function ZipCodeSearch({
           pattern="[0-9]*"
           value={zipCode}
           onChange={handleZipChange}
-          placeholder="Enter your zip code"
+          placeholder="Enter zip code"
           maxLength={5}
-          className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-[#C69C2B]/50 focus:ring-2 focus:ring-[#C69C2B]/20 transition-all duration-300"
+          className={
+            compact
+              ? "w-full rounded-lg border border-white/10 bg-white/5 py-3 pl-10 pr-4 text-sm text-white placeholder:text-white/40 focus:border-[#C69C2B]/50 focus:outline-none focus:ring-2 focus:ring-[#C69C2B]/20"
+              : "w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-[#C69C2B]/50 focus:ring-2 focus:ring-[#C69C2B]/20 transition-all duration-300"
+          }
           aria-label="Enter zip code to find nearby restaurants"
         />
       </div>
-      {zipCode.length > 0 && zipCode.length < 5 && (
+      {!compact && zipCode.length > 0 && zipCode.length < 5 && (
         <p className="text-xs text-white/50 text-center">Enter 5 digits</p>
       )}
 
       {zipCode.length === 5 && (
-        <div className="space-y-3">
+        <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label className="text-sm text-white/70 font-medium">Search Radius</label>
-            <span className="text-sm text-[#C69C2B] font-semibold">{radius} miles</span>
+            <label className={`font-medium text-white/70 ${compact ? "text-xs" : "text-sm"}`}>
+              Radius
+            </label>
+            <span className={`font-semibold text-[#C69C2B] ${compact ? "text-xs" : "text-sm"}`}>
+              {radius} miles
+            </span>
           </div>
           <div className="relative">
             <input

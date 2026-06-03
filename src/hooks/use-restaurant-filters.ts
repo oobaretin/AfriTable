@@ -30,8 +30,10 @@ export type RestaurantFiltersApi = {
   setZip: (zip: string) => void;
   setRadius: (radius: number) => void;
   setVibe: (vibe: VibeFilterOption) => void;
+  setQ: (q: string) => void;
   patchFilters: (patch: Partial<RestaurantFilterState>) => void;
   clearFilters: () => void;
+  hasActiveFilters: boolean;
 };
 
 export function computeFilteredRestaurantResults(
@@ -129,9 +131,21 @@ export function useRestaurantFilters(restaurants: JSONRestaurant[]): RestaurantF
     [patchFilters],
   );
 
+  const setQ = React.useCallback(
+    (q: string) => patchFilters({ q: q.trim() }),
+    [patchFilters],
+  );
+
   const clearFilters = React.useCallback(() => {
     router.replace(pathname, { scroll: false });
   }, [pathname, router]);
+
+  const hasActiveFilters =
+    Boolean(filters.city) ||
+    filters.cuisine !== "All" ||
+    filters.zip.length === 5 ||
+    filters.vibe !== "All" ||
+    Boolean(filters.q);
 
   return {
     filters,
@@ -142,8 +156,10 @@ export function useRestaurantFilters(restaurants: JSONRestaurant[]): RestaurantF
     setZip,
     setRadius,
     setVibe,
+    setQ,
     patchFilters,
     clearFilters,
+    hasActiveFilters,
   };
 }
 
