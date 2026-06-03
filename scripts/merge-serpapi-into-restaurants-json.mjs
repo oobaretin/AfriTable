@@ -104,9 +104,28 @@ function cleanDescription(desc, city, state) {
 
 function hoursToSimple(h) {
   if (!h || typeof h !== "object") return { mon_sat: "11:00 AM - 9:00 PM", sun: "12:00 PM - 8:00 PM" };
-  const mon = h.monday;
-  if (mon && !mon.closed && mon.open && mon.close) {
-    return { mon_sat: `${mon.open} - ${mon.close} (confirm)`, sun: "Varies" };
+  const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+  const out = {};
+  for (const d of days) {
+    const v = h[d];
+    if (v && !v.closed && v.open && v.close) {
+      const key = d.slice(0, 3);
+      out[key] = `${v.open} - ${v.close}`;
+    } else if (v?.closed) {
+      out[d.slice(0, 3)] = "Closed";
+    }
+  }
+  if (Object.keys(out).length >= 3) {
+    const mon = h.monday;
+    const sat = h.saturday;
+    const sun = h.sunday;
+    if (mon && sat && !mon.closed && !sat.closed && mon.open === sat.open && mon.close === sat.close) {
+      return {
+        mon_sat: `${mon.open} - ${mon.close}`,
+        sun: sun?.closed ? "Closed" : sun?.open && sun?.close ? `${sun.open} - ${sun.close}` : "12:00 PM - 8:00 PM",
+      };
+    }
+    return out;
   }
   return { mon_sat: "11:00 AM - 9:00 PM", sun: "12:00 PM - 8:00 PM" };
 }

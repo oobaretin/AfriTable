@@ -1,6 +1,9 @@
 // Client-safe utilities for transforming JSON restaurant data
 // Server-only functions are in restaurant-json-loader-server.ts
 
+import { parseCatalogHoursToArray } from "@/lib/parse-catalog-hours";
+import { resolveGoogleSearchUrl } from "@/lib/google-search-url";
+
 export type JSONRestaurant = {
   id: string;
   name: string;
@@ -14,6 +17,10 @@ export type JSONRestaurant = {
   lng?: number;
   phone?: string;
   website?: string;
+  google_place_id?: string;
+  google_search_url?: string;
+  /** @deprecated use google_search_url */
+  google_maps_url?: string;
   social?: {
     instagram?: string;
     facebook?: string;
@@ -68,94 +75,7 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
   }
 
   // Parse hours from JSON format to array format
-  const hoursArray: any[] = [];
-  if (jsonRestaurant.hours && typeof jsonRestaurant.hours === "object") {
-    const hoursObj = jsonRestaurant.hours as Record<string, string>;
-    const dayMap: Array<[string, number]> = [
-      ["monday", 1],
-      ["mon", 1],
-      ["tue", 2],
-      ["tuesday", 2],
-      ["wed", 3],
-      ["wednesday", 3],
-      ["thu", 4],
-      ["thursday", 4],
-      ["fri", 5],
-      ["friday", 5],
-      ["sat", 6],
-      ["saturday", 6],
-      ["sun", 0],
-      ["sunday", 0],
-    ];
-
-    // Handle ranges like "mon_sat", "tue_sun", etc.
-    for (const [key, value] of Object.entries(hoursObj)) {
-      if (value === "Closed" || !value) continue;
-
-      const rangeMatch = key.match(/^(\w+)_(\w+)$/);
-      if (rangeMatch) {
-        const [, startDay, endDay] = rangeMatch;
-        const startDayNum = dayMap.find(([d]) => d === startDay.toLowerCase())?.[1];
-        const endDayNum = dayMap.find(([d]) => d === endDay.toLowerCase())?.[1];
-        if (startDayNum !== undefined && endDayNum !== undefined) {
-          // Parse time range like "12:00 PM - 12:00 AM"
-          const timeMatch = value.match(/(\d{1,2}):(\d{2})\s*(AM|PM)\s*-\s*(\d{1,2}):(\d{2})\s*(AM|PM)/);
-          if (timeMatch) {
-            const [, h1, m1, p1, h2, m2, p2] = timeMatch;
-            const open24h = convertTo24h(parseInt(h1), p1);
-            const close24h = convertTo24h(parseInt(h2), p2);
-            const openTime = `${String(open24h).padStart(2, "0")}:${m1}`;
-            const closeTime = `${String(close24h).padStart(2, "0")}:${m2}`;
-
-            // Add entries for each day in range
-            const daysToAdd: number[] = [];
-            
-            // Handle wrapping around Sunday (0) to Saturday (6)
-            if (startDayNum <= endDayNum) {
-              // Normal range (e.g., Mon-Fri)
-              for (let d = startDayNum; d <= endDayNum; d++) {
-                daysToAdd.push(d);
-              }
-            } else {
-              // Wrapping range (e.g., Sat-Sun)
-              for (let d = startDayNum; d <= 6; d++) {
-                daysToAdd.push(d);
-              }
-              for (let d = 0; d <= endDayNum; d++) {
-                daysToAdd.push(d);
-              }
-            }
-            
-            daysToAdd.forEach((day) => {
-              hoursArray.push({
-                day_of_week: day,
-                open_time: openTime,
-                close_time: closeTime,
-              });
-            });
-          }
-        }
-      } else {
-        // Single day
-        const dayNum = dayMap.find(([d]) => d === key.toLowerCase())?.[1];
-        if (dayNum !== undefined && value !== "Closed") {
-          const timeMatch = value.match(/(\d{1,2}):(\d{2})\s*(AM|PM)\s*-\s*(\d{1,2}):(\d{2})\s*(AM|PM)/);
-          if (timeMatch) {
-            const [, h1, m1, p1, h2, m2, p2] = timeMatch;
-            const open24h = convertTo24h(parseInt(h1), p1);
-            const close24h = convertTo24h(parseInt(h2), p2);
-            const openTime = `${String(open24h).padStart(2, "0")}:${m1}`;
-            const closeTime = `${String(close24h).padStart(2, "0")}:${m2}`;
-            hoursArray.push({
-              day_of_week: dayNum,
-              open_time: openTime,
-              close_time: closeTime,
-            });
-          }
-        }
-      }
-    }
-  }
+  const hoursArray = parseCatalogHoursToArray(jsonRestaurant.hours);
 
   // Extract Instagram handle from social object
   let instagramHandle: string | null = null;
@@ -178,6 +98,12 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
     address: addressObj,
     phone: jsonRestaurant.phone || null,
     website: jsonRestaurant.website && jsonRestaurant.website !== "N/A" ? jsonRestaurant.website : null,
+    google_search_url: resolveGoogleSearchUrl({
+      name: jsonRestaurant.name,
+      address: jsonRestaurant.address,
+      google_search_url: jsonRestaurant.google_search_url,
+      google_maps_url: jsonRestaurant.google_maps_url,
+    }),
     instagram_handle: instagramHandle,
     facebook_url: jsonRestaurant.social?.facebook || null,
     images: jsonRestaurant.images || [],
@@ -194,12 +120,4 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant):
     quality_factor: jsonRestaurant.quality_factor || null,
     vibe_category: jsonRestaurant.vibe_category || null,
   };
-}
-
-function convertTo24h(hour: number, period: string): number {
-  if (period === "AM") {
-    return hour === 12 ? 0 : hour;
-  } else {
-    return hour === 12 ? 12 : hour + 12;
-  }
 }

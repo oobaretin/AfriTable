@@ -18,6 +18,7 @@ import { generateDefaultContent } from "@/lib/restaurant-content-helpers";
 import { formatTimeRange12h } from "@/lib/utils/time-format";
 import { getRestaurantByIdFromJSON, getSimilarRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
+import { parseCatalogHoursToArray } from "@/lib/parse-catalog-hours";
 
 type RestaurantDetail = {
   id: string;
@@ -33,6 +34,7 @@ type RestaurantDetail = {
   address: any;
   phone: string | null;
   website: string | null;
+  google_search_url?: string | null;
   instagram_handle: string | null;
   facebook_url: string | null;
   images: string[];
@@ -78,6 +80,9 @@ function normalizeInstagramUrl(handleOrUrl: string | null | undefined): string {
 type OperatingHour = { day_of_week: number; open_time: string; close_time: string };
 
 function normalizeOperatingHours(input: unknown): OperatingHour[] {
+  const fromCatalog = parseCatalogHoursToArray(input);
+  if (fromCatalog.length) return fromCatalog;
+
   // If it's already an array format, process it directly
   if (Array.isArray(input)) {
     return input
@@ -260,14 +265,14 @@ async function getRestaurantById(id: string): Promise<RestaurantDetail | null> {
 
 async function getOperatingHours(restaurantId: string, restaurantHours: unknown) {
   const supabase = createSupabasePublicClient();
-  const { data } = await supabase
-    .from("availability_settings")
-    .select("operating_hours")
-    .eq("restaurant_id", restaurantId)
-    .maybeSingle();
-  const fromSettings = normalizeOperatingHours(data?.operating_hours);
+  const [{ data: settings }, { data: row }] = await Promise.all([
+    supabase.from("availability_settings").select("operating_hours").eq("restaurant_id", restaurantId).maybeSingle(),
+    supabase.from("restaurants").select("hours").eq("id", restaurantId).maybeSingle(),
+  ]);
+  const fromSettings = normalizeOperatingHours(settings?.operating_hours);
   const fromRestaurant = normalizeOperatingHours(restaurantHours);
-  return pickOperatingHours(fromSettings, fromRestaurant);
+  const fromDb = normalizeOperatingHours(row?.hours);
+  return pickOperatingHours(fromSettings, fromRestaurant, fromDb);
 }
 
 async function getReviews(restaurantId: string) {
@@ -553,6 +558,12 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
                           Website
                         </a>
                       </Button>
+                    ) : restaurant.google_search_url ? (
+                      <Button asChild size="sm" variant="outline" className="flex-shrink-0 whitespace-nowrap min-h-[36px]">
+                        <a href={restaurant.google_search_url} target="_blank" rel="noreferrer">
+                          Find on Google
+                        </a>
+                      </Button>
                     ) : null}
                     {restaurant.instagram_handle ? (
                       <Button asChild size="sm" variant="outline" className="flex-shrink-0 whitespace-nowrap min-h-[36px]">
@@ -568,7 +579,7 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
                         </a>
                       </Button>
                     ) : null}
-                    {!restaurant.website && !restaurant.instagram_handle && !restaurant.facebook_url ? (
+                    {!restaurant.website && !restaurant.google_search_url && !restaurant.instagram_handle && !restaurant.facebook_url ? (
                       <span className="text-xs text-muted-foreground">—</span>
                     ) : null}
                   </div>
@@ -788,6 +799,13 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
                         <span className="font-medium text-foreground">Website:</span>{" "}
                         <a href={restaurant.website} target="_blank" rel="noreferrer" className="text-primary hover:underline">
                           Visit website
+                        </a>
+                      </div>
+                    ) : restaurant.google_search_url ? (
+                      <div>
+                        <span className="font-medium text-foreground">Google:</span>{" "}
+                        <a href={restaurant.google_search_url} target="_blank" rel="noreferrer" className="text-primary hover:underline">
+                          Search on Google
                         </a>
                       </div>
                     ) : null}

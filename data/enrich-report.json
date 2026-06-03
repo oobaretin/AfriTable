@@ -1,0 +1,740 @@
+{
+  "generatedAt": "2026-06-03T01:12:31.471Z",
+  "dryRun": false,
+  "hoursNormalized": 0,
+  "hoursFromWebsite": 18,
+  "websitesBroken": 65,
+  "websitesOk": 250,
+  "supabaseUpdated": 384,
+  "details": [
+    {
+      "slug": "addis-ababa",
+      "name": "Addis Ababa Ethiopian Restaurant",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "phi-002",
+      "name": "Kilimandjaro",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "chi-yassa",
+      "name": "Yassa African Restaurant",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "sea-meskel",
+      "name": "Meskel Ethiopian",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "bos-002",
+      "name": "Suya Joint",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "nyc-abyssinia",
+      "name": "Abyssinia",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "atl-spice-house-midtown",
+      "name": "Spice House Midtown",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "nyc-jasmines-caribbean",
+      "name": "Jasmine's Caribbean Cuisine",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "dc-st-james",
+      "name": "St. James - Modern Caribbean",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "atl-irie-mon-cafe",
+      "name": "Irie Mon Cafe",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "dca-001",
+      "name": "Dōgon",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "atx-fine-002",
+      "name": "Ember Kitchen",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "hou-fine-001",
+      "name": "Island Spice Bar & Grill",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "atx-afro-002",
+      "name": "Habesha Ethiopian",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "den-whittier-001",
+      "name": "Whittier Cafe",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "lax-001",
+      "name": "Status Hollywood",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "sea-fine-002",
+      "name": "Jerk Shack",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "hou-sta-004",
+      "name": "Sarabell Calabar",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "hou-sta-005",
+      "name": "Amala Zone",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "hou-sta-007",
+      "name": "Chef Benny",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "katy-003",
+      "name": "Astor's Table",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "hou-sta-010",
+      "name": "Suya Hut",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "katy-004",
+      "name": "Butter D' Roti",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "hou-sta-016",
+      "name": "Fabaceae African Cuisine",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "nyc-daily-002",
+      "name": "Buka",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "dc-daily-002",
+      "name": "Chercher",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "atl-daily-002",
+      "name": "Belle & Lily's",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "ubuntu-atl",
+      "name": "Ubuntu",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "ts-buka-arlington",
+      "name": "T's Buka",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "tailat-kitchen-austin",
+      "name": "Tailat Kitchen",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "bamboo-walk-brooklyn",
+      "name": "Bamboo Walk",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "cocobreeze-oakland",
+      "name": "Cocobreeze",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "baba-jollof-houston",
+      "name": "Baba Jollof",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "vees-brooklyn",
+      "name": "Vee's",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "irie-caribbean-brooklyn",
+      "name": "Irie Caribbean Kitchen",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "tesfa-ethiopian-chicago",
+      "name": "Tesfa Ethiopian Cuisine",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "badou-senegalese-chicago",
+      "name": "Badou Senegalese Cuisine",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "abyssinia-phoenix",
+      "name": "Abyssinia Restaurant and Cafe",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "zola-cultural-kitchen-mesa",
+      "name": "Zola Cultural Kitchen",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "authentic-liberian-cuisine-phoenix",
+      "name": "Authentic Liberian Cuisine",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "taste-of-east-african-minneapolis",
+      "name": "Taste Of East African",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "joe-nya-african-restaurant-minneapolis",
+      "name": "Joe & Nya African Restaurant",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "oga-madam-kitchen-minneapolis",
+      "name": "Oga madam kitchen",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "falastin-cafe-minneapolis",
+      "name": "Falastin Cafe",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "black-star-grill-portland",
+      "name": "Black Star Grill",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "ruths-buka-oakland",
+      "name": "Ruth's Buka",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "kendejah-restaurant-san-leandro",
+      "name": "Kendejah Restaurant",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "malam-ishaku-suya-baltimore",
+      "name": "Malam Ishaku Suya",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "d-nd-new-york",
+      "name": "dùndú",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "serengeti-kitchen-charlotte",
+      "name": "Serengeti Kitchen",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "mogadishu-restaurant-chicago",
+      "name": "Mogadishu Restaurant",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "arona-food-place-plano",
+      "name": "Arona Food Place",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "street-suya-dallas",
+      "name": "Street Suya",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "fufudelight-suya-kitchen-arlington",
+      "name": "Fufudelight& Suya Kitchen",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "taste-of-lagos-gibsonton",
+      "name": "Taste Of Lagos",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "steaming-pots-west-africa-cuisine-mobile-1-tampa",
+      "name": "Steaming Pots West Africa Cuisine Mobile 1",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "gladwin-kitchen-pflugerville",
+      "name": "gladwin kitchen",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "tailat-kitchen-nigerian-cuisine-austin",
+      "name": "Tailat Kitchen (Nigerian Cuisine)",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "choukouya-resto-bar-cleveland",
+      "name": "Choukouya Resto-Bar",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "island-style-east-cleveland",
+      "name": "Island Style",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "toyintudun-nigerian-cuisine-akron",
+      "name": "ToyinTudun Nigerian Cuisine",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "honest-restaurant-cleveland-parma-heights",
+      "name": "Honest Restaurant Cleveland",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "fiyah-korean-bbq-hot-pot-cleveland",
+      "name": "FIYAH Korean BBQ & Hot Pot",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "deweys-pizza-cleveland-heights-cleveland-heights",
+      "name": "Dewey's Pizza - Cleveland Heights",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "afrospice-bistro-bronx",
+      "name": "AfroSpice BisTro",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "international-delicious-kitchen-columbus",
+      "name": "International Delicious Kitchen .",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "african-grill-and-bar-lakewood-colorado-lakewood",
+      "name": "African Grill and Bar - Lakewood Colorado",
+      "actions": [
+        "hours_from_website"
+      ],
+      "websiteStatus": "ok"
+    },
+    {
+      "slug": "afro-pastries-indianapolis",
+      "name": "Afro Pastries",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "taste-of-africas-las-vegas",
+      "name": "Taste of Africas",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "selam-ethiopian-eritrean-cuisine-orlando",
+      "name": "Selam Ethiopian & Eritrean Cuisine",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "hadys-restaurant-international-cuisine-raleigh",
+      "name": "Hady's Restaurant | International Cuisine",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "nigeria-kitchen-llc-wake-forest",
+      "name": "Nigeria Kitchen LLC",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "afroeatz-authentic-liberian-food-sacramento",
+      "name": "AfroEatz - Authentic Liberian Food",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "ultra-kitchen-restaurants-catering-san-antonio",
+      "name": "ULTRA KITCHEN (RESTAURANTS & CATERING )",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "afrotex-grill-bowls-burritos-suya-plates-san-antonio",
+      "name": "AfroTex Grill - BOWLS, BURRITOS & SUYA PLATES",
+      "actions": [
+        "website_broken",
+        "website_replaced_with_maps"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "afro-caribbean-grill",
+      "name": "Afro Caribbean Grill",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "rodo-nigerian-cuisine-richmond",
+      "name": "Rodo Nigerian Cuisine",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "sarabell-calabar-restaurant-buffet-houston",
+      "name": "Sarabell Calabar Restaurant & Buffet",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "suya-on-the-spot-houston",
+      "name": "Suya on the spot",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "abula-hotpot-houston",
+      "name": "Abula HotPot",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "glam-divine-treats-houston",
+      "name": "Glam Divine Treats",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "somali-restaurant-syracuse",
+      "name": "Somali Restaurant",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    },
+    {
+      "slug": "sf-001",
+      "name": "Teranga",
+      "actions": [
+        "website_broken",
+        "website_cleared"
+      ],
+      "websiteStatus": "broken"
+    }
+  ]
+}

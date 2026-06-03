@@ -2,40 +2,9 @@
 /**
  * Verify "You might also like" data path for slug-based restaurant URLs.
  */
-import fs from "node:fs";
 import path from "node:path";
 import { readFileSync } from "node:fs";
 import { createClient } from "@supabase/supabase-js";
-
-const LOG_PATH = path.join(process.cwd(), ".cursor", "debug-fc91e6.log");
-const SESSION_ID = "fc91e6";
-
-function agentLog(hypothesisId, message, data) {
-  const line = JSON.stringify({
-    sessionId: SESSION_ID,
-    runId: "similar-verify",
-    hypothesisId,
-    location: "verify-similar-restaurants.mjs",
-    message,
-    data,
-    timestamp: Date.now(),
-  });
-  try {
-    fs.appendFileSync(LOG_PATH, `${line}\n`);
-  } catch {
-    /* ignore disk full */
-  }
-  // #region agent log
-  fetch("http://127.0.0.1:7668/ingest/f4aec2f7-622b-445a-95fa-99041b9558b2", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "X-Debug-Session-Id": SESSION_ID },
-    body: line,
-  }).catch(() => {});
-  // #endregion
-}
-
-const UUID_RE =
-  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 function loadEnv() {
   const env = { ...process.env };
@@ -49,7 +18,7 @@ function loadEnv() {
   return env;
 }
 
-async function similarWithSlug(supabase, slug, cuisines) {
+async function similarWithSlug(supabase, slug) {
   const { data, error } = await supabase
     .from("restaurants_with_rating")
     .select("slug")
@@ -63,7 +32,7 @@ async function similarWithUuid(supabase, uuid, cuisines) {
   if (!cuisines?.length) return { count: 0, reason: "no_cuisines" };
   const { data, error } = await supabase
     .from("restaurants_with_rating")
-    .select("slug")
+    .select("slug, cuisine_types")
     .eq("is_active", true)
     .neq("id", uuid)
     .limit(50);
@@ -90,19 +59,14 @@ const { data: row } = await supabase
   .eq("slug", testSlug)
   .maybeSingle();
 
-const broken = await similarWithSlug(supabase, testSlug, row?.cuisine_types);
+const broken = await similarWithSlug(supabase, testSlug);
 const fixed = row?.id ? await similarWithUuid(supabase, row.id, row.cuisine_types) : { count: 0 };
 
-agentLog("H1", "slug neq uuid (broken path)", { testSlug, ...broken });
-agentLog("H2", "resolved uuid (fixed path)", { testSlug, uuid: row?.id, cuisines: row?.cuisine_types, ...fixed });
-
 const verdict = fixed.count >= 1 ? "PASS" : "FAIL";
-agentLog("H2", "verdict", { verdict, similarCount: fixed.count });
 
 console.log(`Similar restaurants verify (${testSlug})`);
 console.log(`  Broken (slug as UUID): ${broken.count} rows, error=${broken.error ?? "none"}`);
 console.log(`  Fixed (real UUID):     ${fixed.count} rows`);
 console.log(`  Verdict:               ${verdict}`);
-console.log(`  Log: ${LOG_PATH}`);
 
 if (verdict === "FAIL") process.exit(1);
