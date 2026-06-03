@@ -38,9 +38,10 @@
     "rating": 4.7,
     "address": "100 S Central Expy #65, Richardson, TX 75080",
     "phone": "(469) 319-9604",
+    "website": "https://addisabebarestauranttx.com",
     "social": {
       "instagram": "@addisabebatx",
-      "facebook": "Addis Abeba Richardson"
+      "facebook": "https://www.facebook.com/AddisAbabaEthiopianRestaurantDFW/"
     },
     "hours": {
       "mon_thu": "11:00 AM - 9:00 PM",

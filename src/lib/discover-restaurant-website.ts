@@ -78,11 +78,19 @@ export function buildWebsiteSearchQuery(name: string, addressLine?: string): str
   return buildWebsiteSearchQueries(name, addressLine)[0];
 }
 
+function hostMatchesBlockPattern(host: string, pattern: string): boolean {
+  const key = pattern.replace(/\.$/, "");
+  // Avoid false positives (e.g. restauranttx.com matching "x.com")
+  if (key === "x.com") return host === "x.com" || host === "www.x.com";
+  if (key === "visit") return /(^|\.)visit\./.test(host) || host.startsWith("visit.");
+  return host.includes(key);
+}
+
 export function isBlockedWebsiteUrl(url: string): boolean {
   try {
     const u = new URL(url.startsWith("http") ? url : `https://${url}`);
     const host = u.hostname.toLowerCase();
-    if (BLOCKED_HOST_PATTERNS.some((p) => host.includes(p.replace(/\.$/, "")))) return true;
+    if (BLOCKED_HOST_PATTERNS.some((p) => hostMatchesBlockPattern(host, p))) return true;
     if (AGGREGATOR_PATH.test(u.pathname) && /menu|order/i.test(u.pathname)) return true;
     return false;
   } catch {
@@ -104,15 +112,25 @@ function nameTokens(name: string): string[] {
     .filter((t) => t.length > 2 && !GENERIC_WORDS.has(t));
 }
 
+/** Common spelling drift between brand name and domain (e.g. Abeba vs Ababa). */
+function tokenMatchesHost(token: string, hostCompact: string): boolean {
+  if (token.length >= 4 && hostCompact.includes(token)) return true;
+  if (/^ababa$/i.test(token) && /abeba|ababa/.test(hostCompact)) return true;
+  if (/^abeba$/i.test(token) && /abeba|ababa/.test(hostCompact)) return true;
+  return false;
+}
+
 /** Host must contain a distinctive token from the restaurant name. */
 export function hostMatchesRestaurantName(host: string, restaurantName: string): boolean {
-  const h = host.toLowerCase().replace(/^www\./, "");
+  const hostCompact = host.toLowerCase().replace(/^www\./, "").replace(/[^a-z0-9]/g, "");
   const tokens = nameTokens(restaurantName);
   if (tokens.length) {
-    return tokens.some((t) => t.length >= 4 && h.includes(t));
+    if (tokens.some((t) => tokenMatchesHost(t, hostCompact))) return true;
+    const matched = tokens.filter((t) => t.length >= 4 && tokenMatchesHost(t, hostCompact)).length;
+    if (matched >= 2) return true;
   }
   const compact = restaurantName.toLowerCase().replace(/[^a-z0-9]/g, "");
-  return compact.length >= 4 && h.includes(compact.slice(0, Math.min(6, compact.length)));
+  return compact.length >= 6 && hostCompact.includes(compact.slice(0, 8));
 }
 
 export function scoreWebsiteCandidate(url: string, restaurantName: string): number {
