@@ -8862,13 +8862,14 @@
     "region": "West African",
     "price_range": "$",
     "rating": 4.9,
-    "address": "3920 W Charleston Blvd # A, Las Vegas, NV 89102",
-    "phone": "(702) 722-2524",
+    "address": "3920 W Charleston Blvd Suite A, Las Vegas, NV 89104",
+    "phone": "(702) 564-0857",
     "hours": {
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Las Vegas. Experience traditional West African flavors and hospitality at Le Bon Goût Chez Fa.",
+    "about": "Senegalese restaurant in Las Vegas serving halal yassa, thiebou jeun, jollof, and catering. Dine-in and online ordering.",
+    "website": "https://lebongoutchezfa.com/",
     "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
     "cultural_roots": "Diaspora dining in the United States.",
     "menu_highlights": [
@@ -8879,7 +8880,7 @@
     "google_place_id": "ChIJY5tuMnXDyIARtykFj2GYbiM",
     "lat": 36.1594001,
     "lng": -115.1938974,
-    "google_search_url": "https://www.google.com/search?q=Le%20Bon%20Go%C3%BBt%20Chez%20Fa%2C%203920%20W%20Charleston%20Blvd%20%23%20A%2C%20Las%20Vegas%2C%20NV%2089102",
+    "google_search_url": "https://www.google.com/search?q=Le%20Bon%20Go%C3%BBt%20Chez%20Fa%2C%203920%20W%20Charleston%20Blvd%20Suite%20A%2C%20Las%20Vegas%2C%20NV%2089104",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
