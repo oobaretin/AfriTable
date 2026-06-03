@@ -159,6 +159,38 @@ export function matchesCuisineChip(
   return c === chipLower || c.includes(chipLower) || r.includes(chipLower);
 }
 
+export type VibeFilterOption =
+  | "All"
+  | "Fine Dining"
+  | "Authentic Staples"
+  | "Community Favorites"
+  | "Daily Driver";
+
+export function filterByVibe<T extends { vibe_category?: string; vibe?: string }>(
+  restaurants: T[],
+  vibe: VibeFilterOption,
+): T[] {
+  if (vibe === "All") {
+    return restaurants;
+  }
+
+  return restaurants.filter((restaurant) => {
+    if (vibe === "Fine Dining" && restaurant.vibe_category === "Fine Dining") {
+      return true;
+    }
+    if (vibe === "Authentic Staples" && restaurant.vibe_category === "Authentic Staples") {
+      return true;
+    }
+    if (vibe === "Community Favorites" && restaurant.vibe_category === "Community Favorites") {
+      return true;
+    }
+    if (vibe === "Daily Driver") {
+      return (restaurant.vibe?.toLowerCase() || "").includes("daily driver");
+    }
+    return false;
+  });
+}
+
 export type ListFilterParams = {
   activeCategory: string;
   activeCity: string;

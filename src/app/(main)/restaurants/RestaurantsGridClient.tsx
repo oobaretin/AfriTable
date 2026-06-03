@@ -1,17 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CategoryFilterWrapper } from "@/components/home/CategoryFilterWrapper";
-import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
+import { useRestaurantFiltersContext } from "@/contexts/restaurant-filters-context";
 
-type RestaurantsGridClientProps = {
-  restaurants: JSONRestaurant[];
-  distanceById?: Map<string, number>;
-};
-
-export function RestaurantsGridClient({ restaurants, distanceById }: RestaurantsGridClientProps) {
+export function RestaurantsGridClient() {
+  const { filteredResults } = useRestaurantFiltersContext();
   const [displayCount, setDisplayCount] = useState<number>(0);
-  const [totalCount, setTotalCount] = useState<number>(restaurants.length);
+  const [totalCount, setTotalCount] = useState<number>(filteredResults.length);
+
+  useEffect(() => {
+    setTotalCount(filteredResults.length);
+  }, [filteredResults.length]);
 
   const handleCountChange = (count: number, total: number) => {
     setDisplayCount(count);
@@ -20,7 +20,6 @@ export function RestaurantsGridClient({ restaurants, distanceById }: Restaurants
 
   return (
     <>
-      {/* Dynamic Count Header */}
       <div className="bg-[#050A18] pb-8 -mt-8">
         <div className="mx-auto max-w-6xl px-6">
           <p className="text-center text-sm md:text-base text-white/50 tracking-[0.1em] uppercase">
@@ -33,11 +32,7 @@ export function RestaurantsGridClient({ restaurants, distanceById }: Restaurants
         </div>
       </div>
 
-      <CategoryFilterWrapper
-        restaurants={restaurants}
-        distanceById={distanceById}
-        onCountChange={handleCountChange}
-      />
+      <CategoryFilterWrapper onCountChange={handleCountChange} />
     </>
   );
 }

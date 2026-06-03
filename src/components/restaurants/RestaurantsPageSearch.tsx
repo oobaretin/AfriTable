@@ -3,76 +3,10 @@
 import * as React from "react";
 import { ZipCodeSearch } from "@/components/home/ZipCodeSearch";
 import { VibeFilter } from "@/components/home/VibeFilter";
-import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
+import { useRestaurantFiltersContext } from "@/contexts/restaurant-filters-context";
 
-type RestaurantWithDistance = {
-  restaurant: JSONRestaurant;
-  distance: number | null;
-};
-
-type VibeOption = "All" | "Fine Dining" | "Authentic Staples" | "Community Favorites" | "Daily Driver";
-
-type RestaurantsPageSearchProps = {
-  restaurants: JSONRestaurant[];
-  onFilterChange: (filtered: RestaurantWithDistance[]) => void;
-};
-
-// Filter restaurants by vibe
-function filterByVibe(
-  restaurants: RestaurantWithDistance[],
-  vibe: VibeOption
-): RestaurantWithDistance[] {
-  if (vibe === "All") {
-    return restaurants;
-  }
-
-  return restaurants.filter((item) => {
-    const restaurant = item.restaurant;
-    
-    // Check vibe_category first
-    if (vibe === "Fine Dining" && restaurant.vibe_category === "Fine Dining") {
-      return true;
-    }
-    if (vibe === "Authentic Staples" && restaurant.vibe_category === "Authentic Staples") {
-      return true;
-    }
-    if (vibe === "Community Favorites" && restaurant.vibe_category === "Community Favorites") {
-      return true;
-    }
-    
-    // Check vibe field for "Daily Driver"
-    if (vibe === "Daily Driver") {
-      const restaurantVibe = restaurant.vibe?.toLowerCase() || "";
-      return restaurantVibe.includes("daily driver");
-    }
-    
-    return false;
-  });
-}
-
-export function RestaurantsPageSearch({ restaurants, onFilterChange }: RestaurantsPageSearchProps) {
-  const [selectedVibe, setSelectedVibe] = React.useState<VibeOption>("All");
-  const [distanceFilteredRestaurants, setDistanceFilteredRestaurants] = React.useState<RestaurantWithDistance[]>(
-    restaurants.map((r) => ({ restaurant: r, distance: null }))
-  );
-
-  // Apply vibe filter to distance-filtered restaurants
-  const filteredRestaurants = React.useMemo(() => {
-    return filterByVibe(distanceFilteredRestaurants, selectedVibe);
-  }, [distanceFilteredRestaurants, selectedVibe]);
-
-  // Notify parent whenever the filtered list changes (vibe + zip). Parent decides search vs grid by presence of distance.
-  React.useEffect(() => {
-    onFilterChange(filteredRestaurants);
-  }, [filteredRestaurants, onFilterChange]);
-
-  const handleDistanceFilterChange = (filtered: RestaurantWithDistance[]) => {
-    setDistanceFilteredRestaurants(filtered);
-  };
-
-  const handleVibeChange = (vibe: VibeOption) => {
-    setSelectedVibe(vibe);
-  };
+export function RestaurantsPageSearch() {
+  const { filters, setZip, setRadius, setVibe } = useRestaurantFiltersContext();
 
   return (
     <section className="py-12 bg-[#000814] px-6">
@@ -86,17 +20,18 @@ export function RestaurantsPageSearch({ restaurants, onFilterChange }: Restauran
             planning a night out.
           </p>
         </div>
-        <ZipCodeSearch 
-          restaurants={restaurants} 
-          onFilterChange={handleDistanceFilterChange}
+        <ZipCodeSearch
+          zip={filters.zip}
+          radius={filters.radius}
+          onZipChange={setZip}
+          onRadiusChange={setRadius}
         />
-        
-        {/* Vibe Filter */}
+
         <div className="mt-8">
           <div className="text-center mb-4">
             <p className="text-sm text-white/60 mb-3">Filter by vibe</p>
           </div>
-          <VibeFilter selectedVibe={selectedVibe} onVibeChange={handleVibeChange} />
+          <VibeFilter selectedVibe={filters.vibe} onVibeChange={setVibe} />
         </div>
       </div>
     </section>

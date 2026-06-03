@@ -2,79 +2,39 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
-import { filterRestaurantList } from "@/lib/restaurant-list-filters";
-import { cityFromUrlToDisplay } from "@/lib/hero-city";
-import { transformJSONRestaurantToDetail, type JSONRestaurant } from "@/lib/restaurant-json-loader";
+import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
+import type { FilteredRestaurantResult } from "@/hooks/use-restaurant-filters";
+import { useRestaurantFiltersContext } from "@/contexts/restaurant-filters-context";
 
 type RestaurantGridProps = {
-  restaurants: JSONRestaurant[];
-  activeCategory?: string;
-  activeCity?: string;
-  distanceById?: Map<string, number>;
+  filteredResults: FilteredRestaurantResult[];
   onCountChange?: (count: number, total: number) => void;
 };
 
 const ITEMS_PER_PAGE = 12;
 
-export function RestaurantGrid({
-  restaurants: jsonRestaurants,
-  activeCategory: externalActiveCategory,
-  activeCity: externalActiveCity,
-  distanceById,
-  onCountChange,
-}: RestaurantGridProps) {
-  const searchParams = useSearchParams();
-  const urlCityFilter = cityFromUrlToDisplay(searchParams.get("city")?.trim() || "");
-  const nameQuery = searchParams.get("q")?.toLowerCase().trim() || "";
-  const [internalActiveCategory] = React.useState<string>("All");
+export function RestaurantGrid({ filteredResults, onCountChange }: RestaurantGridProps) {
+  const { zipSearchActive } = useRestaurantFiltersContext();
   const [displayCount, setDisplayCount] = React.useState<number>(ITEMS_PER_PAGE);
 
   React.useEffect(() => {
     setDisplayCount(ITEMS_PER_PAGE);
-  }, []);
-
-  const activeCategory = externalActiveCategory ?? internalActiveCategory;
-  const activeCity = externalActiveCity || urlCityFilter;
-
-  React.useEffect(() => {
-    setDisplayCount(ITEMS_PER_PAGE);
-  }, [activeCategory, activeCity, nameQuery, jsonRestaurants.length, distanceById?.size]);
-
-  const filteredJSONRestaurants = React.useMemo(() => {
-    let filtered = filterRestaurantList(jsonRestaurants, {
-      activeCategory,
-      activeCity,
-      nameQuery,
-    });
-
-    if (distanceById && distanceById.size > 0) {
-      filtered = [...filtered].sort((a, b) => {
-        const da = distanceById.get(a.id) ?? Number.POSITIVE_INFINITY;
-        const db = distanceById.get(b.id) ?? Number.POSITIVE_INFINITY;
-        return da - db;
-      });
-    }
-
-    return filtered;
-  }, [jsonRestaurants, activeCategory, activeCity, nameQuery, distanceById]);
+  }, [filteredResults.length, zipSearchActive]);
 
   const transformedRestaurants = React.useMemo(() => {
-    return filteredJSONRestaurants.map((r) => ({
-      ...transformJSONRestaurantToDetail(r),
-      distance_miles: distanceById?.get(r.id) ?? null,
+    return filteredResults.map((item) => ({
+      ...transformJSONRestaurantToDetail(item.restaurant),
+      distance_miles: item.distance,
     }));
-  }, [filteredJSONRestaurants, distanceById]);
+  }, [filteredResults]);
 
   const displayedRestaurants = React.useMemo(() => {
     return transformedRestaurants.slice(0, displayCount);
   }, [transformedRestaurants, displayCount]);
 
   React.useEffect(() => {
-    if (onCountChange) {
-      onCountChange(displayedRestaurants.length, transformedRestaurants.length);
-    }
+    onCountChange?.(displayedRestaurants.length, transformedRestaurants.length);
   }, [displayedRestaurants.length, transformedRestaurants.length, onCountChange]);
 
   const handleLoadMore = () => {
@@ -83,7 +43,6 @@ export function RestaurantGrid({
 
   const hasMore = displayedRestaurants.length < transformedRestaurants.length;
   const hasResults = transformedRestaurants.length > 0;
-  const zipSearchActive = (distanceById?.size ?? 0) > 0;
 
   return (
     <div className="w-full min-h-[100vh] flex flex-col">
@@ -99,10 +58,7 @@ export function RestaurantGrid({
         </div>
       )}
 
-      <div
-        key={`${activeCategory}-${activeCity}-${nameQuery}-${zipSearchActive}`}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-1"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
         {hasResults ? (
           displayedRestaurants.map((restaurant, index) => (
             <div
