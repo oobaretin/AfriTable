@@ -7813,66 +7813,6 @@
     ]
   },
   {
-    "id": "streetgrillz-windsor-on-n8w-3t6",
-    "name": "StreetGrillz Windsor",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 5,
-    "address": "4185 Walker Rd #100, Windsor, ON N8W 3T6,  ",
-    "phone": "+1 226-260-4850",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in ON N8W 3T6. Experience traditional African flavors and hospitality at StreetGrillz Windsor.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "",
-    "google_place_id": "ChIJcw-VTo0rO4gRBBp7haYU4ac",
-    "lat": 42.259682999999995,
-    "lng": -82.9677583,
-    "google_search_url": "https://www.google.com/search?q=StreetGrillz%20Windsor%2C%204185%20Walker%20Rd%20%23100%2C%20Windsor%2C%20ON%20N8W%203T6%2C%20%20",
-    "website": "https://streetgrillz.ca",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
-    "id": "bunmi-l-b-on-l6j-3j3",
-    "name": "Bunmi Ọlọ́bẹ̀",
-    "cuisine": "West African",
-    "region": "West African",
-    "price_range": "$",
-    "rating": 4.9,
-    "address": "187 Cross Ave unit 5, Oakville, ON L6J 3J3,  ",
-    "phone": "+1 647-649-7188",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic West African restaurant in ON L6J 3J3. Experience traditional West African flavors and hospitality at Bunmi Ọlọ́bẹ̀.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "",
-    "google_place_id": "ChIJfyDx5BldK4gR3uiIElVOiHg",
-    "lat": 43.4563236,
-    "lng": -79.6842547,
-    "google_search_url": "https://www.google.com/search?q=Bunmi%20%E1%BB%8Cl%E1%BB%8D%CC%81b%E1%BA%B9%CC%80%2C%20187%20Cross%20Ave%20unit%205%2C%20Oakville%2C%20ON%20L6J%203J3%2C%20%20",
-    "website": "https://bunmiolobe.ca",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "pats-delicious-nigeria-restaurant-columbus",
     "name": "Pat's Delicious Nigeria Restaurant",
     "cuisine": "African",
@@ -8317,36 +8257,6 @@
     "lat": 41.499913,
     "lng": -81.5657441,
     "google_search_url": "https://www.google.com/search?q=Dewey's%20Pizza%20-%20Cleveland%20Heights%2C%202194%20Lee%20Rd%2C%20Cleveland%20Heights%2C%20OH%2044118",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
-    "id": "massawa-restaurant-on-m6e-2g8",
-    "name": "Massawa Restaurant",
-    "cuisine": "Eritrean",
-    "region": "East African",
-    "price_range": "$",
-    "rating": 5,
-    "address": "1610 Eglinton Ave W, York, ON M6E 2G8,  ",
-    "phone": "+1 647-272-1673",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic Eritrean restaurant in ON M6E 2G8. Experience traditional Eritrean flavors and hospitality at Massawa Restaurant.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "",
-    "google_place_id": "ChIJkVZo4A0zK4gR2zoDHnRprgc",
-    "lat": 43.6972471,
-    "lng": -79.4438339,
-    "google_search_url": "https://www.google.com/search?q=Massawa%20Restaurant%2C%201610%20Eglinton%20Ave%20W%2C%20York%2C%20ON%20M6E%202G8%2C",
-    "website": "https://massawarestaurant.com",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
