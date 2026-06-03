@@ -378,38 +378,6 @@
     ]
   },
   {
-    "id": "negrit-houston",
-    "name": "Negrit",
-    "cuisine": "Caribbean Fusion",
-    "region": "Caribbean",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "3401 Main St, Houston, TX 77002",
-    "phone": "(832) 123-4567",
-    "social": {
-      "instagram": "@negrithouston"
-    },
-    "hours": {
-      "tue_sun": "4:00 PM - 11:00 PM",
-      "mon": "Closed"
-    },
-    "about": "A modern Caribbean lounge in Houston's Midtown specializing in creative cocktails and island-inspired small plates.",
-    "our_story": "Negrit was built to offer a sophisticated alternative to island dining, focusing on the craft of the cocktail and the artistry of the platter.",
-    "cultural_roots": "A celebration of the 'Black' (Negrit) influence on global cuisine, focusing specifically on the Afro-Caribbean experience.",
-    "menu_highlights": [
-      "Rum Glazed Pork Belly",
-      "Fried Snapper",
-      "Sweet Plantain Gnocchi"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Negrit%2C%203401%20Main%20St%2C%20Houston%2C%20TX%2077002",
-    "website": "http://negrit.com",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "cane-dc",
     "name": "Cane",
     "cuisine": "Trinidadian (Street-to-Table)",
@@ -1696,6 +1664,44 @@
       "mon_sun": "11:00 AM - 10:00 PM"
     },
     "google_search_url": "https://www.google.com/search?q=Reggae%20Hut%2C%204814%20Almeda%20Rd%2C%20Houston%2C%20TX%2077004",
+    "images": [
+      "/restaurant-card-placeholder.svg"
+    ]
+  },
+  {
+    "id": "jordyns-soul-cafe-houston",
+    "name": "Jordyn's Soul Cafe",
+    "cuisine": "Caribbean & Soul Food",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "4319 Montrose Blvd, Houston, TX 77006",
+    "phone": "(713) 485-6429",
+    "website": "https://jordynssoulcafetx.com",
+    "neighborhood": "Montrose",
+    "hours": {
+      "mon": "3:00 PM - 12:00 AM",
+      "tue_thu": "12:00 PM - 12:00 AM",
+      "fri_sat": "12:00 PM - 2:00 AM",
+      "sun": "12:00 PM - 12:00 AM"
+    },
+    "about": "Caribbean soul food in Montrose with jerk chicken, island stews, and weekend brunch until 4pm. Houston location opened in 2024; also operates two locations in Chicago, IL.",
+    "our_story": "Jordyn's Soul Cafe expanded from thriving Chicago kitchens to bring spirited island flavors, upscale dine-in, and soulful hospitality to Houston.",
+    "cultural_roots": "A celebration of Caribbean culture, community, and soul food—jerk, stews, and vibrant sides with reservations welcome.",
+    "menu_highlights": [
+      "Jerk Chicken",
+      "Island Stews",
+      "Weekend Brunch"
+    ],
+    "vibe": "Upscale Dining",
+    "vibe_tags": [
+      "Soul Food",
+      "Comfort Food",
+      "Upscale Dining"
+    ],
+    "vibe_category": "Community Favorites",
+    "state": "TX",
+    "google_search_url": "https://www.google.com/search?q=Jordyn%27s%20Soul%20Cafe%2C%204319%20Montrose%20Blvd%2C%20Houston%2C%20TX%2077006",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
