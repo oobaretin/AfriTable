@@ -6,7 +6,7 @@ import { Reveal } from "@/components/layout/Reveal";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
 import { RestaurantOwnerCTA } from "@/components/home/RestaurantOwnerCTA";
 import { LocalPulse } from "@/components/home/LocalPulse";
-import { StickySearch } from "@/components/home/StickySearch";
+import { HomeSearchProvider } from "@/components/home/HomeSearchProvider";
 import { HeritageSection } from "@/components/home/HeritageSection";
 import { CommunityFeed } from "@/components/home/CommunityFeed";
 import { PartnerWithUsSection } from "@/components/home/PartnerWithUsSection";
@@ -37,16 +37,15 @@ export default async function MainHomePage() {
 
   return (
     <main>
-      {/* Sticky Search Bar */}
-      <StickySearch />
-      
-      {/* Hero - Search-First Design */}
-      <HeroSearch sectionId="hero-search" />
+      <HomeSearchProvider>
+        {/* Hero - Search-First Design (sticky bar shares city state via provider) */}
+        <HeroSearch sectionId="hero-search" />
 
-      {/* Restaurant spotlight — multi-state coverage */}
-      <div id="restaurants-section">
-        <HomepageRestaurantSimple restaurants={restaurantsFromJSON} />
-      </div>
+        {/* Restaurant spotlight — multi-state coverage */}
+        <div id="restaurants-section">
+          <HomepageRestaurantSimple restaurants={restaurantsFromJSON} />
+        </div>
+      </HomeSearchProvider>
 
       {/* Brand Logo Bridge - Premium Separator */}
       <div className="py-12 bg-[#050A18]">

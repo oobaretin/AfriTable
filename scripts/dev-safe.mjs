@@ -43,6 +43,10 @@ if (fs.existsSync(nextDir)) {
 }
 
 // Start dev server.
+// eslint-disable-next-line no-console
+console.log(
+  "dev:safe: starting Next.js — if the site looked like plain HTML, hard-refresh after Ready (stale .next CSS links 404 until then).",
+);
 const child = spawn(process.platform === "win32" ? "npx.cmd" : "npx", ["next", "dev", "--port", String(port)], {
   stdio: "inherit",
   env: process.env,

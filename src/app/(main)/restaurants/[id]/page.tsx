@@ -19,6 +19,7 @@ import { formatTimeRange12h } from "@/lib/utils/time-format";
 import { getRestaurantByIdFromJSON, getSimilarRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 import { parseCatalogHoursToArray } from "@/lib/parse-catalog-hours";
+import { resolveRestaurantImageUrl } from "@/lib/restaurant-image";
 
 type RestaurantDetail = {
   id: string;
@@ -462,6 +463,17 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
   }
 
   // Safely stringify JSON-LD, removing any circular references or invalid values
+  const galleryImages =
+    restaurant.images && restaurant.images.length > 0
+      ? restaurant.images
+      : [
+          resolveRestaurantImageUrl({
+            images: restaurant.images,
+            region: (restaurant as { region?: string | null }).region,
+            cuisine_types: restaurant.cuisine_types,
+          }),
+        ];
+
   let jsonLdString = "";
   try {
     jsonLdString = JSON.stringify(jsonLd, null, 0);
@@ -495,7 +507,7 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
 
       {/* Immersive Image Gallery - Full Width */}
       <div className="-mx-4 sm:-mx-6 mb-12">
-        <ImmersiveGallery images={restaurant.images || []} restaurantName={restaurant.name} />
+        <ImmersiveGallery images={galleryImages} restaurantName={restaurant.name} />
       </div>
 
       {/* Main Layout - Single Grid for Proper Alignment */}
@@ -532,7 +544,11 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
             cuisine={restaurant.cuisine_types?.[0] || "African"}
             restaurantName={restaurant.name}
             dishName={(restaurant.menu as any)?.highlights?.[0]}
-            dishImage={restaurant.images?.[0]}
+            dishImage={resolveRestaurantImageUrl({
+              images: restaurant.images,
+              region: (restaurant as { region?: string | null }).region,
+              cuisine_types: restaurant.cuisine_types,
+            })}
           />
 
           {/* Quick Info Bar - Sticky with Connect Buttons */}

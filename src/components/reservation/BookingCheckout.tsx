@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Confetti } from "./Confetti";
+import { resolveRestaurantImageUrl } from "@/lib/restaurant-image";
 
 type Restaurant = {
   id: string;
@@ -117,7 +118,7 @@ export function BookingCheckout({ restaurant, bookingDetails }: BookingCheckoutP
     return "";
   }
 
-  const restaurantImage = restaurant.images?.[0] || "/api/placeholder/400/250";
+  const restaurantImage = resolveRestaurantImageUrl({ images: restaurant.images });
   const city = extractCity(restaurant.address) || restaurant.city || "";
 
   return (

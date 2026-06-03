@@ -3,26 +3,12 @@
 import * as React from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
+import { filterCitySuggestions, normalizeCityForSearch } from "@/lib/hero-city";
+import { useHeroSearchCity } from "@/components/restaurant/HeroSearchCityContext";
 
 const CUISINES = ["NIGERIAN", "SENEGALESE", "HAITIAN", "ETHIOPIAN", "JAMAICAN"];
 const TYPING_SPEED = 100;
 const PAUSE_TIME = 2000;
-
-// Available cities from our database
-const AVAILABLE_CITIES = [
-  "New York City",
-  "Houston",
-  "Atlanta",
-  "Washington D.C.",
-  "Miami",
-  "Los Angeles",
-  "Chicago",
-  "Philadelphia",
-  "Seattle",
-  "Boston",
-  "San Francisco",
-  "Oakland",
-];
 
 type HeroSearchProps = {
   /** When provided, used as the section id (e.g. "hero-search" for scroll detection). Omit when rendering a second instance (e.g. sticky bar) to avoid duplicate ids. */
@@ -34,6 +20,7 @@ type HeroSearchProps = {
 export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const sharedCity = useHeroSearchCity();
   const instanceId = React.useId();
   const sectionIdValue = sectionId ?? `${instanceId}-hero-search`;
   const cityInputId = `${instanceId}-hero-city-search`;
@@ -41,18 +28,17 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
   const [index, setIndex] = React.useState(0);
   const [displayText, setDisplayText] = React.useState("");
   const [isDeleting, setIsDeleting] = React.useState(false);
-  const [city, setCity] = React.useState(searchParams.get("city") || "");
+  const [localCity, setLocalCity] = React.useState(searchParams.get("city") || "");
+  const city = sharedCity?.city ?? localCity;
+  const setCity = sharedCity?.setCity ?? setLocalCity;
   const [showSuggestions, setShowSuggestions] = React.useState(false);
   const [suggestions, setSuggestions] = React.useState<string[]>([]);
   const inputRef = React.useRef<HTMLInputElement>(null);
   const suggestionsRef = React.useRef<HTMLDivElement>(null);
 
-  // Filter cities based on input
   React.useEffect(() => {
     if (city.trim()) {
-      const filtered = AVAILABLE_CITIES.filter((c) =>
-        c.toLowerCase().includes(city.toLowerCase())
-      );
+      const filtered = filterCitySuggestions(city);
       setSuggestions(filtered);
       setShowSuggestions(filtered.length > 0 && city.trim().length > 0);
     } else {
@@ -61,7 +47,6 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
     }
   }, [city]);
 
-  // Close suggestions when clicking outside
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -83,13 +68,11 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
 
     const handleType = () => {
       if (!isDeleting) {
-        // Typing
         setDisplayText(currentWord.substring(0, displayText.length + 1));
         if (displayText === currentWord) {
           setTimeout(() => setIsDeleting(true), PAUSE_TIME);
         }
       } else {
-        // Deleting
         setDisplayText(currentWord.substring(0, displayText.length - 1));
         if (displayText === "") {
           setIsDeleting(false);
@@ -102,14 +85,21 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
     return () => clearTimeout(timer);
   }, [displayText, isDeleting, index]);
 
-  function handleSearch() {
-    const cityTrimmed = city.trim();
-    // If user entered a city, always go to restaurants page with city filter (so the filter actually applies)
-    if (cityTrimmed) {
-      router.push(`/restaurants?city=${encodeURIComponent(cityTrimmed)}`);
+  function handleSearch(cityOverride?: string) {
+    const raw = (cityOverride ?? city).trim();
+    const canonicalCity = raw ? normalizeCityForSearch(raw) : null;
+
+    if (raw && canonicalCity) {
+      setCity(canonicalCity);
+      router.push(`/restaurants?city=${encodeURIComponent(canonicalCity)}`);
       return;
     }
-    // No city: on homepage scroll to restaurants section, otherwise go to restaurants page
+
+    if (raw) {
+      router.push(`/restaurants?q=${encodeURIComponent(raw)}`);
+      return;
+    }
+
     if (typeof window !== "undefined" && window.location.pathname === "/") {
       const restaurantsSection = document.getElementById("restaurants-section");
       if (restaurantsSection) {
@@ -120,17 +110,50 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
     router.push("/restaurants");
   }
 
+  function onEnterKey() {
+    if (showSuggestions && suggestions.length > 0) {
+      const pick = suggestions[0];
+      setCity(pick);
+      setShowSuggestions(false);
+      handleSearch(pick);
+      return;
+    }
+    handleSearch();
+  }
+
+  function onSuggestionClick(suggestion: string) {
+    setCity(suggestion);
+    setShowSuggestions(false);
+    handleSearch(suggestion);
+  }
+
+  const pillTheme = variant === "full" ? "dark" : "light";
+
   const searchPill = (
     <div className="relative w-full">
-      <div className="bg-white rounded-full p-1.5 shadow-md flex items-center border border-slate-200 min-w-0">
-        <div className="flex-1 flex items-center px-4 md:px-5 gap-2 md:gap-3 min-w-0">
-          <span className="text-slate-400 text-sm shrink-0" role="img" aria-label="Location">📍</span>
+      <div
+        className={
+          pillTheme === "dark"
+            ? "bg-white rounded-full p-1.5 shadow-2xl flex items-center border border-white/10"
+            : "bg-white rounded-full p-1.5 shadow-md flex items-center border border-slate-200 min-w-0"
+        }
+      >
+        <div
+          className={
+            pillTheme === "dark"
+              ? "flex-1 flex items-center px-5 gap-3"
+              : "flex-1 flex items-center px-4 md:px-5 gap-2 md:gap-3 min-w-0"
+          }
+        >
+          <span className="text-slate-400 text-sm shrink-0" role="img" aria-label="Location">
+            📍
+          </span>
           <input
             id={cityInputId}
             name="city"
             ref={inputRef}
             type="text"
-            placeholder="Where are you eating?"
+            placeholder={pillTheme === "dark" ? "City or restaurant name" : "City or restaurant name"}
             value={city}
             onChange={(e) => setCity(e.target.value)}
             onFocus={() => {
@@ -140,24 +163,28 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
             }}
             onKeyDown={(e) => {
               if (e.key === "Enter") {
-                if (showSuggestions && suggestions.length > 0) {
-                  setCity(suggestions[0]);
-                  setShowSuggestions(false);
-                } else {
-                  handleSearch();
-                }
+                onEnterKey();
               } else if (e.key === "Escape") {
                 setShowSuggestions(false);
               }
             }}
-            className="w-full min-w-0 py-2 md:py-2.5 bg-transparent outline-none font-bold text-slate-800 text-sm placeholder:text-slate-400"
-            aria-label="Search by city"
+            className={
+              pillTheme === "dark"
+                ? "w-full py-2.5 bg-transparent outline-none font-bold text-slate-800 text-sm placeholder:text-slate-300"
+                : "w-full min-w-0 py-2 md:py-2.5 bg-transparent outline-none font-bold text-slate-800 text-sm placeholder:text-slate-400"
+            }
+            aria-label="Search by city or restaurant name"
           />
         </div>
         <button
           type="button"
-          onClick={handleSearch}
-          className="bg-[#111] text-white px-4 md:px-6 py-2.5 md:py-3 rounded-full font-black uppercase tracking-widest text-[9px] shrink-0 hover:bg-[#A33B32] transition-all pointer-events-auto cursor-pointer"
+          onClick={() => handleSearch()}
+          className={
+            pillTheme === "dark"
+              ? "bg-[#111] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-[9px] hover:bg-[#A33B32] transition-all pointer-events-auto cursor-pointer relative z-30"
+              : "bg-[#111] text-white px-4 md:px-6 py-2.5 md:py-3 rounded-full font-black uppercase tracking-widest text-[9px] shrink-0 hover:bg-[#A33B32] transition-all pointer-events-auto cursor-pointer"
+          }
+          aria-label="Find restaurants for the location or name you entered"
         >
           Find Table
         </button>
@@ -165,18 +192,22 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
       {showSuggestions && suggestions.length > 0 && (
         <div
           ref={suggestionsRef}
-          className="absolute top-full mt-2 w-full bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden z-50"
+          className={
+            pillTheme === "dark"
+              ? "absolute top-full mt-2 w-full bg-[#0A1120] border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-50"
+              : "absolute top-full mt-2 w-full bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden z-50"
+          }
         >
           {suggestions.map((suggestion, idx) => (
             <button
               key={idx}
               type="button"
-              onClick={() => {
-                setCity(suggestion);
-                setShowSuggestions(false);
-                handleSearch();
-              }}
-              className="w-full px-4 py-3 text-left text-slate-800 hover:bg-slate-100 transition-colors border-b border-slate-100 last:border-b-0"
+              onClick={() => onSuggestionClick(suggestion)}
+              className={
+                pillTheme === "dark"
+                  ? "w-full px-6 py-4 text-left text-white hover:bg-[#C69C2B]/10 hover:text-[#C69C2B] transition-colors border-b border-white/5 last:border-b-0 pointer-events-auto cursor-pointer relative z-50"
+                  : "w-full px-4 py-3 text-left text-slate-800 hover:bg-slate-100 transition-colors border-b border-slate-100 last:border-b-0"
+              }
             >
               <div className="flex items-center gap-3">
                 <span className="text-[#A33B32] text-sm">📍</span>
@@ -194,11 +225,16 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
   }
 
   return (
-    <section className="relative z-0 min-h-[80vh] w-full bg-[#000814] flex flex-col items-center justify-center px-4" id={sectionIdValue} style={{ transform: 'translateZ(0)' }}>
-      {/* 1. 3D ISOMETRIC HEXAGON PATTERN - Hero section only */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#000814]" style={{ willChange: 'auto' }}>
-        {/* The Isometric Pattern */}
-        <div 
+    <section
+      className="relative z-0 min-h-[80vh] w-full bg-[#000814] flex flex-col items-center justify-center px-4"
+      id={sectionIdValue}
+      style={{ transform: "translateZ(0)" }}
+    >
+      <div
+        className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#000814]"
+        style={{ willChange: "auto" }}
+      >
+        <div
           className="absolute inset-0 opacity-40"
           style={{
             backgroundImage: `
@@ -209,17 +245,18 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
               linear-gradient(60deg, #003566 25%, transparent 25.5%, transparent 75%, #003566 75%, #003566),
               linear-gradient(60deg, #003566 25%, transparent 25.5%, transparent 75%, #003566 75%, #003566)
             `,
-            backgroundSize: '40px 70px',
-            backgroundPosition: '0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px',
-            transform: 'translateZ(0)',
-            backfaceVisibility: 'hidden'
+            backgroundSize: "40px 70px",
+            backgroundPosition: "0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px",
+            transform: "translateZ(0)",
+            backfaceVisibility: "hidden",
           }}
         />
-        {/* The Deep Shadow Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#000814]/50 to-[#000814]" style={{ transform: 'translateZ(0)' }}></div>
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-[#000814]/50 to-[#000814]"
+          style={{ transform: "translateZ(0)" }}
+        />
       </div>
 
-      {/* 2. CATCHY WORDS — readable on small screens (avoid merged “wordwordword”) */}
       <div className="relative z-10 mb-8 flex flex-wrap justify-center gap-x-4 gap-y-2 px-2 opacity-30 sm:gap-x-8 md:gap-x-16">
         {["REDEFINED", "AUTHENTIC", "ANCESTRAL"].map((word, i) => (
           <span
@@ -231,98 +268,23 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
         ))}
       </div>
 
-      {/* 3. THE CORE ENGINE (RESIZED) - Centered vertically */}
       <div className="relative z-10 flex items-center justify-center w-full max-w-7xl">
-        
-        {/* LEFT: Typing (Reduced Size) */}
         <div className="flex-1 text-right pr-6 md:pr-10">
           <h2 className="text-[6vw] md:text-[5.5vw] font-black text-[#C69C2B] leading-none tracking-tighter uppercase">
             {displayText}
-            <span className="animate-pulse border-r-2 md:border-r-4 border-[#C69C2B] ml-1 md:ml-2 inline-block h-[0.8em]"></span>
+            <span className="animate-pulse border-r-2 md:border-r-4 border-[#C69C2B] ml-1 md:ml-2 inline-block h-[0.8em]" />
           </h2>
         </div>
-
-        {/* THE RED SPINE (Thinner & Scaled) */}
-        <div className="w-2 md:w-3 h-[12vw] md:h-[10vw] bg-[#A33B32] shadow-[0_0_30px_rgba(163,59,50,0.4)] rounded-full"></div>
-
-        {/* RIGHT: Ultimate Dining (Reduced Size) */}
+        <div className="w-2 md:w-3 h-[12vw] md:h-[10vw] bg-[#A33B32] shadow-[0_0_30px_rgba(163,59,50,0.4)] rounded-full" />
         <div className="flex-1 text-left pl-6 md:pl-10">
           <h1 className="text-[6vw] md:text-[5.5vw] font-black text-white leading-[0.85] tracking-tighter uppercase italic">
-            ULTIMATE <br/> DINING
+            ULTIMATE <br /> DINING
           </h1>
         </div>
       </div>
 
-      {/* 4. FIND TABLE PILL (Consistent Sizing) */}
       <div className="relative z-10 mt-16 w-full max-w-lg">
-        <div className="relative">
-          <div className="bg-white rounded-full p-1.5 shadow-2xl flex items-center border border-white/10">
-            <div className="flex-1 flex items-center px-5 gap-3">
-              <span className="text-slate-400 text-sm" role="img" aria-label="Location">📍</span>
-              <input
-                id={cityInputId}
-                name="city"
-                ref={inputRef}
-                type="text"
-                placeholder="City or restaurant name"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                onFocus={() => {
-                  if (suggestions.length > 0 && city.trim().length > 0) {
-                    setShowSuggestions(true);
-                  }
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    if (showSuggestions && suggestions.length > 0) {
-                      setCity(suggestions[0]);
-                      setShowSuggestions(false);
-                    } else {
-                      handleSearch();
-                    }
-                  } else if (e.key === "Escape") {
-                    setShowSuggestions(false);
-                  }
-                }}
-                className="w-full py-2.5 bg-transparent outline-none font-bold text-slate-800 text-sm placeholder:text-slate-300"
-                aria-label="Search by city or restaurant name"
-              />
-            </div>
-            <button
-              type="button"
-              onClick={handleSearch}
-              className="bg-[#111] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest text-[9px] hover:bg-[#A33B32] transition-all pointer-events-auto cursor-pointer relative z-30"
-              aria-label="Find restaurants for the location you entered"
-            >
-              Find Table
-            </button>
-          </div>
-
-          {/* City Suggestions Dropdown */}
-          {showSuggestions && suggestions.length > 0 && (
-            <div
-              ref={suggestionsRef}
-              className="absolute top-full mt-2 w-full bg-[#0A1120] border border-white/10 rounded-2xl shadow-2xl overflow-hidden z-50"
-            >
-              {suggestions.map((suggestion, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    setCity(suggestion);
-                    setShowSuggestions(false);
-                    handleSearch();
-                  }}
-                  className="w-full px-6 py-4 text-left text-white hover:bg-[#C69C2B]/10 hover:text-[#C69C2B] transition-colors border-b border-white/5 last:border-b-0 pointer-events-auto cursor-pointer relative z-50"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-[#A33B32] text-sm">📍</span>
-                    <span className="font-bold text-sm">{suggestion}</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
+        {searchPill}
         <div className="relative z-10 mt-6 flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-4">
           <Link
             href="/restaurants"

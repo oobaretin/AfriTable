@@ -1,0 +1,34 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b0f0d"/>
+      <stop offset="0.45" stop-color="#122018"/>
+      <stop offset="1" stop-color="#1b1204"/>
+    </linearGradient>
+    <radialGradient id="r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180 140) rotate(35) scale(360 300)">
+      <stop stop-color="#f59e0b" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="r2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(620 160) rotate(18) scale(380 320)">
+      <stop stop-color="#22c55e" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="r3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(560 480) rotate(-12) scale(360 260)">
+      <stop stop-color="#ef4444" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#r1)"/>
+  <rect width="800" height="600" fill="url(#r2)"/>
+  <rect width="800" height="600" fill="url(#r3)"/>
+  <text x="400" y="268" fill="#ffffff" font-size="56" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-weight="800" text-anchor="middle">
+    AfriTable
+  </text>
+  <text x="400" y="328" fill="#fef3c7" font-size="22" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-weight="600" text-anchor="middle">
+    African &amp; Caribbean Dining
+  </text>
+  <text x="400" y="368" fill="rgba(255,255,255,0.72)" font-size="16" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-weight="500" text-anchor="middle">
+    Photo coming soon
+  </text>
+</svg>

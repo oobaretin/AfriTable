@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import type { Database } from "@db/database.types";
+import { resolveRestaurantImageUrl } from "@/lib/restaurant-image";
 
 export type RestaurantRow = Database["public"]["Tables"]["restaurants"]["Row"] & {
   // optional denormalized fields for UI
@@ -30,7 +31,11 @@ export function RestaurantCard({
   const safeHref = href ?? `/restaurants/${encodeURIComponent(restaurant.slug || restaurant.id)}`;
   const cuisines = Array.isArray(restaurant.cuisine_types) ? restaurant.cuisine_types : [];
   const price = "$".repeat(Math.max(1, Math.min(4, restaurant.price_range ?? 1)));
-  const imgSrc = restaurant.images?.[0] || "/og-image.svg";
+  const imgSrc = resolveRestaurantImageUrl({
+    images: restaurant.images,
+    region: (restaurant as { region?: string | null }).region,
+    cuisine_types: cuisines,
+  });
   const cityFromAddress = (restaurant.address as any)?.city as string | undefined;
   const cityLabel = city ?? cityFromAddress;
   

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { format, isAfter, isBefore, parseISO } from "date-fns";
 import { formatTime12h } from "@/lib/utils/time-format";
+import { resolveRestaurantImageUrl } from "@/lib/restaurant-image";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { PhotoUploadDialog } from "./PhotoUploadDialog";
@@ -265,7 +266,11 @@ export function DinerDashboard() {
                   const restaurant = fav.restaurant;
                   const cuisine = restaurant?.cuisine_types?.[0] || "";
                   const city = restaurant ? extractCity(restaurant.address) : "";
-                  const imageSrc = restaurant?.images?.[0] || "/og-image.svg";
+                  const imageSrc = resolveRestaurantImageUrl({
+                    images: restaurant?.images,
+                    region: (restaurant as { region?: string | null })?.region,
+                    cuisine_types: restaurant?.cuisine_types,
+                  });
                   
                   return (
                     <Link

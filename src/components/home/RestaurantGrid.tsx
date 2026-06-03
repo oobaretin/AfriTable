@@ -145,6 +145,7 @@ export function RestaurantGrid({
 }: RestaurantGridProps) {
   const searchParams = useSearchParams();
   const urlCityFilter = searchParams.get("city")?.toLowerCase().trim() || "";
+  const nameQuery = searchParams.get("q")?.toLowerCase().trim() || "";
   const [internalActiveCategory] = React.useState<string>("All");
   const [displayCount, setDisplayCount] = React.useState<number>(ITEMS_PER_PAGE);
 
@@ -160,11 +161,24 @@ export function RestaurantGrid({
   // Reset display count when filters change
   React.useEffect(() => {
     setDisplayCount(ITEMS_PER_PAGE);
-  }, [activeCategory, activeCity]);
+  }, [activeCategory, activeCity, nameQuery]);
 
   // Filter restaurants by cuisine and city (include all restaurants, featured are shown in Staff Picks)
   const filteredJSONRestaurants = React.useMemo(() => {
     let filtered = [...jsonRestaurants]; // Include all restaurants
+
+    if (nameQuery) {
+      filtered = filtered.filter((r) => {
+        const name = r.name?.toLowerCase() || "";
+        const cuisine = r.cuisine?.toLowerCase() || "";
+        const restaurantCity = extractCityFromAddress(r.address);
+        return (
+          name.includes(nameQuery) ||
+          cuisine.includes(nameQuery) ||
+          restaurantCity.includes(nameQuery)
+        );
+      });
+    }
 
     // Filter by city if provided
     if (activeCity) {
@@ -185,7 +199,7 @@ export function RestaurantGrid({
     }
 
     return filtered;
-  }, [jsonRestaurants, activeCategory, activeCity]);
+  }, [jsonRestaurants, activeCategory, activeCity, nameQuery]);
 
   // Transform filtered JSON restaurants to RestaurantCard format
   const transformedRestaurants = React.useMemo(() => {
