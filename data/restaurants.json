@@ -7593,9 +7593,10 @@
     "address": "2144 Noble Rd, East Cleveland, OH 44112",
     "phone": "(216) 851-4500",
     "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
+      "wed_sat": "11:30 AM - 8:00 PM"
     },
+    "website": "https://island-style-cleveland.edan.io/",
+    "google_search_url": "https://www.google.com/search?q=Island%20Style%2C%202144%20Noble%20Rd%2C%20East%20Cleveland%2C%20OH%2044112",
     "about": "Authentic Jamaican restaurant in East Cleveland. Experience traditional Jamaican flavors and hospitality at Island Style.",
     "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
     "cultural_roots": "Diaspora dining in the United States.",
@@ -7607,7 +7608,6 @@
     "google_place_id": "ChIJ-cLrDn3-MIgRB131xnK_zOg",
     "lat": 41.5379205,
     "lng": -81.5578216,
-    "google_search_url": "https://www.google.com/search?q=Island%20Style%2C%202144%20Noble%20Rd%2C%20East%20Cleveland%2C%20OH%2044112",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
