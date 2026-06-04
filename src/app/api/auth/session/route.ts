@@ -19,6 +19,15 @@ export async function GET() {
   } = await supabase.auth.getUser();
 
   const authClientOk = cookieStore.get("auth_client_ok")?.value === "1";
+  let authLastEvent: Record<string, unknown> | null = null;
+  const rawEvent = cookieStore.get("auth_last_event")?.value;
+  if (rawEvent) {
+    try {
+      authLastEvent = JSON.parse(rawEvent) as Record<string, unknown>;
+    } catch {
+      authLastEvent = { parseError: true };
+    }
+  }
 
   const payload = {
     authenticated: Boolean(user),
@@ -26,6 +35,7 @@ export async function GET() {
     authCookieCount: authCookies.length,
     authCookieNames: authCookies,
     authClientOk,
+    authLastEvent,
     error: error?.message ?? null,
   };
 

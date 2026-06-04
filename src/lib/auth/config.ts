@@ -23,6 +23,7 @@ export function sanitizeRedirectPath(next: string | null | undefined): string {
 
 export const AUTH_ERROR_MESSAGES: Record<string, string> = {
   missing_oauth_code: "Sign-in was cancelled or the link was invalid. Please try again.",
+  oauth_start_failed: "Could not start Google sign-in. Try again or use email/password.",
   oauth_exchange_failed: "Could not complete sign-in with Google. Check Supabase Google provider settings and try again.",
   access_denied: "Google sign-in was cancelled.",
 };

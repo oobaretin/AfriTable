@@ -2,9 +2,8 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { isGoogleAuthEnabled } from "@/lib/auth/config";
-import { signInWithGoogle } from "@/lib/auth/google-oauth";
+import { sanitizeRedirectPath } from "@/lib/auth/config";
 
 type GoogleAuthButtonProps = {
   label?: string;
@@ -19,18 +18,17 @@ export function GoogleAuthButton({
   disabled = false,
   onError,
 }: GoogleAuthButtonProps) {
-  const [isPending, startTransition] = React.useTransition();
   const enabled = isGoogleAuthEnabled();
 
   function handleClick() {
-    startTransition(async () => {
-      const supabase = createSupabaseBrowserClient();
-      const { error } = await signInWithGoogle(supabase, {
-        origin: window.location.origin,
-        redirectTo,
-      });
-      if (error) onError?.(error.message);
-    });
+    if (!enabled) {
+      onError?.("Google sign-in is not configured.");
+      return;
+    }
+
+    const safeNext = sanitizeRedirectPath(redirectTo);
+    const startUrl = `/api/auth/google/start?next=${encodeURIComponent(safeNext)}`;
+    window.location.assign(startUrl);
   }
 
   if (!enabled) {
@@ -48,8 +46,8 @@ export function GoogleAuthButton({
   }
 
   return (
-    <Button type="button" variant="outline" onClick={handleClick} disabled={disabled || isPending}>
-      {isPending ? "Redirecting to Google…" : label}
+    <Button type="button" variant="outline" onClick={handleClick} disabled={disabled}>
+      {label}
     </Button>
   );
 }
