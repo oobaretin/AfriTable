@@ -2801,9 +2801,11 @@
     "vibe_category": "Community Favorites",
     "state": "TX",
     "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
+      "tue_thu": "11:00 AM - 8:00 PM",
+      "fri_sat": "11:00 AM - 8:30 PM",
+      "sun": "11:00 AM - 4:00 PM"
     },
+    "website": "https://helenkitchen.com/",
     "google_search_url": "https://www.google.com/search?q=Helen's%20Kitchen%2C%2014608%20S%20Post%20Oak%20Rd%2C%20Houston%2C%20TX%2077045",
     "images": [
       "/restaurant-card-placeholder.svg"
