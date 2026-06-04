@@ -33,12 +33,10 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
   const [user, setUser] = React.useState<User | null>(serverUser);
   const [profile, setProfile] = React.useState<Profile | null>(serverProfile);
   const [signingOut, setSigningOut] = React.useState(false);
-  const [sessionReady, setSessionReady] = React.useState(Boolean(serverUser));
 
   React.useEffect(() => {
     setUser(serverUser);
     setProfile(serverProfile);
-    if (serverUser) setSessionReady(true);
   }, [serverUser, serverProfile]);
 
   React.useEffect(() => {
@@ -55,7 +53,6 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
         setUser(sessionUser);
         void syncProfile(sessionUser);
       }
-      setSessionReady(true);
 
       // #region agent log
       void fetch("/api/auth/session", { cache: "no-store" })
@@ -66,7 +63,7 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
             headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "379971" },
             body: JSON.stringify({
               sessionId: "379971",
-              runId: "auth-session-v3",
+              runId: "auth-client-callback-v4",
               hypothesisId: "H3",
               location: "NavbarClient:session-sync",
               message: "client session sync",
@@ -90,7 +87,6 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
       setUser(sessionUser);
       if (sessionUser) void syncProfile(sessionUser);
       else setProfile(null);
-      setSessionReady(true);
       router.refresh();
     });
 
@@ -114,7 +110,6 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
   const role = profile?.role ?? "diner";
   const displayName = displayNameFrom(user, profile);
   const isSignedIn = Boolean(user);
-  const showAuthActions = sessionReady;
 
   return (
     <header className="fixed top-0 w-full border-b bg-white z-50">
@@ -167,7 +162,7 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
                   About
                 </a>
                 <div className="h-px bg-border my-2" />
-                {!showAuthActions ? null : isSignedIn ? (
+                {isSignedIn ? (
                   <>
                     <p className="px-3 text-xs text-muted-foreground">{displayName}</p>
                     {role === "restaurant_owner" ? (
@@ -206,11 +201,7 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
           </Dialog>
 
           <div className="hidden items-center gap-2 md:flex relative z-[100]">
-            {!showAuthActions ? (
-              <span className="text-sm text-muted-foreground px-2" aria-hidden="true">
-                …
-              </span>
-            ) : isSignedIn ? (
+            {isSignedIn ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="gap-2 pointer-events-auto cursor-pointer relative z-[100]">

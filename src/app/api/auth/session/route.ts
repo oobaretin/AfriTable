@@ -18,11 +18,14 @@ export async function GET() {
     error,
   } = await supabase.auth.getUser();
 
+  const authClientOk = cookieStore.get("auth_client_ok")?.value === "1";
+
   const payload = {
     authenticated: Boolean(user),
     userId: user?.id ?? null,
     authCookieCount: authCookies.length,
     authCookieNames: authCookies,
+    authClientOk,
     error: error?.message ?? null,
   };
 
