@@ -33,6 +33,13 @@ function LoginForm() {
   const [formError, setFormError] = React.useState<string | null>(null);
   const [isSubmitting, startTransition] = React.useTransition();
 
+  React.useEffect(() => {
+    const supabase = createSupabaseBrowserClient();
+    void supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user) router.replace(redirectTo);
+    });
+  }, [router, redirectTo]);
+
   const form = useForm<LoginValues>({
     resolver: zodResolver(loginSchema),
     defaultValues: { email: "", password: "" },

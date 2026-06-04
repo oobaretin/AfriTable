@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createServerClient } from "@supabase/ssr";
+import { sanitizeRedirectPath } from "@/lib/auth/config";
 
 function requireEnv(name: string): string {
   const value = process.env[name];
@@ -11,6 +12,10 @@ function isProtectedPath(pathname: string): boolean {
   // Allow guest booking flow
   if (pathname.startsWith("/reservations/new")) return false;
   return pathname.startsWith("/dashboard") || pathname.startsWith("/reservations") || pathname.startsWith("/admin");
+}
+
+function isGuestOnlyPath(pathname: string): boolean {
+  return pathname === "/login" || pathname === "/signup";
 }
 
 export async function middleware(request: NextRequest) {
@@ -59,6 +64,13 @@ export async function middleware(request: NextRequest) {
     const redirectUrl = request.nextUrl.clone();
     redirectUrl.pathname = "/login";
     redirectUrl.searchParams.set("redirectTo", url.pathname + url.search);
+    return NextResponse.redirect(redirectUrl);
+  }
+
+  if (user && isGuestOnlyPath(url.pathname)) {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = sanitizeRedirectPath(url.searchParams.get("redirectTo"));
+    redirectUrl.search = "";
     return NextResponse.redirect(redirectUrl);
   }
 

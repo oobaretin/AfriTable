@@ -31,6 +31,13 @@ export default function SignupPage() {
   const [confirmationSent, setConfirmationSent] = React.useState(false);
   const [isSubmitting, startTransition] = React.useTransition();
 
+  React.useEffect(() => {
+    const supabase = createSupabaseBrowserClient();
+    void supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user) router.replace("/");
+    });
+  }, [router]);
+
   const form = useForm<SignupValues>({
     resolver: zodResolver(signupSchema),
     defaultValues: { fullName: "", phone: "", email: "", password: "" },
