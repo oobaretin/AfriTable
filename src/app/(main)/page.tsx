@@ -180,7 +180,7 @@ export default async function MainHomePage() {
       {/* Community Feed */}
       <CommunityFeed />
 
-      {/* Partner CTA — honest positioning, no fabricated testimonials */}
+      {/* Partner CTA — why list on AfriTable */}
       <PartnerWithUsSection />
 
       {/* Ambassador's Circle Leaderboard */}
@@ -188,7 +188,7 @@ export default async function MainHomePage() {
         <Leaderboard />
       </Reveal>
 
-      {/* Restaurant Owner CTA */}
+      {/* Owner tools — dashboard capabilities after onboarding */}
       <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
         <Reveal>
           <RestaurantOwnerCTA />

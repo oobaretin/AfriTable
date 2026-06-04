@@ -12,6 +12,10 @@ const pillars = [
     title: "Reservations that fit you",
     body: "Table capacity, party size, and service style tuned for how African & Caribbean restaurants actually operate.",
   },
+  {
+    title: "Owner dashboard",
+    body: "Once approved, manage today’s bookings, your listing, reviews, and analytics from a single owner workspace.",
+  },
 ] as const;
 
 export function PartnerWithUsSection() {
@@ -46,7 +50,7 @@ export function PartnerWithUsSection() {
                 href="/join-as-restaurant"
                 className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-brand-ochre to-amber-600 px-8 py-4 text-center text-sm font-bold uppercase tracking-widest text-white shadow-lg shadow-brand-ochre/20 transition hover:shadow-brand-ochre/30"
               >
-                Join as a partner
+                Apply to partner
               </Link>
               <Link
                 href="/submit-restaurant"
@@ -56,15 +60,19 @@ export function PartnerWithUsSection() {
               </Link>
             </div>
             <p className="mt-6 text-xs text-slate-500">
-              Already on the map?{" "}
+              Already approved or have a claim link?{" "}
+              <Link href="/restaurant-signup" className="font-semibold text-slate-300 underline-offset-4 hover:underline">
+                Create your owner account
+              </Link>
+              . Otherwise{" "}
               <a href={mailto(SITE_CONTACT.partnerships)} className="font-semibold text-slate-300 underline-offset-4 hover:underline">
-                Contact the team
+                contact partnerships
               </a>{" "}
               for onboarding or press.
             </p>
           </div>
 
-          <ul className="grid gap-4 sm:grid-cols-1">
+          <ul className="grid gap-4 sm:grid-cols-1 lg:grid-cols-1">
             {pillars.map((item) => (
               <li
                 key={item.title}

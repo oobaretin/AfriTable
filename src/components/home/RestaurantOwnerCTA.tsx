@@ -1,82 +1,109 @@
 "use client";
 
-import * as React from "react";
+import Link from "next/link";
 import { mailto, SITE_CONTACT } from "@/lib/site-contact";
+
+const ownerTools = [
+  {
+    title: "Reservations",
+    body: "See today’s bookings, party sizes, and guest notes in one dashboard—built for how your floor actually runs.",
+  },
+  {
+    title: "Reviews",
+    body: "Track diner feedback and keep your listing credible as your reputation grows on AfriTable.",
+  },
+  {
+    title: "Analytics",
+    body: "Understand booking patterns over time so you can staff and plan service with confidence.",
+  },
+  {
+    title: "Your listing",
+    body: "Update hours, photos, and menu details so diaspora diners find accurate information before they arrive.",
+  },
+] as const;
 
 export function RestaurantOwnerCTA() {
   return (
-    <section className="relative overflow-hidden rounded-3xl bg-slate-900 py-20 px-8">
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 h-96 w-96 rounded-full bg-orange-600/20 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 h-96 w-96 rounded-full bg-yellow-600/10 blur-3xl"></div>
+    <section
+      className="relative overflow-hidden rounded-3xl bg-brand-dark py-20 px-8"
+      aria-labelledby="owner-tools-heading"
+    >
+      <div className="pointer-events-none absolute top-0 right-0 h-72 w-72 -translate-y-1/2 translate-x-1/4 rounded-full bg-brand-ochre/10 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 left-0 h-64 w-64 translate-y-1/2 -translate-x-1/4 rounded-full bg-brand-forest/15 blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-5xl">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
-          
-          {/* Content Side */}
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
           <div>
-            <span className="inline-block px-4 py-1 mb-6 rounded-full bg-orange-500/10 text-orange-500 text-xs font-black uppercase tracking-widest border border-orange-500/20">
-              For Restaurant Owners
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
-              Bring your flavors to a <span className="text-orange-500">global table.</span>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-ochre/90">For restaurant owners</p>
+            <h2
+              id="owner-tools-heading"
+              className="mt-4 text-3xl font-black leading-tight tracking-tight text-white md:text-4xl lg:text-5xl"
+            >
+              Tools to run your{" "}
+              <span className="text-brand-forest">AfriTable</span> listing
             </h2>
-            <p className="text-lg text-slate-400 mb-8 leading-relaxed">
-              Join the premier platform dedicated to African and Caribbean dining. Reach thousands of diners, manage your reservations seamlessly, and grow your brand with tools built for your culture.
+            <p className="mt-5 text-base leading-relaxed text-slate-400 md:text-lg">
+              Once your restaurant is onboarded, you get a dedicated owner dashboard—not a generic listing page.
+              Manage reservations, keep your profile accurate, and grow with a platform built for African and
+              Caribbean dining in the United States.
             </p>
-            
-            <div className="space-y-4 mb-10">
+
+            <ul className="mt-8 space-y-3">
               {[
-                "Reach 50k+ monthly active diners",
-                "0% commission on your first 3 months",
-                "Advanced reservation & table management",
-                "Direct marketing to the diaspora community"
-              ].map((benefit, i) => (
-                <div key={i} className="flex items-center gap-3 text-slate-300">
-                  <div className="flex-shrink-0 rounded-full bg-orange-500/20 p-1">
-                    <svg className="h-4 w-4 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                "Live reservation view for today’s service",
+                "Listing controls for hours, photos, and details",
+                "Review and analytics pages as you scale",
+                "Human onboarding—we review every partner application",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-slate-300">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-ochre/20 text-brand-ochre">
+                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
-                  </div>
-                  <span className="text-sm font-medium">{benefit}</span>
-                </div>
+                  </span>
+                  <span>{item}</span>
+                </li>
               ))}
-            </div>
+            </ul>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/join-as-restaurant" className="btn-bronze px-8 py-4 rounded-xl font-bold text-white uppercase tracking-widest text-sm text-center pointer-events-auto cursor-pointer">
-                Get Started for Free
-              </a>
-              <a href={mailto(SITE_CONTACT.sales)} className="inline-flex items-center justify-center rounded-xl bg-white/5 px-8 py-4 font-bold text-white border border-white/10 transition-all hover:bg-white/10 pointer-events-auto cursor-pointer">
-                Talk to Sales
-              </a>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link
+                href="/join-as-restaurant"
+                className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-brand-ochre to-amber-600 px-8 py-4 text-center text-sm font-bold uppercase tracking-widest text-white shadow-lg shadow-brand-ochre/20 transition hover:shadow-brand-ochre/30"
+              >
+                Apply to partner
+              </Link>
+              <Link
+                href="/restaurant-signup"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-8 py-4 text-center text-sm font-bold uppercase tracking-widest text-white transition hover:bg-white/10"
+              >
+                Create owner account
+              </Link>
             </div>
+            <p className="mt-6 text-xs text-slate-500">
+              Know a spot we should add?{" "}
+              <Link href="/submit-restaurant" className="font-semibold text-slate-300 underline-offset-4 hover:underline">
+                Suggest a listing
+              </Link>
+              . Questions?{" "}
+              <a href={mailto(SITE_CONTACT.partnerships)} className="font-semibold text-slate-300 underline-offset-4 hover:underline">
+                Email partnerships
+              </a>
+              .
+            </p>
           </div>
 
-          {/* Feature Highlight Cards Side */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="rounded-2xl bg-white/5 p-6 border border-white/10 backdrop-blur-sm">
-              <div className="text-3xl mb-4">📈</div>
-              <h4 className="text-white font-bold mb-2">Growth</h4>
-              <p className="text-xs text-slate-400">Increase your weekend bookings by up to 40%.</p>
-            </div>
-            <div className="rounded-2xl bg-white/5 p-6 border border-white/10 mt-8 backdrop-blur-sm">
-              <div className="text-3xl mb-4">💬</div>
-              <h4 className="text-white font-bold mb-2">Feedback</h4>
-              <p className="text-xs text-slate-400">Collect verified reviews and build diner loyalty.</p>
-            </div>
-            <div className="rounded-2xl bg-white/5 p-6 border border-white/10 backdrop-blur-sm">
-              <div className="text-3xl mb-4">📱</div>
-              <h4 className="text-white font-bold mb-2">Simplicity</h4>
-              <p className="text-xs text-slate-400">Manage everything from our intuitive Owner App.</p>
-            </div>
-            <div className="rounded-2xl bg-white/5 p-6 border border-white/10 mt-8 backdrop-blur-sm">
-              <div className="text-3xl mb-4">🌍</div>
-              <h4 className="text-white font-bold mb-2">Culture</h4>
-              <p className="text-xs text-slate-400">A platform that finally understands your cuisine.</p>
-              </div>
-          </div>
-
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {ownerTools.map((item) => (
+              <li
+                key={item.title}
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition hover:border-brand-ochre/25"
+              >
+                <h3 className="text-lg font-bold text-white">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-400">{item.body}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
