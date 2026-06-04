@@ -241,6 +241,8 @@ export type Database = {
           guest_name: string | null;
           guest_email: string | null;
           guest_phone: string | null;
+          internal_note: string | null;
+          assigned_table_id: string | null;
           created_at: string;
           updated_at: string;
         };
@@ -257,6 +259,8 @@ export type Database = {
           guest_name?: string | null;
           guest_email?: string | null;
           guest_phone?: string | null;
+          internal_note?: string | null;
+          assigned_table_id?: string | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -273,6 +277,8 @@ export type Database = {
           guest_name?: string | null;
           guest_email?: string | null;
           guest_phone?: string | null;
+          internal_note?: string | null;
+          assigned_table_id?: string | null;
           created_at?: string;
           updated_at?: string;
         };
