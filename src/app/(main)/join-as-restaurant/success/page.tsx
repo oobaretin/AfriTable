@@ -24,7 +24,8 @@ export default function PartnerSignupSuccessPage() {
           </div>
           <CardTitle className="text-2xl">Application Submitted!</CardTitle>
           <CardDescription className="mt-2">
-            Thank you for your interest in partnering with AfriTable. Our team will review your application and reach out within 2-3 business days.
+            Thank you for your interest in partnering with AfriTable. Our team will review your application and email you
+            an onboarding link within 2–3 business days if approved.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">

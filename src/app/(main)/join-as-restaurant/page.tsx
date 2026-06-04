@@ -11,6 +11,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { PartnerSignupFAQ } from "@/components/partners/PartnerSignupFAQ";
 
 const partnerSignupSchema = z.object({
   // Step 1: Business Name
@@ -306,6 +307,7 @@ export default function JoinAsRestaurantPage() {
           </Form>
         </CardContent>
       </Card>
+      <PartnerSignupFAQ />
     </div>
   );
 }

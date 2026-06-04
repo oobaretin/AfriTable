@@ -51,6 +51,11 @@ async function getAdminStats() {
       .select("*", { count: "exact", head: true })
       .in("status", ["submitted", "under_review"]);
 
+    const { count: pendingPartnerApplications } = await supabase
+      .from("partner_applications")
+      .select("*", { count: "exact", head: true })
+      .in("status", ["submitted", "under_review"]);
+
     // Total users
     const { count: totalUsers } = await supabase
       .from("profiles")
@@ -68,6 +73,7 @@ async function getAdminStats() {
       pendingRestaurants: pendingRestaurants || 0,
       totalSubmissions: totalSubmissions || 0,
       pendingSubmissions: pendingSubmissions || 0,
+      pendingPartnerApplications: pendingPartnerApplications || 0,
       totalUsers: totalUsers || 0,
       restaurantOwners: restaurantOwners || 0,
     };
@@ -80,6 +86,7 @@ async function getAdminStats() {
       pendingRestaurants: 0,
       totalSubmissions: 0,
       pendingSubmissions: 0,
+      pendingPartnerApplications: 0,
       totalUsers: 0,
       restaurantOwners: 0,
     };
@@ -97,6 +104,14 @@ export default async function AdminDashboardPage() {
       icon: Clock,
       count: stats.pendingRestaurants,
       badge: stats.pendingRestaurants > 0 ? "warning" : "default",
+    },
+    {
+      title: "Partner applications",
+      description: "Restaurants that applied to join as partners",
+      href: "/admin/partner-applications",
+      icon: UtensilsCrossed,
+      count: stats.pendingPartnerApplications,
+      badge: stats.pendingPartnerApplications > 0 ? "warning" : "default",
     },
     {
       title: "Restaurant Submissions",

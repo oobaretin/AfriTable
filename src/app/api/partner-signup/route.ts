@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { createSupabaseAdminClient } from "@/lib/supabase/server";
 import { escapeHtml, sendSiteInboxNotification } from "@/lib/email/site-inbox";
 
 const partnerSignupSchema = z.object({
@@ -23,6 +24,28 @@ export async function POST(request: Request) {
     }
 
     const data = parsed.data;
+    const supabaseAdmin = createSupabaseAdminClient();
+
+    const { data: application, error: insertError } = await supabaseAdmin
+      .from("partner_applications")
+      .insert({
+        business_name: data.businessName,
+        cuisine_type: data.cuisineType,
+        contact_name: data.contactName,
+        email: data.email.toLowerCase(),
+        phone: data.phone,
+        status: "submitted",
+      })
+      .select("id")
+      .single();
+
+    if (insertError) {
+      console.error("[Partner Signup] DB insert failed:", insertError.message);
+    }
+
+    const adminLink = application?.id
+      ? `<p><a href="${process.env.NEXT_PUBLIC_APP_URL ?? "https://afri-table.com"}/admin/partner-applications">Review in admin</a></p>`
+      : "";
 
     await sendSiteInboxNotification({
       subject: `[AfriTable] Partner application: ${data.businessName}`,
@@ -30,13 +53,22 @@ export async function POST(request: Request) {
 <p><strong>Cuisine:</strong> ${escapeHtml(data.cuisineType)}</p>
 <p><strong>Contact name:</strong> ${escapeHtml(data.contactName)}</p>
 <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
-<p><strong>Phone:</strong> ${escapeHtml(data.phone)}</p>`,
+<p><strong>Phone:</strong> ${escapeHtml(data.phone)}</p>
+${adminLink}`,
       replyTo: data.email,
     });
+
+    if (insertError) {
+      return NextResponse.json(
+        { error: "server_error", message: "Failed to save application" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({
       success: true,
       message: "Application submitted successfully",
+      applicationId: application.id,
     });
   } catch (error) {
     console.error("[Partner Signup] Error:", error);

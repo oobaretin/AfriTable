@@ -4,7 +4,6 @@ import { Separator } from "@/components/ui/separator";
 import { HeroSearch } from "@/components/restaurant/HeroSearch";
 import { Reveal } from "@/components/layout/Reveal";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
-import { RestaurantOwnerCTA } from "@/components/home/RestaurantOwnerCTA";
 import { LocalPulse } from "@/components/home/LocalPulse";
 import { HomeSearchProvider } from "@/components/home/HomeSearchProvider";
 import { HeritageSection } from "@/components/home/HeritageSection";
@@ -180,20 +179,13 @@ export default async function MainHomePage() {
       {/* Community Feed */}
       <CommunityFeed />
 
-      {/* Partner CTA — why list on AfriTable */}
+      {/* Partner section — apply, owner tools, and onboarding paths */}
       <PartnerWithUsSection />
 
       {/* Ambassador's Circle Leaderboard */}
       <Reveal>
         <Leaderboard />
       </Reveal>
-
-      {/* Owner tools — dashboard capabilities after onboarding */}
-      <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-        <Reveal>
-          <RestaurantOwnerCTA />
-        </Reveal>
-      </section>
     </main>
   );
 }

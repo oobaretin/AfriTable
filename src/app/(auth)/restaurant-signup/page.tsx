@@ -111,6 +111,29 @@ export default function RestaurantSignupPage() {
     mode: "onSubmit",
   });
 
+  const partnerInviteRef = React.useRef<{ token: string; applicationId: string } | null>(null);
+
+  React.useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("from") !== "partner_application") return;
+
+    const token = params.get("token") ?? "";
+    const applicationId = params.get("applicationId") ?? "";
+    if (token && applicationId) {
+      partnerInviteRef.current = { token, applicationId };
+    }
+
+    form.reset({
+      ...form.getValues(),
+      email: params.get("email") ?? "",
+      contactName: params.get("contactName") ?? "",
+      contactPhone: params.get("phone") ?? "",
+      restaurantName: params.get("name") ?? "",
+      cuisineTypes: params.get("cuisine") ?? "",
+      restaurantPhone: params.get("phone") ?? "",
+    });
+  }, [form]);
+
   // If a user verifies email and returns later, complete onboarding using saved draft.
   React.useEffect(() => {
     const supabase = createSupabaseBrowserClient();
@@ -294,6 +317,15 @@ export default function RestaurantSignupPage() {
         operating_hours: operatingHours as any,
       })
       .throwOnError();
+
+    const invite = partnerInviteRef.current;
+    if (invite) {
+      void fetch("/api/partner-applications/consume-invite", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(invite),
+      });
+    }
 
     router.replace("/dashboard");
     router.refresh();

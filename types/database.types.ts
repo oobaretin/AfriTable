@@ -543,6 +543,69 @@ export type Database = {
         Relationships: [];
       };
 
+      partner_applications: {
+        Row: {
+          id: string;
+          business_name: string;
+          cuisine_type: string;
+          contact_name: string;
+          email: string;
+          phone: string;
+          status: "submitted" | "under_review" | "invited" | "approved" | "rejected";
+          admin_notes: string | null;
+          owner_invite_token_hash: string | null;
+          owner_invite_token_expires_at: string | null;
+          owner_invite_token_used_at: string | null;
+          invited_at: string | null;
+          reviewed_at: string | null;
+          reviewed_by: string | null;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          business_name: string;
+          cuisine_type: string;
+          contact_name: string;
+          email: string;
+          phone: string;
+          status?: "submitted" | "under_review" | "invited" | "approved" | "rejected";
+          admin_notes?: string | null;
+          owner_invite_token_hash?: string | null;
+          owner_invite_token_expires_at?: string | null;
+          owner_invite_token_used_at?: string | null;
+          invited_at?: string | null;
+          reviewed_at?: string | null;
+          reviewed_by?: string | null;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          business_name?: string;
+          cuisine_type?: string;
+          contact_name?: string;
+          email?: string;
+          phone?: string;
+          status?: "submitted" | "under_review" | "invited" | "approved" | "rejected";
+          admin_notes?: string | null;
+          owner_invite_token_hash?: string | null;
+          owner_invite_token_expires_at?: string | null;
+          owner_invite_token_used_at?: string | null;
+          invited_at?: string | null;
+          reviewed_at?: string | null;
+          reviewed_by?: string | null;
+          created_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "partner_applications_reviewed_by_fkey";
+            columns: ["reviewed_by"];
+            isOneToOne: false;
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+
       submission_events: {
         Row: {
           id: string;
