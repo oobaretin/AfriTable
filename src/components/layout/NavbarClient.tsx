@@ -1,15 +1,21 @@
 "use client";
 
+import * as React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import type { User } from "@supabase/supabase-js";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { signOutAction } from "@/lib/auth/actions";
+import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import type { Database } from "@db/database.types";
+
+type Profile = Database["public"]["Tables"]["profiles"]["Row"];
 
 type NavbarClientProps = {
-  user: any;
-  profile: any;
+  user: User | null;
+  profile: Profile | null;
 };
 
 function initials(name?: string | null) {
@@ -18,9 +24,67 @@ function initials(name?: string | null) {
   return parts.map((p) => p[0]?.toUpperCase()).join("") || "AT";
 }
 
-export function NavbarClient({ user, profile }: NavbarClientProps) {
+function displayNameFrom(user: User | null, profile: Profile | null) {
+  return profile?.full_name ?? (typeof user?.user_metadata?.name === "string" ? user.user_metadata.name : null) ?? user?.email ?? "Account";
+}
+
+export function NavbarClient({ user: serverUser, profile: serverProfile }: NavbarClientProps) {
+  const router = useRouter();
+  const [user, setUser] = React.useState<User | null>(serverUser);
+  const [profile, setProfile] = React.useState<Profile | null>(serverProfile);
+  const [signingOut, setSigningOut] = React.useState(false);
+
+  React.useEffect(() => {
+    setUser(serverUser);
+    setProfile(serverProfile);
+  }, [serverUser, serverProfile]);
+
+  React.useEffect(() => {
+    const supabase = createSupabaseBrowserClient();
+
+    async function syncProfile(activeUser: User) {
+      const { data } = await supabase.from("profiles").select("*").eq("id", activeUser.id).maybeSingle();
+      if (data) setProfile(data);
+    }
+
+    void supabase.auth.getSession().then(({ data: { session } }) => {
+      const sessionUser = session?.user ?? null;
+      if (sessionUser) {
+        setUser(sessionUser);
+        void syncProfile(sessionUser);
+      }
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      const sessionUser = session?.user ?? null;
+      setUser(sessionUser);
+      if (sessionUser) void syncProfile(sessionUser);
+      else setProfile(null);
+      router.refresh();
+    });
+
+    return () => subscription.unsubscribe();
+  }, [router]);
+
+  async function handleSignOut() {
+    setSigningOut(true);
+    try {
+      const supabase = createSupabaseBrowserClient();
+      await supabase.auth.signOut();
+      setUser(null);
+      setProfile(null);
+      router.refresh();
+      router.push("/");
+    } finally {
+      setSigningOut(false);
+    }
+  }
+
   const role = profile?.role ?? "diner";
-  const displayName = profile?.full_name ?? user?.email ?? "AfriTable";
+  const displayName = displayNameFrom(user, profile);
+  const isSignedIn = Boolean(user);
 
   return (
     <header className="fixed top-0 w-full border-b bg-white z-50">
@@ -39,29 +103,19 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
           </a>
 
           <nav className="hidden items-center gap-4 text-sm md:flex relative z-50">
-            <a 
-              href="/" 
-              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto"
-            >
+            <a href="/" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto">
               Home
             </a>
-            <a 
-              href="/restaurants" 
-              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto"
-            >
+            <a href="/restaurants" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto">
               Restaurants
             </a>
-            <a 
-              href="/about" 
-              className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto"
-            >
+            <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-2 py-1 relative z-50 pointer-events-auto">
               About
             </a>
           </nav>
         </div>
 
         <div className="flex items-center gap-2 relative z-50">
-          {/* Mobile menu */}
           <Dialog>
             <DialogTrigger asChild>
               <Button variant="outline" className="md:hidden pointer-events-auto cursor-pointer relative z-50" aria-label="Open menu">
@@ -83,8 +137,9 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
                   About
                 </a>
                 <div className="h-px bg-border my-2" />
-                {user ? (
+                {isSignedIn ? (
                   <>
+                    <p className="px-3 text-xs text-muted-foreground">{displayName}</p>
                     {role === "restaurant_owner" ? (
                       <a href="/dashboard" className="block px-3 py-2 text-sm hover:bg-accent rounded-md pointer-events-auto cursor-pointer">
                         Dashboard
@@ -94,11 +149,17 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
                         My Reservations
                       </a>
                     )}
-                    <form action={signOutAction}>
-                      <button type="submit" className="w-full text-left px-3 py-2 text-sm hover:bg-accent rounded-md pointer-events-auto cursor-pointer">
-                        Sign out
-                      </button>
-                    </form>
+                    <a href="/profile" className="block px-3 py-2 text-sm hover:bg-accent rounded-md pointer-events-auto cursor-pointer">
+                      Profile
+                    </a>
+                    <button
+                      type="button"
+                      onClick={() => void handleSignOut()}
+                      disabled={signingOut}
+                      className="w-full text-left px-3 py-2 text-sm hover:bg-accent rounded-md pointer-events-auto cursor-pointer disabled:opacity-50"
+                    >
+                      {signingOut ? "Signing out…" : "Sign out"}
+                    </button>
                   </>
                 ) : (
                   <>
@@ -114,14 +175,13 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
             </DialogContent>
           </Dialog>
 
-          {/* Desktop auth area */}
           <div className="hidden items-center gap-2 md:flex relative z-[100]">
-            {user ? (
+            {isSignedIn ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="gap-2 pointer-events-auto cursor-pointer relative z-[100]">
                     <Avatar className="h-6 w-6">
-                      <AvatarFallback className="text-[10px]">{initials(profile?.full_name)}</AvatarFallback>
+                      <AvatarFallback className="text-[10px]">{initials(profile?.full_name ?? displayName)}</AvatarFallback>
                     </Avatar>
                     <span className="max-w-[160px] truncate">{displayName}</span>
                   </Button>
@@ -142,12 +202,15 @@ export function NavbarClient({ user, profile }: NavbarClientProps) {
                     <a href="/profile" className="pointer-events-auto cursor-pointer">Profile</a>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem asChild>
-                    <form action={signOutAction} className="w-full pointer-events-auto">
-                      <button type="submit" className="w-full text-left pointer-events-auto cursor-pointer">
-                        Sign out
-                      </button>
-                    </form>
+                  <DropdownMenuItem
+                    disabled={signingOut}
+                    className="cursor-pointer"
+                    onSelect={(event) => {
+                      event.preventDefault();
+                      void handleSignOut();
+                    }}
+                  >
+                    {signingOut ? "Signing out…" : "Sign out"}
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>

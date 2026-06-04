@@ -1,6 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { createClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
+import type { NextResponse } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database } from "@db/database.types";
 import { assertSupabaseJwtShape } from "./validate-jwt";
@@ -38,6 +39,36 @@ export function createSupabaseServerClient(): SupabaseClient<Database> {
         } catch {
           // no-op
         }
+      },
+    },
+  });
+}
+
+/**
+ * Supabase client for Route Handlers that redirect (e.g. OAuth callback).
+ * Session cookies must be written onto the redirect response, not only cookies().
+ */
+export function createSupabaseRouteHandlerClient(response: NextResponse): SupabaseClient<Database> {
+  const url = requireEnv("NEXT_PUBLIC_SUPABASE_URL");
+  const anonKey = requireEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY");
+  assertSupabaseJwtShape(anonKey, "NEXT_PUBLIC_SUPABASE_ANON_KEY", "anon");
+
+  const cookieStore = cookies();
+
+  return createServerClient<Database>(url, anonKey, {
+    cookies: {
+      getAll() {
+        return cookieStore.getAll();
+      },
+      setAll(cookiesToSet) {
+        cookiesToSet.forEach(({ name, value, options }) => {
+          try {
+            cookieStore.set(name, value, options);
+          } catch {
+            // Server Components may be read-only; response cookies still apply.
+          }
+          response.cookies.set(name, value, options);
+        });
       },
     },
   });

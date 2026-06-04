@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseRouteHandlerClient } from "@/lib/supabase/server";
 import { sanitizeRedirectPath } from "@/lib/auth/config";
 
 function profilePatchFromUser(user: {
@@ -43,7 +43,9 @@ export async function GET(request: Request) {
     return NextResponse.redirect(loginUrl);
   }
 
-  const supabase = createSupabaseServerClient();
+  const redirectUrl = new URL(next, origin);
+  const response = NextResponse.redirect(redirectUrl);
+  const supabase = createSupabaseRouteHandlerClient(response);
   const { error } = await supabase.auth.exchangeCodeForSession(code);
 
   if (error) {
@@ -57,9 +59,8 @@ export async function GET(request: Request) {
   } = await supabase.auth.getUser();
 
   if (user) {
-    // Enrich profile with Google name/avatar; role stays diner unless set at email signup.
     await supabase.from("profiles").upsert(profilePatchFromUser(user), { onConflict: "id" });
   }
 
-  return NextResponse.redirect(new URL(next, origin));
+  return response;
 }
