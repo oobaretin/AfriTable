@@ -191,29 +191,61 @@ export function filterByVibe<T extends { vibe_category?: string; vibe?: string }
   });
 }
 
+/** Compact alphanumeric form for fuzzy name / domain matching (e.g. reggaehut → Reggae Hut Cafe). */
+export function compactSearchText(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+type NameSearchable = {
+  name?: string;
+  cuisine?: string;
+  region?: string;
+  address?: unknown;
+  website?: string;
+  about?: string;
+  search_aliases?: string[];
+};
+
+export function matchesNameQuery(restaurant: NameSearchable, nameQuery: string): boolean {
+  const q = nameQuery.trim().toLowerCase();
+  if (!q) return true;
+
+  const qCompact = compactSearchText(q);
+  const restaurantCity = extractCityFromAddress(restaurant.address);
+
+  const haystacks = [
+    restaurant.name,
+    restaurant.cuisine,
+    restaurant.region,
+    restaurant.website,
+    restaurant.about,
+    restaurantCity,
+    ...(restaurant.search_aliases ?? []),
+  ]
+    .filter(Boolean)
+    .map((s) => String(s).toLowerCase());
+
+  return haystacks.some((text) => {
+    if (text.includes(q)) return true;
+    if (qCompact.length >= 3 && compactSearchText(text).includes(qCompact)) return true;
+    return false;
+  });
+}
+
 export type ListFilterParams = {
   activeCategory: string;
   activeCity: string;
   nameQuery: string;
 };
 
-export function filterRestaurantList<T extends { name?: string; cuisine?: string; region?: string; address?: unknown }>(
+export function filterRestaurantList<T extends NameSearchable>(
   restaurants: T[],
   { activeCategory, activeCity, nameQuery }: ListFilterParams,
 ): T[] {
   let filtered = [...restaurants];
 
   if (nameQuery) {
-    filtered = filtered.filter((r) => {
-      const name = r.name?.toLowerCase() || "";
-      const cuisine = r.cuisine?.toLowerCase() || "";
-      const restaurantCity = extractCityFromAddress(r.address);
-      return (
-        name.includes(nameQuery) ||
-        cuisine.includes(nameQuery) ||
-        restaurantCity.includes(nameQuery)
-      );
-    });
+    filtered = filtered.filter((r) => matchesNameQuery(r, nameQuery));
   }
 
   if (activeCity) {

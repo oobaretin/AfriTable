@@ -1657,6 +1657,8 @@
     "address": "4814 Almeda Road, Houston, TX 77004",
     "phone": "(713) 520-7171",
     "website": "https://reggaehutcafe.com",
+    "search_aliases": ["Reggae Hut", "reggaehut", "reggaehutcafe", "Almeda"],
+    "featured": true,
     "about": "Caribbean & soul; brown stew fish, jerk chicken, patties. Black-owned.",
     "vibe_category": "Authentic Staples",
     "state": "TX",

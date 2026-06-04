@@ -38,6 +38,8 @@ export type JSONRestaurant = {
   awards?: string[];
   quality_factor?: string;
   featured?: boolean;
+  /** Extra strings for directory search (legacy names, domains, neighborhoods). */
+  search_aliases?: string[];
   vibe_category?: "Fine Dining" | "Authentic Staples" | "Community Favorites";
   secondary_location?: {
     name: string;
