@@ -32,11 +32,17 @@ function LoginForm() {
 
   const [formError, setFormError] = React.useState<string | null>(null);
   const [isSubmitting, startTransition] = React.useTransition();
+  const [authState, setAuthState] = React.useState<"checking" | "guest" | "redirecting">("checking");
 
   React.useEffect(() => {
     const supabase = createSupabaseBrowserClient();
     void supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) router.replace(redirectTo);
+      if (session?.user) {
+        setAuthState("redirecting");
+        router.replace(redirectTo);
+      } else {
+        setAuthState("guest");
+      }
     });
   }, [router, redirectTo]);
 
@@ -54,8 +60,21 @@ function LoginForm() {
       setFormError(error.message);
       return;
     }
+    setAuthState("redirecting");
     router.replace(redirectTo);
     router.refresh();
+  }
+
+  if (authState !== "guest") {
+    return (
+      <div className="mx-auto flex min-h-screen max-w-md items-center px-6 py-16">
+        <Card className="w-full">
+          <CardContent className="py-10 text-center text-sm text-muted-foreground">
+            {authState === "redirecting" ? "Taking you to your account…" : "Loading…"}
+          </CardContent>
+        </Card>
+      </div>
+    );
   }
 
   return (

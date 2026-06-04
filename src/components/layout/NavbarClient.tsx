@@ -32,10 +32,12 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
   const [user, setUser] = React.useState<User | null>(serverUser);
   const [profile, setProfile] = React.useState<Profile | null>(serverProfile);
   const [signingOut, setSigningOut] = React.useState(false);
+  const [sessionResolved, setSessionResolved] = React.useState(Boolean(serverUser));
 
   React.useEffect(() => {
     setUser(serverUser);
     setProfile(serverProfile);
+    if (serverUser) setSessionResolved(true);
   }, [serverUser, serverProfile]);
 
   React.useEffect(() => {
@@ -46,19 +48,23 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
       if (data) setProfile(data);
     }
 
-    void supabase.auth.getSession().then(({ data: { session } }) => {
-      const sessionUser = session?.user ?? null;
-      if (sessionUser) {
-        setUser(sessionUser);
-        void syncProfile(sessionUser);
-      }
-    });
+    if (!serverUser) {
+      void supabase.auth.getSession().then(({ data: { session } }) => {
+        const sessionUser = session?.user ?? null;
+        if (sessionUser) {
+          setUser(sessionUser);
+          void syncProfile(sessionUser);
+        }
+        setSessionResolved(true);
+      });
+    }
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((event, session) => {
       const sessionUser = session?.user ?? null;
       setUser(sessionUser);
+      setSessionResolved(true);
       if (sessionUser) void syncProfile(sessionUser);
       else setProfile(null);
       if (event === "SIGNED_IN" || event === "SIGNED_OUT" || event === "USER_UPDATED") {
@@ -67,7 +73,7 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
     });
 
     return () => subscription.unsubscribe();
-  }, [router]);
+  }, [router, serverUser]);
 
   async function handleSignOut() {
     setSigningOut(true);
@@ -86,6 +92,7 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
   const role = profile?.role ?? "diner";
   const displayName = displayNameFrom(user, profile);
   const isSignedIn = Boolean(user);
+  const showAuthLoading = !sessionResolved && !isSignedIn;
   const accountHref = role === "restaurant_owner" ? "/dashboard" : "/reservations";
   const accountLabel = role === "restaurant_owner" ? "Dashboard" : "My Reservations";
   const navLinkClass =
@@ -196,7 +203,9 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
           </Dialog>
 
           <div className="hidden items-center gap-2 md:flex relative z-[60]">
-            {isSignedIn ? (
+            {showAuthLoading ? (
+              <div className="h-9 w-44 animate-pulse rounded-md bg-muted" aria-hidden />
+            ) : isSignedIn ? (
               <>
                 <a
                   href="/profile"

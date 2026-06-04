@@ -30,11 +30,17 @@ export default function SignupPage() {
   const [formError, setFormError] = React.useState<string | null>(null);
   const [confirmationSent, setConfirmationSent] = React.useState(false);
   const [isSubmitting, startTransition] = React.useTransition();
+  const [authState, setAuthState] = React.useState<"checking" | "guest" | "redirecting">("checking");
 
   React.useEffect(() => {
     const supabase = createSupabaseBrowserClient();
     void supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) router.replace("/");
+      if (session?.user) {
+        setAuthState("redirecting");
+        router.replace("/");
+      } else {
+        setAuthState("guest");
+      }
     });
   }, [router]);
 
@@ -77,12 +83,25 @@ export default function SignupPage() {
           role: "diner",
         })
         .throwOnError();
+      setAuthState("redirecting");
       router.replace("/");
       router.refresh();
       return;
     }
 
     setConfirmationSent(true);
+  }
+
+  if (authState !== "guest") {
+    return (
+      <div className="mx-auto flex min-h-screen max-w-md items-center px-6 py-16">
+        <Card className="w-full">
+          <CardContent className="py-10 text-center text-sm text-muted-foreground">
+            {authState === "redirecting" ? "Taking you to your account…" : "Loading…"}
+          </CardContent>
+        </Card>
+      </div>
+    );
   }
 
   return (

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { sanitizeRedirectPath } from "@/lib/auth/config";
 
@@ -30,6 +30,7 @@ function profilePatchFromUser(user: {
 }
 
 function AuthCallbackInner() {
+  const router = useRouter();
   const params = useSearchParams();
   const [message, setMessage] = React.useState("Completing sign-in…");
   const startedRef = React.useRef(false);
@@ -68,11 +69,7 @@ function AuthCallbackInner() {
       } = await supabase.auth.getSession();
 
       if (data.user) {
-        try {
-          await supabase.from("profiles").upsert(profilePatchFromUser(data.user), { onConflict: "id" });
-        } catch {
-          // profile sync is best-effort; auth must still succeed
-        }
+        void supabase.from("profiles").upsert(profilePatchFromUser(data.user), { onConflict: "id" });
       }
 
       if (!session) {
@@ -81,31 +78,34 @@ function AuthCallbackInner() {
         return;
       }
 
-      window.location.assign(next);
+      router.replace(next);
+      router.refresh();
     }
 
     void completeSignIn().catch(() => {
       setMessage("Sign-in failed. Redirecting…");
       window.location.assign("/login?error=oauth_exchange_failed");
     });
-  }, [params]);
+  }, [params, router]);
 
   return (
-    <main className="mx-auto flex min-h-[50vh] max-w-md items-center justify-center px-6 py-16">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background">
       <p className="text-sm text-muted-foreground">{message}</p>
-    </main>
+    </div>
+  );
+}
+
+function AuthCallbackFallback() {
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background">
+      <p className="text-sm text-muted-foreground">Completing sign-in…</p>
+    </div>
   );
 }
 
 export default function AuthCallbackPage() {
   return (
-    <Suspense
-      fallback={
-        <main className="mx-auto flex min-h-[50vh] max-w-md items-center justify-center px-6 py-16">
-          <p className="text-sm text-muted-foreground">Completing sign-in…</p>
-        </main>
-      }
-    >
+    <Suspense fallback={<AuthCallbackFallback />}>
       <AuthCallbackInner />
     </Suspense>
   );
