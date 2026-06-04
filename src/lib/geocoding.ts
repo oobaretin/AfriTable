@@ -12,6 +12,7 @@ const ZIP_CODE_COORDINATES: Record<string, { lat: number; lng: number }> = {
   "77057": { lat: 29.737, lng: -95.485 },
   "77042": { lat: 29.737, lng: -95.485 },
   "77004": { lat: 29.720, lng: -95.370 },
+  "77067": { lat: 29.955, lng: -95.451 },
   "77011": { lat: 29.740, lng: -95.310 },
   "77036": { lat: 29.720, lng: -95.485 },
   "77074": { lat: 29.690, lng: -95.490 },

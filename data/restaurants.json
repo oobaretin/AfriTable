@@ -1660,6 +1660,8 @@
     "about": "Caribbean & soul; brown stew fish, jerk chicken, patties. Black-owned.",
     "vibe_category": "Authentic Staples",
     "state": "TX",
+    "lat": 29.7265514,
+    "lng": -95.3776957,
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "11:00 AM - 6:00 PM"
