@@ -51,6 +51,11 @@ export async function POST(request: Request, context: { params: { slug: string }
     email: parsed.data.email,
     password: randomPassword,
     email_confirm: true,
+    user_metadata: {
+      full_name: parsed.data.full_name,
+      phone: parsed.data.phone,
+      role: "diner",
+    },
   });
 
   if (createUserError || !created?.user?.id) {
@@ -59,14 +64,17 @@ export async function POST(request: Request, context: { params: { slug: string }
 
   const pendingOwnerId = created.user.id;
 
-  // Create profile (must exist before claimed_by due to FK)
-  const { error: profileError } = await supabaseAdmin.from("profiles").insert({
-    id: pendingOwnerId,
-    full_name: parsed.data.full_name,
-    phone: parsed.data.phone,
-    role: "pending_owner",
-    has_reset_password: false,
-  });
+  // Trigger may insert a diner profile first — promote to pending_owner via service role.
+  const { error: profileError } = await supabaseAdmin.from("profiles").upsert(
+    {
+      id: pendingOwnerId,
+      full_name: parsed.data.full_name,
+      phone: parsed.data.phone,
+      role: "pending_owner",
+      has_reset_password: false,
+    },
+    { onConflict: "id" },
+  );
 
   if (profileError) {
     return NextResponse.redirect(new URL(`/restaurant/${encodeURIComponent(context.params.slug)}/claim?error=profile_create_failed`, request.url));

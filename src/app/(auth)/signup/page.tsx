@@ -12,6 +12,9 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import { GoogleAuthButton } from "@/components/auth/GoogleAuthButton";
+import { AuthErrorBanner } from "@/components/auth/AuthErrorBanner";
+import { buildAuthCallbackUrl } from "@/lib/auth/config";
 
 const signupSchema = z.object({
   fullName: z.string().min(2, "Enter your full name."),
@@ -22,11 +25,10 @@ const signupSchema = z.object({
 
 type SignupValues = z.infer<typeof signupSchema>;
 
-const isGoogleAuthEnabled = process.env.NEXT_PUBLIC_ENABLE_GOOGLE_AUTH === "true";
-
 export default function SignupPage() {
   const router = useRouter();
   const [formError, setFormError] = React.useState<string | null>(null);
+  const [confirmationSent, setConfirmationSent] = React.useState(false);
   const [isSubmitting, startTransition] = React.useTransition();
 
   const form = useForm<SignupValues>({
@@ -37,6 +39,7 @@ export default function SignupPage() {
 
   async function onSubmit(values: SignupValues) {
     setFormError(null);
+    setConfirmationSent(false);
     const supabase = createSupabaseBrowserClient();
 
     const { data, error } = await supabase.auth.signUp({
@@ -48,7 +51,7 @@ export default function SignupPage() {
           phone: values.phone,
           role: "diner",
         },
-        emailRedirectTo: `${window.location.origin}/auth/callback`,
+        emailRedirectTo: buildAuthCallbackUrl(window.location.origin, "/"),
       },
     });
 
@@ -57,8 +60,6 @@ export default function SignupPage() {
       return;
     }
 
-    // Only write to `profiles` if a session exists (email confirmation disabled).
-    // Otherwise auth.uid() is null and RLS will reject writes.
     if (data.session?.user) {
       await supabase
         .from("profiles")
@@ -69,23 +70,12 @@ export default function SignupPage() {
           role: "diner",
         })
         .throwOnError();
+      router.replace("/");
+      router.refresh();
+      return;
     }
 
-    router.replace("/");
-    router.refresh();
-  }
-
-  async function signUpWithGoogle() {
-    setFormError(null);
-    const supabase = createSupabaseBrowserClient();
-    const origin = window.location.origin;
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: `${origin}/auth/callback?next=${encodeURIComponent("/")}`,
-      },
-    });
-    if (error) setFormError(error.message);
+    setConfirmationSent(true);
   }
 
   return (
@@ -96,25 +86,19 @@ export default function SignupPage() {
           <CardDescription>Start booking tables with AfriTable.</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-5">
-          {isGoogleAuthEnabled ? (
-            <Button
-              type="button"
-              variant="outline"
-              onClick={() => startTransition(() => void signUpWithGoogle())}
-              disabled={isSubmitting}
-            >
-              Continue with Google
-            </Button>
-          ) : (
-            <div className="grid gap-2">
-              <Button type="button" variant="outline" disabled>
-                Continue with Google (disabled)
-              </Button>
-              <p className="text-xs text-muted-foreground">
-                Google sign-up will be enabled when you add your domain in Supabase.
-              </p>
-            </div>
-          )}
+          <AuthErrorBanner message={formError} />
+
+          {confirmationSent ? (
+            <p className="rounded-lg border border-border bg-muted/40 p-4 text-sm text-muted-foreground">
+              Check your email to confirm your account, then{" "}
+              <Link href="/login" className="font-medium text-primary underline-offset-4 hover:underline">
+                log in
+              </Link>
+              .
+            </p>
+          ) : null}
+
+          <GoogleAuthButton label="Sign up with Google" onError={setFormError} disabled={isSubmitting} />
 
           <div className="flex items-center gap-3">
             <Separator className="flex-1" />
@@ -147,7 +131,7 @@ export default function SignupPage() {
                   <FormItem>
                     <FormLabel>Phone</FormLabel>
                     <FormControl>
-                      <Input placeholder="e.g. +234..." autoComplete="tel" {...field} />
+                      <Input placeholder="e.g. +1 713 555 0100" autoComplete="tel" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -180,11 +164,7 @@ export default function SignupPage() {
                 )}
               />
 
-              {formError ? (
-                <p className="text-sm font-medium text-destructive">{formError}</p>
-              ) : null}
-
-              <Button type="submit" disabled={isSubmitting}>
+              <Button type="submit" disabled={isSubmitting || confirmationSent}>
                 {isSubmitting ? "Creating account…" : "Create account"}
               </Button>
             </form>
@@ -207,4 +187,3 @@ export default function SignupPage() {
     </div>
   );
 }
-

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -12,6 +13,9 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import { GoogleAuthButton } from "@/components/auth/GoogleAuthButton";
+import { AuthErrorBanner } from "@/components/auth/AuthErrorBanner";
+import { sanitizeRedirectPath } from "@/lib/auth/config";
 
 const loginSchema = z.object({
   email: z.string().email("Enter a valid email."),
@@ -20,12 +24,11 @@ const loginSchema = z.object({
 
 type LoginValues = z.infer<typeof loginSchema>;
 
-const isGoogleAuthEnabled = process.env.NEXT_PUBLIC_ENABLE_GOOGLE_AUTH === "true";
-
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
   const params = useSearchParams();
-  const redirectTo = params.get("redirectTo") ?? "/";
+  const redirectTo = sanitizeRedirectPath(params.get("redirectTo"));
+  const callbackError = params.get("error");
 
   const [formError, setFormError] = React.useState<string | null>(null);
   const [isSubmitting, startTransition] = React.useTransition();
@@ -48,19 +51,6 @@ export default function LoginPage() {
     router.refresh();
   }
 
-  async function signInWithGoogle() {
-    setFormError(null);
-    const supabase = createSupabaseBrowserClient();
-    const origin = window.location.origin;
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: `${origin}/auth/callback?next=${encodeURIComponent(redirectTo)}`,
-      },
-    });
-    if (error) setFormError(error.message);
-  }
-
   return (
     <div className="mx-auto flex min-h-screen max-w-md items-center px-6 py-16">
       <Card className="w-full">
@@ -69,25 +59,9 @@ export default function LoginPage() {
           <CardDescription>Welcome back to AfriTable.</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-5">
-          {isGoogleAuthEnabled ? (
-            <Button
-              type="button"
-              variant="outline"
-              onClick={() => startTransition(() => void signInWithGoogle())}
-              disabled={isSubmitting}
-            >
-              Continue with Google
-            </Button>
-          ) : (
-            <div className="grid gap-2">
-              <Button type="button" variant="outline" disabled>
-                Continue with Google (disabled)
-              </Button>
-              <p className="text-xs text-muted-foreground">
-                Google sign-in will be enabled when you add your domain in Supabase.
-              </p>
-            </div>
-          )}
+          <AuthErrorBanner errorCode={callbackError} message={formError} />
+
+          <GoogleAuthButton redirectTo={redirectTo} onError={setFormError} disabled={isSubmitting} />
 
           <div className="flex items-center gap-3">
             <Separator className="flex-1" />
@@ -118,7 +92,15 @@ export default function LoginPage() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Password</FormLabel>
+                    <div className="flex items-center justify-between gap-2">
+                      <FormLabel>Password</FormLabel>
+                      <Link
+                        href="/forgot-password"
+                        className="text-xs font-medium text-primary underline-offset-4 hover:underline"
+                      >
+                        Forgot password?
+                      </Link>
+                    </div>
                     <FormControl>
                       <Input id="login-password" type="password" autoComplete="current-password" {...field} />
                     </FormControl>
@@ -126,10 +108,6 @@ export default function LoginPage() {
                   </FormItem>
                 )}
               />
-
-              {formError ? (
-                <p className="text-sm font-medium text-destructive">{formError}</p>
-              ) : null}
 
               <Button type="submit" disabled={isSubmitting}>
                 {isSubmitting ? "Signing in…" : "Sign in"}
@@ -149,3 +127,16 @@ export default function LoginPage() {
   );
 }
 
+export default function LoginPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="mx-auto flex min-h-screen max-w-md items-center justify-center px-6 py-16 text-sm text-muted-foreground">
+          Loading…
+        </div>
+      }
+    >
+      <LoginForm />
+    </Suspense>
+  );
+}
