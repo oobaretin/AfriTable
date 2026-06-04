@@ -1944,7 +1944,8 @@
     "rating": 4.5,
     "address": "200 NW 54th St, Miami, FL 33127",
     "phone": "(305) 754-2223",
-    "website": "http://chefcreole.com/",
+    "website": "https://chefcreole.com/",
+    "search_aliases": ["Chef Creole Seasoned", "chefcreole"],
     "neighborhood": "Little Haiti",
     "vibe": "Tropical & Authentic",
     "vibe_tags": [
@@ -1952,17 +1953,115 @@
     ],
     "specialty": "Griot & Pikliz",
     "menu_highlights": [
-      "Griot & Pikliz"
+      "Griot & Pikliz",
+      "Fried Snapper",
+      "Oxtail",
+      "Conch Fritters"
     ],
-    "about": "Authentic Haitian cuisine in Little Haiti, serving traditional dishes like Griot & Pikliz in a tropical, authentic atmosphere.",
+    "about": "Haitian-Creole seafood and Caribbean flavors since 1992—griot, pikliz, fried snapper, oxtail, and generous portions across South Florida.",
     "vibe_category": "Community Favorites",
     "state": "FL",
+    "lat": 25.8248783,
+    "lng": -80.2002656,
     "hours": {
       "mon_wed": "11:00 AM - 9:00 PM",
       "thu_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
     "google_search_url": "https://www.google.com/search?q=Chef%20Creole%2C%20200%20NW%2054th%20St%2C%20Miami%2C%20FL%2033127",
+    "images": [
+      "/restaurant-card-placeholder.svg"
+    ]
+  },
+  {
+    "id": "chef-creole-north-miami-dixie",
+    "name": "Chef Creole (North Miami – Dixie Hwy)",
+    "cuisine": "Haitian",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "13105 W Dixie Hwy, North Miami, FL 33161",
+    "phone": "(305) 893-4246",
+    "website": "https://chefcreole.com/",
+    "search_aliases": ["Chef Creole", "chefcreole"],
+    "neighborhood": "North Miami",
+    "about": "Haitian-Creole seafood and Caribbean flavors—griot, pikliz, fried snapper, and oxtail at Chef Creole's Dixie Highway location.",
+    "menu_highlights": [
+      "Griot & Pikliz",
+      "Fried Snapper",
+      "Oxtail"
+    ],
+    "vibe_category": "Community Favorites",
+    "state": "FL",
+    "lat": 25.8961835,
+    "lng": -80.1815412,
+    "hours": {
+      "mon_sat": "11:00 AM - 7:00 PM"
+    },
+    "google_search_url": "https://www.google.com/search?q=Chef%20Creole%2C%2013105%20W%20Dixie%20Hwy%2C%20North%20Miami%2C%20FL%2033161",
+    "images": [
+      "/restaurant-card-placeholder.svg"
+    ]
+  },
+  {
+    "id": "chef-creole-north-miami-7th-ave",
+    "name": "Chef Creole (North Miami – 7th Ave)",
+    "cuisine": "Haitian",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "12194 NW 7th Ave, North Miami, FL 33168",
+    "phone": "(305) 899-2729",
+    "website": "https://chefcreole.com/",
+    "search_aliases": ["Chef Creole", "chefcreole"],
+    "neighborhood": "North Miami",
+    "about": "Haitian-Creole seafood and Caribbean flavors—griot, pikliz, fried snapper, and oxtail at Chef Creole's NW 7th Avenue location.",
+    "menu_highlights": [
+      "Griot & Pikliz",
+      "Fried Snapper",
+      "Oxtail",
+      "Conch Salad"
+    ],
+    "vibe_category": "Community Favorites",
+    "state": "FL",
+    "lat": 25.8863042,
+    "lng": -80.2108032,
+    "hours": {
+      "mon_wed": "11:00 AM - 9:00 PM",
+      "thu_sat": "11:00 AM - 10:00 PM",
+      "sun": "Closed"
+    },
+    "google_search_url": "https://www.google.com/search?q=Chef%20Creole%2C%2012194%20NW%207th%20Ave%2C%20North%20Miami%2C%20FL%2033168",
+    "images": [
+      "/restaurant-card-placeholder.svg"
+    ]
+  },
+  {
+    "id": "chef-creole-miami-gardens",
+    "name": "Chef Creole (Miami Gardens)",
+    "cuisine": "Haitian",
+    "region": "Caribbean",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "20356 NW 2nd Ave, Miami Gardens, FL 33169",
+    "phone": "(305) 651-4761",
+    "website": "https://chefcreole.com/",
+    "search_aliases": ["Chef Creole", "chefcreole"],
+    "neighborhood": "Miami Gardens",
+    "about": "Haitian-Creole seafood and Caribbean flavors—griot, pikliz, fried snapper, and oxtail at Chef Creole's Miami Gardens location.",
+    "menu_highlights": [
+      "Griot & Pikliz",
+      "Fried Snapper",
+      "Oxtail"
+    ],
+    "vibe_category": "Community Favorites",
+    "state": "FL",
+    "lat": 25.9632473,
+    "lng": -80.2063301,
+    "hours": {
+      "mon_sat": "11:00 AM - 7:00 PM"
+    },
+    "google_search_url": "https://www.google.com/search?q=Chef%20Creole%2C%2020356%20NW%202nd%20Ave%2C%20Miami%20Gardens%2C%20FL%2033169",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
