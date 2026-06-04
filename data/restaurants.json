@@ -1649,21 +1649,22 @@
   },
   {
     "id": "hou-reggae-hut",
-    "name": "Reggae Hut",
+    "name": "Reggae Hut Cafe",
     "cuisine": "Jamaican",
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "4814 Almeda Rd, Houston, TX 77004",
+    "address": "4814 Almeda Road, Houston, TX 77004",
     "phone": "(713) 520-7171",
     "website": "https://reggaehutcafe.com",
     "about": "Caribbean & soul; brown stew fish, jerk chicken, patties. Black-owned.",
     "vibe_category": "Authentic Staples",
     "state": "TX",
     "hours": {
-      "mon_sun": "11:00 AM - 10:00 PM"
+      "mon_sat": "11:00 AM - 9:00 PM",
+      "sun": "11:00 AM - 6:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=Reggae%20Hut%2C%204814%20Almeda%20Rd%2C%20Houston%2C%20TX%2077004",
+    "google_search_url": "https://www.google.com/search?q=Reggae%20Hut%20Cafe%2C%204814%20Almeda%20Road%2C%20Houston%2C%20TX%2077004",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
@@ -1739,27 +1740,6 @@
       "Stewed Beef"
     ],
     "google_search_url": "https://www.google.com/search?q=Caribbean%20Hotpot%20Grill%2C%20954%20FM%201960%20West%2C%20Houston%2C%20TX%2077090",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
-    "id": "hou-reggae-hut-veterans",
-    "name": "Reggae Hut (Veterans Memorial)",
-    "cuisine": "Jamaican",
-    "region": "Caribbean",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "12005 Veterans Memorial Dr, Ste A, Houston, TX 77067",
-    "phone": "(832) 446-3722",
-    "website": "https://reggaehutcafe.com",
-    "about": "Authentic Jamaican cuisine in Houston, serving traditional Caribbean dishes with bold flavors and island vibes.",
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "hours": {
-      "mon_sun": "11:00 AM - 10:00 PM"
-    },
-    "google_search_url": "https://www.google.com/search?q=Reggae%20Hut%20(Veterans%20Memorial)%2C%2012005%20Veterans%20Memorial%20Dr%2C%20Ste%20A%2C%20Houston%2C%20TX%2077067",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
