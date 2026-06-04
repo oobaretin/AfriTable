@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { ChevronDown } from "lucide-react";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import type { Database } from "@db/database.types";
 
@@ -112,8 +113,8 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
   const isSignedIn = Boolean(user);
 
   return (
-    <header className="fixed top-0 w-full border-b bg-white z-50">
-      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6 relative z-50">
+    <header className="fixed top-0 w-full border-b bg-white z-[60]">
+      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6 relative z-[60]">
         <div className="flex items-center gap-6 relative z-50">
           <a href="/" className="flex items-center gap-2 relative z-50 pointer-events-auto cursor-pointer">
             <Image
@@ -140,7 +141,20 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
           </nav>
         </div>
 
-        <div className="flex items-center gap-2 relative z-50">
+        <div className="flex items-center gap-2 relative z-[60]">
+          {isSignedIn ? (
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              className="md:hidden"
+              disabled={signingOut}
+              onClick={() => void handleSignOut()}
+            >
+              {signingOut ? "Signing out…" : "Sign out"}
+            </Button>
+          ) : null}
+
           <Dialog>
             <DialogTrigger asChild>
               <Button variant="outline" className="md:hidden pointer-events-auto cursor-pointer relative z-50" aria-label="Open menu">
@@ -164,7 +178,17 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
                 <div className="h-px bg-border my-2" />
                 {isSignedIn ? (
                   <>
-                    <p className="px-3 text-xs text-muted-foreground">{displayName}</p>
+                    <p className="px-3 py-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">Account</p>
+                    <p className="px-3 pb-1 text-sm font-medium">{displayName}</p>
+                    <button
+                      type="button"
+                      onClick={() => void handleSignOut()}
+                      disabled={signingOut}
+                      className="mx-3 mb-2 rounded-md border border-input bg-background px-3 py-2 text-sm font-medium hover:bg-accent pointer-events-auto cursor-pointer disabled:opacity-50"
+                    >
+                      {signingOut ? "Signing out…" : "Sign out"}
+                    </button>
+                    <div className="h-px bg-border my-1" />
                     {role === "restaurant_owner" ? (
                       <a href="/dashboard" className="block px-3 py-2 text-sm hover:bg-accent rounded-md pointer-events-auto cursor-pointer">
                         Dashboard
@@ -177,14 +201,6 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
                     <a href="/profile" className="block px-3 py-2 text-sm hover:bg-accent rounded-md pointer-events-auto cursor-pointer">
                       Profile
                     </a>
-                    <button
-                      type="button"
-                      onClick={() => void handleSignOut()}
-                      disabled={signingOut}
-                      className="w-full text-left px-3 py-2 text-sm hover:bg-accent rounded-md pointer-events-auto cursor-pointer disabled:opacity-50"
-                    >
-                      {signingOut ? "Signing out…" : "Sign out"}
-                    </button>
                   </>
                 ) : (
                   <>
@@ -200,45 +216,64 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
             </DialogContent>
           </Dialog>
 
-          <div className="hidden items-center gap-2 md:flex relative z-[100]">
+          <div className="hidden items-center gap-2 md:flex relative z-[60]">
             {isSignedIn ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="gap-2 pointer-events-auto cursor-pointer relative z-[100]">
-                    <Avatar className="h-6 w-6">
-                      <AvatarFallback className="text-[10px]">{initials(profile?.full_name ?? displayName)}</AvatarFallback>
-                    </Avatar>
-                    <span className="max-w-[160px] truncate">{displayName}</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-56 pointer-events-auto">
-                  <DropdownMenuLabel>Account</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  {role === "restaurant_owner" ? (
+              <>
+                <DropdownMenu
+                  onOpenChange={(open) => {
+                    // #region agent log
+                    void fetch("/api/auth/event", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        stage: open ? "account_menu_opened" : "account_menu_closed",
+                        hasUser: true,
+                      }),
+                    }).catch(() => {});
+                    // #endregion
+                  }}
+                >
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      className="gap-2 pointer-events-auto cursor-pointer"
+                      aria-label="Open account menu"
+                    >
+                      <Avatar className="h-6 w-6">
+                        <AvatarFallback className="text-[10px]">{initials(profile?.full_name ?? displayName)}</AvatarFallback>
+                      </Avatar>
+                      <span className="max-w-[160px] truncate">{displayName}</span>
+                      <ChevronDown className="h-4 w-4 opacity-60" aria-hidden="true" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end" className="z-[200] w-56 pointer-events-auto">
+                    <DropdownMenuLabel>Account</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    {role === "restaurant_owner" ? (
+                      <DropdownMenuItem asChild>
+                        <a href="/dashboard" className="pointer-events-auto cursor-pointer">Dashboard</a>
+                      </DropdownMenuItem>
+                    ) : (
+                      <DropdownMenuItem asChild>
+                        <a href="/reservations" className="pointer-events-auto cursor-pointer">My Reservations</a>
+                      </DropdownMenuItem>
+                    )}
                     <DropdownMenuItem asChild>
-                      <a href="/dashboard" className="pointer-events-auto cursor-pointer">Dashboard</a>
+                      <a href="/profile" className="pointer-events-auto cursor-pointer">Profile</a>
                     </DropdownMenuItem>
-                  ) : (
-                    <DropdownMenuItem asChild>
-                      <a href="/reservations" className="pointer-events-auto cursor-pointer">My Reservations</a>
-                    </DropdownMenuItem>
-                  )}
-                  <DropdownMenuItem asChild>
-                    <a href="/profile" className="pointer-events-auto cursor-pointer">Profile</a>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem
-                    disabled={signingOut}
-                    className="cursor-pointer"
-                    onSelect={(event) => {
-                      event.preventDefault();
-                      void handleSignOut();
-                    }}
-                  >
-                    {signingOut ? "Signing out…" : "Sign out"}
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  disabled={signingOut}
+                  onClick={() => void handleSignOut()}
+                >
+                  {signingOut ? "Signing out…" : "Sign out"}
+                </Button>
+              </>
             ) : (
               <>
                 <a href="/login" className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground pointer-events-auto cursor-pointer relative z-50">
