@@ -2499,6 +2499,39 @@
     ]
   },
   {
+    "id": "megenagna-mart-and-cafe-austin",
+    "name": "Megenagna Mart & Cafe",
+    "cuisine": "Ethiopian",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.5,
+    "address": "2013 Wells Branch Pkwy, Suite 109, Austin, TX 78728",
+    "phone": "(512) 291-7281",
+    "website": "https://megenagna-cafe.com/",
+    "neighborhood": "Wells Branch",
+    "hours": {
+      "mon_sat": "9:00 AM - 9:00 PM",
+      "sun": "9:00 AM - 9:00 PM"
+    },
+    "about": "Equal parts Ethiopian grocery and restaurant in Wells Branch. Classic dishes like awaze tibs, veggie combo, chechebsa, and doro wot—dine in or take out.",
+    "our_story": "A destination for authentic Ethiopian flavors and market staples in North Austin.",
+    "cultural_roots": "Ethiopian diaspora dining in the United States.",
+    "menu_highlights": [
+      "Awaze tibs",
+      "Veggie combo",
+      "Chechebsa",
+      "Doro wot"
+    ],
+    "vibe_category": "Authentic Staples",
+    "state": "TX",
+    "lat": 30.4341399,
+    "lng": -97.6830705,
+    "google_search_url": "https://www.google.com/search?q=Megenagna%20Mart%20%26%20Cafe%2C%202013%20Wells%20Branch%20Pkwy%2C%20Austin%2C%20TX%2078728",
+    "images": [
+      "/restaurant-card-placeholder.svg"
+    ]
+  },
+  {
     "id": "dfw-afro-002",
     "name": "Cafe Nubia",
     "cuisine": "Global African Fusion",
