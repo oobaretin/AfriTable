@@ -5,10 +5,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import type { User } from "@supabase/supabase-js";
 import { Button } from "@/components/ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { ChevronDown } from "lucide-react";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import type { Database } from "@db/database.types";
 
@@ -83,12 +81,14 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = supabase.auth.onAuthStateChange((event, session) => {
       const sessionUser = session?.user ?? null;
       setUser(sessionUser);
       if (sessionUser) void syncProfile(sessionUser);
       else setProfile(null);
-      router.refresh();
+      if (event === "SIGNED_IN" || event === "SIGNED_OUT" || event === "USER_UPDATED") {
+        router.refresh();
+      }
     });
 
     return () => subscription.unsubscribe();
@@ -111,6 +111,10 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
   const role = profile?.role ?? "diner";
   const displayName = displayNameFrom(user, profile);
   const isSignedIn = Boolean(user);
+  const accountHref = role === "restaurant_owner" ? "/dashboard" : "/reservations";
+  const accountLabel = role === "restaurant_owner" ? "Dashboard" : "My Reservations";
+  const navLinkClass =
+    "inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground pointer-events-auto cursor-pointer";
 
   return (
     <header className="fixed top-0 w-full border-b bg-white z-[60]">
@@ -219,51 +223,36 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
           <div className="hidden items-center gap-2 md:flex relative z-[60]">
             {isSignedIn ? (
               <>
-                <DropdownMenu
-                  onOpenChange={(open) => {
+                <a
+                  href="/profile"
+                  className="inline-flex items-center gap-2 rounded-md border border-input bg-background px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground pointer-events-auto cursor-pointer"
+                  aria-label="Go to profile"
+                  onClick={() => {
                     // #region agent log
-                    void fetch("/api/auth/event", {
+                    fetch("http://127.0.0.1:7668/ingest/f4aec2f7-622b-445a-95fa-99041b9558b2", {
                       method: "POST",
-                      headers: { "Content-Type": "application/json" },
+                      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "379971" },
                       body: JSON.stringify({
-                        stage: open ? "account_menu_opened" : "account_menu_closed",
-                        hasUser: true,
+                        sessionId: "379971",
+                        runId: "nav-profile-link",
+                        hypothesisId: "H1",
+                        location: "NavbarClient:profile-link-click",
+                        message: "profile link clicked",
+                        data: { role, isSignedIn },
+                        timestamp: Date.now(),
                       }),
                     }).catch(() => {});
                     // #endregion
                   }}
                 >
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      className="gap-2 pointer-events-auto cursor-pointer"
-                      aria-label="Open account menu"
-                    >
-                      <Avatar className="h-6 w-6">
-                        <AvatarFallback className="text-[10px]">{initials(profile?.full_name ?? displayName)}</AvatarFallback>
-                      </Avatar>
-                      <span className="max-w-[160px] truncate">{displayName}</span>
-                      <ChevronDown className="h-4 w-4 opacity-60" aria-hidden="true" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="z-[200] w-56 pointer-events-auto">
-                    <DropdownMenuLabel>Account</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    {role === "restaurant_owner" ? (
-                      <DropdownMenuItem asChild>
-                        <a href="/dashboard" className="pointer-events-auto cursor-pointer">Dashboard</a>
-                      </DropdownMenuItem>
-                    ) : (
-                      <DropdownMenuItem asChild>
-                        <a href="/reservations" className="pointer-events-auto cursor-pointer">My Reservations</a>
-                      </DropdownMenuItem>
-                    )}
-                    <DropdownMenuItem asChild>
-                      <a href="/profile" className="pointer-events-auto cursor-pointer">Profile</a>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                  <Avatar className="h-6 w-6">
+                    <AvatarFallback className="text-[10px]">{initials(profile?.full_name ?? displayName)}</AvatarFallback>
+                  </Avatar>
+                  <span className="max-w-[160px] truncate">{displayName}</span>
+                </a>
+                <a href={accountHref} className={navLinkClass}>
+                  {accountLabel}
+                </a>
                 <Button
                   type="button"
                   variant="outline"
