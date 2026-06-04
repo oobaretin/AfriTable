@@ -85,21 +85,21 @@ export default function Footer() {
               <div className="text-xs font-semibold uppercase tracking-wide text-slate-300">For restaurants</div>
               <div className="mt-2 grid gap-1.5 leading-6">
                 <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/join-as-restaurant">
-                  Apply to partner
-                </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/restaurant-signup">
-                  Create owner account
+                  List on AfriTable
                 </a>
                 <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/login?redirectTo=/dashboard">
-                  Owner login
-                </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/dashboard">
-                  Owner dashboard
+                  Owner sign in
                 </a>
                 <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/about">
-                  Why AfriTable
+                  Why partner with us
                 </a>
               </div>
+              <p className="mt-3 text-xs leading-relaxed text-slate-500">
+                Have an invite?{" "}
+                <a className="text-slate-400 underline-offset-4 hover:text-white hover:underline" href="/restaurant-signup">
+                  Create owner account
+                </a>
+              </p>
             </div>
 
             <div className="text-sm sm:col-span-2 md:col-span-1">
