@@ -196,6 +196,40 @@ export function compactSearchText(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]/g, "");
 }
 
+const SEARCH_STOP_WORDS = new Set([
+  "restaurant",
+  "restaurants",
+  "cafe",
+  "kitchen",
+  "inc",
+  "llc",
+  "the",
+  "and",
+]);
+
+function significantSearchTokens(value: string): string[] {
+  return value
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((t) => t.length >= 2 && !SEARCH_STOP_WORDS.has(t));
+}
+
+/** True when query and text share enough tokens (handles long queries like "Chef Creole Seasoned Restaurant"). */
+function tokensMatchQuery(query: string, text: string): boolean {
+  const q = query.toLowerCase();
+  const t = text.toLowerCase();
+  const textTokens = significantSearchTokens(text);
+  const queryTokens = significantSearchTokens(query);
+
+  if (textTokens.length > 0 && textTokens.every((token) => q.includes(token))) {
+    return true;
+  }
+  if (queryTokens.length > 0 && queryTokens.every((token) => t.includes(token))) {
+    return true;
+  }
+  return false;
+}
+
 type NameSearchable = {
   name?: string;
   cuisine?: string;
@@ -227,7 +261,11 @@ export function matchesNameQuery(restaurant: NameSearchable, nameQuery: string):
 
   return haystacks.some((text) => {
     if (text.includes(q)) return true;
+    if (tokensMatchQuery(q, text)) return true;
     if (qCompact.length >= 3 && compactSearchText(text).includes(qCompact)) return true;
+    if (qCompact.length >= 3 && compactSearchText(text).length >= 3 && qCompact.includes(compactSearchText(text))) {
+      return true;
+    }
     return false;
   });
 }
