@@ -52,31 +52,6 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
         setUser(sessionUser);
         void syncProfile(sessionUser);
       }
-
-      // #region agent log
-      void fetch("/api/auth/session", { cache: "no-store" })
-        .then((res) => res.json())
-        .then((probe) => {
-          fetch("http://127.0.0.1:7668/ingest/f4aec2f7-622b-445a-95fa-99041b9558b2", {
-            method: "POST",
-            headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "379971" },
-            body: JSON.stringify({
-              sessionId: "379971",
-              runId: "auth-client-callback-v4",
-              hypothesisId: "H3",
-              location: "NavbarClient:session-sync",
-              message: "client session sync",
-              data: {
-                clientHasUser: Boolean(sessionUser),
-                serverAuthenticated: Boolean(probe?.authenticated),
-                authCookieCount: probe?.authCookieCount ?? 0,
-              },
-              timestamp: Date.now(),
-            }),
-          }).catch(() => {});
-        })
-        .catch(() => {});
-      // #endregion
     });
 
     const {
@@ -227,23 +202,6 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
                   href="/profile"
                   className="inline-flex items-center gap-2 rounded-md border border-input bg-background px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground pointer-events-auto cursor-pointer"
                   aria-label="Go to profile"
-                  onClick={() => {
-                    // #region agent log
-                    fetch("http://127.0.0.1:7668/ingest/f4aec2f7-622b-445a-95fa-99041b9558b2", {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "379971" },
-                      body: JSON.stringify({
-                        sessionId: "379971",
-                        runId: "nav-profile-link",
-                        hypothesisId: "H1",
-                        location: "NavbarClient:profile-link-click",
-                        message: "profile link clicked",
-                        data: { role, isSignedIn },
-                        timestamp: Date.now(),
-                      }),
-                    }).catch(() => {});
-                    // #endregion
-                  }}
                 >
                   <Avatar className="h-6 w-6">
                     <AvatarFallback className="text-[10px]">{initials(profile?.full_name ?? displayName)}</AvatarFallback>
