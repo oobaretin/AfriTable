@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { HeroSearch } from "@/components/restaurant/HeroSearch";
 import { Reveal } from "@/components/layout/Reveal";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
+import { pulseCityToKey } from "@/lib/trending-cities";
 import { LocalPulse } from "@/components/home/LocalPulse";
 import { HomeSearchProvider } from "@/components/home/HomeSearchProvider";
 import { HeritageSection } from "@/components/home/HeritageSection";
@@ -33,6 +34,9 @@ function loadHomeConfig() {
 export default async function MainHomePage() {
   const restaurantsFromJSON = loadRestaurantsFromJSON();
   const homeConfig = loadHomeConfig();
+  const featuredCityKeys = (homeConfig?.localPulse?.messages ?? [])
+    .map((message: { city?: string }) => (message.city ? pulseCityToKey(message.city) : null))
+    .filter((key: string | null): key is string => Boolean(key));
 
   return (
     <main>
@@ -92,7 +96,7 @@ export default async function MainHomePage() {
         </Reveal>
 
         <Reveal className="mt-6">
-          <TrendingCitiesClient restaurants={restaurantsFromJSON} />
+          <TrendingCitiesClient restaurants={restaurantsFromJSON} featuredCityKeys={featuredCityKeys} />
         </Reveal>
         <Reveal className="mt-6 flex justify-center">
           <a

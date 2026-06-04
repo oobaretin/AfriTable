@@ -9,6 +9,7 @@ import {
   buildRestaurantsDirectoryHref,
   filtersFromCityLabel,
 } from "@/lib/restaurant-filter-url";
+import { HOMEPAGE_CITY_LIMIT } from "@/lib/trending-cities";
 
 type Restaurant = {
   id: string;
@@ -28,11 +29,9 @@ type CityGroup = {
 
 // Extract city from address string
 function extractCity(address: string): string {
-  // Try to parse format: "6991 S Texas 6, Houston, TX 77083"
   const parts = address.split(",").map((s) => s.trim());
   if (parts.length >= 2) {
     const cityState = parts[1];
-    // Extract just the city name (before state)
     const cityMatch = cityState.match(/^([^,]+)/);
     return cityMatch ? cityMatch[1].trim() : cityState;
   }
@@ -42,7 +41,7 @@ function extractCity(address: string): string {
 // Normalize city name for grouping
 function normalizeCity(city: string): { key: string; display: string } {
   const lower = city.toLowerCase();
-  
+
   if (lower.includes("washington") || lower.includes("dc") || lower.includes("takoma park") || lower.includes("bethesda") || lower.includes("falls church")) {
     return { key: "washington-dc", display: "Washington, DC" };
   }
@@ -119,7 +118,6 @@ function normalizeCity(city: string): { key: string; display: string } {
   return { key: city.toLowerCase().replace(/\s+/g, "-"), display: city };
 }
 
-// Parse restaurants data and group by city
 function groupRestaurantsByCity(restaurants: Restaurant[]): CityGroup[] {
   const cityMap = new Map<string, Restaurant[]>();
 
@@ -128,48 +126,66 @@ function groupRestaurantsByCity(restaurants: Restaurant[]): CityGroup[] {
     if (!city) continue;
 
     const normalized = normalizeCity(city);
-    
+
     if (!cityMap.has(normalized.key)) {
       cityMap.set(normalized.key, []);
     }
     cityMap.get(normalized.key)!.push(restaurant);
   }
 
-  // Convert to array and sort by restaurant count
   return Array.from(cityMap.entries())
-    .map(([cityKey, restaurants]) => {
-      const firstCity = extractCity(restaurants[0]?.address || "");
+    .map(([cityKey, cityRestaurants]) => {
+      const firstCity = extractCity(cityRestaurants[0]?.address || "");
       const normalized = normalizeCity(firstCity);
       return {
         city: cityKey,
         displayName: normalized.display,
-        restaurants,
+        restaurants: cityRestaurants,
       };
     })
     .filter((group) => group.restaurants.length > 0)
     .sort((a, b) => b.restaurants.length - a.restaurants.length);
 }
 
+function orderCityGroupsForHomepage(groups: CityGroup[], featuredCityKeys: string[]): CityGroup[] {
+  const seen = new Set<string>();
+  const featured: CityGroup[] = [];
+
+  for (const key of featuredCityKeys) {
+    const group = groups.find((g) => g.city === key);
+    if (group && !seen.has(group.city)) {
+      featured.push(group);
+      seen.add(group.city);
+    }
+  }
+
+  const remainder = groups.filter((g) => !seen.has(g.city));
+  return [...featured, ...remainder].slice(0, HOMEPAGE_CITY_LIMIT);
+}
+
 type TrendingCitiesClientProps = {
   restaurants: Restaurant[];
+  featuredCityKeys?: string[];
 };
 
-export function TrendingCitiesClient({ restaurants }: TrendingCitiesClientProps) {
-  const cityGroups = React.useMemo(() => groupRestaurantsByCity(restaurants), [restaurants]);
-
-  // Top metros by real catalog coverage (nationwide — no hard-coded "only 4 cities" cap)
-  const trendingCities = cityGroups.slice(0, 8);
+export function TrendingCitiesClient({ restaurants, featuredCityKeys = [] }: TrendingCitiesClientProps) {
+  const trendingCities = React.useMemo(() => {
+    const cityGroups = groupRestaurantsByCity(restaurants);
+    return orderCityGroupsForHomepage(cityGroups, featuredCityKeys);
+  }, [restaurants, featuredCityKeys]);
 
   if (trendingCities.length === 0) {
     return null;
   }
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {trendingCities.map((cityGroup) => {
-        // Get unique cuisines (up to 3) and all price ranges
         const cuisines = Array.from(new Set(cityGroup.restaurants.map((r) => r.cuisine))).slice(0, 3);
+        const cuisineCount = new Set(cityGroup.restaurants.map((r) => r.cuisine)).size;
         const priceRanges = Array.from(new Set(cityGroup.restaurants.map((r) => r.price_range))).sort();
+        const listingCount = cityGroup.restaurants.length;
+        const extraCuisines = Math.max(0, cuisineCount - cuisines.length);
 
         return (
           <Reveal key={cityGroup.city}>
@@ -181,7 +197,8 @@ export function TrendingCitiesClient({ restaurants }: TrendingCitiesClientProps)
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg">{cityGroup.displayName}</CardTitle>
                   <CardDescription>
-                    {cityGroup.restaurants.length} {cityGroup.restaurants.length === 1 ? "restaurant" : "restaurants"}
+                    {listingCount} {listingCount === 1 ? "listing" : "listings"}
+                    {cuisineCount > 0 ? ` · ${cuisineCount} ${cuisineCount === 1 ? "cuisine" : "cuisines"}` : ""}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
@@ -191,11 +208,11 @@ export function TrendingCitiesClient({ restaurants }: TrendingCitiesClientProps)
                         {cuisine}
                       </Badge>
                     ))}
-                    {cityGroup.restaurants.length > 3 && (
+                    {extraCuisines > 0 ? (
                       <Badge variant="secondary" className="text-xs">
-                        +{cityGroup.restaurants.length - 3} more
+                        +{extraCuisines} cuisines
                       </Badge>
-                    )}
+                    ) : null}
                   </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <span>Price range:</span>

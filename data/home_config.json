@@ -9,14 +9,16 @@
       {
         "type": "trending",
         "emoji": "🔥",
-        "text": "Spotlight: Houston’s Omalicha Kitchen is a favorite for weekend tables on AfriTable.",
-        "city": "Houston"
+        "text": "Spotlight: Omalicha Kitchen — Igbo and seafood staples, now listed in Houston.",
+        "city": "Houston",
+        "restaurantId": "omalicha-kitchen"
       },
       {
         "type": "new",
         "emoji": "🆕",
-        "text": "New Addition: Welcome Dukunoo Jamaican Kitchen to the AfriTable family in Miami.",
-        "city": "Miami"
+        "text": "New on AfriTable: Dukunoo Jamaican Kitchen in Wynwood, Miami.",
+        "city": "Miami",
+        "restaurantId": "dukunoo-miami"
       }
     ]
   },
