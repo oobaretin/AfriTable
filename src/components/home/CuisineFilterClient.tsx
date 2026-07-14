@@ -48,30 +48,30 @@ export function CuisineFilterClient({ restaurants }: CuisineFilterClientProps) {
     <>
       <CuisineFilter selectedCuisines={selectedCuisines} onCuisineToggle={toggleCuisine} />
       <div className="mt-6 flex gap-4 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        {(filteredRestaurants.length ? filteredRestaurants : Array.from({ length: 6 })).map((r: any, idx: number) => (
-          <div key={r?.id ?? idx} className="w-[280px] shrink-0 md:w-[320px]">
-            {r ? (
-              <RestaurantCard restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
-            ) : (
-              <div className="h-full rounded-lg border bg-card p-6">
-                <div className="text-base font-semibold">Coming soon</div>
-                <div className="mt-1 text-sm text-muted-foreground">We&apos;re onboarding restaurants now.</div>
-              </div>
-            )}
+        {filteredRestaurants.map((r) => (
+          <div key={r.id} className="w-[280px] shrink-0 md:w-[320px]">
+            <RestaurantCard restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
           </div>
         ))}
       </div>
       {filteredRestaurants.length === 0 && selectedCuisines.length > 0 && (
-        <div className="mt-6 text-center text-sm text-muted-foreground">
-          No restaurants found for the selected cuisines. Try selecting different cuisines or{" "}
-          <button
-            type="button"
-            onClick={() => setSelectedCuisines([])}
-            className="underline underline-offset-4 hover:text-foreground"
-          >
-            clear filters
-          </button>
-          .
+        <div className="mt-6 rounded-xl border border-dashed bg-muted/20 px-6 py-10 text-center">
+          <p className="text-base font-medium text-foreground">No matches for those cuisines</p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Try a different combination,{" "}
+            <button
+              type="button"
+              onClick={() => setSelectedCuisines([])}
+              className="underline underline-offset-4 hover:text-foreground"
+            >
+              clear filters
+            </button>
+            , or browse the{" "}
+            <a href="/restaurants" className="underline underline-offset-4 hover:text-foreground">
+              full directory
+            </a>
+            .
+          </p>
         </div>
       )}
     </>
