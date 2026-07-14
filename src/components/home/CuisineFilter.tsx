@@ -13,6 +13,8 @@ const CUISINES = [
   { id: "Ethiopian", label: "Ethiopian" },
   { id: "Jamaican", label: "Jamaican" },
   { id: "Haitian", label: "Haitian" },
+  { id: "Ghanaian", label: "Ghanaian" },
+  { id: "Senegalese", label: "Senegalese" },
 ];
 
 export function CuisineFilter({ selectedCuisines, onCuisineToggle }: CuisineFilterProps) {

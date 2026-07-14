@@ -9,6 +9,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { mailto, SITE_CONTACT } from "@/lib/site-contact";
 
 type ClaimedRestaurant = {
   id: string;
@@ -162,9 +163,14 @@ export default async function OwnerOnboardingPage() {
             ) : (
               <>
                 <div>No claimed restaurant found for this account yet.</div>
-                <Button asChild variant="outline">
-                  <Link href="/admin/submissions">Contact support/admin</Link>
-                </Button>
+                <div className="flex flex-wrap gap-2">
+                  <Button asChild variant="outline">
+                    <a href={mailto(SITE_CONTACT.support)}>Email support</a>
+                  </Button>
+                  <Button asChild variant="outline">
+                    <Link href="/join-as-restaurant">Apply to partner</Link>
+                  </Button>
+                </div>
               </>
             )}
           </CardContent>

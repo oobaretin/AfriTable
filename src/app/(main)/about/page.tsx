@@ -1,8 +1,12 @@
 import Image from "next/image";
 import { ContactAndMap } from "@/components/home/ContactAndMap";
 import { MeetTheFounderSection } from "@/components/home/MeetTheFounderSection";
+import { getCatalogStats } from "@/lib/catalog-stats";
+import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 
 export default function AboutPage() {
+  const { restaurantCount, metroCount } = getCatalogStats(loadRestaurantsFromJSON());
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -42,14 +46,15 @@ export default function AboutPage() {
             
             <div className="grid grid-cols-2 gap-6 border-t border-slate-100 pt-8">
               <div>
-                <h4 className="text-orange-600 font-black text-3xl">20+</h4>
-                <p className="text-sm text-slate-500 font-bold uppercase">Cities Covered</p>
+                <h4 className="text-orange-600 font-black text-3xl">{metroCount}+</h4>
+                <p className="text-sm text-slate-500 font-bold uppercase">Metros in our directory</p>
               </div>
               <div>
-                <h4 className="text-orange-600 font-black text-3xl">500+</h4>
-                <p className="text-sm text-slate-500 font-bold uppercase">Verified Tables</p>
+                <h4 className="text-orange-600 font-black text-3xl">{restaurantCount}+</h4>
+                <p className="text-sm text-slate-500 font-bold uppercase">Vetted listings</p>
               </div>
             </div>
+            <p className="mt-4 text-xs text-slate-400">Counts reflect our live catalog and grow as we onboard partners.</p>
           </div>
         </div>
       </section>

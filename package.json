@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "dev:local": "node scripts/run-dev.mjs",
     "dev:clean": "node scripts/dev-safe.mjs --port 3000",
     "dev:safe": "node scripts/dev-safe.mjs --port 3000",
     "seed:restaurants": "node scripts/seed-restaurants.mjs",
@@ -38,6 +39,9 @@
     "enrich:restaurants": "tsx scripts/enrich-restaurant-data.ts",
     "enrich:restaurants:fast": "tsx scripts/enrich-restaurant-data.ts --skip-websites",
     "backfill:google-search": "tsx scripts/backfill-google-search-links.ts",
+    "backfill:images": "tsx scripts/backfill-catalog-images-serpapi.ts",
+    "backfill:images:py": "python3 scripts/backfill-catalog-images-serpapi.py",
+    "sync:images": "python3 scripts/sync-catalog-images-to-supabase.py",
     "discover:websites": "tsx scripts/discover-restaurant-websites.ts --needs-website",
     "cleanup:websites": "tsx scripts/cleanup-invalid-websites.ts",
     "sync:websites": "node scripts/sync-catalog-websites-to-supabase.mjs",

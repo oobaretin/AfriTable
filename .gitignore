@@ -31,6 +31,7 @@ data/import-dry-run.json
 data/consolidate-report.json
 data/missing-catalog-import.json
 data/quality-audit.json
+data/backfill-images-report.json
 data/serpapi-scrape-plan.json
 
 # scraped data (never commit)

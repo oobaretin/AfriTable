@@ -2,7 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -14,7 +15,7 @@ import { Separator } from "@/components/ui/separator";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { GoogleAuthButton } from "@/components/auth/GoogleAuthButton";
 import { AuthErrorBanner } from "@/components/auth/AuthErrorBanner";
-import { buildAuthCallbackUrl } from "@/lib/auth/config";
+import { buildAuthCallbackUrl, sanitizeRedirectPath } from "@/lib/auth/config";
 
 const signupSchema = z.object({
   fullName: z.string().min(2, "Enter your full name."),
@@ -25,8 +26,16 @@ const signupSchema = z.object({
 
 type SignupValues = z.infer<typeof signupSchema>;
 
-export default function SignupPage() {
+function authLink(path: string, redirectTo: string): string {
+  if (redirectTo === "/") return path;
+  return `${path}?redirectTo=${encodeURIComponent(redirectTo)}`;
+}
+
+function SignupForm() {
   const router = useRouter();
+  const params = useSearchParams();
+  const redirectTo = sanitizeRedirectPath(params.get("redirectTo"));
+
   const [formError, setFormError] = React.useState<string | null>(null);
   const [confirmationSent, setConfirmationSent] = React.useState(false);
   const [isSubmitting, startTransition] = React.useTransition();
@@ -37,12 +46,12 @@ export default function SignupPage() {
     void supabase.auth.getSession().then(({ data: { session } }) => {
       if (session?.user) {
         setAuthState("redirecting");
-        router.replace("/");
+        router.replace(redirectTo);
       } else {
         setAuthState("guest");
       }
     });
-  }, [router]);
+  }, [router, redirectTo]);
 
   const form = useForm<SignupValues>({
     resolver: zodResolver(signupSchema),
@@ -64,7 +73,7 @@ export default function SignupPage() {
           phone: values.phone,
           role: "diner",
         },
-        emailRedirectTo: buildAuthCallbackUrl(window.location.origin, "/"),
+        emailRedirectTo: buildAuthCallbackUrl(window.location.origin, redirectTo),
       },
     });
 
@@ -84,7 +93,7 @@ export default function SignupPage() {
         })
         .throwOnError();
       setAuthState("redirecting");
-      router.replace("/");
+      router.replace(redirectTo);
       router.refresh();
       return;
     }
@@ -117,14 +126,22 @@ export default function SignupPage() {
           {confirmationSent ? (
             <p className="rounded-lg border border-border bg-muted/40 p-4 text-sm text-muted-foreground">
               Check your email to confirm your account, then{" "}
-              <Link href="/login" className="font-medium text-primary underline-offset-4 hover:underline">
+              <Link
+                href={authLink("/login", redirectTo)}
+                className="font-medium text-primary underline-offset-4 hover:underline"
+              >
                 log in
               </Link>
               .
             </p>
           ) : null}
 
-          <GoogleAuthButton label="Sign up with Google" onError={setFormError} disabled={isSubmitting} />
+          <GoogleAuthButton
+            label="Sign up with Google"
+            redirectTo={redirectTo}
+            onError={setFormError}
+            disabled={isSubmitting}
+          />
 
           <div className="flex items-center gap-3">
             <Separator className="flex-1" />
@@ -198,18 +215,32 @@ export default function SignupPage() {
 
           <p className="text-sm text-muted-foreground">
             Already have an account?{" "}
-            <Link className="font-medium underline underline-offset-4" href="/login">
+            <Link className="font-medium underline underline-offset-4" href={authLink("/login", redirectTo)}>
               Log in
             </Link>
           </p>
           <p className="text-xs text-muted-foreground">
             Want to list your restaurant?{" "}
-            <Link className="font-medium underline underline-offset-4" href="/restaurant-signup">
-              Restaurant owner onboarding
+            <Link className="font-medium underline underline-offset-4" href="/join-as-restaurant">
+              Apply to partner with AfriTable
             </Link>
           </p>
         </CardContent>
       </Card>
     </div>
+  );
+}
+
+export default function SignupPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="mx-auto flex min-h-screen max-w-md items-center justify-center px-6 py-16 text-sm text-muted-foreground">
+          Loading…
+        </div>
+      }
+    >
+      <SignupForm />
+    </Suspense>
   );
 }

@@ -12,6 +12,8 @@ import { CommunityFeed } from "@/components/home/CommunityFeed";
 import { PartnerWithUsSection } from "@/components/home/PartnerWithUsSection";
 import { Leaderboard } from "@/components/home/Leaderboard";
 import { HomepageRestaurantSimple } from "@/components/home/HomepageRestaurantSimple";
+import { CuisineFilterClient } from "@/components/home/CuisineFilterClient";
+import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
@@ -37,6 +39,25 @@ export default async function MainHomePage() {
   const featuredCityKeys = (homeConfig?.localPulse?.messages ?? [])
     .map((message: { city?: string }) => (message.city ? pulseCityToKey(message.city) : null))
     .filter((key: string | null): key is string => Boolean(key));
+
+  const cuisineBrowseRestaurants = [...restaurantsFromJSON]
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+    .slice(0, 12)
+    .map((restaurant) => {
+      const detail = transformJSONRestaurantToDetail(restaurant);
+      return {
+        id: detail.id,
+        name: detail.name,
+        slug: detail.slug,
+        cuisine_types: detail.cuisine_types,
+        price_range: detail.price_range,
+        address: detail.address,
+        images: detail.images,
+        created_at: new Date().toISOString(),
+        avg_rating: detail.avg_rating,
+        review_count: detail.review_count,
+      };
+    });
 
   return (
     <main>
@@ -82,6 +103,31 @@ export default async function MainHomePage() {
       <Separator />
 
       {/* Browse by cuisine */}
+      <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
+        <Reveal>
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Browse by cuisine</h2>
+            <p className="mt-2 text-muted-foreground">
+              Filter top-rated listings across the diaspora—Nigerian, Ethiopian, Jamaican, and more.
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal className="mt-6">
+          <CuisineFilterClient restaurants={cuisineBrowseRestaurants} />
+        </Reveal>
+
+        <Reveal className="mt-6 flex justify-center">
+          <a
+            href="/restaurants"
+            className="text-sm font-semibold text-orange-700 underline-offset-4 hover:underline dark:text-orange-400"
+          >
+            Browse all cuisines →
+          </a>
+        </Reveal>
+      </section>
+
+      <Separator />
 
       {/* Trending cities */}
       <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-20">

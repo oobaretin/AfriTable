@@ -27,6 +27,7 @@ const nextConfig = {
     // Allow common remote image hosts; tighten this list for production as needed.
     remotePatterns: [
       { protocol: "https", hostname: "**.supabase.co" },
+      { protocol: "https", hostname: "**.googleusercontent.com" },
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "source.unsplash.com" },
       { protocol: "https", hostname: "via.placeholder.com" },

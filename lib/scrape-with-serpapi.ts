@@ -255,8 +255,23 @@ function convertToAfriTableFormat(basic: any, details: any) {
   // Parse hours
   const hours = parseHours(details?.hours);
 
-  // Get photos
-  const photos = details?.photos?.slice(0, 10).map((p: any) => p.thumbnail) || [];
+  // Get photos from place_results.images (SerpAPI place lookup shape)
+  const placeImages = details?.place_results?.images ?? details?.images;
+  const photos: string[] = [];
+  if (details?.place_results?.thumbnail) photos.push(details.place_results.thumbnail);
+  for (const img of placeImages ?? []) {
+    if (img?.title === "All") continue;
+    const url = img?.thumbnail || img?.image;
+    if (url && !photos.includes(url)) photos.push(url);
+    if (photos.length >= 10) break;
+  }
+  if (photos.length === 0) {
+    for (const p of details?.photos ?? []) {
+      const url = p?.thumbnail || p?.image;
+      if (url && !photos.includes(url)) photos.push(url);
+      if (photos.length >= 10) break;
+    }
+  }
 
   return {
     name: basic.title,

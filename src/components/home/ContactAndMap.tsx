@@ -8,7 +8,21 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { mailto, SITE_CONTACT } from "@/lib/site-contact";
 
-const cities = ["Houston", "Atlanta", "New York", "Los Angeles", "Dallas", "DC", "Chicago", "Miami", "Philadelphia", "Boston"];
+const cities = [
+  "Houston",
+  "Atlanta",
+  "New York",
+  "Los Angeles",
+  "Dallas",
+  "DC",
+  "Chicago",
+  "Miami",
+  "Philadelphia",
+  "Boston",
+  "Seattle",
+  "Austin",
+  "San Francisco",
+];
 
 const notifySchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -45,7 +59,7 @@ export function ContactAndMap() {
         toast.error(data?.message || "Could not subscribe. Please try again.");
         return;
       }
-      toast.success(`We'll notify you when we launch in ${parsed.data.city}!`);
+      toast.success(`You're on the list—we'll email you when we add more listings in ${parsed.data.city}.`);
       setEmail("");
       setSelectedCity("");
     } catch {
@@ -58,13 +72,13 @@ export function ContactAndMap() {
   return (
     <section className="overflow-visible bg-white px-6 py-24" aria-label="Contact and city updates">
       <div className="mx-auto max-w-3xl">
-        <h2 className="mb-4 text-sm font-black uppercase tracking-[0.3em] text-brand-forest">Launching Soon</h2>
+        <h2 className="mb-4 text-sm font-black uppercase tracking-[0.3em] text-brand-forest">Growing nationwide</h2>
         <h3 className="mb-8 text-5xl font-black uppercase tracking-tighter text-brand-dark">
           Connecting the <br /> <span className="text-brand-bronze">Diaspora</span>
         </h3>
 
         <p className="mb-10 max-w-lg text-lg leading-relaxed text-slate-600">
-          AfriTable is a nationwide directory—pick your metro below for launch updates where you dine, or reach us directly.
+          AfriTable is live with a nationwide directory—pick your metro for new-listing updates, or reach us directly.
         </p>
 
         {/* City Tag Cloud */}
@@ -89,7 +103,7 @@ export function ContactAndMap() {
         {/* Contact / Notify Me Form */}
         <div className="mb-12 rounded-2xl border border-brand-bronze/10 bg-brand-paper p-6">
           <h4 id="contact-form-heading" className="mb-4 text-sm font-black uppercase tracking-tight text-brand-dark">
-            Notify Me When We Launch
+            Get updates in your city
           </h4>
           <form onSubmit={handleNotifyMe} className="space-y-3" aria-labelledby="contact-form-heading">
             <input type="hidden" name="city" value={selectedCity} aria-hidden readOnly />
@@ -130,7 +144,7 @@ export function ContactAndMap() {
                 {loading ? "..." : "Notify Me"}
               </Button>
             </div>
-            <p className="text-xs text-slate-500">We&apos;ll send you an email when AfriTable launches in your city.</p>
+            <p className="text-xs text-slate-500">We&apos;ll email you when we add new vetted listings in your metro.</p>
           </form>
         </div>
 

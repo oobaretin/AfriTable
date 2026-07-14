@@ -24,6 +24,11 @@ const loginSchema = z.object({
 
 type LoginValues = z.infer<typeof loginSchema>;
 
+function authLink(path: string, redirectTo: string): string {
+  if (redirectTo === "/") return path;
+  return `${path}?redirectTo=${encodeURIComponent(redirectTo)}`;
+}
+
 function LoginForm() {
   const router = useRouter();
   const params = useSearchParams();
@@ -143,7 +148,7 @@ function LoginForm() {
 
           <p className="text-sm text-muted-foreground">
             Don&apos;t have an account?{" "}
-            <Link className="font-medium underline underline-offset-4" href="/signup">
+            <Link className="font-medium underline underline-offset-4" href={authLink("/signup", redirectTo)}>
               Sign up
             </Link>
           </p>
