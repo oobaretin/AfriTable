@@ -249,15 +249,18 @@ export default async function AdminDashboardPage() {
             </div>
           </Link>
 
-          <div className="rounded-lg border p-4 opacity-50">
+          <Link
+            href="/admin/catalog-qa"
+            className="group rounded-lg border p-4 transition-colors hover:bg-muted"
+          >
             <div className="flex items-center gap-3">
-              <UtensilsCrossed className="h-5 w-5 text-muted-foreground" />
+              <UtensilsCrossed className="h-5 w-5 text-muted-foreground group-hover:text-foreground" />
               <div>
-                <div className="font-medium">All Restaurants</div>
-                <div className="text-sm text-muted-foreground">Coming soon</div>
+                <div className="font-medium">Catalog QA</div>
+                <div className="text-sm text-muted-foreground">Photos, websites, and copy gaps</div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
 

@@ -14,7 +14,7 @@ const pillars = [
   },
   {
     title: "Owner dashboard",
-    body: "Once approved, manage today’s bookings, your listing, reviews, and analytics from a single owner workspace.",
+    body: "Once approved, manage today’s bookings, basic profile details, reviews, and analytics from a single owner workspace.",
   },
 ] as const;
 
@@ -33,7 +33,7 @@ const ownerTools = [
   },
   {
     title: "Your listing",
-    body: "Update hours, photos, and menu details so diaspora diners find accurate information before they arrive.",
+    body: "Update name, phone, price range, and description in your dashboard today. Photo, hours, and menu editors are rolling out with partner onboarding.",
   },
 ] as const;
 
@@ -66,9 +66,9 @@ export function PartnerWithUsSection() {
 
             <ul className="mt-8 space-y-3">
               {[
-                "Live reservation view for today’s service",
-                "Listing controls for hours, photos, and details",
-                "Review and analytics pages as you scale",
+                "Live reservation view for today’s service (partner restaurants)",
+                "Profile editor for name, phone, price, and description",
+                "Reviews and analytics as you scale on AfriTable",
                 "Human onboarding—we review every partner application",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-slate-300">
