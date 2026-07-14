@@ -2,23 +2,10 @@
 
 import * as React from "react";
 import { CuisineFilter } from "./CuisineFilter";
-import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
-
-type FeaturedRestaurant = {
-  id: string;
-  name: string;
-  slug: string;
-  cuisine_types: string[];
-  price_range: number;
-  address: unknown;
-  images: string[];
-  created_at: string;
-  avg_rating: number | null;
-  review_count: number;
-};
+import { RestaurantCard, type RestaurantCardRestaurant } from "@/components/restaurant/RestaurantCard";
 
 type CuisineFilterClientProps = {
-  restaurants: FeaturedRestaurant[];
+  restaurants: RestaurantCardRestaurant[];
 };
 
 export function CuisineFilterClient({ restaurants }: CuisineFilterClientProps) {
@@ -50,7 +37,10 @@ export function CuisineFilterClient({ restaurants }: CuisineFilterClientProps) {
       <div className="mt-6 flex gap-4 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {filteredRestaurants.map((r) => (
           <div key={r.id} className="w-[280px] shrink-0 md:w-[320px]">
-            <RestaurantCard restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug)}`} />
+            <RestaurantCard
+              restaurant={r}
+              href={`/restaurants/${encodeURIComponent(r.slug || r.id)}`}
+            />
           </div>
         ))}
       </div>

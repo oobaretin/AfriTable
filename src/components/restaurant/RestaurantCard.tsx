@@ -13,6 +13,26 @@ export type RestaurantRow = Database["public"]["Tables"]["restaurants"]["Row"] &
   region?: string | null; // Region field from JSON data (e.g., "West African", "East African")
 };
 
+/** Minimal restaurant shape for listing cards (Supabase row, catalog JSON, or homepage browse). */
+export type RestaurantCardRestaurant = {
+  id: string;
+  name: string;
+  slug?: string | null;
+  cuisine_types?: string[] | null;
+  price_range?: number | null;
+  address?: unknown;
+  images?: string[] | null;
+  avg_rating?: number | null;
+  review_count?: number | null;
+  distance_miles?: number | null;
+  vibe_tags?: string[] | null;
+  region?: string | null;
+  neighborhood?: string | null;
+  specialty?: string | null;
+  menu_highlights?: string[] | null;
+  awards?: string[] | null;
+};
+
 export function RestaurantCard({
   restaurant,
   href,
@@ -21,7 +41,7 @@ export function RestaurantCard({
   index = 0,
   isFeatured = false,
 }: {
-  restaurant: RestaurantRow;
+  restaurant: RestaurantCardRestaurant;
   href?: string;
   onQuickReserve?: () => void;
   city?: string;
