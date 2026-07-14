@@ -207,7 +207,6 @@ async function getRestaurantById(id: string): Promise<RestaurantDetail | null> {
   // First, try to load from restaurants.json by id
   const jsonRestaurant = getRestaurantByIdFromJSON(id);
   if (jsonRestaurant) {
-    console.log(`[RestaurantPage] ✅ Found restaurant in JSON: "${jsonRestaurant.name}" (id: ${id})`);
     return transformJSONRestaurantToDetail(jsonRestaurant) as RestaurantDetail;
   }
 
@@ -349,21 +348,21 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function RestaurantProfilePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  console.log(`[RestaurantPage] Attempting to load restaurant with id: "${id}"`);
   const restaurant = await getRestaurantById(id);
   if (!restaurant) {
-    console.error(`[RestaurantPage] ❌ Restaurant not found for id: "${id}"`);
-    console.error(`[RestaurantPage] Check: /api/debug/restaurant/${encodeURIComponent(id)}`);
     notFound();
   }
-  console.log(`[RestaurantPage] ✅ Successfully loaded restaurant: "${restaurant.name}" (${restaurant.id || restaurant.slug})`);
 
   const catalogSlug = restaurant.slug || id;
   const dbRestaurantId =
     (isUuid(restaurant.id) ? restaurant.id : null) ?? (await resolveSupabaseRestaurantId(catalogSlug));
+  const isLivePartner = Boolean(dbRestaurantId);
 
-  const [operatingHours, reviews, similarFromDb] = await Promise.all([
-    dbRestaurantId ? getOperatingHours(dbRestaurantId, restaurant.hours) : Promise.resolve([]),
+  const operatingHours = dbRestaurantId
+    ? await getOperatingHours(dbRestaurantId, restaurant.hours)
+    : normalizeOperatingHours(restaurant.hours);
+
+  const [reviews, similarFromDb] = await Promise.all([
     dbRestaurantId ? getReviews(dbRestaurantId) : Promise.resolve([]),
     getSimilarRestaurants(dbRestaurantId ?? catalogSlug, restaurant.cuisine_types),
   ]);
@@ -531,8 +530,16 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
                   </>
                 )}
               </div>
+              <div className="flex flex-wrap items-center gap-2 mt-3">
+                <Badge variant={isLivePartner ? "default" : "secondary"}>
+                  {isLivePartner ? "Partner · live booking" : "Directory listing"}
+                </Badge>
+                {todays.hasHours ? (
+                  <Badge variant="outline">{todays.openNow ? "Open now" : "Closed now"}</Badge>
+                ) : null}
+              </div>
             </div>
-            <FavoriteButton restaurantId={restaurant.id} />
+            <FavoriteButton restaurantId={dbRestaurantId} />
           </div>
 
           <p className="text-xl text-slate-600 leading-relaxed mb-12">
@@ -877,7 +884,12 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
             {/* Gradient Border Wrapper */}
             <div className="p-1 bg-gradient-to-tr from-brand-bronze via-brand-ochre to-brand-forest rounded-[2.2rem]">
               <div className="bg-white rounded-[2rem] p-2">
-                <ReservationWidget restaurantId={restaurant.id} restaurantSlug={restaurant.slug} restaurantName={restaurant.name} />
+                <ReservationWidget
+                  restaurantId={restaurant.id}
+                  restaurantSlug={restaurant.slug}
+                  restaurantName={restaurant.name}
+                  bookingMode={isLivePartner ? "partner" : "catalog"}
+                />
               </div>
             </div>
           </div>

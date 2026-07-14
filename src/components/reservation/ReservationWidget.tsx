@@ -28,11 +28,14 @@ export function ReservationWidget({
   restaurantId,
   restaurantSlug,
   restaurantName,
+  bookingMode = "partner",
 }: {
   restaurantId: string;
   restaurantSlug?: string;
   restaurantName?: string;
+  bookingMode?: "partner" | "catalog";
 }) {
+  const isCatalog = bookingMode === "catalog";
   const router = useRouter();
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   const [guests, setGuests] = React.useState(2);
@@ -123,12 +126,17 @@ export function ReservationWidget({
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">Table Reserved!</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2">
+              {isCatalog ? "Request sent!" : "Table Reserved!"}
+            </h3>
             <p className="text-lg text-slate-600 mb-6">
-              Table reserved for <span className="font-semibold">{displayDate}</span> at{" "}
+              {isCatalog ? "We saved your preferred " : "Table reserved for "}
+              <span className="font-semibold">{displayDate}</span> at{" "}
               <span className="font-semibold">{displayTime}</span>
             </p>
-            <p className="text-sm text-slate-400">Redirecting to confirmation...</p>
+            <p className="text-sm text-slate-400">
+              {isCatalog ? "Continue to share your contact details…" : "Redirecting to confirmation..."}
+            </p>
           </div>
         </div>
       </>
@@ -138,9 +146,20 @@ export function ReservationWidget({
   // Form State
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
-      <h3 className="text-xl font-bold text-slate-900 mb-6">
-        {restaurantName ? `Reserve at ${restaurantName}` : "Make a Reservation"}
+      <h3 className="text-xl font-bold text-slate-900 mb-2">
+        {restaurantName
+          ? isCatalog
+            ? `Request a table at ${restaurantName}`
+            : `Reserve at ${restaurantName}`
+          : isCatalog
+            ? "Request a table"
+            : "Make a Reservation"}
       </h3>
+      {isCatalog ? (
+        <p className="text-sm text-slate-500 mb-4">
+          Directory listing — we email your request; the restaurant confirms by phone.
+        </p>
+      ) : null}
 
       <div className="space-y-4">
         {/* Guest Count Selector */}
@@ -251,12 +270,16 @@ export function ReservationWidget({
           disabled={!selectedTime || !restaurantSlug || isLoading}
           className="btn-bronze w-full px-10 py-4 rounded-xl font-bold text-white uppercase tracking-widest text-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
         >
-          Find a Table
+          {isCatalog ? "Send table request" : "Find a Table"}
         </button>
       </div>
 
       <p className="mt-4 text-center text-xs text-slate-400">
-        Powered by <span className="font-bold text-orange-500/80 uppercase">AfriTable</span> Secure Booking
+        {isCatalog ? (
+          <>Powered by <span className="font-bold text-orange-500/80 uppercase">AfriTable</span> directory requests</>
+        ) : (
+          <>Powered by <span className="font-bold text-orange-500/80 uppercase">AfriTable</span> partner booking</>
+        )}
       </p>
     </div>
   );

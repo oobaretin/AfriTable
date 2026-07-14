@@ -7,12 +7,16 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 
-export function FavoriteButton({ restaurantId }: { restaurantId: string }) {
+export function FavoriteButton({ restaurantId }: { restaurantId: string | null }) {
   const router = useRouter();
   const [loading, setLoading] = React.useState(false);
   const [isFavorite, setIsFavorite] = React.useState<boolean | null>(null);
 
   React.useEffect(() => {
+    if (!restaurantId) {
+      setIsFavorite(false);
+      return;
+    }
     const supabase = createSupabaseBrowserClient();
     void (async () => {
       const { data } = await supabase.auth.getUser();
@@ -36,6 +40,7 @@ export function FavoriteButton({ restaurantId }: { restaurantId: string }) {
   }, [restaurantId]);
 
   async function toggle() {
+    if (!restaurantId) return;
     setLoading(true);
     try {
       const supabase = createSupabaseBrowserClient();
@@ -66,6 +71,8 @@ export function FavoriteButton({ restaurantId }: { restaurantId: string }) {
       setLoading(false);
     }
   }
+
+  if (!restaurantId) return null;
 
   return (
     <Button variant="outline" onClick={() => void toggle()} disabled={loading || isFavorite === null} type="button" className="gap-2">

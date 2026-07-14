@@ -28,6 +28,7 @@ export default async function NewReservationPage({
     const addressStr = [a.street, a.city, a.state, a.zip].filter(Boolean).join(", ");
     return (
       <NewReservationFlow
+        bookingMode="partner"
         summary={{
           restaurant: {
             id: dbRestaurant.id,
@@ -51,6 +52,7 @@ export default async function NewReservationPage({
 
   return (
     <NewReservationFlow
+      bookingMode="catalog"
       summary={{
         restaurant: {
           id: detail.id,

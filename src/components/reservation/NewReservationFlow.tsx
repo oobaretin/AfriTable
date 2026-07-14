@@ -58,7 +58,14 @@ type Confirmation = {
   occasion?: string | null;
 };
 
-export function NewReservationFlow({ summary }: { summary: ReservationSummary }) {
+export function NewReservationFlow({
+  summary,
+  bookingMode = "partner",
+}: {
+  summary: ReservationSummary;
+  bookingMode?: "partner" | "catalog";
+}) {
+  const isCatalog = bookingMode === "catalog";
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
@@ -373,7 +380,13 @@ export function NewReservationFlow({ summary }: { summary: ReservationSummary })
                     ) : null}
 
                     <Button type="submit" disabled={submitting || !isTimeAvailable}>
-                      {submitting ? "Booking…" : "Confirm reservation"}
+                      {submitting
+                        ? isCatalog
+                          ? "Sending…"
+                          : "Booking…"
+                        : isCatalog
+                          ? "Send table request"
+                          : "Confirm reservation"}
                     </Button>
                   </form>
                 </Form>
@@ -382,8 +395,12 @@ export function NewReservationFlow({ summary }: { summary: ReservationSummary })
           ) : (
             <Card>
               <CardHeader>
-                <CardTitle>Reservation Confirmed!</CardTitle>
-                <CardDescription>We emailed your confirmation and calendar invite.</CardDescription>
+                <CardTitle>{isCatalog ? "Table request sent!" : "Reservation confirmed!"}</CardTitle>
+                <CardDescription>
+                  {isCatalog
+                    ? "We emailed your request. The restaurant will confirm by phone."
+                    : "We emailed your confirmation and calendar invite."}
+                </CardDescription>
               </CardHeader>
               <CardContent className="grid gap-4">
                 {confirmation ? (
@@ -391,10 +408,12 @@ export function NewReservationFlow({ summary }: { summary: ReservationSummary })
                     <div className="rounded-xl border bg-muted/20 p-4">
                       <div className="flex flex-wrap items-center justify-between gap-3">
                         <div>
-                          <div className="text-xs text-muted-foreground">Confirmation</div>
+                          <div className="text-xs text-muted-foreground">
+                            {isCatalog ? "Reference" : "Confirmation"}
+                          </div>
                           <div className="text-lg font-semibold">{confirmation.confirmationCode}</div>
                         </div>
-                        <Badge variant="secondary">Confirmed</Badge>
+                        <Badge variant="secondary">{isCatalog ? "Request received" : "Confirmed"}</Badge>
                       </div>
                       <Separator className="my-3" />
                       <div className="grid gap-1 text-sm text-muted-foreground">
@@ -458,6 +477,11 @@ export function NewReservationFlow({ summary }: { summary: ReservationSummary })
                     </div>
 
                     <div className="grid gap-2 sm:grid-cols-2">
+                      {summary.restaurant.phone ? (
+                        <Button asChild variant="outline">
+                          <a href={`tel:${summary.restaurant.phone.replace(/\D/g, "")}`}>Call restaurant</a>
+                        </Button>
+                      ) : null}
                       <Button asChild variant="outline">
                         <a
                           href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(summary.restaurant.address)}`}
