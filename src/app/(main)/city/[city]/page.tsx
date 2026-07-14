@@ -13,6 +13,7 @@ import {
   buildRestaurantsDirectoryHref,
   filtersFromCityLabel,
 } from "@/lib/restaurant-filter-url";
+import { getCatalogRestaurantsForCity } from "@/lib/catalog-city-restaurants";
 
 function titleCaseFromSlug(slug: string) {
   return slug
@@ -88,7 +89,22 @@ export default async function CityPage({
     .order("created_at", { ascending: false })
     .limit(48);
 
-  const restaurants = (data ?? []) as any[];
+  let restaurants = (data ?? []) as any[];
+
+  if (!restaurants.length) {
+    const fromCatalog = getCatalogRestaurantsForCity(citySlug);
+    let filtered = fromCatalog;
+    if (cuisine) {
+      filtered = filtered.filter((r) =>
+        (r.cuisine_types ?? []).some((c) => c.toLowerCase() === cuisine.toLowerCase()),
+      );
+    }
+    if (price && Number.isFinite(Number(price))) {
+      filtered = filtered.filter((r) => r.price_range === Number(price));
+    }
+    restaurants = filtered.slice(0, 48);
+  }
+
   if (!restaurants.length) notFound();
 
   return (

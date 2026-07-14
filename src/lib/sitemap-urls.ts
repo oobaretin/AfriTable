@@ -4,6 +4,8 @@ import type { MetadataRoute } from "next";
 import { getAppBaseUrl } from "@/lib/app-url";
 import { createSupabasePublicClient } from "@/lib/supabase/public";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
+import { extractCityFromAddress } from "@/lib/restaurant-list-filters";
+import { cityFromUrlToDisplay } from "@/lib/hero-city";
 
 export function getSitemapBaseUrl(): string {
   return getAppBaseUrl();
@@ -90,7 +92,7 @@ export async function getRestaurantSitemapEntries(baseUrl: string): Promise<Site
   return out;
 }
 
-/** City landing pages backed by Supabase `display_city` (pages 404 if no rows). */
+/** City landing pages from Supabase and catalog JSON. */
 export async function getCitySitemapEntries(baseUrl: string): Promise<SitemapEntry[]> {
   const supabase = createSupabasePublicClient();
   const { data } = await supabase
@@ -104,6 +106,14 @@ export async function getCitySitemapEntries(baseUrl: string): Promise<SitemapEnt
     const city = String(row.display_city ?? "").trim();
     if (!city) continue;
     slugs.add(citySlugFromDisplayName(city));
+  }
+
+  for (const r of loadRestaurantsFromJSON()) {
+    const token = extractCityFromAddress(r.address);
+    if (!token) continue;
+    const label = cityFromUrlToDisplay(token);
+    if (!label) continue;
+    slugs.add(citySlugFromDisplayName(label));
   }
 
   return Array.from(slugs)

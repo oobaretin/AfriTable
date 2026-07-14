@@ -9,68 +9,102 @@ export default function PrivacyPage() {
   return (
     <LegalPage
       title="Privacy Policy"
-      lastUpdated="January 2024"
-      sections={["Introduction", "Data We Collect", "How We Use Data", "Data Retention", "Your Rights"]}
+      lastUpdated="July 2025"
+      sections={[
+        "Introduction",
+        "Information we collect",
+        "How we use information",
+        "Sharing",
+        "Retention",
+        "Your choices",
+        "Contact",
+      ]}
     >
       <h2 id="introduction">Introduction</h2>
       <p>
-        This Privacy Policy explains how AfriTable (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) collects, uses, and protects your personal information when you use our platform. We are committed to protecting your privacy and ensuring transparency about our data practices.
+        This Privacy Policy describes how AfriTable (&quot;AfriTable,&quot; &quot;we,&quot; or &quot;us&quot;) collects,
+        uses, and protects personal information when you use our website and related services. We operate a restaurant
+        discovery and booking platform focused on African and Caribbean dining in the United States.
       </p>
+
+      <h2 id="information-we-collect">Information we collect</h2>
+      <p>Depending on how you use AfriTable, we may collect:</p>
+      <ul>
+        <li>
+          <strong>Account information:</strong> name, email address, phone number, and authentication identifiers when
+          you create an account or sign in (including via third-party providers where enabled)
+        </li>
+        <li>
+          <strong>Reservation and request data:</strong> preferred date, time, party size, special requests, and
+          restaurant selection
+        </li>
+        <li>
+          <strong>Communications:</strong> messages you send to support or partner flows (e.g. listing submissions)
+        </li>
+        <li>
+          <strong>Usage data:</strong> pages viewed, searches, device/browser type, and approximate location derived
+          from IP or city-level inputs you provide
+        </li>
+        <li>
+          <strong>Reviews and favorites:</strong> ratings, review text, and saved restaurants when you use those
+          features while signed in
+        </li>
+      </ul>
+
+      <h2 id="how-we-use-information">How we use information</h2>
+      <ul>
+        <li>Provide directory browsing, table requests, and partner reservations</li>
+        <li>Send transactional emails (confirmations, request receipts, account notices)</li>
+        <li>Operate partner onboarding, listing management, and admin review workflows</li>
+        <li>Improve search, recommendations, and platform reliability</li>
+        <li>Detect abuse, fraud, and security incidents</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+      <p>We do not sell your personal information.</p>
+
+      <h2 id="sharing">Sharing</h2>
+      <p>We share information only as needed to operate the Service:</p>
+      <ul>
+        <li>
+          <strong>Restaurants:</strong> when you submit a table request or reservation, we share relevant contact and
+          booking details with that venue
+        </li>
+        <li>
+          <strong>Service providers:</strong> hosting, email delivery, analytics, and authentication vendors that
+          process data on our behalf under contractual safeguards
+        </li>
+        <li>
+          <strong>Legal:</strong> when required by law or to protect rights, safety, and integrity of the platform
+        </li>
+      </ul>
+
+      <h2 id="retention">Retention</h2>
       <p>
-        This is placeholder text for MVP—replace with final legal copy before launch.
+        We retain personal information for as long as your account is active or as needed to provide the Service, resolve
+        disputes, and meet legal requirements. You may request account deletion subject to applicable law and legitimate
+        operational needs (e.g. reservation records).
       </p>
 
-      <h2 id="data-we-collect">Data We Collect</h2>
-      <p>We collect the following types of information:</p>
+      <h2 id="your-choices">Your choices</h2>
       <ul>
-        <li><strong>Account Information:</strong> Name, email address, phone number, and password</li>
-        <li><strong>Reservation Data:</strong> Restaurant preferences, booking history, special requests, and dietary restrictions</li>
-        <li><strong>Usage Analytics:</strong> How you interact with our platform, pages visited, and features used</li>
-        <li><strong>Device Information:</strong> IP address, browser type, device type, and operating system</li>
-        <li><strong>Location Data:</strong> City-level location information (with your permission) to show nearby restaurants</li>
+        <li>Update profile information in account settings where available</li>
+        <li>Opt out of non-essential marketing emails via unsubscribe links</li>
+        <li>Request access, correction, or deletion by contacting us</li>
+        <li>Disable cookies through your browser; some features may not work without them</li>
       </ul>
 
-      <h2 id="how-we-use-data">How We Use Data</h2>
-      <p>We use your data for the following purposes:</p>
-      <ul>
-        <li>To provide and manage your reservations and account</li>
-        <li>To send reservation confirmations, reminders, and updates</li>
-        <li>To request reviews and feedback after your dining experience</li>
-        <li>To provide customer support and respond to inquiries</li>
-        <li>To personalize your experience and recommend restaurants</li>
-        <li>To improve our platform, analyze usage patterns, and develop new features</li>
-        <li>To comply with legal obligations and protect our rights</li>
-      </ul>
-
-      <h2 id="data-retention">Data Retention</h2>
-      <p>We retain data as needed to provide the service and comply with legal obligations.</p>
-      <ul>
-        <li>We keep your account information for as long as your account is active</li>
-        <li>Reservation history is retained to provide you with booking records and improve recommendations</li>
-        <li>We may retain certain data after account deletion as required by law or for legitimate business purposes</li>
-        <li>Aggregated, anonymized data may be retained indefinitely for analytics</li>
-      </ul>
-
-      <h2 id="your-rights">Your Rights</h2>
+      <h2 id="contact">Contact</h2>
       <p>
-        You have the following rights regarding your personal information:
-      </p>
-      <ul>
-        <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
-        <li><strong>Correction:</strong> Update or correct inaccurate information through your account settings</li>
-        <li><strong>Deletion:</strong> Request deletion of your account and associated data</li>
-        <li><strong>Portability:</strong> Request your data in a portable format</li>
-        <li><strong>Opt-out:</strong> Unsubscribe from marketing communications at any time</li>
-        <li><strong>Objection:</strong> Object to certain processing activities where applicable</li>
-      </ul>
-      <p>
-        To exercise these rights, please contact us through your account settings or email us at{" "}
+        Privacy questions or requests:{" "}
         <a href={mailto(SITE_CONTACT.privacy)} className="underline underline-offset-2 hover:text-slate-900">
           {SITE_CONTACT.privacy}
+        </a>
+        . See also our{" "}
+        <a href="/terms" className="underline underline-offset-2 hover:text-slate-900">
+          Terms of Service
         </a>
         .
       </p>
     </LegalPage>
   );
 }
-
