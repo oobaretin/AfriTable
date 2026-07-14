@@ -19,7 +19,8 @@ import { formatTimeRange12h } from "@/lib/utils/time-format";
 import { getRestaurantByIdFromJSON, getSimilarRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 import { parseCatalogHoursToArray } from "@/lib/parse-catalog-hours";
-import { resolveRestaurantImageUrl } from "@/lib/restaurant-image";
+import { resolveRestaurantImageUrl, resolveRestaurantOgImageUrl } from "@/lib/restaurant-image";
+import { getAppBaseUrl } from "@/lib/app-url";
 
 type RestaurantDetail = {
   id: string;
@@ -323,7 +324,7 @@ async function getSimilarRestaurants(restaurantId: string, cuisines: string[]) {
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+  const baseUrl = getAppBaseUrl();
   const restaurant = await getRestaurantById(id);
   if (!restaurant) return {};
 
@@ -333,6 +334,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     ? `${restaurant.description.slice(0, 160)}${restaurant.description.length > 160 ? "…" : ""}`
     : `Reserve a table at ${restaurant.name}${addr ? ` in ${addr}` : ""}.`;
 
+  const photoUrl = resolveRestaurantOgImageUrl({
+    images: restaurant.images,
+    region: (restaurant as { region?: string | null }).region,
+    cuisine_types: restaurant.cuisine_types,
+  });
+  const ogImage = photoUrl ?? "/og-image.svg";
+
   return {
     title,
     description,
@@ -341,7 +349,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       title,
       description,
       url: `${baseUrl}/restaurants/${encodeURIComponent(restaurant.id || restaurant.slug)}`,
-      images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
     },
   };
 }

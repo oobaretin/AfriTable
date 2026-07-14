@@ -46,3 +46,10 @@ export function resolveRestaurantImageUrl(restaurant: RestaurantImageInput): str
   }
   return RESTAURANT_BRAND_PLACEHOLDER;
 }
+
+/** First real photo for Open Graph / Twitter cards, or null to fall back to site default. */
+export function resolveRestaurantOgImageUrl(restaurant: RestaurantImageInput): string | null {
+  const url = resolveRestaurantImageUrl(restaurant);
+  if (isAfriTableBrandImage(url)) return null;
+  return url;
+}
