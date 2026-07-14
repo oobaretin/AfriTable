@@ -56,12 +56,13 @@ async function checkWebsite(url: string): Promise<boolean> {
 async function main() {
   const dryRun = process.argv.includes("--dry-run");
   const onlyMissing = process.argv.includes("--only-missing");
+  const noSerpApi = process.argv.includes("--no-serpapi");
   /** missing URL or current URL does not match restaurant name (e.g. wrong DDG hit) */
   const needsWebsite = onlyMissing || process.argv.includes("--needs-website");
   const limitArg = process.argv.find((a) => a.startsWith("--limit="));
   const limit = limitArg ? parseInt(limitArg.split("=")[1], 10) : Infinity;
 
-  const serpKey = process.env.SERPAPI_KEY;
+  const serpKey = noSerpApi ? undefined : process.env.SERPAPI_KEY;
   const supabase = createClient(requireEnv("NEXT_PUBLIC_SUPABASE_URL"), requireEnv("SUPABASE_SERVICE_ROLE_KEY"), {
     auth: { persistSession: false },
   });
@@ -96,6 +97,13 @@ async function main() {
 
   console.log(`Discovering websites for ${Math.min(limit, targets.length)} / ${targets.length} restaurants…\n`);
 
+  function saveProgress() {
+    if (!dryRun) {
+      fs.writeFileSync(CATALOG_PATH, JSON.stringify(catalog, null, 2));
+    }
+    fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
+  }
+
   for (const entry of targets) {
     if (report.processed >= limit) break;
 
@@ -111,54 +119,62 @@ async function main() {
     report.processed++;
     const row: any = { slug: entry.id, name, source: "pending", candidates: 0 };
 
-    const { website, source, candidates, query } = await discoverRestaurantWebsite(name, addressLine, {
-      serpApiKey: serpKey,
-    });
-    row.source = source;
-    row.candidates = candidates;
-    if (query) row.search_query = query;
+    try {
+      const { website, source, candidates, query } = await discoverRestaurantWebsite(name, addressLine, {
+        serpApiKey: serpKey,
+      });
+      row.source = source;
+      row.candidates = candidates;
+      if (query) row.search_query = query;
 
-    if (!website) {
-      report.failed++;
-      row.status = "not_found";
-      console.log("  ⚠️  No website candidate\n");
-      report.results.push(row);
-      await new Promise((r) => setTimeout(r, 2200));
-      continue;
-    }
-
-    const ok = await checkWebsite(website);
-    row.discovered_url = website;
-    row.http_ok = ok;
-
-    if (ok) {
-      report.discovered++;
-      report.validated++;
-      row.status = "ok";
-      entry.website = website;
-      entry.google_search_url = resolveGoogleSearchUrl(entry);
-      console.log(`  ✅ ${website} (${source})\n`);
-
-      if (!dryRun) {
-        const db = dbBySlug.get(entry.id);
-        if (db) {
-          await supabase.from("restaurants").update({ website }).eq("id", db.id);
-        }
+      if (!website) {
+        report.failed++;
+        row.status = "not_found";
+        console.log("  ⚠️  No website candidate\n");
+        report.results.push(row);
+        await new Promise((r) => setTimeout(r, 2200));
+        saveProgress();
+        continue;
       }
-    } else {
+
+      const ok = await checkWebsite(website).catch(() => false);
+      row.discovered_url = website;
+      row.http_ok = ok;
+
+      if (ok) {
+        report.discovered++;
+        report.validated++;
+        row.status = "ok";
+        entry.website = website;
+        entry.google_search_url = resolveGoogleSearchUrl(entry);
+        console.log(`  ✅ ${website} (${source})\n`);
+
+        if (!dryRun) {
+          const db = dbBySlug.get(entry.id);
+          if (db) {
+            await supabase.from("restaurants").update({ website }).eq("id", db.id);
+          }
+        }
+      } else {
+        report.failed++;
+        row.status = "unreachable";
+        console.log(`  ❌ Found but unreachable: ${website}\n`);
+      }
+
+      report.results.push(row);
+    } catch (error) {
       report.failed++;
-      row.status = "unreachable";
-      console.log(`  ❌ Found but unreachable: ${website}\n`);
+      row.status = "error";
+      row.error = error instanceof Error ? error.message : String(error);
+      console.log(`  ❌ Search error: ${row.error}\n`);
+      report.results.push(row);
     }
 
-    report.results.push(row);
     await new Promise((r) => setTimeout(r, 2200));
+    saveProgress();
   }
 
-  if (!dryRun) {
-    fs.writeFileSync(CATALOG_PATH, JSON.stringify(catalog, null, 2));
-  }
-  fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
+  saveProgress();
 
   console.log("Website discovery complete");
   console.log(`  Processed:   ${report.processed}`);

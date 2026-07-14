@@ -5521,11 +5521,14 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic Nigerian restaurant in Lynn. Experience traditional Nigerian flavors and hospitality at Kokomma Nigerian African Cuisine.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Family-run Nigerian kitchen in Central Square, Lynn—authentic recipes from Head Chef Comfort Ukpong, from restaurant roots in Nigeria to catering and a growing local following.",
+    "our_story": "Madam KOKO learned traditional Nigerian cooking as a child, ran a restaurant in Nigeria, and opened Kokomma in Lynn after friends and catering clients pushed her to share those flavors full-time.",
+    "cultural_roots": "Nigerian diaspora dining in Greater Boston.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Jollof Rice",
+      "Egusi Soup",
+      "Pepper Soup",
+      "Puff Puff"
     ],
     "vibe_category": "Authentic Staples",
     "state": "MA",
@@ -6129,19 +6132,20 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Norcross. Experience traditional African flavors and hospitality at Jollof city.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Norcross spot for West African plates and jollof—call ahead for today's soups, rice, and grill specials.",
+    "our_story": "Neighborhood African kitchen on Indian Trail Lilburn Rd serving the Norcross corridor.",
+    "cultural_roots": "West African diaspora dining in metro Atlanta.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Jollof Rice",
+      "Pepper Soup",
+      "Plantain"
     ],
     "vibe_category": "Authentic Staples",
     "state": "GA",
     "google_place_id": "ChIJVcxa1i2l9YgRduH1ndkIvqU",
     "lat": 33.9142316,
     "lng": -84.1623702,
-    "google_search_url": "https://www.google.com/search?q=Jollof%20city%2C%201241%20Indian%20Trail%20Lilburn%20Rd%20NW%20Ste%20N%2C%20Norcross%2C%20GA%2030093",
-    "website": "https://jollofcity.com",
+    "google_search_url": "https://www.google.com/search?q=Jollof%20city%20Norcross%20GA%2030093",
     "images": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlbZeu9yDmaqhR81OgjmddX0TEi_o62qj60CMH6_5_LQRbZ1kvvh_UHb1JRpbWA5Q4Jj5C5lHLGnOuNZfhVN7hda1PzhNn7d5046zLq9qhiT_40OzNj0lLU1S-AJFgWRCMuw8XNBC6gaYcF=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnkMCyUAGhpz-FZb8raNuU6UjgkVf6nNl0_vTJBRGaVQv0i_H_y0SGLzt0eZkqRAVuUsCpCWJ-qWSoiAEyyxVHzFFLDX5eu0C7Eqg89TXSKNPrtQos-sD7UKgUp_sPWyu872W6GtelVH87i=w1000-h1000-c-n",
@@ -6601,14 +6605,22 @@
     "address": "224 E 7th St, Charlotte, NC 28202",
     "phone": "(704) 242-8159",
     "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
+      "mon": "Closed",
+      "tue": "11:00 AM - 7:00 PM",
+      "wed": "11:00 AM - 7:00 PM",
+      "thu": "11:00 AM - 7:00 PM",
+      "fri": "11:00 AM - 8:00 PM",
+      "sat": "11:00 AM - 8:00 PM",
+      "sun": "11:00 AM - 6:00 PM"
     },
-    "about": "Authentic African restaurant in Charlotte. Experience traditional African flavors and hospitality at Serengeti Kitchen.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Tanzanian kitchen inside 7th Street Market—chapati wraps, Swahili plates, samosas, and catering from Chef Ammalu's Dar es Salaam roots.",
+    "our_story": "Chef Ammalu brought generations of Tanzanian tradition from Dar es Salaam to Charlotte, growing from personal chef work into a stall at 7th Street Market.",
+    "cultural_roots": "East African (Tanzanian) cuisine in Uptown Charlotte.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Sekela Chicken Chapati Wrap",
+      "Swahili Plate",
+      "Braised Lamb Bites",
+      "Beef Samosas"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NC",
@@ -11217,17 +11229,27 @@
     "price_range": "$",
     "rating": 4.9,
     "address": "12825 Westheimer Rd, Houston, TX 77077",
-    "phone": "(346) 414-1929",
+    "phone": "(281) 760-1860",
     "website": "https://www.glozicalabarrestaurant.com/",
     "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
+      "mon": "Closed",
+      "tue": "12:30 PM - 10:00 PM",
+      "wed": "12:30 PM - 10:00 PM",
+      "thu": "12:30 PM - 10:00 PM",
+      "fri": "12:30 PM - 10:30 PM",
+      "sat": "12:30 PM - 10:30 PM",
+      "sun": "12:30 PM - 10:30 PM"
     },
-    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Glozi Calabar Restaurant and African Cuisine..",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Calabar-style Nigerian kitchen on Westheimer—Afang, egusi, edikaikong, pepper soup, and jollof rice made with traditional recipes and Houston hospitality.",
+    "our_story": "Glozi Calabar brings the heart of Nigerian cuisine to Houston. The team focuses on authentic Calabar and West African flavors, from hearty soups to party-size jollof.",
+    "cultural_roots": "Calabar and Nigerian diaspora dining in Houston.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Afang Soup",
+      "Jollof Rice",
+      "Egusi Soup",
+      "Edikaikong Soup",
+      "Pepper Soup",
+      "Plantain (Dodo)"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",

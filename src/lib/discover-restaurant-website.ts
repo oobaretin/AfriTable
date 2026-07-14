@@ -237,16 +237,20 @@ function extractUrlsFromSearchHtml(html: string): string[] {
 async function fetchSearchHtml(getUrl: string, postBody?: string): Promise<string> {
   const init: RequestInit = {
     headers: SEARCH_HEADERS,
-    signal: AbortSignal.timeout(15000),
+    signal: AbortSignal.timeout(25000),
   };
   if (postBody) {
     init.method = "POST";
     init.headers = { ...SEARCH_HEADERS, "Content-Type": "application/x-www-form-urlencoded" };
     init.body = postBody;
   }
-  const response = await fetch(getUrl, init);
-  if (!response.ok) return "";
-  return response.text();
+  try {
+    const response = await fetch(getUrl, init);
+    if (!response.ok) return "";
+    return response.text();
+  } catch {
+    return "";
+  }
 }
 
 export async function discoverViaDuckDuckGo(query: string): Promise<string[]> {

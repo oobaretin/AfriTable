@@ -1,26 +1,18 @@
 {
-  "generatedAt": "2026-06-03T15:17:22.579Z",
+  "generatedAt": "2026-07-14T20:24:33.736Z",
   "dryRun": false,
-  "serpApiUsed": true,
-  "processed": 120,
-  "discovered": 3,
-  "validated": 3,
-  "failed": 117,
+  "serpApiUsed": false,
+  "processed": 26,
+  "discovered": 0,
+  "validated": 0,
+  "failed": 26,
   "results": [
     {
       "slug": "famous-princess",
       "name": "Famous Princess African Kitchen",
-      "source": "duckduckgo",
-      "candidates": 280,
-      "search_query": "Famous Princess African restaurant texas website",
-      "status": "not_found"
-    },
-    {
-      "slug": "dukunoo-miami",
-      "name": "Dukunoo Jamaican Kitchen",
       "source": "none",
       "candidates": 0,
-      "search_query": "Dukunoo Jamaican Kitchen restaurant Miami FL 33127",
+      "search_query": "Famous Princess African Kitchen restaurant Houston TX 77084",
       "status": "not_found"
     },
     {
@@ -32,51 +24,11 @@
       "status": "not_found"
     },
     {
-      "slug": "cane-dc",
-      "name": "Cane",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Cane restaurant Washington DC 20002",
-      "status": "not_found"
-    },
-    {
       "slug": "ponti-ivorian-houston",
       "name": "Ponti's Ivorian Kitchen",
       "source": "none",
       "candidates": 0,
       "search_query": "Ponti's Ivorian Kitchen restaurant Houston TX 77077",
-      "status": "not_found"
-    },
-    {
-      "slug": "kulan-cafe",
-      "name": "Kulan Cafe",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Kulan Cafe restaurant Falls Church VA 22041",
-      "status": "not_found"
-    },
-    {
-      "slug": "atl-004",
-      "name": "Virgil's Gullah Kitchen",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Virgil's Gullah Kitchen restaurant Atlanta GA 30318",
-      "status": "not_found"
-    },
-    {
-      "slug": "swahili-village-dc",
-      "name": "Swahili Village",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Swahili Village restaurant Washington DC 20036",
-      "status": "not_found"
-    },
-    {
-      "slug": "oak-001",
-      "name": "Amawele's",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Amawele's restaurant San Francisco CA 94105",
       "status": "not_found"
     },
     {
@@ -88,35 +40,11 @@
       "status": "not_found"
     },
     {
-      "slug": "phi-003",
-      "name": "Quality Taste",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Quality Taste restaurant Philadelphia PA 19104",
-      "status": "not_found"
-    },
-    {
-      "slug": "bos-002",
-      "name": "Suya Joint",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Suya Joint restaurant Boston MA 02119",
-      "status": "not_found"
-    },
-    {
       "slug": "oak-lala-eritrean",
       "name": "Lala's Eritrean",
       "source": "none",
       "candidates": 0,
       "search_query": "Lala's Eritrean restaurant Oakland CA 94609",
-      "status": "not_found"
-    },
-    {
-      "slug": "atl-spice-house-midtown",
-      "name": "Spice House Midtown",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Spice House Midtown restaurant Atlanta GA 30318",
       "status": "not_found"
     },
     {
@@ -128,59 +56,11 @@
       "status": "not_found"
     },
     {
-      "slug": "dc-st-james",
-      "name": "St. James - Modern Caribbean",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "St. James - Modern Caribbean restaurant Washington DC 20009",
-      "status": "not_found"
-    },
-    {
-      "slug": "atl-irie-mon-cafe",
-      "name": "Irie Mon Cafe",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Irie Mon Cafe restaurant Atlanta GA 30309",
-      "status": "not_found"
-    },
-    {
       "slug": "dca-001",
       "name": "Dōgon",
       "source": "none",
       "candidates": 0,
       "search_query": "Dōgon restaurant Washington DC 20024",
-      "status": "not_found"
-    },
-    {
-      "slug": "atx-fine-002",
-      "name": "Ember Kitchen",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Ember Kitchen restaurant Austin TX 78701",
-      "status": "not_found"
-    },
-    {
-      "slug": "hou-fine-001",
-      "name": "Island Spice Bar & Grill",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Island Spice Bar & Grill restaurant Houston TX 77084",
-      "status": "not_found"
-    },
-    {
-      "slug": "lax-001",
-      "name": "Status Hollywood",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Status Hollywood restaurant Los Angeles CA 90028",
-      "status": "not_found"
-    },
-    {
-      "slug": "sea-fine-002",
-      "name": "Jerk Shack",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Jerk Shack restaurant Seattle WA 98122",
       "status": "not_found"
     },
     {
@@ -208,54 +88,6 @@
       "status": "not_found"
     },
     {
-      "slug": "katy-004",
-      "name": "Butter D' Roti",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Butter D' Roti restaurant Katy TX 77493",
-      "status": "not_found"
-    },
-    {
-      "slug": "atl-daily-002",
-      "name": "Belle & Lily's",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Belle & Lily's restaurant Atlanta GA 30341",
-      "status": "not_found"
-    },
-    {
-      "slug": "tailat-kitchen-austin",
-      "name": "Tailat Kitchen",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Tailat Kitchen restaurant Pflugerville TX 78660",
-      "status": "not_found"
-    },
-    {
-      "slug": "bamboo-walk-brooklyn",
-      "name": "Bamboo Walk",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Bamboo Walk restaurant Brooklyn NY 11203",
-      "status": "not_found"
-    },
-    {
-      "slug": "baba-jollof-houston",
-      "name": "Baba Jollof",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Baba Jollof restaurant Houston TX 77071",
-      "status": "not_found"
-    },
-    {
-      "slug": "vees-brooklyn",
-      "name": "Vee's",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Vee's restaurant Brooklyn NY 11225",
-      "status": "not_found"
-    },
-    {
       "slug": "island-breeze-colton",
       "name": "Island Breeze Jamaican Cuisine",
       "source": "none",
@@ -269,14 +101,6 @@
       "source": "none",
       "candidates": 0,
       "search_query": "Island Breeze Jamaican Cuisine (San Bernardino) restaurant San Bernardino CA 92405",
-      "status": "not_found"
-    },
-    {
-      "slug": "authentic-liberian-cuisine-phoenix",
-      "name": "Authentic Liberian Cuisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Authentic Liberian Cuisine restaurant Phoenix AZ 85021",
       "status": "not_found"
     },
     {
@@ -298,17 +122,9 @@
     {
       "slug": "amaye-international-restaurant-portland",
       "name": "AMAYE International Restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "AMAYE International Restaurant restaurant Portland OR 97213",
-      "status": "not_found"
-    },
-    {
-      "slug": "black-star-grill-portland",
-      "name": "Black Star Grill",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Black Star Grill restaurant Portland OR 97209",
+      "source": "bing",
+      "candidates": 1,
+      "search_query": "AMAYE International Portland restaurant website",
       "status": "not_found"
     },
     {
@@ -320,27 +136,11 @@
       "status": "not_found"
     },
     {
-      "slug": "ayomee-s-african-kitchen-sicklerville",
-      "name": "Ayomee’s African Kitchen",
+      "slug": "jollof-city-norcross",
+      "name": "Jollof city",
       "source": "none",
       "candidates": 0,
-      "search_query": "Ayomee’s African Kitchen restaurant Sicklerville NJ 08081",
-      "status": "not_found"
-    },
-    {
-      "slug": "obosa-restaurant-roslindale",
-      "name": "Obosa Restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Obosa Restaurant restaurant Roslindale MA 02131",
-      "status": "not_found"
-    },
-    {
-      "slug": "mimi-s-nook-nigerian-cuisine-livonia",
-      "name": "Mimi’s Nook Nigerian Cuisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Mimi’s Nook Nigerian Cuisine restaurant Livonia MI 48152",
+      "search_query": "Jollof city restaurant Norcross GA 30093",
       "status": "not_found"
     },
     {
@@ -368,22 +168,6 @@
       "status": "not_found"
     },
     {
-      "slug": "lagos-tsq-new-york",
-      "name": "Lagos TSQ",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Lagos TSQ restaurant New York NY 10019",
-      "status": "not_found"
-    },
-    {
-      "slug": "serengeti-kitchen-charlotte",
-      "name": "Serengeti Kitchen",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Serengeti Kitchen restaurant Charlotte NC 28202",
-      "status": "not_found"
-    },
-    {
       "slug": "samoha-african-cuisine-charlotte",
       "name": "Samoha African Cuisine",
       "source": "none",
@@ -408,14 +192,6 @@
       "status": "not_found"
     },
     {
-      "slug": "street-suya-dallas",
-      "name": "Street Suya",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Street Suya restaurant Dallas TX 75247",
-      "status": "not_found"
-    },
-    {
       "slug": "fufudelight-suya-kitchen-arlington",
       "name": "Fufudelight& Suya Kitchen",
       "source": "none",
@@ -432,546 +208,12 @@
       "status": "not_found"
     },
     {
-      "slug": "hunan-cafe-houston",
-      "name": "Hunan Cafe",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Hunan Cafe restaurant Houston TX 77068",
-      "status": "not_found"
-    },
-    {
-      "slug": "golden-hands-cameroonian-food-los-angeles",
-      "name": "Golden hands Cameroonian food",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Golden hands Cameroonian food restaurant Los Angeles CA 90043",
-      "status": "not_found"
-    },
-    {
       "slug": "bliss-africa-davie",
       "name": "Bliss Africa",
       "source": "none",
       "candidates": 0,
       "search_query": "Bliss Africa restaurant Davie FL 33314",
       "status": "not_found"
-    },
-    {
-      "slug": "k-y-d-restaurant-mirage-brooklyn",
-      "name": "Káyọ̀dé Restaurant Mirage",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Káyọ̀dé Restaurant Mirage restaurant Brooklyn NY 11210",
-      "status": "not_found"
-    },
-    {
-      "slug": "nigerian-suya-tinz-newark",
-      "name": "NIGERIAN SUYA & TINZ",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "NIGERIAN SUYA & TINZ restaurant Newark NJ 07112",
-      "status": "not_found"
-    },
-    {
-      "slug": "taste-of-african-cuisine-san-diego",
-      "name": "Taste of African Cuisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Taste of African Cuisine restaurant San Diego CA 92105",
-      "status": "not_found"
-    },
-    {
-      "slug": "taste-of-lagos-gibsonton",
-      "name": "Taste Of Lagos",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Taste Of Lagos restaurant Gibsonton FL 33534",
-      "status": "not_found"
-    },
-    {
-      "slug": "tfk-african-food-tampa",
-      "name": "Tfk African food.",
-      "source": "duckduckgo",
-      "candidates": 120,
-      "search_query": "Tfk African food. Tampa official website",
-      "status": "not_found"
-    },
-    {
-      "slug": "gladwin-kitchen-pflugerville",
-      "name": "gladwin kitchen",
-      "source": "duckduckgo",
-      "candidates": 280,
-      "search_query": "gladwin restaurant texas website",
-      "discovered_url": "https://www.gladwinbrothers.com",
-      "http_ok": true,
-      "status": "ok"
-    },
-    {
-      "slug": "tailat-kitchen-nigerian-cuisine-austin",
-      "name": "Tailat Kitchen (Nigerian Cuisine)",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Tailat Kitchen (Nigerian Cuisine) restaurant Austin TX 78723",
-      "status": "not_found"
-    },
-    {
-      "slug": "guinea-conakry-austin",
-      "name": "Guinea Conakry",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Guinea Conakry restaurant Austin TX 78701",
-      "status": "not_found"
-    },
-    {
-      "slug": "choukouya-resto-bar-cleveland",
-      "name": "Choukouya Resto-Bar",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Choukouya Resto-Bar restaurant Cleveland OH 44128",
-      "status": "not_found"
-    },
-    {
-      "slug": "habesha-ethiopian-and-eritrean-restaurant-cleveland",
-      "name": "Habesha Ethiopian and Eritrean Restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Habesha Ethiopian and Eritrean Restaurant restaurant Cleveland OH 44111",
-      "status": "not_found"
-    },
-    {
-      "slug": "alice-fufulicious-maple-heights",
-      "name": "Alice Fufulicious",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Alice Fufulicious restaurant Maple Heights OH 44137",
-      "status": "not_found"
-    },
-    {
-      "slug": "momos-kebab-moroccan-cleveland-heights",
-      "name": "MoMo's Kebab | Moroccan",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "MoMo's Kebab | Moroccan restaurant Cleveland Heights OH 44118",
-      "status": "not_found"
-    },
-    {
-      "slug": "island-style-east-cleveland",
-      "name": "Island Style",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Island Style restaurant East Cleveland OH 44112",
-      "status": "not_found"
-    },
-    {
-      "slug": "ayobami-african-food-no-dine-in-catering-only-euclid",
-      "name": "Ayobami African Food (no dine-in, Catering only)",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Ayobami African Food (no dine-in, Catering only) restaurant Euclid OH 44132",
-      "status": "not_found"
-    },
-    {
-      "slug": "primo-african-quisine-cleveland",
-      "name": "Primo African Quisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Primo African Quisine restaurant Cleveland OH 44115",
-      "status": "not_found"
-    },
-    {
-      "slug": "streetgrillz-windsor-on-n8w-3t6",
-      "name": "StreetGrillz Windsor",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "StreetGrillz Windsor restaurant Windsor ON N8W 3T6",
-      "status": "not_found"
-    },
-    {
-      "slug": "bunmi-l-b-on-l6j-3j3",
-      "name": "Bunmi Ọlọ́bẹ̀",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Bunmi Ọlọ́bẹ̀ restaurant Oakville ON L6J 3J3",
-      "status": "not_found"
-    },
-    {
-      "slug": "taste-cleveland-heights",
-      "name": "Taste",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Taste restaurant Cleveland Heights OH 44118",
-      "status": "not_found"
-    },
-    {
-      "slug": "the-social-room-cleveland-heights",
-      "name": "The Social Room",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "The Social Room restaurant Cleveland Heights OH 44118",
-      "status": "not_found"
-    },
-    {
-      "slug": "afrospice-bistro-bronx",
-      "name": "AfroSpice BisTro",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "AfroSpice BisTro restaurant Bronx NY 10473",
-      "status": "not_found"
-    },
-    {
-      "slug": "accra-bronx",
-      "name": "Accra",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Accra restaurant Bronx NY 10453",
-      "status": "not_found"
-    },
-    {
-      "slug": "international-delicious-kitchen-columbus",
-      "name": "International Delicious Kitchen .",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "International Delicious Kitchen . restaurant Columbus OH 43229",
-      "status": "not_found"
-    },
-    {
-      "slug": "intercontinental-african-nigerian-restaurant-columbus",
-      "name": "🇳🇬🇳🇬Intercontinental African Nigerian Restaurant🇳🇬🇺🇸",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "🇳🇬🇳🇬Intercontinental African Nigerian Restaurant🇳🇬🇺🇸 restaurant Columbus OH 43231",
-      "status": "not_found"
-    },
-    {
-      "slug": "safina-world-restaurant-columbus",
-      "name": "Safina World Restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Safina World Restaurant restaurant Columbus OH 43231",
-      "status": "not_found"
-    },
-    {
-      "slug": "nathmary-kitchen-avon",
-      "name": "NathMary Kitchen",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "NathMary Kitchen restaurant Avon IN 46123",
-      "status": "not_found"
-    },
-    {
-      "slug": "afro-pastries-indianapolis",
-      "name": "Afro Pastries",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Afro Pastries restaurant Indianapolis IN 46228",
-      "status": "not_found"
-    },
-    {
-      "slug": "mega-suya-bar-grill-indianapolis",
-      "name": "Mega Suya Bar & Grill",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Mega Suya Bar & Grill restaurant Indianapolis IN 46224",
-      "status": "not_found"
-    },
-    {
-      "slug": "le-bon-go-t-chez-fa-las-vegas",
-      "name": "Le Bon Goût Chez Fa",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Le Bon Goût Chez Fa restaurant Las Vegas NV 89102",
-      "status": "not_found"
-    },
-    {
-      "slug": "karyi-kitchens-new-orleans",
-      "name": "Karyi Kitchens",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Karyi Kitchens restaurant New Orleans LA 70170",
-      "status": "not_found"
-    },
-    {
-      "slug": "jollofinnola-slidell",
-      "name": "Jollofinnola",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Jollofinnola restaurant Slidell LA 70461",
-      "status": "not_found"
-    },
-    {
-      "slug": "flavors-nigerian-restaurant-orlando",
-      "name": "Flavors Nigerian Restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Flavors Nigerian Restaurant restaurant Orlando FL 32806",
-      "status": "not_found"
-    },
-    {
-      "slug": "selam-ethiopian-eritrean-cuisine-orlando",
-      "name": "Selam Ethiopian & Eritrean Cuisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Selam Ethiopian & Eritrean Cuisine restaurant Orlando FL 32821",
-      "status": "not_found"
-    },
-    {
-      "slug": "hadys-restaurant-international-cuisine-raleigh",
-      "name": "Hady's Restaurant | International Cuisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Hady's Restaurant | International Cuisine restaurant Raleigh NC 27601",
-      "status": "not_found"
-    },
-    {
-      "slug": "nigeria-kitchen-llc-wake-forest",
-      "name": "Nigeria Kitchen LLC",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Nigeria Kitchen LLC restaurant Wake Forest NC 27587",
-      "status": "not_found"
-    },
-    {
-      "slug": "afroeatz-authentic-liberian-food-sacramento",
-      "name": "AfroEatz - Authentic Liberian Food",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "AfroEatz - Authentic Liberian Food restaurant Sacramento CA 95811",
-      "status": "not_found"
-    },
-    {
-      "slug": "noor-somali-restaurant-salt-lake-city",
-      "name": "Noor Somali Restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Noor Somali Restaurant restaurant Salt Lake City UT 84104",
-      "status": "not_found"
-    },
-    {
-      "slug": "kente-caf-salt-lake-city",
-      "name": "Kente Café",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Kente Café restaurant Salt Lake City UT 84104",
-      "status": "not_found"
-    },
-    {
-      "slug": "african-village-ethiopian-restaurant-san-antonio",
-      "name": "African Village Ethiopian restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "African Village Ethiopian restaurant restaurant San Antonio TX 78230",
-      "status": "not_found"
-    },
-    {
-      "slug": "afrotex-grill-bowls-burritos-suya-plates-san-antonio",
-      "name": "AfroTex Grill - BOWLS, BURRITOS & SUYA PLATES",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "AfroTex Grill - BOWLS, BURRITOS & SUYA PLATES restaurant San Antonio TX 78249",
-      "status": "not_found"
-    },
-    {
-      "slug": "lucy-houston",
-      "name": "Lucy",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Lucy restaurant Houston TX 77074",
-      "status": "not_found"
-    },
-    {
-      "slug": "dee-titolat-african-restaurant-houston",
-      "name": "Dee Titolat African Restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Dee Titolat African Restaurant restaurant Houston TX 77099",
-      "status": "not_found"
-    },
-    {
-      "slug": "vertex-houston",
-      "name": "Vertex",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Vertex restaurant Houston TX 77074",
-      "status": "not_found"
-    },
-    {
-      "slug": "afro-caribbean-grill",
-      "name": "Afro Caribbean Grill",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Afro Caribbean Grill restaurant Houston TX 77004",
-      "status": "not_found"
-    },
-    {
-      "slug": "nini-kitchen-houston",
-      "name": "Nini Kitchen",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Nini Kitchen restaurant Houston TX 77072",
-      "status": "not_found"
-    },
-    {
-      "slug": "ethio-coffee-and-souk-houston",
-      "name": "Ethio Coffee and Souk",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Ethio Coffee and Souk restaurant Houston TX 77074",
-      "status": "not_found"
-    },
-    {
-      "slug": "ch-pnbl-k-houston-1769474644390",
-      "name": "ChòpnBlọk",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "ChòpnBlọk restaurant Houston TX 77006",
-      "status": "not_found"
-    },
-    {
-      "slug": "rodo-nigerian-cuisine-richmond",
-      "name": "Rodo Nigerian Cuisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Rodo Nigerian Cuisine restaurant Richmond TX 77407",
-      "status": "not_found"
-    },
-    {
-      "slug": "sarabell-calabar-restaurant-buffet-houston",
-      "name": "Sarabell Calabar Restaurant & Buffet",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Sarabell Calabar Restaurant & Buffet restaurant Houston TX 77036",
-      "status": "not_found"
-    },
-    {
-      "slug": "delights-ghanaian-cuisine-houston",
-      "name": "Delight's Ghanaian Cuisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Delight's Ghanaian Cuisine restaurant Houston TX 77077",
-      "status": "not_found"
-    },
-    {
-      "slug": "adulis-houston",
-      "name": "Adulis",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Adulis restaurant Houston TX 77081",
-      "status": "not_found"
-    },
-    {
-      "slug": "kenna-houston",
-      "name": "Kenna",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Kenna restaurant Houston TX 77081",
-      "status": "not_found"
-    },
-    {
-      "slug": "harar-ethiopian-restaurant-houston",
-      "name": "Harar Ethiopian Restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Harar Ethiopian Restaurant restaurant Houston TX 77081",
-      "status": "not_found"
-    },
-    {
-      "slug": "selam-houston",
-      "name": "Selam",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Selam restaurant Houston TX 77081",
-      "status": "not_found"
-    },
-    {
-      "slug": "ewatomi-houston",
-      "name": "Ewatomi",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Ewatomi restaurant Houston TX 77083",
-      "status": "not_found"
-    },
-    {
-      "slug": "sheba-houston",
-      "name": "Sheba",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Sheba restaurant Houston TX 77081",
-      "status": "not_found"
-    },
-    {
-      "slug": "nazareth-cafe-houston",
-      "name": "Nazareth Cafe",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Nazareth Cafe restaurant Houston TX 77081",
-      "status": "not_found"
-    },
-    {
-      "slug": "traditional-food-restaurant-houston",
-      "name": "Traditional Food Restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Traditional Food Restaurant restaurant Houston TX 77031",
-      "status": "not_found"
-    },
-    {
-      "slug": "cafe-de-vivre-houston",
-      "name": "Cafe De Vivre",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Cafe De Vivre restaurant Houston TX 77083",
-      "status": "not_found"
-    },
-    {
-      "slug": "glam-divine-treats-houston",
-      "name": "Glam Divine Treats",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Glam Divine Treats restaurant Houston TX 77083",
-      "status": "not_found"
-    },
-    {
-      "slug": "unique-african-cuisine-houston",
-      "name": "Unique African Cuisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Unique African Cuisine restaurant Houston TX 77072",
-      "status": "not_found"
-    },
-    {
-      "slug": "grill-master-african-restaurant-houston",
-      "name": "Grill master African Restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Grill master African Restaurant restaurant Houston TX 77099",
-      "status": "not_found"
-    },
-    {
-      "slug": "somali-restaurant-syracuse",
-      "name": "Somali Restaurant",
-      "source": "duckduckgo",
-      "candidates": 160,
-      "search_query": "Somali Restaurant Syracuse NY 13208",
-      "status": "not_found"
-    },
-    {
-      "slug": "somali-halal-store-mechanicsburg",
-      "name": "Somali Halal store",
-      "source": "duckduckgo",
-      "candidates": 200,
-      "search_query": "Somali Halal store restaurant texas website",
-      "discovered_url": "https://ayansomaliancuisine.com",
-      "http_ok": true,
-      "status": "ok"
-    },
-    {
-      "slug": "sf-001",
-      "name": "Teranga",
-      "source": "duckduckgo",
-      "candidates": 40,
-      "search_query": "Teranga restaurant San Francisco CA 94111",
-      "discovered_url": "https://www.terangafoods.com",
-      "http_ok": true,
-      "status": "ok"
     }
   ]
 }
