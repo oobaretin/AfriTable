@@ -2,10 +2,11 @@
 
 import * as React from "react";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
-import { transformJSONRestaurantToDetail, type JSONRestaurant } from "@/lib/restaurant-json-loader";
+import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
+import type { CatalogListItem } from "@/lib/catalog-list-item";
 
 type StaffPicksProps = {
-  restaurants: JSONRestaurant[];
+  restaurants: CatalogListItem[];
 };
 
 export function StaffPicks({ restaurants }: StaffPicksProps) {

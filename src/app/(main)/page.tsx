@@ -17,6 +17,8 @@ import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
+import { pickHomepageSpotlight } from "@/lib/catalog-list-item";
+import { buildTrendingCityGroups } from "@/lib/trending-cities-groups";
 
 // loadRestaurantsFromJSON is now imported from restaurant-json-loader-server
 
@@ -39,6 +41,9 @@ export default async function MainHomePage() {
   const featuredCityKeys = (homeConfig?.localPulse?.messages ?? [])
     .map((message: { city?: string }) => (message.city ? pulseCityToKey(message.city) : null))
     .filter((key: string | null): key is string => Boolean(key));
+
+  const homepageSpotlight = pickHomepageSpotlight(restaurantsFromJSON);
+  const trendingCityGroups = buildTrendingCityGroups(restaurantsFromJSON, featuredCityKeys);
 
   const cuisineBrowseRestaurants = [...restaurantsFromJSON]
     .sort((a, b) => (b.rating || 0) - (a.rating || 0))
@@ -67,7 +72,7 @@ export default async function MainHomePage() {
 
         {/* Restaurant spotlight — multi-state coverage */}
         <div id="restaurants-section">
-          <HomepageRestaurantSimple restaurants={restaurantsFromJSON} />
+          <HomepageRestaurantSimple spotlight={homepageSpotlight} />
         </div>
       </HomeSearchProvider>
 
@@ -142,7 +147,7 @@ export default async function MainHomePage() {
         </Reveal>
 
         <Reveal className="mt-6">
-          <TrendingCitiesClient restaurants={restaurantsFromJSON} featuredCityKeys={featuredCityKeys} />
+          <TrendingCitiesClient cityGroups={trendingCityGroups} />
         </Reveal>
         <Reveal className="mt-6 flex justify-center">
           <a

@@ -4,10 +4,10 @@ import * as React from "react";
 import { Suspense } from "react";
 import { RestaurantFiltersProvider } from "@/contexts/restaurant-filters-context";
 import { RestaurantsGridClient } from "./RestaurantsGridClient";
-import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
+import type { CatalogListItem } from "@/lib/catalog-list-item";
 
 type RestaurantsPageClientProps = {
-  restaurants: JSONRestaurant[];
+  restaurants: CatalogListItem[];
 };
 
 function RestaurantsPageContent({ restaurants }: RestaurantsPageClientProps) {

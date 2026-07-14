@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
+import type { CatalogListItem } from "@/lib/catalog-list-item";
 import {
   useRestaurantFilters,
   type RestaurantFiltersApi,
@@ -13,7 +13,7 @@ export function RestaurantFiltersProvider({
   restaurants,
   children,
 }: {
-  restaurants: JSONRestaurant[];
+  restaurants: CatalogListItem[];
   children: React.ReactNode;
 }) {
   const api = useRestaurantFilters(restaurants);

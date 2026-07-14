@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
+import { toCatalogListItems } from "@/lib/catalog-list-item";
 import { RestaurantsPageClient } from "./RestaurantsPageClient";
 
 export default function RestaurantsPage() {
-  const restaurantsFromJSON = loadRestaurantsFromJSON();
+  const restaurantsFromJSON = toCatalogListItems(loadRestaurantsFromJSON());
 
   return (
     <main className="min-h-[100vh] bg-[#000814]">

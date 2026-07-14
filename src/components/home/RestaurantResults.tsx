@@ -3,10 +3,10 @@
 import * as React from "react";
 import Link from "next/link";
 import { RestaurantCardWithDistance } from "./RestaurantCardWithDistance";
-import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
+import type { CatalogListItem } from "@/lib/catalog-list-item";
 
 type RestaurantWithDistance = {
-  restaurant: JSONRestaurant;
+  restaurant: CatalogListItem;
   distance: number | null;
 };
 

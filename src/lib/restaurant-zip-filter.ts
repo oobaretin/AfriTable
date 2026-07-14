@@ -1,12 +1,12 @@
-import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
+import type { CatalogListItem } from "@/lib/catalog-list-item";
 import { calculateDistance, getZipCodeCoordinates } from "@/lib/geocoding";
 
 export type ZipFilteredRestaurant = {
-  restaurant: JSONRestaurant;
+  restaurant: CatalogListItem;
   distance: number;
 };
 
-export function getRestaurantZipCode(restaurant: JSONRestaurant): string | null {
+export function getRestaurantZipCode(restaurant: CatalogListItem): string | null {
   if (restaurant.zip) {
     return restaurant.zip;
   }
@@ -18,7 +18,7 @@ export function getRestaurantZipCode(restaurant: JSONRestaurant): string | null 
 }
 
 export function getRestaurantCoordinates(
-  restaurant: JSONRestaurant,
+  restaurant: CatalogListItem,
 ): { lat: number; lng: number } | null {
   if (restaurant.lat !== undefined && restaurant.lng !== undefined) {
     return { lat: restaurant.lat, lng: restaurant.lng };
@@ -32,7 +32,7 @@ export function getRestaurantCoordinates(
 
 /** Filter catalog by zip centroid + radius (miles), sorted nearest first. */
 export function filterRestaurantsByZip(
-  restaurants: JSONRestaurant[],
+  restaurants: CatalogListItem[],
   zipCode: string,
   radiusMiles: number,
 ): ZipFilteredRestaurant[] {

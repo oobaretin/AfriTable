@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
+import type { CatalogListItem } from "@/lib/catalog-list-item";
 import {
   filterByVibe,
   filterRestaurantList,
@@ -17,7 +17,7 @@ import {
 import { filterRestaurantsByZip } from "@/lib/restaurant-zip-filter";
 
 export type FilteredRestaurantResult = {
-  restaurant: JSONRestaurant;
+  restaurant: CatalogListItem;
   distance: number | null;
 };
 
@@ -37,7 +37,7 @@ export type RestaurantFiltersApi = {
 };
 
 export function computeFilteredRestaurantResults(
-  restaurants: JSONRestaurant[],
+  restaurants: CatalogListItem[],
   filters: RestaurantFilterState,
 ): FilteredRestaurantResult[] {
   let pool = restaurants;
@@ -71,7 +71,7 @@ export function computeFilteredRestaurantResults(
   return results;
 }
 
-export function useRestaurantFilters(restaurants: JSONRestaurant[]): RestaurantFiltersApi {
+export function useRestaurantFilters(restaurants: CatalogListItem[]): RestaurantFiltersApi {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();

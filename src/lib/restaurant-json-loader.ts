@@ -3,6 +3,7 @@
 
 import { parseCatalogHoursToArray } from "@/lib/parse-catalog-hours";
 import { resolveGoogleSearchUrl } from "@/lib/google-search-url";
+import type { CatalogListItem } from "@/lib/catalog-list-item";
 
 export type JSONRestaurant = {
   id: string;
@@ -49,7 +50,7 @@ export type JSONRestaurant = {
 };
 
 // Transform JSON restaurant to RestaurantDetail format
-export function transformJSONRestaurantToDetail(jsonRestaurant: JSONRestaurant): any {
+export function transformJSONRestaurantToDetail(jsonRestaurant: CatalogListItem & Partial<JSONRestaurant>): any {
   const priceRangeMap: Record<string, number> = {
     $: 1,
     $$: 2,
