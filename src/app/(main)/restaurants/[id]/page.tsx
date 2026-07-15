@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { format } from "date-fns";
 import { createSupabasePublicClient } from "@/lib/supabase/public";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -19,6 +18,7 @@ import { formatTimeRange12h } from "@/lib/utils/time-format";
 import { getRestaurantByIdFromJSON, getSimilarRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 import { parseCatalogHoursToArray } from "@/lib/parse-catalog-hours";
+import { getTodayOperatingHours } from "@/lib/today-operating-hours";
 import { resolveRestaurantImageUrl, resolveRestaurantOgImageUrl } from "@/lib/restaurant-image";
 import { getAppBaseUrl } from "@/lib/app-url";
 
@@ -169,19 +169,6 @@ function pickOperatingHours(...candidates: OperatingHour[][]): OperatingHour[] {
     if (Array.isArray(c) && c.length) return c;
   }
   return [];
-}
-
-function todayHours(operatingHours: any, date = new Date()) {
-  const list = normalizeOperatingHours(operatingHours);
-  if (!list.length) return { label: "Hours coming soon", openNow: false, hasHours: false };
-  const dow = date.getDay();
-  const rule = list.find((o: any) => o?.day_of_week === dow);
-  if (!rule) return { label: "Closed", openNow: false, hasHours: true };
-  const open = String(rule.open_time ?? "");
-  const close = String(rule.close_time ?? "");
-  const now = format(date, "HH:mm");
-  const openNow = open && close ? now >= open && now < close : false;
-  return { label: formatTimeRange12h(open, close), openNow, hasHours: true };
 }
 
 const UUID_RE =
@@ -389,7 +376,9 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
   }
 
   const addrStr = addressToString(restaurant.address);
-  const todays = todayHours(operatingHours);
+  const todays = getTodayOperatingHours(operatingHours, {
+    address: restaurant.address,
+  });
 
   // Simple histogram (client-friendly)
   const histogram = [0, 0, 0, 0, 0];
@@ -641,9 +630,15 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
                 <div className="text-sm font-medium break-words sm:whitespace-nowrap py-1 min-h-[32px] flex items-center">
                   {!todays.hasHours ? (
                     <span className="text-muted-foreground">{todays.label}</span>
+                  ) : todays.closedToday ? (
+                    <span className="text-muted-foreground">{todays.label}</span>
                   ) : (
                     <>
-                      {todays.openNow ? <span className="text-[oklch(0.35_0.06_145)]">Open now</span> : "Closed"}{" "}
+                      {todays.openNow ? (
+                        <span className="text-[oklch(0.35_0.06_145)]">Open now</span>
+                      ) : (
+                        <span>Closed now</span>
+                      )}{" "}
                       <span className="text-muted-foreground">({todays.label})</span>
                     </>
                   )}
