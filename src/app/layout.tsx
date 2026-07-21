@@ -29,10 +29,6 @@ const siteUrl = getAppBaseUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  icons: {
-    icon: [{ url: "/logo.png", type: "image/png" }],
-    apple: "/logo.png",
-  },
   title: {
     default: siteTitle,
     template: `%s | ${siteName}`,
