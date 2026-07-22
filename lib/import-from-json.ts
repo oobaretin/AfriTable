@@ -118,11 +118,11 @@ async function getOrCreateOwnerForSlug(
   restaurantName: string,
   phone: string,
 ) {
-  const baseEmail = `${slug}@owners.afritable.com`.replace(/[^a-z0-9@._+-]/gi, "");
+  const baseEmail = `${slug}@owners.afri-table.com`.replace(/[^a-z0-9@._+-]/gi, "");
 
   for (let attempt = 0; attempt < 5; attempt++) {
     const email =
-      attempt === 0 ? baseEmail : `${slug}-${crypto.randomBytes(2).toString("hex")}@owners.afritable.com`;
+      attempt === 0 ? baseEmail : `${slug}-${crypto.randomBytes(2).toString("hex")}@owners.afri-table.com`;
     const password = generatePassword();
 
     const created = await supabase.auth.admin.createUser({

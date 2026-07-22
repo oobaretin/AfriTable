@@ -108,7 +108,7 @@ if (viable.length === 0) {
       p_reservation_time: tt,
       p_party_size: 2,
       p_guest_name: "Probe Diner",
-      p_guest_email: "probe@afritable.com",
+      p_guest_email: "probe@afri-table.com",
       p_guest_phone: "+15555550100",
       p_special_requests: "internal probe — safe to ignore",
       p_occasion: null,

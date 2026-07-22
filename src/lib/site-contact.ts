@@ -1,16 +1,16 @@
 /**
- * Public @afritable.com contact addresses (shown in UI and mailto links only).
- * Server delivery uses SITE_INBOX_EMAIL / SMTP env — never put a personal Gmail here.
+ * Public @afri-table.com contact addresses (shown in UI and mailto links only).
+ * Forwarded via Cloudflare Email Routing. Server delivery uses SITE_INBOX_EMAIL / SMTP env.
  */
 export const SITE_CONTACT = {
-  hello: "hello@afritable.com",
-  partners: "partners@afritable.com",
-  partnerships: "partnerships@afritable.com",
-  support: "support@afritable.com",
-  sales: "sales@afritable.com",
-  privacy: "privacy@afritable.com",
+  hello: "hello@afri-table.com",
+  partners: "partners@afri-table.com",
+  partnerships: "partnerships@afri-table.com",
+  support: "support@afri-table.com",
+  sales: "sales@afri-table.com",
+  privacy: "privacy@afri-table.com",
   /** Default server notification To: if SITE_INBOX_EMAIL is unset; not shown on marketing pages. */
-  contact: "contact@afritable.com",
+  contact: "contact@afri-table.com",
 } as const;
 
 export function mailto(email: string): string {

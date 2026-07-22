@@ -92,10 +92,10 @@ async function findUserIdByEmail(supabaseAdmin, email) {
 
 async function getOrCreateOwnerForSlug(supabaseAdmin, slug, restaurantName, phone) {
   // Deterministic base email per slug; add suffix if collision.
-  const baseEmail = `${slug}@owners.afritable.com`.replace(/[^a-z0-9@._+-]/gi, "");
+  const baseEmail = `${slug}@owners.afri-table.com`.replace(/[^a-z0-9@._+-]/gi, "");
 
   for (let attempt = 0; attempt < 5; attempt++) {
-    const email = attempt === 0 ? baseEmail : `${slug}-${crypto.randomBytes(2).toString("hex")}@owners.afritable.com`;
+    const email = attempt === 0 ? baseEmail : `${slug}-${crypto.randomBytes(2).toString("hex")}@owners.afri-table.com`;
     const password = generatePassword();
 
     const created = await supabaseAdmin.auth.admin.createUser({

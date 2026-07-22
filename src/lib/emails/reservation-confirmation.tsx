@@ -15,7 +15,7 @@ import {
 } from "@react-email/components";
 
 export type ReservationConfirmationEmailProps = {
-  appBaseUrl: string; // e.g. https://afritable.com
+  appBaseUrl: string; // e.g. https://afri-table.com
   restaurantName: string;
   restaurantAddress: string;
   restaurantPhone?: string | null;

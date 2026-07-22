@@ -22,7 +22,7 @@ export function isSmtpConfigured(): boolean {
   return Boolean(host && user && pass);
 }
 
-/** From header for SMTP sends. Prefer `EMAIL_FROM` (e.g. noreply@afritable.com if your provider allows). With Gmail SMTP, Gmail typically requires the authenticated account address. */
+/** From header for SMTP sends. Prefer `EMAIL_FROM` (e.g. noreply@afri-table.com if your provider allows). With Gmail SMTP, Gmail typically requires the authenticated account address. */
 export function getDefaultMailFrom(): string {
   return (
     process.env.EMAIL_FROM?.trim() ||
