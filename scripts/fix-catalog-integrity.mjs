@@ -38,6 +38,8 @@ const REMOVE_IDS = new Set([
   "tailat-kitchen-austin", // Wrong Pflugerville address; real location is Westminster Dr
   "lucy-houston", // Duplicate of hou-sta-017 (Lucy Ethiopian Restaurant & Lounge)
   "sarabell-calabar-restaurant-buffet-houston", // Duplicate of hou-sta-004 (same address/phone)
+  "guinea-conakry-austin", // Stale listing — 318 E 5th now occupied by another tenant
+  "african-cuisine-san-diego", // Incomplete Cantina Wy address; unverified ghost listing
 ]);
 
 const ADDRESS_FIXES = {

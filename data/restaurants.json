@@ -1933,10 +1933,14 @@
       "mon": "11:00 AM - 8:30 PM",
       "tue_sun": "11:00 AM - 9:30 PM"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Dakar Street Food.",
-    "our_story": "",
-    "cultural_roots": "",
-    "menu_highlights": [],
+    "about": "Counter-service Senegalese kitchen on Walnut Bend Lane, known for thieboudienne, grilled fish, and crisp nem spring rolls.",
+    "our_story": "A Houston outpost of Dakar Street Food bringing West African street flavors to the west side.",
+    "cultural_roots": "Senegalese home cooking \u2014 rice, fish, and peanut-stew traditions from Dakar.",
+    "menu_highlights": [
+      "Thieboudienne",
+      "Nem spring rolls",
+      "Grilled fish"
+    ],
     "vibe_category": "Authentic Staples",
     "id": "dakar-street-food-hou",
     "name": "Dakar Street Food",
@@ -4497,10 +4501,11 @@
     "vibe_category": "Authentic Staples",
     "state": "AZ",
     "google_search_url": "https://www.google.com/search?q=Ethiopian%20Famous%20Restaurant%2C%20933%20E%20University%20Dr%20%23112%2C%20Tempe%2C%20AZ%2085288",
-    "website": "https://ethiopianfamousrestaurantaz.com",
+    "website": "https://ethiopianfamousrestaurant.com",
     "images": [
       "/restaurant-card-placeholder.svg"
-    ]
+    ],
+    "phone": "(602) 449-0055"
   },
   {
     "id": "island-breeze-colton",
@@ -4555,7 +4560,9 @@
     "google_search_url": "https://www.google.com/search?q=Island%20Breeze%20Jamaican%20Cuisine%20(San%20Bernardino)%2C%20763%20W%20Highland%20Ave%2C%20San%20Bernardino%2C%20CA%2092405",
     "images": [
       "/restaurant-card-placeholder.svg"
-    ]
+    ],
+    "phone": "(909) 352-2001",
+    "website": "https://www.ibjamaicancuisine.com"
   },
   {
     "id": "zola-cultural-kitchen-mesa",
@@ -6108,11 +6115,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Atlanta. Experience traditional African flavors and hospitality at BoumBoumAtl.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Buford Highway lounge pairing American fusion plates with a chic dine-in vibe and late-night energy.",
+    "our_story": "Boum Boum ATL mixes metropolitan dining with neighborhood hospitality on Atlanta's international corridor.",
+    "cultural_roots": "African diaspora meets American fusion in a social, music-forward setting.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Fusion entr\u00e9es",
+      "Shareable appetizers",
+      "Weekend brunch"
     ],
     "vibe_category": "Authentic Staples",
     "state": "GA",
@@ -6330,11 +6339,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in New York. Experience traditional African flavors and hospitality at d\u00f9nd\u00fa.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Midtown African dining room near Grand Central serving bold, shareable plates in a modern setting.",
+    "our_story": "d\u00f9nd\u00fa brings contemporary African flavors to Manhattan's commuter core.",
+    "cultural_roots": "Pan-African ingredients reimagined for New York's fast-paced dining scene.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Chef's tasting plates",
+      "Seasonal stews",
+      "House cocktails"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NY",
@@ -6393,11 +6404,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in New York. Experience traditional West African flavors and hospitality at D. Salam African Cuisine.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Canal Street West African spot for jollof, grilled meats, and hearty lunch combos downtown.",
+    "our_story": "D. Salam keeps Lower Manhattan fed with familiar flavors from across West Africa.",
+    "cultural_roots": "Nigerian and Ghanaian staples in a compact, counter-friendly format.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Jollof rice",
+      "Grilled chicken",
+      "Egusi soup"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NY",
@@ -6424,11 +6437,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in New York. Experience traditional African flavors and hospitality at Lagos TSQ.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Times Square West African fusion lounge where Nigerian flavors meet NYC nightlife energy.",
+    "our_story": "Lagos TSQ celebrates Nigeria's culture through food, music, and a vibrant dining room steps from Broadway.",
+    "cultural_roots": "Nigerian culinary heritage filtered through a cosmopolitan New York lens.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Suya skewers",
+      "Jollof rice",
+      "Pepper soup"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NY",
@@ -6457,11 +6472,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in New York. Experience traditional West African flavors and hospitality at Teranga Midtown.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Fast-casual West African superfood counter in Midtown \u2014 scratch-made, gluten-free bowls and plates daily.",
+    "our_story": "Teranga Midtown carries the same Senegalese-rooted menu as the Harlem flagship to Lexington Avenue office crowds.",
+    "cultural_roots": "Ancient West African grains and stews, cooked fresh with organic, dairy-free ingredients.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Jollof rice bowl",
+      "Yassa chicken",
+      "Thiou curry"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NY",
@@ -6488,11 +6505,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Charlotte. Experience traditional African flavors and hospitality at Oga Suya CLT.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Charlotte suya spot on Thrift Road grilling beef, chicken, and ram with classic yaji spice.",
+    "our_story": "Oga Suya CLT brings Northern Nigerian street food to Charlotte with delivery and takeout.",
+    "cultural_roots": "Hausa suya grills and West African rice-and-stew combos.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Beef suya",
+      "Jollof rice",
+      "Egusi soup"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NC",
@@ -6504,7 +6523,8 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlLljDh1gvpI7ChCnfpXSD20d-Tgax_QP0SKjJtNmAyy1r5dpK5EC2imgFV4NHI8CkurU4Br0gh2Z_VywtdnGejIk8D7Ojjz0HoXPcSAc7AD3JcieDMW-JevUDZz8pz0FPipcIkD9QbHW3X=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmfZr8FLEPjSo4kkSvjgFRFHR5PORTAfG8q6KbP1r7CBF_WnabR-iFj3MC7edlSLx6reImibnR23STMFyMeErZyQArFINzR0KqHY-jEu-JYdQg26nijhOgarAKMrdKwxHnhIuAyrP9svLSE=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnhBIVwbFhC8gQ0nwpKvxI18LrGhyI4JfBbnvXC8-QxR3d-bKgwMp3maMJ-CqsbanE0blmGFq5nsHX3E4VCyBFZJkzMjdCEaw7wJiqVk4NXlh1MXfwZoSiyzhJFPwgT72u1CF9GmEFcK803=w1000-h1000-c-n"
-    ]
+    ],
+    "phone": "(980) 467-4461"
   },
   {
     "id": "mama-gees-charlotte",
@@ -6810,11 +6830,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Arlington. Experience traditional West African flavors and hospitality at Fufudelight& Suya Kitchen.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Arlington suya and fufu kitchen on New York Avenue, grilling spice-rubbed meats for DFW diners.",
+    "our_story": "Fufudelight & Suya Kitchen feeds North Texas with Nigerian grill classics and swallow-friendly soups.",
+    "cultural_roots": "Northern Nigerian suya culture and West African swallow traditions.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Beef suya",
+      "Fufu with egusi",
+      "Jollof rice"
     ],
     "vibe_category": "Authentic Staples",
     "state": "AZ",
@@ -6904,14 +6926,16 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Kofoshi.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Nigerian restaurant on South Gessner serving pepper soup, rice plates, and weekend party trays.",
+    "our_story": "Kofoshi is a go-to for Houston's Nigerian community craving homestyle seasoning and generous portions.",
+    "cultural_roots": "Yoruba and Igbo cooking traditions from Lagos and the southeast.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Pepper soup",
+      "Fried rice",
+      "Egusi with fufu"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "AZ",
+    "state": "TX",
     "google_place_id": "ChIJiXz1L7jDQIYRvmAwpzVxXps",
     "lat": 29.724051399999997,
     "lng": -95.53972429999999,
@@ -6936,11 +6960,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Hunan Cafe.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "North Houston West African cafe \u2014 don't let the name fool you; the menu is jollof, stews, and grilled fish.",
+    "our_story": "Hunan Cafe has served Cypress-area families West African comfort food for years.",
+    "cultural_roots": "Ghanaian and Nigerian home cooking on Houston's northwest side.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Jollof rice",
+      "Light soup",
+      "Grilled tilapia"
     ],
     "vibe_category": "Authentic Staples",
     "state": "AZ",
@@ -7254,11 +7280,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Brooklyn. Experience traditional African flavors and hospitality at K\u00e1y\u1ecd\u0300d\u00e9 Restaurant Mirage.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Flatbush African kitchen on East 26th Street with Nigerian grills, rice plates, and takeout-friendly combos.",
+    "our_story": "K\u00e1y\u1ecd\u0300d\u00e9 Restaurant Mirage brings Brooklyn neighbors bold seasoning and late-night suya cravings.",
+    "cultural_roots": "Nigerian diaspora cooking in central Brooklyn.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Suya platter",
+      "Jollof rice",
+      "Goat meat stew"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NY",
@@ -7334,37 +7362,6 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkilQ2lMIDRBRbfGAC0ztoVEosCqI1Rq0q0uXJ-FPq0rqBt69B-eXcP9dLc8ulE60GeW9qwwjcMCZl9EHsBS6rItbwSCVjFkbXgRO_x95Sh9uphUyJ3QIma7DFdId1bWH51kFzY=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkBKldLv_v6OOH47ySHEpd6r4sEsDkvT4zPG4BE3ECtOnRReMktMC8QMw7pG3XM0ptS1DEY_R2jiAon1saYmdz4MQOefa1w9BynvJV8jnbGYSZloPDRSoD0PlnuLNY_2onYBBBu5uewNWs=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkJLj6udHfmbTet1QGSIPDXJxCiX-_vuxIsxbUbt63MleU4rr4TU5dU7OYFw0kQNwMR-0v81hJXs0uQUqPhDym9psRkgXxEffrdNUVtNcCX8MH1FIPeJC6cfuWQ6LaXtp38wWIT=w1000-h1000-c-n"
-    ]
-  },
-  {
-    "id": "african-cuisine-san-diego",
-    "name": "African Cuisine",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.6,
-    "address": "Cantina Wy, San Diego, CA 92115",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in San Diego. Experience traditional African flavors and hospitality at African Cuisine.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "CA",
-    "google_place_id": "ChIJFWVk3IVW2YAR40wq6HvB-3Q",
-    "lat": 32.7722835,
-    "lng": -117.0694616,
-    "google_search_url": "https://www.google.com/search?q=African%20Cuisine%2C%20Cantina%20Wy%2C%20San%20Diego%2C%20CA%2092115",
-    "website": "https://www.africancuisinesandiego.com",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkHxvTrbCq3MY4v9QutCEsTQFY1UIx7PtRFMP8dRqJewyCsfuR3b6dICxXrZNWTqweNbIzJaIk4uY0EKaq6I5RKQcq83jmCGUYKX-m-99TfyVG1oBUfcTZx7wZi8kU4US1bVWw751oDxYM=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWliHjAbyCy4WyV-oRfKRpUDNmFpTzdXvCPInAwAg9pSS4MSkB-QzhmpH2--wQMjsvby0K0svHFDjLizgqxcOiWQLxVE3uxcVk36sTxt-ZCeIbsWSo-JdlUD0kYc2VMwqeqeNnCd=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk1eTB-JaZYcVXw19qGVg5xPxIEk0zmILqwdp4GE53-ao0v2OvBh5GrUPqbx9SwPuCsJgw4BwLBiziHE7iTDHGxGvYL4ABdNU8EeGKi1agWrdBABR0OKcBWoxg2ubiB-i1SiPeP4g=w1000-h1000-c-n"
     ]
   },
   {
@@ -7811,36 +7808,6 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl1Ovs9EtTuJzTl8Nr1WdDsXe5rwmpQmAIQ-DeaFe4qhq2HGzwgDyH5OxLNOGl9EoljxSCrUf01G4cKPdihLe8gEPIw1AOqNlR3PxJSyd44Wjp7TlM9oesb7FKQq0OXEw1ljTQ=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk4301XJ7G1b41BAURg_ly-KnW3BhK1EuSU5CDCNqBhmvRBK-xTEYwA-WensUMjI4d3zN041XjigK-oj3P2rZCOB4xVEHB4HRSrf9TyKyXrqsHN4FUxSxw5tK4oZvzfsBKjYNXCSopQVC0=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlPlAs4M5-0b5cCPuKrv278p6h2NcTigCMPpt0xT1PVxm8udKl90mQG748Tki41vw7kNuDaRn1DCURi0Ey2iJJMojj4SdVfqW_KX0Lf7K4B6QETDjMrOHEPV60e8QhJhqqYt5bb=w1000-h1000-c-n"
-    ]
-  },
-  {
-    "id": "guinea-conakry-austin",
-    "name": "Guinea Conakry",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.8,
-    "address": "318 E 5th St., Austin, TX 78701",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic African restaurant in Austin. Experience traditional African flavors and hospitality at Guinea Conakry.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_place_id": "ChIJeUGbZou1RIYRo4hTrzcMk-c",
-    "lat": 30.266524699999998,
-    "lng": -97.7399763,
-    "google_search_url": "https://www.google.com/search?q=Guinea%20Conakry%2C%20318%20E%205th%20St.%2C%20Austin%2C%20TX%2078701",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWluHi3V8CV36RGJGmRsKp8gCYjl7eP9DkapIxP1mtbpytl8ASd7XIKoRqUOqZbuVLb3qKuJl8PVONvDOTWigr977BMlEL_cHsJdz18y_gcu1lCOMbLiw5hkN3qgM8nDDwXxXLYUnw=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmNMZ5UtejaelE2EuHoSUg0VbVPhGVFK5mN-uMsb21EPO1YuWCcYA_bXgdJVXqGkkBqbbTpqlKgQStDDJEZHnssdlrfkt8iDBwWUjlMIS9cYh4KzD5tnB6yFSk1cf2Zs8t64pTw=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnwO_vag15wORPYiZFcg6lxZ7dva-Q0mh1K_AegK1ZD6H3BELe0nOJqKNosCJHCLQ4D4BxwpetI9IVmT93W5OO7WFwi1seqVfcjWp2gJ7lAZS8CuKOh80iJCaXVeYfQmZGDscD3=w1000-h1000-c-n"
     ]
   },
   {
@@ -8654,11 +8621,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in New York. Experience traditional West African flavors and hospitality at Accra Express Restaurant.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Fast-casual Ghanaian counter in East Harlem \u2014 jollof, waakye, fufu, and egusi made fresh daily.",
+    "our_story": "Accra Express packs Harlem lunch breaks with the same flavors you'd find at a Accra chop bar.",
+    "cultural_roots": "Ghanaian street-food classics from jollof to shito sauce.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Jollof rice",
+      "Waakye",
+      "Egusi soup with fufu"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NY",
@@ -8685,11 +8654,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Bronx. Experience traditional African flavors and hospitality at AfroSpice BisTro.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Bronx Afro-fusion bistro on Commonwealth Avenue blending West African spice with Caribbean heat.",
+    "our_story": "AfroSpice BisTro feeds Parkchester and Castle Hill with colorful plates and friendly counter service.",
+    "cultural_roots": "West African seasoning meets Bronx neighborhood dining culture.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Curry goat",
+      "Jerk chicken",
+      "Plantains"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NY",
@@ -8716,11 +8687,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Bronx. Experience traditional West African flavors and hospitality at Accra.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Ghanaian restaurant on Davidson Avenue serving fufu, banku, and pepper stews to Bronx regulars.",
+    "our_story": "Accra keeps Tremont Avenue's West African community connected to familiar Ghanaian flavors.",
+    "cultural_roots": "Akan and Ga home cooking \u2014 soups, stews, and fermented corn sides.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Fufu with light soup",
+      "Banku and tilapia",
+      "Kelewele"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NY",
@@ -8747,11 +8720,13 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Brooklyn. Experience traditional West African flavors and hospitality at Akwaaba Restaurant.",
-    "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Parkside Avenue Ghanaian dining room known for omo tuo, groundnut soup, and weekend catering.",
+    "our_story": "Akwaaba \u2014 'welcome' in Twi \u2014 has been a Brooklyn anchor for Ghanaian gatherings and family meals.",
+    "cultural_roots": "Ashanti and southern Ghanaian recipes passed through the diaspora.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Omo tuo",
+      "Groundnut soup",
+      "Red-red"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NY",
@@ -10329,11 +10304,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Dee Titolat African Restaurant.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "West African restaurant on Bissonnet in Alief with Nigerian rice dishes, stews, and meat pies.",
+    "our_story": "Dee Titolat serves southwest Houston families generous plates rooted in Nigerian home cooking.",
+    "cultural_roots": "Yoruba and Igbo flavors in one of Houston's most diverse dining corridors.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Jollof rice",
+      "Meat pie",
+      "Egusi soup"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10355,11 +10332,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Vertex.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Ethiopian restaurant near Sharpstown with vegetarian combos, tibs, and injera served on shared platters.",
+    "our_story": "Vertex welcomes Habesha families and newcomers to Ethiopian communal dining on the Southwest Freeway.",
+    "cultural_roots": "Ethiopian Orthodox fasting traditions and berbere-spiced stews.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Veggie combo",
+      "Beef tibs",
+      "Doro wat"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10435,11 +10414,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Osuma Suya.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Suya specialist on South Texas 6 grilling pepper-rubbed beef, chicken, and ram skewers to order.",
+    "our_story": "Osuma Suya brings Northern Nigerian street-grill culture to west Houston.",
+    "cultural_roots": "Hausa suya spice blends \u2014 yaji, ground peanuts, and open-flame heat.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Beef suya",
+      "Chicken suya",
+      "Ram suya"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10461,11 +10442,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Nini Kitchen.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "West African kitchen on Cook Road in Chinatown serving pepper soup, jollof, and swallow combos.",
+    "our_story": "Nini Kitchen is a neighborhood spot for Nigerian and Ghanaian lunch plates in southwest Houston.",
+    "cultural_roots": "West African chop-bar staples adapted for Houston's international district.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Pepper soup",
+      "Jollof rice",
+      "Fufu with soup"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10488,11 +10471,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Sabo Suya.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Country Creek suya house famous for late-night skewers, kilishi, and spicy pepper sides.",
+    "our_story": "Sabo Suya keeps Houston's suya lovers coming back for smoky, yaji-crusted grills.",
+    "cultural_roots": "Northern Nigerian open-fire grilling traditions.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Mixed suya platter",
+      "Kilishi",
+      "Moi moi"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10568,11 +10553,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic Nigerian restaurant in Houston. Experience traditional Nigerian flavors and hospitality at Rodo Nigerian Cuisine.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Richmond-area Nigerian restaurant on Bissonnet with amala, egusi, and party-size rice trays.",
+    "our_story": "Rodo Nigerian Cuisine serves Fort Bend County families homestyle Yoruba cooking.",
+    "cultural_roots": "Southwest Nigerian stews, swallows, and celebratory rice dishes.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Amala with ewedu",
+      "Egusi soup",
+      "Fried rice"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10594,11 +10581,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Suya on the spot.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Live-grilled suya counter on South Texas 6 \u2014 order skewers fresh off the flame.",
+    "our_story": "Suya on the Spot built its name on made-to-order Nigerian grills in west Houston.",
+    "cultural_roots": "Street-side suya culture from Abuja and Kaduna.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Beef suya",
+      "Chicken suya",
+      "Suya wrap"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10621,11 +10610,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Abula HotPot.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Alief Clodine Road spot specializing in abula \u2014 the Yoruba combo of amala, gbegiri, and ewedu.",
+    "our_story": "Abula HotPot celebrates one of Nigeria's most beloved swallow meals in southwest Houston.",
+    "cultural_roots": "Oyo and Lagos abula traditions served hot and fresh.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Abula combo",
+      "Amala",
+      "Assorted meat stew"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10684,11 +10675,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Blue Nile.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Ethiopian dining on Audley Street in Upper Kirby with lamb tibs, vegetarian platters, and honey wine.",
+    "our_story": "Blue Nile has been a Houston favorite for injera-centered meals and warm hospitality.",
+    "cultural_roots": "Ethiopian shared-plate dining and coffee ceremony heritage.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Combination platter",
+      "Lamb tibs",
+      "Misir wat"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10710,11 +10703,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Kenna.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Hillcroft Ethiopian cafe with quick lunch combos, sambusas, and spicy lentil stews.",
+    "our_story": "Kenna sits in the heart of Houston's Little Ethiopia corridor on Hillcroft.",
+    "cultural_roots": "Addis Ababa caf\u00e9 culture \u2014 injera, berbere, and buna.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Lunch combo",
+      "Sambusa",
+      "Shiro wat"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10736,11 +10731,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Harar Ethiopian Restaurant.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Bellaire Boulevard Ethiopian restaurant named for the ancient city of Harar, serving kitfo and doro wat.",
+    "our_story": "Harar Ethiopian Restaurant connects Houston diners to eastern Ethiopia's spice-forward cooking.",
+    "cultural_roots": "Harari and Oromo culinary influences in Habesha cuisine.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Kitfo",
+      "Doro wat",
+      "Vegetarian combo"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10762,11 +10759,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Selam.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Bellaire-area African kitchen with Ethiopian injera platters and East African grilled meats.",
+    "our_story": "Selam \u2014 'peace' in Amharic \u2014 offers relaxed family dining on Houston's international strip.",
+    "cultural_roots": "Horn of Africa flavors in a casual Houston setting.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Combination platter",
+      "Tibs",
+      "Lentil stew"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10788,11 +10787,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Ewatomi.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Bellaire West African restaurant serving Nigerian soups, rice dishes, and peppered proteins.",
+    "our_story": "Ewatomi brings Yoruba-named hospitality and homestyle seasoning to west Houston.",
+    "cultural_roots": "Nigerian diaspora cooking with Gulf Coast produce.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Efo riro",
+      "Jollof rice",
+      "Peppered goat"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10814,11 +10815,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Sheba.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Hillcroft Ethiopian and Eritrean dining room with combination platters for groups and families.",
+    "our_story": "Sheba honors the Queen of Sheba legend through communal injera meals in Houston.",
+    "cultural_roots": "Ethiopian and Eritrean Orthodox fasting and feast-day dishes.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Sheba combo",
+      "Gomen",
+      "Awaze tibs"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10840,11 +10843,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Horn of Africa.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Renwick Drive Ethiopian restaurant with generous vegetarian options and sizzling tibs.",
+    "our_story": "Horn of Africa anchors southwest Houston's Habesha dining scene with consistent injera service.",
+    "cultural_roots": "Ethiopian highland cooking \u2014 teff injera and slow-simmered wats.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Veggie combo",
+      "Beef tibs",
+      "Ayib with gomen"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10867,11 +10872,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Nazareth Cafe.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Chimney Rock Ethiopian cafe popular for lunch combos, coffee, and quick vegetarian plates.",
+    "our_story": "Nazareth Cafe is a weekday staple for Houston's Ethiopian community near Gulfton.",
+    "cultural_roots": "Ethiopian caf\u00e9 fare and traditional coffee roasting.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Fasting combo",
+      "Chicken tibs",
+      "Ethiopian coffee"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10893,11 +10900,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Traditional Food Restaurant.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Southwest Houston African kitchen on Plainfield Street with fufu, okra soup, and grilled fish.",
+    "our_story": "Traditional Food Restaurant lives up to its name with unpretentious West African homestyle plates.",
+    "cultural_roots": "Ghanaian and Nigerian everyday cooking for neighborhood regulars.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Okra soup",
+      "Fufu",
+      "Grilled tilapia"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10919,11 +10928,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Cafe De Vivre.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Bissonnet West African caf\u00e9 serving jollof, fried plantains, and pepper soup in a bright dining room.",
+    "our_story": "Caf\u00e9 De Vivre adds a relaxed brunch-and-lunch option to Houston's west African corridor.",
+    "cultural_roots": "Francophone and Anglophone West African caf\u00e9 culture.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Jollof rice",
+      "Pepper soup",
+      "Fried plantains"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10945,11 +10956,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Glam Divine Treats.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Synott Road soul-and-African kitchen blending Nigerian stews with Southern comfort sides.",
+    "our_story": "Glam Divine Treats pairs soul food warmth with West African spice in Alief.",
+    "cultural_roots": "African American soul food meets Nigerian diaspora seasoning.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Egusi soup",
+      "Smothered chicken",
+      "Mac and cheese"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -10972,11 +10985,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Unique African Cuisine.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Wilcrest African restaurant with daily specials, jollof trays, and swallow-friendly soups.",
+    "our_story": "Unique African Cuisine keeps southwest Houston fed with rotating West African plates.",
+    "cultural_roots": "Pan-West African home cooking in a family-run setting.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Daily special stew",
+      "Jollof party tray",
+      "Fufu combo"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -11035,11 +11050,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Houston. Experience traditional African flavors and hospitality at Grill master African Restaurant.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "South Kirkwood grill house for suya, peppered chicken, and Nigerian rice plates in Alief.",
+    "our_story": "Grill Master African Restaurant built its following on smoky, spice-rubbed meats to go.",
+    "cultural_roots": "Open-flame West African grilling and party-size rice orders.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Grilled chicken",
+      "Suya",
+      "Fried rice"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -11062,11 +11079,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Authentic African Restaurant & Bar.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Synott Road West African restaurant and bar with jollof, egusi, and weekend live music.",
+    "our_story": "Authentic African Restaurant & Bar pairs homestyle Nigerian cooking with a social lounge vibe.",
+    "cultural_roots": "Nigerian chop-bar culture with Houston nightlife energy.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Jollof rice",
+      "Egusi with pounded yam",
+      "Pepper soup"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",
@@ -11088,11 +11107,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic Somali restaurant in Houston. Experience traditional Somali flavors and hospitality at Somali Restaurant.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "North Salina Street Somali restaurant serving halal rice plates, goat stew, and sambusas in Syracuse.",
+    "our_story": "A gathering place for Central New York's Somali community near the North Side corridor.",
+    "cultural_roots": "Somali halal cooking \u2014 basmati rice, xalwo, and camel-goat stews.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Chicken suqaar",
+      "Goat stew",
+      "Sambusa"
     ],
     "vibe_category": "Authentic Staples",
     "state": "NY",
@@ -11115,11 +11136,13 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Dakar Street Food @BLODGETT.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "about": "Second Houston location for Dakar Street Food, serving Senegalese plates and takeout near Third Ward.",
+    "our_story": "Same family recipes as the Walnut Bend flagship, closer to downtown and the Medical Center.",
+    "cultural_roots": "Senegalese street food adapted for quick Houston lunch runs.",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Thieboudienne",
+      "Yassa chicken",
+      "Nem spring rolls"
     ],
     "vibe_category": "Authentic Staples",
     "state": "TX",

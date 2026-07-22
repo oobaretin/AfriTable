@@ -1,0 +1,236 @@
+{
+  "dakar-street-food-hou": {
+    "about": "Counter-service Senegalese kitchen on Walnut Bend Lane, known for thieboudienne, grilled fish, and crisp nem spring rolls.",
+    "our_story": "A Houston outpost of Dakar Street Food bringing West African street flavors to the west side.",
+    "cultural_roots": "Senegalese home cooking — rice, fish, and peanut-stew traditions from Dakar.",
+    "menu_highlights": ["Thieboudienne", "Nem spring rolls", "Grilled fish"]
+  },
+  "dakar-street-food-blodgett-houston": {
+    "about": "Second Houston location for Dakar Street Food, serving Senegalese plates and takeout near Third Ward.",
+    "our_story": "Same family recipes as the Walnut Bend flagship, closer to downtown and the Medical Center.",
+    "cultural_roots": "Senegalese street food adapted for quick Houston lunch runs.",
+    "menu_highlights": ["Thieboudienne", "Yassa chicken", "Nem spring rolls"]
+  },
+  "boumboumatl-atlanta": {
+    "about": "Buford Highway lounge pairing American fusion plates with a chic dine-in vibe and late-night energy.",
+    "our_story": "Boum Boum ATL mixes metropolitan dining with neighborhood hospitality on Atlanta's international corridor.",
+    "cultural_roots": "African diaspora meets American fusion in a social, music-forward setting.",
+    "menu_highlights": ["Fusion entrées", "Shareable appetizers", "Weekend brunch"]
+  },
+  "d-nd-new-york": {
+    "about": "Midtown African dining room near Grand Central serving bold, shareable plates in a modern setting.",
+    "our_story": "dùndú brings contemporary African flavors to Manhattan's commuter core.",
+    "cultural_roots": "Pan-African ingredients reimagined for New York's fast-paced dining scene.",
+    "menu_highlights": ["Chef's tasting plates", "Seasonal stews", "House cocktails"]
+  },
+  "d-salam-african-cuisine-new-york": {
+    "about": "Canal Street West African spot for jollof, grilled meats, and hearty lunch combos downtown.",
+    "our_story": "D. Salam keeps Lower Manhattan fed with familiar flavors from across West Africa.",
+    "cultural_roots": "Nigerian and Ghanaian staples in a compact, counter-friendly format.",
+    "menu_highlights": ["Jollof rice", "Grilled chicken", "Egusi soup"]
+  },
+  "lagos-tsq-new-york": {
+    "about": "Times Square West African fusion lounge where Nigerian flavors meet NYC nightlife energy.",
+    "our_story": "Lagos TSQ celebrates Nigeria's culture through food, music, and a vibrant dining room steps from Broadway.",
+    "cultural_roots": "Nigerian culinary heritage filtered through a cosmopolitan New York lens.",
+    "menu_highlights": ["Suya skewers", "Jollof rice", "Pepper soup"]
+  },
+  "teranga-midtown-153-e-53rd-st": {
+    "about": "Fast-casual West African superfood counter in Midtown — scratch-made, gluten-free bowls and plates daily.",
+    "our_story": "Teranga Midtown carries the same Senegalese-rooted menu as the Harlem flagship to Lexington Avenue office crowds.",
+    "cultural_roots": "Ancient West African grains and stews, cooked fresh with organic, dairy-free ingredients.",
+    "menu_highlights": ["Jollof rice bowl", "Yassa chicken", "Thiou curry"]
+  },
+  "fufudelight-suya-kitchen-arlington": {
+    "about": "Arlington suya and fufu kitchen on New York Avenue, grilling spice-rubbed meats for DFW diners.",
+    "our_story": "Fufudelight & Suya Kitchen feeds North Texas with Nigerian grill classics and swallow-friendly soups.",
+    "cultural_roots": "Northern Nigerian suya culture and West African swallow traditions.",
+    "menu_highlights": ["Beef suya", "Fufu with egusi", "Jollof rice"]
+  },
+  "kofoshi-houston": {
+    "about": "Nigerian restaurant on South Gessner serving pepper soup, rice plates, and weekend party trays.",
+    "our_story": "Kofoshi is a go-to for Houston's Nigerian community craving homestyle seasoning and generous portions.",
+    "cultural_roots": "Yoruba and Igbo cooking traditions from Lagos and the southeast.",
+    "menu_highlights": ["Pepper soup", "Fried rice", "Egusi with fufu"]
+  },
+  "hunan-cafe-houston": {
+    "about": "North Houston West African cafe — don't let the name fool you; the menu is jollof, stews, and grilled fish.",
+    "our_story": "Hunan Cafe has served Cypress-area families West African comfort food for years.",
+    "cultural_roots": "Ghanaian and Nigerian home cooking on Houston's northwest side.",
+    "menu_highlights": ["Jollof rice", "Light soup", "Grilled tilapia"]
+  },
+  "k-y-d-restaurant-mirage-brooklyn": {
+    "about": "Flatbush African kitchen on East 26th Street with Nigerian grills, rice plates, and takeout-friendly combos.",
+    "our_story": "Káyọ̀dé Restaurant Mirage brings Brooklyn neighbors bold seasoning and late-night suya cravings.",
+    "cultural_roots": "Nigerian diaspora cooking in central Brooklyn.",
+    "menu_highlights": ["Suya platter", "Jollof rice", "Goat meat stew"]
+  },
+  "accra-express-restaurant-new-york": {
+    "about": "Fast-casual Ghanaian counter in East Harlem — jollof, waakye, fufu, and egusi made fresh daily.",
+    "our_story": "Accra Express packs Harlem lunch breaks with the same flavors you'd find at a Accra chop bar.",
+    "cultural_roots": "Ghanaian street-food classics from jollof to shito sauce.",
+    "menu_highlights": ["Jollof rice", "Waakye", "Egusi soup with fufu"]
+  },
+  "afrospice-bistro-bronx": {
+    "about": "Bronx Afro-fusion bistro on Commonwealth Avenue blending West African spice with Caribbean heat.",
+    "our_story": "AfroSpice BisTro feeds Parkchester and Castle Hill with colorful plates and friendly counter service.",
+    "cultural_roots": "West African seasoning meets Bronx neighborhood dining culture.",
+    "menu_highlights": ["Curry goat", "Jerk chicken", "Plantains"]
+  },
+  "accra-bronx": {
+    "about": "Ghanaian restaurant on Davidson Avenue serving fufu, banku, and pepper stews to Bronx regulars.",
+    "our_story": "Accra keeps Tremont Avenue's West African community connected to familiar Ghanaian flavors.",
+    "cultural_roots": "Akan and Ga home cooking — soups, stews, and fermented corn sides.",
+    "menu_highlights": ["Fufu with light soup", "Banku and tilapia", "Kelewele"]
+  },
+  "akwaaba-restaurant-brooklyn": {
+    "about": "Parkside Avenue Ghanaian dining room known for omo tuo, groundnut soup, and weekend catering.",
+    "our_story": "Akwaaba — 'welcome' in Twi — has been a Brooklyn anchor for Ghanaian gatherings and family meals.",
+    "cultural_roots": "Ashanti and southern Ghanaian recipes passed through the diaspora.",
+    "menu_highlights": ["Omo tuo", "Groundnut soup", "Red-red"]
+  },
+  "dee-titolat-african-restaurant-houston": {
+    "about": "West African restaurant on Bissonnet in Alief with Nigerian rice dishes, stews, and meat pies.",
+    "our_story": "Dee Titolat serves southwest Houston families generous plates rooted in Nigerian home cooking.",
+    "cultural_roots": "Yoruba and Igbo flavors in one of Houston's most diverse dining corridors.",
+    "menu_highlights": ["Jollof rice", "Meat pie", "Egusi soup"]
+  },
+  "vertex-houston": {
+    "about": "Ethiopian restaurant near Sharpstown with vegetarian combos, tibs, and injera served on shared platters.",
+    "our_story": "Vertex welcomes Habesha families and newcomers to Ethiopian communal dining on the Southwest Freeway.",
+    "cultural_roots": "Ethiopian Orthodox fasting traditions and berbere-spiced stews.",
+    "menu_highlights": ["Veggie combo", "Beef tibs", "Doro wat"]
+  },
+  "osuma-suya-houston": {
+    "about": "Suya specialist on South Texas 6 grilling pepper-rubbed beef, chicken, and ram skewers to order.",
+    "our_story": "Osuma Suya brings Northern Nigerian street-grill culture to west Houston.",
+    "cultural_roots": "Hausa suya spice blends — yaji, ground peanuts, and open-flame heat.",
+    "menu_highlights": ["Beef suya", "Chicken suya", "Ram suya"]
+  },
+  "nini-kitchen-houston": {
+    "about": "West African kitchen on Cook Road in Chinatown serving pepper soup, jollof, and swallow combos.",
+    "our_story": "Nini Kitchen is a neighborhood spot for Nigerian and Ghanaian lunch plates in southwest Houston.",
+    "cultural_roots": "West African chop-bar staples adapted for Houston's international district.",
+    "menu_highlights": ["Pepper soup", "Jollof rice", "Fufu with soup"]
+  },
+  "sabo-suya-houston": {
+    "about": "Country Creek suya house famous for late-night skewers, kilishi, and spicy pepper sides.",
+    "our_story": "Sabo Suya keeps Houston's suya lovers coming back for smoky, yaji-crusted grills.",
+    "cultural_roots": "Northern Nigerian open-fire grilling traditions.",
+    "menu_highlights": ["Mixed suya platter", "Kilishi", "Moi moi"]
+  },
+  "rodo-nigerian-cuisine-richmond": {
+    "about": "Richmond-area Nigerian restaurant on Bissonnet with amala, egusi, and party-size rice trays.",
+    "our_story": "Rodo Nigerian Cuisine serves Fort Bend County families homestyle Yoruba cooking.",
+    "cultural_roots": "Southwest Nigerian stews, swallows, and celebratory rice dishes.",
+    "menu_highlights": ["Amala with ewedu", "Egusi soup", "Fried rice"]
+  },
+  "suya-on-the-spot-houston": {
+    "about": "Live-grilled suya counter on South Texas 6 — order skewers fresh off the flame.",
+    "our_story": "Suya on the Spot built its name on made-to-order Nigerian grills in west Houston.",
+    "cultural_roots": "Street-side suya culture from Abuja and Kaduna.",
+    "menu_highlights": ["Beef suya", "Chicken suya", "Suya wrap"]
+  },
+  "abula-hotpot-houston": {
+    "about": "Alief Clodine Road spot specializing in abula — the Yoruba combo of amala, gbegiri, and ewedu.",
+    "our_story": "Abula HotPot celebrates one of Nigeria's most beloved swallow meals in southwest Houston.",
+    "cultural_roots": "Oyo and Lagos abula traditions served hot and fresh.",
+    "menu_highlights": ["Abula combo", "Amala", "Assorted meat stew"]
+  },
+  "blue-nile-houston": {
+    "about": "Ethiopian dining on Audley Street in Upper Kirby with lamb tibs, vegetarian platters, and honey wine.",
+    "our_story": "Blue Nile has been a Houston favorite for injera-centered meals and warm hospitality.",
+    "cultural_roots": "Ethiopian shared-plate dining and coffee ceremony heritage.",
+    "menu_highlights": ["Combination platter", "Lamb tibs", "Misir wat"]
+  },
+  "kenna-houston": {
+    "about": "Hillcroft Ethiopian cafe with quick lunch combos, sambusas, and spicy lentil stews.",
+    "our_story": "Kenna sits in the heart of Houston's Little Ethiopia corridor on Hillcroft.",
+    "cultural_roots": "Addis Ababa café culture — injera, berbere, and buna.",
+    "menu_highlights": ["Lunch combo", "Sambusa", "Shiro wat"]
+  },
+  "harar-ethiopian-restaurant-houston": {
+    "about": "Bellaire Boulevard Ethiopian restaurant named for the ancient city of Harar, serving kitfo and doro wat.",
+    "our_story": "Harar Ethiopian Restaurant connects Houston diners to eastern Ethiopia's spice-forward cooking.",
+    "cultural_roots": "Harari and Oromo culinary influences in Habesha cuisine.",
+    "menu_highlights": ["Kitfo", "Doro wat", "Vegetarian combo"]
+  },
+  "selam-houston": {
+    "about": "Bellaire-area African kitchen with Ethiopian injera platters and East African grilled meats.",
+    "our_story": "Selam — 'peace' in Amharic — offers relaxed family dining on Houston's international strip.",
+    "cultural_roots": "Horn of Africa flavors in a casual Houston setting.",
+    "menu_highlights": ["Combination platter", "Tibs", "Lentil stew"]
+  },
+  "ewatomi-houston": {
+    "about": "Bellaire West African restaurant serving Nigerian soups, rice dishes, and peppered proteins.",
+    "our_story": "Ewatomi brings Yoruba-named hospitality and homestyle seasoning to west Houston.",
+    "cultural_roots": "Nigerian diaspora cooking with Gulf Coast produce.",
+    "menu_highlights": ["Efo riro", "Jollof rice", "Peppered goat"]
+  },
+  "sheba-houston": {
+    "about": "Hillcroft Ethiopian and Eritrean dining room with combination platters for groups and families.",
+    "our_story": "Sheba honors the Queen of Sheba legend through communal injera meals in Houston.",
+    "cultural_roots": "Ethiopian and Eritrean Orthodox fasting and feast-day dishes.",
+    "menu_highlights": ["Sheba combo", "Gomen", "Awaze tibs"]
+  },
+  "horn-of-africa-houston": {
+    "about": "Renwick Drive Ethiopian restaurant with generous vegetarian options and sizzling tibs.",
+    "our_story": "Horn of Africa anchors southwest Houston's Habesha dining scene with consistent injera service.",
+    "cultural_roots": "Ethiopian highland cooking — teff injera and slow-simmered wats.",
+    "menu_highlights": ["Veggie combo", "Beef tibs", "Ayib with gomen"]
+  },
+  "nazareth-cafe-houston": {
+    "about": "Chimney Rock Ethiopian cafe popular for lunch combos, coffee, and quick vegetarian plates.",
+    "our_story": "Nazareth Cafe is a weekday staple for Houston's Ethiopian community near Gulfton.",
+    "cultural_roots": "Ethiopian café fare and traditional coffee roasting.",
+    "menu_highlights": ["Fasting combo", "Chicken tibs", "Ethiopian coffee"]
+  },
+  "traditional-food-restaurant-houston": {
+    "about": "Southwest Houston African kitchen on Plainfield Street with fufu, okra soup, and grilled fish.",
+    "our_story": "Traditional Food Restaurant lives up to its name with unpretentious West African homestyle plates.",
+    "cultural_roots": "Ghanaian and Nigerian everyday cooking for neighborhood regulars.",
+    "menu_highlights": ["Okra soup", "Fufu", "Grilled tilapia"]
+  },
+  "cafe-de-vivre-houston": {
+    "about": "Bissonnet West African café serving jollof, fried plantains, and pepper soup in a bright dining room.",
+    "our_story": "Café De Vivre adds a relaxed brunch-and-lunch option to Houston's west African corridor.",
+    "cultural_roots": "Francophone and Anglophone West African café culture.",
+    "menu_highlights": ["Jollof rice", "Pepper soup", "Fried plantains"]
+  },
+  "glam-divine-treats-houston": {
+    "about": "Synott Road soul-and-African kitchen blending Nigerian stews with Southern comfort sides.",
+    "our_story": "Glam Divine Treats pairs soul food warmth with West African spice in Alief.",
+    "cultural_roots": "African American soul food meets Nigerian diaspora seasoning.",
+    "menu_highlights": ["Egusi soup", "Smothered chicken", "Mac and cheese"]
+  },
+  "unique-african-cuisine-houston": {
+    "about": "Wilcrest African restaurant with daily specials, jollof trays, and swallow-friendly soups.",
+    "our_story": "Unique African Cuisine keeps southwest Houston fed with rotating West African plates.",
+    "cultural_roots": "Pan-West African home cooking in a family-run setting.",
+    "menu_highlights": ["Daily special stew", "Jollof party tray", "Fufu combo"]
+  },
+  "grill-master-african-restaurant-houston": {
+    "about": "South Kirkwood grill house for suya, peppered chicken, and Nigerian rice plates in Alief.",
+    "our_story": "Grill Master African Restaurant built its following on smoky, spice-rubbed meats to go.",
+    "cultural_roots": "Open-flame West African grilling and party-size rice orders.",
+    "menu_highlights": ["Grilled chicken", "Suya", "Fried rice"]
+  },
+  "authentic-african-restaurant-bar-houston": {
+    "about": "Synott Road West African restaurant and bar with jollof, egusi, and weekend live music.",
+    "our_story": "Authentic African Restaurant & Bar pairs homestyle Nigerian cooking with a social lounge vibe.",
+    "cultural_roots": "Nigerian chop-bar culture with Houston nightlife energy.",
+    "menu_highlights": ["Jollof rice", "Egusi with pounded yam", "Pepper soup"]
+  },
+  "somali-restaurant-syracuse": {
+    "about": "North Salina Street Somali restaurant serving halal rice plates, goat stew, and sambusas in Syracuse.",
+    "our_story": "A gathering place for Central New York's Somali community near the North Side corridor.",
+    "cultural_roots": "Somali halal cooking — basmati rice, xalwo, and camel-goat stews.",
+    "menu_highlights": ["Chicken suqaar", "Goat stew", "Sambusa"]
+  },
+  "oga-suya-clt-charlotte": {
+    "about": "Charlotte suya spot on Thrift Road grilling beef, chicken, and ram with classic yaji spice.",
+    "our_story": "Oga Suya CLT brings Northern Nigerian street food to Charlotte with delivery and takeout.",
+    "cultural_roots": "Hausa suya grills and West African rice-and-stew combos.",
+    "menu_highlights": ["Beef suya", "Jollof rice", "Egusi soup"]
+  }
+}
