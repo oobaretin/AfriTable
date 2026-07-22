@@ -18,12 +18,8 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ destination: redirectTo });
   }
 
-  const { role, error } = await fetchProfileRole(user.id);
+  const { role } = await fetchProfileRole(user.id);
   const destination = resolvePostLoginPathForRole(role, redirectTo);
 
-  return NextResponse.json({
-    destination,
-    profileRole: role,
-    profileError: error,
-  });
+  return NextResponse.json({ destination });
 }

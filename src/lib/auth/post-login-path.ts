@@ -1,5 +1,3 @@
-import type { SupabaseClient } from "@supabase/supabase-js";
-import type { Database } from "@db/database.types";
 import { sanitizeRedirectPath } from "@/lib/auth/config";
 
 const ADMIN_HOME = "/admin";
@@ -21,27 +19,4 @@ export function resolvePostLoginPathForRole(
   }
 
   return safeRedirect;
-}
-
-/**
- * After sign-in, send admins to /admin when they would otherwise land on diner pages.
- */
-export async function resolvePostLoginPath(
-  supabase: SupabaseClient<Database>,
-  redirectTo: string | null | undefined,
-): Promise<string> {
-  const safeRedirect = sanitizeRedirectPath(redirectTo);
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) return safeRedirect;
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("role")
-    .eq("id", user.id)
-    .maybeSingle();
-
-  return resolvePostLoginPathForRole(profile?.role, safeRedirect);
 }

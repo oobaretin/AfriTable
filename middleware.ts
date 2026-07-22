@@ -77,26 +77,6 @@ export async function middleware(request: NextRequest) {
     }
     redirectUrl.pathname = destination;
     redirectUrl.search = "";
-    // #region agent log
-    fetch("http://127.0.0.1:7334/ingest/db39d61a-a551-4eae-93f4-8f741a47f367", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "3435b4" },
-      body: JSON.stringify({
-        sessionId: "3435b4",
-        runId: "pre-fix",
-        hypothesisId: "C-E",
-        location: "middleware.ts:guest-only-redirect",
-        message: "Logged-in user redirected away from login/signup",
-        data: {
-          fromPath: url.pathname,
-          redirectToParam: url.searchParams.get("redirectTo"),
-          resolvedRedirect: redirectUrl.pathname,
-          userIdPrefix: user.id.slice(0, 8),
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
     return NextResponse.redirect(redirectUrl);
   }
 
@@ -131,28 +111,6 @@ export async function middleware(request: NextRequest) {
   // Admin-only: /admin
   if (user && url.pathname.startsWith("/admin")) {
     const { role: profileRole, error: profileError } = await fetchProfileRole(user.id);
-
-    // #region agent log
-    fetch("http://127.0.0.1:7334/ingest/db39d61a-a551-4eae-93f4-8f741a47f367", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "3435b4" },
-      body: JSON.stringify({
-        sessionId: "3435b4",
-        runId: "post-fix",
-        hypothesisId: "A-B-D",
-        location: "middleware.ts:admin-gate",
-        message: "Admin middleware gate (service role)",
-        data: {
-          pathname: url.pathname,
-          userIdPrefix: user.id.slice(0, 8),
-          profileRole,
-          profileError,
-          willRedirectHome: Boolean(profileError || profileRole !== "admin"),
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
 
     if (profileError || profileRole !== "admin") {
       const redirectUrl = request.nextUrl.clone();
