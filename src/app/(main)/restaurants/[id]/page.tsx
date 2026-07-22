@@ -316,7 +316,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   if (!restaurant) return {};
 
   const addr = addressToString(restaurant.address);
-  const title = `${restaurant.name} | AfriTable`;
+  const title = restaurant.name;
+  const pageTitle = `${restaurant.name} | AfriTable`;
   const description = restaurant.description
     ? `${restaurant.description.slice(0, 160)}${restaurant.description.length > 160 ? "…" : ""}`
     : `Reserve a table at ${restaurant.name}${addr ? ` in ${addr}` : ""}.`;
@@ -333,14 +334,14 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     description,
     alternates: { canonical: `${baseUrl}/restaurants/${encodeURIComponent(restaurant.id || restaurant.slug)}` },
     openGraph: {
-      title,
+      title: pageTitle,
       description,
       url: `${baseUrl}/restaurants/${encodeURIComponent(restaurant.id || restaurant.slug)}`,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: pageTitle }],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: pageTitle,
       description,
       images: [ogImage],
     },

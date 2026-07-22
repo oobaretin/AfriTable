@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Instagram, Twitter, Youtube } from "lucide-react";
 import NewsletterSignup from "@/components/layout/NewsletterSignup";
 
 export default function Footer() {
@@ -24,35 +23,6 @@ export default function Footer() {
             <p className="mt-3 text-sm text-slate-300">
               Discover and reserve African &amp; Caribbean dining across the United States.
             </p>
-            <div className="mt-5 flex items-center gap-3">
-              <a
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 bg-slate-800/60 text-slate-300 transition-colors hover:bg-slate-700 hover:text-white"
-                href="https://instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="AfriTable on Instagram"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 bg-slate-800/60 text-slate-300 transition-colors hover:bg-slate-700 hover:text-white"
-                href="https://x.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="AfriTable on X"
-              >
-                <Twitter className="h-4 w-4" />
-              </a>
-              <a
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 bg-slate-800/60 text-slate-300 transition-colors hover:bg-slate-700 hover:text-white"
-                href="https://youtube.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="AfriTable on YouTube"
-              >
-                <Youtube className="h-4 w-4" />
-              </a>
-            </div>
 
             <p className="mt-6 text-xs text-slate-500">
               Mobile apps are not live yet.{" "}

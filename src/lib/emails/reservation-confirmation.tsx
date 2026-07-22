@@ -50,7 +50,7 @@ export function ReservationConfirmationEmail(props: ReservationConfirmationEmail
           <Section style={styles.brandRow}>
             <Img
               alt="AfriTable"
-              src="https://via.placeholder.com/120x32.png?text=AfriTable"
+              src={`${props.appBaseUrl.replace(/\/$/, "")}/logo.png`}
               width={120}
               height={32}
               style={styles.logo}
