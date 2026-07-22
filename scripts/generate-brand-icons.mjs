@@ -15,8 +15,8 @@ const publicDir = path.join(root, "public");
 
 /** Emblem crop from full wordmark (px) — tight enough to exclude adjacent "A" letterform. */
 const EMBLEM_CROP = 275;
-/** Inner crop to zoom emblem slightly for tab / home-screen legibility. */
-const EMBLEM_ZOOM = 262;
+/** Match crop size (no inner zoom) so the right edge stays clean. */
+const EMBLEM_ZOOM = 275;
 
 function run(cmd, args) {
   const result = spawnSync(cmd, args, { stdio: "inherit" });
