@@ -3,7 +3,7 @@ import "server-only";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { rateLimitOrPass } from "@/lib/security/rateLimit";
-import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient } from "@/lib/supabase/server";
 
 const formSchema = z.object({
   name: z.string().min(2).max(200),
@@ -47,8 +47,8 @@ export async function POST(request: Request) {
   const parsed = formSchema.safeParse(raw);
   if (!parsed.success) return NextResponse.redirect(new URL("/submit-restaurant?error=invalid", request.url));
 
-  const supabase = createSupabaseServerClient();
-  const { data: inserted, error } = await supabase
+  const supabaseAdmin = createSupabaseAdminClient();
+  const { data: inserted, error } = await supabaseAdmin
     .from("restaurant_submissions")
     .insert({
     name: parsed.data.name,
@@ -70,8 +70,7 @@ export async function POST(request: Request) {
   // Best-effort event log (service role)
   try {
     if (inserted?.id) {
-      const admin = createSupabaseAdminClient();
-      await admin.from("submission_events").insert({ submission_id: inserted.id, event: "submitted", created_by: null });
+      await supabaseAdmin.from("submission_events").insert({ submission_id: inserted.id, event: "submitted", created_by: null });
     }
   } catch {
     // best-effort

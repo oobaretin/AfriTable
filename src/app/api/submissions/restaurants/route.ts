@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { escapeHtml, sendSiteInboxNotification } from "@/lib/email/site-inbox";
 import { rateLimitOrPass } from "@/lib/security/rateLimit";
-import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient } from "@/lib/supabase/server";
 
 const payloadSchema = z.object({
   name: z.string().min(2).max(200),
@@ -29,8 +29,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalid_payload", message: "Please check the form fields and try again." }, { status: 400 });
   }
 
-  const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase
+  const supabaseAdmin = createSupabaseAdminClient();
+  const { data, error } = await supabaseAdmin
     .from("restaurant_submissions")
     .insert({
       name: parsed.data.name,
@@ -51,11 +51,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "insert_failed", message: error.message }, { status: 400 });
   }
 
-  // Best-effort event log (service role)
+  // Best-effort event log
   try {
     if ((data as any)?.id) {
-      const admin = createSupabaseAdminClient();
-      await admin.from("submission_events").insert({ submission_id: (data as any).id, event: "submitted", created_by: null });
+      await supabaseAdmin.from("submission_events").insert({ submission_id: (data as any).id, event: "submitted", created_by: null });
     }
   } catch {
     // best-effort
