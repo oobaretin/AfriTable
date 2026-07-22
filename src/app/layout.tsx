@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -9,6 +10,7 @@ import CookieConsentBanner from "@/components/layout/CookieConsentBanner";
 import { FoundersNote } from "@/components/home/FoundersNote";
 import { BookingDrawerProvider } from "@/contexts/BookingDrawerContext";
 import { BookingDrawerWrapper } from "@/components/booking/BookingDrawerWrapper";
+import { UrlNoticeBanner } from "@/components/layout/UrlNoticeBanner";
 import { getAppBaseUrl } from "@/lib/app-url";
 
 const inter = Inter({
@@ -86,6 +88,9 @@ export default function RootLayout({
             />
             <div className="flex min-h-screen flex-col">
               <Navbar />
+              <Suspense fallback={null}>
+                <UrlNoticeBanner />
+              </Suspense>
               <div className="flex-1 pt-24">{children}</div>
               <Footer />
             </div>

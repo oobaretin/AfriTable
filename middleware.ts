@@ -114,6 +114,7 @@ export async function middleware(request: NextRequest) {
       const redirectUrl = request.nextUrl.clone();
       redirectUrl.pathname = "/";
       redirectUrl.search = "";
+      redirectUrl.searchParams.set("error", "admin_access_denied");
       return NextResponse.redirect(redirectUrl);
     }
   }

@@ -93,8 +93,10 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
   const displayName = displayNameFrom(user, profile);
   const isSignedIn = Boolean(user);
   const showAuthLoading = !sessionResolved && !isSignedIn;
-  const accountHref = role === "restaurant_owner" ? "/dashboard" : "/reservations";
-  const accountLabel = role === "restaurant_owner" ? "Dashboard" : "My Reservations";
+  const accountHref =
+    role === "admin" ? "/admin" : role === "restaurant_owner" ? "/dashboard" : "/reservations";
+  const accountLabel =
+    role === "admin" ? "Admin" : role === "restaurant_owner" ? "Dashboard" : "My Reservations";
   const navLinkClass =
     "inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground pointer-events-auto cursor-pointer";
 
@@ -175,7 +177,11 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
                       {signingOut ? "Signing out…" : "Sign out"}
                     </button>
                     <div className="h-px bg-border my-1" />
-                    {role === "restaurant_owner" ? (
+                    {role === "admin" ? (
+                      <a href="/admin" className="block px-3 py-2 text-sm hover:bg-accent rounded-md pointer-events-auto cursor-pointer">
+                        Admin
+                      </a>
+                    ) : role === "restaurant_owner" ? (
                       <a href="/dashboard" className="block px-3 py-2 text-sm hover:bg-accent rounded-md pointer-events-auto cursor-pointer">
                         Dashboard
                       </a>

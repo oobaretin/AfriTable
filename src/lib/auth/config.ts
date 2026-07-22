@@ -26,6 +26,8 @@ export const AUTH_ERROR_MESSAGES: Record<string, string> = {
   oauth_start_failed: "Could not start Google sign-in. Try again or use email/password.",
   oauth_exchange_failed: "Could not complete sign-in with Google. Check Supabase Google provider settings and try again.",
   access_denied: "Google sign-in was cancelled.",
+  admin_access_denied:
+    "That page is for AfriTable admins only. Your account is signed in as a diner — ask the site owner to set your profile role to admin in Supabase.",
 };
 
 export function resolveAuthErrorMessage(code: string | null): string | null {
