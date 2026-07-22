@@ -84,7 +84,6 @@ const HOURS_MAP = {
   "hou-005": { mon_sat: "11:00 AM - 10:00 PM", sun: "12:00 PM - 9:00 PM" },
   "hou-004": { mon_sat: "11:00 AM - 9:00 PM", sun: "12:00 PM - 8:00 PM" },
   "hou-sta-004": { mon_sat: "11:00 AM - 9:00 PM", sun: "Closed" },
-  "katy-002": { mon_sat: "11:00 AM - 9:00 PM", sun: "12:00 PM - 8:00 PM" },
   "hou-sta-005": { mon_sat: "11:00 AM - 10:00 PM", sun: "12:00 PM - 9:00 PM" },
   "hou-sta-007": { mon_sat: "11:00 AM - 9:00 PM", sun: "Closed" },
   "hou-sta-008": { mon_sat: "11:00 AM - 10:00 PM", sun: "12:00 PM - 8:00 PM" },

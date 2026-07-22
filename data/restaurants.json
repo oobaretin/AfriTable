@@ -3362,39 +3362,6 @@
     ]
   },
   {
-    "id": "katy-002",
-    "name": "Amala Joint",
-    "cuisine": "Nigerian (Yoruba)",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.6,
-    "address": "1251 Pin Oak Rd, Katy, TX 77494",
-    "zip": "77494",
-    "lat": 29.736,
-    "lng": -95.823,
-    "phone": "(281) 665-1216",
-    "website": "https://amalajointonline.com/",
-    "vibe": "Local Gem / Casual",
-    "vibe_tags": [
-      "Local Gem / Casual"
-    ],
-    "specialty": "Amala with Ewedu & Gbegiri",
-    "menu_highlights": [
-      "Amala with Ewedu & Gbegiri"
-    ],
-    "vibe_category": "Authentic Staples",
-    "about": "Essential for the Katy community; arguably the best Amala in the area.",
-    "state": "TX",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "google_search_url": "https://www.google.com/search?q=Amala%20Joint%2C%201251%20Pin%20Oak%20Rd%2C%20Katy%2C%20TX%2077494",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "hou-sta-005",
     "name": "Amala Zone",
     "cuisine": "Nigerian / Grill",
@@ -10829,23 +10796,31 @@
   {
     "id": "amala-joint-houston",
     "name": "Amala Joint",
-    "cuisine": "West African",
-    "region": "African",
-    "price_range": "$",
+    "cuisine": "Nigerian (Yoruba)",
+    "region": "West African",
+    "price_range": "$$",
     "rating": 4.4,
     "address": "6271 S Texas 6, Houston, TX 77083",
+    "zip": "77083",
     "phone": "(281) 721-2982",
-    "website": "http://www.amalajointhouston.com/?utm_source=gmb&utm_medium=website",
+    "website": "https://www.amalajoint.com/",
+    "specialty": "Amala with Ewedu & Gbegiri",
+    "menu_highlights": [
+      "Amala with Ewedu & Gbegiri",
+      "Egusi soup",
+      "Jollof rice"
+    ],
+    "vibe": "Local Gem / Casual",
+    "vibe_tags": [
+      "Local Gem / Casual"
+    ],
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Amala Joint.",
+    "about": "Authentic Nigerian restaurant on Highway 6 in Houston, known for amala, egusi, and homestyle West African cooking.",
     "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
+    "cultural_roots": "Yoruba Nigerian diaspora dining in Houston.",
     "vibe_category": "Authentic Staples",
     "state": "TX",
     "google_search_url": "https://www.google.com/search?q=Amala%20Joint%2C%206271%20S%20Texas%206%2C%20Houston%2C%20TX%2077083",
