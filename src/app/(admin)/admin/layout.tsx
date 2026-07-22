@@ -2,6 +2,8 @@ import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { AdminDashboardLayout } from "@/components/admin/AdminDashboardLayout";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: {
     default: "Admin",
