@@ -14,9 +14,9 @@ const appDir = path.join(root, "src/app");
 const publicDir = path.join(root, "public");
 
 /** Emblem crop from full wordmark (px) — tight enough to exclude adjacent "A" letterform. */
-const EMBLEM_CROP = 275;
+const EMBLEM_CROP = 270;
 /** Match crop size (no inner zoom) so the right edge stays clean. */
-const EMBLEM_ZOOM = 275;
+const EMBLEM_ZOOM = 270;
 
 function run(cmd, args) {
   const result = spawnSync(cmd, args, { stdio: "inherit" });
