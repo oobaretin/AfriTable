@@ -22,6 +22,13 @@ import { getTodayOperatingHours } from "@/lib/today-operating-hours";
 import { resolveRestaurantImageUrl, resolveRestaurantOgImageUrl } from "@/lib/restaurant-image";
 import { getAppBaseUrl } from "@/lib/app-url";
 
+type SecondaryLocation = {
+  name: string;
+  address: string;
+  phone?: string;
+  catalog_id?: string;
+};
+
 type RestaurantDetail = {
   id: string;
   name: string;
@@ -43,6 +50,7 @@ type RestaurantDetail = {
   hours: any;
   avg_rating: number | null;
   review_count: number;
+  secondary_location?: SecondaryLocation | null;
 };
 
 export const dynamic = 'force-dynamic';
@@ -377,6 +385,7 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
   }
 
   const addrStr = addressToString(restaurant.address);
+  const secondaryLocation = restaurant.secondary_location;
   const todays = getTodayOperatingHours(operatingHours, {
     address: restaurant.address,
   });
@@ -569,21 +578,17 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
               <div className="min-w-0">
                 <div className="text-xs text-muted-foreground mb-1">Address</div>
                 <div className="text-sm font-medium break-words">{addrStr || "Address coming soon"}</div>
-                {(restaurant as { secondary_location?: { name: string; address: string; phone?: string; catalog_id?: string } }).secondary_location ? (
+                {secondaryLocation ? (
                   <div className="mt-3 rounded-lg border border-dashed p-3 text-xs">
                     <p className="font-semibold text-muted-foreground mb-1">Also at</p>
-                    <p className="font-medium">
-                      {(restaurant as { secondary_location: { name: string } }).secondary_location.name}
-                    </p>
-                    <p className="text-muted-foreground mt-0.5">
-                      {(restaurant as { secondary_location: { address: string } }).secondary_location.address}
-                    </p>
-                    {(restaurant as { secondary_location: { catalog_id?: string } }).secondary_location.catalog_id ? (
+                    <p className="font-medium">{secondaryLocation.name}</p>
+                    <p className="text-muted-foreground mt-0.5">{secondaryLocation.address}</p>
+                    {secondaryLocation.catalog_id ? (
                       <Link
-                        href={`/restaurants/${encodeURIComponent((restaurant as { secondary_location: { catalog_id: string } }).secondary_location.catalog_id)}`}
+                        href={`/restaurants/${encodeURIComponent(secondaryLocation.catalog_id)}`}
                         className="text-primary underline underline-offset-4 mt-2 inline-block"
                       >
-                        View {(restaurant as { secondary_location: { name: string } }).secondary_location.name} →
+                        View {secondaryLocation.name} →
                       </Link>
                     ) : null}
                   </div>
