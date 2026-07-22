@@ -91,7 +91,7 @@
     },
     "about": "High-end Nigerian cuisine specializing in bold spices and meticulous preparation of traditional stews.",
     "our_story": "Showcasing the 'touch of difference' by using the finest ingredients to create stews that taste like home.",
-    "cultural_roots": "Celebrates 'Swallow' culture—dishes like Amala and Pounded Yam paired with nutrient-rich soups.",
+    "cultural_roots": "Celebrates 'Swallow' culture\u2014dishes like Amala and Pounded Yam paired with nutrient-rich soups.",
     "menu_highlights": [
       "Ayamashe (Designer) Stew",
       "Abula (Amala)",
@@ -198,7 +198,7 @@
       "sun": "11:00 AM - 9:00 PM",
       "mon": "Closed"
     },
-    "about": "Warm, relaxed Haitian restaurant/bar (also known as Zanmi on their site). Daily brunch, weekend live music, and Haitian specialties. 'Zanmi' means 'Friend' in Kreyòl.",
+    "about": "Warm, relaxed Haitian restaurant/bar (also known as Zanmi on their site). Daily brunch, weekend live music, and Haitian specialties. 'Zanmi' means 'Friend' in Krey\u00f2l.",
     "our_story": "Our mission is to showcase the beauty of Haiti through upscale comfort food, moving beyond stereotypes to highlight the depth of our culinary history.",
     "cultural_roots": "Haitian cuisine is a proud blend of African, French, and Taino traditions, celebrated here through slow-stewed meats and aromatic 'epis'.",
     "menu_highlights": [
@@ -541,7 +541,7 @@
       "tue_sun": "12:00 PM - 8:00 PM",
       "mon": "Closed"
     },
-    "about": "A modern African superfood café located in The Africa Center, overlooking Central Park.",
+    "about": "A modern African superfood caf\u00e9 located in The Africa Center, overlooking Central Park.",
     "our_story": "Founded by world-renowned Chef Pierre Thiam, Teranga reflects the Senegalese philosophy of hospitality, offering nutrient-dense bowls based on ancient grains.",
     "cultural_roots": "The word 'Teranga' means 'hospitality' in Wolof. The menu highlights fonio and jollof rice as the foundation of West African agricultural heritage.",
     "menu_highlights": [
@@ -660,9 +660,9 @@
     },
     "about": "The go-to spot in Houston for authentic Ivorian (Ivory Coast) street food and grilled delicacies.",
     "our_story": "Ponti's was built to satisfy the cravings of the Ivorian diaspora, specializing in the slow-grilled techniques that define the streets of Abidjan.",
-    "cultural_roots": "Highlights Ivorian staples like Attiéké (fermented cassava) and Aloco, showing the unique French-African culinary marriage.",
+    "cultural_roots": "Highlights Ivorian staples like Atti\u00e9k\u00e9 (fermented cassava) and Aloco, showing the unique French-African culinary marriage.",
     "menu_highlights": [
-      "Grilled Fish with Attiéké",
+      "Grilled Fish with Atti\u00e9k\u00e9",
       "Aloco (Fried Plantains)",
       "Kedjenou (Slow-cooked Chicken)"
     ],
@@ -764,7 +764,7 @@
     "cultural_roots": "Eritrean cuisine shares similarities with Ethiopian food but features unique coastal influences and a distinct blend of 'Tsebhi' (stews) served on injera.",
     "menu_highlights": [
       "Zigni (Spicy Beef Stew)",
-      "Hamli (Sautéed Spinach)",
+      "Hamli (Saut\u00e9ed Spinach)",
       "Eritrean Coffee Ceremony"
     ],
     "vibe_category": "Authentic Staples",
@@ -797,7 +797,7 @@
       "sunday": "12:00 PM - 10:00 PM"
     },
     "about": "East African restaurant in Build America Plaza. Kulan Cafe is famous for its massive portions and signature spiced goat, plus Somali tea and rice dishes.",
-    "our_story": "We built Kulan to be a gathering place—a 'Kulan'—where people can start their day with Somali tea and end it with a mountain of rice and tender meat.",
+    "our_story": "We built Kulan to be a gathering place\u2014a 'Kulan'\u2014where people can start their day with Somali tea and end it with a mountain of rice and tender meat.",
     "cultural_roots": "Somali cuisine is a crossroads of flavors from the Horn of Africa, India, and Italy, characterized by the use of 'Xawaash' spice mix and the inevitable banana served on the side.",
     "menu_highlights": [
       "Bariis Iskukaris (Spiced Rice)",
@@ -837,7 +837,7 @@
     "menu_highlights": [
       "Safari Mango Chicken",
       "Camel Meat (Seasonal)",
-      "Suqaar (Sautéed Beef)"
+      "Suqaar (Saut\u00e9ed Beef)"
     ],
     "vibe_category": "Authentic Staples",
     "state": "MN",
@@ -906,7 +906,7 @@
       "Wagyu Short Rib Pastrami"
     ],
     "awards": [
-      "⭐⭐⭐⭐⭐"
+      "\u2b50\u2b50\u2b50\u2b50\u2b50"
     ],
     "quality_factor": "Named the #1 Restaurant in NYC (Kwame Onwuachi)",
     "featured": true,
@@ -928,7 +928,7 @@
   },
   {
     "id": "hou-001",
-    "name": "ChòpnBlọk",
+    "name": "Ch\u00f2pnBl\u1ecdk",
     "cuisine": "West African (Fast-Fine)",
     "region": "West African",
     "price_range": "$$$",
@@ -1145,7 +1145,7 @@
     "address": "1053 S Fairfax Ave, Los Angeles, CA 90019",
     "phone": "(323) 938-9304",
     "website": "https://www.mealsbygenetla.com",
-    "about": "Women-owned; legendary Dorowat in the West. Little Ethiopia; Fri–Sun 6–9pm, reservations recommended.",
+    "about": "Women-owned; legendary Dorowat in the West. Little Ethiopia; Fri\u2013Sun 6\u20139pm, reservations recommended.",
     "vibe_tags": [
       "Intimate & Prestigious"
     ],
@@ -1173,7 +1173,7 @@
     "address": "11671 Victory Blvd, North Hollywood, CA 91606",
     "phone": "(818) 691-3377",
     "website": "https://blaqhaus.co",
-    "about": "Southern comfort and Caribbean heat; weekend brunch, Rum Room Thu–Sat. Women-owned.",
+    "about": "Southern comfort and Caribbean heat; weekend brunch, Rum Room Thu\u2013Sat. Women-owned.",
     "vibe_category": "Authentic Staples",
     "state": "CA",
     "hours": {
@@ -1268,7 +1268,7 @@
     "address": "6133 Woodland Ave, Philadelphia, PA 19142",
     "phone": "(267) 713-7603",
     "website": "https://africansmallpot1.com",
-    "about": "West African (Mauritanian, Senegalese, Nigerian). Wood-grilled Diby; open daily 8am–1am.",
+    "about": "West African (Mauritanian, Senegalese, Nigerian). Wood-grilled Diby; open daily 8am\u20131am.",
     "vibe_tags": [
       "Authentic & Renowned"
     ],
@@ -1287,7 +1287,7 @@
   },
   {
     "id": "chi-002",
-    "name": "Gorée Cuisine",
+    "name": "Gor\u00e9e Cuisine",
     "cuisine": "Senegalese",
     "region": "West African",
     "price_range": "$$",
@@ -1324,7 +1324,7 @@
     "rating": 4.5,
     "address": "4301 Chestnut St, Philadelphia, PA 19104",
     "phone": "(215) 387-1970",
-    "about": "Senegalese by Youma Ba; thieboudienne, yassa, mafée. Reopened 2024 at LVL West. BYOB.",
+    "about": "Senegalese by Youma Ba; thieboudienne, yassa, maf\u00e9e. Reopened 2024 at LVL West. BYOB.",
     "vibe_tags": [
       "Academic & Cultural"
     ],
@@ -1729,7 +1729,7 @@
     "address": "4 Embarcadero Center, San Francisco, CA 94111",
     "phone": "(415) 366-0633",
     "website": "https://www.terangafoods.com",
-    "about": "Senegalese by Chef Nafy Flatley; Maafe bowl, jollof, tamarind chicken. Mon–Fri 10:30am–3pm.",
+    "about": "Senegalese by Chef Nafy Flatley; Maafe bowl, jollof, tamarind chicken. Mon\u2013Fri 10:30am\u20133pm.",
     "vibe_category": "Authentic Staples",
     "state": "CA",
     "hours": {
@@ -1780,7 +1780,7 @@
     "address": "2116 Meharry Blvd, Nashville, TN 37208",
     "phone": "(615) 942-5264",
     "website": "https://riddimnspice.com",
-    "about": "Jamaican brothers; jerk chicken, Rum Room Thu–Sat. North Nashville.",
+    "about": "Jamaican brothers; jerk chicken, Rum Room Thu\u2013Sat. North Nashville.",
     "vibe_category": "Authentic Staples",
     "state": "TN",
     "hours": {
@@ -1848,7 +1848,7 @@
     },
     "about": "Caribbean soul food in Montrose with jerk chicken, island stews, and weekend brunch until 4pm. Houston location opened in 2024; also operates two locations in Chicago, IL.",
     "our_story": "Jordyn's Soul Cafe expanded from thriving Chicago kitchens to bring spirited island flavors, upscale dine-in, and soulful hospitality to Houston.",
-    "cultural_roots": "A celebration of Caribbean culture, community, and soul food—jerk, stews, and vibrant sides with reservations welcome.",
+    "cultural_roots": "A celebration of Caribbean culture, community, and soul food\u2014jerk, stews, and vibrant sides with reservations welcome.",
     "menu_highlights": [
       "Jerk Chicken",
       "Island Stews",
@@ -2141,7 +2141,7 @@
       "Oxtail",
       "Conch Fritters"
     ],
-    "about": "Haitian-Creole seafood and Caribbean flavors since 1992—griot, pikliz, fried snapper, oxtail, and generous portions across South Florida.",
+    "about": "Haitian-Creole seafood and Caribbean flavors since 1992\u2014griot, pikliz, fried snapper, oxtail, and generous portions across South Florida.",
     "vibe_category": "Community Favorites",
     "state": "FL",
     "lat": 25.8248783,
@@ -2161,7 +2161,7 @@
   },
   {
     "id": "chef-creole-north-miami-dixie",
-    "name": "Chef Creole (North Miami – Dixie Hwy)",
+    "name": "Chef Creole (North Miami \u2013 Dixie Hwy)",
     "cuisine": "Haitian",
     "region": "Caribbean",
     "price_range": "$$",
@@ -2175,7 +2175,7 @@
       "chefcreole"
     ],
     "neighborhood": "North Miami",
-    "about": "Haitian-Creole seafood and Caribbean flavors—griot, pikliz, fried snapper, and oxtail at Chef Creole's Dixie Highway location.",
+    "about": "Haitian-Creole seafood and Caribbean flavors\u2014griot, pikliz, fried snapper, and oxtail at Chef Creole's Dixie Highway location.",
     "menu_highlights": [
       "Griot & Pikliz",
       "Fried Snapper",
@@ -2198,7 +2198,7 @@
   },
   {
     "id": "chef-creole-north-miami-7th-ave",
-    "name": "Chef Creole (North Miami – 7th Ave)",
+    "name": "Chef Creole (North Miami \u2013 7th Ave)",
     "cuisine": "Haitian",
     "region": "Caribbean",
     "price_range": "$$",
@@ -2212,7 +2212,7 @@
       "chefcreole"
     ],
     "neighborhood": "North Miami",
-    "about": "Haitian-Creole seafood and Caribbean flavors—griot, pikliz, fried snapper, and oxtail at Chef Creole's NW 7th Avenue location.",
+    "about": "Haitian-Creole seafood and Caribbean flavors\u2014griot, pikliz, fried snapper, and oxtail at Chef Creole's NW 7th Avenue location.",
     "menu_highlights": [
       "Griot & Pikliz",
       "Fried Snapper",
@@ -2251,7 +2251,7 @@
       "chefcreole"
     ],
     "neighborhood": "Miami Gardens",
-    "about": "Haitian-Creole seafood and Caribbean flavors—griot, pikliz, fried snapper, and oxtail at Chef Creole's Miami Gardens location.",
+    "about": "Haitian-Creole seafood and Caribbean flavors\u2014griot, pikliz, fried snapper, and oxtail at Chef Creole's Miami Gardens location.",
     "menu_highlights": [
       "Griot & Pikliz",
       "Fried Snapper",
@@ -2438,7 +2438,7 @@
   },
   {
     "id": "dca-001",
-    "name": "Dōgon",
+    "name": "D\u014dgon",
     "cuisine": "Afro-Caribbean Fine Dining",
     "region": "Caribbean",
     "price_range": "$$$",
@@ -2638,7 +2638,7 @@
       "Plantain Sundae"
     ],
     "featured": true,
-    "about": "A live-fire culinary theater using a signature Josper oven. The vibe is sleek, dark, and intimate, overlooking Lady Bird Lake—ideal for a formal celebratory dinner.",
+    "about": "A live-fire culinary theater using a signature Josper oven. The vibe is sleek, dark, and intimate, overlooking Lady Bird Lake\u2014ideal for a formal celebratory dinner.",
     "vibe_category": "Fine Dining",
     "state": "TX",
     "hours": {
@@ -2798,7 +2798,7 @@
       "mon_sat": "9:00 AM - 9:00 PM",
       "sun": "9:00 AM - 9:00 PM"
     },
-    "about": "Equal parts Ethiopian grocery and restaurant in Wells Branch. Classic dishes like awaze tibs, veggie combo, chechebsa, and doro wot—dine in or take out.",
+    "about": "Equal parts Ethiopian grocery and restaurant in Wells Branch. Classic dishes like awaze tibs, veggie combo, chechebsa, and doro wot\u2014dine in or take out.",
     "our_story": "A destination for authentic Ethiopian flavors and market staples in North Austin.",
     "cultural_roots": "Ethiopian diaspora dining in the United States.",
     "menu_highlights": [
@@ -2909,7 +2909,7 @@
       "African wines & beers",
       "Sunday coffee ceremony"
     ],
-    "about": "Denver's African espresso bar—Ethiopian and East African coffees, light fare, Sunday traditional coffee ceremony.",
+    "about": "Denver's African espresso bar\u2014Ethiopian and East African coffees, light fare, Sunday traditional coffee ceremony.",
     "vibe_category": "Community Favorites",
     "state": "CO",
     "hours": {
@@ -2925,7 +2925,7 @@
   },
   {
     "id": "chs-fine-001",
-    "name": "Bintü Atelier",
+    "name": "Bint\u00fc Atelier",
     "cuisine": "Modern West African",
     "region": "West African",
     "price_range": "$$$",
@@ -2984,7 +2984,7 @@
     ],
     "featured": false,
     "vibe_category": "Fine Dining",
-    "about": "Where Hollywood glamour meets authentic island heat. This is the spot for 'Vibe Dining'—the food quality is high-end, and the crowd is impeccably dressed.",
+    "about": "Where Hollywood glamour meets authentic island heat. This is the spot for 'Vibe Dining'\u2014the food quality is high-end, and the crowd is impeccably dressed.",
     "state": "CA",
     "hours": {
       "tue_sun": "5:00 PM - 11:00 PM",
@@ -3269,11 +3269,11 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
-    "address": "10050 Westheimer Rd, Houston, TX 77042",
-    "zip": "77042",
-    "lat": 29.737,
-    "lng": -95.547,
-    "phone": "(832) 834-3141",
+    "address": "14144 Westheimer Rd #120, Houston, TX 77077",
+    "zip": "77077",
+    "lat": 29.7355,
+    "lng": -95.602,
+    "phone": "(281) 741-3571",
     "website": "https://komchop.com/",
     "vibe": "Modern Casual / Family-Friendly",
     "vibe_tags": [
@@ -3291,7 +3291,7 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "12:00 PM - 9:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=Komchop%2C%2010050%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077042",
+    "google_search_url": "https://www.google.com/search?q=Komchop%2C%2014144%20Westheimer%20Rd%20%23120%2C%20Houston%2C%20TX%2077077",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
@@ -3337,8 +3337,8 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.7,
-    "address": "9218 Bissonnet St, Houston, TX 77074",
-    "phone": "(346) 319-3837",
+    "address": "9801 Bissonnet St Ste C, Houston, TX 77036",
+    "phone": "(713) 814-5253",
     "vibe": "Warm / Boutique Dining",
     "vibe_tags": [
       "Warm / Boutique Dining"
@@ -3355,7 +3355,7 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "google_search_url": "https://www.google.com/search?q=Sarabell%20Calabar%2C%209218%20Bissonnet%20St%2C%20Houston%2C%20TX%2077074",
+    "google_search_url": "https://www.google.com/search?q=Sarabell%20Calabar%2C%209801%20Bissonnet%20St%20Ste%20C%2C%20Houston%2C%20TX%2077036",
     "website": "https://sarabellcalabarrestaurant.com",
     "images": [
       "/restaurant-card-placeholder.svg"
@@ -3427,8 +3427,8 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4.6,
-    "address": "9420 Richmond Ave. Ste. E, Houston, TX 77063",
-    "phone": "(832) 251-5151",
+    "address": "9625 Bissonnet St, Houston, TX 77036",
+    "phone": "(713) 773-1400",
     "website": "http://afrikikohouston.com/",
     "vibe": "Unassuming / Local Favorite",
     "vibe_tags": [
@@ -3446,7 +3446,7 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "12:00 PM - 8:00 PM"
     },
-    "google_search_url": "https://www.google.com/search?q=Afrikiko%2C%209420%20Richmond%20Ave.%20Ste.%20E%2C%20Houston%2C%20TX%2077063",
+    "google_search_url": "https://www.google.com/search?q=Afrikiko%2C%209625%20Bissonnet%20St%2C%20Houston%2C%20TX%2077036",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
@@ -3586,45 +3586,14 @@
     ]
   },
   {
-    "id": "hou-sta-013",
-    "name": "Jollof Rice King",
-    "cuisine": "Nigerian (Takeout Focus)",
-    "region": "West African",
-    "price_range": "$",
-    "rating": 4.5,
-    "address": "3833 Richmond Ave, Houston, TX 77027",
-    "phone": "(713) 589-4699",
-    "website": "https://jollofriceking.com/",
-    "vibe": "Fast-Casual / Reliable",
-    "vibe_tags": [
-      "Fast-Casual / Reliable"
-    ],
-    "specialty": "Smoky Jollof Rice",
-    "menu_highlights": [
-      "Smoky Jollof Rice"
-    ],
-    "vibe_category": "Authentic Staples",
-    "about": "West African spot in Upper Kirby; jollof rice, suya, egusi, pepper soup. Same ownership family as Taste of Nigeria.",
-    "state": "TX",
-    "hours": {
-      "mon": "12:00 PM - 8:00 PM",
-      "tue_sat": "12:00 PM - 7:45 PM",
-      "sun": "12:00 PM - 7:45 PM"
-    },
-    "google_search_url": "https://www.google.com/search?q=Jollof%20Rice%20King%2C%203833%20Richmond%20Ave%2C%20Houston%2C%20TX%2077027",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "hou-sta-016",
     "name": "Fabaceae African Cuisine",
     "cuisine": "Nigerian (Gourmet Daily)",
     "region": "West African",
     "price_range": "$$",
     "rating": 4.7,
-    "address": "12611 Woodforest Blvd Ste A, Houston, TX 77015",
-    "phone": "(713) 453-3222",
+    "address": "10023 S Main St Bldg 7, Houston, TX 77025",
+    "phone": "(512) 840-0855",
     "vibe": "Modern / Bright & Clean",
     "vibe_tags": [
       "Modern / Bright & Clean"
@@ -3641,8 +3610,8 @@
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "google_search_url": "https://www.google.com/search?q=Fabaceae%20African%20Cuisine%2C%2012611%20Woodforest%20Blvd%20Ste%20A%2C%20Houston%2C%20TX%2077015",
-    "website": "https://www.fabaceaecuisine.com",
+    "google_search_url": "https://www.google.com/search?q=Fabaceae%20African%20Cuisine%2C%2010023%20S%20Main%20St%20Bldg%207%2C%20Houston%2C%20TX%2077025",
+    "website": "http://www.fabaceaecuisine.com",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
@@ -3654,7 +3623,8 @@
     "region": "East African",
     "price_range": "$$$",
     "rating": 4.6,
-    "address": "6800 Westheimer Rd, Houston, TX 77057",
+    "address": "6800 Southwest Fwy Suite D, Houston, TX 77074",
+    "zip": "77074",
     "phone": "(713) 334-0000",
     "hours": {
       "tue_thu": "11:00 AM - 11:00 PM",
@@ -3674,7 +3644,7 @@
     "vibe_category": "Authentic Staples",
     "about": "The perfect 'bridge' between a daily driver and a night out. It has great energy and some of the best tibs in town.",
     "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Lucy%20Ethiopian%20Restaurant%20%26%20Lounge%2C%206800%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077057",
+    "google_search_url": "https://www.google.com/search?q=Lucy%20Ethiopian%20Restaurant%20%26%20Lounge%2C%206800%20Southwest%20Fwy%2C%20Houston%2C%20TX%2077074",
     "website": "https://lucyhouston.com",
     "images": [
       "/restaurant-card-placeholder.svg"
@@ -3883,13 +3853,13 @@
     "vibe_tags": [
       "West African Fusion"
     ],
-    "specialty": "Attiéké & Tilapia",
+    "specialty": "Atti\u00e9k\u00e9 & Tilapia",
     "menu_highlights": [
-      "Attiéké",
+      "Atti\u00e9k\u00e9",
       "Tilapia"
     ],
     "vibe_category": "Authentic Staples",
-    "about": "Jollof, waakye, pounded yam & egusi, suya. Wed–Sun. Live entertainment, patio.",
+    "about": "Jollof, waakye, pounded yam & egusi, suya. Wed\u2013Sun. Live entertainment, patio.",
     "state": "GA",
     "hours": {
       "tue_fri": "11:00 AM - 9:00 PM",
@@ -4042,28 +4012,6 @@
     ]
   },
   {
-    "id": "tailat-kitchen-austin",
-    "name": "Tailat Kitchen",
-    "cuisine": "Nigerian",
-    "region": "West African",
-    "state": "TX",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "2101 W Pecan St #105, Pflugerville, TX 78660",
-    "phone": "(512) 809-4839",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic Jollof & Whole Grilled Tilapia.",
-    "vibe_category": "Authentic Staples",
-    "google_search_url": "https://www.google.com/search?q=Tailat%20Kitchen%2C%202101%20W%20Pecan%20St%20%23105%2C%20Pflugerville%2C%20TX%2078660",
-    "website": "https://tailatkitchen.com",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "lady-t-kitchen-austin",
     "name": "Lady T Kitchen",
     "cuisine": "Nigerian",
@@ -4118,7 +4066,7 @@
     "rating": 4.5,
     "address": "2370 High St, Oakland, CA 94601",
     "phone": "(510) 479-3270",
-    "about": "Oakland's only Trinidadian; roti wraps, curry goat pelau, pholourie. Chef Ann; Wed–Sat 11am–8pm.",
+    "about": "Oakland's only Trinidadian; roti wraps, curry goat pelau, pholourie. Chef Ann; Wed\u2013Sat 11am\u20138pm.",
     "state": "CA",
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
@@ -4141,7 +4089,7 @@
     "address": "1144 NW 52nd St, Seattle, WA 98107",
     "phone": "(206) 499-4019",
     "website": "https://www.blackstarkebab.com",
-    "about": "Seattle's premier Ghanaian spot. Food truck with traditional family recipes—chicken, beef, lamb kebabs, jollof rice, sweet plantains; organic ingredients.",
+    "about": "Seattle's premier Ghanaian spot. Food truck with traditional family recipes\u2014chicken, beef, lamb kebabs, jollof rice, sweet plantains; organic ingredients.",
     "state": "WA",
     "hours": {
       "tue_sun": "11:00 AM - 9:00 PM",
@@ -4301,7 +4249,7 @@
       "sun": "12:00 PM - 9:00 PM"
     },
     "vibe_category": "Authentic Staples",
-    "vibe": "Casual counter-service Jamaican — patties, bowls, and platters locals use as a daily driver spot.",
+    "vibe": "Casual counter-service Jamaican \u2014 patties, bowls, and platters locals use as a daily driver spot.",
     "google_search_url": "https://www.google.com/search?q=Vee's%2C%20896%20Nostrand%20Ave%2C%20Brooklyn%2C%20NY%2011225",
     "website": "https://www.veesrestaurant.com",
     "images": [
@@ -4378,14 +4326,14 @@
   },
   {
     "id": "two-hommes-inglewood",
-    "name": "Two Hommés",
+    "name": "Two Homm\u00e9s",
     "cuisine": "West African Fusion",
     "region": "West African",
     "price_range": "$$",
     "rating": 4.5,
     "address": "902 N La Brea Ave, Inglewood, CA 90302",
     "phone": "(424) 227-6266",
-    "about": "Afro-centric; California meets West African. Honey berbere chicken, jollof, root beer short ribs. Thu–Mon.",
+    "about": "Afro-centric; California meets West African. Honey berbere chicken, jollof, root beer short ribs. Thu\u2013Mon.",
     "state": "CA",
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
@@ -4430,7 +4378,7 @@
     "address": "4543 N Broadway, Chicago, IL 60640",
     "phone": "(773) 271-4300",
     "website": "https://www.orderselamethiopiankitchen.com",
-    "about": "Communal platters, organic ingredients. Full bar, late-night Fri–Sat. Uptown.",
+    "about": "Communal platters, organic ingredients. Full bar, late-night Fri\u2013Sat. Uptown.",
     "state": "IL",
     "hours": {
       "tue_sun": "11:00 AM - 10:00 PM",
@@ -5488,7 +5436,7 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Family-run Nigerian kitchen in Central Square, Lynn—authentic recipes from Head Chef Comfort Ukpong, from restaurant roots in Nigeria to catering and a growing local following.",
+    "about": "Family-run Nigerian kitchen in Central Square, Lynn\u2014authentic recipes from Head Chef Comfort Ukpong, from restaurant roots in Nigeria to catering and a growing local following.",
     "our_story": "Madam KOKO learned traditional Nigerian cooking as a child, ran a restaurant in Nigeria, and opened Kokomma in Lynn after friends and catering clients pushed her to share those flavors full-time.",
     "cultural_roots": "Nigerian diaspora dining in Greater Boston.",
     "menu_highlights": [
@@ -5575,7 +5523,7 @@
   },
   {
     "id": "sentie-s-kitchen-southborough",
-    "name": "Sentie’s Kitchen",
+    "name": "Sentie\u2019s Kitchen",
     "cuisine": "African",
     "region": "African",
     "price_range": "$$",
@@ -5587,7 +5535,7 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Southborough. Experience traditional African flavors and hospitality at Sentie’s Kitchen.",
+    "about": "Authentic African restaurant in Southborough. Experience traditional African flavors and hospitality at Sentie\u2019s Kitchen.",
     "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
     "cultural_roots": "Diaspora dining in the United States.",
     "menu_highlights": [
@@ -5736,7 +5684,7 @@
   },
   {
     "id": "mimi-s-nook-nigerian-cuisine-livonia",
-    "name": "Mimi’s Nook Nigerian Cuisine",
+    "name": "Mimi\u2019s Nook Nigerian Cuisine",
     "cuisine": "Nigerian",
     "region": "West African",
     "price_range": "$",
@@ -5747,7 +5695,7 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic Nigerian restaurant in Livonia. Experience traditional Nigerian flavors and hospitality at Mimi’s Nook Nigerian Cuisine.",
+    "about": "Authentic Nigerian restaurant in Livonia. Experience traditional Nigerian flavors and hospitality at Mimi\u2019s Nook Nigerian Cuisine.",
     "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
     "cultural_roots": "Diaspora dining in the United States.",
     "menu_highlights": [
@@ -6099,7 +6047,7 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Norcross spot for West African plates and jollof—call ahead for today's soups, rice, and grill specials.",
+    "about": "Norcross spot for West African plates and jollof\u2014call ahead for today's soups, rice, and grill specials.",
     "our_story": "Neighborhood African kitchen on Indian Trail Lilburn Rd serving the Norcross corridor.",
     "cultural_roots": "West African diaspora dining in metro Atlanta.",
     "menu_highlights": [
@@ -6343,7 +6291,7 @@
   },
   {
     "id": "d-nd-new-york",
-    "name": "dùndú",
+    "name": "d\u00f9nd\u00fa",
     "cuisine": "African",
     "region": "African",
     "price_range": "$",
@@ -6354,7 +6302,7 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in New York. Experience traditional African flavors and hospitality at dùndú.",
+    "about": "Authentic African restaurant in New York. Experience traditional African flavors and hospitality at d\u00f9nd\u00fa.",
     "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
     "cultural_roots": "Diaspora dining in the United States.",
     "menu_highlights": [
@@ -6580,7 +6528,7 @@
       "sat": "11:00 AM - 8:00 PM",
       "sun": "11:00 AM - 6:00 PM"
     },
-    "about": "Tanzanian kitchen inside 7th Street Market—chapati wraps, Swahili plates, samosas, and catering from Chef Ammalu's Dar es Salaam roots.",
+    "about": "Tanzanian kitchen inside 7th Street Market\u2014chapati wraps, Swahili plates, samosas, and catering from Chef Ammalu's Dar es Salaam roots.",
     "our_story": "Chef Ammalu brought generations of Tanzanian tradition from Dar es Salaam to Charlotte, growing from personal chef work into a stall at 7th Street Market.",
     "cultural_roots": "East African (Tanzanian) cuisine in Uptown Charlotte.",
     "menu_highlights": [
@@ -6697,7 +6645,7 @@
   },
   {
     "id": "dammney-s-kitchen-morton-grove",
-    "name": "Dammney’s Kitchen",
+    "name": "Dammney\u2019s Kitchen",
     "cuisine": "West African",
     "region": "West African",
     "price_range": "$",
@@ -6708,7 +6656,7 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Morton Grove. Experience traditional West African flavors and hospitality at Dammney’s Kitchen.",
+    "about": "Authentic West African restaurant in Morton Grove. Experience traditional West African flavors and hospitality at Dammney\u2019s Kitchen.",
     "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
     "cultural_roots": "Diaspora dining in the United States.",
     "menu_highlights": [
@@ -7267,7 +7215,7 @@
   },
   {
     "id": "k-y-d-restaurant-mirage-brooklyn",
-    "name": "Káyọ̀dé Restaurant Mirage",
+    "name": "K\u00e1y\u1ecd\u0300d\u00e9 Restaurant Mirage",
     "cuisine": "African",
     "region": "African",
     "price_range": "$",
@@ -7278,7 +7226,7 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Brooklyn. Experience traditional African flavors and hospitality at Káyọ̀dé Restaurant Mirage.",
+    "about": "Authentic African restaurant in Brooklyn. Experience traditional African flavors and hospitality at K\u00e1y\u1ecd\u0300d\u00e9 Restaurant Mirage.",
     "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
     "cultural_roots": "Diaspora dining in the United States.",
     "menu_highlights": [
@@ -7775,7 +7723,7 @@
   },
   {
     "id": "tailat-kitchen-nigerian-cuisine-austin",
-    "name": "Tailat Kitchen (Nigerian Cuisine)",
+    "name": "Tailat Kitchen",
     "cuisine": "Nigerian",
     "region": "West African",
     "price_range": "$",
@@ -7797,7 +7745,7 @@
     "google_place_id": "ChIJibdbOaHLRIYRK93zuU9XUJA",
     "lat": 30.3130587,
     "lng": -97.6906571,
-    "google_search_url": "https://www.google.com/search?q=Tailat%20Kitchen%20(Nigerian%20Cuisine)%2C%205933%20Westminster%20Dr%2C%20Austin%2C%20TX%2078723",
+    "google_search_url": "https://www.google.com/search?q=Tailat%20Kitchen%2C%205933%20Westminster%20Dr%2C%20Austin%2C%20TX%2078723",
     "website": "https://tailatkitchen.com",
     "images": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWncOiJLQigoHK0mD02hBx7rDq9ChS0an7BALSto3l80rpOYhpO7JIxzXqLH7LA9FnDmVrQ653Fp1wcNLh2ykJqW1TW6IyuKX-Ua_TBBePzg2Iy8y41zL6ipQ67nk6JJSFYFTeve=w1000-h1000-c-n",
@@ -7901,7 +7849,7 @@
   },
   {
     "id": "sandra-aduke-s-kitchen-cleveland",
-    "name": "Sandra Aduke’s Kitchen",
+    "name": "Sandra Aduke\u2019s Kitchen",
     "cuisine": "West African",
     "region": "West African",
     "price_range": "$",
@@ -7913,7 +7861,7 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic West African restaurant in Cleveland. Experience traditional West African flavors and hospitality at Sandra Aduke’s Kitchen.",
+    "about": "Authentic West African restaurant in Cleveland. Experience traditional West African flavors and hospitality at Sandra Aduke\u2019s Kitchen.",
     "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
     "cultural_roots": "Diaspora dining in the United States.",
     "menu_highlights": [
@@ -9300,7 +9248,7 @@
   },
   {
     "id": "le-bon-go-t-chez-fa-las-vegas",
-    "name": "Le Bon Goût Chez Fa",
+    "name": "Le Bon Go\u00fbt Chez Fa",
     "cuisine": "West African",
     "region": "West African",
     "price_range": "$",
@@ -10064,7 +10012,7 @@
   },
   {
     "id": "kente-caf-salt-lake-city",
-    "name": "Kente Café",
+    "name": "Kente Caf\u00e9",
     "cuisine": "African",
     "region": "African",
     "price_range": "$$",
@@ -10075,7 +10023,7 @@
       "mon_sat": "11:00 AM - 10:00 PM",
       "sun": "Closed"
     },
-    "about": "Authentic African restaurant in Salt Lake City. Experience traditional African flavors and hospitality at Kente Café.",
+    "about": "Authentic African restaurant in Salt Lake City. Experience traditional African flavors and hospitality at Kente Caf\u00e9.",
     "our_story": "Listing sourced from public maps data; verify hours and menu before publishing.",
     "cultural_roots": "Diaspora dining in the United States.",
     "menu_highlights": [
@@ -10368,33 +10316,6 @@
     ]
   },
   {
-    "id": "afrikiko-houston",
-    "name": "Afrikiko",
-    "cuisine": "West African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.4,
-    "address": "9625 Bissonnet St, Houston, TX 77036",
-    "phone": "+1 713-773-1400",
-    "website": "http://afrikikohouston.com/",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Afrikiko.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Afrikiko%2C%209625%20Bissonnet%20St%2C%20Houston%2C%20TX%2077036",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "dee-titolat-african-restaurant-houston",
     "name": "Dee Titolat African Restaurant",
     "cuisine": "African",
@@ -10580,33 +10501,6 @@
     ]
   },
   {
-    "id": "fabaceae-african-cuisine",
-    "name": "Fabaceae African Cuisine",
-    "cuisine": "Nigerian",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.2,
-    "address": "10023 S Main St Bldg 7, Houston, TX 77025",
-    "phone": "+1 512-840-0855",
-    "website": "http://www.fabaceaecuisine.com",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic Nigerian cuisine focused on classic dishes.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Fabaceae%20African%20Cuisine%2C%2010023%20S%20Main%20St%20Bldg%207%2C%20Houston%2C%20TX%2077025",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "blue-nile-ethiopian-restaurant",
     "name": "Blue Nile Ethiopian Restaurant",
     "cuisine": "Ethiopian",
@@ -10656,33 +10550,6 @@
     "vibe_category": "Authentic Staples",
     "state": "TX",
     "google_search_url": "https://www.google.com/search?q=Bantu%20House%2C%2022224%20Northwest%20Fwy%2C%20Ste%20B%2C%20Cypress%2C%20TX%2077429",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
-    "id": "ch-pnbl-k-houston-1769474644390",
-    "name": "ChòpnBlọk",
-    "cuisine": "West African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.6,
-    "address": "507 Westheimer Rd, Houston, TX 77006",
-    "phone": "(832) 962-4500",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at ChòpnBlọk.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Ch%C3%B2pnBl%E1%BB%8Dk%2C%20507%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077006",
-    "website": "https://chopnblok.co",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
@@ -10824,32 +10691,6 @@
     "vibe_category": "Authentic Staples",
     "state": "TX",
     "google_search_url": "https://www.google.com/search?q=Amala%20Joint%2C%206271%20S%20Texas%206%2C%20Houston%2C%20TX%2077083",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
-    "id": "adulis-houston",
-    "name": "Adulis",
-    "cuisine": "Eritrean",
-    "region": "East African",
-    "price_range": "$",
-    "rating": 4.8,
-    "address": "5800 Bellaire Blvd #102, Houston, TX 77081",
-    "phone": "(346) 571-0966",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic Eritrean restaurant in Houston. Experience traditional Eritrean flavors and hospitality at Adulis.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Adulis%2C%205800%20Bellaire%20Blvd%20%23102%2C%20Houston%2C%20TX%2077081",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
@@ -11091,33 +10932,6 @@
     ]
   },
   {
-    "id": "komchop-houston",
-    "name": "Komchop",
-    "cuisine": "West African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.1,
-    "address": "14144 Westheimer Rd #120, Houston, TX 77077",
-    "phone": "(281) 741-3571",
-    "website": "https://www.komchop.com/",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Komchop.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Komchop%2C%2014144%20Westheimer%20Rd%20%23120%2C%20Houston%2C%20TX%2077077",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "cafe-de-vivre-houston",
     "name": "Cafe De Vivre",
     "cuisine": "West African",
@@ -11215,7 +11029,7 @@
       "sat": "12:30 PM - 10:30 PM",
       "sun": "12:30 PM - 10:30 PM"
     },
-    "about": "Calabar-style Nigerian kitchen on Westheimer—Afang, egusi, edikaikong, pepper soup, and jollof rice made with traditional recipes and Houston hospitality.",
+    "about": "Calabar-style Nigerian kitchen on Westheimer\u2014Afang, egusi, edikaikong, pepper soup, and jollof rice made with traditional recipes and Houston hospitality.",
     "our_story": "Glozi Calabar brings the heart of Nigerian cuisine to Houston. The team focuses on authentic Calabar and West African flavors, from hearty soups to party-size jollof.",
     "cultural_roots": "Calabar and Nigerian diaspora dining in Houston.",
     "menu_highlights": [
@@ -11340,55 +11154,55 @@
     ]
   },
   {
-    "id": "sf-001",
-    "name": "Teranga",
-    "cuisine": "Senegalese / West African",
+    "id": "chopnblok-montrose-houston",
+    "name": "Ch\u00f2pnBl\u1ecdk (Montrose)",
+    "cuisine": "West African (Fast-Fine)",
     "region": "West African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "1 Embarcadero Center, San Francisco, CA 94111",
-    "phone": "(415) 655-9051",
+    "price_range": "$$$",
+    "rating": 4.6,
+    "address": "507 Westheimer Rd, Houston, TX 77006",
+    "zip": "77006",
+    "phone": "(832) 962-4500",
+    "website": "https://chopnblok.co",
+    "neighborhood": "Montrose",
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "Closed"
     },
-    "about": "A polished, health-conscious Senegalese restaurant in San Francisco's Financial District, offering authentic West African dishes like Baobab Energy Bowls and Yassa Chicken.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
+    "vibe": "Modern & High-Design",
+    "vibe_tags": [
+      "Modern & High-Design"
+    ],
+    "specialty": "Trad Bowl (Jollof) & Yassa Grill",
     "menu_highlights": [
-      "Call for seasonal specials"
+      "Trad Bowl (Jollof)",
+      "Yassa Grill"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "CA",
-    "google_search_url": "https://www.google.com/search?q=Teranga%2C%201%20Embarcadero%20Center%2C%20San%20Francisco%2C%20CA%2094111",
-    "website": "https://www.terangafoods.com",
+    "about": "Montrose location of Ch\u00f2pnBl\u1ecdk \u2014 fast-fine West African bowls, suya, and cocktails.",
+    "state": "TX",
+    "google_search_url": "https://www.google.com/search?q=Ch%C3%B2pnBl%E1%BB%8Dk%2C%20507%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077006",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
   },
   {
-    "id": "hou-sta-018",
-    "name": "Caribbean Hotpot Grill",
-    "cuisine": "Pan-Caribbean",
-    "region": "Caribbean",
-    "price_range": "$",
-    "rating": 4.5,
-    "address": "5601 Navigation Blvd, Houston, TX 77011",
-    "phone": "(713) 222-2600",
-    "website": "http://www.caribbeanhotpotgrill.com/",
+    "id": "adulis-houston",
+    "name": "Adulis",
+    "cuisine": "Eritrean",
+    "region": "East African",
+    "price_range": "$$",
+    "rating": 4.8,
+    "address": "5800 Bellaire Blvd #102, Houston, TX 77081",
+    "phone": "(346) 571-0966",
     "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
+      "mon_sat": "10:00 AM - 2:00 AM",
+      "sun": "5:00 PM - 2:00 AM"
     },
-    "about": "Famous for their massive portions and affordability. It's a true worker's lunch spot.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
+    "about": "Family-owned Eritrean and Ethiopian restaurant on Bellaire Blvd; injera platters, tibs, and late-night dining.",
     "vibe_category": "Authentic Staples",
     "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Caribbean%20Hotpot%20Grill%2C%205601%20Navigation%20Blvd%2C%20Houston%2C%20TX%2077011",
+    "google_search_url": "https://www.google.com/search?q=Adulis%2C%205800%20Bellaire%20Blvd%20%23102%2C%20Houston%2C%20TX%2077081",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]

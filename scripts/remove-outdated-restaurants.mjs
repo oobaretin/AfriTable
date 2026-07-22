@@ -23,6 +23,12 @@ const PERMANENTLY_CLOSED = [
   "clt-leah-louise",  // Leah & Louise - sources report permanently closed
   "ile-bistro-la",    // ILÉ Bistro - Timeout listed CLOSED
   "dc-003",           // Elfegne - Yelp listed CLOSED
+  "hou-sta-013",      // Jollof Rice King - permanently closed (3833 Richmond Ave)
+];
+
+// Wrong or superseded duplicate listings
+const INVALID_DUPLICATES = [
+  "tailat-kitchen-austin", // Pflugerville address; canonical is Westminster Dr Austin
 ];
 
 // No proper address (neighborhood or city-only, no street + ZIP)
@@ -43,6 +49,7 @@ const NON_ALIGNED = [
 
 const REMOVE_IDS = new Set([
   ...PERMANENTLY_CLOSED,
+  ...INVALID_DUPLICATES,
   ...NO_PROPER_ADDRESS,
   ...NON_ALIGNED,
 ]);

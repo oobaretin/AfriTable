@@ -14,6 +14,18 @@ const __dirname = path.dirname(__filename);
 
 const restaurantsPath = path.join(__dirname, '..', 'data', 'restaurants.json');
 
+/** Normalize address for comparison — different streets = different locations. */
+function normalizeAddress(address) {
+  if (!address || typeof address !== 'string') return '';
+  return address
+    .toLowerCase()
+    .replace(/\./g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/,\s*ste\s*[^,]+/gi, '')
+    .replace(/#\d+/g, '')
+    .trim();
+}
+
 function deduplicateRestaurants() {
   try {
     const data = fs.readFileSync(restaurantsPath, 'utf-8');
@@ -47,13 +59,19 @@ function deduplicateRestaurants() {
         continue;
       }
       
-      // Check for duplicate by name (case-insensitive)
+      // Check for duplicate by name (case-insensitive) — skip when addresses differ (multi-location)
       if (name && seenByName.has(name)) {
+        const existing = seenByName.get(name);
+        const sameLocation =
+          normalizeAddress(restaurant.address) === normalizeAddress(existing.address);
+        if (!sameLocation) {
+          deduplicated.push(restaurant);
+          continue;
+        }
+
         console.log(`⚠️  Duplicate name found: ${restaurant.name} (ID: ${restaurant.id})`);
         duplicatesFound++;
-        
-        // Merge rich data fields into existing entry
-        const existing = seenByName.get(name);
+
         if (restaurant.vibe && !existing.vibe) existing.vibe = restaurant.vibe;
         if (restaurant.specialty && !existing.specialty) existing.specialty = restaurant.specialty;
         if (restaurant.neighborhood && !existing.neighborhood) existing.neighborhood = restaurant.neighborhood;
