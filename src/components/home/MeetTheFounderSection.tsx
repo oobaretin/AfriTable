@@ -33,13 +33,13 @@ export function MeetTheFounderSection() {
         </div>
 
         <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-10 shadow-2xl shadow-black/20 flex flex-col items-center text-center">
-          <div className="mb-6 w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden bg-black ring-4 ring-[#C69C2B]/30 ring-offset-4 ring-offset-[#000814] shadow-xl flex-shrink-0 flex items-center justify-center p-6">
+          <div className="mb-6 h-40 w-40 md:h-48 md:w-48 flex-shrink-0 overflow-hidden rounded-full bg-black ring-4 ring-[#C69C2B]/30 ring-offset-4 ring-offset-[#000814] shadow-xl">
             <Image
-              src="/icon.png"
+              src="/emblem.png"
               alt="AfriTable Sankofa emblem"
-              width={192}
-              height={192}
-              className="h-full w-full object-contain"
+              width={512}
+              height={512}
+              className="h-full w-full scale-[1.08] object-cover"
             />
           </div>
           <h3 className="text-xl md:text-2xl font-bold text-white mb-1">Founder &amp; CEO</h3>

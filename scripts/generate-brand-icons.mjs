@@ -77,6 +77,7 @@ function main() {
 
   const outputs = [
     { size: 512, dest: path.join(appDir, "icon.png") },
+    { size: 512, dest: path.join(publicDir, "emblem.png") },
     { size: 180, dest: path.join(appDir, "apple-icon.png") },
     { size: 192, dest: path.join(publicDir, "icon-192.png") },
     { size: 512, dest: path.join(publicDir, "icon-512.png") },
