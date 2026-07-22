@@ -1,8 +1,7 @@
 import Image from "next/image";
 
 /**
- * Shared "Meet the Founder" section with Dark Blue 3D theme to match Hero.
- * Used on About and Contact pages.
+ * Founder story section for the About page.
  */
 export function MeetTheFounderSection() {
   return (

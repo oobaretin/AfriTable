@@ -1,30 +1,37 @@
 import Image from "next/image";
-import { ContactAndMap } from "@/components/home/ContactAndMap";
+import { AboutContactCta } from "@/components/about/AboutContactCta";
+import { MetroUpdatesSignup } from "@/components/about/MetroUpdatesSignup";
 import { MeetTheFounderSection } from "@/components/home/MeetTheFounderSection";
 import { getCatalogStats } from "@/lib/catalog-stats";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn why AfriTable exists—to put African and Caribbean dining at the center of discovery and reservation nationwide.",
+};
 
 export default function AboutPage() {
   const { restaurantCount, metroCount } = getCatalogStats(loadRestaurantsFromJSON());
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="py-20 px-6 bg-slate-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight">
+      <section className="bg-slate-50 px-6 py-20">
+        <div className="mx-auto max-w-4xl text-center">
+          <h1 className="mb-6 text-5xl font-black tracking-tight text-slate-900 md:text-6xl">
             Our mission is to put <span className="text-orange-600">Culture</span> back at the center of the table.
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed">
-            AfriTable was born from a simple observation: African and Caribbean culinary excellence is world-class, but the platforms to discover it were missing.
+          <p className="text-xl leading-relaxed text-slate-600">
+            AfriTable was born from a simple observation: African and Caribbean culinary excellence is world-class,
+            but the platforms to discover it were missing.
           </p>
         </div>
       </section>
 
-      {/* The Story Section */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="overflow-hidden rounded-3xl shadow-2xl rotate-2 transition-transform duration-500 hover:rotate-0">
+      <section className="px-6 py-24">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-2">
+          <div className="rotate-2 overflow-hidden rounded-3xl shadow-2xl transition-transform duration-500 hover:rotate-0">
             <Image
               src="/images/about-community-dining.png"
               alt="Four guests sharing a meal in a warm Jamaican and African themed dining room—jerk chicken, rice and peas, plantains, stews, and island sodas on the table—the kind of night out AfriTable helps people discover and reserve."
@@ -34,24 +41,27 @@ export default function AboutPage() {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
-          
+
           <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">More Than Just a Reservation</h2>
-            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              We started AfriTable because we were tired of &quot;hidden gems&quot; remaining hidden. We saw brilliant chefs, vibrant flavors, and generations of tradition being overlooked by mainstream booking apps.
+            <h2 className="mb-6 text-3xl font-bold text-slate-900">More Than Just a Reservation</h2>
+            <p className="mb-6 text-lg leading-relaxed text-slate-600">
+              We started AfriTable because we were tired of &quot;hidden gems&quot; remaining hidden. We saw brilliant
+              chefs, vibrant flavors, and generations of tradition being overlooked by mainstream booking apps.
             </p>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              AfriTable isn&apos;t just a software company. We are a digital home for the diaspora. We are the bridge between the diner craving the smoky jollof of Lagos or the jerk chicken of Kingston, and the hardworking restaurant owners who cook them.
+            <p className="mb-8 text-lg leading-relaxed text-slate-600">
+              AfriTable isn&apos;t just a software company. We are a digital home for the diaspora. We are the bridge
+              between the diner craving the smoky jollof of Lagos or the jerk chicken of Kingston, and the hardworking
+              restaurant owners who cook them.
             </p>
-            
+
             <div className="grid grid-cols-2 gap-6 border-t border-slate-100 pt-8">
               <div>
-                <h4 className="text-orange-600 font-black text-3xl">{metroCount}+</h4>
-                <p className="text-sm text-slate-500 font-bold uppercase">Metros in our directory</p>
+                <h4 className="text-3xl font-black text-orange-600">{metroCount}+</h4>
+                <p className="text-sm font-bold uppercase text-slate-500">Metros in our directory</p>
               </div>
               <div>
-                <h4 className="text-orange-600 font-black text-3xl">{restaurantCount}+</h4>
-                <p className="text-sm text-slate-500 font-bold uppercase">Vetted listings</p>
+                <h4 className="text-3xl font-black text-orange-600">{restaurantCount}+</h4>
+                <p className="text-sm font-bold uppercase text-slate-500">Vetted listings</p>
               </div>
             </div>
             <p className="mt-4 text-xs text-slate-400">Counts reflect our live catalog and grow as we onboard partners.</p>
@@ -59,35 +69,36 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-24 px-6 bg-slate-900 text-white rounded-[40px] mx-4 mb-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-black mb-4">Our Values</h2>
-            <div className="h-1 w-20 bg-orange-600 mx-auto"></div>
+      <section className="mx-4 mb-20 rounded-[40px] bg-slate-900 px-6 py-24 text-white">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-black">Our Values</h2>
+            <div className="mx-auto h-1 w-20 bg-orange-600" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-4xl mb-4">🥘</div>
-              <h3 className="text-xl font-bold mb-3">Authenticity First</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                We don&apos;t do &quot;fusion&quot; for the sake of trends. we celebrate the raw, real, and ancestral flavors that define our regions.
-              </p>
-            </div>
-            
-            <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-4xl mb-4">🤝</div>
-              <h3 className="text-xl font-bold mb-3">Community Growth</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                When a restaurant joins AfriTable, they aren&apos;t just a client—they are a partner. We invest in their digital growth.
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
+              <div className="mb-4 text-4xl">🥘</div>
+              <h3 className="mb-3 text-xl font-bold">Authenticity First</h3>
+              <p className="text-sm leading-relaxed text-slate-400">
+                We don&apos;t do &quot;fusion&quot; for the sake of trends. we celebrate the raw, real, and ancestral
+                flavors that define our regions.
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-xl font-bold mb-3">Cultural Pride</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
+              <div className="mb-4 text-4xl">🤝</div>
+              <h3 className="mb-3 text-xl font-bold">Community Growth</h3>
+              <p className="text-sm leading-relaxed text-slate-400">
+                When a restaurant joins AfriTable, they aren&apos;t just a client—they are a partner. We invest in
+                their digital growth.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
+              <div className="mb-4 text-4xl">🌍</div>
+              <h3 className="mb-3 text-xl font-bold">Cultural Pride</h3>
+              <p className="text-sm leading-relaxed text-slate-400">
                 Every reservation is an act of supporting the diaspora economy and preserving culinary heritage.
               </p>
             </div>
@@ -95,11 +106,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Meet the Founder - 3D dark blue theme to match Hero */}
+      <MetroUpdatesSignup />
       <MeetTheFounderSection />
-
-      {/* Cities of Flavor Section */}
-      <ContactAndMap />
+      <AboutContactCta />
     </div>
   );
 }
