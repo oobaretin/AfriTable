@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { SiteLayout } from "@/components/layout/SiteLayout";
 
 export const metadata = {
   title: "Page Not Found",
@@ -6,7 +7,8 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <main className="mx-auto flex max-w-2xl flex-col items-start gap-4 px-6 py-16">
+    <SiteLayout>
+      <main className="mx-auto flex max-w-2xl flex-col items-start gap-4 px-6 py-16">
       <h1 className="text-3xl font-semibold tracking-tight">We couldn’t find that page</h1>
       <p className="text-muted-foreground">
         The page may have been moved, renamed, or doesn’t exist. Try going back home or browsing restaurants.
@@ -22,7 +24,8 @@ export default function NotFound() {
           <a href="/submit-restaurant">Add a Restaurant</a>
         </Button>
       </div>
-    </main>
+      </main>
+    </SiteLayout>
   );
 }
 

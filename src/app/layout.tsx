@@ -2,13 +2,9 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import Navbar from "@/components/layout/Navbar";
 import { Analytics } from "@vercel/analytics/react";
-import Footer from "@/components/layout/Footer";
 import CookieConsentBanner from "@/components/layout/CookieConsentBanner";
-import { FoundersNote } from "@/components/home/FoundersNote";
 import { BookingDrawerProvider } from "@/contexts/BookingDrawerContext";
-import { BookingDrawerWrapper } from "@/components/booking/BookingDrawerWrapper";
 import { getAppBaseUrl } from "@/lib/app-url";
 
 const inter = Inter({
@@ -84,14 +80,8 @@ export default function RootLayout({
               aria-hidden
               className="pointer-events-none fixed inset-0 -z-10 opacity-[0.12] [background-image:linear-gradient(to_right,color-mix(in_oklab,var(--foreground)_12%,transparent)_1px,transparent_1px),linear-gradient(to_bottom,color-mix(in_oklab,var(--foreground)_10%,transparent)_1px,transparent_1px)] [background-size:48px_48px]"
             />
-            <div className="flex min-h-screen flex-col">
-              <Navbar />
-              <div className="flex-1 pt-24">{children}</div>
-              <Footer />
-            </div>
+            <div className="flex min-h-screen flex-col">{children}</div>
             <CookieConsentBanner />
-            <FoundersNote />
-            <BookingDrawerWrapper />
             <Analytics />
           </BookingDrawerProvider>
         </Providers>
