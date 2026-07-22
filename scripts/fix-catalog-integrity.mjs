@@ -36,6 +36,8 @@ function auditLog(message, data, hypothesisId = "catalog") {
 const REMOVE_IDS = new Set([
   "hou-sta-013", // Jollof Rice King — permanently closed (3833 Richmond Ave)
   "tailat-kitchen-austin", // Wrong Pflugerville address; real location is Westminster Dr
+  "lucy-houston", // Duplicate of hou-sta-017 (Lucy Ethiopian Restaurant & Lounge)
+  "sarabell-calabar-restaurant-buffet-houston", // Duplicate of hou-sta-004 (same address/phone)
 ]);
 
 const ADDRESS_FIXES = {

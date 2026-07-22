@@ -744,7 +744,7 @@
   },
   {
     "id": "adulis-ny",
-    "name": "Adulis",
+    "name": "Adulis (Flushing)",
     "cuisine": "Eritrean",
     "region": "East African",
     "price_range": "$$",
@@ -775,7 +775,12 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlGD1utAsv5RBkiGHsYNIs8D4Z8gtuBzjHEqdQyF0gK89JwZOoJTkwjjmQQRfgahAZht0fxzbggTnXLgukSz3SaIqjV_BX9dgYNS4unulkFnjtZvJo86IXBYLGIlZEdCbVTJiLU6T9qP-U=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlB1-5I6j6K2SPaNg-00eDkqb9hOuzDCXI9FuY7UtzdmwMnYwd2k9HGQYCRR6uQ09ZRqsb8yFe0u226kenq3Kj8xoeXoyRA-OV_ZaT-IjHkwZshMmH2G0I5OutIBQwG5XscObQw=w1000-h1000-c-n"
     ],
-    "google_place_id": "ChIJgawSaj5gwokRA7BSfurvaeA"
+    "google_place_id": "ChIJgawSaj5gwokRA7BSfurvaeA",
+    "search_aliases": [
+      "Adulis",
+      "Adulis Queens",
+      "149-10 45th Ave"
+    ]
   },
   {
     "id": "kulan-cafe",
@@ -969,7 +974,7 @@
       "401 Franklin"
     ],
     "secondary_location": {
-      "name": "ChòpnBlọk (Montrose)",
+      "name": "Ch\u00f2pnBl\u1ecdk (Montrose)",
       "address": "507 Westheimer Rd, Houston, TX 77006",
       "phone": "(832) 962-4500",
       "catalog_id": "chopnblok-montrose-houston"
@@ -3371,6 +3376,11 @@
     "website": "https://sarabellcalabarrestaurant.com",
     "images": [
       "/restaurant-card-placeholder.svg"
+    ],
+    "search_aliases": [
+      "Sarabell Calabar Restaurant & Buffet",
+      "Sarabell Calabar Buffet",
+      "9801 Bissonnet"
     ]
   },
   {
@@ -3660,6 +3670,12 @@
     "website": "https://lucyhouston.com",
     "images": [
       "/restaurant-card-placeholder.svg"
+    ],
+    "search_aliases": [
+      "Lucy",
+      "Lucy Ethiopian",
+      "Lucy Houston",
+      "6800 Southwest Fwy"
     ]
   },
   {
@@ -10274,33 +10290,6 @@
     ]
   },
   {
-    "id": "lucy-houston",
-    "name": "Lucy",
-    "cuisine": "Ethiopian",
-    "region": "East African",
-    "price_range": "$",
-    "rating": 4.4,
-    "address": "6800 Southwest Fwy, Houston, TX 77074",
-    "phone": "+1 713-334-0000",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic Ethiopian restaurant in Houston. Experience traditional Ethiopian flavors and hospitality at Lucy.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Lucy%2C%206800%20Southwest%20Fwy%2C%20Houston%2C%20TX%2077074",
-    "website": "https://lucyhouston.com",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
     "id": "bahel-ethiopian-mart-and-dining-houston",
     "name": "Bahel Ethiopian Mart and Dining",
     "cuisine": "Ethiopian",
@@ -10588,32 +10577,6 @@
     "vibe_category": "Authentic Staples",
     "state": "TX",
     "google_search_url": "https://www.google.com/search?q=Rodo%20Nigerian%20Cuisine%2C%2016805%20Bissonnet%20St%2C%20Richmond%2C%20TX%2077407",
-    "images": [
-      "/restaurant-card-placeholder.svg"
-    ]
-  },
-  {
-    "id": "sarabell-calabar-restaurant-buffet-houston",
-    "name": "Sarabell Calabar Restaurant & Buffet",
-    "cuisine": "West African",
-    "region": "African",
-    "price_range": "$$",
-    "rating": 4.7,
-    "address": "9801 Bissonnet St Suite C, Houston, TX 77036",
-    "phone": "(713) 814-5253",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Authentic West African restaurant in Houston. Experience traditional West African flavors and hospitality at Sarabell Calabar Restaurant & Buffet.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Sarabell%20Calabar%20Restaurant%20%26%20Buffet%2C%209801%20Bissonnet%20St%20Suite%20C%2C%20Houston%2C%20TX%2077036",
     "images": [
       "/restaurant-card-placeholder.svg"
     ]
@@ -11209,7 +11172,7 @@
   },
   {
     "id": "adulis-houston",
-    "name": "Adulis",
+    "name": "Adulis (Houston)",
     "cuisine": "Eritrean",
     "region": "East African",
     "price_range": "$$",
@@ -11226,6 +11189,11 @@
     "google_search_url": "https://www.google.com/search?q=Adulis%2C%205800%20Bellaire%20Blvd%20%23102%2C%20Houston%2C%20TX%2077081",
     "images": [
       "/restaurant-card-placeholder.svg"
+    ],
+    "search_aliases": [
+      "Adulis",
+      "Adulis Bellaire",
+      "5800 Bellaire"
     ]
   }
 ]
