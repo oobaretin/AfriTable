@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-14T20:24:33.736Z",
+  "generatedAt": "2026-07-22T18:00:52Z",
   "dryRun": false,
-  "serpApiUsed": false,
-  "processed": 30,
+  "serpApiUsed": true,
+  "processed": 19,
   "discovered": 0,
   "validated": 0,
-  "failed": 30,
+  "failed": 19,
   "results": [
     {
       "slug": "famous-princess",
@@ -33,10 +33,10 @@
     },
     {
       "slug": "chi-002",
-      "name": "Gorée Cuisine",
+      "name": "Gor\u00e9e Cuisine",
       "source": "none",
       "candidates": 0,
-      "search_query": "Gorée Cuisine restaurant Chicago IL 60653",
+      "search_query": "Gor\u00e9e Cuisine restaurant Chicago IL 60653",
       "status": "not_found"
     },
     {
@@ -57,10 +57,10 @@
     },
     {
       "slug": "dca-001",
-      "name": "Dōgon",
+      "name": "D\u014dgon",
       "source": "none",
       "candidates": 0,
-      "search_query": "Dōgon restaurant Washington DC 20024",
+      "search_query": "D\u014dgon restaurant Washington DC 20024",
       "status": "not_found"
     },
     {
@@ -114,17 +114,17 @@
     {
       "slug": "saaraloges-kitchen-riverside",
       "name": "Saaraloge's Kitchen",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Saaraloge's Kitchen restaurant Riverside CA 92505",
+      "source": "bing",
+      "candidates": 1,
+      "search_query": "Saaraloge's restaurant Riverside CA 92505",
       "status": "not_found"
     },
     {
       "slug": "amaye-international-restaurant-portland",
       "name": "AMAYE International Restaurant",
-      "source": "bing",
-      "candidates": 1,
-      "search_query": "AMAYE International Portland restaurant website",
+      "source": "none",
+      "candidates": 0,
+      "search_query": "AMAYE International Restaurant restaurant Portland OR 97213",
       "status": "not_found"
     },
     {
@@ -153,98 +153,10 @@
     },
     {
       "slug": "d-nd-new-york",
-      "name": "dùndú",
+      "name": "d\u00f9nd\u00fa",
       "source": "none",
       "candidates": 0,
-      "search_query": "dùndú restaurant New York NY 10017",
-      "status": "not_found"
-    },
-    {
-      "slug": "d-salam-african-cuisine-new-york",
-      "name": "D. Salam African Cuisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "D. Salam African Cuisine restaurant New York NY 10002",
-      "status": "not_found"
-    },
-    {
-      "slug": "samoha-african-cuisine-charlotte",
-      "name": "Samoha African Cuisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Samoha African Cuisine restaurant Charlotte NC 28213",
-      "status": "not_found"
-    },
-    {
-      "slug": "dammney-s-kitchen-morton-grove",
-      "name": "Dammney’s Kitchen",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Dammney’s Kitchen restaurant Morton Grove IL 60053",
-      "status": "not_found"
-    },
-    {
-      "slug": "mogadishu-restaurant-chicago",
-      "name": "Mogadishu Restaurant",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Mogadishu Restaurant restaurant Chicago IL 60610",
-      "status": "not_found"
-    },
-    {
-      "slug": "fufudelight-suya-kitchen-arlington",
-      "name": "Fufudelight& Suya Kitchen",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Fufudelight& Suya Kitchen restaurant Arlington TX 76018",
-      "status": "not_found"
-    },
-    {
-      "slug": "west-african-way-plano",
-      "name": "West African Way",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "West African Way restaurant Plano TX 75074",
-      "status": "not_found"
-    },
-    {
-      "slug": "bliss-africa-davie",
-      "name": "Bliss Africa",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Bliss Africa restaurant Davie FL 33314",
-      "status": "not_found"
-    },
-    {
-      "slug": "k-y-d-restaurant-mirage-brooklyn",
-      "name": "Káyọ̀dé Restaurant Mirage",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Káyọ̀dé Restaurant Mirage restaurant Brooklyn NY 11210",
-      "status": "not_found"
-    },
-    {
-      "slug": "taste-of-african-cuisine-san-diego",
-      "name": "Taste of African Cuisine",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Taste of African Cuisine restaurant San Diego CA 92105",
-      "status": "not_found"
-    },
-    {
-      "slug": "taste-of-lagos-gibsonton",
-      "name": "Taste Of Lagos",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Taste Of Lagos restaurant Gibsonton FL 33534",
-      "status": "not_found"
-    },
-    {
-      "slug": "tfk-african-food-tampa",
-      "name": "Tfk African food.",
-      "source": "none",
-      "candidates": 0,
-      "search_query": "Tfk African food. restaurant Tampa FL 33603",
+      "search_query": "d\u00f9nd\u00fa restaurant New York NY 10017",
       "status": "not_found"
     }
   ]

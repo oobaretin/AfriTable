@@ -110,14 +110,11 @@ async function main() {
     const addressLine = addressToSearchLine(entry.address);
     const name = entry.name;
 
-    if (entry.website && needsDiscovery(entry)) {
-      entry.website = undefined;
-    }
-
     console.log(`[${report.processed + 1}] ${name}`);
 
     report.processed++;
     const row: any = { slug: entry.id, name, source: "pending", candidates: 0 };
+    const previousWebsite = entry.website;
 
     try {
       const { website, source, candidates, query } = await discoverRestaurantWebsite(name, addressLine, {
@@ -132,6 +129,7 @@ async function main() {
         row.status = "not_found";
         console.log("  ⚠️  No website candidate\n");
         report.results.push(row);
+        if (!entry.website && previousWebsite) entry.website = previousWebsite;
         await new Promise((r) => setTimeout(r, 2200));
         saveProgress();
         continue;
@@ -168,6 +166,10 @@ async function main() {
       row.error = error instanceof Error ? error.message : String(error);
       console.log(`  ❌ Search error: ${row.error}\n`);
       report.results.push(row);
+    }
+
+    if (!entry.website && previousWebsite) {
+      entry.website = previousWebsite;
     }
 
     await new Promise((r) => setTimeout(r, 2200));

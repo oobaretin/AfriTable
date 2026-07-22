@@ -43,6 +43,8 @@
     "backfill:images:py": "python3 scripts/backfill-catalog-images-serpapi.py",
     "sync:images": "python3 scripts/sync-catalog-images-to-supabase.py",
     "discover:websites": "tsx scripts/discover-restaurant-websites.ts --needs-website",
+    "discover:websites:py": "python3 scripts/discover-restaurant-websites.py --only-missing",
+    "apply:websites": "python3 scripts/apply-website-discoveries.py",
     "cleanup:websites": "tsx scripts/cleanup-invalid-websites.ts",
     "sync:websites": "node scripts/sync-catalog-websites-to-supabase.mjs",
     "apply:researched-websites": "node scripts/apply-researched-websites.mjs",
