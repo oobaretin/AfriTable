@@ -105,7 +105,7 @@ export function PartnerWithUsSection() {
             <p className="mt-6 text-xs text-slate-500">
               Already approved or have an invite link? Use create owner account above. Questions?{" "}
               <a href={mailto(SITE_CONTACT.partnerships)} className="font-semibold text-slate-300 underline-offset-4 hover:underline">
-                Email partnerships
+                {SITE_CONTACT.partnerships}
               </a>
               .
             </p>

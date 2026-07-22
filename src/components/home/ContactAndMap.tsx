@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { mailto, SITE_CONTACT } from "@/lib/site-contact";
+import { ContactEmailList } from "@/components/contact/ContactEmailList";
 
 const cities = [
   "Houston",
@@ -148,30 +148,7 @@ export function ContactAndMap() {
           </form>
         </div>
 
-        <div className="space-y-6">
-          <div className="flex items-center gap-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-brand-bronze/10 bg-brand-paper text-xl shadow-sm">
-              📧
-            </div>
-            <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-slate-400">General Inquiries</p>
-              <a href={mailto(SITE_CONTACT.hello)} className="font-bold text-brand-dark transition-colors hover:text-brand-bronze">
-                {SITE_CONTACT.hello}
-              </a>
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-brand-bronze/10 bg-brand-paper text-xl shadow-sm">
-              🤝
-            </div>
-            <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Partnerships</p>
-              <a href={mailto(SITE_CONTACT.partners)} className="font-bold text-brand-dark transition-colors hover:text-brand-bronze">
-                {SITE_CONTACT.partners}
-              </a>
-            </div>
-          </div>
-        </div>
+        <ContactEmailList layout="grid" />
       </div>
     </section>
   );

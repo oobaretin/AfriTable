@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { Instagram, Twitter, Youtube } from "lucide-react";
 import NewsletterSignup from "@/components/layout/NewsletterSignup";
-import { mailto, SITE_CONTACT } from "@/lib/site-contact";
+import { mailto } from "@/lib/site-contact";
+import { PUBLIC_CONTACT_EMAILS } from "@/components/contact/ContactEmailList";
 
 export default function Footer() {
   return (
@@ -108,12 +109,24 @@ export default function Footer() {
                 <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/about">
                   About
                 </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href={mailto(SITE_CONTACT.support)}>
-                  Contact support
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/contact">
+                  Contact
                 </a>
-                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href={mailto(SITE_CONTACT.partners)}>
-                  Partnerships
+                <a className="text-slate-400 hover:text-white hover:underline underline-offset-4 block" href="/privacy">
+                  Privacy
                 </a>
+              </div>
+              <div className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-300">Email us</div>
+              <div className="mt-2 grid gap-1.5 leading-6">
+                {PUBLIC_CONTACT_EMAILS.map((entry) => (
+                  <a
+                    key={entry.email}
+                    className="break-all text-slate-400 hover:text-white hover:underline underline-offset-4 block"
+                    href={mailto(entry.email)}
+                  >
+                    {entry.email}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
