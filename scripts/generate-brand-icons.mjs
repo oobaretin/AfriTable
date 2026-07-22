@@ -13,10 +13,10 @@ const work = path.join(root, ".icon-work");
 const appDir = path.join(root, "src/app");
 const publicDir = path.join(root, "public");
 
-/** Emblem crop from full wordmark (px). */
-const EMBLEM_CROP = 300;
-/** Inner crop to zoom emblem ~8% (fills tab / home-screen icons better). */
-const EMBLEM_ZOOM = 285;
+/** Emblem crop from full wordmark (px) — tight enough to exclude adjacent "A" letterform. */
+const EMBLEM_CROP = 275;
+/** Inner crop to zoom emblem slightly for tab / home-screen legibility. */
+const EMBLEM_ZOOM = 262;
 
 function run(cmd, args) {
   const result = spawnSync(cmd, args, { stdio: "inherit" });
