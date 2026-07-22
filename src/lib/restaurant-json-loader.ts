@@ -46,6 +46,7 @@ export type JSONRestaurant = {
     name: string;
     address: string;
     phone: string;
+    catalog_id?: string;
   };
 };
 

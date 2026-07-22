@@ -569,6 +569,25 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
               <div className="min-w-0">
                 <div className="text-xs text-muted-foreground mb-1">Address</div>
                 <div className="text-sm font-medium break-words">{addrStr || "Address coming soon"}</div>
+                {(restaurant as { secondary_location?: { name: string; address: string; phone?: string; catalog_id?: string } }).secondary_location ? (
+                  <div className="mt-3 rounded-lg border border-dashed p-3 text-xs">
+                    <p className="font-semibold text-muted-foreground mb-1">Also at</p>
+                    <p className="font-medium">
+                      {(restaurant as { secondary_location: { name: string } }).secondary_location.name}
+                    </p>
+                    <p className="text-muted-foreground mt-0.5">
+                      {(restaurant as { secondary_location: { address: string } }).secondary_location.address}
+                    </p>
+                    {(restaurant as { secondary_location: { catalog_id?: string } }).secondary_location.catalog_id ? (
+                      <Link
+                        href={`/restaurants/${encodeURIComponent((restaurant as { secondary_location: { catalog_id: string } }).secondary_location.catalog_id)}`}
+                        className="text-primary underline underline-offset-4 mt-2 inline-block"
+                      >
+                        View {(restaurant as { secondary_location: { name: string } }).secondary_location.name} →
+                      </Link>
+                    ) : null}
+                  </div>
+                ) : null}
                 {addrStr ? (
                   <a className="text-xs text-primary underline underline-offset-4 mt-1 inline-block py-1 min-h-[32px] flex items-center" href={googleMapsLink(addrStr)} target="_blank" rel="noreferrer">
                     Get directions

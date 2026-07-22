@@ -64,11 +64,17 @@ export function RestaurantCard({
   
   // Extract city from address if it's a string
   let displayCity = cityLabel;
+  let displayStreet: string | undefined;
   if (!displayCity && typeof restaurant.address === "string") {
     const parts = restaurant.address.split(",").map((s) => s.trim());
     if (parts.length >= 2) {
       displayCity = parts[1];
     }
+    displayStreet = parts[0];
+  } else if (typeof restaurant.address === "string") {
+    displayStreet = restaurant.address.split(",")[0]?.trim();
+  } else if ((restaurant.address as { street?: string })?.street) {
+    displayStreet = (restaurant.address as { street: string }).street;
   }
 
   // Get rating
@@ -229,12 +235,17 @@ export function RestaurantCard({
           )}
 
           {displayCity && (
-            <div className="flex items-center gap-2 text-xs text-slate-400 mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+            <div className="flex items-start gap-2 text-xs text-slate-400 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 shrink-0 mt-0.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
               </svg>
-              {displayCity}
+              <div className="min-w-0">
+                {displayStreet ? (
+                  <p className="font-medium text-slate-500 truncate">{displayStreet}</p>
+                ) : null}
+                <p>{displayCity}</p>
+              </div>
             </div>
           )}
         </div>

@@ -962,6 +962,18 @@
     "state": "TX",
     "google_search_url": "https://www.google.com/search?q=Ch%C3%B2pnBl%E1%BB%8Dk%2C%20401%20Franklin%20St%20Suite%201325%2C%20Houston%2C%20TX%2077201",
     "website": "https://chopnblok.co",
+    "search_aliases": [
+      "ChopnBlok",
+      "Chopn Blok",
+      "POST Houston",
+      "401 Franklin"
+    ],
+    "secondary_location": {
+      "name": "ChòpnBlọk (Montrose)",
+      "address": "507 Westheimer Rd, Houston, TX 77006",
+      "phone": "(832) 962-4500",
+      "catalog_id": "chopnblok-montrose-houston"
+    },
     "images": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl3XklNtJsMzRJnkWt449gWAbZ3WVm7I7sC5WbAjCAIYmChnLeXMCDUATVSRdnd5OxT1GOG3TTK2LqlRNd8bpuP2wqcXAXKlDUCfndneVZuY7p4ofzwLKAsQGEOb0JEaR5xnW28lw=w1000-h1000-c-n"
     ],
@@ -11162,8 +11174,17 @@
     "rating": 4.6,
     "address": "507 Westheimer Rd, Houston, TX 77006",
     "zip": "77006",
+    "lat": 29.7442,
+    "lng": -95.3894,
     "phone": "(832) 962-4500",
     "website": "https://chopnblok.co",
+    "search_aliases": [
+      "ChopnBlok",
+      "Chopn Blok",
+      "Ch\u00f2pnBl\u1ecdk",
+      "507 Westheimer",
+      "Westheimer Montrose"
+    ],
     "neighborhood": "Montrose",
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",

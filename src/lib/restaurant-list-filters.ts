@@ -191,9 +191,22 @@ export function filterByVibe<T extends { vibe_category?: string; vibe?: string }
   });
 }
 
+/** Strip accents so "chopnblok" matches "ChòpnBlọk". */
+export function normalizeSearchText(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+}
+
 /** Compact alphanumeric form for fuzzy name / domain matching (e.g. reggaehut → Reggae Hut Cafe). */
 export function compactSearchText(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return normalizeSearchText(value).replace(/[^a-z0-9]/g, "");
+}
+
+/** Drop parenthetical location suffixes for brand-level matching (e.g. "ChòpnBlọk (Montrose)" → "ChòpnBlọk"). */
+function brandNameForSearch(name: string): string {
+  return name.replace(/\s*\([^)]*\)\s*/g, " ").replace(/\s+/g, " ").trim();
 }
 
 const SEARCH_STOP_WORDS = new Set([
@@ -216,21 +229,22 @@ function significantSearchTokens(value: string): string[] {
 
 /** True when query and text share enough tokens (handles long queries like "Chef Creole Seasoned Restaurant"). */
 function tokensMatchQuery(query: string, text: string): boolean {
-  const q = query.toLowerCase();
-  const t = text.toLowerCase();
+  const q = normalizeSearchText(query);
+  const t = normalizeSearchText(text);
   const textTokens = significantSearchTokens(text);
   const queryTokens = significantSearchTokens(query);
 
-  if (textTokens.length > 0 && textTokens.every((token) => q.includes(token))) {
+  if (textTokens.length > 0 && textTokens.every((token) => q.includes(normalizeSearchText(token)))) {
     return true;
   }
-  if (queryTokens.length > 0 && queryTokens.every((token) => t.includes(token))) {
+  if (queryTokens.length > 0 && queryTokens.every((token) => t.includes(normalizeSearchText(token)))) {
     return true;
   }
   return false;
 }
 
 type NameSearchable = {
+  id?: string;
   name?: string;
   cuisine?: string;
   region?: string;
@@ -244,11 +258,14 @@ export function matchesNameQuery(restaurant: NameSearchable, nameQuery: string):
   const q = nameQuery.trim().toLowerCase();
   if (!q) return true;
 
+  const qNorm = normalizeSearchText(q);
   const qCompact = compactSearchText(q);
   const restaurantCity = extractCityFromAddress(restaurant.address);
+  const brandName = restaurant.name ? brandNameForSearch(restaurant.name) : "";
 
   const haystacks = [
     restaurant.name,
+    brandName,
     restaurant.cuisine,
     restaurant.region,
     restaurant.website,
@@ -257,10 +274,13 @@ export function matchesNameQuery(restaurant: NameSearchable, nameQuery: string):
     ...(restaurant.search_aliases ?? []),
   ]
     .filter(Boolean)
-    .map((s) => String(s).toLowerCase());
+    .map((s) => String(s));
 
-  return haystacks.some((text) => {
-    if (text.includes(q)) return true;
+  const matched = haystacks.some((text) => {
+    const lower = text.toLowerCase();
+    const normalized = normalizeSearchText(text);
+    if (lower.includes(q) || normalized.includes(qNorm)) return true;
+    if (brandName && tokensMatchQuery(q, brandName)) return true;
     if (tokensMatchQuery(q, text)) return true;
     if (qCompact.length >= 3 && compactSearchText(text).includes(qCompact)) return true;
     if (qCompact.length >= 3 && compactSearchText(text).length >= 3 && qCompact.includes(compactSearchText(text))) {
@@ -268,6 +288,8 @@ export function matchesNameQuery(restaurant: NameSearchable, nameQuery: string):
     }
     return false;
   });
+
+  return matched;
 }
 
 export type ListFilterParams = {

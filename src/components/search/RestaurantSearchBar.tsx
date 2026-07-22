@@ -23,16 +23,7 @@ type RestaurantSearchBarProps = {
   restaurants: JSONRestaurant[];
 };
 
-// Extract city from address string
-function extractCity(address: string): string {
-  const parts = address.split(",").map((s) => s.trim());
-  if (parts.length >= 2) {
-    const cityState = parts[1];
-    const cityMatch = cityState.match(/^([^,]+)/);
-    return cityMatch ? cityMatch[1].trim() : cityState;
-  }
-  return "";
-}
+import { matchesNameQuery, extractCityFromAddress } from "@/lib/restaurant-list-filters";
 
 export function RestaurantSearchBar({ restaurants }: RestaurantSearchBarProps) {
   const searchInputId = React.useId();
@@ -48,14 +39,18 @@ export function RestaurantSearchBar({ restaurants }: RestaurantSearchBarProps) {
 
     const query = searchQuery.toLowerCase().trim();
     return restaurants
-      .filter((r) => {
-        const nameMatch = r.name.toLowerCase().includes(query);
-        const cuisineMatch = r.cuisine.toLowerCase().includes(query);
-        const city = extractCity(r.address).toLowerCase();
-        const cityMatch = city.includes(query);
-
-        return nameMatch || cuisineMatch || cityMatch;
-      })
+      .filter((r) =>
+        matchesNameQuery(
+          {
+            id: r.id,
+            name: r.name,
+            cuisine: r.cuisine,
+            region: r.region,
+            address: r.address,
+          },
+          query,
+        ),
+      )
       .slice(0, 10); // Limit to 10 results for performance
   }, [restaurants, searchQuery]);
 
@@ -122,7 +117,9 @@ export function RestaurantSearchBar({ restaurants }: RestaurantSearchBarProps) {
               </div>
               <div className="space-y-4">
                 {filteredRestaurants.map((r) => {
-                  const city = extractCity(r.address);
+                  const city = extractCityFromAddress(r.address);
+                  const street =
+                    typeof r.address === "string" ? r.address.split(",")[0]?.trim() : "";
                   return (
                     <Link
                       key={r.id}
@@ -136,9 +133,9 @@ export function RestaurantSearchBar({ restaurants }: RestaurantSearchBarProps) {
                             <Badge variant="secondary" className="text-xs">
                               {r.cuisine}
                             </Badge>
-                            {city && <span>• {city}</span>}
+                            {street ? <span>• {street}</span> : city ? <span>• {city}</span> : null}
                             <span>• {r.price_range}</span>
-                            {r.rating && <span>• {r.rating.toFixed(1)}★</span>}
+                            {r.rating ? <span>• {r.rating.toFixed(1)}★</span> : null}
                           </div>
                         </div>
                       </div>
