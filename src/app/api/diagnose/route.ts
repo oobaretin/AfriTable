@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createSupabasePublicClient } from "@/lib/supabase/public";
+import { getNotificationEmailStatus } from "@/lib/email/notification-email-status";
 
 /**
  * Diagnostic endpoint to check environment variables and database connectivity
@@ -89,6 +90,8 @@ export async function GET() {
     };
   }
 
+  diagnostics.checks.notifications = getNotificationEmailStatus();
+
   // Determine overall status
   const allChecksPass =
     diagnostics.checks.env?.hasSupabaseUrl &&
@@ -117,6 +120,16 @@ export async function GET() {
   if (diagnostics.checks.count?.totalActive === 0) {
     diagnostics.recommendations.push(
       "No active restaurants found. Run: npm run activate:restaurants",
+    );
+  }
+  if (!diagnostics.checks.notifications?.smtpConfigured) {
+    diagnostics.recommendations.push(
+      "Set GMAIL_USER + GMAIL_APP_PASSWORD (or SMTP_*) in Vercel so form submissions email you.",
+    );
+  }
+  if (diagnostics.checks.notifications?.smtpConfigured && !diagnostics.checks.notifications?.siteInboxExplicit) {
+    diagnostics.recommendations.push(
+      "Set SITE_INBOX_EMAIL to your personal Gmail so notifications do not rely on contact@ forwarding alone.",
     );
   }
 
