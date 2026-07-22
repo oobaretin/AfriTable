@@ -6,6 +6,18 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { sanitizeRedirectPath } from "@/lib/auth/config";
 
+async function fetchLoginDestination(redirectTo: string): Promise<string> {
+  try {
+    const res = await fetch(`/api/auth/resolve-redirect?redirectTo=${encodeURIComponent(redirectTo)}`, {
+      cache: "no-store",
+    });
+    const data = (await res.json()) as { destination?: string };
+    return data.destination ?? redirectTo;
+  } catch {
+    return redirectTo;
+  }
+}
+
 function profilePatchFromUser(user: {
   id: string;
   email?: string | null;
@@ -78,7 +90,7 @@ function AuthCallbackInner() {
         return;
       }
 
-      router.replace(next);
+      router.replace(await fetchLoginDestination(next));
       router.refresh();
     }
 

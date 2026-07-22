@@ -17,6 +17,33 @@ import { GoogleAuthButton } from "@/components/auth/GoogleAuthButton";
 import { AuthErrorBanner } from "@/components/auth/AuthErrorBanner";
 import { sanitizeRedirectPath } from "@/lib/auth/config";
 
+async function fetchLoginDestination(redirectTo: string): Promise<string> {
+  try {
+    const res = await fetch(`/api/auth/resolve-redirect?redirectTo=${encodeURIComponent(redirectTo)}`, {
+      cache: "no-store",
+    });
+    const data = (await res.json()) as { destination?: string; profileRole?: string | null };
+    // #region agent log
+    fetch("http://127.0.0.1:7334/ingest/db39d61a-a551-4eae-93f4-8f741a47f367", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "3435b4" },
+      body: JSON.stringify({
+        sessionId: "3435b4",
+        runId: "post-fix",
+        hypothesisId: "C-E",
+        location: "login/page.tsx:fetchLoginDestination",
+        message: "Server resolved login destination",
+        data: { redirectTo, destination: data.destination, profileRole: data.profileRole ?? null },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
+    // #endregion
+    return data.destination ?? redirectTo;
+  } catch {
+    return redirectTo;
+  }
+}
+
 const loginSchema = z.object({
   email: z.string().email("Enter a valid email."),
   password: z.string().min(6, "Password must be at least 6 characters."),
@@ -41,10 +68,11 @@ function LoginForm() {
 
   React.useEffect(() => {
     const supabase = createSupabaseBrowserClient();
-    void supabase.auth.getSession().then(({ data: { session } }) => {
+    void supabase.auth.getSession().then(async ({ data: { session } }) => {
       if (session?.user) {
         setAuthState("redirecting");
-        router.replace(redirectTo);
+        const destination = await fetchLoginDestination(redirectTo);
+        router.replace(destination);
       } else {
         setAuthState("guest");
       }
@@ -66,7 +94,8 @@ function LoginForm() {
       return;
     }
     setAuthState("redirecting");
-    router.replace(redirectTo);
+    const destination = await fetchLoginDestination(redirectTo);
+    router.replace(destination);
     router.refresh();
   }
 
