@@ -1,0 +1,549 @@
+{
+  "generatedAt": "2026-07-27T17:51:44Z",
+  "dryRun": false,
+  "updatedCount": 85,
+  "sample": [
+    {
+      "id": "sweetpepper-kitchen-aurora",
+      "name": "SweetPepper Kitchen",
+      "before": "Authentic African restaurant in Aurora. Experience traditional African flavors and hospitality at SweetPepper Kitchen.",
+      "after": "SweetPepper Kitchen serves African flavors in Aurora. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "delightful-nigerian-cuisine-orlando",
+      "name": "Delightful Nigerian Cuisine",
+      "before": "Authentic Nigerian restaurant in Orlando. Experience traditional Nigerian flavors and hospitality at Delightful Nigerian Cuisine.",
+      "after": "Delightful Nigerian Cuisine serves Nigerian cooking rooted in West African traditions in Orlando. A neighborhood spot for nigerian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "steaming-pots-west-africa-cuisine-brandon-brandon",
+      "name": "Steaming Pots West Africa Cuisine Brandon",
+      "before": "Authentic African restaurant in Brandon. Experience traditional African flavors and hospitality at Steaming Pots West Africa Cuisine Brandon.",
+      "after": "Steaming Pots West Africa Cuisine Brandon serves African flavors in Brandon. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "trybal-african-speakeasy-denver",
+      "name": "Trybal African Speakeasy",
+      "before": "Authentic African restaurant in Denver. Experience traditional African flavors and hospitality at Trybal African Speakeasy.",
+      "after": "Trybal African Speakeasy serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "global-cuisine-denver",
+      "name": "Global Cuisine",
+      "before": "Authentic East African restaurant in Denver. Experience traditional East African flavors and hospitality at Global Cuisine.",
+      "after": "Global Cuisine serves East African flavors in Denver. A neighborhood spot for east african plates, warm hospitality, and familiar diaspora comfort food."
+    }
+  ],
+  "updated": [
+    {
+      "id": "sweetpepper-kitchen-aurora",
+      "name": "SweetPepper Kitchen",
+      "before": "Authentic African restaurant in Aurora. Experience traditional African flavors and hospitality at SweetPepper Kitchen.",
+      "after": "SweetPepper Kitchen serves African flavors in Aurora. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "delightful-nigerian-cuisine-orlando",
+      "name": "Delightful Nigerian Cuisine",
+      "before": "Authentic Nigerian restaurant in Orlando. Experience traditional Nigerian flavors and hospitality at Delightful Nigerian Cuisine.",
+      "after": "Delightful Nigerian Cuisine serves Nigerian cooking rooted in West African traditions in Orlando. A neighborhood spot for nigerian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "steaming-pots-west-africa-cuisine-brandon-brandon",
+      "name": "Steaming Pots West Africa Cuisine Brandon",
+      "before": "Authentic African restaurant in Brandon. Experience traditional African flavors and hospitality at Steaming Pots West Africa Cuisine Brandon.",
+      "after": "Steaming Pots West Africa Cuisine Brandon serves African flavors in Brandon. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "trybal-african-speakeasy-denver",
+      "name": "Trybal African Speakeasy",
+      "before": "Authentic African restaurant in Denver. Experience traditional African flavors and hospitality at Trybal African Speakeasy.",
+      "after": "Trybal African Speakeasy serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "global-cuisine-denver",
+      "name": "Global Cuisine",
+      "before": "Authentic East African restaurant in Denver. Experience traditional East African flavors and hospitality at Global Cuisine.",
+      "after": "Global Cuisine serves East African flavors in Denver. A neighborhood spot for east african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "african-food-chavie-spices-denver",
+      "name": "African food Chavie spices",
+      "before": "Authentic African restaurant in Denver. Experience traditional African flavors and hospitality at African food Chavie spices.",
+      "after": "African food Chavie spices serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "maandeeq-east-africa-restaurant-aurora",
+      "name": "Maandeeq East Africa Restaurant",
+      "before": "Authentic East African restaurant in Aurora. Experience traditional East African flavors and hospitality at Maandeeq East Africa Restaurant.",
+      "after": "Maandeeq East Africa Restaurant serves East African flavors in Aurora. A neighborhood spot for east african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "barwaaqo-denver",
+      "name": "Barwaaqo",
+      "before": "Authentic East African restaurant in Denver. Experience traditional East African flavors and hospitality at Barwaaqo.",
+      "after": "Barwaaqo serves East African flavors in Denver. A neighborhood spot for east african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "fidel-east-african-restaurant-aurora",
+      "name": "Fidel East African Restaurant",
+      "before": "Authentic Eritrean restaurant in Aurora. Experience traditional Eritrean flavors and hospitality at Fidel East African Restaurant.",
+      "after": "Fidel East African Restaurant serves Eritrean cooking rooted in East African traditions in Aurora. A neighborhood spot for eritrean plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "queen-of-sheba-restaurant-denver",
+      "name": "Queen of Sheba Restaurant",
+      "before": "Authentic Ethiopian restaurant in Denver. Experience traditional Ethiopian flavors and hospitality at Queen of Sheba Restaurant.",
+      "after": "Queen of Sheba Restaurant serves Ethiopian cooking rooted in East African traditions in Denver. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "geez-habesha-bar-restaurant-aurora",
+      "name": "Geez Habesha Bar & Restaurant",
+      "before": "Authentic Ethiopian restaurant in Aurora. Experience traditional Ethiopian flavors and hospitality at Geez Habesha Bar & Restaurant.",
+      "after": "Geez Habesha Bar & Restaurant serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "mesob-denver",
+      "name": "mesob",
+      "before": "Authentic Ethiopian restaurant in Denver. Experience traditional Ethiopian flavors and hospitality at mesob.",
+      "after": "mesob serves Ethiopian cooking rooted in East African traditions in Denver. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "5-star-caf-eritrean-restaurant-denver",
+      "name": "5 Star Caf\u00e9 Eritrean Restaurant",
+      "before": "Authentic Eritrean restaurant in Denver. Experience traditional Eritrean flavors and hospitality at 5 Star Caf\u00e9 Eritrean Restaurant.",
+      "after": "5 Star Caf\u00e9 Eritrean Restaurant serves Eritrean cooking rooted in East African traditions in Denver. A neighborhood spot for eritrean plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "the-ethiopian-restaurant-denver",
+      "name": "The Ethiopian Restaurant",
+      "before": "Authentic Ethiopian restaurant in Denver. Experience traditional Ethiopian flavors and hospitality at The Ethiopian Restaurant.",
+      "after": "The Ethiopian Restaurant serves Ethiopian cooking rooted in East African traditions in Denver. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "hadnet-cafe-denver",
+      "name": "Hadnet Cafe",
+      "before": "Authentic Ethiopian restaurant in Denver. Experience traditional Ethiopian flavors and hospitality at Hadnet Cafe.",
+      "after": "Hadnet Cafe serves Ethiopian cooking rooted in East African traditions in Denver. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "abyssinia-ethiopian-restaurant-and-bar-denver",
+      "name": "Abyssinia Ethiopian Restaurant and Bar",
+      "before": "Authentic Ethiopian restaurant in Denver. Experience traditional Ethiopian flavors and hospitality at Abyssinia Ethiopian Restaurant and Bar.",
+      "after": "Abyssinia Ethiopian Restaurant and Bar serves Ethiopian cooking rooted in East African traditions in Denver. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "megenagna-aurora",
+      "name": "Megenagna",
+      "before": "Authentic Ethiopian restaurant in Aurora. Experience traditional Ethiopian flavors and hospitality at Megenagna.",
+      "after": "Megenagna serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "konjo-ethiopian-food-edgewater",
+      "name": "Konjo Ethiopian Food",
+      "before": "Authentic Ethiopian restaurant in Edgewater. Experience traditional Ethiopian flavors and hospitality at Konjo Ethiopian Food.",
+      "after": "Konjo Ethiopian Food serves Ethiopian cooking rooted in East African traditions in Edgewater. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "lalibela-cafe-denver",
+      "name": "Lalibela Cafe",
+      "before": "Authentic African restaurant in Denver. Experience traditional African flavors and hospitality at Lalibela Cafe.",
+      "after": "Lalibela Cafe serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "konjo-ethiopian-food-denver",
+      "name": "Konjo Ethiopian Food",
+      "before": "Authentic Ethiopian restaurant in Denver. Experience traditional Ethiopian flavors and hospitality at Konjo Ethiopian Food.",
+      "after": "Konjo Ethiopian Food serves Ethiopian cooking rooted in East African traditions in Denver. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "eatopia-eat-ethiopian-aurora",
+      "name": "Eatopia: Eat Ethiopian",
+      "before": "Authentic Ethiopian restaurant in Aurora. Experience traditional Ethiopian flavors and hospitality at Eatopia: Eat Ethiopian.",
+      "after": "Eatopia: Eat Ethiopian serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "lucy-ethiopian-restaurant-denver",
+      "name": "Lucy Ethiopian Restaurant",
+      "before": "Authentic Ethiopian restaurant in Denver. Experience traditional Ethiopian flavors and hospitality at Lucy Ethiopian Restaurant.",
+      "after": "Lucy Ethiopian Restaurant serves Ethiopian cooking rooted in East African traditions in Denver. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "nile-ethiopian-restaurant-aurora",
+      "name": "Nile Ethiopian Restaurant",
+      "before": "Authentic Ethiopian restaurant in Aurora. Experience traditional Ethiopian flavors and hospitality at Nile Ethiopian Restaurant.",
+      "after": "Nile Ethiopian Restaurant serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "all-stars-cafe-aurora",
+      "name": "All-Stars Cafe",
+      "before": "Authentic Ethiopian restaurant in Aurora. Experience traditional Ethiopian flavors and hospitality at All-Stars Cafe.",
+      "after": "All-Stars Cafe serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "sudan-cafe-denver",
+      "name": "Sudan Cafe",
+      "before": "Authentic African restaurant in Denver. Experience traditional African flavors and hospitality at Sudan Cafe.",
+      "after": "Sudan Cafe serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "yemen-grill-cafe-denver-denver",
+      "name": "Yemen Grill & Cafe Denver",
+      "before": "Authentic African restaurant in Denver. Experience traditional African flavors and hospitality at Yemen Grill & Cafe Denver.",
+      "after": "Yemen Grill & Cafe Denver serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "tuti-grill-denver",
+      "name": "Tuti Grill",
+      "before": "Authentic African restaurant in Denver. Experience traditional African flavors and hospitality at Tuti Grill.",
+      "after": "Tuti Grill serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "samosa-shop-denver",
+      "name": "Samosa Shop",
+      "before": "Authentic African restaurant in Denver. Experience traditional African flavors and hospitality at Samosa Shop.",
+      "after": "Samosa Shop serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "gursha-ethiopian-restaurant-aurora",
+      "name": "Gursha Ethiopian Restaurant",
+      "before": "Authentic Ethiopian restaurant in Aurora. Experience traditional Ethiopian flavors and hospitality at Gursha Ethiopian Restaurant.",
+      "after": "Gursha Ethiopian Restaurant serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "safta-denver",
+      "name": "Safta",
+      "before": "Authentic African restaurant in Denver. Experience traditional African flavors and hospitality at Safta.",
+      "after": "Safta serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "sarr-maimouna-west-african-food-aurora",
+      "name": "Sarr Maimouna West African Food",
+      "before": "Authentic West African restaurant in Aurora. Experience traditional West African flavors and hospitality at Sarr Maimouna West African Food.",
+      "after": "Sarr Maimouna West African Food serves West African flavors in Aurora. A neighborhood spot for west african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "zula-cafe-lounge-aurora",
+      "name": "Zula Cafe & Lounge",
+      "before": "Authentic Ethiopian restaurant in Aurora. Experience traditional Ethiopian flavors and hospitality at Zula Cafe & Lounge.",
+      "after": "Zula Cafe & Lounge serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "gb-african-market-and-restaurant-orlando",
+      "name": "GB African Market and Restaurant",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at GB African Market and Restaurant.",
+      "after": "GB African Market and Restaurant serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "igatap-african-caribbean-cuisine-orlando",
+      "name": "Igatap African Caribbean Cuisine",
+      "before": "Authentic Caribbean restaurant in Orlando. Experience traditional Caribbean flavors and hospitality at Igatap African Caribbean Cuisine.",
+      "after": "Igatap African Caribbean Cuisine serves Caribbean flavors in Orlando. A neighborhood spot for caribbean plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "gen-bagay-restaurant-orlando",
+      "name": "Gen Bagay Restaurant",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Gen Bagay Restaurant.",
+      "after": "Gen Bagay Restaurant serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "moroccan-breeze-restaurant-orlando",
+      "name": "Moroccan Breeze Restaurant",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Moroccan Breeze Restaurant.",
+      "after": "Moroccan Breeze Restaurant serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "benitas-kitchen-orlando",
+      "name": "Benita's Kitchen",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Benita's Kitchen.",
+      "after": "Benita's Kitchen serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "marabou-restaurant-and-lounge-orlando",
+      "name": "Marabou Restaurant and Lounge",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Marabou Restaurant and Lounge.",
+      "after": "Marabou Restaurant and Lounge serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "three-masks-inc-orlando",
+      "name": "Three Masks INC",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Three Masks INC.",
+      "after": "Three Masks INC serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "worlds-magic-restaurant-orlando",
+      "name": "World's Magic Restaurant",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at World's Magic Restaurant.",
+      "after": "World's Magic Restaurant serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "kalalou-caribbean-bar-grill-orlando-orlando",
+      "name": "Kalalou Caribbean Bar & Grill Orlando",
+      "before": "Authentic Caribbean restaurant in Orlando. Experience traditional Caribbean flavors and hospitality at Kalalou Caribbean Bar & Grill Orlando.",
+      "after": "Kalalou Caribbean Bar & Grill Orlando serves Caribbean flavors in Orlando. A neighborhood spot for caribbean plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "kabsah-orlando",
+      "name": "Kabsah",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Kabsah.",
+      "after": "Kabsah serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "knalis-kitchen-orlando",
+      "name": "Knali's Kitchen",
+      "before": "Authentic Caribbean restaurant in Orlando. Experience traditional Caribbean flavors and hospitality at Knali's Kitchen.",
+      "after": "Knali's Kitchen serves Caribbean flavors in Orlando. A neighborhood spot for caribbean plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "caravan-uzbek-turkish-cuisine-orlando",
+      "name": "CARAVAN UZBEK & TURKISH CUISINE",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at CARAVAN UZBEK & TURKISH CUISINE.",
+      "after": "CARAVAN UZBEK & TURKISH CUISINE serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "chayhana-altamonte-springs",
+      "name": "CHAYHANA",
+      "before": "Authentic African restaurant in Altamonte Springs. Experience traditional African flavors and hospitality at CHAYHANA.",
+      "after": "CHAYHANA serves African flavors in Altamonte Springs. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "saha-w-hana-orlando",
+      "name": "Saha W Hana",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Saha W Hana.",
+      "after": "Saha W Hana serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "one-lounge-uzbek-turkish-halal-food-hookah-lounge-orlando",
+      "name": "One Lounge | Uzbek Turkish | Halal food & Hookah lounge",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at One Lounge | Uzbek Turkish | Halal food & Hookah lounge.",
+      "after": "One Lounge | Uzbek Turkish | Halal food & Hookah lounge serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "shoufi-mahfi-mediterranean-grill-orlando",
+      "name": "ShouFi MahFi Mediterranean Grill",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at ShouFi MahFi Mediterranean Grill.",
+      "after": "ShouFi MahFi Mediterranean Grill serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "abdo-kabab-orlando",
+      "name": "Abdo Kabab",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Abdo Kabab.",
+      "after": "Abdo Kabab serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "amar-orlando-mediterranean-restaurant-orlando",
+      "name": "Amar Orlando Mediterranean Restaurant",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Amar Orlando Mediterranean Restaurant.",
+      "after": "Amar Orlando Mediterranean Restaurant serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "flame-kabob-orlando",
+      "name": "Flame Kabob",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Flame Kabob.",
+      "after": "Flame Kabob serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "kabab2go-orlando-orlando",
+      "name": "Kabab2go Orlando",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Kabab2go Orlando.",
+      "after": "Kabab2go Orlando serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "zeytin-turkish-cuisine-orlando",
+      "name": "Zeytin Turkish Cuisine",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Zeytin Turkish Cuisine.",
+      "after": "Zeytin Turkish Cuisine serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "mamak-asian-street-food-orlando",
+      "name": "Mamak Asian Street Food",
+      "before": "Authentic African restaurant in Orlando. Experience traditional African flavors and hospitality at Mamak Asian Street Food.",
+      "after": "Mamak Asian Street Food serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "beirut-xpress-orlando-kissimmee",
+      "name": "Beirut Xpress Orlando",
+      "before": "Authentic African restaurant in Kissimmee. Experience traditional African flavors and hospitality at Beirut Xpress Orlando.",
+      "after": "Beirut Xpress Orlando serves African flavors in Kissimmee. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "sanaa-kissimmee",
+      "name": "Sanaa",
+      "before": "Authentic African restaurant in Kissimmee. Experience traditional African flavors and hospitality at Sanaa.",
+      "after": "Sanaa serves African flavors in Kissimmee. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "africaribbean-royal-riverview",
+      "name": "Africaribbean Royal",
+      "before": "Authentic Caribbean restaurant in Riverview. Experience traditional Caribbean flavors and hospitality at Africaribbean Royal.",
+      "after": "Africaribbean Royal serves Caribbean flavors in Riverview. A neighborhood spot for caribbean plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "mitmita-ethiopian-restaurant-tampa",
+      "name": "Mitmita Ethiopian restaurant",
+      "before": "Authentic Ethiopian restaurant in Tampa. Experience traditional Ethiopian flavors and hospitality at Mitmita Ethiopian restaurant.",
+      "after": "Mitmita Ethiopian restaurant serves Ethiopian cooking rooted in East African traditions in Tampa. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "byblos-tampa",
+      "name": "Byblos",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Byblos.",
+      "after": "Byblos serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "la-terrazza-restaurant-tampa",
+      "name": "La Terrazza Restaurant",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at La Terrazza Restaurant.",
+      "after": "La Terrazza Restaurant serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "abuh-n-restaurant-filipino-clearwater",
+      "name": "Abuh\u00e1n Restaurant | Filipino",
+      "before": "Authentic African restaurant in Clearwater. Experience traditional African flavors and hospitality at Abuh\u00e1n Restaurant | Filipino.",
+      "after": "Abuh\u00e1n Restaurant | Filipino serves African flavors in Clearwater. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "craft-kafe-st-petersburg",
+      "name": "Craft Kafe",
+      "before": "Authentic African restaurant in St. Petersburg. Experience traditional African flavors and hospitality at Craft Kafe.",
+      "after": "Craft Kafe serves African flavors in St. Petersburg. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "niimatallaah-tampa",
+      "name": "Niimatallaah",
+      "before": "Authentic Ethiopian restaurant in Tampa. Experience traditional Ethiopian flavors and hospitality at Niimatallaah.",
+      "after": "Niimatallaah serves Ethiopian cooking rooted in East African traditions in Tampa. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "abu-naji-restaurant-tampa",
+      "name": "Abu Naji Restaurant",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Abu Naji Restaurant.",
+      "after": "Abu Naji Restaurant serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "bee-s-island-kitchen-tampa",
+      "name": "Bee\u2019s Island Kitchen",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Bee\u2019s Island Kitchen.",
+      "after": "Bee\u2019s Island Kitchen serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "yaya-southern-cuisine-tampa",
+      "name": "YaYa Southern Cuisine",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at YaYa Southern Cuisine.",
+      "after": "YaYa Southern Cuisine serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "siphokazi-tampa",
+      "name": "Siphokazi",
+      "before": "Authentic South African restaurant in Tampa. Experience traditional South African flavors and hospitality at Siphokazi.",
+      "after": "Siphokazi serves South African cooking rooted in Southern African traditions in Tampa. A neighborhood spot for south african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "asher-amens-african-cafe-tampa",
+      "name": "Asher Amens African Cafe",
+      "before": "Authentic West African restaurant in Tampa. Experience traditional West African flavors and hospitality at Asher Amens African Cafe.",
+      "after": "Asher Amens African Cafe serves West African flavors in Tampa. A neighborhood spot for west african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "nenes-restaurant-bar-tampa",
+      "name": "Nene's Restaurant & Bar",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Nene's Restaurant & Bar.",
+      "after": "Nene's Restaurant & Bar serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "chanko-tampa",
+      "name": "Chanko",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Chanko.",
+      "after": "Chanko serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "hamada-maqluba-tampa",
+      "name": "\u062d\u0645\u0627\u062f\u0629 \u0645\u0642\u0644\u0648\u0628\u0629 Hamada maqluba \u062d\u0645\u0627\u062f\u0629 \u0645\u0642\u0644\u0648\u0628\u0629",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at \u062d\u0645\u0627\u062f\u0629 \u0645\u0642\u0644\u0648\u0628\u0629 Hamada maqluba \u062d\u0645\u0627\u062f\u0629 \u0645\u0642\u0644\u0648\u0628\u0629.",
+      "after": "\u062d\u0645\u0627\u062f\u0629 \u0645\u0642\u0644\u0648\u0628\u0629 Hamada maqluba \u062d\u0645\u0627\u062f\u0629 \u0645\u0642\u0644\u0648\u0628\u0629 serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "nana-street-food-tampa",
+      "name": "Nana Street Food",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Nana Street Food.",
+      "after": "Nana Street Food serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "hamada-kabob-tampa",
+      "name": "Hamada kabob \u062d\u0645\u0627\u062f\u0629 \u0645\u0634\u0627\u0648\u064a",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Hamada kabob \u062d\u0645\u0627\u062f\u0629 \u0645\u0634\u0627\u0648\u064a.",
+      "after": "Hamada kabob \u062d\u0645\u0627\u062f\u0629 \u0645\u0634\u0627\u0648\u064a serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "abu-omar-halal-tampa-fl-temple-terrace",
+      "name": "Abu Omar Halal - Tampa, FL",
+      "before": "Authentic African restaurant in Temple Terrace. Experience traditional African flavors and hospitality at Abu Omar Halal - Tampa, FL.",
+      "after": "Abu Omar Halal - Tampa, FL serves African flavors in Temple Terrace. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "taste-of-yemen-restaurant-temple-terrace",
+      "name": "Taste of Yemen restaurant",
+      "before": "Authentic African restaurant in Temple Terrace. Experience traditional African flavors and hospitality at Taste of Yemen restaurant.",
+      "after": "Taste of Yemen restaurant serves African flavors in Temple Terrace. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "greenland-restaurant-at-busch-tampa",
+      "name": "Greenland Restaurant at Busch",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Greenland Restaurant at Busch.",
+      "after": "Greenland Restaurant at Busch serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "gorkhali-kitchen-tampa",
+      "name": "Gorkhali Kitchen",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Gorkhali Kitchen.",
+      "after": "Gorkhali Kitchen serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "kabob-cafe-grill-tampa",
+      "name": "Kabob Cafe & Grill",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Kabob Cafe & Grill.",
+      "after": "Kabob Cafe & Grill serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "fire-up-halal-grill-temple-terrace",
+      "name": "Fire Up Halal Grill",
+      "before": "Authentic African restaurant in Temple Terrace. Experience traditional African flavors and hospitality at Fire Up Halal Grill.",
+      "after": "Fire Up Halal Grill serves African flavors in Temple Terrace. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "shawarma-asham-tampa",
+      "name": "Shawarma Asham",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Shawarma Asham.",
+      "after": "Shawarma Asham serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "moms-restaurant-haitian-cuisine-bakery-tampa",
+      "name": "Mom's Restaurant | Haitian Cuisine \u2022 Bakery",
+      "before": "Authentic Haitian restaurant in Tampa. Experience traditional Haitian flavors and hospitality at Mom's Restaurant | Haitian Cuisine \u2022 Bakery.",
+      "after": "Mom's Restaurant | Haitian Cuisine \u2022 Bakery serves Haitian cooking rooted in Caribbean traditions in Tampa. A neighborhood spot for haitian plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "rosenheim-restaurant-tampa",
+      "name": "Rosenheim Restaurant",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Rosenheim Restaurant.",
+      "after": "Rosenheim Restaurant serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "istanbul-mediterranean-grill-market-tampa",
+      "name": "Istanbul Mediterranean Grill & Market",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Istanbul Mediterranean Grill & Market.",
+      "after": "Istanbul Mediterranean Grill & Market serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "olive-tree-by-chef-yousef-tampa",
+      "name": "Olive Tree by Chef Yousef",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at Olive Tree by Chef Yousef.",
+      "after": "Olive Tree by Chef Yousef serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    },
+    {
+      "id": "the-dough-show-tampa-tampa",
+      "name": "THE DOUGH SHOW - Tampa",
+      "before": "Authentic African restaurant in Tampa. Experience traditional African flavors and hospitality at THE DOUGH SHOW - Tampa.",
+      "after": "THE DOUGH SHOW - Tampa serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food."
+    }
+  ]
+}

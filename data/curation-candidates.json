@@ -10,9 +10,17 @@
   {
     "id": "research-miami-more",
     "name": "(Research queue) South Florida",
-    "note": "Catalog has few FL rows vs diaspora size. Candidates: more Haitian/Nigerian strips in North Miami, Broward—verify each before add.",
+    "note": "Catalog grew with Tampa + Orlando SerpAPI batch (Jul 2026). Still prioritize vetted Miami/Broward adds beyond map scrape.",
     "city": "Miami metro",
     "cuisine": "Various",
     "source": "internal-gap-analysis"
+  },
+  {
+    "id": "research-denver-verify",
+    "name": "(Review queue) Denver metro scrape",
+    "note": "Jul 2026 SerpAPI batch added Denver/Aurora dine-in rows. Spot-check hours, remove any remaining trucks, enrich copy for flagships.",
+    "city": "Denver, CO",
+    "cuisine": "Various",
+    "source": "serpapi-batch-2026-07"
   }
 ]
