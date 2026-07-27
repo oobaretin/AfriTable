@@ -12391,30 +12391,6 @@
     "google_search_url": "https://www.google.com/search?q=GB%20African%20Market%20and%20Restaurant%2C%202516%20W%20Colonial%20Dr%2C%20Orlando%2C%20FL%2032804"
   },
   {
-    "id": "igatap-african-caribbean-cuisine-orlando",
-    "name": "Igatap African Caribbean Cuisine",
-    "cuisine": "Caribbean",
-    "region": "Caribbean",
-    "price_range": "$$",
-    "rating": 4.2,
-    "address": "2620 N Hiawassee Rd, Orlando, FL 32818",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "about": "Igatap African Caribbean Cuisine serves Caribbean flavors in Orlando. A neighborhood spot for caribbean plates, warm hospitality, and familiar diaspora comfort food.",
-    "our_story": "AfriTable listing for Igatap African Caribbean Cuisine in Orlando. Hours and menu details should be confirmed with the restaurant directly.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "FL",
-    "google_place_id": "ChIJJysWjTF454gRD9lYxWmONcU",
-    "lat": 28.578450999999998,
-    "lng": -81.477898
-  },
-  {
     "id": "gen-bagay-restaurant-orlando",
     "name": "Gen Bagay Restaurant",
     "cuisine": "African",
@@ -12488,7 +12464,9 @@
     "phone": "(407) 440-2371",
     "google_place_id": "ChIJW9qnmx5_54gRtDGA3Fw4g4s",
     "lat": 28.472625899999997,
-    "lng": -81.42819879999999
+    "lng": -81.42819879999999,
+    "website": "https://www.instagram.com/marabou_lounge_restaurant/",
+    "google_search_url": "https://www.google.com/search?q=Marabou%20Restaurant%20and%20Lounge%2C%204083%20W%20Oak%20Ridge%20Rd%2C%20Orlando%2C%20FL%2032809"
   },
   {
     "id": "three-masks-inc-orlando",

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-07-27T18:29:47Z",
+  "generatedAt": "2026-07-27T18:35:23Z",
   "dryRun": false,
   "removed": [
     {
-      "id": "global-cuisine-denver",
-      "name": "Global Cuisine",
-      "state": "CO",
-      "address": "1133 Yosemite St Unit C, Denver, CO 80220",
-      "reason": "Address is Global Grocery Mart \u2014 retail market, not a dine-in restaurant"
+      "id": "igatap-african-caribbean-cuisine-orlando",
+      "name": "Igatap African Caribbean Cuisine",
+      "state": "FL",
+      "address": "2620 N Hiawassee Rd, Orlando, FL 32818",
+      "reason": "SNAP retailer listing; address is Tracey African Food Market \u2014 not a dine-in restaurant"
     }
   ],
-  "beforeCount": 422,
-  "afterCount": 421
+  "beforeCount": 420,
+  "afterCount": 419
 }

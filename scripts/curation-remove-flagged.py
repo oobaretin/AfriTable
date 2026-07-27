@@ -35,6 +35,7 @@ CURATION_REMOVE: dict[str, str] = {
     "niimatallaah-tampa": "Listing address is BayCare medical campus; restaurant unverifiable",
     "siphokazi-tampa": "No verifiable operator at Florida State Fairgrounds address",
     "global-cuisine-denver": "Address is Global Grocery Mart — retail market, not a dine-in restaurant",
+    "igatap-african-caribbean-cuisine-orlando": "SNAP retailer listing; address is Tracey African Food Market — not a dine-in restaurant",
 }
 
 

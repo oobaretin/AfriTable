@@ -1,5 +1,5 @@
 {
-  "count": 9,
+  "count": 7,
   "listings": [
     {
       "id": "amaye-international-restaurant-portland",
@@ -38,22 +38,10 @@
       "address": "10004 E Colfax Ave, Aurora, CO 80010"
     },
     {
-      "id": "igatap-african-caribbean-cuisine-orlando",
-      "name": "Igatap African Caribbean Cuisine",
-      "state": "FL",
-      "address": "2620 N Hiawassee Rd, Orlando, FL 32818"
-    },
-    {
       "id": "benitas-kitchen-orlando",
       "name": "Benita's Kitchen",
       "state": "FL",
       "address": "Inside The Chevron Gas Station, 5419 Silver Star Rd, Orlando, FL 32808"
-    },
-    {
-      "id": "marabou-restaurant-and-lounge-orlando",
-      "name": "Marabou Restaurant and Lounge",
-      "state": "FL",
-      "address": "4083 W Oak Ridge Rd, Orlando, FL 32809"
     }
   ]
 }

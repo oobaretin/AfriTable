@@ -48,6 +48,7 @@ We cannot prove every row is open without calling each business. For the catalog
 | Siphokazi (Tampa) | Unverifiable at fairgrounds address — **removed** |
 | Global Cuisine (Denver) | Global Grocery Mart at same address — **removed** |
 | Afro Caribbean Grill (Houston) | Food truck — takeout/delivery only — **removed** |
+| Igatap African Caribbean Cuisine (Orlando) | SNAP retailer at grocery-market address — **removed** |
 
 ### Website batch 6 (Jul 2026, Colorado)
 
@@ -75,6 +76,16 @@ No verified URL yet: 5 Star Café, Lalibela Cafe, Geez Habesha, Sarr Maimouna.
 | Grill Master African Restaurant (Houston) | instagram.com/grill_master_african_resto |
 
 Afro Caribbean Grill (Houston) — food truck, takeout-only — **removed**.
+
+### Website batch 8 (Jul 2026, Florida)
+
+| Listing | Website |
+|---------|---------|
+| Marabou Restaurant and Lounge (Orlando) | instagram.com/marabou_lounge_restaurant |
+
+Igatap African Caribbean Cuisine — misclassified SNAP/grocery address — **removed**.
+
+No verified URL yet: Benita's Kitchen (Chevron counter spot; dine-in confirmed, no social page found).
 
 ### Website batch 5 (Jul 2026, non–TX/CO/FL)
 
