@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "data" / "restaurants.json"
 METRO = ROOT / "data" / "catalog-metro-copy-enrichments.json"
 NATIONWIDE = ROOT / "data" / "catalog-nationwide-copy-enrichments.json"
+FLAGSHIP = ROOT / "data" / "catalog-flagship-copy-enrichments.json"
 REPORT = ROOT / "data" / "copy-enrichments-report.json"
 LOG = ROOT / ".cursor" / "debug-3435b4.log"
 SESSION = "3435b4"
@@ -61,7 +62,7 @@ def main() -> int:
     args = parser.parse_args()
 
     catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
-    enrichments = {**load_json(METRO), **load_json(NATIONWIDE)}
+    enrichments = {**load_json(METRO), **load_json(NATIONWIDE), **load_json(FLAGSHIP)}
 
     updated = 0
     updated_ids: list[str] = []
@@ -69,9 +70,9 @@ def main() -> int:
         patch = enrichments.get(row.get("id", ""))
         if not patch:
             continue
-        before = row.get("about")
+        before = {k: row.get(k) for k in patch}
         row.update(patch)
-        if before != row.get("about"):
+        if any(before.get(k) != row.get(k) for k in patch):
             updated += 1
             updated_ids.append(row["id"])
 

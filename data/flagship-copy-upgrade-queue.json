@@ -1,0 +1,879 @@
+{
+  "generatedAt": "2026-07-27T19:47:48.179375+00:00",
+  "summary": {
+    "catalogTotal": 417,
+    "needsCopyUpgrade": 184,
+    "batch1Featured": 16,
+    "batch1Complete": true,
+    "batch1CompletedAt": "2026-07-27T20:55:00+00:00",
+    "batch2Metro": 69
+  },
+  "criteria": "Flagship = featured OR top-rated in major metro with generic our_story/cultural_roots/about boilerplate",
+  "batch1_featured": [
+    {
+      "id": "tatiana-by-kwame-onwuachi-new-york",
+      "name": "Tatiana by Kwame Onwuachi",
+      "state": "NY",
+      "city": "New York",
+      "rating": 5,
+      "featured": true,
+      "website": "https://www.tatiananyc.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 235,
+      "current_about_snippet": "Elite fine dining at Lincoln Center, where Chef Kwame Onwuachi creates the intersection of heritage and high-fashion din"
+    },
+    {
+      "id": "d-gon-washington",
+      "name": "D\u014dgon",
+      "state": "DC",
+      "city": "Washington",
+      "rating": 4.9,
+      "featured": true,
+      "website": "https://www.salamanderdc.com/dining/dogon/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 235,
+      "current_about_snippet": "High-end Afro-Caribbean fine dining by the Potomac, recognized by Michelin 2025."
+    },
+    {
+      "id": "atx-fine-001",
+      "name": "Canje",
+      "state": "TX",
+      "city": "Austin",
+      "rating": 4.8,
+      "featured": true,
+      "website": "https://canjeatx.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 235,
+      "current_about_snippet": "Named after the national bird of Guyana, Canje delivers a Michelin-worthy exploration of the Caribbean. The space is vib"
+    },
+    {
+      "id": "chopnblok-downtown-houston",
+      "name": "Ch\u00f2pnBl\u1ecdk",
+      "state": "TX",
+      "city": "Houston",
+      "rating": 4.8,
+      "featured": true,
+      "website": "https://chopnblok.co",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 235,
+      "current_about_snippet": "Accessible West African flavors for the modern palate."
+    },
+    {
+      "id": "demera-ethiopian-chicago",
+      "name": "Demera Ethiopian",
+      "state": "IL",
+      "city": "Chicago",
+      "rating": 4.8,
+      "featured": true,
+      "website": "https://www.demerachicago.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 235,
+      "current_about_snippet": "Chef Tigist Reda is a culinary ambassador for Ethiopia in the Midwest. Demera offers a polished, full-service experience"
+    },
+    {
+      "id": "mia-red-rooster-overtown",
+      "name": "Red Rooster Overtown",
+      "state": "FL",
+      "city": "Miami",
+      "rating": 4.8,
+      "featured": true,
+      "website": "https://www.redroosterovertown.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 235,
+      "current_about_snippet": "Marcus Samuelsson's tribute to Black culinary history. Features a world-class art collection and the famous 'Shrine' Sat"
+    },
+    {
+      "id": "sa-jerk-shack",
+      "name": "The Jerk Shack",
+      "state": "TX",
+      "city": "San Antonio",
+      "rating": 4.7,
+      "featured": true,
+      "website": "https://thejerkshacksatx.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 235,
+      "current_about_snippet": "Chef Nicola Blaque; jerk chicken, curry, patties. Michelin Bib Gourmand."
+    },
+    {
+      "id": "nola-dakar",
+      "name": "Dakar NOLA",
+      "state": "LA",
+      "city": "New Orleans",
+      "rating": 4.9,
+      "featured": true,
+      "website": "https://www.dakarnola.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 220,
+      "current_about_snippet": "A single-seating, multi-course dining experience that follows the lineage of West African food to New Orleans. Reservati"
+    },
+    {
+      "id": "phi-fine-001",
+      "name": "Friday Saturday Sunday",
+      "state": "PA",
+      "city": "Philadelphia",
+      "rating": 4.9,
+      "featured": true,
+      "website": "https://www.fridaysaturdaysunday.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 220,
+      "current_about_snippet": "Located in a historic Rittenhouse rowhouse, this restaurant offers an eight-course tasting menu that frequently integrat"
+    },
+    {
+      "id": "kann-portland",
+      "name": "Kann",
+      "state": "OR",
+      "city": "Portland",
+      "rating": 4.9,
+      "featured": true,
+      "website": "https://kannrestaurant.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 220,
+      "current_about_snippet": "Chef Gregory Gourdet's masterpiece. This is arguably the most famous Haitian restaurant in the world right now, featurin"
+    },
+    {
+      "id": "chs-fine-001",
+      "name": "Bint\u00fc Atelier",
+      "state": "SC",
+      "city": "Charleston",
+      "rating": 4.8,
+      "featured": true,
+      "website": "https://www.bintuatelier.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 220,
+      "current_about_snippet": "Chef Bintou N'Daw brings a level of precision and elegance to West African staples that matches the legendary fine-dinin"
+    },
+    {
+      "id": "communion-r-b-seattle",
+      "name": "Communion R&B",
+      "state": "WA",
+      "city": "Seattle",
+      "rating": 4.8,
+      "featured": true,
+      "website": "https://www.communionseattle.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 220,
+      "current_about_snippet": "An award-winning soul-fusion restaurant in Seattle's Central District, serving innovative dishes like Hood Sushi & Catfi"
+    },
+    {
+      "id": "atx-fine-002",
+      "name": "Ember Kitchen",
+      "state": "TX",
+      "city": "Austin",
+      "rating": 4.9,
+      "featured": true,
+      "website": "https://www.emberatx.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 185,
+      "current_about_snippet": "A live-fire culinary theater using a signature Josper oven. The vibe is sleek, dark, and intimate, overlooking Lady Bird"
+    },
+    {
+      "id": "atl-fine-001",
+      "name": "Lucian Books and Wine",
+      "state": "GA",
+      "city": "Atlanta",
+      "rating": 4.9,
+      "featured": true,
+      "website": "https://www.lucianbooksandwine.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 185,
+      "current_about_snippet": "A sophisticated bookstore-restaurant hybrid in Buckhead. It represents the absolute peak of modern, ingredient-driven di"
+    },
+    {
+      "id": "lucia-los-angeles",
+      "name": "Lucia",
+      "state": "CA",
+      "city": "Los Angeles",
+      "rating": 4.8,
+      "featured": true,
+      "website": "https://www.luciala.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 185,
+      "current_about_snippet": "An elite Afro-Caribbean fine dining destination in LA's Fairfax District, known for innovative dishes like Jerk Lobster "
+    },
+    {
+      "id": "hou-reggae-hut",
+      "name": "Reggae Hut Cafe",
+      "state": "TX",
+      "city": "Houston",
+      "rating": 4.5,
+      "featured": true,
+      "website": "https://reggaehutcafe.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 165,
+      "current_about_snippet": "Caribbean & soul; brown stew fish, jerk chicken, patties. Black-owned."
+    }
+  ],
+  "batch2_metro": [
+    {
+      "id": "adulis-houston",
+      "name": "Adulis (Houston)",
+      "state": "TX",
+      "city": "Houston",
+      "rating": 4.8,
+      "featured": false,
+      "website": "https://adulishoustontx.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 85,
+      "current_about_snippet": "Family-owned Eritrean and Ethiopian restaurant on Bellaire Blvd; injera platters, tibs, and late-night dining."
+    },
+    {
+      "id": "lucilles-houston",
+      "name": "Lucille's",
+      "state": "TX",
+      "city": "Houston",
+      "rating": 4.8,
+      "featured": false,
+      "website": "https://lucilleshouston.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 85,
+      "current_about_snippet": "A historic and elegant fine dining restaurant in Houston's Museum District, serving elevated Southern cuisine with speci"
+    },
+    {
+      "id": "cool-runnings-jamaican-grill-houston",
+      "name": "Cool Runnings Jamaican Grill",
+      "state": "TX",
+      "city": "Houston",
+      "rating": 4.7,
+      "featured": false,
+      "website": "https://coolrunningsjamaicangrill.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 85,
+      "current_about_snippet": "A legendary Houston staple. It has national fame from 'Diners, Drive-Ins and Dives' but stays true to its roots."
+    },
+    {
+      "id": "fabaceae-african-cuisine-houston",
+      "name": "Fabaceae African Cuisine",
+      "state": "TX",
+      "city": "Houston",
+      "rating": 4.7,
+      "featured": false,
+      "website": "http://www.fabaceaecuisine.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 85,
+      "current_about_snippet": "Consistently ranked as one of the best for Yoruba-style Nigerian food. Their designer stew is a fan favorite."
+    },
+    {
+      "id": "sarabell-calabar-houston",
+      "name": "Sarabell Calabar",
+      "state": "TX",
+      "city": "Houston",
+      "rating": 4.7,
+      "featured": false,
+      "website": "https://sarabellcalabarrestaurant.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 85,
+      "current_about_snippet": "Specializes in the rich, seafood-heavy dishes of the Calabar region."
+    },
+    {
+      "id": "africa-kine-new-york",
+      "name": "Africa Kine",
+      "state": "NY",
+      "city": "New York",
+      "rating": 4.6,
+      "featured": false,
+      "website": "https://www.africakinerestaurant.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 65,
+      "current_about_snippet": "Legendary Senegalese in Harlem since 1994; lamb mafe, chicken yassa, grilled fish. Halal."
+    },
+    {
+      "id": "nyc-abyssinia",
+      "name": "Abyssinia",
+      "state": "NY",
+      "city": "New York",
+      "rating": 4.5,
+      "featured": false,
+      "website": "https://abyssinianyc.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 65,
+      "current_about_snippet": "Authentic Ethiopian cuisine in the heart of Manhattan, serving traditional dishes with fresh injera and bold spices."
+    },
+    {
+      "id": "nyc-jasmines-caribbean",
+      "name": "Jasmine's Caribbean Cuisine",
+      "state": "NY",
+      "city": "New York",
+      "rating": 4.5,
+      "featured": false,
+      "website": "https://www.jasminecaribbeancuisine.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 65,
+      "current_about_snippet": "A tropical escape in Hell's Kitchen, serving authentic Caribbean cuisine with specialties like Curry Shrimp and Red Snap"
+    },
+    {
+      "id": "mia-chef-creole",
+      "name": "Chef Creole",
+      "state": "FL",
+      "city": "Miami",
+      "rating": 4.5,
+      "featured": false,
+      "website": "https://chefcreole.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 65,
+      "current_about_snippet": "Haitian-Creole seafood and Caribbean flavors since 1992\u2014griot, pikliz, fried snapper, oxtail, and generous portions acro"
+    },
+    {
+      "id": "nenes-restaurant-bar-tampa",
+      "name": "Nene's Restaurant & Bar",
+      "state": "FL",
+      "city": "Tampa",
+      "rating": 4.9,
+      "featured": false,
+      "website": "http://nenerestaurant.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Nene's Restaurant & Bar serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and f"
+    },
+    {
+      "id": "olive-tree-by-chef-yousef-tampa",
+      "name": "Olive Tree by Chef Yousef",
+      "state": "FL",
+      "city": "Tampa",
+      "rating": 4.9,
+      "featured": false,
+      "website": "http://www.olivetreebychefyousef.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Olive Tree by Chef Yousef serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and"
+    },
+    {
+      "id": "rosenheim-restaurant-tampa",
+      "name": "Rosenheim Restaurant",
+      "state": "FL",
+      "city": "Tampa",
+      "rating": 4.9,
+      "featured": false,
+      "website": "https://rosenheimrestaurant.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Rosenheim Restaurant serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and fami"
+    },
+    {
+      "id": "hamada-maqluba-tampa",
+      "name": "\u062d\u0645\u0627\u062f\u0629 \u0645\u0642\u0644\u0648\u0628\u0629 Hamada maqluba \u062d\u0645\u0627\u062f\u0629 \u0645\u0642\u0644\u0648\u0628\u0629",
+      "state": "FL",
+      "city": "Tampa",
+      "rating": 4.9,
+      "featured": false,
+      "website": "https://www.hamadamaqluba.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "\u062d\u0645\u0627\u062f\u0629 \u0645\u0642\u0644\u0648\u0628\u0629 Hamada maqluba \u062d\u0645\u0627\u062f\u0629 \u0645\u0642\u0644\u0648\u0628\u0629 serves African flavors in Tampa. A neighborhood spot for african plates, warm h"
+    },
+    {
+      "id": "kabob-cafe-grill-tampa",
+      "name": "Kabob Cafe & Grill",
+      "state": "FL",
+      "city": "Tampa",
+      "rating": 4.8,
+      "featured": false,
+      "website": "https://kabobcafeandgrill.com/?utm_source=google",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Kabob Cafe & Grill serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and famili"
+    },
+    {
+      "id": "saha-w-hana-orlando",
+      "name": "Saha W Hana",
+      "state": "FL",
+      "city": "Orlando",
+      "rating": 4.9,
+      "featured": false,
+      "website": "http://sahawhana.us/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Saha W Hana serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar di"
+    },
+    {
+      "id": "benitas-kitchen-orlando",
+      "name": "Benita's Kitchen",
+      "state": "FL",
+      "city": "Orlando",
+      "rating": 4.8,
+      "featured": false,
+      "website": "https://www.google.com/maps/place/?q=place_id:ChIJOxZk9sp554gRNQOhvJuWxvE",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Benita's Kitchen serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and famili"
+    },
+    {
+      "id": "caravan-uzbek-turkish-cuisine-orlando",
+      "name": "CARAVAN UZBEK & TURKISH CUISINE",
+      "state": "FL",
+      "city": "Orlando",
+      "rating": 4.8,
+      "featured": false,
+      "website": "https://caravanhalal.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "CARAVAN UZBEK & TURKISH CUISINE serves African flavors in Orlando. A neighborhood spot for african plates, warm hospital"
+    },
+    {
+      "id": "three-masks-inc-orlando",
+      "name": "Three Masks INC",
+      "state": "FL",
+      "city": "Orlando",
+      "rating": 4.8,
+      "featured": false,
+      "website": "http://www.threemasks.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Three Masks INC serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familia"
+    },
+    {
+      "id": "zeytin-turkish-cuisine-orlando",
+      "name": "Zeytin Turkish Cuisine",
+      "state": "FL",
+      "city": "Orlando",
+      "rating": 4.8,
+      "featured": false,
+      "website": "https://www.facebook.com/ZeytinTurkishCuisine",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Zeytin Turkish Cuisine serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and "
+    },
+    {
+      "id": "african-food-chavie-spices-denver",
+      "name": "African food Chavie spices",
+      "state": "CO",
+      "city": "Denver",
+      "rating": 5,
+      "featured": false,
+      "website": "https://www.instagram.com/african_food_chavie_spices?igsh=MWphMmMwcjFweHV1eg%3D%3D&utm_source=qr",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "African food Chavie spices serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, a"
+    },
+    {
+      "id": "hadnet-cafe-denver",
+      "name": "Hadnet Cafe",
+      "state": "CO",
+      "city": "Denver",
+      "rating": 4.9,
+      "featured": false,
+      "website": "https://unity-cafe.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Hadnet Cafe serves Ethiopian cooking rooted in East African traditions in Denver. A neighborhood spot for ethiopian plat"
+    },
+    {
+      "id": "lalibela-cafe-denver",
+      "name": "Lalibela Cafe",
+      "state": "CO",
+      "city": "Denver",
+      "rating": 4.9,
+      "featured": false,
+      "website": "https://www.instagram.com/lalibela_cafe/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Lalibela Cafe serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar d"
+    },
+    {
+      "id": "samosa-shop-denver",
+      "name": "Samosa Shop",
+      "state": "CO",
+      "city": "Denver",
+      "rating": 4.9,
+      "featured": false,
+      "website": "https://www.samosashopco.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Samosa Shop serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar dia"
+    },
+    {
+      "id": "5-star-caf-eritrean-restaurant-denver",
+      "name": "5 Star Caf\u00e9 Eritrean Restaurant",
+      "state": "CO",
+      "city": "Denver",
+      "rating": 4.8,
+      "featured": false,
+      "website": "https://www.facebook.com/p/5-Star-Cafe-100086536437008/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "5 Star Caf\u00e9 Eritrean Restaurant serves Eritrean cooking rooted in East African traditions in Denver. A neighborhood spot"
+    },
+    {
+      "id": "eatopia-eat-ethiopian-aurora",
+      "name": "Eatopia: Eat Ethiopian",
+      "state": "CO",
+      "city": "Aurora",
+      "rating": 4.8,
+      "featured": false,
+      "website": "https://eat-opia.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Eatopia: Eat Ethiopian serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot for eth"
+    },
+    {
+      "id": "geez-habesha-bar-restaurant-aurora",
+      "name": "Geez Habesha Bar & Restaurant",
+      "state": "CO",
+      "city": "Aurora",
+      "rating": 4.7,
+      "featured": false,
+      "website": "https://onhavanastreet.com/business/geez-habesha-bar-restaurant/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": "Geez Habesha Bar & Restaurant serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot "
+    },
+    {
+      "id": "gursha-ethiopian-restaurant-aurora",
+      "name": "Gursha Ethiopian Restaurant",
+      "state": "CO",
+      "city": "Aurora",
+      "rating": 4.6,
+      "featured": false,
+      "website": "https://www.gurshaethiopianrestaurant.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 90,
+      "current_about_snippet": "Gursha Ethiopian Restaurant serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot fo"
+    },
+    {
+      "id": "all-stars-cafe-aurora",
+      "name": "All-Stars Cafe",
+      "state": "CO",
+      "city": "Aurora",
+      "rating": 4.5,
+      "featured": false,
+      "website": "https://www.facebook.com/100064220286030/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 90,
+      "current_about_snippet": "All-Stars Cafe serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot for ethiopian p"
+    },
+    {
+      "id": "megenagna-aurora",
+      "name": "Megenagna",
+      "state": "CO",
+      "city": "Aurora",
+      "rating": 4.4,
+      "featured": false,
+      "website": "https://megenagnaethiopianrestaurant.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 90,
+      "current_about_snippet": "Megenagna serves Ethiopian cooking rooted in East African traditions in Aurora. A neighborhood spot for ethiopian plates"
+    },
+    {
+      "id": "chi-ja-grill-hyde-park",
+      "name": "Ja' Grill Hyde Park",
+      "state": "IL",
+      "city": "Chicago",
+      "rating": 4.6,
+      "featured": false,
+      "website": "https://downtownhydeparkchicago.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 65,
+      "current_about_snippet": "An upscale and energetic Jamaican restaurant in Hyde Park, serving authentic Caribbean cuisine with specialties like Cur"
+    },
+    {
+      "id": "badou-senegalese-chicago",
+      "name": "Badou Senegalese Cuisine",
+      "state": "IL",
+      "city": "Chicago",
+      "rating": 4.5,
+      "featured": false,
+      "website": "https://badousenegalesecuisine.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 65,
+      "current_about_snippet": "Yassa chicken, mafe, jollof. Vegan options. Rogers Park."
+    },
+    {
+      "id": "chi-garifuna-flava",
+      "name": "Garifuna Flava",
+      "state": "IL",
+      "city": "Chicago",
+      "rating": 4.5,
+      "featured": false,
+      "website": "https://www.garifunaflava.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 65,
+      "current_about_snippet": "An authentic, family-owned gem in Marquette Park, serving traditional Belizean cuisine including specialties like Belize"
+    },
+    {
+      "id": "gor-e-cuisine-chicago",
+      "name": "Gor\u00e9e Cuisine",
+      "state": "IL",
+      "city": "Chicago",
+      "rating": 4.5,
+      "featured": false,
+      "website": "https://goreechicago.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 65,
+      "current_about_snippet": "Authentic Senegalese; Yassa chicken, maffe, grilled fish. Kenwood/Hyde Park border."
+    },
+    {
+      "id": "iyanze-chicago",
+      "name": "Iyanze",
+      "state": "IL",
+      "city": "Chicago",
+      "rating": 4.5,
+      "featured": false,
+      "website": "https://iyanzeonline.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 65,
+      "current_about_snippet": "The heart of the diaspora in the heart of the city. Largest Nigerian restaurant in Chicago; 40+ dishes weekly."
+    },
+    {
+      "id": "ubuntu-atl",
+      "name": "Ubuntu",
+      "state": "GA",
+      "city": "Atlanta",
+      "rating": 4.5,
+      "featured": false,
+      "website": "https://ubuntubarandgrill.com",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 90,
+      "current_about_snippet": ""
+    },
+    {
+      "id": "virgils-gullah-kitchen-atlanta",
+      "name": "Virgil's Gullah Kitchen",
+      "state": "GA",
+      "city": "Atlanta",
+      "rating": 4.8,
+      "featured": false,
+      "website": "https://www.virgilsgullahkitchen.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 85,
+      "current_about_snippet": "A love letter to the coastal heritage of the Gullah people. West Midtown."
+    },
+    {
+      "id": "negril-atl-atlanta",
+      "name": "Negril ATL",
+      "state": "GA",
+      "city": "Atlanta",
+      "rating": 4.7,
+      "featured": false,
+      "website": "https://negrilatl.com/",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 85,
+      "current_about_snippet": "An innovative Caribbean restaurant in Atlanta's Upper West Side, known for creative takes on classic dishes like Ackee &"
+    },
+    {
+      "id": "atl-spice-house-midtown",
+      "name": "Spice House Midtown",
+      "state": "GA",
+      "city": "Atlanta",
+      "rating": 4.6,
+      "featured": false,
+      "website": "https://www.spicehouseatl.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 65,
+      "current_about_snippet": "A lively Caribbean fusion restaurant in Midtown Atlanta, known for innovative dishes like Jerk Chicken Pasta in a vibran"
+    },
+    {
+      "id": "atl-daily-002",
+      "name": "Belle & Lily's",
+      "state": "GA",
+      "city": "Atlanta",
+      "rating": 4.5,
+      "featured": false,
+      "website": "https://www.belleandlilys.com",
+      "needs": [
+        "our_story",
+        "cultural_roots"
+      ],
+      "priority": 65,
+      "current_about_snippet": "Caribbean brunch house; jerk chicken, mango French toast, bottomless mimosas. Embry Hills."
+    },
+    {
+      "id": "swahili-village-dc",
+      "name": "Swahili Village",
+      "state": "DC",
+      "city": "Washington",
+      "rating": 4.8,
+      "featured": false,
+      "website": "https://www.swahilivillages.com",
+      "needs": [
+        "our_story",
+        "cultural_roots",
+        "about"
+      ],
+      "priority": 110,
+      "current_about_snippet": ""
+    }
+  ],
+  "all_candidates_count": 200
+}

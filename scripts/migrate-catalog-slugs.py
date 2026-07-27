@@ -28,7 +28,6 @@ CATALOG_PATH = ROOT / "data" / "restaurants.json"
 AUDIT_PATH = ROOT / "data" / "slug-consistency-audit.json"
 REPORT_PATH = ROOT / "data" / "slug-migration-report.json"
 ENV_PATH = ROOT / ".env.local"
-LOG_PATH = ROOT / ".cursor" / "debug-3435b4.log"
 
 # Manual overrides where auto slugify is awkward or wrong.
 SLUG_OVERRIDES: dict[str, str] = {
@@ -50,20 +49,6 @@ ENRICHMENT_FILES = [
     ROOT / "data" / "catalog-metro-copy-enrichments.json",
     ROOT / "data" / "catalog-nationwide-copy-enrichments.json",
 ]
-
-
-def debug_log(message: str, data: dict, hypothesis_id: str = "slug") -> None:
-    payload = {
-        "sessionId": "3435b4",
-        "timestamp": int(datetime.now(timezone.utc).timestamp() * 1000),
-        "location": "migrate-catalog-slugs.py",
-        "message": message,
-        "data": data,
-        "hypothesisId": hypothesis_id,
-    }
-    LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with LOG_PATH.open("a", encoding="utf-8") as fh:
-        fh.write(json.dumps(payload) + "\n")
 
 
 def load_env(path: Path) -> dict[str, str]:
@@ -220,15 +205,12 @@ def main() -> int:
     mapping = build_migration_map(audit)
     catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
 
-    debug_log("migration_map_built", {"count": len(mapping), "remove": list(REMOVE_IDS.keys())}, "H1")
-
     new_catalog, removed = migrate_catalog(catalog, mapping)
 
     # Collision check
     ids = [r["id"] for r in new_catalog]
     dup_ids = [i for i in set(ids) if ids.count(i) > 1]
     if dup_ids:
-        debug_log("id_collision", {"dup_ids": dup_ids}, "H2")
         print(f"ERROR: ID collision after migration: {dup_ids}")
         return 1
 
@@ -290,7 +272,6 @@ def main() -> int:
             print(f"  [dry-run] remove {rid}: {reason[:60]}")
 
     REPORT_PATH.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    debug_log("migration_complete", {"renamed": len(mapping), "removed": len(removed), "dry_run": args.dry_run}, "H1")
     print(f"\nReport: {REPORT_PATH}")
     return 0 if not report["supabase"]["errors"] else 1
 
