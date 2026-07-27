@@ -58,8 +58,8 @@ function referenceCode(id: string): string {
 
 function labelForStatus(status: TableRequestStatus) {
   const map = {
-    pending: { label: "Needs action", variant: "destructive" as const },
-    forwarded: { label: "Sent to restaurant", variant: "default" as const },
+    pending: { label: "Awaiting your call", variant: "destructive" as const },
+    forwarded: { label: "Done — you called", variant: "default" as const },
     cancelled: { label: "Cancelled", variant: "outline" as const },
   };
   return map[status];
@@ -121,9 +121,12 @@ export default async function AdminTableRequestsPage({
   const { data: profile } = await supabaseSSR.from("profiles").select("role").eq("id", auth.user.id).maybeSingle();
   if (profile?.role !== "admin") redirect("/");
 
-  const statusFilter: StatusFilter = STATUS_FILTERS.includes(searchParams.status as StatusFilter)
-    ? (searchParams.status as StatusFilter)
-    : "all";
+  const statusFilter: StatusFilter =
+    searchParams.status === "all"
+      ? "all"
+      : STATUS_FILTERS.includes(searchParams.status as StatusFilter)
+        ? (searchParams.status as StatusFilter)
+        : "pending";
 
   const supabaseAdmin = createSupabaseAdminClient();
   let query = supabaseAdmin
@@ -155,7 +158,7 @@ export default async function AdminTableRequestsPage({
     <Container className="py-10 md:py-14">
       <PageHeader
         title="Table requests"
-        description="Guest requests from directory listings. Pending = you still need to pass it to the restaurant."
+        description="AfriTable does not call restaurants for you. Call them, then mark the request done."
         right={
           <Button asChild variant="outline">
             <Link href="/admin">Admin home</Link>
@@ -163,22 +166,45 @@ export default async function AdminTableRequestsPage({
         }
       />
 
+      <Card className="mt-4 border-amber-200 bg-amber-50/80">
+        <CardContent className="py-4 text-sm text-amber-950">
+          <p className="font-medium">Your workflow</p>
+          <ol className="mt-2 list-decimal space-y-1 pl-5 text-amber-900/90">
+            <li>
+              <strong>Call restaurant</strong> with the guest&apos;s preferred date, time window, and party size.
+            </li>
+            <li>
+              <strong>Only after the call</strong>, click <strong>I called — mark done</strong>.
+            </li>
+            <li>New requests start as <strong>Awaiting your call</strong> — not auto-sent to anyone.</li>
+          </ol>
+        </CardContent>
+      </Card>
+
       <div className="mt-4 flex flex-wrap items-center gap-2">
         {STATUS_FILTERS.map((s) => (
           <Button key={s} asChild variant={s === statusFilter ? "default" : "outline"} size="sm">
-            <Link href={s === "all" ? "/admin/table-requests" : `/admin/table-requests?status=${s}`}>
+            <Link
+              href={
+                s === "pending"
+                  ? "/admin/table-requests"
+                  : s === "all"
+                    ? "/admin/table-requests?status=all"
+                    : `/admin/table-requests?status=${s}`
+              }
+            >
               {s === "all"
                 ? "All"
                 : s === "pending"
-                  ? "Needs action"
+                  ? "Awaiting call"
                   : s === "forwarded"
-                    ? "Sent to restaurant"
+                    ? "Done"
                     : "Cancelled"}
             </Link>
           </Button>
         ))}
         {typeof pendingCount === "number" && pendingCount > 0 ? (
-          <Badge variant="destructive">{pendingCount} need action</Badge>
+          <Badge variant="destructive">{pendingCount} awaiting call</Badge>
         ) : null}
       </div>
 
@@ -285,8 +311,8 @@ export default async function AdminTableRequestsPage({
                           {request.status === "pending" ? (
                             <>
                               <form action={`/admin/table-requests/${request.id}/forward`} method="post">
-                                <Button type="submit" size="sm">
-                                  Mark sent to restaurant
+                                <Button type="submit" size="sm" variant="secondary">
+                                  I called — mark done
                                 </Button>
                               </form>
                               <form action={`/admin/table-requests/${request.id}/cancel`} method="post">
@@ -295,6 +321,12 @@ export default async function AdminTableRequestsPage({
                                 </Button>
                               </form>
                             </>
+                          ) : request.status === "forwarded" ? (
+                            <form action={`/admin/table-requests/${request.id}/reopen`} method="post">
+                              <Button type="submit" size="sm" variant="outline">
+                                Reopen (still need to call)
+                              </Button>
+                            </form>
                           ) : null}
                         </div>
                       </TableCell>
