@@ -1,0 +1,623 @@
+{
+  "48th-street-grille-philly": {
+    "our_story": "48th Street Grille keeps Philadelphia fed with Jamaican jerk, oxtail, and patty-shop soul—island flavor with neighborhood warmth.",
+    "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad."
+  },
+  "abdo-kabab-orlando": {
+    "our_story": "Abdo Kabab serves halal Mediterranean and Middle Eastern grills in Orlando, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Abdo Kabab serves halal Mediterranean and Middle Eastern grill plates in Orlando."
+  },
+  "abu-naji-restaurant-tampa": {
+    "our_story": "Abu Naji Restaurant serves West African jollof, stews, and grill plates in Tampa, FL—a homestyle room for the local diaspora community.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities.",
+    "about": "Abu Naji Restaurant serves West African jollof, stews, and grill plates in Tampa."
+  },
+  "abu-omar-halal-tampa-fl-temple-terrace": {
+    "our_story": "Abu Omar Halal - Tampa, FL serves halal Mediterranean and Middle Eastern grills in Temple Terrace, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Abu Omar Halal - Tampa, FL serves halal Mediterranean and Middle Eastern grill plates in Temple Terrace."
+  },
+  "abyssinia-ethiopian-restaurant-and-bar-denver": {
+    "our_story": "Abyssinia Ethiopian Restaurant and Bar brings Ethiopian injera platters and traditional wats to Denver, CO—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "Abyssinia Ethiopian Restaurant and Bar serves Ethiopian injera platters, tibs, and traditional wats in Denver."
+  },
+  "aduke-nigerian-la": {
+    "our_story": "Aduke Nigerian Cuisine serves Nigerian and West African cooking in Inglewood, CA—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "african-small-pot-philadelphia": {
+    "our_story": "African Small Pot keeps West Philadelphia fed around the clock—Mauritanian, Senegalese, and Nigerian plates with wood-grilled diby and the warmth of a true diaspora chop bar.",
+    "cultural_roots": "Pan-West African cooking: wood-fire grilling, late-night chop-house hours, and the Mauritanian-Senegalese-Nigerian flavors of Philadelphia's African corridor."
+  },
+  "africaribbean-royal-riverview": {
+    "our_story": "Africaribbean Royal blends African and Caribbean flavors in Riverview—island grills, seafood, and fusion plates that mirror Tampa Bay's diaspora mix.",
+    "cultural_roots": "Afro-Caribbean crossover: island spice, West African seasoning, and the blended foodways of the Atlantic diaspora in Florida.",
+    "about": "Caribbean restaurant in Riverview serving island grills, seafood, and Afro-Caribbean fusion plates."
+  },
+  "afrikiko-houston": {
+    "our_story": "Afrikiko is SW Houston's gold standard for Ghanaian comfort food—family-owned for 15-plus years, serving waakye and groundnut soup with chop-bar warmth.",
+    "cultural_roots": "Ghanaian home cooking: waakye rice-and-beans, groundnut soup, and the street-stall flavors of Accra transplanted to Houston's southwest corridor."
+  },
+  "afrotex-grill-bowls-burritos-suya-plates-san-antonio": {
+    "our_story": "AfroTex Grill fuses West African suya and jollof with Tex-Mex bowls and burritos near UTSA—a San Antonio spot where Nigerian spice meets Lone Star casual dining.",
+    "cultural_roots": "West African street food crossed with Texas: suya spice rubs, jollof rice, and the diaspora creativity of feeding college-town crowds bold flavor."
+  },
+  "amala-zone-houston": {
+    "our_story": "Amala Zone serves Nigerian and West African cooking in Houston, TX—known for Abula (Amala, Ewedu, Gbegiri)—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "amar-orlando-mediterranean-restaurant-orlando": {
+    "our_story": "Amar Orlando Mediterranean Restaurant serves halal Mediterranean and Middle Eastern grills in Orlando, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Amar Orlando Mediterranean Restaurant serves halal Mediterranean and Middle Eastern grill plates in Orlando."
+  },
+  "amaweles-san-francisco": {
+    "our_story": "Amawele's brings South African flavors to San Francisco, CA—braai grills, stews, and fusion plates from the southern tip of the continent.",
+    "cultural_roots": "South African braai and township cooking: fire-grilled meats, chakalaka relish, and the multicultural spice of the Rainbow Nation."
+  },
+  "aria-suya-kitchen-houston": {
+    "our_story": "Aria Suya Kitchen brings Nigerian grill culture to the Galleria corridor—lamb chops, jollof, and suya with a step-up dining room that still feels like a regulars' spot.",
+    "cultural_roots": "Northern Nigerian suya tradition: spice-rubbed grilled meats, pepper heat, and jollof rice—the flavors of Lagos chop bars with Galleria polish."
+  },
+  "asher-amens-african-cafe-tampa": {
+    "about": "West African cafe on Waters Avenue serving jollof, stews, and grill plates with homestyle hospitality in Tampa.",
+    "our_story": "Asher Amens African Cafe brings West African jollof, stews, and grill plates to Tampa's Waters Avenue—a homestyle cafe for diaspora lunch and dinner.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities."
+  },
+  "astors-table-katy": {
+    "our_story": "Astor's Table brings South African flavors to Katy, TX—known for Beef Suya Astor & Peri-Peri Chicken—braai grills, stews, and fusion plates from the southern tip of the continent.",
+    "cultural_roots": "South African braai and township cooking: fire-grilled meats, chakalaka relish, and the multicultural spice of the Rainbow Nation."
+  },
+  "atl-busy-bee": {
+    "our_story": "Busy Bee Cafe serves soul food and Southern comfort in Atlanta, GA—slow-cooked plates and church-supper warmth.",
+    "cultural_roots": "African American soul food: slow braises, greens, cornbread, and the Southern kitchen traditions of the Black diaspora."
+  },
+  "atl-daily-001": {
+    "our_story": "Cafe Songhai serves West African fusion in Peachtree Corners—jollof, waakye, suya, and attiéké with live entertainment and a patio built for weekend gatherings.",
+    "cultural_roots": "West African party-kitchen culture: Ivorian attiéké, Ghanaian waakye, Nigerian jollof, and the live-music dining rooms that define Atlanta's suburbs."
+  },
+  "atl-irie-mon-cafe": {
+    "our_story": "Irie Mon Cafe keeps Atlanta fed with Jamaican jerk, oxtail, and patty-shop soul—known for Tender Oxtail—island flavor with neighborhood warmth.",
+    "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad."
+  },
+  "atx-afro-002": {
+    "our_story": "Habesha Ethiopian brings Ethiopian injera platters and traditional wats to Austin, Austin—known for Doro Wot & Vegetarian Sampler—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "baba-jollof-houston": {
+    "our_story": "Baba Jollof serves Nigerian and West African cooking in Houston, TX—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "bahel-ethiopian-mart-and-dining-houston": {
+    "our_story": "Bahel Ethiopian Mart and Dining brings Ethiopian injera platters and traditional wats to Houston, TX—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "bamboo-walk-brooklyn": {
+    "our_story": "Bamboo Walk serves Haitian cooking in Brooklyn, NY—griot, rice-and-beans, and Creole spice in a neighborhood kitchen built for the diaspora.",
+    "cultural_roots": "Haitian-Creole traditions: epis seasoning, citrus-marinated griot, and the bakery-and-kitchen culture of Port-au-Prince."
+  },
+  "bantu-house": {
+    "our_story": "Bantu House celebrates Africa's culinary diversity in Cypress—regional dishes, cultural programming, and a dining room built to showcase the continent's many kitchens.",
+    "cultural_roots": "Pan-African heritage: regional recipes from across the continent, communal dining, and the Bantu linguistic and culinary traditions that connect central and southern Africa."
+  },
+  "baobab-fare-detroit": {
+    "our_story": "Hamissi Mamba and Nadia Nijimbere's Baobab Fare turned New Center into Detroit's Burundian dining destination—Kuku Na Mali, heartfelt hospitality, and James Beard recognition.",
+    "cultural_roots": "Burundian home cooking: spinach stews, plantains, and the East African table traditions the siblings brought from Bujumbura to Michigan."
+  },
+  "barwaaqo-denver": {
+    "our_story": "Barwaaqo serves Somali and East African comfort food in Denver, CO—rice, stewed meats, and chai in a community gathering spot.",
+    "cultural_roots": "Somali kitchen traditions: spiced rice, goat and chicken stews, sambusas, and the halal cafe culture of the Horn of Africa.",
+    "about": "Barwaaqo serves Somali and East African comfort food in Denver."
+  },
+  "beirut-xpress-orlando-kissimmee": {
+    "our_story": "Beirut Xpress Orlando serves halal Mediterranean and Middle Eastern grills in Kissimmee, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Beirut Xpress Orlando serves halal Mediterranean and Middle Eastern grill plates in Kissimmee."
+  },
+  "blessed-tropical-inglewood": {
+    "our_story": "Blessed Tropical Jamaican Cuisine keeps Inglewood fed with Jamaican jerk, oxtail, and patty-shop soul—island flavor with neighborhood warmth.",
+    "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad."
+  },
+  "blue-nile-ethiopian-houston": {
+    "our_story": "Blue Nile Ethiopian brings Ethiopian injera platters and traditional wats to Houston, TX—known for Doro Wat & Injera Platters—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "bridgetown-roti-los-angeles": {
+    "our_story": "Bridgetown Roti keeps Los Angeles fed with Jamaican jerk, oxtail, and patty-shop soul—known for Oxtail Patty & Curry Goat Roti—island flavor with neighborhood warmth.",
+    "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad."
+  },
+  "buka-brooklyn": {
+    "our_story": "Buka serves Nigerian and West African cooking in Bed-Stuy, Brooklyn—known for Goat Pepper Soup—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "bunna-cafe-nyc": {
+    "our_story": "Bunna Cafe brings Ethiopian injera platters and traditional wats to Brooklyn, NY—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "Bunna Cafe serves Ethiopian injera platters, tibs, and traditional wats in Brooklyn."
+  },
+  "byblos-tampa": {
+    "our_story": "Byblos brings Lebanese mezze and charcoal grills to Tampa—shawarma, hummus, and halal plates in a Mediterranean dining room.",
+    "cultural_roots": "Lebanese table culture: mezze spreads, charcoal-grilled meats, and the olive-oil hospitality of the eastern Mediterranean.",
+    "about": "Lebanese restaurant in Tampa—mezze, shawarma, and charcoal-grilled halal plates."
+  },
+  "cafe-selam-seattle": {
+    "our_story": "Cafe Selam brings Ethiopian injera platters and traditional wats to Seattle, WA—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "cesaria-boston": {
+    "our_story": "Cesaria has honored Cape Verdean culture in Boston since 2002—katchupa, live morna music, and a dining room named for the Barefoot Diva herself.",
+    "cultural_roots": "Cape Verdean island cooking: slow-simmered katchupa stew, Atlantic seafood, and the morna music tradition that follows every great meal in Cabo Verde."
+  },
+  "chanko-tampa": {
+    "our_story": "Chanko serves Japanese chanko-nabe and izakaya fare in Tampa, FL—hearty hot pots and ramen-adjacent comfort in a casual dining room.",
+    "cultural_roots": "Japanese chanko culture: sumo-strength hot pots, dashi broths, and the izakaya small-plates tradition of post-training meals.",
+    "about": "Chanko serves Japanese chanko-nabe hot pot and izakaya plates in Tampa."
+  },
+  "chayhana-altamonte-springs": {
+    "our_story": "Chayhana serves Uzbek halal cooking in Altamonte Springs—plov, lagman, and samsa in a tea-house dining room rooted in Central Asian tradition.",
+    "cultural_roots": "Uzbek tea-house culture: hand-pulled noodles, rice plov, and the Silk Road spice traditions of Central Asia.",
+    "about": "Uzbek halal restaurant in Altamonte Springs—plov, lagman, samsa, and Central Asian grill plates."
+  },
+  "chef-benny-houston": {
+    "our_story": "Chef Benny serves Nigerian and West African cooking in Houston, TX—known for Asun (Spicy Goat) & Jollof Rice—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "chef-creole-miami-gardens": {
+    "our_story": "Chef Creole (Miami Gardens) serves Haitian cooking in Miami Gardens, Miami Gardens—griot, rice-and-beans, and Creole spice in a neighborhood kitchen built for the diaspora.",
+    "cultural_roots": "Haitian-Creole traditions: epis seasoning, citrus-marinated griot, and the bakery-and-kitchen culture of Port-au-Prince."
+  },
+  "chef-creole-north-miami-7th-ave": {
+    "our_story": "Chef Creole (North Miami – 7th Ave) serves Haitian cooking in North Miami, North Miami—griot, rice-and-beans, and Creole spice in a neighborhood kitchen built for the diaspora.",
+    "cultural_roots": "Haitian-Creole traditions: epis seasoning, citrus-marinated griot, and the bakery-and-kitchen culture of Port-au-Prince."
+  },
+  "chef-creole-north-miami-dixie": {
+    "our_story": "Chef Creole (North Miami – Dixie Hwy) serves Haitian cooking in North Miami, North Miami—griot, rice-and-beans, and Creole spice in a neighborhood kitchen built for the diaspora.",
+    "cultural_roots": "Haitian-Creole traditions: epis seasoning, citrus-marinated griot, and the bakery-and-kitchen culture of Port-au-Prince."
+  },
+  "chi-yassa": {
+    "our_story": "Yassa African Restaurant brings Senegalese cooking to Chicago, IL—yassa, mafe, and thieboudienne in a halal-friendly diaspora dining room.",
+    "cultural_roots": "Senegalese coastal cuisine: peanut mafe, lemony yassa, and fish-and-rice traditions from Dakar's Atlantic kitchens."
+  },
+  "chopnblok-montrose-houston": {
+    "our_story": "ChòpnBlọk (Montrose) serves Nigerian and West African cooking in Montrose, Houston—known for Trad Bowl (Jollof) & Yassa Grill—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "cocobreeze-oakland": {
+    "our_story": "Cocobreeze brings Caribbean flavor to Oakland, CA—island spices, seafood, and the warmth of a local diaspora gathering place.",
+    "cultural_roots": "Pan-Caribbean cooking: curry, coconut, scotch bonnet, and the blended traditions of islands across the West Indies."
+  },
+  "craft-kafe-st-petersburg": {
+    "our_story": "Craft Kafe serves West African jollof, stews, and grill plates in St. Petersburg, FL—a homestyle room for the local diaspora community.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities.",
+    "about": "Craft Kafe serves West African jollof, stews, and grill plates in St. Petersburg."
+  },
+  "dc-daily-002": {
+    "our_story": "Chercher is widely considered the DC area's benchmark for Ethiopian dining—injera platters, vegetarian fasting options, and a Bethesda room that draws devotees from across the capital region.",
+    "cultural_roots": "Ethiopian injera culture: shared platters, lentil wats for fasting seasons, and the unhurried hospitality of a proper Habesha tej house."
+  },
+  "dc-ethiopic": {
+    "our_story": "Ethiopic brings Ethiopian injera platters and traditional wats to Washington, DC—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "dc-st-james": {
+    "our_story": "St. James brings modern Caribbean fine dining to U Street—callaloo and crab, rum cocktails, and an elevated room that matches DC's cosmopolitan Caribbean spirit.",
+    "cultural_roots": "Modern Caribbean cuisine: callaloo greens, island seafood, and the fusion energy of Caribbean chefs reimagining tradition for a capital-city audience."
+  },
+  "delightful-nigerian-cuisine-orlando": {
+    "about": "Nigerian restaurant on Semoran Boulevard serving jollof, pepper soup, and West African staples in Orlando.",
+    "our_story": "Delightful Nigerian Cuisine brings pepper-forward stews, jollof, and suya to Orlando's Semoran corridor—a chop-bar room for Nigerian diaspora comfort food.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "den-whittier-001": {
+    "our_story": "Whittier Cafe is Denver's African espresso bar—Ethiopian and East African coffees, light bites, and a Sunday coffee ceremony that anchors the Whittier and Five Points community.",
+    "cultural_roots": "East African coffee ceremony culture: roasting beans tableside, buna served with popcorn, and the social ritual that begins every Ethiopian gathering."
+  },
+  "desta-atlanta": {
+    "our_story": "Desta brings Ethiopian injera platters and traditional wats to Atlanta, GA—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "dfw-afro-002": {
+    "our_story": "Cafe Nubia opened in 2024 as Dallas's African-Mediterranean fusion room—Rasta Pasta, suya, brunch, and live music in a Far North Dallas spot built for celebration.",
+    "cultural_roots": "Pan-African and Mediterranean crossover: suya spice, seafood grills, and the diaspora fusion that blends North African, West African, and Caribbean flavors."
+  },
+  "dfw-fine-001": {
+    "our_story": "Aldeez Afribbean's creekside North Dallas lounge blends Gambian benachin with Caribbean classics—3,000 square feet of VIP energy and live Afribbean Fridays.",
+    "cultural_roots": "West African and Caribbean fusion: one-pot benachin rice, island spice, and the party-kitchen culture that unites Gambian and Caribbean diaspora communities in Texas."
+  },
+  "dfw-fine-002": {
+    "our_story": "The Island Spot (Oak Cliff) keeps Dallas fed with Jamaican jerk, oxtail, and patty-shop soul—known for Mama Joyce's Oxtails & Jerk BBQ Ribs—island flavor with neighborhood warmth.",
+    "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad."
+  },
+  "dfw-shuri-001": {
+    "our_story": "Shuri African Restaurant serves Nigerian and West African cooking in Northeast Dallas, Dallas—known for Egusi & jollof—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "feru-ethiopian-dc": {
+    "our_story": "Feru Ethiopian Cuisine brings Ethiopian injera platters and traditional wats to Washington, DC—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "fidel-east-african-restaurant-aurora": {
+    "our_story": "Fidel East African Restaurant brings Ethiopian injera platters and traditional wats to Aurora, CO—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "Fidel East African Restaurant serves Ethiopian injera platters, tibs, and traditional wats in Aurora."
+  },
+  "finger-licking-2-0-houston": {
+    "our_story": "Finger Licking 2.0 serves Nigerian and West African cooking in Houston, TX—known for Pounded Yam & Egusi Soup—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "fire-up-halal-grill-temple-terrace": {
+    "our_story": "Fire Up Halal Grill serves halal Mediterranean and Middle Eastern grills in Temple Terrace, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Fire Up Halal Grill serves halal Mediterranean and Middle Eastern grill plates in Temple Terrace."
+  },
+  "flame-kabob-orlando": {
+    "our_story": "Flame Kabob serves halal Mediterranean and Middle Eastern grills in Orlando, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Flame Kabob serves halal Mediterranean and Middle Eastern grill plates in Orlando."
+  },
+  "gb-african-market-and-restaurant-orlando": {
+    "our_story": "GB African Market and Restaurant serves West African jollof, stews, and grill plates in Orlando, FL—a homestyle room for the local diaspora community.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities.",
+    "about": "GB African Market and Restaurant serves West African jollof, stews, and grill plates in Orlando."
+  },
+  "gen-bagay-restaurant-orlando": {
+    "our_story": "Gen Bagay Restaurant serves West African jollof, stews, and grill plates in Orlando, FL—a homestyle room for the local diaspora community.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities.",
+    "about": "Gen Bagay Restaurant serves West African jollof, stews, and grill plates in Orlando."
+  },
+  "gorkhali-kitchen-tampa": {
+    "our_story": "Gorkhali Kitchen brings Nepali and Himalayan cooking to Tampa—momos, dal bhat, and mountain-spice curries in a cozy diaspora dining room.",
+    "cultural_roots": "Nepali kitchen traditions: steamed momos, lentil dal, and the Himalayan spice palette of the Gurkha culinary heritage.",
+    "about": "Nepali and Himalayan kitchen in Tampa—momos, dal bhat, and spice-forward curries."
+  },
+  "greenland-restaurant-at-busch-tampa": {
+    "our_story": "Greenland Restaurant at Busch serves West African jollof, stews, and grill plates in Tampa, FL—a homestyle room for the local diaspora community.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities.",
+    "about": "Greenland Restaurant at Busch serves West African jollof, stews, and grill plates in Tampa."
+  },
+  "hamada-kabob-tampa": {
+    "our_story": "Hamada kabob حمادة مشاوي serves halal Mediterranean and Middle Eastern grills in Tampa, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Hamada kabob حمادة مشاوي serves halal Mediterranean and Middle Eastern grill plates in Tampa."
+  },
+  "helens-kitchen-houston": {
+    "our_story": "Helen's Kitchen keeps Houston fed with Jamaican jerk, oxtail, and patty-shop soul—known for Oxtail & Curry Goat—island flavor with neighborhood warmth.",
+    "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad."
+  },
+  "hou-caribbean-hotpot-grill": {
+    "our_story": "Caribbean Hotpot Grill keeps Houston fed with Jamaican jerk, oxtail, and patty-shop soul—known for Curry Chicken & Stewed Beef—island flavor with neighborhood warmth.",
+    "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad."
+  },
+  "hou-fine-001": {
+    "our_story": "Island Spice Bar & Grill brings Caribbean flavor to West Houston / Copperfield, Houston—known for Creamy Rasta Pasta & Escovitch Fish—island spices, seafood, and the warmth of a local diaspora gathering place.",
+    "cultural_roots": "Pan-Caribbean cooking: curry, coconut, scotch bonnet, and the blended traditions of islands across the West Indies."
+  },
+  "irie-caribbean-brooklyn": {
+    "our_story": "Irie Caribbean Kitchen keeps Brooklyn fed with Jamaican jerk, oxtail, and patty-shop soul—island flavor with neighborhood warmth.",
+    "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad."
+  },
+  "istanbul-mediterranean-grill-market-tampa": {
+    "our_story": "Istanbul Mediterranean Grill & Market serves halal Mediterranean and Middle Eastern grills in Tampa, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Istanbul Mediterranean Grill & Market serves halal Mediterranean and Middle Eastern grill plates in Tampa."
+  },
+  "jebena-cafe-seattle": {
+    "our_story": "Jebena Cafe brings Ethiopian injera platters and traditional wats to Seattle, WA—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "kabab2go-orlando-orlando": {
+    "our_story": "Kabab2go Orlando serves halal Mediterranean and Middle Eastern grills in Orlando, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Kabab2go Orlando serves halal Mediterranean and Middle Eastern grill plates in Orlando."
+  },
+  "kabsah-orlando": {
+    "our_story": "Kabsah serves halal Mediterranean and Middle Eastern grills in Orlando, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Kabsah serves halal Mediterranean and Middle Eastern grill plates in Orlando."
+  },
+  "kalalou-caribbean-bar-grill-orlando-orlando": {
+    "our_story": "Kalalou Caribbean Bar & Grill Orlando brings Caribbean flavor to Orlando, FL—island spices, seafood, and the warmth of a local diaspora gathering place.",
+    "cultural_roots": "Pan-Caribbean cooking: curry, coconut, scotch bonnet, and the blended traditions of islands across the West Indies.",
+    "about": "Kalalou Caribbean Bar & Grill Orlando serves Caribbean plates and island hospitality in Orlando."
+  },
+  "kilimandjaro-philadelphia": {
+    "our_story": "Kilimandjaro brings Senegalese cooking to Philadelphia, PA—yassa, mafe, and thieboudienne in a halal-friendly diaspora dining room.",
+    "cultural_roots": "Senegalese coastal cuisine: peanut mafe, lemony yassa, and fish-and-rice traditions from Dakar's Atlantic kitchens."
+  },
+  "knalis-kitchen-orlando": {
+    "our_story": "Knali's Kitchen brings Caribbean flavor to Orlando, FL—island spices, seafood, and the warmth of a local diaspora gathering place.",
+    "cultural_roots": "Pan-Caribbean cooking: curry, coconut, scotch bonnet, and the blended traditions of islands across the West Indies.",
+    "about": "Knali's Kitchen serves Caribbean plates and island hospitality in Orlando."
+  },
+  "komchop-houston": {
+    "our_story": "Komchop serves Nigerian and West African cooking in Houston, TX—known for Grilled Fish & Efo Riro—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "konjo-ethiopian-food-denver": {
+    "our_story": "Konjo Ethiopian Food brings Ethiopian injera platters and traditional wats to Denver, CO—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "Konjo Ethiopian Food serves Ethiopian injera platters, tibs, and traditional wats in Denver."
+  },
+  "konjo-ethiopian-food-edgewater": {
+    "our_story": "Konjo Ethiopian Food brings Ethiopian injera platters and traditional wats to Edgewater, CO—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "Konjo Ethiopian Food serves Ethiopian injera platters, tibs, and traditional wats in Edgewater."
+  },
+  "la-blaqhaus-noho": {
+    "our_story": "BlaqHaus NoHo brings Caribbean flavor to North Hollywood, CA—island spices, seafood, and the warmth of a local diaspora gathering place.",
+    "cultural_roots": "Pan-Caribbean cooking: curry, coconut, scotch bonnet, and the blended traditions of islands across the West Indies."
+  },
+  "la-dulans-crenshaw": {
+    "our_story": "Dulan's on Crenshaw serves soul food and Southern comfort in Hyde Park, Los Angeles—known for Smothered Chicken—slow-cooked plates and church-supper warmth.",
+    "cultural_roots": "African American soul food: slow braises, greens, cornbread, and the Southern kitchen traditions of the Black diaspora."
+  },
+  "la-terrazza-restaurant-tampa": {
+    "our_story": "La Terrazza Restaurant serves Italian classics in Tampa, FL— pasta, grilled plates, and a terrace-room atmosphere for Tampa dining.",
+    "cultural_roots": "Italian dining tradition: olive oil, slow sauces, and the trattoria culture of shared plates and wine.",
+    "about": "La Terrazza Restaurant serves Italian dining in Tampa."
+  },
+  "lady-t-kitchen-austin": {
+    "our_story": "Lady T Kitchen serves Nigerian and West African cooking in Austin, TX—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "le-bon-go-t-chez-fa-las-vegas": {
+    "our_story": "Le Bon Goût Chez Fa brings halal Senegalese cooking to Las Vegas—yassa, thiebou jeun, and jollof in a dining room that feels miles from the Strip but close to Dakar.",
+    "cultural_roots": "Senegalese coastal cuisine: citrus-marinated yassa, fish-and-rice thieboudienne, and the halal kitchen traditions of West Africa's Atlantic ports."
+  },
+  "little-lagos-atl": {
+    "our_story": "Little Lagos serves Nigerian and West African cooking in Atlanta, GA—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "lucy-ethiopian-restaurant-denver": {
+    "our_story": "Lucy Ethiopian Restaurant brings Ethiopian injera platters and traditional wats to Denver, CO—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "Lucy Ethiopian Restaurant serves Ethiopian injera platters, tibs, and traditional wats in Denver."
+  },
+  "lucy-ethiopian-restaurant-lounge-houston": {
+    "our_story": "Lucy Ethiopian Restaurant & Lounge brings Ethiopian injera platters and traditional wats to Houston, TX—known for Lucy Special Tibs & Veggie Platter—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "maandeeq-east-africa-restaurant-aurora": {
+    "our_story": "Maandeeq East Africa Restaurant serves West African jollof, stews, and grill plates in Aurora, CO—a homestyle room for the local diaspora community.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities.",
+    "about": "Maandeeq East Africa Restaurant serves West African jollof, stews, and grill plates in Aurora."
+  },
+  "megenagna-mart-and-cafe-austin": {
+    "our_story": "Megenagna Mart & Cafe pairs an Ethiopian grocery with a cafe in Wells Branch—injera platters, spice imports, and the everyday flavors of Addis Ababa's markets.",
+    "cultural_roots": "Ethiopian market-and-cafe culture: berbere spice, injera, and the diaspora grocery that doubles as a community living room."
+  },
+  "mamak-asian-street-food-orlando": {
+    "our_story": "Mamak Asian Street Food serves Malaysian hawker classics on East Colonial Drive—roti canai, nasi lemak, and the late-night energy of Kuala Lumpur street stalls.",
+    "cultural_roots": "Malaysian mamak stall culture: hand-stretched roti, coconut rice, and the Indian-Malay-Chinese crossover of Southeast Asian street food.",
+    "about": "Malaysian street food on East Colonial Drive—roti canai, nasi lemak, and hawker-style plates in Orlando."
+  },
+  "marabou-restaurant-and-lounge-orlando": {
+    "our_story": "Marabou Restaurant and Lounge serves West African jollof, stews, and grill plates in Orlando, FL—a homestyle room for the local diaspora community.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities.",
+    "about": "Marabou Restaurant and Lounge serves West African jollof, stews, and grill plates in Orlando."
+  },
+  "marie-african-flavors": {
+    "our_story": "Marie African Flavors serves Nigerian and West African cooking in Houston, TX—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "meals-by-genet-los-angeles": {
+    "our_story": "Chef Genet Agazom's Meals by Genet is a Little Ethiopia institution—women-owned, reservation-only, and legendary for doro wat in a intimate Friday-through-Sunday dining room.",
+    "cultural_roots": "Ethiopian feast cooking at its most refined: berbere-spiced doro wat, hand-made injera, and the slow, ceremonial pace of a proper Addis Ababa home kitchen."
+  },
+  "mesob-denver": {
+    "our_story": "mesob brings Ethiopian injera platters and traditional wats to Denver, CO—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "mesob serves Ethiopian injera platters, tibs, and traditional wats in Denver."
+  },
+  "mitmita-ethiopian-restaurant-tampa": {
+    "our_story": "Mitmita Ethiopian restaurant brings Ethiopian injera platters and traditional wats to Tampa, FL—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "Mitmita Ethiopian restaurant serves Ethiopian injera platters, tibs, and traditional wats in Tampa."
+  },
+  "moms-restaurant-haitian-cuisine-bakery-tampa": {
+    "our_story": "Mom's Restaurant | Haitian Cuisine • Bakery serves Haitian cooking in Tampa, FL—griot, rice-and-beans, and Creole spice in a neighborhood kitchen built for the diaspora.",
+    "cultural_roots": "Haitian-Creole traditions: epis seasoning, citrus-marinated griot, and the bakery-and-kitchen culture of Port-au-Prince.",
+    "about": "Mom's Restaurant | Haitian Cuisine • Bakery brings Haitian griot, rice-and-beans, and bakery favorites to Tampa."
+  },
+  "nana-street-food-tampa": {
+    "our_story": "Nana Street Food serves West African jollof, stews, and grill plates in Tampa, FL—a homestyle room for the local diaspora community.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities.",
+    "about": "Nana Street Food serves West African jollof, stews, and grill plates in Tampa."
+  },
+  "nash-riddim-spice": {
+    "our_story": "Riddim n' Spice keeps Nashville fed with Jamaican jerk, oxtail, and patty-shop soul—island flavor with neighborhood warmth.",
+    "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad."
+  },
+  "native-pot-houston": {
+    "our_story": "Native Pot Restaurant serves Nigerian and West African cooking in Houston, TX—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "nile-ethiopian-orlando": {
+    "our_story": "Nile Ethiopian serves one of Orlando's widest Ethiopian menus—fragrant wats, generous vegetarian options, and a traditional coffee ceremony in modest, welcoming quarters.",
+    "cultural_roots": "Ethiopian Orthodox and everyday cooking: vegetable fasting platters, spice-layered stews, and buna ceremony to close the meal."
+  },
+  "nile-ethiopian-restaurant-aurora": {
+    "our_story": "Nile Ethiopian Restaurant brings Ethiopian injera platters and traditional wats to Aurora, CO—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "Nile Ethiopian Restaurant serves Ethiopian injera platters, tibs, and traditional wats in Aurora."
+  },
+  "nola-bennachin": {
+    "our_story": "Bennachin keeps Gambian benachin and West African one-pot cooking alive in New Orleans—a Treme-adjacent room where rice, fish, and spice tell a diaspora story.",
+    "cultural_roots": "Gambian benachin tradition: one-pot rice and fish, West African seasoning, and the Creole-city crossover of Atlantic diaspora cooking.",
+    "about": "Gambian and West African restaurant in New Orleans serving benachin one-pot rice and diaspora stews."
+  },
+  "nola-dooky-chase": {
+    "our_story": "Dooky Chase's has been a Treme institution since 1941—a Creole dining room where Leah Chase fed civil rights leaders and preserved New Orleans' gumbo-and-fried-chicken legacy.",
+    "cultural_roots": "New Orleans Creole heritage: gumbo, fried chicken, and the soul of Treme—a neighborhood where food, faith, and civil rights history share the same table."
+  },
+  "nyammings-fusion-bistro-richmond": {
+    "our_story": "Nyammings Fusion Bistro brings Caribbean flavor to Richmond, TX—known for Curry Goat & Oxtail Mac n Cheese—island spices, seafood, and the warmth of a local diaspora gathering place.",
+    "cultural_roots": "Pan-Caribbean cooking: curry, coconut, scotch bonnet, and the blended traditions of islands across the West Indies."
+  },
+  "oak-lala-eritrean": {
+    "our_story": "Lala's Eritrean brings Ethiopian injera platters and traditional wats to Oakland, CA—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "one-lounge-uzbek-turkish-halal-food-hookah-lounge-orlando": {
+    "our_story": "One Lounge | Uzbek Turkish | Halal food & Hookah lounge serves halal Mediterranean and Middle Eastern grills in Orlando, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "One Lounge | Uzbek Turkish | Halal food & Hookah lounge serves halal Mediterranean and Middle Eastern grill plates in Orlando."
+  },
+  "quality-taste-philadelphia": {
+    "our_story": "Quality Taste keeps Philadelphia fed with Jamaican jerk, oxtail, and patty-shop soul—island flavor with neighborhood warmth.",
+    "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad."
+  },
+  "queen-of-sheba-restaurant-denver": {
+    "our_story": "Queen of Sheba Restaurant brings Ethiopian injera platters and traditional wats to Denver, CO—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "Queen of Sheba Restaurant serves Ethiopian injera platters, tibs, and traditional wats in Denver."
+  },
+  "queen-of-sheba-temple-terrace": {
+    "our_story": "Queen of Sheba brings Ethiopian injera platters and traditional wats to Temple Terrace, FL—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "rosalinds-los-angeles": {
+    "our_story": "Rosalind's brings Ethiopian injera platters and traditional wats to Little Ethiopia (Fairfax), Los Angeles—known for Ethiopian Shared Plates—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "royal-arm-restaurant-katy": {
+    "our_story": "Royal Arm Restaurant serves Nigerian and West African cooking in Cinco Ranch / Falcon Rock, Katy—known for Egusi (Melon Stew) with Pounded Yam & Ayamase (Designer Rice)—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "safari-houston": {
+    "our_story": "Safari serves Nigerian and West African cooking in Houston, TX—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "safta-denver": {
+    "our_story": "Safta brings modern Israeli cooking to Denver's RiNo—wood-fired pita, hummus, and vibrant Middle Eastern plates from one of the city's most celebrated kitchens.",
+    "cultural_roots": "Israeli and Levantine cuisine: wood-fire baking, tahini, and the crossroads flavors of the eastern Mediterranean.",
+    "about": "Modern Israeli restaurant in Denver's RiNo—wood-fired pita, hummus, and Middle Eastern small plates from James Beard-winning chef Alon Shaya."
+  },
+  "sanaa-kissimmee": {
+    "our_story": "Sanaa serves West African jollof, stews, and grill plates in Kissimmee, FL—a homestyle room for the local diaspora community.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities.",
+    "about": "Sanaa serves West African jollof, stews, and grill plates in Kissimmee."
+  },
+  "sarr-maimouna-west-african-food-aurora": {
+    "our_story": "Sarr Maimouna West African Food brings Senegalese cooking to Denver, CO—yassa, mafe, and thieboudienne in a halal-friendly diaspora dining room.",
+    "cultural_roots": "Senegalese coastal cuisine: peanut mafe, lemony yassa, and fish-and-rice traditions from Dakar's Atlantic kitchens."
+  },
+  "sea-fine-002": {
+    "our_story": "Chef Trey Lamont's Jerk Shack elevates Seattle street food—jerk chicken seasoned for 48 hours and smoked over authentic pimento wood in the Central District.",
+    "cultural_roots": "Jamaican jerk pit tradition: pimento wood smoke, scotch bonnet heat, and the street-food culture that Seattle's Caribbean community brings to the Pacific Northwest."
+  },
+  "sea-meskel": {
+    "our_story": "Meskel Ethiopian brings Ethiopian injera platters and traditional wats to Seattle, WA—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "selam-ethiopian-chicago": {
+    "our_story": "Selam Ethiopian Kitchen brings Ethiopian injera platters and traditional wats to Chicago, IL—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "sf-teranga-village": {
+    "our_story": "Teranga (The Village) brings Senegalese cooking to San Francisco, CA—yassa, mafe, and thieboudienne in a halal-friendly diaspora dining room.",
+    "cultural_roots": "Senegalese coastal cuisine: peanut mafe, lemony yassa, and fish-and-rice traditions from Dakar's Atlantic kitchens."
+  },
+  "shawarma-asham-tampa": {
+    "our_story": "Shawarma Asham serves halal Mediterranean and Middle Eastern grills in Tampa, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Shawarma Asham serves halal Mediterranean and Middle Eastern grill plates in Tampa."
+  },
+  "shoufi-mahfi-mediterranean-grill-orlando": {
+    "our_story": "ShouFi MahFi Mediterranean Grill serves halal Mediterranean and Middle Eastern grills in Orlando, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "ShouFi MahFi Mediterranean Grill serves halal Mediterranean and Middle Eastern grill plates in Orlando."
+  },
+  "status-hollywood-los-angeles": {
+    "our_story": "Status Hollywood is where LA glamour meets island heat—sweet chili lamb chops, oxtail egg rolls, and vibe dining in a room where the crowd dresses as well as the plates.",
+    "cultural_roots": "Upscale Jamaican and Caribbean flavors: jerk spice refined for Hollywood, oxtail braised low and slow, and the party-dining culture of modern LA."
+  },
+  "steaming-pots-west-africa-cuisine-brandon-brandon": {
+    "our_story": "Steaming Pots West Africa Cuisine brings pepper soup, jollof, and Nigerian stews to Brandon—a Tampa Bay room where steam from the pots fills the dining room.",
+    "cultural_roots": "West African one-pot cooking: pepper soup broths, jollof rice, and the steam-kitchen traditions of Nigerian home cooks.",
+    "about": "West African restaurant in Brandon serving pepper soup, jollof, and Nigerian stews."
+  },
+  "suya-hut-meadows-place": {
+    "our_story": "Suya Hut serves Nigerian and West African cooking in Meadows Place, TX—known for Authentic Beef & Chicken Suya—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "suya-joint-boston": {
+    "our_story": "Suya Joint serves Nigerian and West African cooking in Boston, MA—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "sweetpepper-kitchen-aurora": {
+    "our_story": "SweetPepper Kitchen serves West African jollof, stews, and grill plates in Aurora, CO—a homestyle room for the local diaspora community.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities.",
+    "about": "SweetPepper Kitchen serves West African jollof, stews, and grill plates in Aurora."
+  },
+  "taste-of-nigeria-houston": {
+    "our_story": "Taste of Nigeria serves Nigerian and West African cooking in Houston, TX—known for Jollof Rice & Beef Suya—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "taste-of-yemen-restaurant-temple-terrace": {
+    "our_story": "Taste of Yemen restaurant serves halal Mediterranean and Middle Eastern grills in Temple Terrace, FL—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Taste of Yemen restaurant serves halal Mediterranean and Middle Eastern grill plates in Temple Terrace."
+  },
+  "tesfa-ethiopian-chicago": {
+    "our_story": "Tesfa Ethiopian Cuisine brings Ethiopian injera platters and traditional wats to Chicago, IL—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "the-dough-show-tampa-tampa": {
+    "our_story": "THE DOUGH SHOW - Tampa draws Tampa crowds for fresh-baked sweets and creative dough creations.",
+    "cultural_roots": "Artisan baking culture: fresh dough, creative flavors, and the neighborhood bakery as a daily gathering spot.",
+    "about": "THE DOUGH SHOW - Tampa serves fresh-baked goods and sweet treats in Tampa."
+  },
+  "the-ethiopian-restaurant-denver": {
+    "our_story": "The Ethiopian Restaurant brings Ethiopian injera platters and traditional wats to Denver, CO—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "The Ethiopian Restaurant serves Ethiopian injera platters, tibs, and traditional wats in Denver."
+  },
+  "trybal-african-speakeasy-denver": {
+    "our_story": "Trybal African Speakeasy hides West African flavor behind a Denver lounge door—jollof, suya, cocktails, and late-night diaspora energy.",
+    "cultural_roots": "West African party-kitchen culture: jollof, grilled suya, and the speakeasy spirit of diaspora nightlife in the American West.",
+    "about": "West African speakeasy and lounge in Denver—jollof, suya, cocktails, and late-night diaspora energy."
+  },
+  "ts-buka-arlington": {
+    "our_story": "T's Buka serves Nigerian and West African cooking in Arlington, TX—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "tsehay-dc": {
+    "our_story": "Tsehay Ethiopian Restaurant & Bar brings Ethiopian injera platters and traditional wats to Washington, DC—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens."
+  },
+  "tuti-grill-denver": {
+    "our_story": "Tuti Grill serves halal Mediterranean and Middle Eastern grills in Denver, CO—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Tuti Grill serves halal Mediterranean and Middle Eastern grill plates in Denver."
+  },
+  "two-hommes-inglewood": {
+    "our_story": "Two Hommés serves Nigerian and West African cooking in Inglewood, CA—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "vees-brooklyn": {
+    "our_story": "Vee's has served Crown Heights for 30-plus years—oxtail, cow foot soup, and ackee and saltfish with the generous portions and neighborhood prices Brooklyn expects.",
+    "cultural_roots": "Jamaican-American chop-shop culture: long-simmered oxtail, cow foot soup on weekends, and the Crown Heights dining room where island families eat daily."
+  },
+  "veronicas-kitchen-inglewood": {
+    "our_story": "Veronica's Kitchen serves Nigerian and West African cooking in Inglewood, Inglewood—known for Egusi & Fufu—pepper-forward stews, jollof, and chop-bar hospitality.",
+    "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses."
+  },
+  "yaya-southern-cuisine-tampa": {
+    "our_story": "YaYa Southern Cuisine serves West African jollof, stews, and grill plates in Tampa, FL—a homestyle room for the local diaspora community.",
+    "cultural_roots": "West African chop-bar culture: one-pot rice dishes, pepper stews, and the communal dining rooms that anchor immigrant communities.",
+    "about": "YaYa Southern Cuisine serves West African jollof, stews, and grill plates in Tampa."
+  },
+  "yemen-grill-cafe-denver-denver": {
+    "our_story": "Yemen Grill & Cafe Denver serves halal Mediterranean and Middle Eastern grills in Denver, CO—shawarma, kebabs, and mezze for quick lunch or family dinner.",
+    "cultural_roots": "Levantine and halal grill culture: spice-rubbed kebabs, flatbread, and the crossroads cooking of Mediterranean diaspora communities.",
+    "about": "Yemen Grill & Cafe Denver serves halal Mediterranean and Middle Eastern grill plates in Denver."
+  },
+  "zula-cafe-lounge-aurora": {
+    "our_story": "Zula Cafe & Lounge brings Ethiopian injera platters and traditional wats to Aurora, CO—a Habesha dining room for shared meals and coffee ceremony.",
+    "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
+    "about": "Zula Cafe & Lounge serves Ethiopian injera platters, tibs, and traditional wats in Aurora."
+  }
+}

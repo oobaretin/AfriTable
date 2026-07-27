@@ -2,13 +2,16 @@
   "generatedAt": "2026-07-27T19:47:48.179375+00:00",
   "summary": {
     "catalogTotal": 417,
-    "needsCopyUpgrade": 144,
+    "needsCopyUpgrade": 0,
     "batch1Featured": 16,
     "batch1Complete": true,
     "batch1CompletedAt": "2026-07-27T20:55:00+00:00",
     "batch2Metro": 40,
     "batch2Complete": true,
-    "batch2CompletedAt": "2026-07-27T21:05:00+00:00"
+    "batch2CompletedAt": "2026-07-27T21:05:00+00:00",
+    "batch3Remaining": 141,
+    "batch3Complete": true,
+    "batch3CompletedAt": "2026-07-27T21:10:00+00:00"
   },
   "criteria": "Flagship = featured OR top-rated in major metro with generic our_story/cultural_roots/about boilerplate",
   "batch1_featured": [
