@@ -152,8 +152,6 @@ export async function POST(request: Request) {
     replyTo: body.guest.email,
   });
 
-  await supabaseAdmin.from("table_requests").update({ status: "forwarded" }).eq("id", inserted.id);
-
   return NextResponse.json({
     id: inserted.id,
     referenceCode,

@@ -279,7 +279,7 @@ export default async function AdminDashboardPage() {
               <div>
                 <div className="font-medium">Table requests</div>
                 <div className="text-sm text-muted-foreground">
-                  {stats.totalTableRequests} total · {stats.pendingTableRequests} pending
+                  {stats.totalTableRequests} total · {stats.pendingTableRequests} need action
                 </div>
               </div>
             </div>

@@ -57,8 +57,8 @@ function referenceCode(id: string): string {
 
 function labelForStatus(status: TableRequestStatus) {
   const map = {
-    pending: { label: "Pending", variant: "secondary" as const },
-    forwarded: { label: "Forwarded", variant: "default" as const },
+    pending: { label: "Needs action", variant: "destructive" as const },
+    forwarded: { label: "Sent to restaurant", variant: "default" as const },
     cancelled: { label: "Cancelled", variant: "outline" as const },
   };
   return map[status];
@@ -116,7 +116,7 @@ export default async function AdminTableRequestsPage({
     <Container className="py-10 md:py-14">
       <PageHeader
         title="Table requests"
-        description="Catalog directory requests from guests — forward to restaurants by phone or email."
+        description="Guest requests from directory listings. Pending = you still need to pass it to the restaurant."
         right={
           <Button asChild variant="outline">
             <Link href="/admin">Admin home</Link>
@@ -128,12 +128,18 @@ export default async function AdminTableRequestsPage({
         {STATUS_FILTERS.map((s) => (
           <Button key={s} asChild variant={s === statusFilter ? "default" : "outline"} size="sm">
             <Link href={s === "all" ? "/admin/table-requests" : `/admin/table-requests?status=${s}`}>
-              {s === "all" ? "All" : s.charAt(0).toUpperCase() + s.slice(1)}
+              {s === "all"
+                ? "All"
+                : s === "pending"
+                  ? "Needs action"
+                  : s === "forwarded"
+                    ? "Sent to restaurant"
+                    : "Cancelled"}
             </Link>
           </Button>
         ))}
         {typeof pendingCount === "number" && pendingCount > 0 ? (
-          <Badge variant="destructive">{pendingCount} pending</Badge>
+          <Badge variant="destructive">{pendingCount} need action</Badge>
         ) : null}
       </div>
 
@@ -213,6 +219,20 @@ export default async function AdminTableRequestsPage({
                           <Button asChild size="sm" variant="ghost">
                             <a href={`mailto:${request.guest_email}`}>Email guest</a>
                           </Button>
+                          {request.status === "pending" ? (
+                            <>
+                              <form action={`/admin/table-requests/${request.id}/forward`} method="post">
+                                <Button type="submit" size="sm">
+                                  Mark sent to restaurant
+                                </Button>
+                              </form>
+                              <form action={`/admin/table-requests/${request.id}/cancel`} method="post">
+                                <Button type="submit" size="sm" variant="outline">
+                                  Cancel
+                                </Button>
+                              </form>
+                            </>
+                          ) : null}
                         </div>
                       </TableCell>
                     </TableRow>
