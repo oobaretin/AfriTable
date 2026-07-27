@@ -790,48 +790,6 @@
     "chef_quote": "Assorted Meat Stew is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
   },
   {
-    "id": "adulis-ny",
-    "name": "Adulis (Flushing)",
-    "cuisine": "Eritrean",
-    "region": "East African",
-    "price_range": "$$",
-    "rating": 4.6,
-    "address": "149-10 45th Ave, Flushing, NY 11355",
-    "phone": "(718) 886-2442",
-    "website": "https://adulisrestaurant.com",
-    "social": {
-      "instagram": "@adulis_restaurant"
-    },
-    "hours": {
-      "tue_sun": "12:00 PM - 10:00 PM",
-      "mon": "Closed"
-    },
-    "about": "An authentic Eritrean dining room in Queens known for its warm hospitality and traditional clay-pot cooking.",
-    "our_story": "Named after the ancient port city of Adulis, we aim to bridge the gap between ancient Red Sea history and modern New York through the art of the spice.",
-    "cultural_roots": "Eritrean cuisine shares similarities with Ethiopian food but features unique coastal influences and a distinct blend of 'Tsebhi' (stews) served on injera.",
-    "menu_highlights": [
-      "Zigni (Spicy Beef Stew)",
-      "Hamli (Saut\u00e9ed Spinach)",
-      "Eritrean Coffee Ceremony"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "NY",
-    "google_search_url": "https://www.google.com/search?q=Adulis%2C%20149-10%2045th%20Ave%2C%20Flushing%2C%20NY%2011355",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkX7HMuyCZKElPr-ES7Nbs8RHif5snX6ECvQsPeVNrMf8QzM7xMeAp6dSJgW4FKkTkL8mKhORzM5ddzF6IdDeoH-xFt2Ab3IXMPWW-dxAZCWZoZE1tHSUHMo_AtTgcDVdURlMN6dcxP_cAZ=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlGD1utAsv5RBkiGHsYNIs8D4Z8gtuBzjHEqdQyF0gK89JwZOoJTkwjjmQQRfgahAZht0fxzbggTnXLgukSz3SaIqjV_BX9dgYNS4unulkFnjtZvJo86IXBYLGIlZEdCbVTJiLU6T9qP-U=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlB1-5I6j6K2SPaNg-00eDkqb9hOuzDCXI9FuY7UtzdmwMnYwd2k9HGQYCRR6uQ09ZRqsb8yFe0u226kenq3Kj8xoeXoyRA-OV_ZaT-IjHkwZshMmH2G0I5OutIBQwG5XscObQw=w1000-h1000-c-n"
-    ],
-    "google_place_id": "ChIJgawSaj5gwokRA7BSfurvaeA",
-    "search_aliases": [
-      "Adulis",
-      "Adulis Queens",
-      "149-10 45th Ave"
-    ],
-    "special_features": "known for Zigni (Spicy Beef Stew), Hamli (Saut\u00e9ed Spinach), and Eritrean Coffee Ceremony; communal injera platters; traditional wats and tibs.",
-    "chef_quote": "Zigni (Spicy Beef Stew) is why people gather here\u2014berbere, butter, and injera made to share from one platter."
-  },
-  {
     "id": "kulan-cafe",
     "name": "Kulan Cafe",
     "cuisine": "East African",
@@ -12279,7 +12237,7 @@
   },
   {
     "id": "adulis-houston",
-    "name": "Adulis (Houston)",
+    "name": "Adulis",
     "cuisine": "Eritrean",
     "region": "East African",
     "price_range": "$$",
@@ -12290,19 +12248,20 @@
       "mon_sat": "10:00 AM - 2:00 AM",
       "sun": "5:00 PM - 2:00 AM"
     },
-    "about": "Family-owned Eritrean and Ethiopian restaurant on Bellaire Blvd; injera platters, tibs, and late-night dining.",
+    "about": "Family-owned East African restaurant on Bellaire Blvd serving Eritrean and Ethiopian injera platters, tibs, and late-night dining.",
     "vibe_category": "Authentic Staples",
     "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Adulis%20%28Houston%29%2C%205800%20Bellaire%20Blvd%20%23102%2C%20Houston%2C%20TX%2077081",
+    "google_search_url": "https://www.google.com/search?q=Adulis%2C%205800%20Bellaire%20Blvd%20%23102%2C%20Houston%2C%20TX%2077081",
     "images": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnIK7-Fl0DQK1bMNeWiueGwtuthXA6jMNrfh-HsftC3HH2QOeR2FojRiV7ns4aw-sPkknciLsYmW3-I1N4QkjqJAw1z_lE8yhXhUaDrbmDa4UkUaUcUQDgKLyV6ln_1MuChpzx8rvDzfMyq=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWllHHd7WGJub8XWTeZH8P3PjxnY772NtUQf2pnn5vzGccSsaPZhJv2_OsYpXrL2XlPfv7dbKonGB6t4J498PQmWVd8dn0Q_d5vP5sRoG9TbiV332NG6AwDPkzKqezfNwySZ3r5PCuBo0sZ0=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnFZ74_2rdy9kEcW9xoc2mOnTzPNtq7Ws2DTitIYomKWWv-4KMK83Ir4eqpKLuL70nJ7Xs9qyWNW0xI-uEaK1cHCMNCMUI8dEdr13rGD4eWSx-UG4OPE8E7hl5MjJgJZVXQ2-BN3zblI5k7=w1000-h1000-c-n"
     ],
     "search_aliases": [
-      "Adulis",
+      "Adulis Houston",
       "Adulis Bellaire",
-      "5800 Bellaire"
+      "5800 Bellaire",
+      "adulishoustontx.com"
     ],
     "google_place_id": "ChIJu_YuXCHDQIYRgoqhVyZ_ozw",
     "website": "https://adulishoustontx.com/",
