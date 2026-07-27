@@ -10,7 +10,6 @@ export const HERO_CUISINE_LABELS = [
   "SENEGALESE",
   "GHANAIAN",
   "CARIBBEAN",
-  "CAPE VERDEAN",
   "GULLAH",
 ] as const;
 
@@ -25,6 +24,5 @@ export const BROWSE_CUISINE_FILTERS: { id: string; label: string }[] = [
   { id: "Senegalese", label: "Senegalese" },
   { id: "Ghanaian", label: "Ghanaian" },
   { id: "Caribbean", label: "Caribbean" },
-  { id: "Cape Verdean", label: "Cape Verdean" },
   { id: "Gullah", label: "Gullah" },
 ];
