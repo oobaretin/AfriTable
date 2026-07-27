@@ -22,7 +22,6 @@ const DEFAULT_HOURS_CATALOG = {
 
 /** Serp duplicate slug → canonical catalog slug (same brand; catalog is primary). */
 const DEACTIVATE_ORPHANS = {
-  "baobab-fare-detroit": "det-001",
   "dakar-nola-new-orleans": "nola-dakar",
 };
 

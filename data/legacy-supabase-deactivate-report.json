@@ -1,0 +1,212 @@
+{
+  "generatedAt": "2026-07-27T19:26:15.862729+00:00",
+  "dryRun": false,
+  "catalogTotal": 419,
+  "supabaseTotal": 470,
+  "dbOnlyTotal": 51,
+  "documentedOutOfScope": 46,
+  "deactivated": [
+    {
+      "slug": "african-cuisine-san-diego",
+      "name": "African Cuisine",
+      "reason": "Legacy SerpAPI slug \u2014 not in curated catalog"
+    },
+    {
+      "slug": "afrikiko-houston",
+      "name": "Afrikiko",
+      "reason": "Duplicate \u2014 catalog has hou-sta-008"
+    },
+    {
+      "slug": "fabaceae-african-cuisine",
+      "name": "Fabaceae African Cuisine",
+      "reason": "Duplicate \u2014 Fabaceae in catalog"
+    },
+    {
+      "slug": "guinea-conakry-austin",
+      "name": "Guinea Conakry",
+      "reason": "Legacy import slug \u2014 not in curated catalog"
+    },
+    {
+      "slug": "hou-reggae-hut-veterans",
+      "name": "Reggae Hut (Veterans Memorial)",
+      "reason": "Duplicate \u2014 Reggae Hut covered in catalog"
+    },
+    {
+      "slug": "hou-sta-013",
+      "name": "Jollof Rice King",
+      "reason": "Legacy Houston scrape slug \u2014 superseded by catalog"
+    },
+    {
+      "slug": "hou-sta-018",
+      "name": "Caribbean Hotpot Grill",
+      "reason": "Legacy Houston scrape slug \u2014 Caribbean Hotpot in catalog"
+    },
+    {
+      "slug": "katy-002",
+      "name": "Amala Joint",
+      "reason": "Duplicate \u2014 catalog has amala-joint-houston"
+    },
+    {
+      "slug": "komchop-houston",
+      "name": "Komchop",
+      "reason": "Duplicate \u2014 catalog has hou-005"
+    },
+    {
+      "slug": "lucy-houston",
+      "name": "Lucy",
+      "reason": "Legacy slug \u2014 not in catalog (Lucy in catalog is Denver)"
+    },
+    {
+      "slug": "olas-foods-specialty-market-africa-on-the-bay-tampa",
+      "name": "Ola's Foods Specialty Market - Africa On The Bay",
+      "reason": "Specialty market / retail \u2014 not sit-down dine-in"
+    },
+    {
+      "slug": "sarabell-calabar-restaurant-buffet-houston",
+      "name": "Sarabell Calabar Restaurant & Buffet",
+      "reason": "Duplicate \u2014 Sarabell Calabar in catalog"
+    },
+    {
+      "slug": "sf-001",
+      "name": "Teranga",
+      "reason": "Duplicate \u2014 catalog has teranga-nyc"
+    },
+    {
+      "slug": "tailat-kitchen-austin",
+      "name": "Tailat Kitchen",
+      "reason": "Duplicate \u2014 catalog has tailat-kitchen-nigerian-cuisine-austin"
+    }
+  ],
+  "alreadyInactive": [
+    {
+      "slug": "blackstar-kebab-seattle",
+      "name": "BlackStar Kebab"
+    },
+    {
+      "slug": "primo-african-quisine-cleveland",
+      "name": "Primo African Quisine"
+    },
+    {
+      "slug": "saaraloges-kitchen-riverside",
+      "name": "Saaraloge's Kitchen"
+    },
+    {
+      "slug": "the-social-room-cleveland-heights",
+      "name": "The Social Room"
+    },
+    {
+      "slug": "selam-houston",
+      "name": "Selam"
+    },
+    {
+      "slug": "karyi-kitchens-new-orleans",
+      "name": "Karyi Kitchens"
+    },
+    {
+      "slug": "delights-ghanaian-cuisine-houston",
+      "name": "Delight's Ghanaian Cuisine"
+    },
+    {
+      "slug": "ayobami-african-food-no-dine-in-catering-only-euclid",
+      "name": "Ayobami African Food (no dine-in, Catering only)"
+    },
+    {
+      "slug": "katy-004",
+      "name": "Butter D' Roti"
+    },
+    {
+      "slug": "somali-halal-store-mechanicsburg",
+      "name": "Somali Halal store"
+    },
+    {
+      "slug": "nigerian-suya-tinz-newark",
+      "name": "NIGERIAN SUYA & TINZ"
+    },
+    {
+      "slug": "street-suya-dallas",
+      "name": "Street Suya"
+    },
+    {
+      "slug": "golden-hands-cameroonian-food-los-angeles",
+      "name": "Golden hands Cameroonian food"
+    },
+    {
+      "slug": "afro-caribbean-grill",
+      "name": "Afro Caribbean Grill"
+    },
+    {
+      "slug": "ayomee-s-african-kitchen-sicklerville",
+      "name": "Ayomee\u2019s African Kitchen"
+    },
+    {
+      "slug": "nini-kitchen-houston",
+      "name": "Nini Kitchen"
+    },
+    {
+      "slug": "ethio-coffee-and-souk-houston",
+      "name": "Ethio Coffee and Souk"
+    },
+    {
+      "slug": "nazareth-cafe-houston",
+      "name": "Nazareth Cafe"
+    },
+    {
+      "slug": "baobab-fare-detroit",
+      "name": "Baobab Fare"
+    },
+    {
+      "slug": "alice-fufulicious-maple-heights",
+      "name": "Alice Fufulicious"
+    },
+    {
+      "slug": "intercontinental-african-nigerian-restaurant-columbus",
+      "name": "\ud83c\uddf3\ud83c\uddec\ud83c\uddf3\ud83c\uddecIntercontinental African Nigerian Restaurant\ud83c\uddf3\ud83c\uddec\ud83c\uddfa\ud83c\uddf8"
+    },
+    {
+      "slug": "chrisettas-kitchen-catering-west-chester",
+      "name": "Chrisetta's Kitchen (Catering )"
+    },
+    {
+      "slug": "teranga-4-embarcadero-ctr",
+      "name": "Teranga"
+    },
+    {
+      "slug": "arike-african-cuisine-catering-services-catering-only-cleveland",
+      "name": "Arike African Cuisine Catering services (catering only)"
+    },
+    {
+      "slug": "spicy-fame-pickup-delivery-only-raleigh",
+      "name": "Spicy Fame (Pickup & Delivery Only)"
+    },
+    {
+      "slug": "k-y-d-restaurant-mirage-brooklyn",
+      "name": "K\u00e1y\u1ecd\u0300d\u00e9 Restaurant Mirage"
+    },
+    {
+      "slug": "fannoh-flavor-african-food-truck-miami",
+      "name": "Fannoh Flavor African Food Truck"
+    },
+    {
+      "slug": "afro-pastries-indianapolis",
+      "name": "Afro Pastries"
+    },
+    {
+      "slug": "la-daily-003",
+      "name": "African Chop"
+    },
+    {
+      "slug": "jollofinnola-slidell",
+      "name": "Jollofinnola"
+    },
+    {
+      "slug": "tfk-african-food-tampa",
+      "name": "Tfk African food."
+    },
+    {
+      "slug": "taste-cleveland-heights",
+      "name": "Taste"
+    }
+  ],
+  "errors": [],
+  "needsReviewCount": 5
+}

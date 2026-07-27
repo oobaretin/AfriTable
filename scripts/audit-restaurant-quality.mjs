@@ -14,7 +14,6 @@ function requireEnv(n) {
 }
 
 const ORPHAN_CANONICAL = {
-  "baobab-fare-detroit": "det-001",
   "dakar-nola-new-orleans": "nola-dakar",
 };
 

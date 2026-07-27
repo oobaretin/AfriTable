@@ -43,13 +43,13 @@ const REMOVE_IDS = new Set([
 ]);
 
 const ADDRESS_FIXES = {
-  "hou-sta-008": {
+  "afrikiko-houston": {
     address: "9625 Bissonnet St, Houston, TX 77036",
     phone: "(713) 773-1400",
     google_search_url:
       "https://www.google.com/search?q=Afrikiko%2C%209625%20Bissonnet%20St%2C%20Houston%2C%20TX%2077036",
   },
-  "hou-sta-016": {
+  "fabaceae-african-cuisine-houston": {
     address: "10023 S Main St Bldg 7, Houston, TX 77025",
     phone: "(512) 840-0855",
     website: "http://www.fabaceaecuisine.com",
@@ -62,7 +62,7 @@ const ADDRESS_FIXES = {
     google_search_url:
       "https://www.google.com/search?q=Sarabell%20Calabar%2C%209801%20Bissonnet%20St%20Ste%20C%2C%20Houston%2C%20TX%2077036",
   },
-  "hou-005": {
+  "komchop-houston": {
     address: "14144 Westheimer Rd #120, Houston, TX 77077",
     zip: "77077",
     lat: 29.7355,

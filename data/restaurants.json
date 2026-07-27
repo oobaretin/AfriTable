@@ -2352,7 +2352,7 @@
     "google_place_id": "ChIJibzB0aK22YgRA7qS7Tfh4_Q"
   },
   {
-    "id": "det-001",
+    "id": "baobab-fare-detroit",
     "name": "Baobab Fare",
     "cuisine": "Burundian",
     "region": "East African",
@@ -3391,7 +3391,7 @@
     "google_place_id": "ChIJkct5gsTDQIYR1MFu1R5cZFU"
   },
   {
-    "id": "hou-005",
+    "id": "komchop-houston",
     "name": "Komchop",
     "cuisine": "Nigerian",
     "region": "West African",
@@ -3571,7 +3571,7 @@
     "website": "https://www.instagram.com/chefbennyhouston/"
   },
   {
-    "id": "hou-sta-008",
+    "id": "afrikiko-houston",
     "name": "Afrikiko",
     "cuisine": "Authentic Ghanaian",
     "region": "West African",
@@ -3751,7 +3751,7 @@
     "google_place_id": "ChIJIYLGH8fDQIYRSg_7pGlsvzI"
   },
   {
-    "id": "hou-sta-016",
+    "id": "fabaceae-african-cuisine-houston",
     "name": "Fabaceae African Cuisine",
     "cuisine": "Nigerian (Gourmet Daily)",
     "region": "West African",

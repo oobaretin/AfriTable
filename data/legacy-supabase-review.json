@@ -1,0 +1,35 @@
+{
+  "count": 5,
+  "listings": [
+    {
+      "slug": "streetgrillz-windsor-on-n8w-3t6",
+      "name": "StreetGrillz Windsor",
+      "is_active": false,
+      "note": "Not in restaurants.json; verify dine-in before reactivating"
+    },
+    {
+      "slug": "bunmi-l-b-on-l6j-3j3",
+      "name": "Bunmi \u1eccl\u1ecd\u0301b\u1eb9\u0300",
+      "is_active": false,
+      "note": "Not in restaurants.json; verify dine-in before reactivating"
+    },
+    {
+      "slug": "negrit-houston",
+      "name": "Negrit",
+      "is_active": false,
+      "note": "Not in restaurants.json; verify dine-in before reactivating"
+    },
+    {
+      "slug": "dakar-nola-new-orleans",
+      "name": "Dakar NOLA",
+      "is_active": false,
+      "note": "Not in restaurants.json; verify dine-in before reactivating"
+    },
+    {
+      "slug": "massawa-restaurant-on-m6e-2g8",
+      "name": "Massawa Restaurant",
+      "is_active": false,
+      "note": "Not in restaurants.json; verify dine-in before reactivating"
+    }
+  ]
+}
