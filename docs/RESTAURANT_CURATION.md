@@ -87,6 +87,17 @@ Igatap African Caribbean Cuisine — misclassified SNAP/grocery address — **re
 
 No verified URL yet: Benita's Kitchen (Chevron counter spot; dine-in confirmed, no social page found).
 
+### Website batch 9 (Jul 2026, Colorado — remaining)
+
+| Listing | Website |
+|---------|---------|
+| Geez Habesha Bar & Restaurant (Aurora) | onhavanastreet.com business profile |
+| 5 Star Café Eritrean Restaurant (Denver) | Facebook page |
+| Lalibela Cafe (Denver) | instagram.com/lalibela_cafe |
+| Sarr Maimouna West African Food (Denver) | facebook.com/SarrMaimounaKitchen |
+
+Corrected Sarr Maimouna address: 10004 E Colfax (Aurora scrape) → **5091 E Colfax Ave, Denver** (Westword / Uber Eats).
+
 ### Website batch 5 (Jul 2026, non–TX/CO/FL)
 
 Applied social/operator URLs where standalone sites do not exist:

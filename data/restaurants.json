@@ -11844,7 +11844,9 @@
     "phone": "(720) 596-4809",
     "google_place_id": "ChIJ_TnG8GB9bIcRTMIPsQhOvGE",
     "lat": 39.7197345,
-    "lng": -104.86429729999999
+    "lng": -104.86429729999999,
+    "website": "https://onhavanastreet.com/business/geez-habesha-bar-restaurant/",
+    "google_search_url": "https://www.google.com/search?q=Geez%20Habesha%20Bar%20%26%20Restaurant%2C%20262%20Havana%20St%2C%20Aurora%2C%20CO%2080010"
   },
   {
     "id": "mesob-denver",
@@ -11895,7 +11897,9 @@
     "phone": "(720) 242-7483",
     "google_place_id": "ChIJ3UOwJUB9bIcRTM6U4qZWXUA",
     "lat": 39.6745788,
-    "lng": -104.8899375
+    "lng": -104.8899375,
+    "website": "https://www.facebook.com/p/5-Star-Cafe-100086536437008/",
+    "google_search_url": "https://www.google.com/search?q=5%20Star%20Caf%C3%A9%20Eritrean%20Restaurant%2C%208450%20E%20Iliff%20Ave%2C%20Denver%2C%20CO%2080231"
   },
   {
     "id": "the-ethiopian-restaurant-denver",
@@ -12051,7 +12055,9 @@
     "phone": "(720) 726-2940",
     "google_place_id": "ChIJyxxxUAB9bIcRfszojXQPfkc",
     "lat": 39.695942099999996,
-    "lng": -104.8955881
+    "lng": -104.8955881,
+    "website": "https://www.instagram.com/lalibela_cafe/",
+    "google_search_url": "https://www.google.com/search?q=Lalibela%20Cafe%2C%207950%20E%20Mississippi%20Ave%20%232%2C%20Denver%2C%20CO%2080247"
   },
   {
     "id": "konjo-ethiopian-food-denver",
@@ -12318,12 +12324,12 @@
     "region": "West African",
     "price_range": "$$",
     "rating": 4,
-    "address": "10004 E Colfax Ave, Aurora, CO 80010",
+    "address": "5091 E Colfax Ave, Denver, CO 80220",
     "hours": {
       "mon_sat": "11:00 AM - 9:00 PM",
       "sun": "12:00 PM - 8:00 PM"
     },
-    "about": "Sarr Maimouna West African Food serves West African flavors in Aurora. A neighborhood spot for west african plates, warm hospitality, and familiar diaspora comfort food.",
+    "about": "Senegalese-West African kitchen on East Colfax in Denver, in the former Africana Cafe space.",
     "our_story": "AfriTable listing for Sarr Maimouna West African Food in Aurora. Hours and menu details should be confirmed with the restaurant directly.",
     "cultural_roots": "Diaspora dining in the United States.",
     "menu_highlights": [
@@ -12334,7 +12340,9 @@
     "phone": "(720) 609-1609",
     "google_place_id": "ChIJd_SEczV9bIcR1gkOPYGtzSs",
     "lat": 39.7399951,
-    "lng": -104.8704944
+    "lng": -104.8704944,
+    "website": "https://www.facebook.com/SarrMaimounaKitchen",
+    "google_search_url": "https://www.google.com/search?q=Sarr%20Maimouna%20West%20African%20Food%2C%205091%20E%20Colfax%20Ave%2C%20Denver%2C%20CO%2080220"
   },
   {
     "id": "zula-cafe-lounge-aurora",

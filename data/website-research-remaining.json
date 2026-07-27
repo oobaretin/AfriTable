@@ -1,5 +1,5 @@
 {
-  "count": 7,
+  "count": 3,
   "listings": [
     {
       "id": "amaye-international-restaurant-portland",
@@ -12,30 +12,6 @@
       "name": "Mega Suya Bar & Grill",
       "state": "IN",
       "address": "3081 N High School Rd, Indianapolis, IN 46224"
-    },
-    {
-      "id": "geez-habesha-bar-restaurant-aurora",
-      "name": "Geez Habesha Bar & Restaurant",
-      "state": "CO",
-      "address": "262 Havana St, Aurora, CO 80010"
-    },
-    {
-      "id": "5-star-caf-eritrean-restaurant-denver",
-      "name": "5 Star Caf\u00e9 Eritrean Restaurant",
-      "state": "CO",
-      "address": "8450 E Iliff Ave, Denver, CO 80231"
-    },
-    {
-      "id": "lalibela-cafe-denver",
-      "name": "Lalibela Cafe",
-      "state": "CO",
-      "address": "7950 E Mississippi Ave #2, Denver, CO 80247"
-    },
-    {
-      "id": "sarr-maimouna-west-african-food-aurora",
-      "name": "Sarr Maimouna West African Food",
-      "state": "CO",
-      "address": "10004 E Colfax Ave, Aurora, CO 80010"
     },
     {
       "id": "benitas-kitchen-orlando",
