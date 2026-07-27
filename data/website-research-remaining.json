@@ -1,18 +1,6 @@
 {
-  "count": 18,
+  "count": 9,
   "listings": [
-    {
-      "id": "ponti-ivorian-houston",
-      "name": "Ponti's Ivorian Kitchen",
-      "state": "TX",
-      "address": "12450 Westheimer Rd, Houston, TX 77077"
-    },
-    {
-      "id": "hou-sta-007",
-      "name": "Chef Benny",
-      "state": "TX",
-      "address": "10010 Bissonnet St, Houston, TX 77036"
-    },
     {
       "id": "amaye-international-restaurant-portland",
       "name": "AMAYE International Restaurant",
@@ -20,52 +8,10 @@
       "address": "8000 NE Glisan St, Portland, OR 97213"
     },
     {
-      "id": "fufudelight-suya-kitchen-arlington",
-      "name": "Fufudelight& Suya Kitchen",
-      "state": "TX",
-      "address": "6401 New York Ave # 149, Arlington, TX 76018"
-    },
-    {
       "id": "mega-suya-bar-grill-indianapolis",
       "name": "Mega Suya Bar & Grill",
       "state": "IN",
       "address": "3081 N High School Rd, Indianapolis, IN 46224"
-    },
-    {
-      "id": "dee-titolat-african-restaurant-houston",
-      "name": "Dee Titolat African Restaurant",
-      "state": "TX",
-      "address": "11965 Bissonnet St STE 110, Houston, TX 77099"
-    },
-    {
-      "id": "vertex-houston",
-      "name": "Vertex",
-      "state": "TX",
-      "address": "6580 Southwest Fwy Suite C, Houston, TX 77074"
-    },
-    {
-      "id": "ewatomi-houston",
-      "name": "Ewatomi",
-      "state": "TX",
-      "address": "15000 Bellaire Blvd ste q, Houston, TX 77083"
-    },
-    {
-      "id": "traditional-food-restaurant-houston",
-      "name": "Traditional Food Restaurant",
-      "state": "TX",
-      "address": "11214 Plainfield St # B, Houston, TX 77031"
-    },
-    {
-      "id": "cafe-de-vivre-houston",
-      "name": "Cafe De Vivre",
-      "state": "TX",
-      "address": "14165 Bissonnet St Suite P, Houston, TX 77083"
-    },
-    {
-      "id": "grill-master-african-restaurant-houston",
-      "name": "Grill master African Restaurant",
-      "state": "TX",
-      "address": "9755 S Kirkwood Rd D, Houston, TX 77099"
     },
     {
       "id": "geez-habesha-bar-restaurant-aurora",
