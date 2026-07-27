@@ -11,6 +11,8 @@ import { ImmersiveGallery } from "@/components/restaurant/ImmersiveGallery";
 import { ChefsRecommendation } from "@/components/restaurant/ChefsRecommendation";
 import { FavoriteButton } from "@/components/restaurant/FavoriteButton";
 import { ReservationWidget } from "@/components/reservation/ReservationWidget";
+import { CatalogBookingCard } from "@/components/reservation/CatalogBookingCard";
+import { getLivePartnerStatus } from "@/lib/restaurant-partner-status";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { ReviewsSection } from "@/components/restaurant/ReviewsSection";
 import { generateDefaultContent } from "@/lib/restaurant-content-helpers";
@@ -366,9 +368,12 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
   }
 
   const catalogSlug = restaurant.slug || id;
-  const dbRestaurantId =
-    (isUuid(restaurant.id) ? restaurant.id : null) ?? (await resolveSupabaseRestaurantId(catalogSlug));
-  const isLivePartner = Boolean(dbRestaurantId);
+  const partnerStatus = await getLivePartnerStatus(
+    catalogSlug,
+    isUuid(restaurant.id) ? restaurant.id : null,
+  );
+  const dbRestaurantId = partnerStatus.dbRestaurantId;
+  const isLivePartner = partnerStatus.isLivePartner;
 
   const operatingHours = dbRestaurantId
     ? await getOperatingHours(dbRestaurantId, restaurant.hours)
@@ -921,12 +926,22 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
             {/* Gradient Border Wrapper */}
             <div className="p-1 bg-gradient-to-tr from-brand-bronze via-brand-ochre to-brand-forest rounded-[2.2rem]">
               <div className="bg-white rounded-[2rem] p-2">
-                <ReservationWidget
-                  restaurantId={restaurant.id}
-                  restaurantSlug={restaurant.slug}
-                  restaurantName={restaurant.name}
-                  bookingMode={isLivePartner ? "partner" : "catalog"}
-                />
+                {isLivePartner ? (
+                  <ReservationWidget
+                    restaurantId={dbRestaurantId ?? restaurant.id}
+                    restaurantSlug={restaurant.slug}
+                    restaurantName={restaurant.name}
+                  />
+                ) : (
+                  <CatalogBookingCard
+                    restaurantSlug={catalogSlug}
+                    restaurantName={restaurant.name}
+                    phone={restaurant.phone}
+                    website={restaurant.website}
+                    googleMapsUrl={addrStr ? googleMapsLink(addrStr) : null}
+                    address={addrStr || null}
+                  />
+                )}
               </div>
             </div>
           </div>

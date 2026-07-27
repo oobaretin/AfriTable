@@ -28,14 +28,11 @@ export function ReservationWidget({
   restaurantId,
   restaurantSlug,
   restaurantName,
-  bookingMode = "partner",
 }: {
   restaurantId: string;
   restaurantSlug?: string;
   restaurantName?: string;
-  bookingMode?: "partner" | "catalog";
 }) {
-  const isCatalog = bookingMode === "catalog";
   const router = useRouter();
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   const [guests, setGuests] = React.useState(2);
@@ -70,7 +67,6 @@ export function ReservationWidget({
 
   const slots = data?.slots ?? [];
 
-  // Keep selection aligned with API slot rows (date / party / slots change).
   React.useEffect(() => {
     if (isLoading || error || !data?.slots?.length) return;
     if (selectedTime) {
@@ -84,12 +80,10 @@ export function ReservationWidget({
 
   const handleReserve = () => {
     if (!selectedTime || !restaurantSlug) return;
-    
-    // Show success state with confetti
+
     setShowConfetti(true);
     setShowSuccess(true);
-    
-    // After showing success, navigate to reservation flow
+
     setTimeout(() => {
       const params = new URLSearchParams();
       params.set("restaurant", restaurantSlug);
@@ -100,18 +94,16 @@ export function ReservationWidget({
     }, 2000);
   };
 
-  // Format date for display
   const displayDate = date ? format(date, "MMMM d, yyyy") : "";
   const displayTime = selectedTime ? formatTime12h(selectedTime) : "";
 
-  // Success State
   if (showSuccess) {
     return (
       <>
         {showConfetti && <Confetti />}
         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
-          <div className="text-center py-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-100 mb-4">
+          <div className="py-8 text-center">
+            <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -120,56 +112,38 @@ export function ReservationWidget({
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="w-8 h-8 text-orange-600"
+                className="h-8 w-8 text-orange-600"
               >
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">
-              {isCatalog ? "Request sent!" : "Table Reserved!"}
-            </h3>
-            <p className="text-lg text-slate-600 mb-6">
-              {isCatalog ? "We saved your preferred " : "Table reserved for "}
-              <span className="font-semibold">{displayDate}</span> at{" "}
+            <h3 className="mb-2 text-2xl font-bold text-slate-900">Table Reserved!</h3>
+            <p className="mb-6 text-lg text-slate-600">
+              Table reserved for <span className="font-semibold">{displayDate}</span> at{" "}
               <span className="font-semibold">{displayTime}</span>
             </p>
-            <p className="text-sm text-slate-400">
-              {isCatalog ? "Continue to share your contact details…" : "Redirecting to confirmation..."}
-            </p>
+            <p className="text-sm text-slate-400">Redirecting to confirmation...</p>
           </div>
         </div>
       </>
     );
   }
 
-  // Form State
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
-      <h3 className="text-xl font-bold text-slate-900 mb-2">
-        {restaurantName
-          ? isCatalog
-            ? `Request a table at ${restaurantName}`
-            : `Reserve at ${restaurantName}`
-          : isCatalog
-            ? "Request a table"
-            : "Make a Reservation"}
+      <h3 className="mb-2 text-xl font-bold text-slate-900">
+        {restaurantName ? `Reserve at ${restaurantName}` : "Make a Reservation"}
       </h3>
-      {isCatalog ? (
-        <p className="text-sm text-slate-500 mb-4">
-          Directory listing — we email your request; the restaurant confirms by phone.
-        </p>
-      ) : null}
 
       <div className="space-y-4">
-        {/* Guest Count Selector */}
         <div>
-          <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Guests</label>
+          <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500">Guests</label>
           <div className="flex items-center justify-between rounded-xl border border-slate-200 p-2">
             <button
               type="button"
               onClick={() => setGuests(Math.max(1, guests - 1))}
-              className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 text-slate-600 hover:bg-slate-100 transition-colors"
+              className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 text-slate-600 transition-colors hover:bg-slate-100"
             >
               −
             </button>
@@ -179,22 +153,21 @@ export function ReservationWidget({
             <button
               type="button"
               onClick={() => setGuests(Math.min(20, guests + 1))}
-              className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 text-slate-600 hover:bg-slate-100 transition-colors"
+              className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-50 text-slate-600 transition-colors hover:bg-slate-100"
             >
               +
             </button>
           </div>
         </div>
 
-        {/* Date & Time Grid */}
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Date</label>
+            <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500">Date</label>
             <Dialog>
               <DialogTrigger asChild>
                 <button
                   type="button"
-                  className="w-full rounded-xl border border-slate-200 p-3 text-sm font-medium text-left focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all hover:bg-slate-50"
+                  className="w-full rounded-xl border border-slate-200 p-3 text-left text-sm font-medium transition-all hover:bg-slate-50 focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
                 >
                   {date ? format(date, "MMM d, yyyy") : "Select date"}
                 </button>
@@ -214,13 +187,13 @@ export function ReservationWidget({
             </Dialog>
           </div>
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Time</label>
+            <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500">Time</label>
             {isLoading ? (
               <Skeleton className="h-[42px] w-full rounded-xl" />
             ) : error ? (
               <select
                 disabled
-                className="w-full rounded-xl border border-slate-200 p-3 text-sm font-medium bg-slate-50 text-slate-500"
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm font-medium text-slate-500"
                 aria-label="Time"
               >
                 <option value="">Load times to continue</option>
@@ -229,7 +202,7 @@ export function ReservationWidget({
               <select
                 value={selectedTime || ""}
                 onChange={(e) => setSelectedTime(e.target.value || null)}
-                className="w-full rounded-xl border border-slate-200 p-3 text-sm font-medium focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all bg-white"
+                className="w-full rounded-xl border border-slate-200 bg-white p-3 text-sm font-medium transition-all focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
                 aria-label="Time"
               >
                 <option value="">Select time</option>
@@ -247,7 +220,7 @@ export function ReservationWidget({
             ) : (
               <select
                 disabled
-                className="w-full rounded-xl border border-slate-200 p-3 text-sm font-medium bg-slate-50 text-slate-500"
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm font-medium text-slate-500"
                 aria-label="Time"
               >
                 <option value="">No times for this date</option>
@@ -256,30 +229,24 @@ export function ReservationWidget({
           </div>
         </div>
 
-        {/* Error Message */}
         {error && (
           <div className="rounded-xl border border-red-200 bg-red-50 p-3">
             <p className="text-sm text-red-600">Couldn&apos;t load availability. Please try again.</p>
           </div>
         )}
 
-        {/* Action Button */}
         <button
           type="button"
           onClick={handleReserve}
           disabled={!selectedTime || !restaurantSlug || isLoading}
-          className="btn-bronze w-full px-10 py-4 rounded-xl font-bold text-white uppercase tracking-widest text-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
+          className="btn-bronze w-full rounded-xl px-10 py-4 text-sm font-bold uppercase tracking-widest text-white disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
         >
-          {isCatalog ? "Send table request" : "Find a Table"}
+          Find a Table
         </button>
       </div>
 
       <p className="mt-4 text-center text-xs text-slate-400">
-        {isCatalog ? (
-          <>Powered by <span className="font-bold text-orange-500/80 uppercase">AfriTable</span> directory requests</>
-        ) : (
-          <>Powered by <span className="font-bold text-orange-500/80 uppercase">AfriTable</span> partner booking</>
-        )}
+        Powered by <span className="font-bold uppercase text-orange-500/80">AfriTable</span> partner booking
       </p>
     </div>
   );

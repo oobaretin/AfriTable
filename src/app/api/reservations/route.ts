@@ -1,4 +1,3 @@
-import { randomUUID } from "node:crypto";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
@@ -6,8 +5,8 @@ import { sendReactEmail } from "@/lib/email/send-react-email";
 import { buildCalendarLinks, buildICS } from "@/lib/email/calendar";
 import { ReservationConfirmationEmail } from "@/lib/emails/reservation-confirmation";
 import { rateLimitOrPass } from "@/lib/security/rateLimit";
+import { getLivePartnerStatus } from "@/lib/restaurant-partner-status";
 import { getRestaurantByIdFromJSON } from "@/lib/restaurant-json-loader-server";
-import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 
 const payloadSchema = z.object({
   restaurantSlug: z.string().min(1),
@@ -53,6 +52,20 @@ export async function POST(request: Request) {
 
   const supabaseAdmin = createSupabaseAdminClient();
 
+  const partnerStatus = await getLivePartnerStatus(body.restaurantSlug);
+  if (!partnerStatus.isLivePartner) {
+    const catalogOnly = getRestaurantByIdFromJSON(body.restaurantSlug);
+    if (catalogOnly) {
+      return NextResponse.json(
+        {
+          error: "use_table_requests",
+          message: "This listing uses table requests. Submit your request from the restaurant page.",
+        },
+        { status: 400 },
+      );
+    }
+  }
+
   const { data: dbRestaurantRow, error: restaurantError } = await supabaseAdmin
     .from("restaurants_with_rating")
     .select("id,name,address,phone,images,is_active")
@@ -63,9 +76,8 @@ export async function POST(request: Request) {
 
   const dbRestaurant =
     dbRestaurantRow && dbRestaurantRow.is_active ? dbRestaurantRow : null;
-  const catalogRestaurant = !dbRestaurant ? getRestaurantByIdFromJSON(body.restaurantSlug) : null;
 
-  if (!dbRestaurant && !catalogRestaurant) {
+  if (!dbRestaurant) {
     return NextResponse.json({ error: "restaurant_not_found" }, { status: 404 });
   }
 
@@ -88,93 +100,7 @@ export async function POST(request: Request) {
     userId = invite.data.user?.id ?? null;
   }
 
-  // Catalog (JSON-only) restaurants: no Supabase row / RPC — email guest + optional admin copy
-  if (catalogRestaurant) {
-    const detail = transformJSONRestaurantToDetail(catalogRestaurant) as any;
-    const syntheticId = randomUUID();
-    const confirmationCode = syntheticId.replace(/-/g, "").slice(0, 8).toUpperCase();
-    const a: any = detail.address ?? {};
-    const addressStr = [a.street, a.city, a.state, a.zip].filter(Boolean).join(", ");
-
-    try {
-      const appBaseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
-      const start = new Date(`${body.date}T${body.time}:00`);
-      const links = buildCalendarLinks({
-        title: `AfriTable: ${detail.name}`,
-        description: `Table request for ${partySize} at ${detail.name}. Reference: ${confirmationCode}`,
-        location: addressStr || "Address coming soon",
-        start,
-        durationMinutes: 90,
-      });
-
-      const ics = buildICS({
-        uid: syntheticId,
-        title: `AfriTable: ${detail.name}`,
-        description: `Table request for ${partySize} at ${detail.name}. Reference: ${confirmationCode}`,
-        location: addressStr || "Address coming soon",
-        start,
-        durationMinutes: 90,
-      });
-
-      await sendReactEmail({
-        to: body.guest.email,
-        subject: `Table request received: ${detail.name}`,
-        react: ReservationConfirmationEmail({
-          appBaseUrl,
-          restaurantName: detail.name,
-          restaurantAddress: addressStr || "Address coming soon",
-          restaurantPhone: detail.phone,
-          reservationId: syntheticId,
-          confirmationCode,
-          date: body.date,
-          time: body.time,
-          partySize,
-          guestName,
-          specialRequests: body.specialRequests ?? null,
-          addToCalendarUrl: links.google,
-          showManageLinks: false,
-          confirmationKind: "request",
-        }),
-        attachments: [
-          {
-            filename: `afritable-request-${confirmationCode}.ics`,
-            content: Buffer.from(ics, "utf-8"),
-          },
-        ],
-      });
-    } catch {
-      // no-op (don’t block showing confirmation in UI)
-    }
-
-    return NextResponse.json({
-      reservation: {
-        id: syntheticId,
-        confirmationCode,
-        status: "request_received",
-        reservation_date: body.date,
-        reservation_time: body.time,
-        party_size: partySize,
-        special_requests: body.specialRequests ?? null,
-        occasion: body.occasion && body.occasion !== "None" ? body.occasion : null,
-      },
-      restaurant: {
-        slug: body.restaurantSlug,
-        id: detail.id,
-        name: detail.name,
-        address: addressStr,
-        phone: detail.phone,
-        image: (detail.images ?? [])[0] ?? null,
-      },
-      user: {
-        id: userId,
-        isLoggedIn: Boolean(sessionUser),
-        invitedAccount: Boolean(!sessionUser && body.createAccount && userId),
-      },
-      catalogBooking: true,
-    });
-  }
-
-  const restaurant = dbRestaurant!;
+  const restaurant = dbRestaurant;
 
   // Create reservation atomically via RPC (prevents double-booking)
   const { data: reservation, error: rpcError } = await supabaseAdmin.rpc("create_reservation", {

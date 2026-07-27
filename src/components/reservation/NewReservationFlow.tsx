@@ -58,14 +58,7 @@ type Confirmation = {
   occasion?: string | null;
 };
 
-export function NewReservationFlow({
-  summary,
-  bookingMode = "partner",
-}: {
-  summary: ReservationSummary;
-  bookingMode?: "partner" | "catalog";
-}) {
-  const isCatalog = bookingMode === "catalog";
+export function NewReservationFlow({ summary }: { summary: ReservationSummary }) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
@@ -380,13 +373,7 @@ export function NewReservationFlow({
                     ) : null}
 
                     <Button type="submit" disabled={submitting || !isTimeAvailable}>
-                      {submitting
-                        ? isCatalog
-                          ? "Sending…"
-                          : "Booking…"
-                        : isCatalog
-                          ? "Send table request"
-                          : "Confirm reservation"}
+                      {submitting ? "Booking…" : "Confirm reservation"}
                     </Button>
                   </form>
                 </Form>
@@ -395,12 +382,8 @@ export function NewReservationFlow({
           ) : (
             <Card>
               <CardHeader>
-                <CardTitle>{isCatalog ? "Table request sent!" : "Reservation confirmed!"}</CardTitle>
-                <CardDescription>
-                  {isCatalog
-                    ? "We emailed your request. The restaurant will confirm by phone."
-                    : "We emailed your confirmation and calendar invite."}
-                </CardDescription>
+                <CardTitle>Reservation confirmed!</CardTitle>
+                <CardDescription>We emailed your confirmation and calendar invite.</CardDescription>
               </CardHeader>
               <CardContent className="grid gap-4">
                 {confirmation ? (
@@ -408,12 +391,10 @@ export function NewReservationFlow({
                     <div className="rounded-xl border bg-muted/20 p-4">
                       <div className="flex flex-wrap items-center justify-between gap-3">
                         <div>
-                          <div className="text-xs text-muted-foreground">
-                            {isCatalog ? "Reference" : "Confirmation"}
-                          </div>
+                          <div className="text-xs text-muted-foreground">Confirmation</div>
                           <div className="text-lg font-semibold">{confirmation.confirmationCode}</div>
                         </div>
-                        <Badge variant="secondary">{isCatalog ? "Request received" : "Confirmed"}</Badge>
+                        <Badge variant="secondary">Confirmed</Badge>
                       </div>
                       <Separator className="my-3" />
                       <div className="grid gap-1 text-sm text-muted-foreground">

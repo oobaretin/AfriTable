@@ -5,8 +5,7 @@ import { createSupabasePublicClient } from "@/lib/supabase/public";
 import type { OperatingHour } from "@/lib/reservation/availability";
 import { calculateAvailableTimeSlots } from "@/lib/reservation/availability";
 import { parseCatalogHoursToArray } from "@/lib/parse-catalog-hours";
-import { getRestaurantByIdFromJSON, type JSONRestaurant } from "@/lib/restaurant-json-loader-server";
-import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
+import { getLivePartnerStatus } from "@/lib/restaurant-partner-status";
 
 const querySchema = z.object({
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
@@ -36,34 +35,16 @@ function pickOperatingHours(...candidates: OperatingHour[][]): OperatingHour[] {
 
 const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
-/** Slots from catalog JSON when the restaurant is not in Supabase (e.g. hou-003). */
-function catalogAvailabilityFromJSON(
-  dateStr: string,
-  partySize: number,
-  jsonRestaurant: JSONRestaurant,
-): NextResponse {
-  const detail = transformJSONRestaurantToDetail(jsonRestaurant) as { hours?: unknown };
-  const operatingHours = pickOperatingHours(
-    normalizeOperatingHours(detail.hours),
-    DEFAULT_OPERATING_HOURS,
+/** Directory listings do not expose bookable time slots. */
+async function rejectNonPartnerAvailability(restaurantIdParam: string): Promise<NextResponse | null> {
+  const partnerStatus = await getLivePartnerStatus(
+    restaurantIdParam,
+    UUID_REGEX.test(restaurantIdParam) ? restaurantIdParam : null,
   );
-  const eligibleTableCount = 24;
-  const slots = calculateAvailableTimeSlots({
-    date: new Date(dateStr + "T00:00:00"),
-    operatingHours,
-    slotDurationMinutes: 90,
-    eligibleTableCount,
-    reservationCountsByTime: {},
-  });
-
-  return NextResponse.json({
-    date: dateStr,
-    partySize,
-    slotDurationMinutes: 90,
-    eligibleTableCount,
-    slots,
-    source: "catalog",
-  });
+  if (!partnerStatus.isLivePartner) {
+    return NextResponse.json({ error: "not_accepting_reservations" }, { status: 404 });
+  }
+  return null;
 }
 
 export async function GET(
@@ -111,11 +92,14 @@ export async function GET(
       if (bySlug?.id) {
         restaurantId = bySlug.id;
       } else {
-        const jsonRestaurant = getRestaurantByIdFromJSON(restaurantIdParam);
-        if (!jsonRestaurant) return NextResponse.json({ error: "not_found" }, { status: 404 });
-        return catalogAvailabilityFromJSON(dateStr, partySize, jsonRestaurant);
+        const rejected = await rejectNonPartnerAvailability(restaurantIdParam);
+        if (rejected) return rejected;
+        return NextResponse.json({ error: "not_found" }, { status: 404 });
       }
     }
+
+    const rejected = await rejectNonPartnerAvailability(restaurantIdParam);
+    if (rejected) return rejected;
 
     const { data: restaurant, error: restaurantError } = await supabase
       .from("restaurants_with_rating")
