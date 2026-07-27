@@ -19,6 +19,7 @@ CATALOG = ROOT / "data" / "restaurants.json"
 METRO = ROOT / "data" / "catalog-metro-copy-enrichments.json"
 NATIONWIDE = ROOT / "data" / "catalog-nationwide-copy-enrichments.json"
 FLAGSHIP = ROOT / "data" / "catalog-flagship-copy-enrichments.json"
+BATCH2 = ROOT / "data" / "catalog-batch2-metro-copy-enrichments.json"
 REPORT = ROOT / "data" / "copy-enrichments-report.json"
 LOG = ROOT / ".cursor" / "debug-3435b4.log"
 SESSION = "3435b4"
@@ -62,7 +63,7 @@ def main() -> int:
     args = parser.parse_args()
 
     catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
-    enrichments = {**load_json(METRO), **load_json(NATIONWIDE), **load_json(FLAGSHIP)}
+    enrichments = {**load_json(METRO), **load_json(NATIONWIDE), **load_json(FLAGSHIP), **load_json(BATCH2)}
 
     updated = 0
     updated_ids: list[str] = []
