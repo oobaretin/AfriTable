@@ -1,5 +1,5 @@
 {
-  "count": 23,
+  "count": 18,
   "listings": [
     {
       "id": "ponti-ivorian-houston",
@@ -44,12 +44,6 @@
       "address": "6580 Southwest Fwy Suite C, Houston, TX 77074"
     },
     {
-      "id": "afro-caribbean-grill",
-      "name": "Afro Caribbean Grill",
-      "state": "TX",
-      "address": "1903 Blodgett St, Houston, TX 77004"
-    },
-    {
       "id": "ewatomi-houston",
       "name": "Ewatomi",
       "state": "TX",
@@ -74,12 +68,6 @@
       "address": "9755 S Kirkwood Rd D, Houston, TX 77099"
     },
     {
-      "id": "fidel-east-african-restaurant-aurora",
-      "name": "Fidel East African Restaurant",
-      "state": "CO",
-      "address": "1074 S Ironton St, Aurora, CO 80012"
-    },
-    {
       "id": "geez-habesha-bar-restaurant-aurora",
       "name": "Geez Habesha Bar & Restaurant",
       "state": "CO",
@@ -92,34 +80,16 @@
       "address": "8450 E Iliff Ave, Denver, CO 80231"
     },
     {
-      "id": "abyssinia-ethiopian-restaurant-and-bar-denver",
-      "name": "Abyssinia Ethiopian Restaurant and Bar",
-      "state": "CO",
-      "address": "5707 E Colfax Ave, Denver, CO 80220"
-    },
-    {
       "id": "lalibela-cafe-denver",
       "name": "Lalibela Cafe",
       "state": "CO",
       "address": "7950 E Mississippi Ave #2, Denver, CO 80247"
     },
     {
-      "id": "all-stars-cafe-aurora",
-      "name": "All-Stars Cafe",
-      "state": "CO",
-      "address": "350 Havana St, Aurora, CO 80010"
-    },
-    {
       "id": "sarr-maimouna-west-african-food-aurora",
       "name": "Sarr Maimouna West African Food",
       "state": "CO",
       "address": "10004 E Colfax Ave, Aurora, CO 80010"
-    },
-    {
-      "id": "zula-cafe-lounge-aurora",
-      "name": "Zula Cafe & Lounge",
-      "state": "CO",
-      "address": "1121 S Peoria St, Aurora, CO 80012"
     },
     {
       "id": "igatap-african-caribbean-cuisine-orlando",

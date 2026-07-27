@@ -47,6 +47,7 @@ We cannot prove every row is open without calling each business. For the catalog
 | Niimatallaah (Tampa) | Address maps to medical campus — **removed** |
 | Siphokazi (Tampa) | Unverifiable at fairgrounds address — **removed** |
 | Global Cuisine (Denver) | Global Grocery Mart at same address — **removed** |
+| Afro Caribbean Grill (Houston) | Food truck — takeout/delivery only — **removed** |
 
 ### Website batch 6 (Jul 2026, Colorado)
 
@@ -58,6 +59,22 @@ We cannot prove every row is open without calling each business. For the catalog
 | Zula Cafe & Lounge (Aurora) | Facebook page |
 
 No verified URL yet: 5 Star Café, Lalibela Cafe, Geez Habesha, Sarr Maimouna.
+
+### Website batch 7 (Jul 2026, Texas)
+
+| Listing | Website |
+|---------|---------|
+| Ponti's Ivorian Kitchen (Houston) | instagram.com/pontiskitchen |
+| Chef Benny (Houston) | instagram.com/chefbennyhouston |
+| Fufudelight & Suya Kitchen (Arlington) | Facebook page |
+| Dee Titolat African Restaurant (Houston) | instagram.com/dee_titolat_cuissine |
+| Vertex (Houston) | Facebook page |
+| Ewatomi (Houston) | facebook.com/ewatominaturalherbsandfoods |
+| Traditional Food Restaurant (Houston) | Facebook page |
+| Cafe De Vivre (Houston) | instagram.com/cafedevivrehouston |
+| Grill Master African Restaurant (Houston) | instagram.com/grill_master_african_resto |
+
+Afro Caribbean Grill (Houston) — food truck, takeout-only — **removed**.
 
 ### Website batch 5 (Jul 2026, non–TX/CO/FL)
 

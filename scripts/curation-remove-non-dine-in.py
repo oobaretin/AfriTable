@@ -29,6 +29,7 @@ NON_DINE_IN_REMOVE: dict[str, str] = {
     "selam-houston": "Selam Ethio-Eritrea Specialty Store — retail market, not a restaurant (selamspecialty.com)",
     "k-y-d-restaurant-mirage-brooklyn": "Pickup/delivery-focused; no public dine-in room open yet",
     "blackstar-kebab-seattle": "Mobile food truck — no sit-down restaurant (blackstarkebab.com)",
+    "afro-caribbean-grill": "Food truck at 1903 Blodgett St — takeout/delivery only, no dine-in room",
 }
 
 
