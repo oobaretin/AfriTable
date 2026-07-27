@@ -4,6 +4,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { format, parseISO } from "date-fns";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
+import { getRestaurantByIdFromJSON } from "@/lib/restaurant-json-loader-server";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -72,6 +73,43 @@ function formatPreferredVisit(request: TableRequest): string {
   return `${dateLabel} · ${timeLabel} · ${request.party_size} guests`;
 }
 
+type RestaurantContact = {
+  phone: string | null;
+  website: string | null;
+};
+
+async function loadRestaurantContacts(
+  requests: TableRequest[],
+  supabaseAdmin: ReturnType<typeof createSupabaseAdminClient>,
+): Promise<Map<string, RestaurantContact>> {
+  const contacts = new Map<string, RestaurantContact>();
+
+  for (const request of requests) {
+    if (contacts.has(request.restaurant_slug)) continue;
+    const json = getRestaurantByIdFromJSON(request.restaurant_slug);
+    contacts.set(request.restaurant_slug, {
+      phone: json?.phone?.trim() || null,
+      website: json?.website?.trim() || null,
+    });
+  }
+
+  const dbIds = [...new Set(requests.map((r) => r.restaurant_id).filter(Boolean))] as string[];
+  if (dbIds.length) {
+    const { data: rows } = await supabaseAdmin.from("restaurants").select("id,slug,phone,website").in("id", dbIds);
+    for (const row of rows ?? []) {
+      const slug = row.slug;
+      if (!slug) continue;
+      const existing = contacts.get(slug) ?? { phone: null, website: null };
+      contacts.set(slug, {
+        phone: existing.phone || row.phone?.trim() || null,
+        website: existing.website || row.website?.trim() || null,
+      });
+    }
+  }
+
+  return contacts;
+}
+
 export default async function AdminTableRequestsPage({
   searchParams,
 }: {
@@ -106,6 +144,7 @@ export default async function AdminTableRequestsPage({
   }
 
   const requests = (data ?? []) as TableRequest[];
+  const restaurantContacts = await loadRestaurantContacts(requests, supabaseAdmin);
 
   const { count: pendingCount } = await supabaseAdmin
     .from("table_requests")
@@ -167,6 +206,9 @@ export default async function AdminTableRequestsPage({
               <TableBody>
                 {requests.map((request) => {
                   const statusMeta = labelForStatus(request.status);
+                  const contact = restaurantContacts.get(request.restaurant_slug);
+                  const restaurantPhone = contact?.phone ?? null;
+                  const restaurantWebsite = contact?.website ?? null;
                   return (
                     <TableRow key={request.id}>
                       <TableCell className="whitespace-nowrap align-top">
@@ -179,6 +221,15 @@ export default async function AdminTableRequestsPage({
                       <TableCell className="align-top">
                         <div className="font-medium">{request.restaurant_name}</div>
                         <div className="text-xs text-muted-foreground">{request.restaurant_slug}</div>
+                        {restaurantPhone ? (
+                          <div className="mt-1 text-xs">
+                            <a className="font-medium text-primary hover:underline" href={`tel:${restaurantPhone}`}>
+                              {restaurantPhone}
+                            </a>
+                          </div>
+                        ) : (
+                          <div className="mt-1 text-xs text-muted-foreground">No phone on file</div>
+                        )}
                       </TableCell>
                       <TableCell className="align-top">
                         <div>{formatPreferredVisit(request)}</div>
@@ -211,6 +262,18 @@ export default async function AdminTableRequestsPage({
                       </TableCell>
                       <TableCell className="align-top text-right">
                         <div className="flex flex-col items-end gap-2">
+                          {restaurantPhone ? (
+                            <Button asChild size="sm">
+                              <a href={`tel:${restaurantPhone}`}>Call restaurant</a>
+                            </Button>
+                          ) : null}
+                          {restaurantWebsite ? (
+                            <Button asChild size="sm" variant="outline">
+                              <a href={restaurantWebsite} target="_blank" rel="noreferrer">
+                                Website
+                              </a>
+                            </Button>
+                          ) : null}
                           <Button asChild size="sm" variant="outline">
                             <Link href={`/restaurants/${encodeURIComponent(request.restaurant_slug)}`} target="_blank">
                               View listing
