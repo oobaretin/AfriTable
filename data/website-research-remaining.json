@@ -1,5 +1,5 @@
 {
-  "count": 55,
+  "count": 52,
   "listings": [
     {
       "id": "fufudelight-suya-kitchen-arlington",
@@ -18,12 +18,6 @@
       "name": "Saaraloge's Kitchen",
       "state": "CA",
       "address": "11711 Collett Ave, Riverside, CA 92505"
-    },
-    {
-      "id": "taste-of-african-cuisine-san-diego",
-      "name": "Taste of African Cuisine",
-      "state": "CA",
-      "address": "5241 University Ave, San Diego, CA 92105"
     },
     {
       "id": "5-star-caf-eritrean-restaurant-denver",
@@ -296,12 +290,6 @@
       "address": "12450 Westheimer Rd, Houston, TX 77077"
     },
     {
-      "id": "rodo-nigerian-cuisine-richmond",
-      "name": "Rodo Nigerian Cuisine",
-      "state": "TX",
-      "address": "16805 Bissonnet St, Richmond, TX 77407"
-    },
-    {
       "id": "selam-houston",
       "name": "Selam",
       "state": "TX",
@@ -318,12 +306,6 @@
       "name": "Vertex",
       "state": "TX",
       "address": "6580 Southwest Fwy Suite C, Houston, TX 77074"
-    },
-    {
-      "id": "kente-caf-salt-lake-city",
-      "name": "Kente Caf\u00e9",
-      "state": "UT",
-      "address": "751 W 800 S, Salt Lake City, UT 84104"
     },
     {
       "id": "noor-somali-restaurant-salt-lake-city",
