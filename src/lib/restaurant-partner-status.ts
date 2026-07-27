@@ -41,15 +41,12 @@ export async function getLivePartnerStatus(slugOrId: string, knownDbId?: string 
 
   const [{ data: restaurant }, { data: settings }] = await Promise.all([
     supabase.from("restaurants").select("is_claimed").eq("id", dbRestaurantId).maybeSingle(),
-    supabase
-      .from("availability_settings")
-      .select("online_reservations_enabled")
-      .eq("restaurant_id", dbRestaurantId)
-      .maybeSingle(),
+    supabase.from("availability_settings").select("*").eq("restaurant_id", dbRestaurantId).maybeSingle(),
   ]);
 
   const isClaimed = Boolean((restaurant as { is_claimed?: boolean } | null)?.is_claimed);
-  const onlineReservationsEnabled = settings?.online_reservations_enabled !== false;
+  const onlineReservationsEnabled =
+    (settings as { online_reservations_enabled?: boolean } | null)?.online_reservations_enabled !== false;
   const isLivePartner = isClaimed && onlineReservationsEnabled;
 
   return {
