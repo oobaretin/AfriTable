@@ -34,6 +34,11 @@ REMOVE: dict[str, str] = {
     "olas-foods-specialty-market-africa-on-the-bay-tampa": "Specialty market",
 }
 
+# Curation: out-of-scope or misclassified listings
+CURATION_REMOVE: dict[str, str] = {
+    "abuh-n-restaurant-filipino-clearwater": "Filipino restaurant — outside African/Caribbean catalog scope",
+}
+
 ADDRESS_FIXES: dict[str, dict[str, str]] = {
     "falidelicious-restaurant-5-stars-fl-32773": {
         "address": "Sanford, FL 32773",
@@ -85,7 +90,7 @@ def main() -> int:
 
     catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
     scrape_batch = batch_ids()
-    remove_ids = set(REMOVE)
+    remove_ids = set(REMOVE) | set(CURATION_REMOVE)
 
     removed: list[dict] = []
     fixed: list[dict] = []
@@ -94,11 +99,12 @@ def main() -> int:
     for row in catalog:
         rid = row.get("id")
         if rid in remove_ids:
+            reason = REMOVE.get(rid) or CURATION_REMOVE.get(rid) or "removed"
             removed.append(
                 {
                     "id": rid,
                     "name": row.get("name"),
-                    "reason": REMOVE[rid],
+                    "reason": reason,
                     "inScrapeBatch": rid in scrape_batch,
                 }
             )

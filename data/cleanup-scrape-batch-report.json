@@ -1,72 +1,12 @@
 {
-  "generatedAt": "2026-07-27T17:51:44Z",
+  "generatedAt": "2026-07-27T17:58:13Z",
   "dryRun": false,
-  "scrapeBatchSize": 97,
+  "scrapeBatchSize": 87,
   "removed": [
     {
-      "id": "olas-foods-specialty-market-africa-on-the-bay-tampa",
-      "name": "Ola's Foods Specialty Market - Africa On The Bay",
-      "reason": "Specialty market",
-      "inScrapeBatch": false
-    },
-    {
-      "id": "jollof-jollof-halal-food-truck-and-mobile-caterer-denver",
-      "name": "Jollof-Jollof Halal Food Truck and Mobile Caterer",
-      "reason": "Food truck / mobile caterer",
-      "inScrapeBatch": true
-    },
-    {
-      "id": "yene-romay-ethiopian-kitchen-food-truck-orlando",
-      "name": "Yene Romay Ethiopian Kitchen (Food Truck)",
-      "reason": "Food truck",
-      "inScrapeBatch": true
-    },
-    {
-      "id": "makola-african-market-aurora",
-      "name": "Makola African Market",
-      "reason": "Grocery market, not dine-in restaurant",
-      "inScrapeBatch": true
-    },
-    {
-      "id": "konjo-catering-and-events-denver",
-      "name": "Konjo Catering and Events",
-      "reason": "Catering-only operator",
-      "inScrapeBatch": true
-    },
-    {
-      "id": "tracey-africa-market-orlando",
-      "name": "Tracey Africa market",
-      "reason": "Flea market stall",
-      "inScrapeBatch": true
-    },
-    {
-      "id": "african-choice-food-market-orlando",
-      "name": "African Choice Food Market",
-      "reason": "Grocery market",
-      "inScrapeBatch": true
-    },
-    {
-      "id": "habibi-halal-food-truck-orlando-orlando",
-      "name": "HABIBI Halal Food Truck Orlando",
-      "reason": "Food truck",
-      "inScrapeBatch": true
-    },
-    {
-      "id": "ethiopian-market-in-tampa-bb-mart-tampa",
-      "name": "Ethiopian Market in Tampa (BB MART)",
-      "reason": "Grocery market",
-      "inScrapeBatch": true
-    },
-    {
-      "id": "african-place-market-inc-tampa",
-      "name": "African Place Market Inc",
-      "reason": "Grocery market",
-      "inScrapeBatch": true
-    },
-    {
-      "id": "mays-alreem-halal-food-truck-tampa",
-      "name": "Mays Alreem Halal Food Truck",
-      "reason": "Food truck",
+      "id": "abuh-n-restaurant-filipino-clearwater",
+      "name": "Abuh\u00e1n Restaurant | Filipino",
+      "reason": "Filipino restaurant \u2014 outside African/Caribbean catalog scope",
       "inScrapeBatch": true
     }
   ],
@@ -74,10 +14,10 @@
     {
       "id": "falidelicious-restaurant-5-stars-fl-32773",
       "name": "Falidelicious Restaurant 5 stars!!!!!",
-      "before": "Sanford, FL 32773,  ",
+      "before": "Sanford, FL 32773",
       "after": "Sanford, FL 32773"
     }
   ],
-  "beforeCount": 451,
-  "afterCount": 440
+  "beforeCount": 440,
+  "afterCount": 439
 }

@@ -1791,13 +1791,14 @@
       "wed_sun": "11:00 AM - 10:00 PM",
       "tue": "Closed"
     },
-    "google_search_url": "https://www.google.com/search?q=Lala's%20Eritrean%2C%204069%20Telegraph%20Ave%2C%20Oakland%2C%20CA%2094609",
+    "google_search_url": "https://www.google.com/search?q=Lala%27s%20Eritrean%2C%204069%20Telegraph%20Ave%2C%20Oakland%2C%20CA%2094609",
     "images": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl5SUHqVPD01wTkGBZG9T_XlUf89GIdOzNXVJO7og1yba3PGETYgNo3HGFUJV7vX9c7i-Xeb7eqoGwMDlv4QzOE38XacmCZmJyPC5qkYFv6XZcvQUr3M99qP83479hBb11S4y7vHQUV65xh=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-proxy/ALd4DhEpT3gralRvNbFBDtJsfXShWiNNmu3cd-feZSt4HoIGOOgY8oa1bKGPUchwwBwjzI9dGiAehK5aphN3UpsON2iW7yzmLqfFGi2MBLxLwFgnTsvrBrYlJpYJiZ5wJ2tGXx-QUqnzJjhqbREhy9ExYXmC5io2aI9kpDHphxUGoLAfeO4172IX7Q=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlJgmoGh1Y-w_-WtDCYx4UcK185H7AZn55VjmNqWgyUh2AQ0J_FVzO0PG422DgZsK35ueyNS3OWo67s479k14VV8-TDUOdD70XghLLSA3nhf8NEpV78U_FU30ftKfw0E0y4YeWzPA=w1000-h1000-c-n"
     ],
-    "google_place_id": "ChIJ_RtOt-J9hYARrro9RaXE7DY"
+    "google_place_id": "ChIJ_RtOt-J9hYARrro9RaXE7DY",
+    "website": "https://www.lalasrestaurant.com/"
   },
   {
     "id": "nash-riddim-spice",
@@ -6428,12 +6429,13 @@
     "google_place_id": "ChIJVcxa1i2l9YgRduH1ndkIvqU",
     "lat": 33.9142316,
     "lng": -84.1623702,
-    "google_search_url": "https://www.google.com/search?q=Jollof%20city%20Norcross%20GA%2030093",
+    "google_search_url": "https://www.google.com/search?q=Jollof%20city%2C%201241%20Indian%20Trail%20Lilburn%20Rd%20NW%20Ste%20N%2C%20Norcross%2C%20GA%2030093",
     "images": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlbZeu9yDmaqhR81OgjmddX0TEi_o62qj60CMH6_5_LQRbZ1kvvh_UHb1JRpbWA5Q4Jj5C5lHLGnOuNZfhVN7hda1PzhNn7d5046zLq9qhiT_40OzNj0lLU1S-AJFgWRCMuw8XNBC6gaYcF=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnkMCyUAGhpz-FZb8raNuU6UjgkVf6nNl0_vTJBRGaVQv0i_H_y0SGLzt0eZkqRAVuUsCpCWJ-qWSoiAEyyxVHzFFLDX5eu0C7Eqg89TXSKNPrtQos-sD7UKgUp_sPWyu872W6GtelVH87i=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmIq8TQGnsvyn_UmKHrbtLaHEUbvLR4Lnv1WXI4QtMrScDxMgk_5alT_VhCAJQpdlg047gQMKW0nV0aBzjcGS5heCwXJqyPZqjeo3XC0rzcX0qddE8ve-AYU51U4s4ns0hchvV6Cwl7Niud=w1000-h1000-c-n"
-    ]
+    ],
+    "website": "https://jollofcity.com/"
   },
   {
     "id": "boumboumatl-atlanta",
@@ -7080,7 +7082,8 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkGqi6l7_a2iN3qQvemob44Fn9sGF9Y6YJADpKWzlw9tcmho68pZabbKqyeUeqK-oUYy0pjt4AKbAx7I3B7tUtaOkgI17Ec-zH7DdNEh6u9iDKGuK8JWcwjCCMXdVwFuoK0YxBUpP-4vdS3=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWllHwjTYMG61u5EghBJyOKjp6pogG-8R2-cpo_pwWpoYWUrZVSAf3NM_26-aHGKRuz97RI570quZYmE5Sv7siCaJ6GPqvHphXiZd10fJuNFN_sGOQ5RTcIfBYqz7qcbwNNYzWCdO13cAS0=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmGlphm7Nchgfvs0g-nj2JM51HjejCy9j08GCn9f_VtILIwNIbkSddUHexs6NzQAStN76Ot8toMwmy9xOeAzXkvvyWLNdUZ7zFVCo1pCzVXkhshWRoZiyiJpsEbdymJcuCmzNnN1nRF5AXm=w1000-h1000-c-n"
-    ]
+    ],
+    "website": "https://dammneyskitchen.com/"
   },
   {
     "id": "bisi-restaurant-nigerian-cuisine-schaumburg",
@@ -7282,7 +7285,8 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkTETyNBmG1aENNwSQ96EzWlaO8wnXjB0WypwiLy5j3ZNZ-EWVPM48RjHYaL6yc1tI6rE8fLUA9uchhRwAl-aFGci8vguknu4yLzXdIZZ9p0TVQgh0SvCkur0QC4YJLSy1Pqpe0RQ=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnq0S7u3MUkdhRemz4_dcTfvdT4i_lOTHiLjQX9hTghOisRirWL0IAeyLUJeI7py5-FRVD8PqqrTdta_UHqzRIVIy6zx1QLVV1BCaEDimVOux9ochaSAbbJ06c6GYWqYalDq4mV7jh6oag=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkoZXIyg9nAMF3JUj7xudUSU2YjGB0L6xd6OteH5QV8VQIHd0XqPEGG0x-G_yKPuhD_7q6Q6ijG46VwQV1HSLde7nhci9R5QjesRaEUr-MO159PoSTgR2xgYhN9W2g7pREPKC5QXQ=w1000-h1000-c-n"
-    ]
+    ],
+    "website": "https://westafricanway.top/"
   },
   {
     "id": "kofoshi-houston",
@@ -7551,7 +7555,8 @@
     "google_search_url": "https://www.google.com/search?q=Bliss%20Africa%2C%206305%20Stirling%20Rd%2C%20Davie%2C%20FL%2033314",
     "images": [
       "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=-kHipw0NVhtlYEVfSV_p5w&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=40.409958&pitch=0&thumbfov=100"
-    ]
+    ],
+    "website": "https://blissplaceafrikanmkt.getbento.com/"
   },
   {
     "id": "savor-wynwood-miami",
@@ -7888,7 +7893,8 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnCtjLfQY6oJQXVNdrn3eFM730WWv0raEiMdRCAzR61QWsRG7yNifcgbY4wYB9_I36lLI9KCqjIrYeJuUcP7sCmDyH9LH0K85-SuHHnWDMvzi3KYSHxkqU3rNGx9HPBN7RTRtJBPPhShdKD=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm_RIOTUdIVPNH-g3uXakCgItfQ6rJIX8IjSWKVy5F_qnO7rUIGidYJwBxxclDZxBZU6e_Ob1bn6gCDbpdcPhPSR-rSnyUw9onyEOvwkyROFylBm6FgxtyYdIia2xK-S9nsKLj3PqSklqVX=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlhdt-Aqm_S0S5FKwwzBAKibko0mRS-P6u_TfoFAW5b2fPmRg793vDG_muyiERnB4X8TCQ8fsHrNAClSzZIJr0vciNYJ5HrqakAfmSHo99J2ludcNgmYiZSZFzAfmCiGnuxYjHzcPTb6k39=w1000-h1000-c-n"
-    ]
+    ],
+    "website": "https://tolag.net/"
   },
   {
     "id": "steaming-pots-west-africa-cuisine-mobile-1-tampa",
@@ -11841,7 +11847,7 @@
     "about": "Family-owned Eritrean and Ethiopian restaurant on Bellaire Blvd; injera platters, tibs, and late-night dining.",
     "vibe_category": "Authentic Staples",
     "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Adulis%2C%205800%20Bellaire%20Blvd%20%23102%2C%20Houston%2C%20TX%2077081",
+    "google_search_url": "https://www.google.com/search?q=Adulis%20%28Houston%29%2C%205800%20Bellaire%20Blvd%20%23102%2C%20Houston%2C%20TX%2077081",
     "images": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnIK7-Fl0DQK1bMNeWiueGwtuthXA6jMNrfh-HsftC3HH2QOeR2FojRiV7ns4aw-sPkknciLsYmW3-I1N4QkjqJAw1z_lE8yhXhUaDrbmDa4UkUaUcUQDgKLyV6ln_1MuChpzx8rvDzfMyq=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWllHHd7WGJub8XWTeZH8P3PjxnY772NtUQf2pnn5vzGccSsaPZhJv2_OsYpXrL2XlPfv7dbKonGB6t4J498PQmWVd8dn0Q_d5vP5sRoG9TbiV332NG6AwDPkzKqezfNwySZ3r5PCuBo0sZ0=w1000-h1000-c-n",
@@ -11852,7 +11858,8 @@
       "Adulis Bellaire",
       "5800 Bellaire"
     ],
-    "google_place_id": "ChIJu_YuXCHDQIYRgoqhVyZ_ozw"
+    "google_place_id": "ChIJu_YuXCHDQIYRgoqhVyZ_ozw",
+    "website": "https://adulishoustontx.com/"
   },
   {
     "id": "sweetpepper-kitchen-aurora",
@@ -13470,31 +13477,6 @@
     "google_place_id": "ChIJu4XbqVHEwogRcadU6VNmJkA",
     "lat": 27.9600609,
     "lng": -82.4396235
-  },
-  {
-    "id": "abuh-n-restaurant-filipino-clearwater",
-    "name": "Abuh\u00e1n Restaurant | Filipino",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.8,
-    "address": "1258 S Highland Ave, Clearwater, FL 33756",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "about": "Abuh\u00e1n Restaurant | Filipino serves African flavors in Clearwater. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food.",
-    "our_story": "AfriTable listing for Abuh\u00e1n Restaurant | Filipino in Clearwater. Hours and menu details should be confirmed with the restaurant directly.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "FL",
-    "phone": "(727) 400-6381",
-    "google_place_id": "ChIJ1121WavxwogRvPckOH7IF14",
-    "lat": 27.951042599999997,
-    "lng": -82.77540739999999
   },
   {
     "id": "craft-kafe-st-petersburg",
