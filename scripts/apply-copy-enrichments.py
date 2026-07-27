@@ -21,6 +21,7 @@ NATIONWIDE = ROOT / "data" / "catalog-nationwide-copy-enrichments.json"
 FLAGSHIP = ROOT / "data" / "catalog-flagship-copy-enrichments.json"
 BATCH2 = ROOT / "data" / "catalog-batch2-metro-copy-enrichments.json"
 BATCH3 = ROOT / "data" / "catalog-batch3-copy-enrichments.json"
+SPECIAL = ROOT / "data" / "catalog-special-features-enrichments.json"
 REPORT = ROOT / "data" / "copy-enrichments-report.json"
 LOG = ROOT / ".cursor" / "debug-3435b4.log"
 SESSION = "3435b4"
@@ -64,7 +65,14 @@ def main() -> int:
     args = parser.parse_args()
 
     catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
-    enrichments = {**load_json(METRO), **load_json(NATIONWIDE), **load_json(FLAGSHIP), **load_json(BATCH2), **load_json(BATCH3)}
+    enrichments = {
+        **load_json(METRO),
+        **load_json(NATIONWIDE),
+        **load_json(FLAGSHIP),
+        **load_json(BATCH2),
+        **load_json(BATCH3),
+        **load_json(SPECIAL),
+    }
 
     updated = 0
     updated_ids: list[str] = []

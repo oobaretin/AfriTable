@@ -1,0 +1,1253 @@
+{
+  "chez-michelle": {
+    "special_features": "known for Ndole Soup, Grilled Tilapia, and Eru; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "addis-ababa": {
+    "special_features": "known for Doro Wat, Veggie Combo, and Addis Tibs; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "famous-princess": {
+    "special_features": "known for Ayamashe (Designer) Stew, Abula (Amala), and Jollof Rice; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "omalicha-kitchen": {
+    "special_features": "known for Egusi Soup, Nkwobi, and Seafood Okra; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "kokomo-nyc": {
+    "special_features": "known for Koko's Island Pasta, Wah Gwan Duck Tacos, and Stuffed Plantains; island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "zanmi-nyc": {
+    "special_features": "known for Griot (Fried Pork), Oxfail Sliders, and Bouillon Soup; island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "dukunoo-miami": {
+    "special_features": "signature Jerk Lamb Chops; Jamaican chef-driven dining in Wynwood; elevated dining room."
+  },
+  "apt4b-atlanta": {
+    "special_features": "signature Vinyl & Jerk Chicken; Caribbean Fusion chef-driven dining; elevated dining room."
+  },
+  "blaqhaus-atlanta": {
+    "special_features": "known for Jerk Chicken & Waffles, Southern Style Oxtails, and Cajun Pasta; island spice and homestyle plates; jerk pit smoke and bold pepper."
+  },
+  "callaloo-kitchen": {
+    "special_features": "known for Doubles, Bake and Shark, and Curry Buss Up Shut; island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "miss-lilys-nyc": {
+    "special_features": "known for Jerky Grilled Corn, Curry Goat, and Hot Pepper Shrimp; island spice and homestyle plates; jerk pit smoke and bold pepper."
+  },
+  "cane-dc": {
+    "special_features": "Highly rated by diners; known for Tiffin Box with Curry Goat & Paratha; island spice and homestyle plates in H Street Corridor; Caribbean comfort cooking."
+  },
+  "pearls-nyc": {
+    "special_features": "known for Bake & Shark, Curry Crab & Dumplings, and Jerk Catfish; island spice and homestyle plates; jerk pit smoke and bold pepper."
+  },
+  "appioo-dc": {
+    "special_features": "known for Banku with Tilapia, Red Red (Bean Stew), and Waakye; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "teranga-nyc": {
+    "special_features": "known for Baobab Energy Bowls & Yassa Chicken; pepper-forward stews and rice plates in Financial District; suya, jollof, and chop-bar hospitality."
+  },
+  "mansa-kunda-md": {
+    "special_features": "known for Senegalese Domoda; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "bukom-cafe-dc": {
+    "special_features": "known for Jollof Rice with Lamb, Fried Plantains, and Bukom Wings; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "ponti-ivorian-houston": {
+    "special_features": "known for Grilled Fish with Attiéké, Aloco (Fried Plantains), and Kedjenou (Slow-cooked Chicken); pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "gold-coast-kitchen-chi": {
+    "special_features": "known for Egusi with Fufu, Ghanaian Jollof, and Fried Croaker Fish; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "afrik-che-houston": {
+    "special_features": "known for Assorted Meat Stew, Okra Soup, and Pounded Yam; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "adulis-ny": {
+    "special_features": "known for Zigni (Spicy Beef Stew), Hamli (Sautéed Spinach), and Eritrean Coffee Ceremony; communal injera platters; traditional wats and tibs."
+  },
+  "kulan-cafe": {
+    "special_features": "known for Bariis Iskukaris (Spiced Rice), Roasted Goat (Hilib Ari), and Somali Chai; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "safari-restaurant-mn": {
+    "special_features": "known for Safari Mango Chicken, Camel Meat (Seasonal), and Suqaar (Sautéed Beef); Somali flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "10-degrees-south-atl": {
+    "special_features": "signature Sosaties (Curried Lamb Kebabs), Boerewors, and Ostrich Medallions; South African chef-driven dining; elevated dining room."
+  },
+  "tatiana-by-kwame-onwuachi-new-york": {
+    "special_features": "Lincoln Center fine-dining room; signature Wagyu Short Rib Pastrami; chef Kwame Onwuachi's Afro-Caribbean tasting menu; reservation prestige spot."
+  },
+  "chopnblok-downtown-houston": {
+    "special_features": "POST Houston fast-fine bowls; suya, jollof, and cocktails; design-forward West African dining by Chef Kehinde Ogunsanya."
+  },
+  "bunna-cafe-nyc": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "virgils-gullah-kitchen-atlanta": {
+    "special_features": "Gullah Geechee / West African Roots chef-driven dining; elevated dining room."
+  },
+  "swahili-village-dc": {
+    "special_features": "Kenyan / East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "dc-ethiopic": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "desta-atlanta": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "atl-busy-bee": {
+    "special_features": "Soul food and Southern comfort; slow-cooked plates and generous portions."
+  },
+  "meals-by-genet-los-angeles": {
+    "special_features": "Little Ethiopia reservation-only room; legendary doro wat Fri–Sun; women-owned institution."
+  },
+  "la-blaqhaus-noho": {
+    "special_features": "island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "amaweles-san-francisco": {
+    "special_features": "South African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "demera-ethiopian-chicago": {
+    "special_features": "Uptown injera platters; honey wine and shared wats; Chicago benchmark for Ethiopian hospitality."
+  },
+  "african-small-pot-philadelphia": {
+    "special_features": "Senegalese / Mauritanian chef-driven dining; elevated dining room."
+  },
+  "gor-e-cuisine-chicago": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "kilimandjaro-philadelphia": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "iyanze-chicago": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "chi-yassa": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "quality-taste-philadelphia": {
+    "special_features": "island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "communion-r-b-seattle": {
+    "special_features": "Central District soul innovation; Hood Sushi and catfish; Kristi Brown's creative Seattle room."
+  },
+  "sea-meskel": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "cesaria-boston": {
+    "special_features": "Cape Verdean / West African chef-driven dining; elevated dining room."
+  },
+  "cafe-selam-seattle": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "suya-joint-boston": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "jebena-cafe-seattle": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "cool-runnings-jamaican-grill-houston": {
+    "special_features": "known for Brown Stew Snapper & Escovitch Fish; island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "nola-bennachin": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "nola-dooky-chase": {
+    "special_features": "Treme institution since 1941; Leah Chase legacy; gumbo, fried chicken, and civil-rights history on every plate."
+  },
+  "nyc-abyssinia": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "sf-teranga-village": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "oak-lala-eritrean": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "nash-riddim-spice": {
+    "special_features": "island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "hou-reggae-hut": {
+    "special_features": "Third Ward institution for decades; brown stew fish, jerk chicken, and Jamaican patties; easy neighborhood warmth."
+  },
+  "jordyns-soul-cafe-houston": {
+    "special_features": "known for Jerk Chicken, Island Stews, and Weekend Brunch; island spice and homestyle plates in Montrose; jerk pit smoke and bold pepper."
+  },
+  "hou-caribbean-hotpot-grill": {
+    "special_features": "known for Curry Chicken & Stewed Beef; island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "dakar-street-food-hou": {
+    "special_features": "known for Thieboudienne & Nem (Spring Rolls); pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "atl-spice-house-midtown": {
+    "special_features": "signature Jerk Chicken Pasta; Caribbean Fusion chef-driven dining in Midtown; elevated dining room."
+  },
+  "nyc-jasmines-caribbean": {
+    "special_features": "known for Curry Shrimp & Red Snapper; island spice and homestyle plates in Hell's Kitchen; Caribbean comfort cooking."
+  },
+  "chi-garifuna-flava": {
+    "special_features": "known for Belizean Stew Chicken; island spice and homestyle plates in Marquette Park; Caribbean comfort cooking."
+  },
+  "dc-st-james": {
+    "special_features": "signature Callaloo & Crab; Modern Caribbean chef-driven dining in U Street / 14th St; elevated dining room."
+  },
+  "la-dulans-crenshaw": {
+    "special_features": "known for Smothered Chicken; Soul food and Southern comfort in Hyde Park; slow-cooked plates and generous portions."
+  },
+  "mia-chef-creole": {
+    "special_features": "known for Griot & Pikliz; island spice and homestyle plates in Little Haiti; Caribbean comfort cooking."
+  },
+  "chef-creole-north-miami-dixie": {
+    "special_features": "known for Griot & Pikliz, Fried Snapper, and Oxtail; island spice and homestyle plates in North Miami; Caribbean comfort cooking."
+  },
+  "chef-creole-north-miami-7th-ave": {
+    "special_features": "known for Griot & Pikliz, Fried Snapper, and Oxtail; island spice and homestyle plates in North Miami; Caribbean comfort cooking."
+  },
+  "chef-creole-miami-gardens": {
+    "special_features": "known for Griot & Pikliz, Fried Snapper, and Oxtail; island spice and homestyle plates in Miami Gardens; Caribbean comfort cooking."
+  },
+  "mia-red-rooster-overtown": {
+    "special_features": "Historic Overtown dining room; live music and art; Marcus Samuelsson's yardbird, gumbo, and coconut-smoked oxtails."
+  },
+  "baobab-fare-detroit": {
+    "special_features": "James Beard-honored Burundian cooking; New Center neighborhood anchor; Kuku Na Mali and family hospitality."
+  },
+  "lucilles-houston": {
+    "special_features": "signature Chili Biscuits & Yardbird; Southern / Fine Dining chef-driven dining in Museum District; elevated dining room."
+  },
+  "chi-ja-grill-hyde-park": {
+    "special_features": "signature Curry Goat & Ja' Rum Punch; Jamaican chef-driven dining in Hyde Park; elevated dining room."
+  },
+  "atl-irie-mon-cafe": {
+    "special_features": "known for Tender Oxtail; island spice and homestyle plates in Buckhead; Caribbean comfort cooking."
+  },
+  "d-gon-washington": {
+    "special_features": "Potomac waterfront fine dining; Michelin-recognized Afro-Caribbean plates; elegant Wharf setting with Chesapeake ingredients."
+  },
+  "nola-dakar": {
+    "special_features": "One-seating tasting menu; Senegalese-to-Creole narrative; Magazine Street destination dinner."
+  },
+  "sa-jerk-shack": {
+    "special_features": "San Antonio jerk pit elevated; Michelin-recognized smoke and spice; patty-shop soul with fine-dining polish."
+  },
+  "kann-portland": {
+    "special_features": "Wood-fired open kitchen; James Beard-winning Haitian hearth cooking; cane sugar glaze and Portland destination status."
+  },
+  "atx-fine-001": {
+    "special_features": "East Austin tasting-room energy; Guyana-inspired menu named for the national bird; Michelin Guide recognition."
+  },
+  "atx-fine-002": {
+    "special_features": "Austin fine-dining counter; French technique with West African seasoning."
+  },
+  "dfw-fine-001": {
+    "special_features": "signature Gambian Benachin; West African / Caribbean Fusion chef-driven dining in North Dallas; elevated dining room."
+  },
+  "dfw-fine-002": {
+    "special_features": "known for Mama Joyce's Oxtails & Jerk BBQ Ribs; island spice and homestyle plates in Oak Cliff / Bishop Arts; jerk pit smoke and bold pepper."
+  },
+  "hou-fine-001": {
+    "special_features": "known for Creamy Rasta Pasta & Escovitch Fish; island spice and homestyle plates in West Houston / Copperfield; Caribbean comfort cooking."
+  },
+  "atx-afro-002": {
+    "special_features": "known for Doro Wot & Vegetarian Sampler; communal injera platters in Austin; traditional wats and tibs."
+  },
+  "megenagna-mart-and-cafe-austin": {
+    "special_features": "known for Awaze tibs, Veggie combo, and Chechebsa; communal injera platters in Wells Branch; traditional wats and tibs."
+  },
+  "dfw-afro-002": {
+    "special_features": "signature Mediterranean-African Seafood; Global African Fusion chef-driven dining in Far North Dallas; elevated dining room."
+  },
+  "dfw-shuri-001": {
+    "special_features": "known for Egusi & jollof; pepper-forward stews and rice plates in Northeast Dallas; suya, jollof, and chop-bar hospitality."
+  },
+  "den-whittier-001": {
+    "special_features": "known for Sunday East African coffee ceremony; communal injera platters in Whittier / Five Points; vegetarian fasting options and coffee ceremony."
+  },
+  "chs-fine-001": {
+    "special_features": "Charleston seafood tasting menus; Lowcountry ingredients with West African spice lines."
+  },
+  "status-hollywood-los-angeles": {
+    "special_features": "signature Sweet Chili Lamb Chops & Oxtail Egg Rolls; Upscale Jamaican chef-driven dining in Hollywood; elevated dining room."
+  },
+  "atl-fine-001": {
+    "special_features": "Atlanta tasting-menu room; seasonal Southern and diaspora crossover plates."
+  },
+  "phi-fine-001": {
+    "special_features": "Rittenhouse rowhouse eight-course journey; Jonah and Chad Williams' modern American menu with diaspora spice memory."
+  },
+  "sea-fine-002": {
+    "special_features": "signature Pimento Wood Smoked Jerk Chicken; Modern Caribbean chef-driven dining in Central District; elevated dining room."
+  },
+  "helens-kitchen-houston": {
+    "special_features": "known for Oxtail & Curry Goat; island spice and homestyle plates in South Post Oak; Caribbean comfort cooking."
+  },
+  "lucia-los-angeles": {
+    "special_features": "Los Angeles chef-driven dining; Latin and Caribbean crossover flavors."
+  },
+  "bridgetown-roti-los-angeles": {
+    "special_features": "known for Oxtail Patty & Curry Goat Roti; island spice and homestyle plates in Arts District; Caribbean comfort cooking."
+  },
+  "negril-atl-atlanta": {
+    "special_features": "signature Ackee & Saltfish Spring Rolls; Innovative Caribbean chef-driven dining in Upper West Side; elevated dining room."
+  },
+  "taste-of-nigeria-houston": {
+    "special_features": "known for Jollof Rice & Beef Suya; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "komchop-houston": {
+    "special_features": "known for Grilled Fish & Efo Riro; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "finger-licking-2-0-houston": {
+    "special_features": "known for Pounded Yam & Egusi Soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "sarabell-calabar-houston": {
+    "special_features": "known for Edikang Ikong & Afang Soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "amala-zone-houston": {
+    "special_features": "known for Abula (Amala, Ewedu, Gbegiri); pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "chef-benny-houston": {
+    "special_features": "known for Asun (Spicy Goat) & Jollof Rice; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "afrikiko-houston": {
+    "special_features": "known for Waakye & Groundnut Soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "astors-table-katy": {
+    "special_features": "signature Beef Suya Astor & Peri-Peri Chicken; South African Fusion chef-driven dining; elevated dining room."
+  },
+  "suya-hut-meadows-place": {
+    "special_features": "known for Authentic Beef & Chicken Suya; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "blue-nile-ethiopian-houston": {
+    "special_features": "known for Doro Wat & Injera Platters; communal injera platters; traditional wats and tibs."
+  },
+  "aria-suya-kitchen-houston": {
+    "special_features": "known for Grilled Lamb Chops & Jollof; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "fabaceae-african-cuisine-houston": {
+    "special_features": "known for Abula & Designer Stew; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "lucy-ethiopian-restaurant-lounge-houston": {
+    "special_features": "known for Lucy Special Tibs & Veggie Platter; communal injera platters; traditional wats and tibs."
+  },
+  "nyammings-fusion-bistro-richmond": {
+    "special_features": "known for Curry Goat & Oxtail Mac n Cheese; island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "africa-kine-new-york": {
+    "special_features": "known for Mafe; pepper-forward stews and rice plates in Little Senegal (Harlem); suya, jollof, and chop-bar hospitality."
+  },
+  "buka-brooklyn": {
+    "special_features": "known for Goat Pepper Soup; pepper-forward stews and rice plates in Bed-Stuy; suya, jollof, and chop-bar hospitality."
+  },
+  "dc-daily-002": {
+    "special_features": "known for Injera Platters; communal injera platters in Bethesda; vegetarian fasting options and coffee ceremony."
+  },
+  "veronicas-kitchen-inglewood": {
+    "special_features": "known for Egusi & Fufu; pepper-forward stews and rice plates in Inglewood; suya, jollof, and chop-bar hospitality."
+  },
+  "rosalinds-los-angeles": {
+    "special_features": "known for Ethiopian Shared Plates; communal injera platters in Little Ethiopia (Fairfax); traditional wats and tibs."
+  },
+  "atl-daily-001": {
+    "special_features": "known for Attiéké & Tilapia; pepper-forward stews and rice plates in Peachtree Corners; suya, jollof, and chop-bar hospitality."
+  },
+  "atl-daily-002": {
+    "special_features": "known for Caribbean Brunch; island spice and homestyle plates in Embry Hills; Caribbean comfort cooking."
+  },
+  "royal-arm-restaurant-katy": {
+    "special_features": "known for Egusi (Melon Stew) with Pounded Yam & Ayamase (Designer Rice); island spice and homestyle plates in Cinco Ranch / Falcon Rock; Caribbean comfort cooking."
+  },
+  "ubuntu-atl": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "aduke-nigerian-la": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "ts-buka-arlington": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "lady-t-kitchen-austin": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "bamboo-walk-brooklyn": {
+    "special_features": "island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "cocobreeze-oakland": {
+    "special_features": "island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "48th-street-grille-philly": {
+    "special_features": "island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "tsehay-dc": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "feru-ethiopian-dc": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "little-lagos-atl": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "baba-jollof-houston": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "native-pot-houston": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "vees-brooklyn": {
+    "special_features": "island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "irie-caribbean-brooklyn": {
+    "special_features": "island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "tesfa-ethiopian-chicago": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "badou-senegalese-chicago": {
+    "special_features": "pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "two-hommes-inglewood": {
+    "special_features": "West African Fusion chef-driven dining; elevated dining room."
+  },
+  "blessed-tropical-inglewood": {
+    "special_features": "island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "selam-ethiopian-chicago": {
+    "special_features": "communal injera platters; traditional wats and tibs."
+  },
+  "abyssinia-phoenix": {
+    "special_features": "known for Doro wat, Veggie combo, and Tibs; communal injera platters; traditional wats and tibs."
+  },
+  "authentic-ethio-mcdowell-phoenix": {
+    "special_features": "known for Kitfo, Lamb tibs, and Shiro; communal injera platters; traditional wats and tibs."
+  },
+  "ethiopian-famous-tempe": {
+    "special_features": "known for Veggie combo, Beef tibs, and Sambusa; communal injera platters; traditional wats and tibs."
+  },
+  "island-breeze-colton": {
+    "special_features": "known for Jerk chicken, Curry goat, and Oxtail; island spice and homestyle plates; jerk pit smoke and bold pepper."
+  },
+  "island-breeze-san-bernardino": {
+    "special_features": "known for Brown stew chicken, Curry shrimp, and Plantains; island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "zola-cultural-kitchen-mesa": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "angels-naija-cuisine-phoenix": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "authentic-liberian-cuisine-phoenix": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "naija-soul-kitchen-phoenix": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "karibu-restaurant-glendale": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "all-african-cuisines-santa-ana": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "mama-wales-rice-moreno-valley": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "tonges-taste-menifee": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "nok-grill-moreno-valley": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "taste-of-east-african-minneapolis": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "lagos-cafe-crystal": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "joe-nya-african-restaurant-minneapolis": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "oga-madam-kitchen-minneapolis": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "falastin-cafe-minneapolis": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "deemeta-nigerian-cuisine-aloha": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "amaye-international-restaurant-portland": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "alleamin-african-kitchen-portland": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "akadi-pdx-portland": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "black-star-grill-portland": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "madina-restaurant-nashville": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "street-injera-authentic-east-african-cuisine-nashville": {
+    "special_features": "known for Vegetarian combo, Beef tibs, and Doro wat; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "paradiz-african-restaurant-madison": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "molyd-african-cuisine-murfreesboro": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "nicos-lounge-restaurant-and-bar-nashville": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "peekay-restaurant-burlington": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "divine-time-nigerian-cusinie-upper-darby-township": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "adji-jollof-rice-kitchen-camden": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "kokomma-nigerian-african-cuisine-lynn": {
+    "special_features": "known for Jollof Rice, Egusi Soup, and Pepper Soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "obosa-restaurant-roslindale": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "pelloma-nigerian-cuisine-mattapan": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "sentie-s-kitchen-southborough": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "9jagrills-oakland": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "swahili-spot-oakland": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "ruths-buka-oakland": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "kendejah-restaurant-san-leandro": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "mimi-s-nook-nigerian-cuisine-livonia": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "detroit-jollof-nigerian-cuisine-detroit": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "fork-in-nigeria-detroit": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "matys-cuisine-detroit": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "house-of-naku-seattle": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "pdj-pass-d-jollof-nigerian-restaurant-seattle": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "east-african-restaurant-seatac": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "rafiki-restaurant-and-lounge-kent": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "gold-coast-kitchen-seattle": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "fly-chef-restaurant-peachtree-corners": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "fad-african-fine-dining-nigerian-restaurant-mableton": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "jollof-city-norcross": {
+    "special_features": "known for Jollof Rice, Pepper Soup, and Plantain; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "boumboumatl-atlanta": {
+    "special_features": "known for Fusion entrées, Shareable appetizers, and Weekend brunch; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "mama-j-nigerian-restaurant-marietta": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "malam-ishaku-suya-baltimore": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "pleroma-cuisine-laurel": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "nuellakitchen-randallstown": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "jolloff-etcetera-silver-spring": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "chefnchop-laurel": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "d-nd-new-york": {
+    "special_features": "known for Chef's tasting plates, Seasonal stews, and House cocktails; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "olaides-kitchen-jersey-city-jersey-city": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "d-salam-african-cuisine-new-york": {
+    "special_features": "known for Jollof rice, Grilled chicken, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "lagos-tsq-new-york": {
+    "special_features": "known for Suya skewers, Jollof rice, and Pepper soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "teranga-midtown-153-e-53rd-st": {
+    "special_features": "known for Jollof rice bowl, Yassa chicken, and Thiou curry; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "oga-suya-clt-charlotte": {
+    "special_features": "known for Beef suya, Jollof rice, and Egusi soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "mama-gees-charlotte": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "serengeti-kitchen-charlotte": {
+    "special_features": "known for Sekela Chicken Chapati Wrap, Swahili Plate, and Braised Lamb Bites; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "zoewees-charlotte": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "samoha-african-cuisine-charlotte": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "obalende-suya-chicago": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "dammney-s-kitchen-morton-grove": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "bisi-restaurant-nigerian-cuisine-schaumburg": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "mogadishu-restaurant-chicago": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "arona-food-place-plano": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "fufudelight-suya-kitchen-arlington": {
+    "special_features": "known for Beef suya, Fufu with egusi, and Jollof rice; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "kannys-restaurant-and-lounge-dallas": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "west-african-way-plano": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "kofoshi-houston": {
+    "special_features": "known for Pepper soup, Fried rice, and Egusi with fufu; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "hunan-cafe-houston": {
+    "special_features": "known for Jollof rice, Light soup, and Grilled tilapia; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "suya-power-house-missouri-city": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "aria-nigerian-suya-kitchen-pearland-pearland": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "vickys-bubbly-cafe-los-angeles": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "flavors-from-afar-hollywood": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "mother-african-cuisine-hawthorne": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "bliss-africa-davie": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "savor-wynwood-miami": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "rejoice-restaurant-and-bar-miami-miami-gardens": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "moji-african-restaurant-north-miami": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "flavors-of-east-africa-san-diego": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "nigeria-breeze-restaurant-national-city": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "african-spices-san-diego": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "taste-of-african-cuisine-san-diego": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "steaming-pots-west-africa-cuisine-tampa": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "taste-of-lagos-gibsonton": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "steaming-pots-west-africa-cuisine-mobile-1-tampa": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "hajaras-kitchen-woodbridge": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "hedzole-washington": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "lagos-district-restaurant-and-lounge-washington": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "gladwin-kitchen-pflugerville": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "suyaverse-grillhouse-austin": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "tailat-kitchen-nigerian-cuisine-austin": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "kitchen234-nigerian-restaurant-austin": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "choukouya-resto-bar-cleveland": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "sandra-aduke-s-kitchen-cleveland": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "afrika-taste-lounge-south-euclid": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "yumvillage-cleveland-cleveland": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "habesha-ethiopian-and-eritrean-restaurant-cleveland": {
+    "special_features": "known for Vegetarian combo, Beef tibs, and Doro wat; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "momos-kebab-moroccan-cleveland-heights": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "taste-of-jamaica-cleveland": {
+    "special_features": "known for Jerk chicken, Oxtail stew, and Curry goat; island spice and homestyle plates; jerk pit smoke and bold pepper."
+  },
+  "island-style-east-cleveland": {
+    "special_features": "known for Jerk chicken, Oxtail stew, and Curry goat; island spice and homestyle plates; jerk pit smoke and bold pepper."
+  },
+  "toyintudun-nigerian-cuisine-akron": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "pats-delicious-nigeria-restaurant-columbus": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "cafe-everest-cleveland": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "the-root-cafe-lakewood": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "anatolia-cafe-turkish-cleveland-heights": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "bottlehouse-brewery-and-meadery-cleveland-heights": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "honest-restaurant-cleveland-parma-heights": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "the-sweet-fix-bakery-cleveland-heights": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "fiyah-korean-bbq-hot-pot-cleveland": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "mesob-cafe-virginia-beach": {
+    "special_features": "known for Vegetarian combo, Beef tibs, and Doro wat; communal injera platters; traditional wats and tibs."
+  },
+  "new-heights-grill-cleveland-heights": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "cafe-tandoor-cleveland": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "boss-dog-brewing-co-cleveland-heights": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "deweys-pizza-cleveland-heights-cleveland-heights": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "accra-express-restaurant-new-york": {
+    "special_features": "known for Jollof rice, Waakye, and Egusi soup with fufu; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "afrospice-bistro-bronx": {
+    "special_features": "known for Curry goat, Jerk chicken, and Plantains; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "accra-bronx": {
+    "special_features": "known for Fufu with light soup, Banku and tilapia, and Kelewele; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "akwaaba-restaurant-brooklyn": {
+    "special_features": "known for Omo tuo, Groundnut soup, and Red-red; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "international-delicious-kitchen-columbus": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "safina-world-restaurant-columbus": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "foodateria-kenyan-nigerian-kitchen-columbus": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "mama-africa-cafe-and-restaurant-denver": {
+    "special_features": "known for Vegetarian combo, Beef tibs, and Doro wat; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "african-grill-and-bar-lakewood-colorado-lakewood": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "tata-nono-kitchen-aurora": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "akwaba-restaurant-aurora": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "the-jollof-buka-indianapolis": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "nathmary-kitchen-avon": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "mega-suya-bar-grill-indianapolis": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "rumaan-somali-restaurant-indianapolis": {
+    "special_features": "known for Chicken suqaar, Goat rice platter, and Sambusa; Somali flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "tasty-african-food-kc-overland-park": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "angies-international-kitchen-kansas-city": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "teetasty-foods-african-restaurant-and-bar-kansas-city": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "african-dream-cuisine-independence-independence": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "my-village-grill-restaurant-kansas-city": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "le-bon-go-t-chez-fa-las-vegas": {
+    "special_features": "known for Call for seasonal specials; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "calabash-african-kitchen-las-vegas": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "taste-of-africas-las-vegas": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "nigerian-food-las-vegas-las-vegas": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "nigerian-cuisine-by-mj-las-vegas": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "addis-nola-new-orleans": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "boma-flavors-of-africa-lake-buena-vista": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "falidelicious-restaurant-5-stars-fl-32773": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "flavors-nigerian-restaurant-orlando": {
+    "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "selam-ethiopian-eritrean-cuisine-orlando": {
+    "special_features": "known for Vegetarian combo, Beef tibs, and Doro wat; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "kalalou-signature-orlando": {
+    "special_features": "known for Jerk chicken, Curry goat, and Plantains; island spice and homestyle plates; jerk pit smoke and bold pepper."
+  },
+  "elle-et-moi-cuisine-llc-raleigh": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "yagg-sii-tenn-authentic-african-cuisine-apex": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "hadys-restaurant-international-cuisine-raleigh": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "nigeria-kitchen-llc-wake-forest": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "naija-cuisine-sacramento": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "afroeatz-authentic-liberian-food-sacramento": {
+    "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "palace-bar-grill-african-restaurant-sacramento": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "chullas-cafe-rocklin": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "gursha-ethiopian-cuisine-roseville": {
+    "special_features": "known for Vegetarian combo, Beef tibs, and Doro wat; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "horn-of-africa-restaurant-salt-lake-city": {
+    "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "kafe-mamai-salt-lake-city": {
+    "special_features": "known for Jerk chicken, Curry goat, and Plantains; island spice and homestyle plates; jerk pit smoke and bold pepper."
+  },
+  "noor-somali-restaurant-salt-lake-city": {
+    "special_features": "known for Chicken suqaar, Goat rice platter, and Sambusa; Somali flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "kente-caf-salt-lake-city": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "oromian-restaurant-salt-lake-city": {
+    "special_features": "known for Vegetarian combo, Beef tibs, and Doro wat; communal injera platters; traditional wats and tibs."
+  },
+  "ultra-kitchen-restaurants-catering-san-antonio": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "ubuntu-cuisine-san-antonio": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "african-village-ethiopian-restaurant-san-antonio": {
+    "special_features": "known for Vegetarian combo, Beef tibs, and Doro wat; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "trices-cafe-and-lounge-san-antonio": {
+    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "afrotex-grill-bowls-burritos-suya-plates-san-antonio": {
+    "special_features": "known for Chicken Suya Plate, Jollof rice bowls, and Burritos; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "safari-houston": {
+    "special_features": "known for Call for seasonal specials; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "bahel-ethiopian-mart-and-dining-houston": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; traditional wats and tibs."
+  },
+  "dee-titolat-african-restaurant-houston": {
+    "special_features": "known for Jollof rice, Meat pie, and Egusi soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "vertex-houston": {
+    "special_features": "known for Veggie combo, Beef tibs, and Doro wat; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "marie-african-flavors": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "osuma-suya-houston": {
+    "special_features": "known for Beef suya, Chicken suya, and Ram suya; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "sabo-suya-houston": {
+    "special_features": "known for Mixed suya platter, Kilishi, and Moi moi; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "bantu-house": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "rodo-nigerian-cuisine-richmond": {
+    "special_features": "known for Amala with ewedu, Egusi soup, and Fried rice; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "suya-on-the-spot-houston": {
+    "special_features": "known for Beef suya, Chicken suya, and Suya wrap; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "abula-hotpot-houston": {
+    "special_features": "known for Abula combo, Amala, and Assorted meat stew; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "amala-joint-houston": {
+    "special_features": "known for Amala with Ewedu & Gbegiri; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "kenna-houston": {
+    "special_features": "known for Lunch combo, Sambusa, and Shiro wat; communal injera platters; traditional wats and tibs."
+  },
+  "harar-ethiopian-restaurant-houston": {
+    "special_features": "known for Kitfo, Doro wat, and Vegetarian combo; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "ewatomi-houston": {
+    "special_features": "known for Efo riro, Jollof rice, and Peppered goat; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "sheba-houston": {
+    "special_features": "known for Sheba combo, Gomen, and Awaze tibs; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "horn-of-africa-houston": {
+    "special_features": "known for Veggie combo, Beef tibs, and Ayib with gomen; communal injera platters; traditional wats and tibs."
+  },
+  "traditional-food-restaurant-houston": {
+    "special_features": "known for Okra soup, Fufu, and Grilled tilapia; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "cafe-de-vivre-houston": {
+    "special_features": "known for Jollof rice, Pepper soup, and Fried plantains; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "glam-divine-treats-houston": {
+    "special_features": "known for Egusi soup, Smothered chicken, and Mac and cheese; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "unique-african-cuisine-houston": {
+    "special_features": "known for Daily special stew, Jollof party tray, and Fufu combo; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "glozi-calabar-restaurant-and-african-cuisine-houston": {
+    "special_features": "known for Afang Soup, Jollof Rice, and Egusi Soup; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "grill-master-african-restaurant-houston": {
+    "special_features": "known for Grilled chicken, Suya, and Fried rice; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "authentic-african-restaurant-bar-houston": {
+    "special_features": "known for Jollof rice, Egusi with pounded yam, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "somali-restaurant-syracuse": {
+    "special_features": "known for Chicken suqaar, Goat stew, and Sambusa; Somali flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "dakar-street-food-blodgett-houston": {
+    "special_features": "known for Thieboudienne, Yassa chicken, and Nem spring rolls; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "chopnblok-montrose-houston": {
+    "special_features": "signature Trad Bowl (Jollof) & Yassa Grill; West African (Fast-Fine) chef-driven dining in Montrose; elevated dining room."
+  },
+  "adulis-houston": {
+    "special_features": "communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "sweetpepper-kitchen-aurora": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "delightful-nigerian-cuisine-orlando": {
+    "special_features": "known for Call for seasonal specials; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "nile-ethiopian-orlando": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "steaming-pots-west-africa-cuisine-brandon-brandon": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "queen-of-sheba-temple-terrace": {
+    "special_features": "known for Call for seasonal specials; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "trybal-african-speakeasy-denver": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "african-food-chavie-spices-denver": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "maandeeq-east-africa-restaurant-aurora": {
+    "special_features": "known for Call for seasonal specials; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "barwaaqo-denver": {
+    "special_features": "known for Call for seasonal specials; East African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "fidel-east-african-restaurant-aurora": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; traditional wats and tibs."
+  },
+  "queen-of-sheba-restaurant-denver": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "geez-habesha-bar-restaurant-aurora": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "mesob-denver": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; traditional wats and tibs."
+  },
+  "5-star-caf-eritrean-restaurant-denver": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "the-ethiopian-restaurant-denver": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "hadnet-cafe-denver": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "abyssinia-ethiopian-restaurant-and-bar-denver": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; traditional wats and tibs."
+  },
+  "megenagna-aurora": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; traditional wats and tibs."
+  },
+  "konjo-ethiopian-food-edgewater": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; traditional wats and tibs."
+  },
+  "lalibela-cafe-denver": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "konjo-ethiopian-food-denver": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "eatopia-eat-ethiopian-aurora": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "lucy-ethiopian-restaurant-denver": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; traditional wats and tibs."
+  },
+  "nile-ethiopian-restaurant-aurora": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; traditional wats and tibs."
+  },
+  "all-stars-cafe-aurora": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; traditional wats and tibs."
+  },
+  "yemen-grill-cafe-denver-denver": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "tuti-grill-denver": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "samosa-shop-denver": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "gursha-ethiopian-restaurant-aurora": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; traditional wats and tibs."
+  },
+  "safta-denver": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "sarr-maimouna-west-african-food-aurora": {
+    "special_features": "known for Call for seasonal specials; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "zula-cafe-lounge-aurora": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; traditional wats and tibs."
+  },
+  "gb-african-market-and-restaurant-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "gen-bagay-restaurant-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "benitas-kitchen-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "marabou-restaurant-and-lounge-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "three-masks-inc-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "kalalou-caribbean-bar-grill-orlando-orlando": {
+    "special_features": "known for Call for seasonal specials; island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "kabsah-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "knalis-kitchen-orlando": {
+    "special_features": "known for Call for seasonal specials; island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "caravan-uzbek-turkish-cuisine-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "chayhana-altamonte-springs": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "saha-w-hana-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "one-lounge-uzbek-turkish-halal-food-hookah-lounge-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "shoufi-mahfi-mediterranean-grill-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "abdo-kabab-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "amar-orlando-mediterranean-restaurant-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "flame-kabob-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "kabab2go-orlando-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "zeytin-turkish-cuisine-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "mamak-asian-street-food-orlando": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "beirut-xpress-orlando-kissimmee": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "sanaa-kissimmee": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "africaribbean-royal-riverview": {
+    "special_features": "known for Call for seasonal specials; island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "mitmita-ethiopian-restaurant-tampa": {
+    "special_features": "known for Call for seasonal specials; communal injera platters; vegetarian fasting options and coffee ceremony."
+  },
+  "byblos-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "la-terrazza-restaurant-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "craft-kafe-st-petersburg": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "abu-naji-restaurant-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "yaya-southern-cuisine-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "asher-amens-african-cafe-tampa": {
+    "special_features": "known for Call for seasonal specials; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality."
+  },
+  "nenes-restaurant-bar-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "chanko-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "hamada-maqluba-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "nana-street-food-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "hamada-kabob-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "abu-omar-halal-tampa-fl-temple-terrace": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "taste-of-yemen-restaurant-temple-terrace": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "greenland-restaurant-at-busch-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "gorkhali-kitchen-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "kabob-cafe-grill-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "fire-up-halal-grill-temple-terrace": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "shawarma-asham-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "moms-restaurant-haitian-cuisine-bakery-tampa": {
+    "special_features": "known for Call for seasonal specials; island spice and homestyle plates; Caribbean comfort cooking."
+  },
+  "rosenheim-restaurant-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "istanbul-mediterranean-grill-market-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "olive-tree-by-chef-yousef-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  },
+  "the-dough-show-tampa-tampa": {
+    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality."
+  }
+}
