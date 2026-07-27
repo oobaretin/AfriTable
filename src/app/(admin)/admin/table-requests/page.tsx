@@ -5,6 +5,8 @@ import { redirect } from "next/navigation";
 import { format, parseISO } from "date-fns";
 import { createSupabaseAdminClient, createSupabaseServerClient } from "@/lib/supabase/server";
 import { getRestaurantByIdFromJSON } from "@/lib/restaurant-json-loader-server";
+import { buildQueueSummary, buildTableRequestAssist } from "@/lib/admin/table-request-assist";
+import { TableRequestAssistPanel } from "@/components/admin/TableRequestAssistPanel";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -76,6 +78,7 @@ function formatPreferredVisit(request: TableRequest): string {
 type RestaurantContact = {
   phone: string | null;
   website: string | null;
+  instagram: string | null;
 };
 
 async function loadRestaurantContacts(
@@ -90,6 +93,7 @@ async function loadRestaurantContacts(
     contacts.set(request.restaurant_slug, {
       phone: json?.phone?.trim() || null,
       website: json?.website?.trim() || null,
+      instagram: json?.social?.instagram?.trim() || null,
     });
   }
 
@@ -99,10 +103,11 @@ async function loadRestaurantContacts(
     for (const row of rows ?? []) {
       const slug = row.slug;
       if (!slug) continue;
-      const existing = contacts.get(slug) ?? { phone: null, website: null };
+      const existing = contacts.get(slug) ?? { phone: null, website: null, instagram: null };
       contacts.set(slug, {
         phone: existing.phone || row.phone?.trim() || null,
         website: existing.website || row.website?.trim() || null,
+        instagram: existing.instagram,
       });
     }
   }
@@ -154,6 +159,28 @@ export default async function AdminTableRequestsPage({
     .select("*", { count: "exact", head: true })
     .eq("status", "pending");
 
+  const pendingForSummary =
+    statusFilter === "pending"
+      ? [...requests].reverse()
+      : (
+          await supabaseAdmin
+            .from("table_requests")
+            .select("restaurant_name,preferred_date,time_preference,party_size,created_at")
+            .eq("status", "pending")
+            .order("created_at", { ascending: true })
+            .limit(50)
+        ).data ?? [];
+
+  const queueSummary = buildQueueSummary(
+    pendingForSummary.map((r) => ({
+      restaurantName: r.restaurant_name,
+      preferredDate: r.preferred_date,
+      timePreference: r.time_preference,
+      partySize: r.party_size,
+      createdAt: r.created_at,
+    })),
+  );
+
   return (
     <Container className="py-10 md:py-14">
       <PageHeader
@@ -180,6 +207,12 @@ export default async function AdminTableRequestsPage({
           </ol>
         </CardContent>
       </Card>
+
+      {queueSummary ? (
+        <Card className="mt-4 border-blue-200 bg-blue-50/60">
+          <CardContent className="py-3 text-sm text-blue-950">{queueSummary}</CardContent>
+        </Card>
+      ) : null}
 
       <div className="mt-4 flex flex-wrap items-center gap-2">
         {STATUS_FILTERS.map((s) => (
@@ -235,6 +268,20 @@ export default async function AdminTableRequestsPage({
                   const contact = restaurantContacts.get(request.restaurant_slug);
                   const restaurantPhone = contact?.phone ?? null;
                   const restaurantWebsite = contact?.website ?? null;
+                  const assist = buildTableRequestAssist({
+                    referenceCode: referenceCode(request.id),
+                    restaurantName: request.restaurant_name,
+                    guestName: request.guest_name,
+                    guestEmail: request.guest_email,
+                    guestPhone: request.guest_phone,
+                    preferredDate: request.preferred_date,
+                    timePreference: request.time_preference,
+                    partySize: request.party_size,
+                    specialRequests: request.special_requests,
+                    phone: restaurantPhone,
+                    website: restaurantWebsite,
+                    instagram: contact?.instagram ?? null,
+                  });
                   return (
                     <TableRow key={request.id}>
                       <TableCell className="whitespace-nowrap align-top">
@@ -288,6 +335,11 @@ export default async function AdminTableRequestsPage({
                       </TableCell>
                       <TableCell className="align-top text-right">
                         <div className="flex flex-col items-end gap-2">
+                          <TableRequestAssistPanel
+                            restaurantName={request.restaurant_name}
+                            guestEmail={request.guest_email}
+                            assist={assist}
+                          />
                           {restaurantPhone ? (
                             <Button asChild size="sm">
                               <a href={`tel:${restaurantPhone}`}>Call restaurant</a>
