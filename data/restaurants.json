@@ -11690,7 +11690,12 @@
     "website": "https://trybalafricanspeakeasy.com/",
     "google_place_id": "ChIJ9V7_ouV5bIcRGnin4i8rwYo",
     "lat": 39.7471777,
-    "lng": -104.9928679
+    "lng": -104.9928679,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWml8uTJGP7zHaGwMRx0MJAVUMuNW1-tIlBqn9Ut6wAeXxnoIdjaZNhRO-GIaRbmWdPoar8kIj9_QStzNZNoYLtmZHx60C5-4fU598jcjG2XVfBBC09j9fiHeOpZrixma9T5UWqrQHJtWpqR=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmLCqrb-kUpZThAtgoWbGOC_EvqVHI5aJRS97zfEm5Bmt_cD8TN-ABfqgk4nqNCqPZy3BwRNpaHMzGh_KHcPskBOjzvsCE067balcKZ3zi6zKGRLWNCp_Spg4pmrPBlmT5diGeRm_Wt5PqA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlOFq9vbKx4PQhYhKj8UwIvIJ8bbos4rdpX_zH4JmxjiO1ILApzERQ9mN2OYJ_HltlIZYoVLT0Z90ooE_ZkRCLk62M6l4oylGDO0U-QevW54Vgdi3fPHRZ0S12mJCPKGQTnGk49xo1C2Xci=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "african-food-chavie-spices-denver",
@@ -11716,7 +11721,12 @@
     "website": "https://www.instagram.com/african_food_chavie_spices?igsh=MWphMmMwcjFweHV1eg%3D%3D&utm_source=qr",
     "google_place_id": "ChIJmSv8X3aHbIcRBli8reArGDI",
     "lat": 39.6376468,
-    "lng": -104.90631739999999
+    "lng": -104.90631739999999,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk4E5u7Jo5pynUqV0mPTLS6N5BFnpV1N5EsYiian6zdAEz3ugdEIV7rYpwPCV-5ARpYf477pFW_uDt55vY7N_fMX9nPxGEvpF1AkLioffQWbXqbOozMHYi87x2to2Dehs44OtjlxucSuiw8=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlgLDTdzQFlak8owRhE6M1_gNItgd8AJZZW024E0q-A4qUTOeKl1IqATNLBjnJvN8taiHNEO0re3-tswSMe9DNAfPmTrekdcR9Hit_m9-j52hb7Deve8EIg0rQ3Wl00MzZhw5RO_OFhh9U8=w1000-h1000-c-n",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=l8yDZopLLuJbBU4I5rRV1A&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=197.76007&pitch=0&thumbfov=100"
+    ]
   },
   {
     "id": "maandeeq-east-africa-restaurant-aurora",
@@ -11742,7 +11752,12 @@
     "website": "https://maandeeqcafe.square.site/",
     "google_place_id": "ChIJPZSNgkF9bIcR4lJ27K970bA",
     "lat": 39.6888456,
-    "lng": -104.8672161
+    "lng": -104.8672161,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl3vxEnT8AKlvtNxTaFjvmSNWvkbDNl7JYLWGZLJR3o-JOixp2r6PNQ9uQZyjcUwIETvLuEB66IyqJ6k2ezVgG6iKYbCFdmBPPncq955x0AOl148qnWZUtv8SJMePBr6fFhMMnGqA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlAkqBAiIPJSzzNYW7R4fSobxZcV5XJ6_oeUB4yJvEomxz4NEwElbgoGa95oJXwPNC0-HpD3Zt6oa02xvFloaPI7i8mYcmGGNoOs2csRe8sA7TooPk6wJ_aMFiNI_893RXAuJlg=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkR0nMr15G1uqI4qbNteNh2YgZOcb150YnjWHC_eEpcnV6IRFO4qcUEhh9MMSOTfKb4MY6FbQPGrokPgD27zRB0BbeB6UDNqfzn1UjIuXdTJOoEMhNN34zb7kKSTSS4yVlt8xbb=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "barwaaqo-denver",
@@ -11768,7 +11783,11 @@
     "website": "https://foodhere.co/barwaaqo",
     "google_place_id": "ChIJLWjPKT59bIcRQxDckYpPkLU",
     "lat": 39.696276499999996,
-    "lng": -104.8688543
+    "lng": -104.8688543,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkqSg6Fx83gFRZO0C7Zly5MYQ6KIecEPONWdE-kgKcQ6EYFPyACR8frTuAQlL0uZBz7z6o4a9CKmctfX7w_lBjvmhQ24NL8ZGOXM4YhYIpdc-hxTHcs8my-1mrqp5BsMM8Li9G8-S7aY7M=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn1drBJTWOgfQdFMHAa_2fhl5jjdZXEd2tLsltXFZgRtdjd3odW6uruXFzJC9Ll4bVCkrDhkh8WTB-RTKjx7-p3FJABQGCTrWteQVsaWvkadYGLCU2V6evoLb1kNwmQMTHh5DSwMA=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "fidel-east-african-restaurant-aurora",
@@ -11795,7 +11814,12 @@
     "lat": 39.697366599999995,
     "lng": -104.8632714,
     "website": "https://www.facebook.com/FidelResturant/",
-    "google_search_url": "https://www.google.com/search?q=Fidel%20East%20African%20Restaurant%2C%201074%20S%20Ironton%20St%2C%20Aurora%2C%20CO%2080012"
+    "google_search_url": "https://www.google.com/search?q=Fidel%20East%20African%20Restaurant%2C%201074%20S%20Ironton%20St%2C%20Aurora%2C%20CO%2080012",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=y7OvQIMZJtoLuEKz9E3DCA&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=115.230064&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmEwCR2Vfss7gHYZGO79ShIxtxZBYWQidXleo1j-TBCj4pgK1ikrUP45PrJlzEIRYh2uPJWa7kCr7bTvjYQDlNJt19RJQX3yX3nTy7te4leRN84a6_3C91ycIIus41LOarWPVsKnw=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnhbLuGnFl4QwdXa57OqZ5I-W_fhkePEMsr2rg8A-dGb6t0D6s54_GEM0pgCYn0hQ_sKqJHNQgNWU-8rIkCZf1Pc2ItvzbS3Es9cg-w2_G2hBJOEvdvoUmLjnGQqApeTz8HNQc=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "queen-of-sheba-restaurant-denver",
