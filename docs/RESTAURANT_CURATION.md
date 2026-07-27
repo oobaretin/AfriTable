@@ -85,7 +85,7 @@ Afro Caribbean Grill (Houston) — food truck, takeout-only — **removed**.
 
 Igatap African Caribbean Cuisine — misclassified SNAP/grocery address — **removed**.
 
-No verified URL yet: Benita's Kitchen (Chevron counter spot; dine-in confirmed, no social page found).
+No verified URL yet: ~~Benita's Kitchen~~ — resolved in batch 10 via Google Business profile.
 
 ### Website batch 9 (Jul 2026, Colorado — remaining)
 
@@ -97,6 +97,16 @@ No verified URL yet: Benita's Kitchen (Chevron counter spot; dine-in confirmed, 
 | Sarr Maimouna West African Food (Denver) | facebook.com/SarrMaimounaKitchen |
 
 Corrected Sarr Maimouna address: 10004 E Colfax (Aurora scrape) → **5091 E Colfax Ave, Denver** (Westword / Uber Eats).
+
+### Website batch 10 (Jul 2026, final queue)
+
+| Listing | Website |
+|---------|---------|
+| AMAYE International Restaurant (Portland) | instagram.com/amayeskitchenpdx |
+| Mega Suya Bar & Grill (Indianapolis) | instagram.com/megasuyabarandgrill |
+| Benita's Kitchen (Orlando) | Google Maps business profile (no verified social page) |
+
+Website research queue cleared — **0** listings missing operator URLs.
 
 ### Website batch 5 (Jul 2026, non–TX/CO/FL)
 

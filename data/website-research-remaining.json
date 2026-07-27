@@ -1,23 +1,4 @@
 {
-  "count": 3,
-  "listings": [
-    {
-      "id": "amaye-international-restaurant-portland",
-      "name": "AMAYE International Restaurant",
-      "state": "OR",
-      "address": "8000 NE Glisan St, Portland, OR 97213"
-    },
-    {
-      "id": "mega-suya-bar-grill-indianapolis",
-      "name": "Mega Suya Bar & Grill",
-      "state": "IN",
-      "address": "3081 N High School Rd, Indianapolis, IN 46224"
-    },
-    {
-      "id": "benitas-kitchen-orlando",
-      "name": "Benita's Kitchen",
-      "state": "FL",
-      "address": "Inside The Chevron Gas Station, 5419 Silver Star Rd, Orlando, FL 32808"
-    }
-  ]
+  "count": 0,
+  "listings": []
 }
