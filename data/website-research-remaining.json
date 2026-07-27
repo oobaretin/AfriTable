@@ -1,5 +1,5 @@
 {
-  "count": 57,
+  "count": 55,
   "listings": [
     {
       "id": "fufudelight-suya-kitchen-arlington",
@@ -242,12 +242,6 @@
       "address": "4750 Nolensville Pk, Nashville, TN 37211"
     },
     {
-      "id": "african-village-ethiopian-restaurant-san-antonio",
-      "name": "African Village Ethiopian restaurant",
-      "state": "TX",
-      "address": "10918 Wurzbach Rd #131, San Antonio, TX 78230"
-    },
-    {
       "id": "afro-caribbean-grill",
       "name": "Afro Caribbean Grill",
       "state": "TX",
@@ -318,12 +312,6 @@
       "name": "Traditional Food Restaurant",
       "state": "TX",
       "address": "11214 Plainfield St # B, Houston, TX 77031"
-    },
-    {
-      "id": "unique-african-cuisine-houston",
-      "name": "Unique African Cuisine",
-      "state": "TX",
-      "address": "6101 Wilcrest Dr, Houston, TX 77072"
     },
     {
       "id": "vertex-houston",
