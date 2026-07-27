@@ -12,6 +12,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataPath = join(__dirname, "..", "data", "restaurants.json");
 const enrichmentsPath = join(__dirname, "..", "data", "catalog-metro-copy-enrichments.json");
+const nationwidePath = join(__dirname, "..", "data", "catalog-nationwide-copy-enrichments.json");
 const logPath = join(__dirname, "..", ".cursor", "debug-3435b4.log");
 const sessionId = "3435b4";
 
@@ -62,7 +63,14 @@ const TEMPLATED_ABOUT_RE =
 
 function main() {
   const catalog = JSON.parse(readFileSync(dataPath, "utf8"));
-  const enrichments = JSON.parse(readFileSync(enrichmentsPath, "utf8"));
+  const metro = JSON.parse(readFileSync(enrichmentsPath, "utf8"));
+  let nationwide = {};
+  try {
+    nationwide = JSON.parse(readFileSync(nationwidePath, "utf8"));
+  } catch {
+    // nationwide enrichments optional until generated
+  }
+  const enrichments = { ...metro, ...nationwide };
 
   const stats = {
     copyUpdated: 0,

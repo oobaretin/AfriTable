@@ -44,6 +44,8 @@
     "scrape:city:py": "python3 scripts/scrape-cities-serpapi.py",
     "cleanup:scrape-batch": "python3 scripts/cleanup-scrape-batch.py",
     "fix:scrape-copy": "python3 scripts/fix-scrape-templated-copy.py",
+    "generate:copy-enrichments": "python3 scripts/generate-nationwide-copy-enrichments.py",
+    "apply:copy-enrichments": "python3 scripts/apply-copy-enrichments.py",
     "sync:images": "python3 scripts/sync-catalog-images-to-supabase.py",
     "discover:websites": "tsx scripts/discover-restaurant-websites.ts --needs-website",
     "discover:websites:py": "python3 scripts/discover-restaurant-websites.py --only-missing",
