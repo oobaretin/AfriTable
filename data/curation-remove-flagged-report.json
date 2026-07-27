@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-07-27T18:17:56Z",
+  "dryRun": false,
+  "removed": [
+    {
+      "id": "tfk-african-food-tampa",
+      "name": "Tfk African food.",
+      "state": "FL",
+      "address": "5100 N Nebraska Ave, Tampa, FL 33603",
+      "reason": "No working operator website (404)"
+    },
+    {
+      "id": "primo-african-quisine-cleveland",
+      "name": "Primo African Quisine",
+      "state": "OH",
+      "address": "2123 E 2nd St, Cleveland, OH 44115",
+      "reason": "Permanently closed (MapQuest / directory status)"
+    },
+    {
+      "id": "taste-cleveland-heights",
+      "name": "Taste",
+      "state": "OH",
+      "address": "2317 Lee Rd, Cleveland Heights, OH 44118",
+      "reason": "Contemporary American wine bar \u2014 outside African/Caribbean scope"
+    },
+    {
+      "id": "nini-kitchen-houston",
+      "name": "Nini Kitchen",
+      "state": "TX",
+      "address": "7627 Cook Rd, Houston, TX 77072",
+      "reason": "Website candidate matched wrong business (Marietta, GA)"
+    },
+    {
+      "id": "nazareth-cafe-houston",
+      "name": "Nazareth Cafe",
+      "state": "TX",
+      "address": "6617 Chimney Rock Rd, Houston, TX 77081",
+      "reason": "Permanently closed (MapQuest)"
+    },
+    {
+      "id": "sudan-cafe-denver",
+      "name": "Sudan Cafe",
+      "state": "CO",
+      "address": "10375 E Iliff Ave, Denver, CO 80247",
+      "reason": "No working operator website; listing unverifiable"
+    },
+    {
+      "id": "moroccan-breeze-restaurant-orlando",
+      "name": "Moroccan Breeze Restaurant",
+      "state": "FL",
+      "address": "9404 S Orange Blossom Trl, Orlando, FL 32837",
+      "reason": "Morocco tour company, not a restaurant"
+    },
+    {
+      "id": "worlds-magic-restaurant-orlando",
+      "name": "World's Magic Restaurant",
+      "state": "FL",
+      "address": "7044 International Dr, Orlando, FL 32819",
+      "reason": "Unverifiable operator; associated domain hijacked"
+    }
+  ],
+  "beforeCount": 439,
+  "afterCount": 431
+}

@@ -1,5 +1,5 @@
 {
-  "count": 46,
+  "count": 37,
   "listings": [
     {
       "id": "ponti-ivorian-houston",
@@ -56,24 +56,6 @@
       "address": "563 E 26th St, Brooklyn, NY 11210"
     },
     {
-      "id": "tfk-african-food-tampa",
-      "name": "Tfk African food.",
-      "state": "FL",
-      "address": "5100 N Nebraska Ave, Tampa, FL 33603"
-    },
-    {
-      "id": "primo-african-quisine-cleveland",
-      "name": "Primo African Quisine",
-      "state": "OH",
-      "address": "2123 E 2nd St, Cleveland, OH 44115"
-    },
-    {
-      "id": "taste-cleveland-heights",
-      "name": "Taste",
-      "state": "OH",
-      "address": "2317 Lee Rd, Cleveland Heights, OH 44118"
-    },
-    {
       "id": "the-social-room-cleveland-heights",
       "name": "The Social Room",
       "state": "OH",
@@ -122,12 +104,6 @@
       "address": "1903 Blodgett St, Houston, TX 77004"
     },
     {
-      "id": "nini-kitchen-houston",
-      "name": "Nini Kitchen",
-      "state": "TX",
-      "address": "7627 Cook Rd, Houston, TX 77072"
-    },
-    {
       "id": "selam-houston",
       "name": "Selam",
       "state": "TX",
@@ -138,12 +114,6 @@
       "name": "Ewatomi",
       "state": "TX",
       "address": "15000 Bellaire Blvd ste q, Houston, TX 77083"
-    },
-    {
-      "id": "nazareth-cafe-houston",
-      "name": "Nazareth Cafe",
-      "state": "TX",
-      "address": "6617 Chimney Rock Rd, Houston, TX 77081"
     },
     {
       "id": "traditional-food-restaurant-houston",
@@ -206,12 +176,6 @@
       "address": "350 Havana St, Aurora, CO 80010"
     },
     {
-      "id": "sudan-cafe-denver",
-      "name": "Sudan Cafe",
-      "state": "CO",
-      "address": "10375 E Iliff Ave, Denver, CO 80247"
-    },
-    {
       "id": "sarr-maimouna-west-african-food-aurora",
       "name": "Sarr Maimouna West African Food",
       "state": "CO",
@@ -224,22 +188,10 @@
       "address": "1121 S Peoria St, Aurora, CO 80012"
     },
     {
-      "id": "gb-african-market-and-restaurant-orlando",
-      "name": "GB African Market and Restaurant",
-      "state": "FL",
-      "address": "2516 W Colonial Dr, Orlando, FL 32804"
-    },
-    {
       "id": "igatap-african-caribbean-cuisine-orlando",
       "name": "Igatap African Caribbean Cuisine",
       "state": "FL",
       "address": "2620 N Hiawassee Rd, Orlando, FL 32818"
-    },
-    {
-      "id": "moroccan-breeze-restaurant-orlando",
-      "name": "Moroccan Breeze Restaurant",
-      "state": "FL",
-      "address": "9404 S Orange Blossom Trl, Orlando, FL 32837"
     },
     {
       "id": "benitas-kitchen-orlando",
@@ -252,12 +204,6 @@
       "name": "Marabou Restaurant and Lounge",
       "state": "FL",
       "address": "4083 W Oak Ridge Rd, Orlando, FL 32809"
-    },
-    {
-      "id": "worlds-magic-restaurant-orlando",
-      "name": "World's Magic Restaurant",
-      "state": "FL",
-      "address": "7044 International Dr, Orlando, FL 32819"
     },
     {
       "id": "niimatallaah-tampa",

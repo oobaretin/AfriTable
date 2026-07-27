@@ -7935,39 +7935,6 @@
     ]
   },
   {
-    "id": "tfk-african-food-tampa",
-    "name": "Tfk African food.",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 3.8,
-    "address": "5100 N Nebraska Ave, Tampa, FL 33603",
-    "phone": "(708) 735-5701",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Tampa African restaurant on 5100 N Nebraska Ave, known for jollof rice, stewed meats, and seasonal specials.",
-    "our_story": "Tfk African food. serves african flavors to diners in Tampa and surrounding communities.",
-    "cultural_roots": "Pan-African diaspora flavors across the continent's many culinary regions.",
-    "menu_highlights": [
-      "Jollof rice",
-      "Stewed meats",
-      "Seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "FL",
-    "google_place_id": "ChIJBX-VS-nDwogRDOd6XAcyoIw",
-    "lat": 27.992148099999998,
-    "lng": -82.4514737,
-    "google_search_url": "https://www.google.com/search?q=Tfk%20African%20food.%2C%205100%20N%20Nebraska%20Ave%2C%20Tampa%2C%20FL%2033603",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlwYm8-9jub1FnmuAJoXorhkc_hl2oS1iartUUQJqpPl3-z8QeiqqLQfCTwJLqrpjV7drxwU3gn8Ml5NBh-oXOjmq7a1YNv5C--XB9XeMPGXIAzV2VtCGIwPox4SytpQbP2DwjRIw=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkDd9cmiwmTKND11U9D77LTL5jPrVOpu7B4OSuh0T86JwFAE5hpEvB9f95cB0V8W0ViZLNcALPqg8Jvc0bC7_koEl4KFPjUnv7f9cE6a4Zn4_dkqM26ar9SeSf5UTyLNscrWLegxA=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn7MsrtVpkqPdxURhvoBA7AlSQJdBZBfEdA8gf0FaI2hiSK4X8MSjIdnLRHBvrhB4MntOaRNR_tuhnaOOffp9XhFG3cASz6aVwPsfgy_K1k3yFI74iPJYCT3UPzda9XO26cW5Yy=w1000-h1000-c-n"
-    ]
-  },
-  {
     "id": "hajaras-kitchen-woodbridge",
     "name": "Hajara's Kitchen",
     "cuisine": "West African",
@@ -8511,39 +8478,6 @@
     ]
   },
   {
-    "id": "primo-african-quisine-cleveland",
-    "name": "Primo African Quisine",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$$",
-    "rating": 4,
-    "address": "2123 E 2nd St, Cleveland, OH 44115",
-    "phone": "(216) 400-6207",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Cleveland African restaurant on 2123 E 2nd St, known for jollof rice, stewed meats, and seasonal specials.",
-    "our_story": "Primo African Quisine serves african flavors to diners in Cleveland and surrounding communities.",
-    "cultural_roots": "Pan-African diaspora flavors across the continent's many culinary regions.",
-    "menu_highlights": [
-      "Jollof rice",
-      "Stewed meats",
-      "Seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "OH",
-    "google_place_id": "ChIJPbPbx_f7MIgRLELKr4druak",
-    "lat": 41.4976376,
-    "lng": -81.6906171,
-    "google_search_url": "https://www.google.com/search?q=Primo%20African%20Quisine%2C%202123%20E%202nd%20St%2C%20Cleveland%2C%20OH%2044115",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkKKoWWhSRkNIN8A_xH5-nBJfnSyopfHDlS6BWKz1B_vCpLh7Bc4WcdjirDgnLoCClK37sPkMa9PhjiWHTjMkrHEFGkE0spJW0V4ryl6gYyPzvTvvKaT0s914KHBRRQW-v5odo=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnSnpGgSnGfgaUwRT2mvqE0F3eESk_BRfChPShkZ0lmDeL_FRGXR6pG9SQN2hkI3LiBnNew-KClQwCeiw1_7GGTvPHTlIzenlqeS_kpInfGaO6L4vN9lkqRO-oXgwJ4Up8qNN79Ag=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnA636pfz86LjlAiT4Nt82zcTtLtLHA4yaeWSQhbTa2v9Act3BRQBKkyMA84gi6Do_1jLxHQTtmTd9F4el8JmP3ydD-RuPlCm3AQetzDP7AMbrrL0KRi8haOYGYtb2esjlNlVC2=w1000-h1000-c-n"
-    ]
-  },
-  {
     "id": "pats-delicious-nigeria-restaurant-columbus",
     "name": "Pat's Delicious Nigeria Restaurant",
     "cuisine": "African",
@@ -8711,39 +8645,6 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkLx_5kdzI_lyudjmL_83yY2493hAZG5va6y7eE8uDWmRhzAEE0YBLT2vTxdZ6A77ejhskn1b8TDFTh6Vrl3f55yii5mF5_U6nGVbHAUhP0Fe1ytqvUl6KQRxogyYEseck7bPlsGurefg0=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkR8pfKFf7KAHqbPpTGyRVZZ-pCSQwzFvAe8YQzCi5AFdIgwmMJMUGloIMSDkUZCYbecSe-YbBICCqwlihQWrp3R8t4Wj8_ZwmH6laMNwNztoQES07GxTAv4BbfTq-pRYKdUAQI=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlYABwWzEi03ccCGFdsh8NsNQ63hZyOAwqsIHlP0dhVVUtOZdGVByjpR4nLXZqpFGb5fhRoEDQoS-uGy8Ui4gzI5HF5vvKZiZaxmHdzrIO4i9vHH3ydI9mdhfFnYiafAmL3pC5F=w1000-h1000-c-n"
-    ]
-  },
-  {
-    "id": "taste-cleveland-heights",
-    "name": "Taste",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.3,
-    "address": "2317 Lee Rd, Cleveland Heights, OH 44118",
-    "phone": "(216) 932-9100",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Cleveland Heights African restaurant on 2317 Lee Rd, known for jollof rice, stewed meats, and seasonal specials.",
-    "our_story": "Taste serves african flavors to diners in Cleveland Heights and surrounding communities.",
-    "cultural_roots": "Pan-African diaspora flavors across the continent's many culinary regions.",
-    "menu_highlights": [
-      "Jollof rice",
-      "Stewed meats",
-      "Seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "OH",
-    "google_place_id": "ChIJH2Ho4lP8MIgRmobXhGkDzqg",
-    "lat": 41.4966635,
-    "lng": -81.5649505,
-    "google_search_url": "https://www.google.com/search?q=Taste%2C%202317%20Lee%20Rd%2C%20Cleveland%20Heights%2C%20OH%2044118",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlYjSZI7q0ZbYMqwXRP1Nv5F1QipjihL7J7EXiVfqt64OaIFDvbGdGGenZq7HlOIlGVAdsYF07YWb5adyQPHkTFEXXAiMK30rbbG3xWkHXzgzaNfHx6hPT3Egi24GEQaYrksSv6dA=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmO6xVZVle2_c-P8r2s5shul0wXXI-vgHgKj7f9_1uucUFFRGupyb3afIpgEwTX3H5vIi7hfORubluFLnU0Jrmu9sUQ-8M__e_78mz-biRMDXRV9aA7-XdcYs319nFL6kEyKWZncQ=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkgxSTADQ7gAvZTeWA9gWWZy03Bxq48QEYu0AdNmE5QdhV8etmVnMxmEWJhkoBS3zjUGrLXz_FakIRvOoLb0Oa_JbJaSt5HOuxfVPkT3JodTHj8YRWdclgJWC0eHdoP8Y-uC8F1=w1000-h1000-c-n"
     ]
   },
   {
@@ -10996,36 +10897,6 @@
     "google_place_id": "ChIJFZuTyAvdQIYRGIpwMkHY514"
   },
   {
-    "id": "nini-kitchen-houston",
-    "name": "Nini Kitchen",
-    "cuisine": "West African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.6,
-    "address": "7627 Cook Rd, Houston, TX 77072",
-    "phone": "(832) 235-8526",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "West African kitchen on Cook Road in Chinatown serving pepper soup, jollof, and swallow combos.",
-    "our_story": "Nini Kitchen is a neighborhood spot for Nigerian and Ghanaian lunch plates in southwest Houston.",
-    "cultural_roots": "West African chop-bar staples adapted for Houston's international district.",
-    "menu_highlights": [
-      "Pepper soup",
-      "Jollof rice",
-      "Fufu with soup"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Nini%20Kitchen%2C%207627%20Cook%20Rd%2C%20Houston%2C%20TX%2077072",
-    "images": [
-      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=VR_Eu61B9UpL3iK8MMpBMw&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=114.41985&pitch=0&thumbfov=100",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk8SCPDpEcyWLDr1ffgOhsALTKyqZgkw8xELpfWgqQs-ZNMRELzP-hCwUdm7MNlOmXaJAzwx-OAVUpPomti_jT132qBryfeaVY51mlMghMiMTuI-Mi5yrJqL7oT786QsfiWYVTbYf97rW5y=w1000-h1000-c-n"
-    ],
-    "google_place_id": "ChIJCXlb1QzdQIYRi_B36HSLKIw"
-  },
-  {
     "id": "sabo-suya-houston",
     "name": "Sabo Suya",
     "cuisine": "West African",
@@ -11472,37 +11343,6 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnBpBVwCqFr_ZuwjwLjkPAARfebqv3keuMuSuDTiWeLME0wR_cB_uzPrw5GJD65I_I80JkHb_nKtkXBZZOKm6571yhEbMJPDFbaRuYgeEVMEEMt9MtsdgWkjDSl0qn7b95Sv4vuzQ=w1000-h1000-c-n"
     ],
     "google_place_id": "ChIJSaXCh7XDQIYRjiUGI0W0vXI"
-  },
-  {
-    "id": "nazareth-cafe-houston",
-    "name": "Nazareth Cafe",
-    "cuisine": "Ethiopian",
-    "region": "East African",
-    "price_range": "$",
-    "rating": 3.8,
-    "address": "6617 Chimney Rock Rd, Houston, TX 77081",
-    "phone": "(713) 218-9883",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Chimney Rock Ethiopian cafe popular for lunch combos, coffee, and quick vegetarian plates.",
-    "our_story": "Nazareth Cafe is a weekday staple for Houston's Ethiopian community near Gulfton.",
-    "cultural_roots": "Ethiopian caf\u00e9 fare and traditional coffee roasting.",
-    "menu_highlights": [
-      "Fasting combo",
-      "Chicken tibs",
-      "Ethiopian coffee"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Nazareth%20Cafe%2C%206617%20Chimney%20Rock%20Rd%2C%20Houston%2C%20TX%2077081",
-    "images": [
-      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Js1Qg-F-7siFXiKuppsLeg&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=79.4414&pitch=0&thumbfov=100",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmE73BaduWfyJPofUFJlHEYdKTYl_TlcaJ_d_FEobqyqmq3dz4gBbBNKx6yDHBAuS3YyYvqtt0-EdTDdEuHlNUJ1R9sxxSE3KMPXy5kPV0QUSf40ibbcL36s-TiMTU4jaZlQWmOIQ=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-proxy/ALd4DhFLgrkYiXa0r-qAswjrK_PRyKe0ZgsreDjO78oJGP7EH7-btn5FK92w6MMpTcrgSbriLpsV7Nps0HPYxcaN06j9EER2LENw4dG1Rw0AL38J6DnNQ69Muqgx_2nj9nmUL3Io6M9fyUQROIwRwaj8HX_IhTpd3tEGXqwkqGQPjyHE3k0KphDY4wRWVml970pfhE30ny4=w1000-h1000-c-n"
-    ],
-    "google_place_id": "ChIJn3U9RojBQIYRf5tQifvZ8hI"
   },
   {
     "id": "traditional-food-restaurant-houston",
@@ -12565,31 +12405,6 @@
     "lng": -104.8653574
   },
   {
-    "id": "sudan-cafe-denver",
-    "name": "Sudan Cafe",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.5,
-    "address": "10375 E Iliff Ave, Denver, CO 80247",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "about": "Sudan Cafe serves African flavors in Denver. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food.",
-    "our_story": "AfriTable listing for Sudan Cafe in Denver. Hours and menu details should be confirmed with the restaurant directly.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "CO",
-    "phone": "(303) 337-7409",
-    "google_place_id": "ChIJERWmuF99bIcRNHLaOHuGCgs",
-    "lat": 39.6752539,
-    "lng": -104.86701269999999
-  },
-  {
     "id": "yemen-grill-cafe-denver-denver",
     "name": "Yemen Grill & Cafe Denver",
     "cuisine": "African",
@@ -12791,7 +12606,9 @@
     "phone": "(407) 237-7918",
     "google_place_id": "ChIJifaoint754gREsy1yDZiUd8",
     "lat": 28.5507878,
-    "lng": -81.4121789
+    "lng": -81.4121789,
+    "website": "https://africanmarketandeatery.com/",
+    "google_search_url": "https://www.google.com/search?q=GB%20African%20Market%20and%20Restaurant%2C%202516%20W%20Colonial%20Dr%2C%20Orlando%2C%20FL%2032804"
   },
   {
     "id": "igatap-african-caribbean-cuisine-orlando",
@@ -12842,31 +12659,6 @@
     "google_place_id": "ChIJOWe3ukZ554gRtQKh_JWaPJU",
     "lat": 28.5525481,
     "lng": -81.47096379999999
-  },
-  {
-    "id": "moroccan-breeze-restaurant-orlando",
-    "name": "Moroccan Breeze Restaurant",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.5,
-    "address": "9404 S Orange Blossom Trl, Orlando, FL 32837",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "about": "Moroccan Breeze Restaurant serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food.",
-    "our_story": "AfriTable listing for Moroccan Breeze Restaurant in Orlando. Hours and menu details should be confirmed with the restaurant directly.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "FL",
-    "phone": "(407) 730-4698",
-    "google_place_id": "ChIJV3lyrOp954gRHR4nWNIIS8U",
-    "lat": 28.424494199999998,
-    "lng": -81.40651749999999
   },
   {
     "id": "benitas-kitchen-orlando",
@@ -12943,31 +12735,6 @@
     "google_place_id": "ChIJzabhW1V654gRWM93i8HNtIU",
     "lat": 28.553118299999998,
     "lng": -81.3944005
-  },
-  {
-    "id": "worlds-magic-restaurant-orlando",
-    "name": "World's Magic Restaurant",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.8,
-    "address": "7044 International Dr, Orlando, FL 32819",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "about": "World's Magic Restaurant serves African flavors in Orlando. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food.",
-    "our_story": "AfriTable listing for World's Magic Restaurant in Orlando. Hours and menu details should be confirmed with the restaurant directly.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "FL",
-    "phone": "(407) 777-6763",
-    "google_place_id": "ChIJdxbS4wF_54gRqs5T-nCT0LQ",
-    "lat": 28.456906999999998,
-    "lng": -81.4722067
   },
   {
     "id": "kalalou-caribbean-bar-grill-orlando-orlando",
