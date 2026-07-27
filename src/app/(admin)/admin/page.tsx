@@ -56,6 +56,15 @@ async function getAdminStats() {
       .select("*", { count: "exact", head: true })
       .in("status", ["submitted", "under_review"]);
 
+    const { count: pendingTableRequests } = await supabase
+      .from("table_requests")
+      .select("*", { count: "exact", head: true })
+      .eq("status", "pending");
+
+    const { count: totalTableRequests } = await supabase
+      .from("table_requests")
+      .select("*", { count: "exact", head: true });
+
     // Total users
     const { count: totalUsers } = await supabase
       .from("profiles")
@@ -74,6 +83,8 @@ async function getAdminStats() {
       totalSubmissions: totalSubmissions || 0,
       pendingSubmissions: pendingSubmissions || 0,
       pendingPartnerApplications: pendingPartnerApplications || 0,
+      pendingTableRequests: pendingTableRequests || 0,
+      totalTableRequests: totalTableRequests || 0,
       totalUsers: totalUsers || 0,
       restaurantOwners: restaurantOwners || 0,
     };
@@ -87,6 +98,8 @@ async function getAdminStats() {
       totalSubmissions: 0,
       pendingSubmissions: 0,
       pendingPartnerApplications: 0,
+      pendingTableRequests: 0,
+      totalTableRequests: 0,
       totalUsers: 0,
       restaurantOwners: 0,
     };
@@ -112,6 +125,14 @@ export default async function AdminDashboardPage() {
       icon: UtensilsCrossed,
       count: stats.pendingPartnerApplications,
       badge: stats.pendingPartnerApplications > 0 ? "warning" : "default",
+    },
+    {
+      title: "Table requests",
+      description: "Guest requests from directory listings to forward to restaurants",
+      href: "/admin/table-requests",
+      icon: FileText,
+      count: stats.pendingTableRequests,
+      badge: stats.pendingTableRequests > 0 ? "warning" : "default",
     },
     {
       title: "Restaurant Submissions",
@@ -245,6 +266,21 @@ export default async function AdminDashboardPage() {
               <div>
                 <div className="font-medium">Restaurant Submissions</div>
                 <div className="text-sm text-muted-foreground">Community submissions</div>
+              </div>
+            </div>
+          </Link>
+
+          <Link
+            href="/admin/table-requests"
+            className="group rounded-lg border p-4 transition-colors hover:bg-muted"
+          >
+            <div className="flex items-center gap-3">
+              <FileText className="h-5 w-5 text-muted-foreground group-hover:text-foreground" />
+              <div>
+                <div className="font-medium">Table requests</div>
+                <div className="text-sm text-muted-foreground">
+                  {stats.totalTableRequests} total · {stats.pendingTableRequests} pending
+                </div>
               </div>
             </div>
           </Link>

@@ -10,6 +10,7 @@ import {
   Handshake,
   Clock,
   Search,
+  ClipboardList,
   ExternalLink,
   LogOut,
 } from "lucide-react";
@@ -26,6 +27,7 @@ const navItems = [
   { label: "Submissions", href: "/admin/submissions", icon: FileText, exact: false },
   { label: "Partner applications", href: "/admin/partner-applications", icon: Handshake, exact: false },
   { label: "Pending restaurants", href: "/admin/pending-restaurants", icon: Clock, exact: false },
+  { label: "Table requests", href: "/admin/table-requests", icon: ClipboardList, exact: false },
   { label: "Catalog QA", href: "/admin/catalog-qa", icon: Search, exact: false },
 ];
 

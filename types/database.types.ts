@@ -543,6 +543,66 @@ export type Database = {
         Relationships: [];
       };
 
+      table_requests: {
+        Row: {
+          id: string;
+          restaurant_slug: string;
+          restaurant_name: string;
+          restaurant_id: string | null;
+          preferred_date: string | null;
+          time_preference: string;
+          party_size: number;
+          guest_name: string;
+          guest_email: string;
+          guest_phone: string;
+          special_requests: string | null;
+          notify_when_live: boolean;
+          status: Database["public"]["Enums"]["table_request_status"];
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          restaurant_slug: string;
+          restaurant_name: string;
+          restaurant_id?: string | null;
+          preferred_date?: string | null;
+          time_preference: string;
+          party_size: number;
+          guest_name: string;
+          guest_email: string;
+          guest_phone: string;
+          special_requests?: string | null;
+          notify_when_live?: boolean;
+          status?: Database["public"]["Enums"]["table_request_status"];
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          restaurant_slug?: string;
+          restaurant_name?: string;
+          restaurant_id?: string | null;
+          preferred_date?: string | null;
+          time_preference?: string;
+          party_size?: number;
+          guest_name?: string;
+          guest_email?: string;
+          guest_phone?: string;
+          special_requests?: string | null;
+          notify_when_live?: boolean;
+          status?: Database["public"]["Enums"]["table_request_status"];
+          created_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "table_requests_restaurant_id_fkey";
+            columns: ["restaurant_id"];
+            isOneToOne: false;
+            referencedRelation: "restaurants";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+
       partner_applications: {
         Row: {
           id: string;
@@ -685,6 +745,7 @@ export type Database = {
     };
     Enums: {
       claim_request_status: "pending" | "approved" | "rejected";
+      table_request_status: "pending" | "forwarded" | "cancelled";
       user_role: "diner" | "pending_owner" | "restaurant_owner" | "admin";
       reservation_status:
         | "pending"
