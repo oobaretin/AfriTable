@@ -13888,34 +13888,6 @@
     "chef_quote": "Call for seasonal specials defines what we do at Sanaa\u2014traditional flavor, fresh ingredients, and pride in every plate."
   },
   {
-    "id": "africaribbean-royal-riverview",
-    "name": "Africaribbean Royal",
-    "cuisine": "Caribbean",
-    "region": "Caribbean",
-    "price_range": "$",
-    "rating": 5,
-    "address": "13140 US-301, Riverview, FL 33578",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "about": "Caribbean restaurant in Riverview serving island grills, seafood, and Afro-Caribbean fusion plates.",
-    "our_story": "Africaribbean Royal blends African and Caribbean flavors in Riverview\u2014island grills, seafood, and fusion plates that mirror Tampa Bay's diaspora mix.",
-    "cultural_roots": "Afro-Caribbean crossover: island spice, West African seasoning, and the blended foodways of the Atlantic diaspora in Florida.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "FL",
-    "phone": "(813) 338-8932",
-    "website": "https://www.africaribbean-royal.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=10106534798740158571",
-    "google_place_id": "ChIJ9-u4uZXXwogRwmC8WagomlQ",
-    "lat": 27.7939051,
-    "lng": -82.3341705,
-    "special_features": "known for Call for seasonal specials; island spice and homestyle plates; Caribbean comfort cooking.",
-    "chef_quote": "Call for seasonal specials tastes like the islands we left and the city we live in now\u2014bold spice, generous portions."
-  },
-  {
     "id": "mitmita-ethiopian-restaurant-tampa",
     "name": "Mitmita Ethiopian restaurant",
     "cuisine": "Ethiopian",
