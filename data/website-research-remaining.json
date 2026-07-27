@@ -1,5 +1,5 @@
 {
-  "count": 37,
+  "count": 33,
   "listings": [
     {
       "id": "ponti-ivorian-houston",
@@ -12,12 +12,6 @@
       "name": "Chef Benny",
       "state": "TX",
       "address": "10010 Bissonnet St, Houston, TX 77036"
-    },
-    {
-      "id": "saaraloges-kitchen-riverside",
-      "name": "Saaraloge's Kitchen",
-      "state": "CA",
-      "address": "11711 Collett Ave, Riverside, CA 92505"
     },
     {
       "id": "amaye-international-restaurant-portland",
@@ -48,12 +42,6 @@
       "name": "Fufudelight& Suya Kitchen",
       "state": "AZ",
       "address": "6401 New York Ave # 149, Arlington, TX 76018"
-    },
-    {
-      "id": "k-y-d-restaurant-mirage-brooklyn",
-      "name": "K\u00e1y\u1ecd\u0300d\u00e9 Restaurant Mirage",
-      "state": "NY",
-      "address": "563 E 26th St, Brooklyn, NY 11210"
     },
     {
       "id": "the-social-room-cleveland-heights",
@@ -102,12 +90,6 @@
       "name": "Afro Caribbean Grill",
       "state": "TX",
       "address": "1903 Blodgett St, Houston, TX 77004"
-    },
-    {
-      "id": "selam-houston",
-      "name": "Selam",
-      "state": "TX",
-      "address": "5701 Bellaire Blvd d, Houston, TX 77081"
     },
     {
       "id": "ewatomi-houston",
@@ -210,12 +192,6 @@
       "name": "Niimatallaah",
       "state": "FL",
       "address": "12780 Race Track Rd, Tampa, FL 33626"
-    },
-    {
-      "id": "bee-s-island-kitchen-tampa",
-      "name": "Bee\u2019s Island Kitchen",
-      "state": "FL",
-      "address": "6016 N 40th St, Tampa, FL 33610"
     },
     {
       "id": "siphokazi-tampa",

@@ -4298,31 +4298,6 @@
     "google_place_id": "ChIJf8JP7mKHj4ARhSwQrrmgjc8"
   },
   {
-    "id": "blackstar-kebab-seattle",
-    "name": "BlackStar Kebab",
-    "cuisine": "Ghanaian",
-    "region": "West African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "1144 NW 52nd St, Seattle, WA 98107",
-    "phone": "(206) 499-4019",
-    "website": "https://www.blackstarkebab.com",
-    "about": "Seattle's premier Ghanaian spot. Food truck with traditional family recipes\u2014chicken, beef, lamb kebabs, jollof rice, sweet plantains; organic ingredients.",
-    "state": "WA",
-    "hours": {
-      "tue_sun": "11:00 AM - 9:00 PM",
-      "mon": "Closed"
-    },
-    "vibe_category": "Authentic Staples",
-    "google_search_url": "https://www.google.com/search?q=BlackStar%20Kebab%2C%201144%20NW%2052nd%20St%2C%20Seattle%2C%20WA%2098107",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmBs03FjC-uewKyQuSVfRFlj2cWP5_vWtu9mv-bVfRHOQWZBjl5ONqozRp9qwHrDKpGPjjMH5Jx60lCFXLwijwCcDe5bFC_c9mbFYSTMgoTA_9AXUHnxolGAkSIB9e5xYbx0qVhDmO0hRwE=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlLilmIWGnp7ahPMKtkrdVhhM846iodNgtU75iEzOQqZrvZ953YAXpHr8uHVdaxphiZBK-fdeASA-t9WPcgmxraj28SbhFjX9uiNlxegc9sE8oQ0tbVbLvk1QVn_WpQ3OinsUzKsqEuz7T0=w1000-h1000-c-n",
-      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=ryGaWvcouKteiEQ7pWhdmw&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=186.32568&pitch=0&thumbfov=100"
-    ],
-    "google_place_id": "ChIJIb6C-PcTkFQRp14Nz6ub9FU"
-  },
-  {
     "id": "48th-street-grille-philly",
     "name": "48th Street Grille",
     "cuisine": "Jamaican",
@@ -5011,39 +4986,6 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn0a8EjB7YX3LFULc8E4dOrFuqKLbAxE85bX9oJtaGuWXce_XdcYT3176L0CakiTbs_XwLGXWrBz2glDnDHI9vkLWxX7-oxyHM2vQME4Lq_CbqaZn-sEMVBWeCaQMjdnTdsXBv9Msf08_Ia=w1000-h1000-c-n"
     ],
     "website": "https://www.allafricanstores.com/"
-  },
-  {
-    "id": "saaraloges-kitchen-riverside",
-    "name": "Saaraloge's Kitchen",
-    "cuisine": "West African",
-    "region": "West African",
-    "price_range": "$",
-    "rating": 4.6,
-    "address": "11711 Collett Ave, Riverside, CA 92505",
-    "phone": "(951) 347-5726",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Riverside West African eatery on 11711 Collett Ave, known for jollof rice, grilled fish, and pepper soup.",
-    "our_story": "Saaraloge's Kitchen serves west african flavors to diners in Riverside and surrounding communities.",
-    "cultural_roots": "West African heritage within the broader west african diaspora.",
-    "menu_highlights": [
-      "Jollof rice",
-      "Grilled fish",
-      "Pepper soup"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "CA",
-    "google_place_id": "ChIJtbyieNu33IARHuLBwGQZ2YY",
-    "lat": 33.9060266,
-    "lng": -117.4960662,
-    "google_search_url": "https://www.google.com/search?q=Saaraloge's%20Kitchen%2C%2011711%20Collett%20Ave%2C%20Riverside%2C%20CA%2092505",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnVwoo9fwfi9ed0N9Kg6v2ONBFVSM52hyvcgdzr7vxvb21inxJ0pKfMNSAC9YQ67N-zxBso--nSqEi0pT0tpw5R7J21hfGcdGy054PnbmBXJV8yId4U5ZDtgek-aPF-x609VDFAmA=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn4skVoy9GA0Gpx16l_txCvXV_tpzb-qGUMqpqIm8M-MR6aL2qrvxOlT7Lun7xEeho_qtDIROrSJnb8TeMwSDybAEg7QMn0Ko3Q_W1BjU6dsuGt9Yhas74405OnU-6XGINa4au5YGDoStMd=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmLvaEMz7rNknXmoi7IsDaHM4GvMECBawUtK-NiveBFcsVDIy5FYnjpuPQ4IZxK_AVmCFq9F3XWNfRXn4xmA-dzhKLdr7K8nGXGVMkBs6AmcD1ucBP4FXueswcq2eIA5kiZefw=w1000-h1000-c-n"
-    ]
   },
   {
     "id": "mama-wales-rice-moreno-valley",
@@ -7663,39 +7605,6 @@
     ]
   },
   {
-    "id": "k-y-d-restaurant-mirage-brooklyn",
-    "name": "K\u00e1y\u1ecd\u0300d\u00e9 Restaurant Mirage",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.9,
-    "address": "563 E 26th St, Brooklyn, NY 11210",
-    "phone": "(347) 240-2710",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Flatbush African kitchen on East 26th Street with Nigerian grills, rice plates, and takeout-friendly combos.",
-    "our_story": "K\u00e1y\u1ecd\u0300d\u00e9 Restaurant Mirage brings Brooklyn neighbors bold seasoning and late-night suya cravings.",
-    "cultural_roots": "Nigerian diaspora cooking in central Brooklyn.",
-    "menu_highlights": [
-      "Suya platter",
-      "Jollof rice",
-      "Goat meat stew"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "NY",
-    "google_place_id": "ChIJ530uEgBbwokRF65dR01Q7U4",
-    "lat": 40.6368872,
-    "lng": -73.9524346,
-    "google_search_url": "https://www.google.com/search?q=K%C3%A1y%E1%BB%8D%CC%80d%C3%A9%20Restaurant%20Mirage%2C%20563%20E%2026th%20St%2C%20Brooklyn%2C%20NY%2011210",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWntfcF8kPDQ7Deh-8jYsSkuxfqcgmvVwbQ0HjKwI1yApwqL3j6YCvLXauhbmjbyqulgucybzDN2kXK3BNYbUeyWD7svgnyxoionR1xps1yxp2Xdv6f8PzynK_wYkIZKswMiUkvhIwrkFnQJ=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmsHmDPtB8w3LIsnakoqauMvVz6JGngMXLsBGsQ2sSuYvFxvQJ-Dgnop2Vp7lyVz-6DJv918wNElaWATqS4k02U2AQQOKpSmzjqUvYJ31_jPfXanxaDoiA5q--gjCrfjiJx4A9TtCn7OmQS=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk_A-qPBYJu62NDaNSezwA-fDuQYzwFAl1D1BGuS8dQ1V1-J9Ys1zTCXJBKOTfvyq2zHYbyfFDuAygI4hAG-GW644haWZFtzXzv3hXqI2SRWPcI-I3-ZvnK4Yg01QSpfqHfO5TR9ZeQuXI=w1000-h1000-c-n"
-    ]
-  },
-  {
     "id": "flavors-of-east-africa-san-diego",
     "name": "Flavors of East Africa",
     "cuisine": "East African",
@@ -10138,40 +10047,6 @@
     "website": "https://www.nigeriakitchen.com/"
   },
   {
-    "id": "spicy-fame-pickup-delivery-only-raleigh",
-    "name": "Spicy Fame (Pickup & Delivery Only)",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 5,
-    "address": "3805 S Wilmington St #7, Raleigh, NC 27603",
-    "phone": "(919) 551-2240",
-    "website": "https://www.spicyfame.com/",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Raleigh African restaurant on 3805 S Wilmington St #7, known for jollof rice, stewed meats, and seasonal specials.",
-    "our_story": "Spicy Fame (Pickup & Delivery Only) serves african flavors to diners in Raleigh and surrounding communities.",
-    "cultural_roots": "Pan-African diaspora flavors across the continent's many culinary regions.",
-    "menu_highlights": [
-      "Jollof rice",
-      "Stewed meats",
-      "Seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "NC",
-    "google_place_id": "ChIJZeLxCJBfrIkRjtHfWbTLmLw",
-    "lat": 35.727509399999995,
-    "lng": -78.64848219999999,
-    "google_search_url": "https://www.google.com/search?q=Spicy%20Fame%20(Pickup%20%26%20Delivery%20Only)%2C%203805%20S%20Wilmington%20St%20%237%2C%20Raleigh%2C%20NC%2027603",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnXUGqWeCC_4-Uq1AGyCBJBauDJloOGtYSlYtzXDMDDU3-rG2f-MXvqBvTK35MwldduFNzDf5q89yeaDH7_IYeLGttMg5XbKcfOzMt0kKtZQ_3DN5Bkd6vcb5Znbe0CvYhDryeDsayzv17J=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmh7MZxyNQ9g1HzyCQC3mpBbQYbTed_gnDVNoH9exzX8HYyKaNZXJhApfLGivyv1lvvjgzceGs4nxkFjZ5FJebDaxK4W9gQCKtwWLGTLMlphRubzNXDCvmaVdtbOA84skIKwhjKroGVz61W=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnpjBuQGKgsD6NjAZvPUiQChAYEdpaGuKx0Dd-6lxuwBlYrcUCzEI8nyYsq_HZX-sugW70O1WNjCgXX38GWT4er0CSxn_pbxofOg8H7jR5WZCyI0ecSpDqoo5jCkBgk9IbB9rIvjkJYP4qx=w1000-h1000-c-n"
-    ]
-  },
-  {
     "id": "naija-cuisine-sacramento",
     "name": "Naija Cuisine",
     "cuisine": "West African",
@@ -11217,37 +11092,6 @@
     ],
     "website": "https://www.hararethiopianhtx.com/",
     "google_place_id": "ChIJTwAr3FTBQIYRkLi48XVc2uU"
-  },
-  {
-    "id": "selam-houston",
-    "name": "Selam",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$$",
-    "rating": 5,
-    "address": "5701 Bellaire Blvd d, Houston, TX 77081",
-    "phone": "(832) 790-3266",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Bellaire-area African kitchen with Ethiopian injera platters and East African grilled meats.",
-    "our_story": "Selam \u2014 'peace' in Amharic \u2014 offers relaxed family dining on Houston's international strip.",
-    "cultural_roots": "Horn of Africa flavors in a casual Houston setting.",
-    "menu_highlights": [
-      "Combination platter",
-      "Tibs",
-      "Lentil stew"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Selam%2C%205701%20Bellaire%20Blvd%20d%2C%20Houston%2C%20TX%2077081",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWldN_px1eKBMj4W10DxR3GC485mkDNAaZr6n8FZ_-VHGJqnIRVQ3SZ50lCY8cN3F_c00XuMfnPIhhZQiS6R6-HdK9q2DpdIeXcxzZIi9B2F1xPw--dS6EuWZn8ZepzFksTrumPw=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl0INn8O4k83NZVCIfwhjCXLLwmawWaZAi4ado0RYRlHf4uyPUawnLggsR6RmlGHMvFubOXhcTR3IHxRGZx9jijFXukHAzEHGPM_BV5EKQSAHVELhaN5HbY_S0mtbajd6OHFKm_0g=w1000-h1000-c-n",
-      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=H3AWPdwoGyTP2gRUjAOTLw&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=254.02693&pitch=0&thumbfov=100"
-    ],
-    "google_place_id": "ChIJMwR0--7DQIYRJ2JCvXTEXCA"
   },
   {
     "id": "ewatomi-houston",
@@ -13331,31 +13175,6 @@
     "google_place_id": "ChIJqcFUUADHwogRDz17Cwvuq0w",
     "lat": 28.032113,
     "lng": -82.4059588
-  },
-  {
-    "id": "bee-s-island-kitchen-tampa",
-    "name": "Bee\u2019s Island Kitchen",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.7,
-    "address": "6016 N 40th St, Tampa, FL 33610",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "about": "Bee\u2019s Island Kitchen serves African flavors in Tampa. A neighborhood spot for african plates, warm hospitality, and familiar diaspora comfort food.",
-    "our_story": "AfriTable listing for Bee\u2019s Island Kitchen in Tampa. Hours and menu details should be confirmed with the restaurant directly.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "FL",
-    "phone": "(813) 238-1500",
-    "google_place_id": "ChIJLTfAOlfHwogRsSUtE9INq8c",
-    "lat": 28.001961299999998,
-    "lng": -82.41447079999999
   },
   {
     "id": "yaya-southern-cuisine-tampa",

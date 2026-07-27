@@ -1,5 +1,28 @@
 # Restaurant curation (AfriTable)
 
+AfriTable is a **reservation platform for sit-down African and Caribbean dining**. Listings must represent places a guest can realistically visit, sit, and eat — not delivery-only kitchens, food trucks, retail markets, or ghost/virtual brands without a dining room.
+
+## Dine-in scope (what belongs in the catalog)
+
+**Include** when the operator has a public dining room or seated counter service, even if they also offer delivery, catering, or online ordering via Toast/DoorDash/Uber Eats.
+
+**Exclude** when the operator is primarily:
+
+- Pickup/delivery-only (no dine-in)
+- A food truck or mobile vendor without a fixed sit-down location
+- A home kitchen or commissary not open to the public as a restaurant
+- A grocery, market, or specialty retail store
+- A virtual/ghost brand with no bookable physical dining room
+- Permanently closed, misclassified cuisine, or unverifiable scrape noise
+
+**Do not remove** only because a listing lacks a standalone website — many legitimate dine-in spots use social or delivery platforms as their web presence.
+
+Scripts:
+
+- `python3 scripts/curation-remove-flagged.py` — closed, misclassified, or unverifiable listings
+- `python3 scripts/curation-remove-non-dine-in.py` — pickup-only, trucks, retail, home kitchens
+- `node scripts/remove-non-dine-in-restaurants.mjs` — legacy batch (Supabase sync)
+
 ## What “verified” means here
 
 We cannot prove every row is open without calling each business. For the catalog we:
@@ -7,6 +30,19 @@ We cannot prove every row is open without calling each business. For the catalog
 1. **Spot-check** flagship and random listings via web search (official site, major directories, recent press).
 2. **Prefer** rows with working `website`, full address + ZIP, `phone`, and `hours` aligned to the operator’s published schedule.
 3. **Queue** prospects missing phone/hours in `data/curation-candidates.json` before promoting them to `data/restaurants.json`.
+
+## Spot-check log (July 2026)
+
+| Listing | Result |
+|--------|--------|
+| Spicy Fame (Raleigh) | Pickup/delivery only — **removed** |
+| Saaraloge's Kitchen (Riverside) | Home-kitchen pickup — **removed** |
+| Bee's Island Kitchen (Tampa) | Carryout-only — **removed** |
+| Selam (Houston) | Retail specialty store ([selamspecialty.com](https://selamspecialty.com/)) — **removed** |
+| Kayode Restaurant Mirage (Brooklyn) | Pickup/delivery-focused; dine-in not open — **removed** |
+| BlackStar Kebab (Seattle) | Food truck — **removed** |
+| Benita's Kitchen (Orlando) | Chevron counter spot with dine-in seating — **kept** |
+| ULTRA KITCHEN (San Antonio) | Dine-in + catering — **kept** |
 
 ## Spot-check log (April 2026)
 

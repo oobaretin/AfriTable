@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-07-27T18:24:02Z",
+  "dryRun": false,
+  "removed": [
+    {
+      "id": "blackstar-kebab-seattle",
+      "name": "BlackStar Kebab",
+      "state": "WA",
+      "address": "1144 NW 52nd St, Seattle, WA 98107",
+      "reason": "Mobile food truck \u2014 no sit-down restaurant (blackstarkebab.com)"
+    },
+    {
+      "id": "saaraloges-kitchen-riverside",
+      "name": "Saaraloge's Kitchen",
+      "state": "CA",
+      "address": "11711 Collett Ave, Riverside, CA 92505",
+      "reason": "Home-kitchen operator; call-ahead pickup, not a public dine-in venue"
+    },
+    {
+      "id": "k-y-d-restaurant-mirage-brooklyn",
+      "name": "K\u00e1y\u1ecd\u0300d\u00e9 Restaurant Mirage",
+      "state": "NY",
+      "address": "563 E 26th St, Brooklyn, NY 11210",
+      "reason": "Pickup/delivery-focused; no public dine-in room open yet"
+    },
+    {
+      "id": "spicy-fame-pickup-delivery-only-raleigh",
+      "name": "Spicy Fame (Pickup & Delivery Only)",
+      "state": "NC",
+      "address": "3805 S Wilmington St #7, Raleigh, NC 27603",
+      "reason": "Pickup and delivery only \u2014 no dine-in (operator name + directories)"
+    },
+    {
+      "id": "selam-houston",
+      "name": "Selam",
+      "state": "TX",
+      "address": "5701 Bellaire Blvd d, Houston, TX 77081",
+      "reason": "Selam Ethio-Eritrea Specialty Store \u2014 retail market, not a restaurant (selamspecialty.com)"
+    },
+    {
+      "id": "bee-s-island-kitchen-tampa",
+      "name": "Bee\u2019s Island Kitchen",
+      "state": "FL",
+      "address": "6016 N 40th St, Tampa, FL 33610",
+      "reason": "Carryout-only; no dine-in seating"
+    }
+  ],
+  "beforeCount": 431,
+  "afterCount": 425
+}
