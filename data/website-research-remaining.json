@@ -1,5 +1,5 @@
 {
-  "count": 33,
+  "count": 24,
   "listings": [
     {
       "id": "ponti-ivorian-houston",
@@ -20,52 +20,10 @@
       "address": "8000 NE Glisan St, Portland, OR 97213"
     },
     {
-      "id": "nicos-lounge-restaurant-and-bar-nashville",
-      "name": "Nico's Lounge Restaurant and Bar",
-      "state": "TN",
-      "address": "4750 Nolensville Pk, Nashville, TN 37211"
-    },
-    {
-      "id": "d-salam-african-cuisine-new-york",
-      "name": "D. Salam African Cuisine",
-      "state": "NY",
-      "address": "89 Canal St, New York, NY 10002"
-    },
-    {
-      "id": "samoha-african-cuisine-charlotte",
-      "name": "Samoha African Cuisine",
-      "state": "NC",
-      "address": "602 W Sugar Creek Rd #4, Charlotte, NC 28213"
-    },
-    {
       "id": "fufudelight-suya-kitchen-arlington",
       "name": "Fufudelight& Suya Kitchen",
-      "state": "AZ",
+      "state": "TX",
       "address": "6401 New York Ave # 149, Arlington, TX 76018"
-    },
-    {
-      "id": "the-social-room-cleveland-heights",
-      "name": "The Social Room",
-      "state": "OH",
-      "address": "2261 Lee Rd, Cleveland Heights, OH 44118"
-    },
-    {
-      "id": "afrospice-bistro-bronx",
-      "name": "AfroSpice BisTro",
-      "state": "NY",
-      "address": "549 Commonwealth Ave, Bronx, NY 10473"
-    },
-    {
-      "id": "international-delicious-kitchen-columbus",
-      "name": "International Delicious Kitchen .",
-      "state": "OH",
-      "address": "5763 Karl Rd, Columbus, OH 43229"
-    },
-    {
-      "id": "safina-world-restaurant-columbus",
-      "name": "Safina World Restaurant",
-      "state": "OH",
-      "address": "4431 Cleveland Ave, Columbus, OH 43231"
     },
     {
       "id": "mega-suya-bar-grill-indianapolis",
@@ -186,18 +144,6 @@
       "name": "Marabou Restaurant and Lounge",
       "state": "FL",
       "address": "4083 W Oak Ridge Rd, Orlando, FL 32809"
-    },
-    {
-      "id": "niimatallaah-tampa",
-      "name": "Niimatallaah",
-      "state": "FL",
-      "address": "12780 Race Track Rd, Tampa, FL 33626"
-    },
-    {
-      "id": "siphokazi-tampa",
-      "name": "Siphokazi",
-      "state": "FL",
-      "address": "4800 US-301, Tampa, FL 33610"
     }
   ]
 }

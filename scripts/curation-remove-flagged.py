@@ -31,6 +31,9 @@ CURATION_REMOVE: dict[str, str] = {
     "sudan-cafe-denver": "No working operator website; listing unverifiable",
     "tfk-african-food-tampa": "No working operator website (404)",
     "nini-kitchen-houston": "Website candidate matched wrong business (Marietta, GA)",
+    "the-social-room-cleveland-heights": "Neighborhood dive bar — outside African/Caribbean scope",
+    "niimatallaah-tampa": "Listing address is BayCare medical campus; restaurant unverifiable",
+    "siphokazi-tampa": "No verifiable operator at Florida State Fairgrounds address",
 }
 
 

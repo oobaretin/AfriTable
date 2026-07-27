@@ -5589,12 +5589,13 @@
     "google_place_id": "ChIJKW_HVL9vZIgRPlrQPdSKLuY",
     "lat": 36.0667095,
     "lng": -86.7169294,
-    "google_search_url": "https://www.google.com/search?q=Nico's%20Lounge%20Restaurant%20and%20Bar%2C%204750%20Nolensville%20Pk%2C%20Nashville%2C%20TN%2037211",
+    "google_search_url": "https://www.google.com/search?q=Nico%27s%20Lounge%20Restaurant%20and%20Bar%2C%204750%20Nolensville%20Pk%2C%20Nashville%2C%20TN%2037211",
     "images": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkSRAaJs8-Jx5QyLAddl9AJzfpljOqtbGgDFEvHtc7BWv92u4oGcElzIJ-YJjfVvD-oE83ADjIqs4Jb5ggVwjG-UuMwARauY_KpMIkUhjh6WKWbretabn-YL_Vz2oyGLhliN0qvLIt-D_xR=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlMT8KSHJ7RhwYDWnnSbQOwJA0rsCle4SeHj19m3pY7GA5OiF9hNRMEbY-dxq-rhx6rgJ5BonzTUB9PfrAu6icQxkyIN_zeW7vNo1KyubWDuh2Q9pS3TkXoXDD5q9FFWLxf4wg=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlZueTAns4Nz5jJNsHxMVUZqa1d-EeQNXePVKTHUwXIs63wVf1VaO-0dgkiNO99474bMJoPSoYCe_mTayr3du9tilAqMkuP3KQg32pWnZEToTt1K73OAHtABmIhgkuFpBcqJpW-=w1000-h1000-c-n"
-    ]
+    ],
+    "website": "https://www.facebook.com/408503469331333"
   },
   {
     "id": "peekay-restaurant-burlington",
@@ -6716,7 +6717,8 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk7AkPeebvf8n5PY8VFZW7Oo_DzXopQdnbKA9Gsdt9s-Yros7obtTPdhJdOrt-I_4XfO4RW7yDxihfUBLmMv7K3hoKK4njEvw4OWnu-irj-Zz9n4QyOemTR4Hiq6LNupsJROk98XmPO0FZ1=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmQcpOnSfM_T8g6p6uKHXA99LgtfE3o_Q4HToYJnUvRd5s-ZuD0L6qIOeYXQv6qmHIuDRh0G7en7lk36_QpfboA65LduJq3akEFkkWmiP-kwn111mzZYofzriOcgRNpO7WhpK_e4IDFjPle=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkfPiOWkpQbiHVZKZW1l3ysxrRL7ZF0PgSds4XJRJUzwIoNbWHz81Zx9ne4hrqjxSyGbKcE0c7fIUIOmr5oyvZOKYik16p-a3mCn9GKS9F-gMesd3tDfF9niku1aQmIjF2YkYdEctc1CVxl=w1000-h1000-c-n"
-    ]
+    ],
+    "website": "https://www.instagram.com/dsalamrestaurant/"
   },
   {
     "id": "lagos-tsq-new-york",
@@ -6959,7 +6961,8 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl9ink7GFVx7D7nQOhnrOiM2jF7KAqz88PT82wyTZzfdTMUgmVwG6orqbVKNFibPVBfnSwUxOaLeBsQwt6WuAmYbfFvln-2uzMf3hg4DoWXi6ashdcwiIQzOnFsgrpf1qlcm_o9=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl9hmvRjU19XU0JEA-DHMy7w5yD1_MgRoUvIl6gx9WhSZsKWrZf9YGnXvrJ9A-JR_oO8-obL7r6FN8xt6Vg1cK3r3JD0rFK8WEmrS57d29lnPoDud0Qy-vHLvE2gxOYxPjL7N7T-w=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnNGccfQDeyyypPAt-zrz9H_eOXEf_re9RdKqlNB1mxR6CY-fW7NauLe_SNmlH5m0VqNe7Pu-7dj1E-qGsl_Yr3p9K9M5fzxmFW5NHQIzIFjGBCLW2ZRU50scB00LGDyLbRlwqS=w1000-h1000-c-n"
-    ]
+    ],
+    "website": "https://www.facebook.com/1974167339558215"
   },
   {
     "id": "obalende-suya-chicago",
@@ -7153,7 +7156,7 @@
       "Jollof rice"
     ],
     "vibe_category": "Authentic Staples",
-    "state": "AZ",
+    "state": "TX",
     "google_place_id": "ChIJkUEPlTOJToYRijJ3_YngfVU",
     "lat": 32.6421795,
     "lng": -97.0745824,
@@ -8625,39 +8628,6 @@
     ]
   },
   {
-    "id": "the-social-room-cleveland-heights",
-    "name": "The Social Room",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 4.5,
-    "address": "2261 Lee Rd, Cleveland Heights, OH 44118",
-    "phone": "(216) 321-0736",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Cleveland Heights African restaurant on 2261 Lee Rd, known for jollof rice, stewed meats, and seasonal specials.",
-    "our_story": "The Social Room serves african flavors to diners in Cleveland Heights and surrounding communities.",
-    "cultural_roots": "Pan-African diaspora flavors across the continent's many culinary regions.",
-    "menu_highlights": [
-      "Jollof rice",
-      "Stewed meats",
-      "Seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "OH",
-    "google_place_id": "ChIJjRYZ1lP8MIgRx_HtQol4gVQ",
-    "lat": 41.4980325,
-    "lng": -81.5650883,
-    "google_search_url": "https://www.google.com/search?q=The%20Social%20Room%2C%202261%20Lee%20Rd%2C%20Cleveland%20Heights%2C%20OH%2044118",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk-lv9c_EIyEuj1PgWe5K1U0bKRCfE2kLQOP544CBPdVeFOE-4L0jEJI579h_cKjZyvuVhZUTQvpdE7OWNURSJdRJa_vfKUA839u1pL8AnC7Gx9Wo0RGEefkIwTmjibxZTdLNTuZg=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkkiOJ1zm2jJQIX1A-b0K7oYeDdyFeis1QTdcMmJ5OK6fmqiJeNEqA8V1CFW87Yl90oEz_SFUUSYtFvURIu4cju6V8K-euf1-tJh1J8Y_NnUr6e8zgChfFSYXKYChGJ5LxEPUc=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmW1m2oD_bmP5qwOCrLGFyBg_dqIgY2JxRlUEMiV4J2iUXizRFeE1-dblnLh1uVLVbd5Ekc8nfr9nmtiIRMIbcIkveeLIbicne8cDTdeH8IBFAUQuEq_XVnxdBLjodhhT7Ss93G=w1000-h1000-c-n"
-    ]
-  },
-  {
     "id": "fiyah-korean-bbq-hot-pot-cleveland",
     "name": "FIYAH Korean BBQ & Hot Pot",
     "cuisine": "African",
@@ -8927,7 +8897,8 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWna9d-33_siNSLb_7BsvphbMnH8e5t-My3c9XVr1jC2MBS1u2UGgRNNIDpV1Q9w4WPjVQnqph-iBX7hybGGrpS8pZlXDLpgzQWh0c2WvcQCRPJsB9pDyH8nUniTC3x2hjCHvfKFdu9OuqkE=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn_E1e3r6Un_95nEl8W2G0dJWg4yaVG1CzIWqNsULiqwf64MuKzc8SuGtRH7OIhUsEWFs06g-zI4fuQ7nIsLsDf_QQyDuuvL0TvQCHjEf3O3bcRIx5Xd6SwNVwu7dJ1Mm1lyQJuf4ioS1E=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlVps7W0BsDWlgkpa3CZIXytAbQCW7gySmg1brBYAxwAba2fseZc6AqtCZ_M6ARoj6Okyksq3l-4E4wPn9RWAG2epmExxsxdnguiiXseVi12ToXRyR4HLB6LJ3gB1cqfvWS4NmL1HTgIvHL=w1000-h1000-c-n"
-    ]
+    ],
+    "website": "https://www.instagram.com/afrospice_bistro/"
   },
   {
     "id": "accra-bronx",
@@ -9028,7 +8999,8 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmigwZudX1Ss7H6kUfXydS5sgpFYUEE0xj2bKnOG528qd2KI63SquFwYZBBpJMtG2xuyzuUbKQtCeJNrws_pY85Ez1kIolCVdcC1XkRT2zocRt0AkT1tlJtoIsinmEMcC2QyRs0=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkCGKPh87u71JEWnYsncZnI6NmNux4JVVVXaeC6BrV44NPCU9lEsgMX4d6dpOhQeU584bxwAsVCigQXg7MqXghwj4tH4L422a4vNEc40X_0uSdTK4lWamlLdCnHfVheIGuClCkk3yaEdTmH=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlte-nMldWDCceg0LGdwRYuIqQ6t1BK-Gbvw6rMK7fz_C-DpvxBbD2rXkUI7jTSJ6SlUETl5iqEYW1X81xrPxajplRKY3q88xPziTv9S0qCQ4gZiaxhGtM-PEB2wFE6hWSJ-EdJLw=w1000-h1000-c-n"
-    ]
+    ],
+    "website": "https://www.facebook.com/p/International-Delicious-Kitchen-61556076443097/"
   },
   {
     "id": "safina-world-restaurant-columbus",
@@ -9061,7 +9033,8 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk0O6hBhbvYh4MurEcjYGZN9iuv1U-G2GaaWUcPZbHUYcIwma2NHWZxKn7_hAaHr0xEDblTvEbJkS9FCp_pfiDVJahd5_RycKgfB0r3iafbY7pXw8xuC-YRMADwe7Kq5UH7inekABYqOtz6=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm1dLhngc-OK11gM4X5CAKV4mAAtceKXuq1uYv1ODxTt0EatcrZNCV6z1E-wUQ7Qm6rnPVR00JprlDnQB91ugghnf6Er_dm7tk0VFNPjMvOlFmaa5xIqGZpRdwgyPLX5ZyahEmlY835hXWV=w1000-h1000-c-n",
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmcLZIB9m3zoWUsjvH3W9bWvFtMOCMbcbAYUplf5-ichQJ27-Am_9Q1rUIskZZE5woCUlFMBAwXCzy042m3d5BPRcOk_nmkedWhn7rng9tJPN3yd0PaHRb4IFbrdh9elTwJorg=w1000-h1000-c-n"
-    ]
+    ],
+    "website": "https://www.facebook.com/105795261299182"
   },
   {
     "id": "foodateria-kenyan-nigerian-kitchen-columbus",
@@ -13127,30 +13100,6 @@
     "lng": -82.7296726
   },
   {
-    "id": "niimatallaah-tampa",
-    "name": "Niimatallaah",
-    "cuisine": "Ethiopian",
-    "region": "East African",
-    "price_range": "$$",
-    "rating": 4.2,
-    "address": "12780 Race Track Rd, Tampa, FL 33626",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "about": "Niimatallaah serves Ethiopian cooking rooted in East African traditions in Tampa. A neighborhood spot for ethiopian plates, warm hospitality, and familiar diaspora comfort food.",
-    "our_story": "AfriTable listing for Niimatallaah in Tampa. Hours and menu details should be confirmed with the restaurant directly.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "FL",
-    "google_place_id": "ChIJHTt4GQDrwogRIPuadZ6mRAc",
-    "lat": 28.0682111,
-    "lng": -82.6358621
-  },
-  {
     "id": "abu-naji-restaurant-tampa",
     "name": "Abu Naji Restaurant",
     "cuisine": "African",
@@ -13201,30 +13150,6 @@
     "google_place_id": "ChIJB17p5SrEwogRf-55LYYhDcc",
     "lat": 27.9948896,
     "lng": -82.43293229999999
-  },
-  {
-    "id": "siphokazi-tampa",
-    "name": "Siphokazi",
-    "cuisine": "South African",
-    "region": "Southern African",
-    "price_range": "$$",
-    "rating": 4.2,
-    "address": "4800 US-301, Tampa, FL 33610",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "about": "Siphokazi serves South African cooking rooted in Southern African traditions in Tampa. A neighborhood spot for south african plates, warm hospitality, and familiar diaspora comfort food.",
-    "our_story": "AfriTable listing for Siphokazi in Tampa. Hours and menu details should be confirmed with the restaurant directly.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "FL",
-    "google_place_id": "ChIJpSFGFADPwogRFjra8CSMI88",
-    "lat": 27.9907525,
-    "lng": -82.3625623
   },
   {
     "id": "asher-amens-african-cafe-tampa",

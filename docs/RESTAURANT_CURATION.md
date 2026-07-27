@@ -43,6 +43,24 @@ We cannot prove every row is open without calling each business. For the catalog
 | BlackStar Kebab (Seattle) | Food truck — **removed** |
 | Benita's Kitchen (Orlando) | Chevron counter spot with dine-in seating — **kept** |
 | ULTRA KITCHEN (San Antonio) | Dine-in + catering — **kept** |
+| The Social Room (Cleveland Heights) | Neighborhood dive bar — **removed** |
+| Niimatallaah (Tampa) | Address maps to medical campus — **removed** |
+| Siphokazi (Tampa) | Unverifiable at fairgrounds address — **removed** |
+
+### Website batch 5 (Jul 2026, non–TX/CO/FL)
+
+Applied social/operator URLs where standalone sites do not exist:
+
+| Listing | Website |
+|---------|---------|
+| D. Salam African Cuisine (NYC) | instagram.com/dsalamrestaurant |
+| Samoha African Cuisine (Charlotte) | Facebook page |
+| Safina World Restaurant (Columbus) | Facebook page |
+| Nico's Lounge (Nashville) | Facebook page |
+| AfroSpice BisTro (Bronx) | instagram.com/afrospice_bistro |
+| International Delicious Kitchen (Columbus) | Facebook page |
+
+No verified standalone site: AMAYE (Portland), Mega Suya (Indianapolis), Fufudelight (Arlington TX — catalog `state` typo AZ).
 
 ## Spot-check log (April 2026)
 
