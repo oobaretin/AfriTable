@@ -1,0 +1,418 @@
+{
+  "generatedAt": "2026-07-27T19:40:23.367462+00:00",
+  "dryRun": false,
+  "migrated": [
+    {
+      "from": "atl-001",
+      "to": "negril-atl-atlanta"
+    },
+    {
+      "from": "atl-002",
+      "to": "desta-atlanta"
+    },
+    {
+      "from": "atl-004",
+      "to": "virgils-gullah-kitchen-atlanta"
+    },
+    {
+      "from": "bos-001",
+      "to": "cesaria-boston"
+    },
+    {
+      "from": "bos-002",
+      "to": "suya-joint-boston"
+    },
+    {
+      "from": "chi-001",
+      "to": "demera-ethiopian-chicago"
+    },
+    {
+      "from": "chi-002",
+      "to": "gor-e-cuisine-chicago"
+    },
+    {
+      "from": "chi-003",
+      "to": "iyanze-chicago"
+    },
+    {
+      "from": "dca-001",
+      "to": "d-gon-washington"
+    },
+    {
+      "from": "hou-001",
+      "to": "chopnblok-downtown-houston"
+    },
+    {
+      "from": "hou-002",
+      "to": "taste-of-nigeria-houston"
+    },
+    {
+      "from": "hou-003",
+      "to": "aria-suya-kitchen-houston"
+    },
+    {
+      "from": "hou-004",
+      "to": "finger-licking-2-0-houston"
+    },
+    {
+      "from": "hou-006",
+      "to": "lucilles-houston"
+    },
+    {
+      "from": "hou-008",
+      "to": "helens-kitchen-houston"
+    },
+    {
+      "from": "hou-sta-004",
+      "to": "sarabell-calabar-houston"
+    },
+    {
+      "from": "hou-sta-005",
+      "to": "amala-zone-houston"
+    },
+    {
+      "from": "hou-sta-007",
+      "to": "chef-benny-houston"
+    },
+    {
+      "from": "hou-sta-010",
+      "to": "suya-hut-meadows-place"
+    },
+    {
+      "from": "hou-sta-011",
+      "to": "blue-nile-ethiopian-houston"
+    },
+    {
+      "from": "hou-sta-014",
+      "to": "cool-runnings-jamaican-grill-houston"
+    },
+    {
+      "from": "hou-sta-017",
+      "to": "lucy-ethiopian-restaurant-lounge-houston"
+    },
+    {
+      "from": "katy-001",
+      "to": "royal-arm-restaurant-katy"
+    },
+    {
+      "from": "katy-003",
+      "to": "astors-table-katy"
+    },
+    {
+      "from": "la-001",
+      "to": "meals-by-genet-los-angeles"
+    },
+    {
+      "from": "la-daily-001",
+      "to": "veronicas-kitchen-inglewood"
+    },
+    {
+      "from": "la-daily-002",
+      "to": "rosalinds-los-angeles"
+    },
+    {
+      "from": "lax-001",
+      "to": "status-hollywood-los-angeles"
+    },
+    {
+      "from": "lax-002",
+      "to": "lucia-los-angeles"
+    },
+    {
+      "from": "lax-003",
+      "to": "bridgetown-roti-los-angeles"
+    },
+    {
+      "from": "nyc-001",
+      "to": "tatiana-by-kwame-onwuachi-new-york"
+    },
+    {
+      "from": "nyc-daily-001",
+      "to": "africa-kine-new-york"
+    },
+    {
+      "from": "nyc-daily-002",
+      "to": "buka-brooklyn"
+    },
+    {
+      "from": "oak-001",
+      "to": "amaweles-san-francisco"
+    },
+    {
+      "from": "pdx-001",
+      "to": "kann-portland"
+    },
+    {
+      "from": "phi-001",
+      "to": "african-small-pot-philadelphia"
+    },
+    {
+      "from": "phi-002",
+      "to": "kilimandjaro-philadelphia"
+    },
+    {
+      "from": "phi-003",
+      "to": "quality-taste-philadelphia"
+    },
+    {
+      "from": "rich-sta-001",
+      "to": "nyammings-fusion-bistro-richmond"
+    },
+    {
+      "from": "sea-001",
+      "to": "communion-r-b-seattle"
+    },
+    {
+      "from": "sea-002",
+      "to": "cafe-selam-seattle"
+    },
+    {
+      "from": "sea-003",
+      "to": "jebena-cafe-seattle"
+    }
+  ],
+  "removed": [
+    {
+      "id": "blue-nile-ethiopian-restaurant",
+      "name": "Blue Nile Ethiopian Restaurant",
+      "reason": "Duplicate of hou-sta-011 \u2014 wrong address, shared place_id/images"
+    },
+    {
+      "id": "blue-nile-houston",
+      "name": "Blue Nile",
+      "reason": "Duplicate of hou-sta-011 \u2014 wrong address, shared place_id/images"
+    }
+  ],
+  "supabase": {
+    "renamed": [
+      {
+        "from": "nyc-001",
+        "to": "tatiana-by-kwame-onwuachi-new-york",
+        "status": 204
+      },
+      {
+        "from": "hou-001",
+        "to": "chopnblok-downtown-houston",
+        "status": 204
+      },
+      {
+        "from": "atl-004",
+        "to": "virgils-gullah-kitchen-atlanta",
+        "status": 204
+      },
+      {
+        "from": "atl-002",
+        "to": "desta-atlanta",
+        "status": 204
+      },
+      {
+        "from": "la-001",
+        "to": "meals-by-genet-los-angeles",
+        "status": 204
+      },
+      {
+        "from": "oak-001",
+        "to": "amaweles-san-francisco",
+        "status": 204
+      },
+      {
+        "from": "chi-001",
+        "to": "demera-ethiopian-chicago",
+        "status": 204
+      },
+      {
+        "from": "phi-001",
+        "to": "african-small-pot-philadelphia",
+        "status": 204
+      },
+      {
+        "from": "chi-002",
+        "to": "gor-e-cuisine-chicago",
+        "status": 204
+      },
+      {
+        "from": "phi-002",
+        "to": "kilimandjaro-philadelphia",
+        "status": 204
+      },
+      {
+        "from": "chi-003",
+        "to": "iyanze-chicago",
+        "status": 204
+      },
+      {
+        "from": "phi-003",
+        "to": "quality-taste-philadelphia",
+        "status": 204
+      },
+      {
+        "from": "sea-001",
+        "to": "communion-r-b-seattle",
+        "status": 204
+      },
+      {
+        "from": "bos-001",
+        "to": "cesaria-boston",
+        "status": 204
+      },
+      {
+        "from": "sea-002",
+        "to": "cafe-selam-seattle",
+        "status": 204
+      },
+      {
+        "from": "bos-002",
+        "to": "suya-joint-boston",
+        "status": 204
+      },
+      {
+        "from": "sea-003",
+        "to": "jebena-cafe-seattle",
+        "status": 204
+      },
+      {
+        "from": "hou-sta-014",
+        "to": "cool-runnings-jamaican-grill-houston",
+        "status": 204
+      },
+      {
+        "from": "hou-006",
+        "to": "lucilles-houston",
+        "status": 204
+      },
+      {
+        "from": "dca-001",
+        "to": "d-gon-washington",
+        "status": 204
+      },
+      {
+        "from": "pdx-001",
+        "to": "kann-portland",
+        "status": 204
+      },
+      {
+        "from": "lax-001",
+        "to": "status-hollywood-los-angeles",
+        "status": 204
+      },
+      {
+        "from": "hou-008",
+        "to": "helens-kitchen-houston",
+        "status": 204
+      },
+      {
+        "from": "lax-002",
+        "to": "lucia-los-angeles",
+        "status": 204
+      },
+      {
+        "from": "lax-003",
+        "to": "bridgetown-roti-los-angeles",
+        "status": 204
+      },
+      {
+        "from": "atl-001",
+        "to": "negril-atl-atlanta",
+        "status": 204
+      },
+      {
+        "from": "hou-002",
+        "to": "taste-of-nigeria-houston",
+        "status": 204
+      },
+      {
+        "from": "hou-004",
+        "to": "finger-licking-2-0-houston",
+        "status": 204
+      },
+      {
+        "from": "hou-sta-004",
+        "to": "sarabell-calabar-houston",
+        "status": 204
+      },
+      {
+        "from": "hou-sta-005",
+        "to": "amala-zone-houston",
+        "status": 204
+      },
+      {
+        "from": "hou-sta-007",
+        "to": "chef-benny-houston",
+        "status": 204
+      },
+      {
+        "from": "katy-003",
+        "to": "astors-table-katy",
+        "status": 204
+      },
+      {
+        "from": "hou-sta-010",
+        "to": "suya-hut-meadows-place",
+        "status": 204
+      },
+      {
+        "from": "hou-sta-011",
+        "to": "blue-nile-ethiopian-houston",
+        "status": 204
+      },
+      {
+        "from": "hou-003",
+        "to": "aria-suya-kitchen-houston",
+        "status": 204
+      },
+      {
+        "from": "hou-sta-017",
+        "to": "lucy-ethiopian-restaurant-lounge-houston",
+        "status": 204
+      },
+      {
+        "from": "rich-sta-001",
+        "to": "nyammings-fusion-bistro-richmond",
+        "status": 204
+      },
+      {
+        "from": "nyc-daily-001",
+        "to": "africa-kine-new-york",
+        "status": 204
+      },
+      {
+        "from": "nyc-daily-002",
+        "to": "buka-brooklyn",
+        "status": 204
+      },
+      {
+        "from": "la-daily-001",
+        "to": "veronicas-kitchen-inglewood",
+        "status": 204
+      },
+      {
+        "from": "la-daily-002",
+        "to": "rosalinds-los-angeles",
+        "status": 204
+      },
+      {
+        "from": "katy-001",
+        "to": "royal-arm-restaurant-katy",
+        "status": 204
+      }
+    ],
+    "deactivated": [
+      {
+        "slug": "blue-nile-ethiopian-restaurant",
+        "delete_status": 204
+      },
+      {
+        "slug": "blue-nile-houston",
+        "delete_status": 204
+      }
+    ],
+    "errors": []
+  },
+  "scriptReplacements": {
+    "apply-restaurant-hours.mjs": 30,
+    "fix-catalog-integrity.mjs": 2
+  },
+  "enrichmentKeyChanges": {
+    "catalog-metro-copy-enrichments.json": 1
+  }
+}

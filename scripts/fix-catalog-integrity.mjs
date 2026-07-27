@@ -56,7 +56,7 @@ const ADDRESS_FIXES = {
     google_search_url:
       "https://www.google.com/search?q=Fabaceae%20African%20Cuisine%2C%2010023%20S%20Main%20St%20Bldg%207%2C%20Houston%2C%20TX%2077025",
   },
-  "hou-sta-004": {
+  "sarabell-calabar-houston": {
     address: "9801 Bissonnet St Ste C, Houston, TX 77036",
     phone: "(713) 814-5253",
     google_search_url:
@@ -78,7 +78,7 @@ const ADDRESS_FIXES = {
     google_search_url:
       "https://www.google.com/search?q=Tailat%20Kitchen%2C%205933%20Westminster%20Dr%2C%20Austin%2C%20TX%2078723",
   },
-  "hou-sta-017": {
+  "lucy-ethiopian-restaurant-lounge-houston": {
     address: "6800 Southwest Fwy Suite D, Houston, TX 77074",
     zip: "77074",
     phone: "(713) 334-0000",

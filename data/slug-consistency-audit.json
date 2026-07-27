@@ -1,0 +1,438 @@
+{
+  "opaque_count": 42,
+  "safe_migrations": [
+    {
+      "id": "nyc-001",
+      "name": "Tatiana by Kwame Onwuachi",
+      "city": "New York",
+      "expected": "tatiana-by-kwame-onwuachi-new-york",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-001",
+      "name": "Ch\u00f2pnBl\u1ecdk",
+      "city": "Houston",
+      "expected": "ch-pnblok-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "atl-004",
+      "name": "Virgil's Gullah Kitchen",
+      "city": "Atlanta",
+      "expected": "virgils-gullah-kitchen-atlanta",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "atl-002",
+      "name": "Desta",
+      "city": "Atlanta",
+      "expected": "desta-atlanta",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "la-001",
+      "name": "Meals by Genet",
+      "city": "Los Angeles",
+      "expected": "meals-by-genet-los-angeles",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "oak-001",
+      "name": "Amawele's",
+      "city": "San Francisco",
+      "expected": "amaweles-san-francisco",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "chi-001",
+      "name": "Demera Ethiopian",
+      "city": "Chicago",
+      "expected": "demera-ethiopian-chicago",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "phi-001",
+      "name": "African Small Pot",
+      "city": "Philadelphia",
+      "expected": "african-small-pot-philadelphia",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "chi-002",
+      "name": "Gor\u00e9e Cuisine",
+      "city": "Chicago",
+      "expected": "gor-e-cuisine-chicago",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "phi-002",
+      "name": "Kilimandjaro",
+      "city": "Philadelphia",
+      "expected": "kilimandjaro-philadelphia",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "chi-003",
+      "name": "Iyanze",
+      "city": "Chicago",
+      "expected": "iyanze-chicago",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "phi-003",
+      "name": "Quality Taste",
+      "city": "Philadelphia",
+      "expected": "quality-taste-philadelphia",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "sea-001",
+      "name": "Communion R&B",
+      "city": "Seattle",
+      "expected": "communion-r-b-seattle",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "bos-001",
+      "name": "Cesaria",
+      "city": "Boston",
+      "expected": "cesaria-boston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "sea-002",
+      "name": "Cafe Selam",
+      "city": "Seattle",
+      "expected": "cafe-selam-seattle",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "bos-002",
+      "name": "Suya Joint",
+      "city": "Boston",
+      "expected": "suya-joint-boston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "sea-003",
+      "name": "Jebena Cafe",
+      "city": "Seattle",
+      "expected": "jebena-cafe-seattle",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-sta-014",
+      "name": "Cool Runnings Jamaican Grill",
+      "city": "Houston",
+      "expected": "cool-runnings-jamaican-grill-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-006",
+      "name": "Lucille's",
+      "city": "Houston",
+      "expected": "lucilles-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "dca-001",
+      "name": "D\u014dgon",
+      "city": "Washington",
+      "expected": "d-gon-washington",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "pdx-001",
+      "name": "Kann",
+      "city": "Portland",
+      "expected": "kann-portland",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "lax-001",
+      "name": "Status Hollywood",
+      "city": "Los Angeles",
+      "expected": "status-hollywood-los-angeles",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-008",
+      "name": "Helen's Kitchen",
+      "city": "Houston",
+      "expected": "helens-kitchen-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "lax-002",
+      "name": "Lucia",
+      "city": "Los Angeles",
+      "expected": "lucia-los-angeles",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "lax-003",
+      "name": "Bridgetown Roti",
+      "city": "Los Angeles",
+      "expected": "bridgetown-roti-los-angeles",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "atl-001",
+      "name": "Negril ATL",
+      "city": "Atlanta",
+      "expected": "negril-atl-atlanta",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-002",
+      "name": "Taste of Nigeria",
+      "city": "Houston",
+      "expected": "taste-of-nigeria-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-004",
+      "name": "Finger Licking 2.0",
+      "city": "Houston",
+      "expected": "finger-licking-2-0-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-sta-004",
+      "name": "Sarabell Calabar",
+      "city": "Houston",
+      "expected": "sarabell-calabar-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-sta-005",
+      "name": "Amala Zone",
+      "city": "Houston",
+      "expected": "amala-zone-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-sta-007",
+      "name": "Chef Benny",
+      "city": "Houston",
+      "expected": "chef-benny-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "katy-003",
+      "name": "Astor's Table",
+      "city": "Katy",
+      "expected": "astors-table-katy",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-sta-010",
+      "name": "Suya Hut",
+      "city": "Meadows Place",
+      "expected": "suya-hut-meadows-place",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-sta-011",
+      "name": "Blue Nile Ethiopian",
+      "city": "Houston",
+      "expected": "blue-nile-ethiopian-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-003",
+      "name": "Aria Suya Kitchen",
+      "city": "Houston",
+      "expected": "aria-suya-kitchen-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "hou-sta-017",
+      "name": "Lucy Ethiopian Restaurant & Lounge",
+      "city": "Houston",
+      "expected": "lucy-ethiopian-restaurant-lounge-houston",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "rich-sta-001",
+      "name": "Nyammings Fusion Bistro",
+      "city": "Richmond",
+      "expected": "nyammings-fusion-bistro-richmond",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "nyc-daily-001",
+      "name": "Africa Kine",
+      "city": "New York",
+      "expected": "africa-kine-new-york",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "nyc-daily-002",
+      "name": "Buka",
+      "city": "Brooklyn",
+      "expected": "buka-brooklyn",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "la-daily-001",
+      "name": "Veronica's Kitchen",
+      "city": "Inglewood",
+      "expected": "veronicas-kitchen-inglewood",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "la-daily-002",
+      "name": "Rosalind's",
+      "city": "Los Angeles",
+      "expected": "rosalinds-los-angeles",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    },
+    {
+      "id": "katy-001",
+      "name": "Royal Arm Restaurant",
+      "city": "Katy",
+      "expected": "royal-arm-restaurant-katy",
+      "is_canonical": false,
+      "expected_taken_in_catalog": false,
+      "db_conflict": null,
+      "db_conflict_active": null
+    }
+  ],
+  "blocked_migrations": [],
+  "catalog_fp_dupes": [],
+  "catalog_pid_dupes": [
+    {
+      "place_id": "ChIJV9p3a-XAQIYRQaWkOd5S1k4",
+      "ids": [
+        "hou-sta-011",
+        "blue-nile-ethiopian-restaurant",
+        "blue-nile-houston"
+      ]
+    }
+  ],
+  "cross_db_dupes": []
+}

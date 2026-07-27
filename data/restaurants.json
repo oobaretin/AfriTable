@@ -897,7 +897,7 @@
     "google_place_id": "ChIJhWYYqmwP9YgRr0lhB4uWMQU"
   },
   {
-    "id": "nyc-001",
+    "id": "tatiana-by-kwame-onwuachi-new-york",
     "name": "Tatiana by Kwame Onwuachi",
     "cuisine": "Afro-Caribbean",
     "region": "Caribbean",
@@ -940,7 +940,7 @@
     "google_place_id": "ChIJxy0SM0xZwokR5vC0f4wVlP0"
   },
   {
-    "id": "hou-001",
+    "id": "chopnblok-downtown-houston",
     "name": "Ch\u00f2pnBl\u1ecdk",
     "cuisine": "West African (Fast-Fine)",
     "region": "West African",
@@ -1027,7 +1027,7 @@
     "google_place_id": "ChIJD6qBsQNcwokR8ggthXPGiZg"
   },
   {
-    "id": "atl-004",
+    "id": "virgils-gullah-kitchen-atlanta",
     "name": "Virgil's Gullah Kitchen",
     "cuisine": "Gullah Geechee / West African Roots",
     "region": "West African",
@@ -1111,7 +1111,7 @@
     "google_place_id": "ChIJr6MD5yK4t4kRsUM3q7Lffmk"
   },
   {
-    "id": "atl-002",
+    "id": "desta-atlanta",
     "name": "Desta",
     "cuisine": "Ethiopian",
     "region": "East African",
@@ -1163,7 +1163,7 @@
     "google_place_id": "ChIJZTrnLWED9YgRZy1jp7u_1vk"
   },
   {
-    "id": "la-001",
+    "id": "meals-by-genet-los-angeles",
     "name": "Meals by Genet",
     "cuisine": "Ethiopian",
     "region": "East African",
@@ -1217,7 +1217,7 @@
     "google_place_id": "ChIJhYxvytCVwoARuR1Ios_roHo"
   },
   {
-    "id": "oak-001",
+    "id": "amaweles-san-francisco",
     "name": "Amawele's",
     "cuisine": "South African",
     "region": "South African",
@@ -1245,7 +1245,7 @@
     "google_place_id": "ChIJE_x2VGSAhYARoXDSoUvUjkI"
   },
   {
-    "id": "chi-001",
+    "id": "demera-ethiopian-chicago",
     "name": "Demera Ethiopian",
     "cuisine": "Ethiopian (Fine Dining)",
     "region": "East African",
@@ -1286,7 +1286,7 @@
     "google_place_id": "ChIJn3YvvizSD4gRpcXR5695BoU"
   },
   {
-    "id": "phi-001",
+    "id": "african-small-pot-philadelphia",
     "name": "African Small Pot",
     "cuisine": "Senegalese / Mauritanian",
     "region": "West African",
@@ -1313,7 +1313,7 @@
     "google_place_id": "ChIJE5Ly4xzExokRXYePz6rGr0E"
   },
   {
-    "id": "chi-002",
+    "id": "gor-e-cuisine-chicago",
     "name": "Gor\u00e9e Cuisine",
     "cuisine": "Senegalese",
     "region": "West African",
@@ -1344,7 +1344,7 @@
     "website": "https://goreechicago.com/"
   },
   {
-    "id": "phi-002",
+    "id": "kilimandjaro-philadelphia",
     "name": "Kilimandjaro",
     "cuisine": "Senegalese / West African",
     "region": "West African",
@@ -1372,7 +1372,7 @@
     "google_place_id": "ChIJzT9uQfrGxokRaTlCuPDQg0g"
   },
   {
-    "id": "chi-003",
+    "id": "iyanze-chicago",
     "name": "Iyanze",
     "cuisine": "Nigerian",
     "region": "West African",
@@ -1425,7 +1425,7 @@
     "google_place_id": "ChIJA2zT2_UrDogRZW0PDfK7iVI"
   },
   {
-    "id": "phi-003",
+    "id": "quality-taste-philadelphia",
     "name": "Quality Taste",
     "cuisine": "Jamaican",
     "region": "Caribbean",
@@ -1453,7 +1453,7 @@
     "google_place_id": "ChIJHX8GwP_GxokRiQlQFvVh9cE"
   },
   {
-    "id": "sea-001",
+    "id": "communion-r-b-seattle",
     "name": "Communion R&B",
     "cuisine": "Soul-Fusion",
     "region": "Other African",
@@ -1517,7 +1517,7 @@
     "google_place_id": "ChIJhyQtd9xqkFQR0EtTi-w5as0"
   },
   {
-    "id": "bos-001",
+    "id": "cesaria-boston",
     "name": "Cesaria",
     "cuisine": "Cape Verdean / West African",
     "region": "West African",
@@ -1546,7 +1546,7 @@
     "google_place_id": "ChIJ9dhau7B744kRI3FIw3620C0"
   },
   {
-    "id": "sea-002",
+    "id": "cafe-selam-seattle",
     "name": "Cafe Selam",
     "cuisine": "Ethiopian",
     "region": "East African",
@@ -1573,7 +1573,7 @@
     "google_place_id": "ChIJfyMSEtxqkFQR5WjA_FfVp4A"
   },
   {
-    "id": "bos-002",
+    "id": "suya-joint-boston",
     "name": "Suya Joint",
     "cuisine": "Nigerian",
     "region": "West African",
@@ -1604,7 +1604,7 @@
     "google_place_id": "ChIJc1Xqezp644kR0mBu9CHLdII"
   },
   {
-    "id": "sea-003",
+    "id": "jebena-cafe-seattle",
     "name": "Jebena Cafe",
     "cuisine": "Ethiopian / Eritrean",
     "region": "East African",
@@ -1637,7 +1637,7 @@
     "google_place_id": "ChIJBSO7LVwRkFQRGZCfBanRo58"
   },
   {
-    "id": "hou-sta-014",
+    "id": "cool-runnings-jamaican-grill-houston",
     "name": "Cool Runnings Jamaican Grill",
     "cuisine": "Jamaican (Traditional)",
     "region": "Caribbean",
@@ -2386,7 +2386,7 @@
     "google_place_id": "ChIJGylPe3nTJIgRkpVk2bxRz0A"
   },
   {
-    "id": "hou-006",
+    "id": "lucilles-houston",
     "name": "Lucille's",
     "cuisine": "Southern / Fine Dining",
     "region": "Southern",
@@ -2491,7 +2491,7 @@
     "google_place_id": "ChIJF-zDz1QE9YgRwnm18UYC4fs"
   },
   {
-    "id": "dca-001",
+    "id": "d-gon-washington",
     "name": "D\u014dgon",
     "cuisine": "Afro-Caribbean Fine Dining",
     "region": "Caribbean",
@@ -2606,7 +2606,7 @@
     "google_place_id": "ChIJCYFxwM1fXIYRENyOiZfnmFk"
   },
   {
-    "id": "pdx-001",
+    "id": "kann-portland",
     "name": "Kann",
     "cuisine": "Haitian Fine Dining",
     "region": "Caribbean",
@@ -3061,7 +3061,7 @@
     "google_place_id": "ChIJyTrLF2h7_ogRMcowR0wrWRk"
   },
   {
-    "id": "lax-001",
+    "id": "status-hollywood-los-angeles",
     "name": "Status Hollywood",
     "cuisine": "Upscale Jamaican",
     "region": "Caribbean",
@@ -3208,7 +3208,7 @@
     "google_place_id": "ChIJl3wCbE4VkFQR1CAW2gdo63w"
   },
   {
-    "id": "hou-008",
+    "id": "helens-kitchen-houston",
     "name": "Helen's Kitchen",
     "cuisine": "Jamaican",
     "region": "Caribbean",
@@ -3245,7 +3245,7 @@
     "google_place_id": "ChIJc8SWjMTrQIYRuNPsBGgtls8"
   },
   {
-    "id": "lax-002",
+    "id": "lucia-los-angeles",
     "name": "Lucia",
     "cuisine": "Afro-Caribbean Fine Dining",
     "region": "Caribbean",
@@ -3281,7 +3281,7 @@
     "google_place_id": "ChIJ0aN26s-5woARK0Nz2GazLKs"
   },
   {
-    "id": "lax-003",
+    "id": "bridgetown-roti-los-angeles",
     "name": "Bridgetown Roti",
     "cuisine": "Caribbean American",
     "region": "Caribbean",
@@ -3317,7 +3317,7 @@
     "google_place_id": "ChIJne7Az-rHwoARQhCf1NoVpsY"
   },
   {
-    "id": "atl-001",
+    "id": "negril-atl-atlanta",
     "name": "Negril ATL",
     "cuisine": "Innovative Caribbean",
     "region": "Caribbean",
@@ -3353,7 +3353,7 @@
     "google_place_id": "ChIJ7ULvb2UE9YgR3IpD59Lzy3U"
   },
   {
-    "id": "hou-002",
+    "id": "taste-of-nigeria-houston",
     "name": "Taste of Nigeria",
     "cuisine": "Nigerian",
     "region": "West African",
@@ -3428,7 +3428,7 @@
     "google_place_id": "ChIJ9ckqWMbfQIYRpOaAFOw_EYM"
   },
   {
-    "id": "hou-004",
+    "id": "finger-licking-2-0-houston",
     "name": "Finger Licking 2.0",
     "cuisine": "Nigerian",
     "region": "West African",
@@ -3465,7 +3465,7 @@
     "google_place_id": "ChIJZTXHbKjCQIYROK_czl0UVeA"
   },
   {
-    "id": "hou-sta-004",
+    "id": "sarabell-calabar-houston",
     "name": "Sarabell Calabar",
     "cuisine": "Nigerian (Calabar Specialties)",
     "region": "West African",
@@ -3504,7 +3504,7 @@
     "google_place_id": "ChIJnR6I4GDdQIYRKbOeigj9NFo"
   },
   {
-    "id": "hou-sta-005",
+    "id": "amala-zone-houston",
     "name": "Amala Zone",
     "cuisine": "Nigerian / Grill",
     "region": "West African",
@@ -3537,7 +3537,7 @@
     "google_place_id": "ChIJJ4wQ0tXdQIYRg-G0I1DRdVU"
   },
   {
-    "id": "hou-sta-007",
+    "id": "chef-benny-houston",
     "name": "Chef Benny",
     "cuisine": "Nigerian / Comfort Food",
     "region": "West African",
@@ -3605,7 +3605,7 @@
     "google_place_id": "ChIJV5B8ranCQIYRW34aZ_L02J8"
   },
   {
-    "id": "katy-003",
+    "id": "astors-table-katy",
     "name": "Astor's Table",
     "cuisine": "South African Fusion",
     "region": "South African",
@@ -3643,7 +3643,7 @@
     "google_place_id": "ChIJuxN6vDUnQYYRLAW1m2-J5B0"
   },
   {
-    "id": "hou-sta-010",
+    "id": "suya-hut-meadows-place",
     "name": "Suya Hut",
     "cuisine": "Northern Nigerian (Hausa Style)",
     "region": "West African",
@@ -3677,7 +3677,7 @@
     "google_place_id": "ChIJufvrSMDnQIYRbG4a2gwUidI"
   },
   {
-    "id": "hou-sta-011",
+    "id": "blue-nile-ethiopian-houston",
     "name": "Blue Nile Ethiopian",
     "cuisine": "Ethiopian",
     "region": "East African",
@@ -3711,7 +3711,7 @@
     "google_place_id": "ChIJV9p3a-XAQIYRQaWkOd5S1k4"
   },
   {
-    "id": "hou-003",
+    "id": "aria-suya-kitchen-houston",
     "name": "Aria Suya Kitchen",
     "cuisine": "Nigerian Grill",
     "region": "West African",
@@ -3785,7 +3785,7 @@
     "google_place_id": "ChIJxwg_0p_PRIYROVSDFhF1s0Q"
   },
   {
-    "id": "hou-sta-017",
+    "id": "lucy-ethiopian-restaurant-lounge-houston",
     "name": "Lucy Ethiopian Restaurant & Lounge",
     "cuisine": "Ethiopian",
     "region": "East African",
@@ -3828,7 +3828,7 @@
     "google_place_id": "ChIJFz5zMknCQIYRONmxInOqW4s"
   },
   {
-    "id": "rich-sta-001",
+    "id": "nyammings-fusion-bistro-richmond",
     "name": "Nyammings Fusion Bistro",
     "cuisine": "Caribbean Fusion",
     "region": "Caribbean",
@@ -3862,7 +3862,7 @@
     "google_place_id": "ChIJcdO-djIfQYYR8u60gdOXnZ8"
   },
   {
-    "id": "nyc-daily-001",
+    "id": "africa-kine-new-york",
     "name": "Africa Kine",
     "cuisine": "Senegalese",
     "region": "West African",
@@ -3895,7 +3895,7 @@
     "google_place_id": "ChIJWVImwBb2wokRi2ARhzQeaos"
   },
   {
-    "id": "nyc-daily-002",
+    "id": "buka-brooklyn",
     "name": "Buka",
     "cuisine": "Nigerian",
     "region": "West African",
@@ -3963,7 +3963,7 @@
     "google_place_id": "ChIJaan3M3zJt4kRyyoSactXaUw"
   },
   {
-    "id": "la-daily-001",
+    "id": "veronicas-kitchen-inglewood",
     "name": "Veronica's Kitchen",
     "cuisine": "Nigerian",
     "region": "West African",
@@ -3998,7 +3998,7 @@
     "google_place_id": "ChIJR414OBm3woARKxw-Qh-b9S4"
   },
   {
-    "id": "la-daily-002",
+    "id": "rosalinds-los-angeles",
     "name": "Rosalind's",
     "cuisine": "Ethiopian",
     "region": "East African",
@@ -4105,7 +4105,7 @@
     "google_place_id": "ChIJd0llXeCn9YgRaI4MWdGQaOw"
   },
   {
-    "id": "katy-001",
+    "id": "royal-arm-restaurant-katy",
     "name": "Royal Arm Restaurant",
     "cuisine": "Nigerian & Caribbean Fusion",
     "region": "West African",
@@ -10755,36 +10755,6 @@
     "google_place_id": "ChIJv7RoQ6bCQIYReqG4MLPwF5E"
   },
   {
-    "id": "blue-nile-ethiopian-restaurant",
-    "name": "Blue Nile Ethiopian Restaurant",
-    "cuisine": "Ethiopian",
-    "region": "African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "7770 Southwest Fwy, Houston, TX 77074",
-    "phone": "+1 713-774-3000",
-    "website": "https://www.bluenilerestaurant.com/",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Blue Nile Ethiopian Restaurant located in the River Oaks neighborhood of Houston, TX. We have been nominated as one of the best ethnic restaurant among the Houston community. Food lovers will enjoy the unique taste of Ethiopian dishes.",
-    "our_story": "Listing synced from verified public data; contact the restaurant to confirm hours and menu.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Blue%20Nile%20Ethiopian%20Restaurant%2C%207770%20Southwest%20Fwy%2C%20Houston%2C%20TX%2077074",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmRHDtO1r_l8BCjceZTBbtnNVD-jXZ74SKKWchIyjVM2zs_TbYkolz4nIBzaAyZUF932QaamZCALfC_nIvAuvwoX_lRAHbai_Fpic6Ierv5uwVtE9ipKq3ckjB5U1tA54RqSlE=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmEW7ly5p-uniVzFvtsq7lEhsvJFzYJfgnnKS0ukr8rfZaq6fmjmlPKPX_X-FMTNgbGVB-xfhS42HxT4P8IzMfC7ZoRca_8pm43DDD52TAuwYwiV2_FcmP_UmxFn0FElVi7FfOBvAWLldo=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnCKOn93M4xyHZ91aFXOWffSPEE9tvglA9k0JnLPX0yosMU1w7KUvXulURPUAQSxUhhkvv_J2uoywabu_A-9t6xeAKK-DrwwLl4xxrOzCKqR_vvrfE75twiXw8RPUwzUDhxtxs=w1000-h1000-c-n"
-    ],
-    "google_place_id": "ChIJV9p3a-XAQIYRQaWkOd5S1k4"
-  },
-  {
     "id": "bantu-house",
     "name": "Bantu House",
     "cuisine": "African",
@@ -10947,38 +10917,6 @@
       "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm2hrZNNTR47J11GMm3dVn44Wlhx04gR5En-vI8C2iJPqEmcCMeTRXws9DS2XdgvZg821AF6J4ulqDjNegnCZZ68Poilug2XRGvs-Z_WtFO9SCLTBCB-escullmEroly_AZOyM=w1000-h1000-c-n"
     ],
     "google_place_id": "ChIJpWixU07dQIYRzSKqjye5G_o"
-  },
-  {
-    "id": "blue-nile-houston",
-    "name": "Blue Nile",
-    "cuisine": "Ethiopian",
-    "region": "East African",
-    "price_range": "$",
-    "rating": 4.5,
-    "address": "3030 Audley St, Houston, TX 77098",
-    "phone": "(713) 814-5101",
-    "website": "https://bluenilerestaurant.com/",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Ethiopian dining on Audley Street in Upper Kirby with lamb tibs, vegetarian platters, and honey wine.",
-    "our_story": "Blue Nile has been a Houston favorite for injera-centered meals and warm hospitality.",
-    "cultural_roots": "Ethiopian shared-plate dining and coffee ceremony heritage.",
-    "menu_highlights": [
-      "Combination platter",
-      "Lamb tibs",
-      "Misir wat"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "TX",
-    "google_search_url": "https://www.google.com/search?q=Blue%20Nile%2C%203030%20Audley%20St%2C%20Houston%2C%20TX%2077098",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmRHDtO1r_l8BCjceZTBbtnNVD-jXZ74SKKWchIyjVM2zs_TbYkolz4nIBzaAyZUF932QaamZCALfC_nIvAuvwoX_lRAHbai_Fpic6Ierv5uwVtE9ipKq3ckjB5U1tA54RqSlE=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmEW7ly5p-uniVzFvtsq7lEhsvJFzYJfgnnKS0ukr8rfZaq6fmjmlPKPX_X-FMTNgbGVB-xfhS42HxT4P8IzMfC7ZoRca_8pm43DDD52TAuwYwiV2_FcmP_UmxFn0FElVi7FfOBvAWLldo=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnCKOn93M4xyHZ91aFXOWffSPEE9tvglA9k0JnLPX0yosMU1w7KUvXulURPUAQSxUhhkvv_J2uoywabu_A-9t6xeAKK-DrwwLl4xxrOzCKqR_vvrfE75twiXw8RPUwzUDhxtxs=w1000-h1000-c-n"
-    ],
-    "google_place_id": "ChIJV9p3a-XAQIYRQaWkOd5S1k4"
   },
   {
     "id": "kenna-houston",
