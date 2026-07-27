@@ -9,8 +9,9 @@ import {
   filtersFromHeroSearchInput,
 } from "@/lib/restaurant-filter-url";
 import { useHeroSearchCity } from "@/components/restaurant/HeroSearchCityContext";
+import { HERO_CUISINE_LABELS } from "@/lib/hero-cuisines";
 
-const CUISINES = ["NIGERIAN", "SENEGALESE", "HAITIAN", "ETHIOPIAN", "JAMAICAN"];
+const CUISINES = [...HERO_CUISINE_LABELS];
 const TYPING_SPEED = 100;
 const PAUSE_TIME = 2000;
 

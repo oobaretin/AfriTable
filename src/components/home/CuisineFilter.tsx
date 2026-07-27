@@ -2,20 +2,14 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { BROWSE_CUISINE_FILTERS } from "@/lib/hero-cuisines";
 
 type CuisineFilterProps = {
   selectedCuisines: string[];
   onCuisineToggle: (cuisine: string) => void;
 };
 
-const CUISINES = [
-  { id: "Nigerian", label: "Nigerian" },
-  { id: "Ethiopian", label: "Ethiopian" },
-  { id: "Jamaican", label: "Jamaican" },
-  { id: "Haitian", label: "Haitian" },
-  { id: "Ghanaian", label: "Ghanaian" },
-  { id: "Senegalese", label: "Senegalese" },
-];
+const CUISINES = BROWSE_CUISINE_FILTERS;
 
 export function CuisineFilter({ selectedCuisines, onCuisineToggle }: CuisineFilterProps) {
   return (
