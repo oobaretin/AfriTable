@@ -872,41 +872,6 @@
     "chef_quote": "Bariis Iskukaris (Spiced Rice) honors the hearth\u2014spice, stew, and the hospitality of our community table."
   },
   {
-    "id": "safari-restaurant-mn",
-    "name": "Safari Restaurant",
-    "cuisine": "Somali",
-    "region": "East African",
-    "price_range": "$$",
-    "rating": 4.7,
-    "address": "3010 4th Ave S, Minneapolis, MN 55408",
-    "phone": "(612) 354-3755",
-    "website": "https://safari-restaurant.com",
-    "social": {
-      "instagram": "@safarirestaurant"
-    },
-    "hours": {
-      "mon_sun": "11:00 AM - 11:00 PM"
-    },
-    "about": "An award-winning Somali upscale restaurant that has become a national landmark for East African cuisine in the Midwest.",
-    "our_story": "Safari was founded to elevate Somali food from casual cafes to a formal dining experience, proving that our traditional recipes belong in the fine-dining world.",
-    "cultural_roots": "Showcases the nomadic heritage of the Somali people, where grilled meats and fragrant rice are staples of hospitality and survival.",
-    "menu_highlights": [
-      "Safari Mango Chicken",
-      "Camel Meat (Seasonal)",
-      "Suqaar (Saut\u00e9ed Beef)"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "MN",
-    "google_search_url": "https://www.google.com/search?q=Safari%20Restaurant%2C%203010%204th%20Ave%20S%2C%20Minneapolis%2C%20MN%2055408",
-    "images": [
-      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=5d8myXMwqjAjZsZ-N9uDpA&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=283.11838&pitch=0&thumbfov=100",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmZusZEoCfo4rT4sd2k8fOIBCT5IjSHQATvs9CpaEwp92KL31_SVKVeBmBXU6RsE6MrXNkvOs4DIH5iA6bUqKV_HuSF4z06gaweEMKxAlG0vuX1U-MbR205QgtnTAAwyELDYLM=w1000-h1000-c-n"
-    ],
-    "google_place_id": "ChIJ0YAn0PAn9ocR1OflQk1Oc18",
-    "special_features": "known for Safari Mango Chicken, Camel Meat (Seasonal), and Suqaar (Saut\u00e9ed Beef); Somali flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Safari Mango Chicken honors the hearth\u2014spice, stew, and the hospitality of our community table."
-  },
-  {
     "id": "10-degrees-south-atl",
     "name": "10 Degrees South",
     "cuisine": "South African",
