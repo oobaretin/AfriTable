@@ -51,6 +51,8 @@ type RestaurantDetail = {
   avg_rating: number | null;
   review_count: number;
   secondary_location?: SecondaryLocation | null;
+  specialty?: string | null;
+  chef_quote?: string | null;
 };
 
 export const dynamic = 'force-dynamic';
@@ -563,7 +565,8 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
           <ChefsRecommendation
             cuisine={restaurant.cuisine_types?.[0] || "African"}
             restaurantName={restaurant.name}
-            dishName={(restaurant.menu as any)?.highlights?.[0]}
+            dishName={restaurant.specialty || (restaurant.menu as any)?.highlights?.[0]}
+            quote={restaurant.chef_quote || undefined}
             dishImage={resolveRestaurantImageUrl({
               images: restaurant.images,
               region: (restaurant as { region?: string | null }).region,

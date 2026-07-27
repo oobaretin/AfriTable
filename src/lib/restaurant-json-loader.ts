@@ -31,6 +31,7 @@ export type JSONRestaurant = {
   our_story?: string;
   cultural_roots?: string;
   special_features?: string;
+  chef_quote?: string;
   menu_highlights?: string[];
   images?: string[];
   vibe_tags?: string[];
@@ -121,6 +122,7 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: CatalogListItem 
     neighborhood: jsonRestaurant.neighborhood || null,
     vibe: jsonRestaurant.vibe || null,
     specialty: jsonRestaurant.specialty || (jsonRestaurant.menu_highlights && jsonRestaurant.menu_highlights.length > 0 ? jsonRestaurant.menu_highlights[0] : null),
+    chef_quote: jsonRestaurant.chef_quote || null,
     awards: jsonRestaurant.awards || null,
     quality_factor: jsonRestaurant.quality_factor || null,
     vibe_category: jsonRestaurant.vibe_category || null,

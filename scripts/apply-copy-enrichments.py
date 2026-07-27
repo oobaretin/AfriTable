@@ -22,6 +22,7 @@ FLAGSHIP = ROOT / "data" / "catalog-flagship-copy-enrichments.json"
 BATCH2 = ROOT / "data" / "catalog-batch2-metro-copy-enrichments.json"
 BATCH3 = ROOT / "data" / "catalog-batch3-copy-enrichments.json"
 SPECIAL = ROOT / "data" / "catalog-special-features-enrichments.json"
+CHEF_QUOTE = ROOT / "data" / "catalog-chef-quote-enrichments.json"
 REPORT = ROOT / "data" / "copy-enrichments-report.json"
 LOG = ROOT / ".cursor" / "debug-3435b4.log"
 SESSION = "3435b4"
@@ -72,6 +73,7 @@ def main() -> int:
         **load_json(BATCH2),
         **load_json(BATCH3),
         **load_json(SPECIAL),
+        **load_json(CHEF_QUOTE),
     }
 
     updated = 0
