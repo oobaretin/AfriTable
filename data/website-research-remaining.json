@@ -1,5 +1,5 @@
 {
-  "count": 24,
+  "count": 23,
   "listings": [
     {
       "id": "ponti-ivorian-houston",
@@ -72,12 +72,6 @@
       "name": "Grill master African Restaurant",
       "state": "TX",
       "address": "9755 S Kirkwood Rd D, Houston, TX 77099"
-    },
-    {
-      "id": "global-cuisine-denver",
-      "name": "Global Cuisine",
-      "state": "CO",
-      "address": "1133 Yosemite St Unit C, Denver, CO 80220"
     },
     {
       "id": "fidel-east-african-restaurant-aurora",

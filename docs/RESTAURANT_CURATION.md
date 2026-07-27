@@ -46,6 +46,18 @@ We cannot prove every row is open without calling each business. For the catalog
 | The Social Room (Cleveland Heights) | Neighborhood dive bar — **removed** |
 | Niimatallaah (Tampa) | Address maps to medical campus — **removed** |
 | Siphokazi (Tampa) | Unverifiable at fairgrounds address — **removed** |
+| Global Cuisine (Denver) | Global Grocery Mart at same address — **removed** |
+
+### Website batch 6 (Jul 2026, Colorado)
+
+| Listing | Website |
+|---------|---------|
+| Fidel East African Restaurant (Aurora) | facebook.com/FidelResturant |
+| Abyssinia Ethiopian Restaurant (Denver) | facebook.com/injera720 |
+| All-Stars Cafe (Aurora) | Facebook page |
+| Zula Cafe & Lounge (Aurora) | Facebook page |
+
+No verified URL yet: 5 Star Café, Lalibela Cafe, Geez Habesha, Sarr Maimouna.
 
 ### Website batch 5 (Jul 2026, non–TX/CO/FL)
 

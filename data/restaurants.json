@@ -11711,31 +11711,6 @@
     "lng": -104.9928679
   },
   {
-    "id": "global-cuisine-denver",
-    "name": "Global Cuisine",
-    "cuisine": "East African",
-    "region": "East African",
-    "price_range": "$$",
-    "rating": 5,
-    "address": "1133 Yosemite St Unit C, Denver, CO 80220",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "about": "Global Cuisine serves East African flavors in Denver. A neighborhood spot for east african plates, warm hospitality, and familiar diaspora comfort food.",
-    "our_story": "AfriTable listing for Global Cuisine in Denver. Hours and menu details should be confirmed with the restaurant directly.",
-    "cultural_roots": "Diaspora dining in the United States.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "CO",
-    "phone": "(720) 919-2479",
-    "google_place_id": "ChIJNbCtlad9bIcRVUmnNurXzUM",
-    "lat": 39.733455299999996,
-    "lng": -104.8850671
-  },
-  {
     "id": "african-food-chavie-spices-denver",
     "name": "African food Chavie spices",
     "cuisine": "African",
@@ -11836,7 +11811,9 @@
     "phone": "(720) 476-3027",
     "google_place_id": "ChIJ5_Lnyz59bIcRrbP0OqKuL5g",
     "lat": 39.697366599999995,
-    "lng": -104.8632714
+    "lng": -104.8632714,
+    "website": "https://www.facebook.com/FidelResturant/",
+    "google_search_url": "https://www.google.com/search?q=Fidel%20East%20African%20Restaurant%2C%201074%20S%20Ironton%20St%2C%20Aurora%2C%20CO%2080012"
   },
   {
     "id": "queen-of-sheba-restaurant-denver",
@@ -12015,7 +11992,9 @@
     "phone": "(303) 316-8830",
     "google_place_id": "ChIJldzNgYp_bIcRKYSuFAPC21o",
     "lat": 39.7403559,
-    "lng": -104.9207012
+    "lng": -104.9207012,
+    "website": "https://www.facebook.com/injera720",
+    "google_search_url": "https://www.google.com/search?q=Abyssinia%20Ethiopian%20Restaurant%20and%20Bar%2C%205707%20E%20Colfax%20Ave%2C%20Denver%2C%20CO%2080220"
   },
   {
     "id": "megenagna-aurora",
@@ -12219,7 +12198,9 @@
     "state": "CO",
     "google_place_id": "ChIJn5SxVtx8bIcRl1zOe57ywno",
     "lat": 39.7209688,
-    "lng": -104.8653574
+    "lng": -104.8653574,
+    "website": "https://www.facebook.com/100064220286030/",
+    "google_search_url": "https://www.google.com/search?q=All-Stars%20Cafe%2C%20350%20Havana%20St%2C%20Aurora%2C%20CO%2080010"
   },
   {
     "id": "yemen-grill-cafe-denver-denver",
@@ -12398,7 +12379,9 @@
     "phone": "(303) 635-6071",
     "google_place_id": "ChIJ-89nnUp9bIcRZQrODYhgQXI",
     "lat": 39.6959644,
-    "lng": -104.8475591
+    "lng": -104.8475591,
+    "website": "https://www.facebook.com/p/Zula-Cafe-Lounge-61555419186031/",
+    "google_search_url": "https://www.google.com/search?q=Zula%20Cafe%20%26%20Lounge%2C%201121%20S%20Peoria%20St%2C%20Aurora%2C%20CO%2080012"
   },
   {
     "id": "gb-african-market-and-restaurant-orlando",

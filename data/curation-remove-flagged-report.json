@@ -1,29 +1,15 @@
 {
-  "generatedAt": "2026-07-27T18:27:49Z",
+  "generatedAt": "2026-07-27T18:29:47Z",
   "dryRun": false,
   "removed": [
     {
-      "id": "the-social-room-cleveland-heights",
-      "name": "The Social Room",
-      "state": "OH",
-      "address": "2261 Lee Rd, Cleveland Heights, OH 44118",
-      "reason": "Neighborhood dive bar \u2014 outside African/Caribbean scope"
-    },
-    {
-      "id": "niimatallaah-tampa",
-      "name": "Niimatallaah",
-      "state": "FL",
-      "address": "12780 Race Track Rd, Tampa, FL 33626",
-      "reason": "Listing address is BayCare medical campus; restaurant unverifiable"
-    },
-    {
-      "id": "siphokazi-tampa",
-      "name": "Siphokazi",
-      "state": "FL",
-      "address": "4800 US-301, Tampa, FL 33610",
-      "reason": "No verifiable operator at Florida State Fairgrounds address"
+      "id": "global-cuisine-denver",
+      "name": "Global Cuisine",
+      "state": "CO",
+      "address": "1133 Yosemite St Unit C, Denver, CO 80220",
+      "reason": "Address is Global Grocery Mart \u2014 retail market, not a dine-in restaurant"
     }
   ],
-  "beforeCount": 425,
-  "afterCount": 422
+  "beforeCount": 422,
+  "afterCount": 421
 }

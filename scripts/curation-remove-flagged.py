@@ -34,6 +34,7 @@ CURATION_REMOVE: dict[str, str] = {
     "the-social-room-cleveland-heights": "Neighborhood dive bar — outside African/Caribbean scope",
     "niimatallaah-tampa": "Listing address is BayCare medical campus; restaurant unverifiable",
     "siphokazi-tampa": "No verifiable operator at Florida State Fairgrounds address",
+    "global-cuisine-denver": "Address is Global Grocery Mart — retail market, not a dine-in restaurant",
 }
 
 
