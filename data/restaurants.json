@@ -1800,35 +1800,6 @@
     "chef_quote": "Leah Chase taught us that gumbo feeds more than hunger\u2014it feeds a neighborhood's history."
   },
   {
-    "id": "nyc-abyssinia",
-    "name": "Abyssinia",
-    "cuisine": "Ethiopian",
-    "region": "East African",
-    "price_range": "$$",
-    "rating": 4.5,
-    "address": "35 W 28th St, New York, NY 10001",
-    "phone": "(212) 281-2673",
-    "website": "https://abyssinianyc.com",
-    "about": "Authentic Ethiopian cuisine in the heart of Manhattan, serving traditional dishes with fresh injera and bold spices.",
-    "vibe_category": "Authentic Staples",
-    "state": "NY",
-    "hours": {
-      "mon_sat": "12:00 AM - 12:00 AM",
-      "sun": "12:00 AM - 12:00 AM"
-    },
-    "google_search_url": "https://www.google.com/search?q=Abyssinia%2C%2035%20W%2028th%20St%2C%20New%20York%2C%20NY%2010001",
-    "images": [
-      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=lp2qQ9onbrzK8oUDIEMqvw&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=202.37544&pitch=0&thumbfov=100",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmlIIyGo36n5xw9gujEed7cP9gdRmrqi3vk4ncj-GAm8mzNKgmcaz0tkXIVLm8jvL0zAcLPXAF0iRMnt7f7n9w0utCvnEiiSt61x2nmwzsZrA3qUNS9bEL4ULFk_ndqFcPs3AU=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnkRJezzjLvi8hg3xfdxRRBzz4LWboH4fyOobuIrXS3HZr2AgMqZSUa3IEyamUBkYBVNlx1tMCS86sg2mEoZwBVPubRj2F9vDlWrGEx1twDo8WcI6C-BTC66h-YwlD1ATukWYcM=w1000-h1000-c-n"
-    ],
-    "google_place_id": "ChIJkwmZtnH2wokRcOy1PUOcBlY",
-    "our_story": "Abyssinia brings Manhattan diners to an Ethiopian table\u2014fresh injera, sizzling tibs, and shared platters served with the unhurried hospitality of a traditional Addis Ababa tej bet.",
-    "cultural_roots": "Ethiopian dining rituals: eating with injera instead of utensils, berbere and mitmita spice blends, and coffee ceremony culture after the meal.",
-    "special_features": "communal injera platters; traditional wats and tibs.",
-    "chef_quote": "Signature Ethiopian Plate is why people gather here\u2014berbere, butter, and injera made to share from one platter."
-  },
-  {
     "id": "sf-teranga-village",
     "name": "Teranga (The Village)",
     "cuisine": "Senegalese",
