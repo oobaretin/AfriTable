@@ -10,6 +10,13 @@ type ImmersiveGalleryProps = {
 
 export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryProps) {
   const safeImages = images && images.length > 0 ? images : [];
+
+  /** Avoid repeating the hero when a listing has fewer than four photos. */
+  const galleryImage = (index: number) => {
+    if (!safeImages.length) return "";
+    if (index < safeImages.length) return safeImages[index];
+    return safeImages[safeImages.length - 1];
+  };
   
   // If no images, show placeholder gradient
   if (safeImages.length === 0) {
@@ -30,10 +37,10 @@ export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryPro
   }
 
   // Get images for each position
-  const mainImage = safeImages[0] || "";
-  const secondImage = safeImages[1] || safeImages[0] || "";
-  const thirdImage = safeImages[2] || safeImages[0] || "";
-  const fourthImage = safeImages[3] || safeImages[0] || "";
+  const mainImage = galleryImage(0);
+  const secondImage = galleryImage(1);
+  const thirdImage = galleryImage(2);
+  const fourthImage = galleryImage(3);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 h-[500px] gap-2 p-2">
