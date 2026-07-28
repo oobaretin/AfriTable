@@ -70,6 +70,8 @@
     "update:missing-addresses": "node scripts/update-missing-addresses.mjs",
     "remove:food-trucks": "node scripts/remove-food-trucks.mjs",
     "remove:non-dine-in": "node scripts/remove-non-dine-in-restaurants.mjs",
+    "closure:audit": "node scripts/closure-registry.mjs audit",
+    "closure:apply": "node scripts/closure-registry.mjs apply",
     "check:hours": "node scripts/check-restaurant-hours.mjs",
     "remove:closed": "node scripts/remove-closed-restaurant.mjs",
     "check:count": "node scripts/check-restaurant-count.mjs",

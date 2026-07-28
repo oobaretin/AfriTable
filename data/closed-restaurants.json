@@ -1,0 +1,593 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-28",
+  "description": "Canonical registry of removed listings. Public catalog is data/restaurants.json only; rows here must not appear in the catalog.",
+  "closure_types": {
+    "permanent": "Business permanently closed.",
+    "temporary": "Temporarily closed — may reopen (remove from catalog until back).",
+    "pickup_delivery_only": "Operator exists but has no dine-in room.",
+    "non_dine_in": "Catering, truck, home kitchen, retail, or ghost kitchen.",
+    "duplicate": "Duplicate or superseded slug.",
+    "out_of_scope": "Misclassified, unverifiable, or outside US dine-in scope.",
+    "legacy": "Legacy Supabase row; reason pending documentation."
+  },
+  "entries": [
+    {
+      "slug": "adulis-ny",
+      "name": "Adulis (Flushing)",
+      "address": "149-10 45th Ave, Flushing, NY 11355",
+      "closure_type": "duplicate",
+      "reason": "Bogus Flushing duplicate; real Adulis is Houston (adulis-houston).",
+      "removed_from_catalog": "2026-07-21",
+      "source": "manual"
+    },
+    {
+      "slug": "african-cuisine-san-diego",
+      "name": "African Cuisine",
+      "address": "Cantina Wy",
+      "closure_type": "out_of_scope",
+      "reason": "Incomplete Cantina Wy address; unverified ghost listing.",
+      "removed_from_catalog": null,
+      "source": "fix-catalog-integrity"
+    },
+    {
+      "slug": "africaribbean-royal-riverview",
+      "name": "Africaribbean Royal",
+      "address": "13140 US-301",
+      "closure_type": "permanent",
+      "reason": "Closed in Riverview, FL (Jul 2026 manual curation).",
+      "removed_from_catalog": "2026-07-21",
+      "source": "manual"
+    },
+    {
+      "slug": "afro-caribbean-grill",
+      "name": "Afro Caribbean Grill",
+      "address": "1903 Blodgett St",
+      "closure_type": "pickup_delivery_only",
+      "reason": "Food truck — takeout/delivery only.",
+      "removed_from_catalog": null,
+      "source": "curation-doc"
+    },
+    {
+      "slug": "afro-pastries-indianapolis",
+      "name": "Afro Pastries",
+      "address": "3840 Beaconsfield Ln",
+      "closure_type": "non_dine_in",
+      "reason": "Pastry shop, not sit-down.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "alice-fufulicious-maple-heights",
+      "name": "Alice Fufulicious",
+      "address": "16631 Broadway Ave",
+      "closure_type": "non_dine_in",
+      "reason": "Home-style product operator.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "arike-african-cuisine-catering-services-catering-only-cleveland",
+      "name": "Arike African Cuisine Catering services (catering only)",
+      "address": "8512 Saybrook Dr",
+      "closure_type": "non_dine_in",
+      "reason": "Catering only.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "ayobami-african-food-no-dine-in-catering-only-euclid",
+      "name": "Ayobami African Food (no dine-in, Catering only)",
+      "address": "404 Halle Dr",
+      "closure_type": "non_dine_in",
+      "reason": "Catering only, no dine-in.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "ayomee-s-african-kitchen-sicklerville",
+      "name": "Ayomee’s African Kitchen",
+      "address": "6 Pittman Pl",
+      "closure_type": "non_dine_in",
+      "reason": "Residential home-based operator.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "blackstar-kebab-seattle",
+      "name": "BlackStar Kebab",
+      "address": "1144 NW 52nd St",
+      "closure_type": "non_dine_in",
+      "reason": "Food truck — no fixed dine-in room.",
+      "removed_from_catalog": null,
+      "source": "curation-doc"
+    },
+    {
+      "slug": "bunmi-l-b-on-l6j-3j3",
+      "name": "Bunmi Ọlọ́bẹ̀",
+      "address": "187 Cross Ave unit 5",
+      "closure_type": "out_of_scope",
+      "reason": "Canada listing — outside US catalog scope.",
+      "removed_from_catalog": null,
+      "source": "legacy-review"
+    },
+    {
+      "slug": "chefnchop-laurel",
+      "name": "Chefnchop",
+      "address": "14934 Cherrywood Dr",
+      "closure_type": "pickup_delivery_only",
+      "reason": "Pickup and delivery only — no dine-in room.",
+      "removed_from_catalog": "2026-07-21",
+      "source": "manual"
+    },
+    {
+      "slug": "chrisettas-kitchen-catering-west-chester",
+      "name": "Chrisetta's Kitchen (Catering )",
+      "address": "130 W Miner St",
+      "closure_type": "non_dine_in",
+      "reason": "Catering operator.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "clt-leah-louise",
+      "name": "clt-leah-louise",
+      "address": null,
+      "closure_type": "permanent",
+      "reason": "Leah & Louise — sources report permanently closed.",
+      "removed_from_catalog": null,
+      "source": "remove-outdated"
+    },
+    {
+      "slug": "dakar-nola-new-orleans",
+      "name": "Dakar NOLA",
+      "address": "937 Leonidas St",
+      "closure_type": "out_of_scope",
+      "reason": "Legacy import — verify before reactivation.",
+      "removed_from_catalog": null,
+      "source": "legacy-review"
+    },
+    {
+      "slug": "dc-003",
+      "name": "dc-003",
+      "address": null,
+      "closure_type": "permanent",
+      "reason": "Elfegne — Yelp listed CLOSED.",
+      "removed_from_catalog": null,
+      "source": "remove-outdated"
+    },
+    {
+      "slug": "delights-ghanaian-cuisine-houston",
+      "name": "Delight's Ghanaian Cuisine",
+      "address": "14524 Piping Rock Ln",
+      "closure_type": "non_dine_in",
+      "reason": "Residential home-based operator.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "ethio-coffee-and-souk-houston",
+      "name": "Ethio Coffee and Souk",
+      "address": "6580 Southwest Fwy Suite # B",
+      "closure_type": "non_dine_in",
+      "reason": "Coffee shop / souk market.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "fabaceae-african-cuisine",
+      "name": "fabaceae-african-cuisine",
+      "address": null,
+      "closure_type": "duplicate",
+      "reason": "Legacy duplicate slug.",
+      "removed_from_catalog": null,
+      "source": "legacy-deactivate"
+    },
+    {
+      "slug": "fannoh-flavor-african-food-truck-miami",
+      "name": "Fannoh Flavor African Food Truck",
+      "address": "77 NE 64th St",
+      "closure_type": "non_dine_in",
+      "reason": "Food truck.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "global-cuisine-denver",
+      "name": "global-cuisine-denver",
+      "address": null,
+      "closure_type": "out_of_scope",
+      "reason": "Address is Global Grocery Mart — retail, not dine-in.",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "golden-hands-cameroonian-food-los-angeles",
+      "name": "Golden hands Cameroonian food",
+      "address": "6426 2nd Ave",
+      "closure_type": "non_dine_in",
+      "reason": "Takeaway-focused vendor.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "guinea-conakry-austin",
+      "name": "Guinea Conakry",
+      "address": "318 E 5th St.",
+      "closure_type": "permanent",
+      "reason": "Stale listing — 318 E 5th occupied by another tenant.",
+      "removed_from_catalog": null,
+      "source": "fix-catalog-integrity"
+    },
+    {
+      "slug": "hou-reggae-hut-veterans",
+      "name": "Reggae Hut (Veterans Memorial)",
+      "address": "12005 Veterans Memorial Dr, Ste A",
+      "closure_type": "duplicate",
+      "reason": "Superseded by reggae-hut catalog entry.",
+      "removed_from_catalog": null,
+      "source": "legacy-deactivate"
+    },
+    {
+      "slug": "hou-sta-013",
+      "name": "Jollof Rice King",
+      "address": "3833 Richmond Ave",
+      "closure_type": "permanent",
+      "reason": "Jollof Rice King permanently closed (3833 Richmond Ave, Houston).",
+      "removed_from_catalog": null,
+      "source": "fix-catalog-integrity"
+    },
+    {
+      "slug": "hou-sta-018",
+      "name": "Caribbean Hotpot Grill",
+      "address": "5601 Navigation Blvd",
+      "closure_type": "duplicate",
+      "reason": "Legacy slug — Caribbean Hotpot in catalog.",
+      "removed_from_catalog": null,
+      "source": "legacy-deactivate"
+    },
+    {
+      "slug": "igatap-african-caribbean-cuisine-orlando",
+      "name": "igatap-african-caribbean-cuisine-orlando",
+      "address": null,
+      "closure_type": "out_of_scope",
+      "reason": "SNAP retailer at grocery-market address.",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "ile-bistro-la",
+      "name": "ile-bistro-la",
+      "address": null,
+      "closure_type": "permanent",
+      "reason": "ILÉ Bistro — Timeout listed CLOSED.",
+      "removed_from_catalog": null,
+      "source": "remove-outdated"
+    },
+    {
+      "slug": "intercontinental-african-nigerian-restaurant-columbus",
+      "name": "🇳🇬🇳🇬Intercontinental African Nigerian Restaurant🇳🇬🇺🇸",
+      "address": "5777 Cleveland Ave",
+      "closure_type": "non_dine_in",
+      "reason": "Low-quality unverified scrape.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "jollofinnola-slidell",
+      "name": "Jollofinnola",
+      "address": "5341 Bypass Breeze Dr",
+      "closure_type": "non_dine_in",
+      "reason": "Home-based operator.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "k-y-d-restaurant-mirage-brooklyn",
+      "name": "Káyọ̀dé Restaurant Mirage",
+      "address": "563 E 26th St",
+      "closure_type": "pickup_delivery_only",
+      "reason": "Pickup/delivery-focused; dine-in not open.",
+      "removed_from_catalog": null,
+      "source": "curation-doc"
+    },
+    {
+      "slug": "karyi-kitchens-new-orleans",
+      "name": "Karyi Kitchens",
+      "address": "201 St Charles Ave ste 213",
+      "closure_type": "non_dine_in",
+      "reason": "Ghost/virtual kitchen office suite.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "katy-002",
+      "name": "Amala Joint",
+      "address": "1251 Pin Oak Rd",
+      "closure_type": "duplicate",
+      "reason": "Duplicate of amala-joint-houston.",
+      "removed_from_catalog": null,
+      "source": "legacy-deactivate"
+    },
+    {
+      "slug": "katy-004",
+      "name": "Butter D' Roti",
+      "address": "3710 Deepwind Bay Ct",
+      "closure_type": "non_dine_in",
+      "reason": "Residential home-based operator.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "la-daily-003",
+      "name": "African Chop",
+      "address": "3150 Wilshire Blvd",
+      "closure_type": "non_dine_in",
+      "reason": "Food truck / mobile vendor.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "lucy-houston",
+      "name": "Lucy",
+      "address": "6800 Southwest Fwy",
+      "closure_type": "duplicate",
+      "reason": "Duplicate of lucy-ethiopian-restaurant-lounge-houston.",
+      "removed_from_catalog": null,
+      "source": "fix-catalog-integrity"
+    },
+    {
+      "slug": "massawa-restaurant-on-m6e-2g8",
+      "name": "Massawa Restaurant",
+      "address": "1610 Eglinton Ave W",
+      "closure_type": "out_of_scope",
+      "reason": "Canada listing — outside US catalog scope.",
+      "removed_from_catalog": null,
+      "source": "legacy-review"
+    },
+    {
+      "slug": "moroccan-breeze-restaurant-orlando",
+      "name": "moroccan-breeze-restaurant-orlando",
+      "address": null,
+      "closure_type": "out_of_scope",
+      "reason": "Morocco tour company, not a restaurant.",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "nazareth-cafe-houston",
+      "name": "Nazareth Cafe",
+      "address": "6617 Chimney Rock Rd",
+      "closure_type": "permanent",
+      "reason": "Permanently closed (MapQuest).",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "negrit-houston",
+      "name": "Negrit",
+      "address": "3401 Main St",
+      "closure_type": "permanent",
+      "reason": "Removed from catalog (legacy Houston listing).",
+      "removed_from_catalog": null,
+      "source": "legacy-review"
+    },
+    {
+      "slug": "nigerian-suya-tinz-newark",
+      "name": "NIGERIAN SUYA & TINZ",
+      "address": "382 Clinton Pl Apartment 3",
+      "closure_type": "non_dine_in",
+      "reason": "Home/apartment address, not public restaurant.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "niimatallaah-tampa",
+      "name": "niimatallaah-tampa",
+      "address": null,
+      "closure_type": "out_of_scope",
+      "reason": "Address is BayCare medical campus.",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "nini-kitchen-houston",
+      "name": "Nini Kitchen",
+      "address": "7627 Cook Rd",
+      "closure_type": "out_of_scope",
+      "reason": "Website matched wrong business (Marietta, GA).",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "nyc-abyssinia",
+      "name": "Abyssinia",
+      "address": "35 W 28th St",
+      "closure_type": "permanent",
+      "reason": "Permanently closed at 268 W 135th St, Harlem (catalog had wrong 28th St address).",
+      "removed_from_catalog": "2026-07-21",
+      "source": "manual"
+    },
+    {
+      "slug": "nyc-berber",
+      "name": "nyc-berber",
+      "address": null,
+      "closure_type": "permanent",
+      "reason": "Berber Street Food — reported permanently closed.",
+      "removed_from_catalog": null,
+      "source": "remove-outdated"
+    },
+    {
+      "slug": "olas-foods-specialty-market-africa-on-the-bay-tampa",
+      "name": "Ola's Foods Specialty Market - Africa On The Bay",
+      "address": "1908 W Dr Martin Luther King Jr Blvd",
+      "closure_type": "non_dine_in",
+      "reason": "Specialty market / retail.",
+      "removed_from_catalog": null,
+      "source": "legacy-deactivate"
+    },
+    {
+      "slug": "primo-african-quisine-cleveland",
+      "name": "Primo African Quisine",
+      "address": "2123 E 2nd St",
+      "closure_type": "permanent",
+      "reason": "Permanently closed (MapQuest / directory status).",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "saaraloges-kitchen-riverside",
+      "name": "Saaraloge's Kitchen",
+      "address": "11711 Collett Ave",
+      "closure_type": "pickup_delivery_only",
+      "reason": "Home-kitchen pickup operator.",
+      "removed_from_catalog": null,
+      "source": "curation-doc"
+    },
+    {
+      "slug": "safari-restaurant-mn",
+      "name": "Safari Restaurant",
+      "address": "3010 4th Ave S, Minneapolis, MN 55408",
+      "closure_type": "permanent",
+      "reason": "Permanently closed — upscale Somali restaurant, Minneapolis (Jul 2026).",
+      "removed_from_catalog": "2026-07-21",
+      "source": "manual"
+    },
+    {
+      "slug": "sarabell-calabar-restaurant-buffet-houston",
+      "name": "Sarabell Calabar Restaurant & Buffet",
+      "address": "9801 Bissonnet St Suite C",
+      "closure_type": "duplicate",
+      "reason": "Duplicate of sarabell-calabar-houston.",
+      "removed_from_catalog": null,
+      "source": "fix-catalog-integrity"
+    },
+    {
+      "slug": "selam-houston",
+      "name": "Selam",
+      "address": "5701 Bellaire Blvd d",
+      "closure_type": "non_dine_in",
+      "reason": "Retail specialty store, not a restaurant.",
+      "removed_from_catalog": null,
+      "source": "curation-doc"
+    },
+    {
+      "slug": "sf-001",
+      "name": "Teranga",
+      "address": "1 Embarcadero Center",
+      "closure_type": "duplicate",
+      "reason": "Duplicate of teranga-nyc.",
+      "removed_from_catalog": null,
+      "source": "legacy-deactivate"
+    },
+    {
+      "slug": "siphokazi-tampa",
+      "name": "siphokazi-tampa",
+      "address": null,
+      "closure_type": "out_of_scope",
+      "reason": "No verifiable operator at fairgrounds address.",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "somali-halal-store-mechanicsburg",
+      "name": "Somali Halal store",
+      "address": "5247 Simpson Ferry Rd",
+      "closure_type": "non_dine_in",
+      "reason": "Retail halal store.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "spicy-fame-pickup-delivery-only-raleigh",
+      "name": "Spicy Fame (Pickup & Delivery Only)",
+      "address": "3805 S Wilmington St #7",
+      "closure_type": "pickup_delivery_only",
+      "reason": "Pickup and delivery only (name + curation spot-check).",
+      "removed_from_catalog": null,
+      "source": "curation-doc"
+    },
+    {
+      "slug": "street-suya-dallas",
+      "name": "Street Suya",
+      "address": "1499 Regal Row",
+      "closure_type": "non_dine_in",
+      "reason": "Street suya stand, not dine-in.",
+      "removed_from_catalog": null,
+      "source": "remove-non-dine-in"
+    },
+    {
+      "slug": "streetgrillz-windsor-on-n8w-3t6",
+      "name": "StreetGrillz Windsor",
+      "address": "4185 Walker Rd #100",
+      "closure_type": "out_of_scope",
+      "reason": "Canada listing — outside US catalog scope.",
+      "removed_from_catalog": null,
+      "source": "legacy-review"
+    },
+    {
+      "slug": "sudan-cafe-denver",
+      "name": "sudan-cafe-denver",
+      "address": null,
+      "closure_type": "out_of_scope",
+      "reason": "No working operator website; unverifiable.",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "tailat-kitchen-austin",
+      "name": "Tailat Kitchen",
+      "address": "2101 W Pecan St #105",
+      "closure_type": "duplicate",
+      "reason": "Wrong Pflugerville address; canonical is tailat-kitchen-nigerian-cuisine-austin.",
+      "removed_from_catalog": null,
+      "source": "fix-catalog-integrity"
+    },
+    {
+      "slug": "taste-cleveland-heights",
+      "name": "Taste",
+      "address": "2317 Lee Rd",
+      "closure_type": "out_of_scope",
+      "reason": "Contemporary American wine bar — outside scope.",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "teranga-4-embarcadero-ctr",
+      "name": "Teranga",
+      "address": "level facing water fountain",
+      "closure_type": "duplicate",
+      "reason": "Duplicate Teranga SF location slug.",
+      "removed_from_catalog": null,
+      "source": "legacy-deactivate"
+    },
+    {
+      "slug": "tfk-african-food-tampa",
+      "name": "Tfk African food.",
+      "address": "5100 N Nebraska Ave",
+      "closure_type": "out_of_scope",
+      "reason": "No working operator website (404).",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "the-social-room-cleveland-heights",
+      "name": "The Social Room",
+      "address": "2261 Lee Rd",
+      "closure_type": "out_of_scope",
+      "reason": "Neighborhood dive bar — outside scope.",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    },
+    {
+      "slug": "worlds-magic-restaurant-orlando",
+      "name": "worlds-magic-restaurant-orlando",
+      "address": null,
+      "closure_type": "out_of_scope",
+      "reason": "Unverifiable operator; domain hijacked.",
+      "removed_from_catalog": null,
+      "source": "curation-flagged"
+    }
+  ],
+  "last_applied_at": "2026-07-28T05:43:00.578Z"
+}

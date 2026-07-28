@@ -22,6 +22,15 @@ Scripts:
 - `python3 scripts/curation-remove-flagged.py` — closed, misclassified, or unverifiable listings
 - `python3 scripts/curation-remove-non-dine-in.py` — pickup-only, trucks, retail, home kitchens
 - `node scripts/remove-non-dine-in-restaurants.mjs` — legacy batch (Supabase sync)
+- **`data/closed-restaurants.json`** — canonical registry of all removed listings (permanent close, temporary close, pickup-only, duplicates, out-of-scope)
+- **`npm run closure:audit`** — fail if a closed slug is still in `restaurants.json` or active in Supabase
+- **`npm run closure:apply`** — deactivate registry slugs in Supabase (`is_active = false`)
+
+When removing a listing for closure or non–dine-in scope:
+
+1. Remove from `data/restaurants.json`
+2. Add or update an entry in `data/closed-restaurants.json` (`closure_type`: `permanent`, `temporary`, `pickup_delivery_only`, `non_dine_in`, `duplicate`, or `out_of_scope`)
+3. Run `npm run closure:apply` then `npm run closure:audit`
 
 ## What “verified” means here
 
