@@ -10982,42 +10982,6 @@
     "chef_quote": "Chicken suqaar honors the hearth\u2014spice, stew, and the hospitality of our community table."
   },
   {
-    "id": "kente-caf-salt-lake-city",
-    "name": "Kente Caf\u00e9",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$$",
-    "rating": 5,
-    "address": "751 W 800 S, Salt Lake City, UT 84104",
-    "phone": "(385) 237-4642",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Salt Lake City African restaurant on 751 W 800 S, known for jollof rice, stewed meats, and seasonal specials.",
-    "our_story": "Kente Caf\u00e9 serves african flavors to diners in Salt Lake City and surrounding communities.",
-    "cultural_roots": "Pan-African diaspora flavors across the continent's many culinary regions.",
-    "menu_highlights": [
-      "Jollof rice",
-      "Stewed meats",
-      "Seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "UT",
-    "google_place_id": "ChIJeZYZ3Kr1UocRPgtx5xgNtY4",
-    "lat": 40.7513571,
-    "lng": -111.91271169999999,
-    "google_search_url": "https://www.google.com/search?q=Kente%20Caf%C3%A9%2C%20751%20W%20800%20S%2C%20Salt%20Lake%20City%2C%20UT%2084104",
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkKYov9YpoDzxM_rhoxtRLwEPXeMLDgFkzckQnlp1WKUiO3dbsQYpnGi9s5S7CpnAcyxYcquOArC8xVwzXJ14hP4UEu83ZdUx62ZLP4X4wTpBjrXipo86iacYCMz0wfsnEJywIw=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn-Fh0q9gncVDhJHKq2kWf8ATgMxGQRlf7a-De7ZmiPG9tehPW966Zt_aspXa9G0PY-0JEMf9yfMuHgHPTKrVwYnfaFG4dKNBNrsEhOVSYiTyo7NKelAUuaAGVvWmw0BRh4LWUe=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmVCPQQQN8t8Jog5aFEIX6uyqATdQKij912ce_GgyCZsMPoyez7dssAW-TXqCeUqK8rKW6NcXgsJttWc0_JSlfVUNVTQFszMduchsAwYx5CBuOdgBsyt3zLvgIuqYaAeScB2lJ0=w1000-h1000-c-n"
-    ],
-    "website": "https://spicekitchenincubator.org/chefs/kente-cafe",
-    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Jollof rice defines what we do at Kente Caf\u00e9\u2014traditional flavor, fresh ingredients, and pride in every plate."
-  },
-  {
     "id": "oromian-restaurant-salt-lake-city",
     "name": "Oromian Restaurant",
     "cuisine": "Ethiopian",

@@ -328,6 +328,15 @@
       "source": "remove-non-dine-in"
     },
     {
+      "slug": "kente-caf-salt-lake-city",
+      "name": "Kente Café",
+      "address": "751 W 800 S, Salt Lake City, UT 84104",
+      "closure_type": "non_dine_in",
+      "reason": "Mobile caterer (Spice Kitchen Incubator); no dine-in room.",
+      "removed_from_catalog": "2026-07-28",
+      "source": "manual"
+    },
+    {
       "slug": "la-daily-003",
       "name": "African Chop",
       "address": "3150 Wilshire Blvd",
@@ -598,5 +607,5 @@
       "source": "curation-flagged"
     }
   ],
-  "last_applied_at": "2026-07-28T05:51:46.431Z"
+  "last_applied_at": "2026-07-28T14:53:09.164Z"
 }
