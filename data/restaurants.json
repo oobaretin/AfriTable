@@ -7090,41 +7090,6 @@
     "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
   },
   {
-    "id": "chefnchop-laurel",
-    "name": "Chefnchop",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 5,
-    "address": "14934 Cherrywood Dr, Laurel, MD 20707",
-    "phone": "(571) 426-6548",
-    "website": "https://chefnchop.com/shop/",
-    "hours": {
-      "mon_sat": "11:00 AM - 10:00 PM",
-      "sun": "Closed"
-    },
-    "about": "Laurel African restaurant on 14934 Cherrywood Dr, known for jollof rice, stewed meats, and seasonal specials.",
-    "our_story": "Chefnchop serves african flavors to diners in Laurel and surrounding communities.",
-    "cultural_roots": "Pan-African diaspora flavors across the continent's many culinary regions.",
-    "menu_highlights": [
-      "Jollof rice",
-      "Stewed meats",
-      "Seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "MD",
-    "google_place_id": "ChIJsTjT_KLdt4kRlVZIJsN_wms",
-    "lat": 39.0955328,
-    "lng": -76.8773114,
-    "google_search_url": "https://www.google.com/search?q=Chefnchop%2C%2014934%20Cherrywood%20Dr%2C%20Laurel%2C%20MD%2020707",
-    "images": [
-      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=8B5tgJgbpRRUTe1sPxOhWA&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=286.6984&pitch=0&thumbfov=100",
-      "https://lh3.googleusercontent.com/gps-proxy/ALd4DhEpEPTLriWuybilV2rPCs2BFuOIEwZsjxNY2t4krkX51Qvwgtnd3JJN50-opW3H0eUWTdqq-lnlF1zhDbHuP4huElLuhYy0ThMkQizH6Euj3ncTNofBSr8xV3Iv6qzomTac3SHTLU813wFzV3pVOBpDJr3hmCjRSiJC_ZdMIgtgPIzFVS19-dE4=w1000-h1000-c-n"
-    ],
-    "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Jollof rice defines what we do at Chefnchop\u2014traditional flavor, fresh ingredients, and pride in every plate."
-  },
-  {
     "id": "d-nd-new-york",
     "name": "d\u00f9nd\u00fa",
     "cuisine": "African",
