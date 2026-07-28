@@ -12408,39 +12408,6 @@
     "chef_quote": "Call for seasonal specials defines what we do at Trybal African Speakeasy\u2014traditional flavor, fresh ingredients, and pride in every plate."
   },
   {
-    "id": "african-food-chavie-spices-denver",
-    "name": "African food Chavie spices",
-    "cuisine": "African",
-    "region": "African",
-    "price_range": "$",
-    "rating": 5,
-    "address": "4363 S Quebec St, Denver, CO 80237",
-    "hours": {
-      "mon_sat": "11:00 AM - 9:00 PM",
-      "sun": "12:00 PM - 8:00 PM"
-    },
-    "about": "West African spice shop and kitchen in Denver serving pepper stew, jollof, and homestyle plates with bold seasoning.",
-    "our_story": "African Food Chavie Spices doubles as a spice merchant and kitchen\u2014West African pepper stew, jollof, and homestyle plates seasoned with the blends that give diaspora cooking its signature heat.",
-    "cultural_roots": "West African spice culture: scotch bonnet, grains of paradise, and the market-stall seasoning traditions that travel with immigrant cooks to Denver.",
-    "menu_highlights": [
-      "Call for seasonal specials"
-    ],
-    "vibe_category": "Authentic Staples",
-    "state": "CO",
-    "phone": "(720) 399-8948",
-    "website": "https://www.instagram.com/african_food_chavie_spices?igsh=MWphMmMwcjFweHV1eg%3D%3D&utm_source=qr",
-    "google_place_id": "ChIJmSv8X3aHbIcRBli8reArGDI",
-    "lat": 39.6376468,
-    "lng": -104.90631739999999,
-    "images": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk4E5u7Jo5pynUqV0mPTLS6N5BFnpV1N5EsYiian6zdAEz3ugdEIV7rYpwPCV-5ARpYf477pFW_uDt55vY7N_fMX9nPxGEvpF1AkLioffQWbXqbOozMHYi87x2to2Dehs44OtjlxucSuiw8=w1000-h1000-c-n",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlgLDTdzQFlak8owRhE6M1_gNItgd8AJZZW024E0q-A4qUTOeKl1IqATNLBjnJvN8taiHNEO0re3-tswSMe9DNAfPmTrekdcR9Hit_m9-j52hb7Deve8EIg0rQ3Wl00MzZhw5RO_OFhh9U8=w1000-h1000-c-n",
-      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=l8yDZopLLuJbBU4I5rRV1A&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=197.76007&pitch=0&thumbfov=100"
-    ],
-    "special_features": "known for Call for seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Call for seasonal specials defines what we do at African food Chavie spices\u2014traditional flavor, fresh ingredients, and pride in every plate."
-  },
-  {
     "id": "maandeeq-east-africa-restaurant-aurora",
     "name": "Maandeeq East Africa Restaurant",
     "cuisine": "East African",

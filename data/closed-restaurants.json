@@ -31,6 +31,15 @@
       "source": "fix-catalog-integrity"
     },
     {
+      "slug": "african-food-chavie-spices-denver",
+      "name": "African food Chavie spices",
+      "address": "4363 S Quebec St, Denver, CO 80237",
+      "closure_type": "temporary",
+      "reason": "Google Maps shows temporarily closed (Jul 2026 manual curation).",
+      "removed_from_catalog": "2026-07-28",
+      "source": "manual"
+    },
+    {
       "slug": "africaribbean-royal-riverview",
       "name": "Africaribbean Royal",
       "address": "13140 US-301",
@@ -589,5 +598,5 @@
       "source": "curation-flagged"
     }
   ],
-  "last_applied_at": "2026-07-28T05:43:00.578Z"
+  "last_applied_at": "2026-07-28T05:51:46.431Z"
 }
