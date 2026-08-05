@@ -11,6 +11,7 @@ import {
   Clock,
   Search,
   ClipboardList,
+  Mail,
   ExternalLink,
   LogOut,
 } from "lucide-react";
@@ -29,6 +30,7 @@ const navItems = [
   { label: "Pending restaurants", href: "/admin/pending-restaurants", icon: Clock, exact: false },
   { label: "Table requests", href: "/admin/table-requests", icon: ClipboardList, exact: false },
   { label: "Catalog QA", href: "/admin/catalog-qa", icon: Search, exact: false },
+  { label: "Partner outreach", href: "/admin/partner-outreach", icon: Mail, exact: false },
 ];
 
 function isActivePath(pathname: string, href: string, exact: boolean) {
