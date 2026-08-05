@@ -44,9 +44,8 @@ export async function getLivePartnerStatus(slugOrId: string, knownDbId?: string 
     supabase.from("availability_settings").select("*").eq("restaurant_id", dbRestaurantId).maybeSingle(),
   ]);
 
-  const isClaimed = Boolean((restaurant as { is_claimed?: boolean } | null)?.is_claimed);
-  const onlineReservationsEnabled =
-    (settings as { online_reservations_enabled?: boolean } | null)?.online_reservations_enabled !== false;
+  const isClaimed = Boolean(restaurant?.is_claimed);
+  const onlineReservationsEnabled = settings?.online_reservations_enabled !== false;
   const isLivePartner = isClaimed && onlineReservationsEnabled;
 
   return {
@@ -75,9 +74,7 @@ export async function getLivePartnerSlugSet(): Promise<Set<string>> {
     .in("restaurant_id", ids);
 
   const reservationsOff = new Set(
-    (settings ?? [])
-      .filter((s) => (s as { online_reservations_enabled?: boolean }).online_reservations_enabled === false)
-      .map((s) => (s as { restaurant_id: string }).restaurant_id),
+    (settings ?? []).filter((s) => s.online_reservations_enabled === false).map((s) => s.restaurant_id),
   );
 
   const slugs = new Set<string>();

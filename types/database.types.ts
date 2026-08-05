@@ -197,6 +197,8 @@ export type Database = {
           same_day_cutoff_hours: number;
           max_party_size: number;
           operating_hours: Json;
+          online_reservations_enabled: boolean;
+          buffer_minutes: number;
         };
         Insert: {
           id?: string;
@@ -206,6 +208,8 @@ export type Database = {
           same_day_cutoff_hours?: number;
           max_party_size?: number;
           operating_hours?: Json;
+          online_reservations_enabled?: boolean;
+          buffer_minutes?: number;
         };
         Update: {
           id?: string;
@@ -215,6 +219,8 @@ export type Database = {
           same_day_cutoff_hours?: number;
           max_party_size?: number;
           operating_hours?: Json;
+          online_reservations_enabled?: boolean;
+          buffer_minutes?: number;
         };
         Relationships: [
           {
