@@ -14,12 +14,25 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { SITE_CONTACT } from "@/lib/site-contact";
-import type { PartnerOutreachCandidate, PartnerOutreachEmail } from "@/lib/partner-outreach-types";
+import type {
+  PartnerOutreachCandidate,
+  PartnerOutreachEmail,
+  PartnerOutreachStatusValue,
+} from "@/lib/partner-outreach-types";
+import {
+  PartnerOutreachStatusBadge,
+  PartnerOutreachStatusControls,
+} from "@/components/admin/PartnerOutreachStatusControls";
 
 type PartnerOutreachPanelProps = {
   candidate: PartnerOutreachCandidate;
   email: PartnerOutreachEmail;
   sendOrder?: number;
+  outreachStatus: PartnerOutreachStatusValue;
+  outreachNotes: string | null;
+  contactedAt: string | null;
+  statusUpdatedAt: string | null;
+  liveClaimed: boolean;
 };
 
 function mailtoCompose(subject: string, body: string, to = ""): string {
@@ -68,7 +81,16 @@ function EmailPreview({ label, subject, body }: { label: string; subject: string
   );
 }
 
-export function PartnerOutreachCard({ candidate, email, sendOrder }: PartnerOutreachPanelProps) {
+export function PartnerOutreachCard({
+  candidate,
+  email,
+  sendOrder,
+  outreachStatus,
+  outreachNotes,
+  contactedAt,
+  statusUpdatedAt,
+  liveClaimed,
+}: PartnerOutreachPanelProps) {
   const telHref = candidate.phone ? `tel:${candidate.phone.replace(/[^\d+]/g, "")}` : null;
 
   return (
@@ -82,11 +104,12 @@ export function PartnerOutreachCard({ candidate, email, sendOrder }: PartnerOutr
               </Badge>
             ) : null}
             {candidate.priority === "primary" ? <Badge>Primary</Badge> : null}
+            <PartnerOutreachStatusBadge status={outreachStatus} />
             <Badge variant="secondary">{candidate.rating.toFixed(1)} ★</Badge>
           </div>
           <CardTitle className="text-lg">{candidate.name}</CardTitle>
           <p className="text-sm text-muted-foreground">
-            {candidate.cuisine} · {candidate.address}
+            {candidate.cuisine} · {candidate.city}, {candidate.state}
           </p>
           <p className="text-xs text-muted-foreground">
             {candidate.phone}
@@ -173,6 +196,17 @@ export function PartnerOutreachCard({ candidate, email, sendOrder }: PartnerOutr
             Claim URL
           </Link>
         </Button>
+
+        <div className="w-full">
+          <PartnerOutreachStatusControls
+            slug={candidate.slug}
+            status={outreachStatus}
+            notes={outreachNotes}
+            contactedAt={contactedAt}
+            updatedAt={statusUpdatedAt}
+            liveClaimed={liveClaimed}
+          />
+        </div>
       </CardContent>
     </Card>
   );

@@ -609,6 +609,42 @@ export type Database = {
         ];
       };
 
+      partner_outreach_status: {
+        Row: {
+          slug: string;
+          status: "pending" | "sent" | "replied" | "claimed" | "declined" | "skipped";
+          notes: string | null;
+          contacted_at: string | null;
+          updated_at: string;
+          updated_by: string | null;
+        };
+        Insert: {
+          slug: string;
+          status?: "pending" | "sent" | "replied" | "claimed" | "declined" | "skipped";
+          notes?: string | null;
+          contacted_at?: string | null;
+          updated_at?: string;
+          updated_by?: string | null;
+        };
+        Update: {
+          slug?: string;
+          status?: "pending" | "sent" | "replied" | "claimed" | "declined" | "skipped";
+          notes?: string | null;
+          contacted_at?: string | null;
+          updated_at?: string;
+          updated_by?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "partner_outreach_status_updated_by_fkey";
+            columns: ["updated_by"];
+            isOneToOne: false;
+            referencedRelation: "profiles";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+
       partner_applications: {
         Row: {
           id: string;

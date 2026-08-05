@@ -13,25 +13,34 @@ export type { PartnerOutreachCandidate, PartnerOutreachContactChannel, PartnerOu
 
 type OutreachFile = {
   candidates: PartnerOutreachCandidate[];
+  states?: Array<{ state: string; count: number }>;
 };
 
 const DATA_PATH = path.join(process.cwd(), "data", "partner-outreach-candidates.json");
 
-const METRO_LABELS: Record<string, string> = {
-  houston: "Houston",
-  boston: "Boston",
-  denver: "Denver",
-  atlanta: "Atlanta",
-  minneapolis: "Minneapolis",
+const PAGE_SIZE = 25;
+
+/** Houston slugs with hand-tuned copy (optional overrides). */
+const CUSTOM_HOOKS: Record<string, (c: PartnerOutreachCandidate) => string> = {
+  "grill-master-african-restaurant-houston": (c) =>
+    `Your spot at ${streetLine(c.address)} is already listed on our directory with strong reviews — we'd love to help you turn that visibility into actual reservations.`,
+  "vertex-houston": (c) =>
+    `Vertex is already featured in our Houston directory with excellent reviews for Ethiopian dining at ${streetLine(c.address)}.`,
+  "glozi-calabar-restaurant-and-african-cuisine-houston": (c) =>
+    `Your Westheimer location (${streetLine(c.address)}) is already live in our directory with a ${c.rating.toFixed(1)} rating.`,
+  "dakar-street-food-blodgett-houston": (c) =>
+    `Dakar Street Food @ Blodgett is already in our Houston directory with a ${c.rating.toFixed(1)} rating — Third Ward diners are exactly who we built AfriTable for.`,
+  "chopnblok-downtown-houston": (c) =>
+    `Your downtown location at ${streetLine(c.address)} is already listed with strong reviews. For a fast-fine concept like ChòpnBlọk, direct reservations matter.`,
 };
 
-/** Houston send priority (lower = send first). */
-const HOUSTON_SEND_ORDER: Record<string, number> = {
-  "grill-master-african-restaurant-houston": 1,
-  "chopnblok-downtown-houston": 2,
-  "glozi-calabar-restaurant-and-african-cuisine-houston": 3,
-  "dakar-street-food-blodgett-houston": 4,
-  "vertex-houston": 5,
+const CUSTOM_SUBJECTS: Record<string, string> = {
+  "grill-master-african-restaurant-houston": "Your Grill Master listing on AfriTable — claim it for online bookings",
+  "vertex-houston": "Vertex is on AfriTable — claim your Ethiopian listing for online bookings",
+  "glozi-calabar-restaurant-and-african-cuisine-houston":
+    "Glozi Calabar on AfriTable — free listing claim + online reservations",
+  "dakar-street-food-blodgett-houston": "Dakar Street Food — your AfriTable listing is ready to claim",
+  "chopnblok-downtown-houston": "ChòpnBlọk downtown — claim your AfriTable listing for reservations",
 };
 
 function teamGreeting(name: string): string {
@@ -43,35 +52,24 @@ function streetLine(address: string): string {
   return address.split(",")[0]?.trim() || address;
 }
 
+function locationLabel(c: PartnerOutreachCandidate): string {
+  if (c.city && c.state) return `${c.city}, ${c.state}`;
+  if (c.state) return c.state;
+  return "your area";
+}
+
 function hookForCandidate(c: PartnerOutreachCandidate): string {
-  const hooks: Record<string, string> = {
-    "grill-master-african-restaurant-houston":
-      `Your spot at **${streetLine(c.address)}** is already listed on our directory with strong reviews — we'd love to help you turn that visibility into actual reservations.`,
-    "vertex-houston":
-      `**Vertex** is already featured in our Houston directory with excellent reviews for Ethiopian dining at **${streetLine(c.address)}**.`,
-    "glozi-calabar-restaurant-and-african-cuisine-houston":
-      `Your Westheimer location (**${streetLine(c.address)}**) is already live in our directory with a **${c.rating.toFixed(1)}** rating.`,
-    "dakar-street-food-blodgett-houston":
-      `**Dakar Street Food @ Blodgett** is already in our Houston directory with a **${c.rating.toFixed(1)}** rating — and Third Ward diners are exactly who we built AfriTable for.`,
-    "chopnblok-downtown-houston":
-      `Your downtown location at **${streetLine(c.address)}** is already listed with strong reviews. For a fast-fine concept like ChòpnBlọk, direct reservations matter.`,
-  };
-  return (
-    hooks[c.slug] ??
-    `**${c.name}** is already listed in our ${METRO_LABELS[c.metro] ?? c.metro} directory with a **${c.rating.toFixed(1)}** rating at **${streetLine(c.address)}**.`
-  );
+  const custom = CUSTOM_HOOKS[c.slug];
+  if (custom) return custom(c);
+  const cuisineSuffix = c.cuisine && c.cuisine !== "African" ? ` for ${c.cuisine} dining` : "";
+  return `${c.name} is already listed in our ${locationLabel(c)} directory${cuisineSuffix} with a ${c.rating.toFixed(1)} rating at ${streetLine(c.address)}.`;
 }
 
 function subjectForCandidate(c: PartnerOutreachCandidate): string {
-  const subjects: Record<string, string> = {
-    "grill-master-african-restaurant-houston": "Your Grill Master listing on AfriTable — claim it for online bookings",
-    "vertex-houston": "Vertex is on AfriTable — claim your Ethiopian listing for online bookings",
-    "glozi-calabar-restaurant-and-african-cuisine-houston":
-      "Glozi Calabar on AfriTable — free listing claim + online reservations",
-    "dakar-street-food-blodgett-houston": "Dakar Street Food — your AfriTable listing is ready to claim",
-    "chopnblok-downtown-houston": "ChòpnBlọk downtown — claim your AfriTable listing for reservations",
-  };
-  return subjects[c.slug] ?? `${c.name} on AfriTable — claim your listing for online bookings`;
+  return (
+    CUSTOM_SUBJECTS[c.slug] ??
+    `${c.name} on AfriTable — claim your listing for online bookings`
+  );
 }
 
 export function resolveOutreachChannel(c: PartnerOutreachCandidate): PartnerOutreachContactChannel {
@@ -94,7 +92,8 @@ export function buildPartnerOutreachEmail(
   senderName = "AfriTable Partnerships",
 ): PartnerOutreachEmail {
   const greeting = teamGreeting(c.name);
-  const hook = hookForCandidate(c).replace(/\*\*/g, "");
+  const hook = hookForCandidate(c);
+  const region = c.state ? `${c.state} partners` : "restaurant partners";
 
   const body = `${greeting},
 
@@ -111,7 +110,7 @@ What partners get:
 - A dashboard to update your menu, hours, and photos
 - Reservation requests routed directly to you
 
-We're onboarding ${METRO_LABELS[c.metro] ?? c.metro} partners now and would love ${c.name.replace(/\.$/, "")} to be among the first live for booking. Reply here or call ${c.phone} if you'd prefer a quick walkthrough.
+We're onboarding ${region} now and would love ${c.name.replace(/\.$/, "")} to be among the first live for booking. Reply here or call ${c.phone} if you'd prefer a quick walkthrough.
 
 Best,
 ${senderName}
@@ -138,27 +137,125 @@ ${SITE_CONTACT.partnerships}`,
     body,
     followUp,
     channel: resolveOutreachChannel(c),
-    sendOrder: HOUSTON_SEND_ORDER[c.slug] ?? (c.priority === "primary" ? 0 : 99),
+    sendOrder: c.priority === "primary" ? 0 : 1,
   };
+}
+
+function normalizeCandidate(raw: PartnerOutreachCandidate): PartnerOutreachCandidate {
+  const state = raw.state || legacyMetroToState(raw.metro) || "";
+  const city = raw.city || "—";
+  return { ...raw, state, city };
+}
+
+function legacyMetroToState(metro?: string): string {
+  const map: Record<string, string> = {
+    houston: "TX",
+    boston: "MA",
+    denver: "CO",
+    atlanta: "GA",
+    minneapolis: "MN",
+  };
+  return metro ? map[metro] ?? "" : "";
 }
 
 export function loadPartnerOutreachCandidates(): PartnerOutreachCandidate[] {
   if (!fs.existsSync(DATA_PATH)) return [];
   const raw = JSON.parse(fs.readFileSync(DATA_PATH, "utf8")) as OutreachFile;
-  return raw.candidates ?? [];
+  return (raw.candidates ?? []).map(normalizeCandidate);
 }
 
+export function loadPartnerOutreachStateCounts(): Array<{ state: string; count: number }> {
+  if (!fs.existsSync(DATA_PATH)) return [];
+  const raw = JSON.parse(fs.readFileSync(DATA_PATH, "utf8")) as OutreachFile;
+  if (raw.states?.length) return raw.states;
+  const counts = new Map<string, number>();
+  for (const c of loadPartnerOutreachCandidates()) {
+    if (c.state) counts.set(c.state, (counts.get(c.state) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([state, count]) => ({ state, count }));
+}
+
+export type PartnerOutreachQuery = {
+  state?: string;
+  city?: string;
+  q?: string;
+  page?: number;
+  limit?: number;
+};
+
+export function filterPartnerOutreachCandidates(
+  candidates: PartnerOutreachCandidate[],
+  query: PartnerOutreachQuery,
+): PartnerOutreachCandidate[] {
+  let list = candidates;
+  const state = query.state?.trim().toUpperCase();
+  if (state && state !== "ALL") {
+    list = list.filter((c) => c.state === state);
+  }
+  const city = query.city?.trim().toLowerCase();
+  if (city) {
+    list = list.filter((c) => c.city.toLowerCase().includes(city));
+  }
+  const q = query.q?.trim().toLowerCase();
+  if (q) {
+    list = list.filter(
+      (c) =>
+        c.name.toLowerCase().includes(q) ||
+        c.slug.toLowerCase().includes(q) ||
+        c.city.toLowerCase().includes(q) ||
+        c.address.toLowerCase().includes(q),
+    );
+  }
+  return list;
+}
+
+export function paginatePartnerOutreachCandidates(
+  candidates: PartnerOutreachCandidate[],
+  page = 1,
+  limit = PAGE_SIZE,
+): { items: PartnerOutreachCandidate[]; total: number; page: number; pageCount: number } {
+  const safePage = Math.max(1, page);
+  const safeLimit = Math.min(100, Math.max(1, limit));
+  const total = candidates.length;
+  const pageCount = Math.max(1, Math.ceil(total / safeLimit));
+  const offset = (safePage - 1) * safeLimit;
+  return {
+    items: candidates.slice(offset, offset + safeLimit),
+    total,
+    page: safePage,
+    pageCount,
+  };
+}
+
+export const PARTNER_OUTREACH_PAGE_SIZE = PAGE_SIZE;
+
+/** @deprecated Use filterPartnerOutreachCandidates with state */
 export function getPartnerOutreachByMetro(metro?: string): PartnerOutreachCandidate[] {
-  const all = loadPartnerOutreachCandidates();
-  if (!metro) return all;
-  return all.filter((c) => c.metro === metro);
+  const map: Record<string, string> = {
+    houston: "TX",
+    boston: "MA",
+    denver: "CO",
+    atlanta: "GA",
+    minneapolis: "MN",
+  };
+  const state = metro ? map[metro] : undefined;
+  return filterPartnerOutreachCandidates(loadPartnerOutreachCandidates(), { state });
+}
+
+/** @deprecated Use loadPartnerOutreachStateCounts */
+export function listPartnerOutreachMetros(): string[] {
+  return ["houston", "boston", "denver", "atlanta", "minneapolis"];
 }
 
 export function metroLabel(metro: string): string {
-  return METRO_LABELS[metro] ?? metro;
-}
-
-export function listPartnerOutreachMetros(): string[] {
-  const metros = new Set(loadPartnerOutreachCandidates().map((c) => c.metro));
-  return [...metros].sort();
+  const labels: Record<string, string> = {
+    houston: "Houston",
+    boston: "Boston",
+    denver: "Denver",
+    atlanta: "Atlanta",
+    minneapolis: "Minneapolis",
+  };
+  return labels[metro] ?? metro;
 }
