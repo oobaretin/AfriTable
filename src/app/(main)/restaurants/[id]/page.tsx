@@ -12,7 +12,17 @@ import { ChefsRecommendation } from "@/components/restaurant/ChefsRecommendation
 import { FavoriteButton } from "@/components/restaurant/FavoriteButton";
 import { ReservationWidget } from "@/components/reservation/ReservationWidget";
 import { CatalogBookingCard } from "@/components/reservation/CatalogBookingCard";
+import { BookingStatusBadge } from "@/components/restaurant/BookingStatusBadge";
 import { getLivePartnerStatus } from "@/lib/restaurant-partner-status";
+import { resolveBookingAction } from "@/lib/booking-action";
+import {
+  evaluateCatalogTrust,
+  isWeakSpecialty,
+  isWeakStory,
+  resolveGuestAbout,
+  resolveGuestSpecialty,
+} from "@/lib/catalog-trust";
+import { CatalogTrustBadge } from "@/components/restaurant/CatalogTrustBadge";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
 import { ReviewsSection } from "@/components/restaurant/ReviewsSection";
 import { generateDefaultContent } from "@/lib/restaurant-content-helpers";
@@ -21,7 +31,11 @@ import { getRestaurantByIdFromJSON, getSimilarRestaurantsFromJSON } from "@/lib/
 import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 import { parseCatalogHoursToArray } from "@/lib/parse-catalog-hours";
 import { getTodayOperatingHours } from "@/lib/today-operating-hours";
-import { resolveRestaurantImageUrl, resolveRestaurantOgImageUrl } from "@/lib/restaurant-image";
+import {
+  resolveRestaurantGalleryImages,
+  resolveRestaurantImageUrl,
+  resolveRestaurantOgImageUrl,
+} from "@/lib/restaurant-image";
 import { getAppBaseUrl } from "@/lib/app-url";
 
 type SecondaryLocation = {
@@ -374,6 +388,19 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
   );
   const dbRestaurantId = partnerStatus.dbRestaurantId;
   const isLivePartner = partnerStatus.isLivePartner;
+  const bookingAction = resolveBookingAction(partnerStatus, { phone: restaurant.phone });
+  const catalogTrust = evaluateCatalogTrust({
+    phone: restaurant.phone,
+    website: restaurant.website,
+    hours: restaurant.hours,
+    images: restaurant.images,
+    about: restaurant.description,
+    our_story: restaurant.our_story,
+    specialty: restaurant.specialty,
+    menu_highlights: (restaurant.menu as { highlights?: string[] } | null)?.highlights,
+    address: restaurant.address,
+    google_place_id: (restaurant as { google_place_id?: string }).google_place_id,
+  });
 
   const operatingHours = dbRestaurantId
     ? await getOperatingHours(dbRestaurantId, restaurant.hours)
@@ -411,10 +438,24 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
     restaurant.name,
     restaurant.cuisine_types || [],
   );
-  const about = restaurant.description || defaultContent.about;
-  const ourStory = restaurant.our_story || defaultContent.our_story;
+  const cityLabel =
+    typeof restaurant.address === "object" && restaurant.address
+      ? (restaurant.address as { city?: string }).city
+      : undefined;
+  const about =
+    resolveGuestAbout(restaurant.description, cityLabel) ||
+    (!restaurant.description ? defaultContent.about : null) ||
+    `Sit-down African and Caribbean dining${cityLabel ? ` in ${cityLabel}` : ""}.`;
+  const ourStory =
+    restaurant.our_story && !isWeakStory(restaurant.our_story)
+      ? restaurant.our_story
+      : defaultContent.our_story;
   const culturalRoots = restaurant.cultural_roots || defaultContent.cultural_roots;
   const specialFeatures = restaurant.special_features || defaultContent.special_features;
+  const guestSpecialty = resolveGuestSpecialty(
+    restaurant.specialty,
+    (restaurant.menu as { highlights?: string[] } | null)?.highlights,
+  );
 
   // Build JSON-LD with proper undefined handling
   const jsonLd: any = {
@@ -482,16 +523,21 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
   }
 
   // Safely stringify JSON-LD, removing any circular references or invalid values
-  const galleryImages =
-    restaurant.images && restaurant.images.length > 0
-      ? restaurant.images
-      : [
-          resolveRestaurantImageUrl({
-            images: restaurant.images,
-            region: (restaurant as { region?: string | null }).region,
-            cuisine_types: restaurant.cuisine_types,
-          }),
-        ];
+  const galleryImages = (() => {
+    const ranked = resolveRestaurantGalleryImages({
+      images: restaurant.images,
+      region: (restaurant as { region?: string | null }).region,
+      cuisine_types: restaurant.cuisine_types,
+    });
+    if (ranked.length) return ranked;
+    return [
+      resolveRestaurantImageUrl({
+        images: restaurant.images,
+        region: (restaurant as { region?: string | null }).region,
+        cuisine_types: restaurant.cuisine_types,
+      }),
+    ];
+  })();
 
   let jsonLdString = "";
   try {
@@ -551,36 +597,38 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
                 )}
               </div>
               <div className="flex flex-wrap items-center gap-2 mt-3">
-                <Badge variant={isLivePartner ? "default" : "secondary"}>
-                  {isLivePartner ? "Partner · live booking" : "Directory listing"}
-                </Badge>
+                <CatalogTrustBadge trust={catalogTrust} />
+                <BookingStatusBadge action={bookingAction} />
                 {todays.hasHours ? (
                   <Badge variant="outline">{todays.openNow ? "Open now" : "Closed now"}</Badge>
+                ) : null}
+                {catalogTrust.photoOnlyStreetView ? (
+                  <Badge variant="outline" className="text-slate-500">
+                    Photos limited
+                  </Badge>
                 ) : null}
               </div>
             </div>
             <FavoriteButton restaurantId={dbRestaurantId} />
           </div>
 
-          <p className="text-xl text-slate-600 leading-relaxed mb-12">
+          <p className="text-xl text-slate-600 leading-relaxed mb-6">
             {about || `Experience the vibrant pulse of ${restaurant.address?.city || "our city"}'s dining scene. This space combines ancestral techniques with modern flair.`}
           </p>
 
-          {/* Chef's Recommendation Section */}
-          <ChefsRecommendation
-            cuisine={restaurant.cuisine_types?.[0] || "African"}
-            restaurantName={restaurant.name}
-            dishName={restaurant.specialty || (restaurant.menu as any)?.highlights?.[0]}
-            quote={restaurant.chef_quote || undefined}
-            dishImage={resolveRestaurantImageUrl({
-              images: restaurant.images,
-              region: (restaurant as { region?: string | null }).region,
-              cuisine_types: restaurant.cuisine_types,
-            })}
-          />
+          {/* Mobile: booking action first — would I go tonight? */}
+          <div className="mb-8 lg:hidden">
+            <a
+              href="#book"
+              className="block w-full rounded-xl bg-brand-mutedRed py-4 text-center text-sm font-bold uppercase tracking-widest text-white"
+            >
+              {bookingAction.ctaLabel.replace(" →", "")}
+            </a>
+            <p className="mt-2 text-center text-xs text-muted-foreground">{bookingAction.description}</p>
+          </div>
 
-          {/* Quick Info Bar - Sticky with Connect Buttons */}
-          <div className="mt-6 rounded-xl border bg-background/95 p-3 sm:p-4 backdrop-blur-sm lg:sticky lg:top-4 lg:z-30 lg:self-start lg:h-fit shadow-sm overflow-visible">
+          {/* Quick Info — hours, phone, address before story */}
+          <div className="rounded-xl border bg-background/95 p-3 sm:p-4 shadow-sm overflow-visible">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
               {/* Address with Connect below - Always visible */}
               <div className="min-w-0">
@@ -680,38 +728,23 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
             </div>
           </div>
 
-          {/* Content Sections */}
+          {/* What to order — decision-critical */}
+          <div className="mt-10">
+            <ChefsRecommendation
+              cuisine={restaurant.cuisine_types?.[0] || "African"}
+              restaurantName={restaurant.name}
+              dishName={guestSpecialty || undefined}
+              quote={restaurant.chef_quote || undefined}
+              dishImage={resolveRestaurantImageUrl({
+                images: restaurant.images,
+                region: (restaurant as { region?: string | null }).region,
+                cuisine_types: restaurant.cuisine_types,
+              })}
+            />
+          </div>
+
+          {/* Content Sections — story after visit logistics */}
           <div className="mt-12 grid gap-10 w-full">
-
-            {/* Our Story - Always visible */}
-            <section className="w-full">
-              <h2 className="text-xl font-semibold tracking-tight mb-4">Our Story</h2>
-              <div className="prose prose-sm max-w-none text-muted-foreground">
-                <p className="text-base leading-relaxed whitespace-pre-line">{ourStory}</p>
-              </div>
-            </section>
-
-            <Separator />
-
-            {/* Cultural Roots - Always visible */}
-            <section className="w-full">
-              <h2 className="text-xl font-semibold tracking-tight mb-4">Cultural Roots</h2>
-              <div className="prose prose-sm max-w-none text-muted-foreground">
-                <p className="text-base leading-relaxed whitespace-pre-line">{culturalRoots}</p>
-              </div>
-            </section>
-
-            <Separator />
-
-            {/* Special Features - Always visible */}
-            <section className="w-full">
-              <h2 className="text-xl font-semibold tracking-tight mb-4">Special Features</h2>
-              <div className="prose prose-sm max-w-none text-muted-foreground">
-                <p className="text-base leading-relaxed whitespace-pre-line">{specialFeatures}</p>
-              </div>
-            </section>
-
-            <Separator />
 
             {/* Menu */}
             <section className="w-full">
@@ -812,11 +845,41 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
               restaurantSlug={restaurant.slug}
               restaurantName={restaurant.name}
               jsonRating={(() => {
-                // Try to get rating from restaurants.json
                 const jsonRestaurant = getRestaurantByIdFromJSON(restaurant.slug);
                 return jsonRestaurant?.rating ?? null;
               })()}
             />
+
+            <Separator />
+
+            {/* Story & culture — below decision content */}
+            <section className="w-full">
+              <h2 className="text-xl font-semibold tracking-tight mb-4">Our Story</h2>
+              <div className="prose prose-sm max-w-none text-muted-foreground">
+                <p className="text-base leading-relaxed whitespace-pre-line">{ourStory}</p>
+              </div>
+            </section>
+
+            <Separator />
+
+            <section className="w-full">
+              <h2 className="text-xl font-semibold tracking-tight mb-4">Cultural Roots</h2>
+              <div className="prose prose-sm max-w-none text-muted-foreground">
+                <p className="text-base leading-relaxed whitespace-pre-line">{culturalRoots}</p>
+              </div>
+            </section>
+
+            {!isWeakSpecialty(specialFeatures) ? (
+              <>
+                <Separator />
+                <section className="w-full">
+                  <h2 className="text-xl font-semibold tracking-tight mb-4">Special Features</h2>
+                  <div className="prose prose-sm max-w-none text-muted-foreground">
+                    <p className="text-base leading-relaxed whitespace-pre-line">{specialFeatures}</p>
+                  </div>
+                </section>
+              </>
+            ) : null}
 
             <Separator />
 

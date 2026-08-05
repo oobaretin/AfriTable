@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { RestaurantCoverImage } from "@/components/restaurant/RestaurantCoverImage";
+import { rankRestaurantImages } from "@/lib/restaurant-image";
 
 type ImmersiveGalleryProps = {
   images: string[];
@@ -9,7 +10,11 @@ type ImmersiveGalleryProps = {
 };
 
 export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryProps) {
-  const safeImages = images && images.length > 0 ? images : [];
+  // Venue photos before Street View; never hero a SV when better shots exist
+  const safeImages = React.useMemo(() => {
+    const ranked = rankRestaurantImages(images);
+    return ranked.length ? ranked : images?.filter(Boolean) ?? [];
+  }, [images]);
 
   /** Avoid repeating the hero when a listing has fewer than four photos. */
   const galleryImage = (index: number) => {

@@ -262,16 +262,9 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
         />
       </div>
 
-      <div className="relative z-10 mb-8 flex flex-wrap justify-center gap-x-4 gap-y-2 px-2 opacity-30 sm:gap-x-8 md:gap-x-16">
-        {["REDEFINED", "AUTHENTIC", "ANCESTRAL"].map((word, i) => (
-          <span
-            key={i}
-            className="text-[10px] font-black text-white uppercase tracking-[0.12em] sm:tracking-[0.22em] md:tracking-[0.32em]"
-          >
-            {word}
-          </span>
-        ))}
-      </div>
+      <p className="relative z-10 mb-6 text-center text-[10px] font-black uppercase tracking-[0.28em] text-white/40">
+        AfriTable
+      </p>
 
       <div className="relative z-10 flex items-center justify-center w-full max-w-7xl">
         <div className="flex-1 text-right pr-6 md:pr-10">
@@ -283,12 +276,16 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
         <div className="w-2 md:w-3 h-[12vw] md:h-[10vw] bg-[#A33B32] shadow-[0_0_30px_rgba(163,59,50,0.4)] rounded-full" />
         <div className="flex-1 text-left pl-6 md:pl-10">
           <h1 className="text-[6vw] md:text-[5.5vw] font-black text-white leading-[0.85] tracking-tighter uppercase italic">
-            ULTIMATE <br /> DINING
+            FIND A <br /> TABLE
           </h1>
         </div>
       </div>
 
-      <div className="relative z-10 mt-16 w-full max-w-lg">
+      <p className="relative z-10 mt-6 max-w-md text-center text-sm text-white/65">
+        Sit-down African &amp; Caribbean dining — book online, request a table, or call.
+      </p>
+
+      <div className="relative z-10 mt-10 w-full max-w-lg">
         {searchPill}
         <div className="relative z-10 mt-6 flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-4">
           <Link
@@ -300,7 +297,7 @@ export function HeroSearch({ sectionId, variant = "full" }: HeroSearchProps = {}
           <span className="hidden text-white/35 sm:inline" aria-hidden="true">
             ·
           </span>
-          <span className="text-xs text-white/55">No city in mind? See the full directory.</span>
+          <span className="text-xs text-white/55">Vetted dine-in only.</span>
         </div>
       </div>
     </section>

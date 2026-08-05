@@ -10,7 +10,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Confetti } from "@/components/reservation/Confetti";
+import { BookingStatusBadge } from "@/components/restaurant/BookingStatusBadge";
+import { resolveBookingAction } from "@/lib/booking-action";
 
 type TimePreference = "morning" | "afternoon" | "evening" | "flexible";
 
@@ -48,7 +49,6 @@ export function CatalogBookingCard({
   const [submitting, setSubmitting] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [success, setSuccess] = React.useState<{ referenceCode: string } | null>(null);
-  const [showConfetti, setShowConfetti] = React.useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -85,7 +85,6 @@ export function CatalogBookingCard({
         throw new Error(body?.message || body?.error || "Could not send your request. Please try again.");
       }
 
-      setShowConfetti(true);
       setSuccess({ referenceCode: body.referenceCode ?? "—" });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong.");
@@ -96,11 +95,9 @@ export function CatalogBookingCard({
 
   if (success) {
     return (
-      <>
-        {showConfetti && <Confetti />}
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
+        <div id="book" className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
           <div className="py-6 text-center">
-            <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100">
+            <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-brand-bronze/15">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -109,7 +106,7 @@ export function CatalogBookingCard({
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="h-8 w-8 text-orange-600"
+                className="h-8 w-8 text-brand-bronze"
                 aria-hidden
               >
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
@@ -118,8 +115,8 @@ export function CatalogBookingCard({
             </div>
             <h3 className="mb-2 text-2xl font-bold text-slate-900">Request received</h3>
             <p className="mb-4 text-slate-600">
-              We saved your preferred visit to <strong>{restaurantName}</strong> and emailed you a copy. The restaurant
-              may confirm by phone — we don&apos;t manage their reservations yet.
+              We saved your preferred visit to <strong>{restaurantName}</strong> and emailed you a copy. This is not a
+              confirmed reservation — the restaurant may follow up by phone.
             </p>
             <p className="text-sm text-slate-500">
               Reference: <span className="font-mono font-semibold">{success.referenceCode}</span>
@@ -134,17 +131,23 @@ export function CatalogBookingCard({
             ) : null}
           </div>
         </div>
-      </>
     );
   }
 
+  const bookingAction = resolveBookingAction(
+    { isLivePartner: false, isClaimed: false, onlineReservationsEnabled: false },
+    { phone },
+  );
+
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
-      <h3 className="mb-1 text-xl font-bold text-slate-900">Plan your visit</h3>
-      <p className="mb-4 text-sm text-slate-500">
-        Directory listing — AfriTable doesn&apos;t manage reservations here yet. Call the restaurant, or send us your
-        preferred date and we&apos;ll forward your request.
-      </p>
+    <div id="book" className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
+      <div className="mb-3">
+        <BookingStatusBadge action={bookingAction} />
+      </div>
+      <h3 className="mb-1 text-xl font-bold text-slate-900">
+        {bookingAction.mode === "call" ? "Call to book" : "Request a table"}
+      </h3>
+      <p className="mb-4 text-sm text-slate-500">{bookingAction.description}</p>
 
       <div className="mb-5 flex flex-wrap gap-2">
         {phone ? (

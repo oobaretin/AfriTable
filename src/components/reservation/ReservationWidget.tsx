@@ -8,7 +8,8 @@ import { Calendar } from "@/components/ui/calendar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatTime12h } from "@/lib/utils/time-format";
-import { Confetti } from "./Confetti";
+import { BookingStatusBadge } from "@/components/restaurant/BookingStatusBadge";
+import { resolveBookingAction } from "@/lib/booking-action";
 
 type Slot = {
   time: string;
@@ -37,8 +38,12 @@ export function ReservationWidget({
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   const [guests, setGuests] = React.useState(2);
   const [selectedTime, setSelectedTime] = React.useState<string | null>(null);
-  const [showSuccess, setShowSuccess] = React.useState(false);
-  const [showConfetti, setShowConfetti] = React.useState(false);
+  const [redirecting, setRedirecting] = React.useState(false);
+  const bookingAction = resolveBookingAction({
+    isLivePartner: true,
+    isClaimed: true,
+    onlineReservationsEnabled: true,
+  });
 
   const dateStr = date ? format(date, "yyyy-MM-dd") : format(new Date(), "yyyy-MM-dd");
   const partySize = String(guests);
@@ -81,60 +86,37 @@ export function ReservationWidget({
   const handleReserve = () => {
     if (!selectedTime || !restaurantSlug) return;
 
-    setShowConfetti(true);
-    setShowSuccess(true);
-
-    setTimeout(() => {
-      const params = new URLSearchParams();
-      params.set("restaurant", restaurantSlug);
-      params.set("date", dateStr);
-      params.set("time", selectedTime);
-      params.set("party", partySize);
-      router.push(`/reservations/new?${params.toString()}`);
-    }, 2000);
+    setRedirecting(true);
+    const params = new URLSearchParams();
+    params.set("restaurant", restaurantSlug);
+    params.set("date", dateStr);
+    params.set("time", selectedTime);
+    params.set("party", partySize);
+    router.push(`/reservations/new?${params.toString()}`);
   };
 
-  const displayDate = date ? format(date, "MMMM d, yyyy") : "";
-  const displayTime = selectedTime ? formatTime12h(selectedTime) : "";
-
-  if (showSuccess) {
+  if (redirecting) {
     return (
-      <>
-        {showConfetti && <Confetti />}
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
-          <div className="py-8 text-center">
-            <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-8 w-8 text-orange-600"
-              >
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-            </div>
-            <h3 className="mb-2 text-2xl font-bold text-slate-900">Table Reserved!</h3>
-            <p className="mb-6 text-lg text-slate-600">
-              Table reserved for <span className="font-semibold">{displayDate}</span> at{" "}
-              <span className="font-semibold">{displayTime}</span>
-            </p>
-            <p className="text-sm text-slate-400">Redirecting to confirmation...</p>
-          </div>
+      <div id="book" className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
+        <div className="py-8 text-center">
+          <h3 className="mb-2 text-xl font-bold text-slate-900">Continuing to confirm…</h3>
+          <p className="text-sm text-slate-500">
+            Your table isn&apos;t held yet — finish the next step to confirm.
+          </p>
         </div>
-      </>
+      </div>
     );
   }
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
-      <h3 className="mb-2 text-xl font-bold text-slate-900">
-        {restaurantName ? `Reserve at ${restaurantName}` : "Make a Reservation"}
+    <div id="book" className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
+      <div className="mb-3">
+        <BookingStatusBadge action={bookingAction} />
+      </div>
+      <h3 className="mb-1 text-xl font-bold text-slate-900">
+        {restaurantName ? `Book at ${restaurantName}` : "Book a table"}
       </h3>
+      <p className="mb-4 text-sm text-slate-500">{bookingAction.description}</p>
 
       <div className="space-y-4">
         <div>
@@ -241,12 +223,12 @@ export function ReservationWidget({
           disabled={!selectedTime || !restaurantSlug || isLoading}
           className="btn-bronze w-full rounded-xl px-10 py-4 text-sm font-bold uppercase tracking-widest text-white disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
         >
-          Find a Table
+          Continue to book
         </button>
       </div>
 
       <p className="mt-4 text-center text-xs text-slate-400">
-        Powered by <span className="font-bold uppercase text-orange-500/80">AfriTable</span> partner booking
+        Live availability · AfriTable partner
       </p>
     </div>
   );

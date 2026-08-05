@@ -40,6 +40,25 @@ We cannot prove every row is open without calling each business. For the catalog
 2. **Prefer** rows with working `website`, full address + ZIP, `phone`, and `hours` aligned to the operator’s published schedule.
 3. **Queue** prospects missing phone/hours in `data/curation-candidates.json` before promoting them to `data/restaurants.json`.
 
+### Guest-facing trust badge (“Vetted dine-in”)
+
+Computed in `src/lib/catalog-trust.ts`. A listing earns **Vetted dine-in** when it has:
+
+- Phone + hours + full address
+- At least one **venue** photo (not Street View–only)
+
+This means “passed AfriTable dine-in curation with strong listing signals,” not “we confirmed open tonight.”
+
+### Photo standards
+
+Implemented in `src/lib/restaurant-image.ts`:
+
+1. Prefer Google venue photos (`gps-cs-s` / place photos) over Street View thumbnails
+2. Never use Unsplash/stock or brand SVG as a “real” photo signal
+3. Gallery / card heroes: rank venue photos first; Street View last
+4. Target set for every listing: **storefront + food + room** (when available)
+5. Admin Catalog QA flags `placeholder_image` and `street_view_only`
+
 ## Spot-check log (July 2026)
 
 | Listing | Result |

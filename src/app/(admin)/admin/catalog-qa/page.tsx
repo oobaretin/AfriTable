@@ -15,8 +15,17 @@ export const metadata = {
 };
 
 function issueVariant(issue: CatalogQaIssue): "destructive" | "secondary" | "outline" {
-  if (issue === "placeholder_image" || issue === "missing_website") return "destructive";
-  if (issue === "templated_about") return "secondary";
+  if (
+    issue === "placeholder_image" ||
+    issue === "street_view_only" ||
+    issue === "missing_phone" ||
+    issue === "missing_hours"
+  ) {
+    return "destructive";
+  }
+  if (issue === "templated_about" || issue === "weak_specialty" || issue === "missing_website") {
+    return "secondary";
+  }
   return "outline";
 }
 
@@ -34,7 +43,7 @@ export default async function AdminCatalogQaPage() {
     <Container className="py-10 md:py-14">
       <PageHeader
         title="Catalog QA"
-        description="Listings in data/restaurants.json that need photos, websites, or richer copy."
+        description="Listings in data/restaurants.json that need venue photos, phone/hours, or non-templated copy."
         right={
           <Button asChild variant="outline">
             <Link href="/admin">Back to admin</Link>

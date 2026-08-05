@@ -1,26 +1,15 @@
-import Image from "next/image";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 import { HeroSearch } from "@/components/restaurant/HeroSearch";
 import { Reveal } from "@/components/layout/Reveal";
 import { TrendingCitiesClient } from "@/components/home/TrendingCitiesClient";
 import { pulseCityToKey } from "@/lib/trending-cities";
-import { LocalPulse } from "@/components/home/LocalPulse";
 import { HomeSearchProvider } from "@/components/home/HomeSearchProvider";
-import { HeritageSection } from "@/components/home/HeritageSection";
-import { CommunityFeed } from "@/components/home/CommunityFeed";
-import { PartnerWithUsSection } from "@/components/home/PartnerWithUsSection";
-import { Leaderboard } from "@/components/home/Leaderboard";
 import { HomepageRestaurantSimple } from "@/components/home/HomepageRestaurantSimple";
-import { CuisineFilterClient } from "@/components/home/CuisineFilterClient";
-import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 import { pickHomepageSpotlight } from "@/lib/catalog-list-item";
 import { buildTrendingCityGroups } from "@/lib/trending-cities-groups";
-
-// loadRestaurantsFromJSON is now imported from restaurant-json-loader-server
 
 function loadHomeConfig() {
   try {
@@ -45,103 +34,24 @@ export default async function MainHomePage() {
   const homepageSpotlight = pickHomepageSpotlight(restaurantsFromJSON);
   const trendingCityGroups = buildTrendingCityGroups(restaurantsFromJSON, featuredCityKeys);
 
-  const cuisineBrowseRestaurants = [...restaurantsFromJSON]
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
-    .slice(0, 12)
-    .map((restaurant) => {
-      const detail = transformJSONRestaurantToDetail(restaurant);
-      return {
-        id: detail.id,
-        name: detail.name,
-        slug: detail.slug,
-        cuisine_types: detail.cuisine_types,
-        price_range: detail.price_range,
-        address: detail.address,
-        images: detail.images,
-        created_at: new Date().toISOString(),
-        avg_rating: detail.avg_rating,
-        review_count: detail.review_count,
-      };
-    });
-
   return (
     <main>
       <HomeSearchProvider>
-        {/* Hero - Search-First Design (sticky bar shares city state via provider) */}
+        {/* One job: find a real sit-down table */}
         <HeroSearch sectionId="hero-search" />
 
-        {/* Restaurant spotlight — multi-state coverage */}
         <div id="restaurants-section">
           <HomepageRestaurantSimple spotlight={homepageSpotlight} />
         </div>
       </HomeSearchProvider>
 
-      {/* Brand Logo Bridge - Premium Separator */}
-      <div className="py-12 bg-[#050A18]">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="flex items-center">
-            {/* Left line stretching to edge */}
-            <div className="flex-1 h-px bg-white/10"></div>
-            {/* Centered logo - matching Navbar */}
-            <div className="px-6 flex items-center">
-              <Image
-                src="/logo.png"
-                alt="AfriTable"
-                width={420}
-                height={120}
-                className="h-10 w-auto object-contain"
-              />
-            </div>
-            {/* Right line stretching to edge */}
-            <div className="flex-1 h-px bg-white/10"></div>
-          </div>
-        </div>
-      </div>
-
-      <Separator />
-
-      {/* Local Pulse Section */}
-      {homeConfig?.localPulse?.messages && (
-        <LocalPulse messages={homeConfig.localPulse.messages} />
-      )}
-
-      <Separator />
-
-      {/* Browse by cuisine */}
+      {/* Secondary: city discovery */}
       <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-        <Reveal>
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Browse by cuisine</h2>
-            <p className="mt-2 text-muted-foreground">
-              Filter top-rated listings across the diaspora—Nigerian, Ethiopian, Jamaican, and more.
-            </p>
-          </div>
-        </Reveal>
-
-        <Reveal className="mt-6">
-          <CuisineFilterClient restaurants={cuisineBrowseRestaurants} />
-        </Reveal>
-
-        <Reveal className="mt-6 flex justify-center">
-          <a
-            href="/restaurants"
-            className="text-sm font-semibold text-orange-700 underline-offset-4 hover:underline dark:text-orange-400"
-          >
-            Browse all cuisines →
-          </a>
-        </Reveal>
-      </section>
-
-      <Separator />
-
-      {/* Trending cities */}
-      <section className="mx-auto max-w-6xl px-6 pb-14 md:pb-20">
         <Reveal>
           <div>
             <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Explore by city</h2>
             <p className="mt-2 text-muted-foreground">
-              Top metros in our nationwide directory, ranked by how many vetted listings we have today—tap through to
-              the full grid.
+              Vetted sit-down African and Caribbean dining across top metros.
             </p>
           </div>
         </Reveal>
@@ -150,97 +60,30 @@ export default async function MainHomePage() {
           <TrendingCitiesClient cityGroups={trendingCityGroups} />
         </Reveal>
         <Reveal className="mt-6 flex justify-center">
-          <a
+          <Link
             href="/restaurants"
-            className="text-sm font-semibold text-orange-700 underline-offset-4 hover:underline dark:text-orange-400"
+            className="text-sm font-semibold text-brand-mutedRed underline-offset-4 hover:underline"
           >
-            View all cities &amp; cuisines →
-          </a>
+            Browse all restaurants →
+          </Link>
         </Reveal>
       </section>
 
-      {/* How it works */}
-      <section className="bg-muted/30">
-        <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-          <Reveal>
-            <div className="text-center">
-              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">How it works</h2>
-              <p className="mt-2 text-muted-foreground">
-                From discovery to checkout in three steps—built for diaspora dining.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {(homeConfig?.howItWorks?.steps || [
-              {
-                number: 1,
-                title: "Discover",
-                description: "We vet every restaurant for quality and authenticity. No more guessing.",
-                icon: "🔎",
-              },
-              {
-                number: 2,
-                title: "Reserve",
-                description:
-                  "See open times, pick party size, and confirm in a few taps. On-platform partners sync real table capacity.",
-                icon: "🗓️",
-              },
-              {
-                number: 3,
-                title: "Celebrate",
-                description: "Join a community that values the stories behind the spices.",
-                icon: "🍲",
-              },
-            ]).map((s: any) => (
-              <Reveal key={s.title}>
-                <Card className="h-full">
-                  <CardHeader>
-                    <div className="mb-2 flex items-center gap-3">
-                      <div className="text-2xl">{s.icon}</div>
-                      <span className="text-sm font-bold text-orange-600">Step {s.number}</span>
-                    </div>
-                    <CardTitle className="text-lg">{s.title}</CardTitle>
-                    <CardDescription>{s.description}</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Reveal>
-            ))}
+      {/* Slim partner path — not competing with diner discovery */}
+      <section className="border-t border-slate-200 bg-brand-paper/60">
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 py-10 md:flex-row md:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wider text-brand-bronze">Restaurant owners</p>
+            <p className="mt-1 text-lg font-semibold text-slate-900">Claim your listing and go live for booking.</p>
           </div>
-
-          {/* The AfriTable Promise */}
-          {homeConfig?.howItWorks?.promise && (
-            <Reveal className="mt-12">
-              <Card className="bg-gradient-to-br from-orange-50 to-yellow-50 border-orange-200">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl font-black text-slate-900 mb-3">
-                    {homeConfig.howItWorks.promise.title}
-                  </CardTitle>
-                  <CardDescription className="text-base text-slate-700 leading-relaxed max-w-3xl mx-auto">
-                    {homeConfig.howItWorks.promise.description}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            </Reveal>
-          )}
+          <Link
+            href="/join-as-restaurant"
+            className="inline-flex rounded-lg bg-brand-mutedRed px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90"
+          >
+            Partner with AfriTable
+          </Link>
         </div>
       </section>
-
-      {/* Heritage Section */}
-      <Reveal>
-        <HeritageSection />
-      </Reveal>
-
-      {/* Community Feed */}
-      <CommunityFeed />
-
-      {/* Partner section — apply, owner tools, and onboarding paths */}
-      <PartnerWithUsSection />
-
-      {/* Ambassador's Circle Leaderboard */}
-      <Reveal>
-        <Leaderboard />
-      </Reveal>
     </main>
   );
 }

@@ -3,6 +3,17 @@
 import type { Database } from "@db/database.types";
 import { resolveRestaurantImageUrl } from "@/lib/restaurant-image";
 import { RestaurantCoverImage } from "@/components/restaurant/RestaurantCoverImage";
+import { BookingStatusBadge } from "@/components/restaurant/BookingStatusBadge";
+import { CatalogTrustBadge } from "@/components/restaurant/CatalogTrustBadge";
+import {
+  DEFAULT_CATALOG_BOOKING_ACTION,
+  type BookingAction,
+} from "@/lib/booking-action";
+import {
+  evaluateCatalogTrust,
+  resolveGuestSpecialty,
+  type CatalogTrustLevel,
+} from "@/lib/catalog-trust";
 
 export type RestaurantRow = Database["public"]["Tables"]["restaurants"]["Row"] & {
   // optional denormalized fields for UI
@@ -31,6 +42,10 @@ export type RestaurantCardRestaurant = {
   specialty?: string | null;
   menu_highlights?: string[] | null;
   awards?: string[] | null;
+  phone?: string | null;
+  website?: string | null;
+  hours?: unknown;
+  trust_level?: CatalogTrustLevel;
 };
 
 export function RestaurantCard({
@@ -40,6 +55,7 @@ export function RestaurantCard({
   city,
   index = 0,
   isFeatured = false,
+  bookingAction = DEFAULT_CATALOG_BOOKING_ACTION,
 }: {
   restaurant: RestaurantCardRestaurant;
   href?: string;
@@ -47,7 +63,22 @@ export function RestaurantCard({
   city?: string;
   index?: number;
   isFeatured?: boolean;
+  bookingAction?: BookingAction;
 }) {
+  const trust = evaluateCatalogTrust({
+    phone: restaurant.phone,
+    website: restaurant.website,
+    hours: restaurant.hours,
+    images: restaurant.images,
+    specialty: restaurant.specialty,
+    menu_highlights: restaurant.menu_highlights,
+    address: restaurant.address,
+  });
+  // Prefer explicit trust_level from list payload when present
+  const trustSignals =
+    restaurant.trust_level === "vetted" || restaurant.trust_level === "listed"
+      ? { ...trust, level: restaurant.trust_level, label: restaurant.trust_level === "vetted" ? "Vetted dine-in" : "Directory listing", shortLabel: restaurant.trust_level === "vetted" ? "Vetted" : "Listed" }
+      : trust;
   const safeHref = href ?? `/restaurants/${encodeURIComponent(restaurant.slug || restaurant.id)}`;
   const cuisines = Array.isArray(restaurant.cuisine_types) ? restaurant.cuisine_types : [];
   const price = "$".repeat(Math.max(1, Math.min(4, restaurant.price_range ?? 1)));
@@ -172,15 +203,14 @@ export function RestaurantCard({
               </div>
             </div>
           )}
-          <div className="absolute top-4 right-4 flex items-center gap-2">
+          <div className="absolute top-4 right-4 flex flex-wrap items-center justify-end gap-2 max-w-[70%]">
+            {trustSignals.level === "vetted" ? (
+              <CatalogTrustBadge trust={trustSignals} size="sm" className="bg-white/95 backdrop-blur-sm" />
+            ) : null}
+            <BookingStatusBadge action={bookingAction} size="sm" className="bg-white/95 backdrop-blur-sm" />
             <div className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm">
               {price}
             </div>
-            {restaurant.vibe_tags && restaurant.vibe_tags.length > 0 && (
-              <div className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 backdrop-blur-sm">
-                {restaurant.vibe_tags[0]}
-              </div>
-            )}
           </div>
         </div>
 
@@ -213,26 +243,27 @@ export function RestaurantCard({
             </p>
           )}
 
-          {/* Neighborhood & Specialty - Elegant Small Text */}
-          {((restaurant as any).neighborhood || (restaurant as any).specialty || ((restaurant as any).menu_highlights && (restaurant as any).menu_highlights.length > 0) || (restaurant as any).awards) && (
-            <div className="mb-4 space-y-1">
-              {(restaurant as any).neighborhood && (
-                <p className="text-[10px] uppercase tracking-wider text-slate-500 font-medium">
-                  {(restaurant as any).neighborhood}
-                </p>
-              )}
-              {((restaurant as any).specialty || ((restaurant as any).menu_highlights && (restaurant as any).menu_highlights.length > 0)) && (
-                <p className="text-[10px] uppercase tracking-wider text-[#C69C2B] font-semibold">
-                  {(restaurant as any).specialty || ((restaurant as any).menu_highlights && (restaurant as any).menu_highlights[0])}
-                </p>
-              )}
-              {(restaurant as any).awards && Array.isArray((restaurant as any).awards) && (restaurant as any).awards.length > 0 && (
-                <p className="text-[10px] uppercase tracking-wider text-slate-600 font-bold">
-                  {(restaurant as any).awards.join(" • ")}
-                </p>
-              )}
-            </div>
-          )}
+          {(() => {
+            const specialty = resolveGuestSpecialty(restaurant.specialty, restaurant.menu_highlights);
+            const neighborhood = (restaurant as { neighborhood?: string }).neighborhood;
+            const awards = (restaurant as { awards?: string[] }).awards;
+            if (!neighborhood && !specialty && !(awards && awards.length)) return null;
+            return (
+              <div className="mb-4 space-y-1">
+                {neighborhood ? (
+                  <p className="text-[10px] uppercase tracking-wider text-slate-500 font-medium">{neighborhood}</p>
+                ) : null}
+                {specialty ? (
+                  <p className="text-[10px] uppercase tracking-wider text-[#C69C2B] font-semibold">{specialty}</p>
+                ) : null}
+                {awards && awards.length > 0 ? (
+                  <p className="text-[10px] uppercase tracking-wider text-slate-600 font-bold">
+                    {awards.join(" • ")}
+                  </p>
+                ) : null}
+              </div>
+            );
+          })()}
 
           {displayCity && (
             <div className="flex items-start gap-2 text-xs text-slate-400 mb-6">
@@ -251,13 +282,12 @@ export function RestaurantCard({
         </div>
       </a>
 
-      {/* View Details - use <a> for full navigation; reserve table form is on the detail page */}
       <div className="px-5 pb-5">
         <a
           href={safeHref}
           className="block w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-20 pointer-events-auto touch-manipulation cursor-pointer"
         >
-          View Details →
+          {bookingAction.ctaLabel}
         </a>
       </div>
 
