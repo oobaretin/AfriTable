@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-07-28",
+  "updated_at": "2026-08-05",
   "description": "Canonical registry of removed listings. Public catalog is data/restaurants.json only; rows here must not appear in the catalog.",
   "closure_types": {
     "permanent": "Business permanently closed.",
@@ -605,7 +605,16 @@
       "reason": "Unverifiable operator; domain hijacked.",
       "removed_from_catalog": null,
       "source": "curation-flagged"
+    },
+    {
+      "slug": "samosa-shop-denver",
+      "name": "Samosa Shop",
+      "address": "1526 Blake St, Denver, CO 80202",
+      "closure_type": "permanent",
+      "reason": "Host venue Honor Farm permanently closed; no standalone dine-in at Blake St (Aug 2026 Denver metro sweep).",
+      "removed_from_catalog": "2026-08-05",
+      "source": "manual"
     }
   ],
-  "last_applied_at": "2026-07-28T14:53:09.164Z"
+  "last_applied_at": "2026-08-05T02:49:52.920Z"
 }

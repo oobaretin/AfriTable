@@ -5,9 +5,10 @@ import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
 import { ExternalLink } from "lucide-react";
 import { BookingStatusBadge } from "@/components/restaurant/BookingStatusBadge";
 import { CatalogTrustBadge } from "@/components/restaurant/CatalogTrustBadge";
-import { DEFAULT_CATALOG_BOOKING_ACTION } from "@/lib/booking-action";
+import { DEFAULT_CATALOG_BOOKING_ACTION, resolveBookingAction } from "@/lib/booking-action";
 import { evaluateCatalogTrust } from "@/lib/catalog-trust";
 import type { CatalogListItem } from "@/lib/catalog-list-item";
+import { useLivePartnerSlugs, isLivePartnerSlug } from "@/contexts/live-partner-slugs-context";
 
 type RestaurantCardWithDistanceProps = {
   restaurant: JSONRestaurant | CatalogListItem;
@@ -15,7 +16,15 @@ type RestaurantCardWithDistanceProps = {
 };
 
 export function RestaurantCardWithDistance({ restaurant, distance }: RestaurantCardWithDistanceProps) {
-  const bookingAction = DEFAULT_CATALOG_BOOKING_ACTION;
+  const livePartnerSlugs = useLivePartnerSlugs();
+  const slug = (restaurant as { slug?: string }).slug || restaurant.id;
+  const bookingAction = isLivePartnerSlug(slug, livePartnerSlugs)
+    ? resolveBookingAction({
+        isLivePartner: true,
+        isClaimed: true,
+        onlineReservationsEnabled: true,
+      })
+    : DEFAULT_CATALOG_BOOKING_ACTION;
   const trustBase = evaluateCatalogTrust({
     phone: restaurant.phone,
     website: restaurant.website,

@@ -14,6 +14,8 @@ import {
   filtersFromCityLabel,
 } from "@/lib/restaurant-filter-url";
 import { getCatalogRestaurantsForCity } from "@/lib/catalog-city-restaurants";
+import { getLivePartnerSlugSet } from "@/lib/restaurant-partner-status";
+import { resolveBookingAction } from "@/lib/booking-action";
 
 function titleCaseFromSlug(slug: string) {
   return slug
@@ -73,6 +75,7 @@ export default async function CityPage({
   const price = searchParams?.price?.trim() || undefined;
 
   const supabase = createSupabasePublicClient();
+  const livePartnerSlugs = await getLivePartnerSlugSet();
 
   // Use generated column when available; ilike is case-insensitive.
   let query = supabase
@@ -168,9 +171,26 @@ export default async function CityPage({
 
           {/* Restaurant list */}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {restaurants.map((r) => (
-              <RestaurantCard key={r.id} restaurant={r} href={`/restaurants/${encodeURIComponent(r.slug || r.id)}`} />
-            ))}
+            {restaurants.map((r) => {
+              const slug = r.slug || r.id;
+              const isLivePartner = livePartnerSlugs.has(slug);
+              return (
+                <RestaurantCard
+                  key={r.id}
+                  restaurant={r}
+                  href={`/restaurants/${encodeURIComponent(slug)}`}
+                  bookingAction={
+                    isLivePartner
+                      ? resolveBookingAction({
+                          isLivePartner: true,
+                          isClaimed: true,
+                          onlineReservationsEnabled: true,
+                        })
+                      : undefined
+                  }
+                />
+              );
+            })}
           </div>
         </Container>
       </Section>

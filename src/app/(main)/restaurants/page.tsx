@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { loadRestaurantsFromJSON } from "@/lib/restaurant-json-loader-server";
 import { toCatalogListItems } from "@/lib/catalog-list-item";
+import { getLivePartnerSlugSet } from "@/lib/restaurant-partner-status";
 import { RestaurantsPageClient } from "./RestaurantsPageClient";
 
-export default function RestaurantsPage() {
+export default async function RestaurantsPage() {
   const restaurantsFromJSON = toCatalogListItems(loadRestaurantsFromJSON());
+  const livePartnerSlugs = [...(await getLivePartnerSlugSet())];
 
   return (
     <main className="min-h-[100vh] bg-[#000814]">
@@ -31,7 +33,7 @@ export default function RestaurantsPage() {
       </div>
 
       {/* Zip Code Search, Vibe Filter, and Restaurant Grid */}
-      <RestaurantsPageClient restaurants={restaurantsFromJSON} />
+      <RestaurantsPageClient restaurants={restaurantsFromJSON} livePartnerSlugs={livePartnerSlugs} />
     </main>
   );
 }

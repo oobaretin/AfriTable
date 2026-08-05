@@ -1,0 +1,347 @@
+{
+  "generated_at": "2026-08-05T02:47:27.599Z",
+  "total_co": 32,
+  "high_risk_count": 0,
+  "high_risk": [],
+  "all": [
+    {
+      "id": "all-stars-cafe-aurora",
+      "name": "All-Stars Cafe",
+      "address": "350 Havana St, Aurora, CO 80010",
+      "website": "https://www.facebook.com/100064220286030/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo",
+        "missing_phone"
+      ],
+      "risk_score": 3
+    },
+    {
+      "id": "konjo-ethiopian-food-denver",
+      "name": "Konjo Ethiopian Food",
+      "address": "INSIDE of The Denver Milk Market, 1800 Wazee St Suite131, Denver, CO 80202",
+      "website": "https://www.konjoethiopianfood.com/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo",
+        "missing_phone"
+      ],
+      "risk_score": 3
+    },
+    {
+      "id": "lalibela-cafe-denver",
+      "name": "Lalibela Cafe",
+      "address": "7950 E Mississippi Ave #2, Denver, CO 80247",
+      "website": "https://www.instagram.com/lalibela_cafe/",
+      "flags": [
+        "weak_specialty",
+        "instagram_only",
+        "no_venue_photo"
+      ],
+      "risk_score": 3
+    },
+    {
+      "id": "samosa-shop-denver",
+      "name": "Samosa Shop",
+      "address": "1526 Blake St, Denver, CO 80202",
+      "website": "https://www.samosashopco.com/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo",
+        "missing_phone"
+      ],
+      "risk_score": 3
+    },
+    {
+      "id": "5-star-caf-eritrean-restaurant-denver",
+      "name": "5 Star Café Eritrean Restaurant",
+      "address": "8450 E Iliff Ave, Denver, CO 80231",
+      "website": "https://www.facebook.com/p/5-Star-Cafe-100086536437008/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "abyssinia-ethiopian-restaurant-and-bar-denver",
+      "name": "Abyssinia Ethiopian Restaurant and Bar",
+      "address": "5707 E Colfax Ave, Denver, CO 80220",
+      "website": "https://www.facebook.com/injera720",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "eatopia-eat-ethiopian-aurora",
+      "name": "Eatopia: Eat Ethiopian",
+      "address": "1030 Havana St B, Aurora, CO 80010",
+      "website": "https://eat-opia.com/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "geez-habesha-bar-restaurant-aurora",
+      "name": "Geez Habesha Bar & Restaurant",
+      "address": "262 Havana St, Aurora, CO 80010",
+      "website": "https://onhavanastreet.com/business/geez-habesha-bar-restaurant/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "gursha-ethiopian-restaurant-aurora",
+      "name": "Gursha Ethiopian Restaurant",
+      "address": "15373 E 6th Ave B, Aurora, CO 80011",
+      "website": "https://www.gurshaethiopianrestaurant.com/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "konjo-ethiopian-food-edgewater",
+      "name": "Konjo Ethiopian Food",
+      "address": "INSIDE of The Edgewater Public Market, 5505 W 20th Ave Ste 106, Edgewater, CO 80214",
+      "website": "http://www.konjoethiopianfood.com/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "lucy-ethiopian-restaurant-denver",
+      "name": "Lucy Ethiopian Restaurant",
+      "address": "7401 E Colfax Ave, Denver, CO 80220",
+      "website": "https://lucyethiopianrestaurant.us/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "megenagna-aurora",
+      "name": "Megenagna",
+      "address": "306 S Ironton St Unit C, Aurora, CO 80012",
+      "website": "https://megenagnaethiopianrestaurant.com/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "mesob-denver",
+      "name": "mesob",
+      "address": "1422 Poplar St, Denver, CO 80220",
+      "website": "https://www.mesobethiopianrestaurant.com/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "nile-ethiopian-restaurant-aurora",
+      "name": "Nile Ethiopian Restaurant",
+      "address": "1951 S Havana St, Aurora, CO 80014",
+      "website": "https://nileethiopianrestaurantcolorado.com/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "queen-of-sheba-restaurant-denver",
+      "name": "Queen of Sheba Restaurant",
+      "address": "7225 E Colfax Ave, Denver, CO 80220",
+      "website": "http://www.queenofshebadenver.com/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "safta-denver",
+      "name": "Safta",
+      "address": "3330 Brighton Blvd #201, Denver, CO 80216",
+      "website": "https://www.eatwithsafta.com/?utm_source=google_business_profile&utm_medium=gbp_view_website&utm_campaign=google_business_profile",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "sarr-maimouna-west-african-food-aurora",
+      "name": "Sarr Maimouna West African Food",
+      "address": "5091 E Colfax Ave, Denver, CO 80220",
+      "website": "https://www.facebook.com/SarrMaimounaKitchen",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "the-ethiopian-restaurant-denver",
+      "name": "The Ethiopian Restaurant",
+      "address": "2816 E Colfax Ave, Denver, CO 80206",
+      "website": "https://m.facebook.com/The-Ethiopian-Restaurant-105937256138469/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "tuti-grill-denver",
+      "name": "Tuti Grill",
+      "address": "2160 S Holly St Ste 3, Denver, CO 80222",
+      "website": "https://mediterraneanfooddenver.com/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "yemen-grill-cafe-denver-denver",
+      "name": "Yemen Grill & Cafe Denver",
+      "address": "1135 E Evans Ave Unit 103, Denver, CO 80210",
+      "website": "http://yemengrilldenver.com/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "zula-cafe-lounge-aurora",
+      "name": "Zula Cafe & Lounge",
+      "address": "1121 S Peoria St, Aurora, CO 80012",
+      "website": "https://www.facebook.com/p/Zula-Cafe-Lounge-61555419186031/",
+      "flags": [
+        "weak_specialty",
+        "no_venue_photo"
+      ],
+      "risk_score": 2
+    },
+    {
+      "id": "african-grill-and-bar-lakewood-colorado-lakewood",
+      "name": "African Grill and Bar - Lakewood Colorado",
+      "address": "955 S Kipling Pkwy, Lakewood, CO 80226",
+      "website": "http://www.africangrilllakewood.com/",
+      "flags": [
+        "templated_story"
+      ],
+      "risk_score": 1
+    },
+    {
+      "id": "barwaaqo-denver",
+      "name": "Barwaaqo",
+      "address": "10200 E Mississippi Ave Ste B, Denver, CO 80247",
+      "website": "https://foodhere.co/barwaaqo",
+      "flags": [
+        "weak_specialty"
+      ],
+      "risk_score": 1
+    },
+    {
+      "id": "fidel-east-african-restaurant-aurora",
+      "name": "Fidel East African Restaurant",
+      "address": "1074 S Ironton St, Aurora, CO 80012",
+      "website": "https://www.facebook.com/FidelResturant/",
+      "flags": [
+        "weak_specialty"
+      ],
+      "risk_score": 1
+    },
+    {
+      "id": "hadnet-cafe-denver",
+      "name": "Hadnet Cafe",
+      "address": "7031 E Colfax Ave, Denver, CO 80220",
+      "website": "https://unity-cafe.com/",
+      "flags": [
+        "weak_specialty"
+      ],
+      "risk_score": 1
+    },
+    {
+      "id": "maandeeq-east-africa-restaurant-aurora",
+      "name": "Maandeeq East Africa Restaurant",
+      "address": "1535 S Havana St, Aurora, CO 80012",
+      "website": "https://maandeeqcafe.square.site/",
+      "flags": [
+        "weak_specialty"
+      ],
+      "risk_score": 1
+    },
+    {
+      "id": "sweetpepper-kitchen-aurora",
+      "name": "SweetPepper Kitchen",
+      "address": "16050 E Dartmouth Ave, Aurora, CO 80013",
+      "website": "https://sweetpepperkitchen.com/",
+      "flags": [
+        "weak_specialty"
+      ],
+      "risk_score": 1
+    },
+    {
+      "id": "tata-nono-kitchen-aurora",
+      "name": "Tata & Nono Kitchen",
+      "address": "10180 E Colfax Ave, Aurora, CO 80010",
+      "website": "https://www.tatanonokitchen.com/",
+      "flags": [
+        "templated_story"
+      ],
+      "risk_score": 1
+    },
+    {
+      "id": "trybal-african-speakeasy-denver",
+      "name": "Trybal African Speakeasy",
+      "address": "1670 Champa St, Denver, CO 80202",
+      "website": "https://trybalafricanspeakeasy.com/",
+      "flags": [
+        "weak_specialty"
+      ],
+      "risk_score": 1
+    },
+    {
+      "id": "akwaba-restaurant-aurora",
+      "name": "Akwaba Restaurant",
+      "address": "16251 E Colfax Ave, Aurora, CO 80011",
+      "website": "https://akwabarestaurant.com/",
+      "flags": [],
+      "risk_score": 0
+    },
+    {
+      "id": "mama-africa-cafe-and-restaurant-denver",
+      "name": "Mama Africa Cafe and Restaurant",
+      "address": "6603 Leetsdale Dr F, Denver, CO 80224",
+      "website": "https://www.mamaafricacafe.com/",
+      "flags": [],
+      "risk_score": 0
+    },
+    {
+      "id": "den-whittier-001",
+      "name": "Whittier Cafe",
+      "address": "1710 E 25th Ave, Denver, CO 80205",
+      "website": "https://www.whittiercafe.com/",
+      "flags": [],
+      "risk_score": 0
+    }
+  ]
+}

@@ -56,3 +56,33 @@ export async function getLivePartnerStatus(slugOrId: string, knownDbId?: string 
     onlineReservationsEnabled,
   };
 }
+
+/** Slugs with live AfriTable booking (claimed + online reservations). */
+export async function getLivePartnerSlugSet(): Promise<Set<string>> {
+  const supabase = createSupabasePublicClient();
+  const { data: claimed } = await supabase
+    .from("restaurants")
+    .select("id, slug")
+    .eq("is_active", true)
+    .eq("is_claimed", true);
+
+  if (!claimed?.length) return new Set();
+
+  const ids = claimed.map((r) => r.id);
+  const { data: settings } = await supabase
+    .from("availability_settings")
+    .select("restaurant_id, online_reservations_enabled")
+    .in("restaurant_id", ids);
+
+  const reservationsOff = new Set(
+    (settings ?? [])
+      .filter((s) => (s as { online_reservations_enabled?: boolean }).online_reservations_enabled === false)
+      .map((s) => (s as { restaurant_id: string }).restaurant_id),
+  );
+
+  const slugs = new Set<string>();
+  for (const r of claimed) {
+    if (!reservationsOff.has(r.id) && r.slug) slugs.add(r.slug);
+  }
+  return slugs;
+}

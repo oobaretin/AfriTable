@@ -7,6 +7,8 @@ import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 import type { FilteredRestaurantResult } from "@/hooks/use-restaurant-filters";
 import { useRestaurantFiltersContext } from "@/contexts/restaurant-filters-context";
 import { buildRestaurantsDirectoryHref } from "@/lib/restaurant-filter-url";
+import { useLivePartnerSlugs, isLivePartnerSlug } from "@/contexts/live-partner-slugs-context";
+import { resolveBookingAction } from "@/lib/booking-action";
 
 type RestaurantGridProps = {
   filteredResults: FilteredRestaurantResult[];
@@ -17,6 +19,7 @@ const ITEMS_PER_PAGE = 12;
 
 export function RestaurantGrid({ filteredResults, onCountChange }: RestaurantGridProps) {
   const { zipSearchActive } = useRestaurantFiltersContext();
+  const livePartnerSlugs = useLivePartnerSlugs();
   const [displayCount, setDisplayCount] = React.useState<number>(ITEMS_PER_PAGE);
 
   React.useEffect(() => {
@@ -73,6 +76,15 @@ export function RestaurantGrid({ filteredResults, onCountChange }: RestaurantGri
                 restaurant={restaurant}
                 href={`/restaurants/${encodeURIComponent(restaurant.id || restaurant.slug)}`}
                 index={index}
+                bookingAction={
+                  isLivePartnerSlug(restaurant.slug || restaurant.id, livePartnerSlugs)
+                    ? resolveBookingAction({
+                        isLivePartner: true,
+                        isClaimed: true,
+                        onlineReservationsEnabled: true,
+                      })
+                    : undefined
+                }
               />
             </div>
           ))
