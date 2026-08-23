@@ -3,13 +3,13 @@
 import * as React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { addDays, format } from "date-fns";
-import { useRouter } from "next/navigation";
 import { Calendar } from "@/components/ui/calendar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatTime12h } from "@/lib/utils/time-format";
 import { BookingStatusBadge } from "@/components/restaurant/BookingStatusBadge";
 import { resolveBookingAction } from "@/lib/booking-action";
+import { useBookingDrawer } from "@/contexts/BookingDrawerContext";
 
 type Slot = {
   time: string;
@@ -29,16 +29,19 @@ export function ReservationWidget({
   restaurantId,
   restaurantSlug,
   restaurantName,
+  restaurantAddress,
+  restaurantPhone,
 }: {
   restaurantId: string;
   restaurantSlug?: string;
   restaurantName?: string;
+  restaurantAddress?: string;
+  restaurantPhone?: string | null;
 }) {
-  const router = useRouter();
+  const { openDrawer } = useBookingDrawer();
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   const [guests, setGuests] = React.useState(2);
   const [selectedTime, setSelectedTime] = React.useState<string | null>(null);
-  const [redirecting, setRedirecting] = React.useState(false);
   const bookingAction = resolveBookingAction({
     isLivePartner: true,
     isClaimed: true,
@@ -47,6 +50,7 @@ export function ReservationWidget({
 
   const dateStr = date ? format(date, "yyyy-MM-dd") : format(new Date(), "yyyy-MM-dd");
   const partySize = String(guests);
+  const slug = restaurantSlug ?? restaurantId;
 
   const { data, isLoading, error } = useQuery<AvailabilityResponse>({
     queryKey: ["availability", restaurantId, dateStr, partySize],
@@ -84,29 +88,24 @@ export function ReservationWidget({
   }, [dateStr, partySize, data, isLoading, error, selectedTime]);
 
   const handleReserve = () => {
-    if (!selectedTime || !restaurantSlug) return;
+    if (!selectedTime || !slug) return;
 
-    setRedirecting(true);
-    const params = new URLSearchParams();
-    params.set("restaurant", restaurantSlug);
-    params.set("date", dateStr);
-    params.set("time", selectedTime);
-    params.set("party", partySize);
-    router.push(`/reservations/new?${params.toString()}`);
+    openDrawer({
+      restaurant: {
+        id: restaurantId,
+        slug,
+        name: restaurantName ?? "Restaurant",
+        address: restaurantAddress,
+        phone: restaurantPhone,
+      },
+      selection: {
+        date: dateStr,
+        time: selectedTime,
+        party: partySize,
+      },
+      initialStep: "guest",
+    });
   };
-
-  if (redirecting) {
-    return (
-      <div id="book" className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
-        <div className="py-8 text-center">
-          <h3 className="mb-2 text-xl font-bold text-slate-900">Continuing to confirm…</h3>
-          <p className="text-sm text-slate-500">
-            Your table isn&apos;t held yet — finish the next step to confirm.
-          </p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div id="book" className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
@@ -220,16 +219,14 @@ export function ReservationWidget({
         <button
           type="button"
           onClick={handleReserve}
-          disabled={!selectedTime || !restaurantSlug || isLoading}
+          disabled={!selectedTime || !slug || isLoading}
           className="btn-bronze w-full rounded-xl px-10 py-4 text-sm font-bold uppercase tracking-widest text-white disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-none"
         >
           Continue to book
         </button>
       </div>
 
-      <p className="mt-4 text-center text-xs text-slate-400">
-        Live availability · AfriTable partner
-      </p>
+      <p className="mt-4 text-center text-xs text-slate-400">Live availability · AfriTable partner</p>
     </div>
   );
 }

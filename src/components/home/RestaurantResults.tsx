@@ -2,7 +2,10 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { RestaurantCardWithDistance } from "./RestaurantCardWithDistance";
+import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
+import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
+import { useLivePartnerSlugs, isLivePartnerSlug } from "@/contexts/live-partner-slugs-context";
+import { resolveBookingAction } from "@/lib/booking-action";
 import type { CatalogListItem } from "@/lib/catalog-list-item";
 
 type RestaurantWithDistance = {
@@ -15,17 +18,14 @@ type RestaurantResultsProps = {
 };
 
 export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
-  // Check if we're in search mode (has distance data)
+  const livePartnerSlugs = useLivePartnerSlugs();
   const isSearchMode = restaurants.length > 0 && restaurants[0].distance !== null;
-  
-  // In search mode, show all results (already filtered and sorted by distance)
-  // Otherwise, show featured restaurants (legacy behavior)
+
   const displayedRestaurants = React.useMemo(() => {
     if (isSearchMode) {
       return restaurants;
     }
-    
-    // Homepage passes a curated short list (e.g. multi-state spotlight) — show all of it.
+
     const FULL_DATASET_SIZE = 50;
     if (restaurants.length < FULL_DATASET_SIZE && restaurants.length > 0) {
       return restaurants;
@@ -34,7 +34,6 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
     const featured = restaurants.filter((r) => r.restaurant.price_range === "$$$");
     return featured.slice(0, 4);
   }, [restaurants, isSearchMode]);
-
 
   if (displayedRestaurants.length === 0) {
     return (
@@ -45,10 +44,9 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
               {isSearchMode ? "No Spots Found" : "Coming Soon to Your Area"}
             </h2>
             <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              {isSearchMode 
+              {isSearchMode
                 ? "Expanding our reach soon! No spots found within this distance."
-                : "We're working on expanding our network of authentic African and Caribbean restaurants. Join our waitlist to be notified when we add restaurants near you."
-              }
+                : "We're working on expanding our network of authentic African and Caribbean restaurants. Join our waitlist to be notified when we add restaurants near you."}
             </p>
           </div>
         </div>
@@ -59,14 +57,14 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
   return (
     <section className="pt-12 pb-24 bg-[#000814] px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Header - Different for search mode vs featured */}
         {isSearchMode ? (
           <div className="mb-8">
             <h2 className="text-2xl md:text-3xl font-serif text-[#C69C2B] font-normal mb-2">
               Restaurants Near You
             </h2>
             <p className="text-sm text-white/60">
-              {displayedRestaurants.length} {displayedRestaurants.length === 1 ? "restaurant" : "restaurants"} found
+              {displayedRestaurants.length}{" "}
+              {displayedRestaurants.length === 1 ? "restaurant" : "restaurants"} found
             </p>
           </div>
         ) : (
@@ -83,26 +81,41 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
           </div>
         )}
 
-        {/* Restaurant Grid */}
         <div
           className={`grid gap-6 ${
-            isSearchMode
+            isSearchMode || displayedRestaurants.length > 4
               ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-              : displayedRestaurants.length > 4
-                ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-                : "grid-cols-1 md:grid-cols-2"
+              : "grid-cols-1 md:grid-cols-2"
           }`}
         >
-          {displayedRestaurants.map((item) => (
-            <RestaurantCardWithDistance
-              key={item.restaurant.id}
-              restaurant={item.restaurant}
-              distance={item.distance}
-            />
-          ))}
+          {displayedRestaurants.map((item, index) => {
+            const restaurant = {
+              ...transformJSONRestaurantToDetail(item.restaurant),
+              distance_miles: item.distance,
+            };
+            const slug = restaurant.slug || restaurant.id;
+            return (
+              <RestaurantCard
+                key={item.restaurant.id}
+                restaurant={restaurant}
+                href={`/restaurants/${encodeURIComponent(slug)}`}
+                index={index}
+                isFeatured={Boolean(item.restaurant.featured)}
+                bookingAction={resolveBookingAction(
+                  isLivePartnerSlug(slug, livePartnerSlugs)
+                    ? {
+                        isLivePartner: true,
+                        isClaimed: true,
+                        onlineReservationsEnabled: true,
+                      }
+                    : { isLivePartner: false, isClaimed: false, onlineReservationsEnabled: false },
+                  { phone: item.restaurant.phone },
+                )}
+              />
+            );
+          })}
         </div>
 
-        {/* See All Destinations Button - Only show in featured mode */}
         {!isSearchMode && (
           <div className="mt-16 flex justify-center">
             <Link

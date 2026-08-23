@@ -6,6 +6,7 @@ import type { CatalogListItem } from "@/lib/catalog-list-item";
 import {
   filterByVibe,
   filterRestaurantList,
+  catalogPriceLevel,
   type VibeFilterOption,
 } from "@/lib/restaurant-list-filters";
 import {
@@ -13,6 +14,7 @@ import {
   DEFAULT_RESTAURANT_FILTERS,
   parseRestaurantFiltersFromSearchParams,
   type RestaurantFilterState,
+  type RestaurantSortOption,
 } from "@/lib/restaurant-filter-url";
 import { filterRestaurantsByZip } from "@/lib/restaurant-zip-filter";
 
@@ -31,6 +33,8 @@ export type RestaurantFiltersApi = {
   setRadius: (radius: number) => void;
   setVibe: (vibe: VibeFilterOption) => void;
   setQ: (q: string) => void;
+  setPrice: (price: number | null) => void;
+  setSort: (sort: RestaurantSortOption) => void;
   patchFilters: (patch: Partial<RestaurantFilterState>) => void;
   clearFilters: () => void;
   hasActiveFilters: boolean;
@@ -57,6 +61,7 @@ export function computeFilteredRestaurantResults(
     activeCategory: filters.cuisine,
     activeCity: filters.city,
     nameQuery: filters.q.toLowerCase(),
+    price: filters.price,
   });
 
   const results = pool.map((restaurant) => ({
@@ -64,8 +69,42 @@ export function computeFilteredRestaurantResults(
     distance: distanceById.get(restaurant.id) ?? null,
   }));
 
-  if (distanceById.size > 0) {
-    results.sort((a, b) => (a.distance ?? Number.POSITIVE_INFINITY) - (b.distance ?? Number.POSITIVE_INFINITY));
+  const hasDistance = distanceById.size > 0;
+  const effectiveSort =
+    filters.sort === "distance" && !hasDistance ? "default" : filters.sort;
+
+  switch (effectiveSort) {
+    case "rating":
+      results.sort((a, b) => (b.restaurant.rating ?? 0) - (a.restaurant.rating ?? 0));
+      break;
+    case "name":
+      results.sort((a, b) => a.restaurant.name.localeCompare(b.restaurant.name));
+      break;
+    case "price-low":
+      results.sort(
+        (a, b) =>
+          catalogPriceLevel(a.restaurant.price_range) - catalogPriceLevel(b.restaurant.price_range),
+      );
+      break;
+    case "price-high":
+      results.sort(
+        (a, b) =>
+          catalogPriceLevel(b.restaurant.price_range) - catalogPriceLevel(a.restaurant.price_range),
+      );
+      break;
+    case "distance":
+      results.sort(
+        (a, b) => (a.distance ?? Number.POSITIVE_INFINITY) - (b.distance ?? Number.POSITIVE_INFINITY),
+      );
+      break;
+    default:
+      if (hasDistance) {
+        results.sort(
+          (a, b) =>
+            (a.distance ?? Number.POSITIVE_INFINITY) - (b.distance ?? Number.POSITIVE_INFINITY),
+        );
+      }
+      break;
   }
 
   return results;
@@ -136,6 +175,16 @@ export function useRestaurantFilters(restaurants: CatalogListItem[]): Restaurant
     [patchFilters],
   );
 
+  const setPrice = React.useCallback(
+    (price: number | null) => patchFilters({ price }),
+    [patchFilters],
+  );
+
+  const setSort = React.useCallback(
+    (sort: RestaurantSortOption) => patchFilters({ sort }),
+    [patchFilters],
+  );
+
   const clearFilters = React.useCallback(() => {
     router.replace(pathname, { scroll: false });
   }, [pathname, router]);
@@ -145,6 +194,8 @@ export function useRestaurantFilters(restaurants: CatalogListItem[]): Restaurant
     filters.cuisine !== "All" ||
     filters.zip.length === 5 ||
     filters.vibe !== "All" ||
+    filters.price != null ||
+    filters.sort !== "default" ||
     Boolean(filters.q);
 
   return {
@@ -157,6 +208,8 @@ export function useRestaurantFilters(restaurants: CatalogListItem[]): Restaurant
     setRadius,
     setVibe,
     setQ,
+    setPrice,
+    setSort,
     patchFilters,
     clearFilters,
     hasActiveFilters,

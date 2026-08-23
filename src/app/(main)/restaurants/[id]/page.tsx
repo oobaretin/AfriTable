@@ -994,6 +994,8 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
                     restaurantId={dbRestaurantId ?? restaurant.id}
                     restaurantSlug={restaurant.slug}
                     restaurantName={restaurant.name}
+                    restaurantAddress={addrStr || undefined}
+                    restaurantPhone={restaurant.phone}
                   />
                 ) : (
                   <CatalogBookingCard

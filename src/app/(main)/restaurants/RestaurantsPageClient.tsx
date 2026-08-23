@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { RestaurantFiltersProvider } from "@/contexts/restaurant-filters-context";
 import { LivePartnerSlugsProvider } from "@/contexts/live-partner-slugs-context";
 import { CategoryFilterWrapper } from "@/components/home/CategoryFilterWrapper";
+import { RestaurantGridSkeleton } from "@/components/home/RestaurantGridSkeleton";
 import type { CatalogListItem } from "@/lib/catalog-list-item";
 
 type RestaurantsPageClientProps = {
@@ -22,13 +23,7 @@ function RestaurantsPageContent({ restaurants }: { restaurants: CatalogListItem[
 
 export function RestaurantsPageClient({ restaurants, livePartnerSlugs = [] }: RestaurantsPageClientProps) {
   return (
-    <Suspense
-      fallback={
-        <div className="py-24 text-center text-sm uppercase tracking-widest text-white/50">
-          Loading restaurants…
-        </div>
-      }
-    >
+    <Suspense fallback={<RestaurantGridSkeleton />}>
       <LivePartnerSlugsProvider slugs={livePartnerSlugs}>
         <RestaurantsPageContent restaurants={restaurants} />
       </LivePartnerSlugsProvider>

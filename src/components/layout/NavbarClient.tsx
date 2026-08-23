@@ -9,6 +9,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import type { Database } from "@db/database.types";
+import { NavbarSearch } from "@/components/layout/NavbarSearch";
 
 type Profile = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -100,8 +101,8 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
 
   return (
     <header className="fixed top-0 w-full border-b bg-white z-[60]">
-      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6 relative z-[60]">
-        <div className="flex items-center gap-6 relative z-50">
+      <div className="mx-auto flex h-24 max-w-6xl items-center gap-4 px-6 relative z-[60]">
+        <div className="flex items-center gap-4 md:gap-6 relative z-50 shrink-0">
           <a href="/" className="flex items-center gap-2 relative z-50 pointer-events-auto cursor-pointer">
             <Image
               src="/logo.png"
@@ -127,7 +128,9 @@ export function NavbarClient({ user: serverUser, profile: serverProfile }: Navba
           </nav>
         </div>
 
-        <div className="flex items-center gap-2 relative z-[60]">
+        <NavbarSearch />
+
+        <div className="flex items-center gap-2 relative z-[60] shrink-0 ml-auto">
           {isSignedIn ? (
             <Button
               type="button"

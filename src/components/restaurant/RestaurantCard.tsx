@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import type { Database } from "@db/database.types";
 import { resolveRestaurantImageUrl } from "@/lib/restaurant-image";
 import { RestaurantCoverImage } from "@/components/restaurant/RestaurantCoverImage";
@@ -14,6 +15,8 @@ import {
   resolveGuestSpecialty,
   type CatalogTrustLevel,
 } from "@/lib/catalog-trust";
+import { useBookingDrawer } from "@/contexts/BookingDrawerContext";
+import { formatRestaurantAddress } from "@/lib/booking-drawer-types";
 
 export type RestaurantRow = Database["public"]["Tables"]["restaurants"]["Row"] & {
   // optional denormalized fields for UI
@@ -65,6 +68,7 @@ export function RestaurantCard({
   isFeatured?: boolean;
   bookingAction?: BookingAction;
 }) {
+  const { openDrawer } = useBookingDrawer();
   const trust = evaluateCatalogTrust({
     phone: restaurant.phone,
     website: restaurant.website,
@@ -174,6 +178,22 @@ export function RestaurantCard({
   
   const regionColor = getRegionColor(cuisine, region);
 
+  const handleBookClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    openDrawer({
+      restaurant: {
+        id: restaurant.slug || restaurant.id,
+        slug: restaurant.slug || restaurant.id,
+        name: restaurant.name,
+        address: formatRestaurantAddress(restaurant.address) || displayCity || undefined,
+        phone: restaurant.phone,
+        image: imgSrc,
+      },
+      initialStep: "details",
+    });
+  };
+
   return (
     <div className={`group cursor-pointer overflow-hidden rounded-xl bg-white transition-all hover:shadow-xl border relative z-10 pointer-events-auto ${
       isFeatured 
@@ -230,6 +250,16 @@ export function RestaurantCard({
             )}
           </div>
 
+          {(() => {
+            const specialty = resolveGuestSpecialty(restaurant.specialty, restaurant.menu_highlights);
+            if (!specialty) return null;
+            return (
+              <p className="mb-2 text-sm font-medium text-slate-700">
+                <span className="text-[#C69C2B] font-bold">Known for:</span> {specialty}
+              </p>
+            );
+          })()}
+
           {distanceLabel && (
             <p className="mb-2 text-sm font-semibold text-[#A67C00]">{distanceLabel}</p>
           )}
@@ -244,17 +274,13 @@ export function RestaurantCard({
           )}
 
           {(() => {
-            const specialty = resolveGuestSpecialty(restaurant.specialty, restaurant.menu_highlights);
             const neighborhood = (restaurant as { neighborhood?: string }).neighborhood;
             const awards = (restaurant as { awards?: string[] }).awards;
-            if (!neighborhood && !specialty && !(awards && awards.length)) return null;
+            if (!neighborhood && !awards?.length) return null;
             return (
               <div className="mb-4 space-y-1">
                 {neighborhood ? (
                   <p className="text-[10px] uppercase tracking-wider text-slate-500 font-medium">{neighborhood}</p>
-                ) : null}
-                {specialty ? (
-                  <p className="text-[10px] uppercase tracking-wider text-[#C69C2B] font-semibold">{specialty}</p>
                 ) : null}
                 {awards && awards.length > 0 ? (
                   <p className="text-[10px] uppercase tracking-wider text-slate-600 font-bold">
@@ -283,12 +309,22 @@ export function RestaurantCard({
       </a>
 
       <div className="px-5 pb-5">
-        <a
-          href={safeHref}
-          className="block w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-20 pointer-events-auto touch-manipulation cursor-pointer"
-        >
-          {bookingAction.ctaLabel}
-        </a>
+        {bookingAction.mode === "book" ? (
+          <button
+            type="button"
+            onClick={handleBookClick}
+            className="block w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-20 pointer-events-auto touch-manipulation cursor-pointer"
+          >
+            {bookingAction.ctaLabel}
+          </button>
+        ) : (
+          <a
+            href={safeHref}
+            className="block w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-20 pointer-events-auto touch-manipulation cursor-pointer"
+          >
+            {bookingAction.ctaLabel}
+          </a>
+        )}
       </div>
 
       {onQuickReserve && (

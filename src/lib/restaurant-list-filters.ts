@@ -292,15 +292,37 @@ export function matchesNameQuery(restaurant: NameSearchable, nameQuery: string):
   return matched;
 }
 
+const PRICE_LEVEL_MAP: Record<string, number> = {
+  $: 1,
+  $$: 2,
+  $$$: 3,
+  $$$$: 4,
+};
+
+export function catalogPriceLevel(priceRange: string | number | null | undefined): number {
+  if (typeof priceRange === "number") return priceRange;
+  if (!priceRange) return 2;
+  return PRICE_LEVEL_MAP[String(priceRange)] ?? 2;
+}
+
+export function matchesPriceFilter(
+  priceRange: string | number | null | undefined,
+  selectedPrice: number | null,
+): boolean {
+  if (selectedPrice == null) return true;
+  return catalogPriceLevel(priceRange) === selectedPrice;
+}
+
 export type ListFilterParams = {
   activeCategory: string;
   activeCity: string;
   nameQuery: string;
+  price?: number | null;
 };
 
-export function filterRestaurantList<T extends NameSearchable>(
+export function filterRestaurantList<T extends NameSearchable & { price_range?: string | number | null }>(
   restaurants: T[],
-  { activeCategory, activeCity, nameQuery }: ListFilterParams,
+  { activeCategory, activeCity, nameQuery, price }: ListFilterParams,
 ): T[] {
   let filtered = [...restaurants];
 
@@ -318,6 +340,10 @@ export function filterRestaurantList<T extends NameSearchable>(
     filtered = filtered.filter((r) =>
       matchesCuisineChip(r.cuisine || "", r.region || "", activeCategory),
     );
+  }
+
+  if (price != null) {
+    filtered = filtered.filter((r) => matchesPriceFilter(r.price_range, price));
   }
 
   return filtered;

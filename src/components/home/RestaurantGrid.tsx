@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { RestaurantCard } from "@/components/restaurant/RestaurantCard";
+import { NoResultsFound } from "@/components/search/NoResultsFound";
 import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 import type { FilteredRestaurantResult } from "@/hooks/use-restaurant-filters";
 import { useRestaurantFiltersContext } from "@/contexts/restaurant-filters-context";
@@ -18,7 +19,7 @@ type RestaurantGridProps = {
 const ITEMS_PER_PAGE = 12;
 
 export function RestaurantGrid({ filteredResults, onCountChange }: RestaurantGridProps) {
-  const { zipSearchActive } = useRestaurantFiltersContext();
+  const { zipSearchActive, filters } = useRestaurantFiltersContext();
   const livePartnerSlugs = useLivePartnerSlugs();
   const [displayCount, setDisplayCount] = React.useState<number>(ITEMS_PER_PAGE);
 
@@ -76,34 +77,39 @@ export function RestaurantGrid({ filteredResults, onCountChange }: RestaurantGri
                 restaurant={restaurant}
                 href={`/restaurants/${encodeURIComponent(restaurant.id || restaurant.slug)}`}
                 index={index}
-                bookingAction={
+                bookingAction={resolveBookingAction(
                   isLivePartnerSlug(restaurant.slug || restaurant.id, livePartnerSlugs)
-                    ? resolveBookingAction({
+                    ? {
                         isLivePartner: true,
                         isClaimed: true,
                         onlineReservationsEnabled: true,
-                      })
-                    : undefined
-                }
+                      }
+                    : { isLivePartner: false, isClaimed: false, onlineReservationsEnabled: false },
+                  { phone: restaurant.phone },
+                )}
               />
             </div>
           ))
+        ) : filters.city ? (
+          <div className="col-span-full">
+            <NoResultsFound
+              searchedCity={filters.city}
+              searchedCuisine={filters.cuisine !== "All" ? filters.cuisine : undefined}
+            />
+          </div>
         ) : (
-          <div className="col-span-full text-center py-16">
-            <p className="text-white/70 text-lg mb-2">
-              {zipSearchActive ? "No spots found within this distance." : "No destinations match your selection."}
-            </p>
-            <p className="text-white/50 text-sm mb-6">
-              {zipSearchActive
-                ? "Try a larger radius or clear your zip code to browse the full directory."
-                : "Try another city, cuisine, or browse the full nationwide directory."}
-            </p>
-            <Link
-              href={buildRestaurantsDirectoryHref()}
-              className="inline-flex rounded-full border border-[#C69C2B] px-6 py-3 text-sm font-bold uppercase tracking-widest text-[#C69C2B] transition-colors hover:bg-[#C69C2B]/10"
-            >
-              Browse all restaurants
-            </Link>
+          <div className="col-span-full">
+            <NoResultsFound
+              searchedCuisine={filters.cuisine !== "All" ? filters.cuisine : undefined}
+            />
+            <div className="mt-6 text-center">
+              <Link
+                href={buildRestaurantsDirectoryHref()}
+                className="inline-flex rounded-full border border-[#C69C2B] px-6 py-3 text-sm font-bold uppercase tracking-widest text-[#C69C2B] transition-colors hover:bg-[#C69C2B]/10"
+              >
+                Browse all restaurants
+              </Link>
+            </div>
           </div>
         )}
       </div>

@@ -25,6 +25,7 @@ export function ReservationSuccessClient() {
   const reservationDate = searchParams.get("date");
   const reservationTime = searchParams.get("time");
   const partySize = searchParams.get("party");
+  const confirmationCode = searchParams.get("code");
 
   // Trigger confetti celebration on mount (browser-only)
   React.useEffect(() => {
@@ -159,7 +160,15 @@ export function ReservationSuccessClient() {
         </h1>
 
         <p className="text-lg text-slate-600 mb-10 italic">
-          A confirmation email has been sent. Your digital passport has been updated with your new stamp.
+          A confirmation email has been sent.
+          {confirmationCode ? (
+            <>
+              {" "}
+              Your confirmation code is{" "}
+              <span className="font-bold text-brand-dark not-italic">{confirmationCode}</span>.
+            </>
+          ) : null}{" "}
+          Your digital passport has been updated with your new stamp.
         </p>
 
         {/* Action Grid */}
@@ -172,6 +181,9 @@ export function ReservationSuccessClient() {
             <p className="text-xs text-slate-500">
               {partyCount} {partyCount === 1 ? "Guest" : "Guests"} • {restaurant.name}
             </p>
+            {confirmationCode ? (
+              <p className="mt-2 text-xs font-semibold text-brand-forest">Confirmation: {confirmationCode}</p>
+            ) : null}
           </div>
           <div className="p-6 rounded-[2rem] bg-brand-paper border border-brand-bronze/10 text-left">
             <p className="text-[10px] font-black text-brand-bronze uppercase mb-2">Next Step</p>

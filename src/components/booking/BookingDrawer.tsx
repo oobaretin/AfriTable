@@ -2,127 +2,76 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { X } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { addDays, format, parseISO } from "date-fns";
+import { X, ChevronLeft } from "lucide-react";
 import Image from "next/image";
-import type { RestaurantRow } from "@/components/restaurant/RestaurantCard";
+import { Calendar } from "@/components/ui/calendar";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Skeleton } from "@/components/ui/skeleton";
+import { GuestCheckoutForm } from "@/components/reservation/GuestCheckoutForm";
+import { formatTime12h } from "@/lib/utils/time-format";
+import type { OpenBookingDrawerOptions } from "@/lib/booking-drawer-types";
 
 type BookingDrawerProps = {
-  restaurant: RestaurantRow | null;
+  drawerState: OpenBookingDrawerOptions | null;
   isOpen: boolean;
   onClose: () => void;
 };
 
-type DrawerStep = "booking" | "waitlist" | "thankyou";
+type DrawerStep = "details" | "guest";
 
-type AvailabilitySlot = { time: string; availableTables: number; status: "available" | "limited" | "unavailable" };
+type Slot = {
+  time: string;
+  availableTables: number;
+  status: "available" | "limited" | "unavailable";
+};
 
-function formatTimeHHmm(hhmm: string): string {
-  const [hStr, mStr] = hhmm.split(":");
-  const h = parseInt(hStr ?? "0", 10);
-  const m = parseInt(mStr ?? "0", 10);
-  if (h === 12) return `12:${String(m).padStart(2, "0")} PM`;
-  if (h === 0) return `12:${String(m).padStart(2, "0")} AM`;
-  if (h > 12) return `${h - 12}:${String(m).padStart(2, "0")} PM`;
-  return `${h}:${String(m).padStart(2, "0")} AM`;
+type AvailabilityResponse = {
+  slots: Slot[];
+};
+
+function resolveInitialStep(state: OpenBookingDrawerOptions | null): DrawerStep {
+  if (!state) return "details";
+  if (state.initialStep === "guest") return "guest";
+  const sel = state.selection;
+  if (sel?.date && sel?.time && sel?.party) return "guest";
+  return "details";
 }
 
-export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProps) {
+export function BookingDrawer({ drawerState, isOpen, onClose }: BookingDrawerProps) {
   const router = useRouter();
-  const [date, setDate] = React.useState("");
-  const [time, setTime] = React.useState("");
-  const [partySize, setPartySize] = React.useState("2");
-  const [step, setStep] = React.useState<DrawerStep>("booking");
-  const [email, setEmail] = React.useState("");
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [slots, setSlots] = React.useState<AvailabilitySlot[]>([]);
-  const [slotsLoading, setSlotsLoading] = React.useState(false);
-  const [slotsError, setSlotsError] = React.useState<string | null>(null);
+  const restaurant = drawerState?.restaurant ?? null;
 
-  const restaurantId = restaurant ? (restaurant as any).slug ?? restaurant.id : "";
+  const [step, setStep] = React.useState<DrawerStep>("details");
+  const [date, setDate] = React.useState<Date | undefined>(undefined);
+  const [guests, setGuests] = React.useState(2);
+  const [selectedTime, setSelectedTime] = React.useState<string | null>(null);
 
-  // Set default date to tomorrow when drawer opens
   React.useEffect(() => {
-    if (isOpen && !date) {
-      const tomorrow = new Date();
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      setDate(tomorrow.toISOString().split("T")[0]);
+    if (!isOpen || !drawerState) return;
+    const nextStep = resolveInitialStep(drawerState);
+    setStep(nextStep);
+
+    const sel = drawerState.selection;
+    if (sel?.date) {
+      setDate(parseISO(sel.date));
+    } else {
+      setDate(new Date());
     }
-  }, [isOpen, date]);
+    setGuests(sel?.party ? Number(sel.party) : 2);
+    setSelectedTime(sel?.time ?? null);
+  }, [isOpen, drawerState]);
 
-  // Fetch availability when restaurant, date, or party size changes
-  React.useEffect(() => {
-    if (!isOpen || !restaurantId || !date) {
-      setSlots([]);
-      setSlotsError(null);
-      return;
-    }
-    let cancelled = false;
-    setSlotsLoading(true);
-    setSlotsError(null);
-    fetch(
-      `/api/restaurants/${encodeURIComponent(restaurantId)}/availability?date=${encodeURIComponent(date)}&partySize=${encodeURIComponent(partySize)}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        if (cancelled) return;
-        if (data?.error) {
-          setSlotsError(data.error === "not_found" ? "Availability not set for this restaurant." : "Could not load times.");
-          setSlots([]);
-          return;
-        }
-        const list = Array.isArray(data?.slots) ? data.slots : [];
-        setSlots(list);
-        setSlotsError(null);
-        // If current time is not in the new list, set to first available/limited slot or clear
-        setTime((prev) => {
-          const selectable = list.filter((s: AvailabilitySlot) => s.status !== "unavailable");
-          const hasPrev = selectable.some((s: AvailabilitySlot) => s.time === prev);
-          if (hasPrev) return prev;
-          const first = selectable[0];
-          return first ? first.time : "";
-        });
-      })
-      .catch(() => {
-        if (!cancelled) {
-          setSlotsError("Could not load times.");
-          setSlots([]);
-        }
-      })
-      .finally(() => {
-        if (!cancelled) setSlotsLoading(false);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [isOpen, restaurantId, date, partySize]);
-
-  // When we have slots and no time selected, default to first available
-  React.useEffect(() => {
-    if (time || !slots.length || slotsLoading) return;
-    const first = slots.find((s) => s.status !== "unavailable");
-    if (first) setTime(first.time);
-  }, [slots, slotsLoading, time]);
-
-  // When no availability from API (fallback mode) and time empty, default to 7:00 PM
-  React.useEffect(() => {
-    if (!slotsLoading && slots.length === 0 && date && !time) setTime("19:00");
-  }, [slotsLoading, slots.length, date, time]);
-
-  // Reset form when drawer closes
   React.useEffect(() => {
     if (!isOpen) {
-      setDate("");
-      setTime("");
-      setPartySize("2");
-      setStep("booking");
-      setEmail("");
-      setIsSubmitting(false);
-      setSlots([]);
-      setSlotsError(null);
+      setStep("details");
+      setDate(undefined);
+      setGuests(2);
+      setSelectedTime(null);
     }
   }, [isOpen]);
 
-  // Prevent body scroll when drawer is open
   React.useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -134,316 +83,245 @@ export function BookingDrawer({ restaurant, isOpen, onClose }: BookingDrawerProp
     };
   }, [isOpen]);
 
-  const handleBookingSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!restaurant || !date || !time) return;
+  const dateStr = date ? format(date, "yyyy-MM-dd") : "";
+  const partySize = String(guests);
+  const restaurantApiId = restaurant?.id ?? "";
 
-    // Same flow as View Details: go to reservation page with selected date, time, party
-    const params = new URLSearchParams();
-    params.set("restaurant", restaurantId);
-    params.set("date", date);
-    params.set("time", time);
-    params.set("party", partySize);
+  const { data, isLoading, error } = useQuery<AvailabilityResponse>({
+    queryKey: ["drawer-availability", restaurantApiId, dateStr, partySize],
+    queryFn: async () => {
+      const res = await fetch(
+        `/api/restaurants/${encodeURIComponent(restaurantApiId)}/availability?date=${encodeURIComponent(dateStr)}&partySize=${encodeURIComponent(partySize)}`,
+      );
+      if (!res.ok) throw new Error("Failed to load availability");
+      return (await res.json()) as AvailabilityResponse;
+    },
+    enabled: isOpen && Boolean(restaurantApiId && dateStr && step === "details"),
+    staleTime: 15_000,
+  });
+
+  const slots = React.useMemo(() => data?.slots ?? [], [data?.slots]);
+
+  React.useEffect(() => {
+    if (isLoading || error || !slots.length || step !== "details") return;
+    if (selectedTime) {
+      const slot = slots.find((s) => s.time === selectedTime);
+      const ok = slot && slot.status !== "unavailable" && slot.availableTables > 0;
+      if (ok) return;
+    }
+    const first = slots.find((s) => s.status !== "unavailable" && s.availableTables > 0);
+    setSelectedTime(first?.time ?? null);
+  }, [dateStr, partySize, slots, isLoading, error, selectedTime, step]);
+
+  function handleDetailsContinue(e: React.FormEvent) {
+    e.preventDefault();
+    if (!selectedTime || !dateStr) return;
+    setStep("guest");
+  }
+
+  function handleBookingSuccess(confirmation: { id: string; confirmationCode: string }) {
+    if (!restaurant || !dateStr || !selectedTime) return;
     onClose();
-    router.push(`/reservations/new?${params.toString()}`);
-  };
-
-  const handleWaitlistSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-
-    setIsSubmitting(true);
-    
-    // TODO: Add API call to submit email to waitlist
-    // For now, show thank you state after a brief delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setStep("thankyou");
-    }, 1000);
-  };
-
-  // Get restaurant website URL
-  const restaurantWebsite = React.useMemo(() => {
-    if (!restaurant) return null;
-    const website = (restaurant as any).website;
-    if (website && typeof website === "string" && website !== "N/A") {
-      return website.startsWith("http") ? website : `https://${website}`;
-    }
-    return null;
-  }, [restaurant]);
-
-  // Extract city from restaurant address
-  const restaurantCity = React.useMemo(() => {
-    if (!restaurant) return "";
-    const address = restaurant.address;
-    if (typeof address === "string") {
-      const parts = address.split(",").map((s) => s.trim());
-      if (parts.length >= 2) {
-        const cityState = parts[1];
-        const cityMatch = cityState.match(/^([^,]+)/);
-        return cityMatch ? cityMatch[1].trim() : "";
-      }
-    } else if (typeof address === "object" && address !== null) {
-      const addr = address as any;
-      return addr.city || "";
-    }
-    return "";
-  }, [restaurant]);
+    const successParams = new URLSearchParams({
+      restaurant: restaurant.slug,
+      date: dateStr,
+      time: selectedTime,
+      party: partySize,
+      code: confirmation.confirmationCode,
+      id: confirmation.id,
+    });
+    router.push(`/reservation-success?${successParams.toString()}`);
+  }
 
   if (!restaurant) return null;
 
+  const summary = {
+    restaurant: {
+      id: restaurant.id,
+      slug: restaurant.slug,
+      name: restaurant.name,
+      address: restaurant.address ?? "",
+      phone: restaurant.phone ?? null,
+      image: restaurant.image ?? null,
+    },
+  };
+
   return (
     <>
-      {/* Backdrop */}
       {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40 transition-opacity"
-          onClick={onClose}
-        />
+        <div className="fixed inset-0 z-40 bg-black/50 transition-opacity" onClick={onClose} aria-hidden />
       )}
 
-      {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-full max-w-md z-50 transform transition-transform duration-300 ease-in-out shadow-2xl ${
+        className={`fixed top-0 right-0 z-50 h-full w-full max-w-md transform shadow-2xl transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Book at ${restaurant.name}`}
       >
-        {/* Glassmorphism Background */}
-        <div className="absolute inset-0 bg-[#050A18]/95 backdrop-blur-xl"></div>
-        
-        <div className="relative h-full flex flex-col overflow-y-auto">
-          {/* Header */}
-          <div className="border-b border-white/10 p-8 flex items-start justify-between transition-all duration-300">
-            <div className="flex-1">
-              {step === "booking" && (
-                <div className="transition-all duration-300">
-                  <h2 className="text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.5em] mb-2">
-                    The Invitation
-                  </h2>
-                  <h3 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter italic leading-none mb-2">
-                    {restaurant.name}
-                  </h3>
-                  {restaurantCity && (
-                    <p className="text-[10px] font-black text-[#A33B32] uppercase tracking-widest mb-3">
-                      {restaurantCity}
-                    </p>
-                  )}
-                  <p className="text-white/70 text-sm leading-relaxed max-w-md">
-                    From the pulse of Lagos to the heart of Harlem, we are curating the ultimate directory of the diaspora&apos;s finest tables. Tell us when you&apos;d like to dine, and we&apos;ll handle the rest.
-                  </p>
-                </div>
-              )}
-              {step === "waitlist" && (
-                <div className="transition-all duration-300">
-                  <h2 className="text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.5em] mb-2">
-                    The Capture
-                  </h2>
-                  <h3 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter italic leading-none">
-                    BECOME A FOUNDING MEMBER
-                  </h3>
-                </div>
-              )}
-              {step === "thankyou" && (
-                <div className="transition-all duration-300">
-                  <h2 className="text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.5em] mb-2">
-                    The Confirmation
-                  </h2>
-                  <h3 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter italic leading-none">
-                    YOU&apos;RE ON THE LIST
-                  </h3>
-                </div>
-              )}
+        <div className="absolute inset-0 bg-[#050A18]/95 backdrop-blur-xl" />
+
+        <div className="relative flex h-full flex-col overflow-y-auto">
+          <div className="flex items-start justify-between border-b border-white/10 p-6">
+            <div className="min-w-0 flex-1 pr-4">
+              {step === "guest" ? (
+                <button
+                  type="button"
+                  onClick={() => setStep("details")}
+                  className="mb-3 inline-flex items-center gap-1 text-xs font-semibold text-white/60 hover:text-white"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  Change date &amp; time
+                </button>
+              ) : null}
+              <p className="mb-1 text-[10px] font-black uppercase tracking-[0.4em] text-[#C69C2B]">
+                {step === "details" ? "Book a table" : "Confirm details"}
+              </p>
+              <h2 className="text-2xl font-black uppercase italic tracking-tight text-white">{restaurant.name}</h2>
+              {dateStr && selectedTime && step === "guest" ? (
+                <p className="mt-2 text-sm text-white/60">
+                  {format(parseISO(dateStr), "EEE, MMM d")} · {formatTime12h(selectedTime)} · {guests}{" "}
+                  {guests === 1 ? "guest" : "guests"}
+                </p>
+              ) : null}
             </div>
             <button
+              type="button"
               onClick={onClose}
-              className="text-white/60 hover:text-white transition-colors p-2 ml-4"
-              aria-label="Close drawer"
+              className="rounded-lg p-2 text-white/60 transition-colors hover:bg-white/10 hover:text-white"
+              aria-label="Close booking drawer"
             >
-              <X className="w-6 h-6" />
+              <X className="h-5 w-5" />
             </button>
           </div>
 
-          {/* Booking Form, Waitlist Form, or Thank You */}
-          <div className="flex-1 transition-all duration-300">
-            {step === "booking" && (
-            <form onSubmit={handleBookingSubmit} className="p-8 space-y-10">
-            {/* Guests – same order as View Details (ReservationWidget) */}
-            <div>
-              <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
-                Guests
-              </label>
-              <select
-                value={partySize}
-                onChange={(e) => setPartySize(e.target.value)}
-                required
-                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors appearance-none cursor-pointer"
-              >
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((size) => (
-                  <option key={size} value={size} className="bg-[#050A18] text-white">
-                    {size} {size === 1 ? "Guest" : "Guests"}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <div className="flex-1 p-6">
+            {step === "details" ? (
+              <form onSubmit={handleDetailsContinue} className="space-y-6">
+                <div>
+                  <label className="mb-2 block text-[10px] font-black uppercase tracking-[0.3em] text-[#C69C2B]">
+                    Guests
+                  </label>
+                  <div className="flex items-center justify-between rounded-xl border border-white/15 bg-white/5 p-2">
+                    <button
+                      type="button"
+                      onClick={() => setGuests(Math.max(1, guests - 1))}
+                      className="flex h-10 w-10 items-center justify-center rounded-lg text-white/80 hover:bg-white/10"
+                    >
+                      −
+                    </button>
+                    <span className="text-lg font-bold text-white">
+                      {guests} {guests === 1 ? "Guest" : "Guests"}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setGuests(Math.min(20, guests + 1))}
+                      className="flex h-10 w-10 items-center justify-center rounded-lg text-white/80 hover:bg-white/10"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
 
-            {/* Date */}
-            <div>
-              <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
-                Date
-              </label>
-              <input
-                type="date"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-                min={new Date().toISOString().split("T")[0]}
-                required
-                style={{ colorScheme: "dark" }}
-                className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors [&::-webkit-calendar-picker-indicator]:opacity-100 [&::-webkit-calendar-picker-indicator]:invert"
-              />
-            </div>
-
-            {/* Time: select from available slots or fallback to time input */}
-            <div>
-              <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
-                Time
-              </label>
-              {slotsLoading ? (
-                <p className="text-white/60 text-sm py-2">Loading available times…</p>
-              ) : (() => {
-                  const selectableSlots = slots.filter((s) => s.status !== "unavailable");
-                  if (selectableSlots.length > 0) {
-                    return (
-                      <select
-                        value={time}
-                        onChange={(e) => setTime(e.target.value)}
-                        required
-                        className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors appearance-none cursor-pointer"
+                <div>
+                  <label className="mb-2 block text-[10px] font-black uppercase tracking-[0.3em] text-[#C69C2B]">
+                    Date
+                  </label>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <button
+                        type="button"
+                        className="w-full rounded-xl border border-white/15 bg-white/5 p-3 text-left text-sm font-semibold text-white hover:bg-white/10"
                       >
-                        <option value="" className="bg-[#050A18] text-white">
-                          Select a time
-                        </option>
-                        {selectableSlots.map((slot) => (
-                          <option key={slot.time} value={slot.time} className="bg-[#050A18] text-white">
-                            {formatTimeHHmm(slot.time)}
-                            {slot.status === "limited" ? " (few tables)" : ""}
-                          </option>
-                        ))}
-                      </select>
-                    );
-                  }
-                  return (
-                    <>
-                      {slotsError && (
-                        <p className="text-white/50 text-xs mb-2">{slotsError}</p>
-                      )}
-                      <input
-                        type="time"
-                        value={time}
-                        onChange={(e) => setTime(e.target.value)}
-                        required
-                        style={{ colorScheme: "dark" }}
-                        className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base focus:outline-none focus:border-[#C69C2B] transition-colors [&::-webkit-datetime-edit]:text-white [&::-webkit-datetime-edit-ampm-field]:text-white [&::-webkit-calendar-picker-indicator]:opacity-100 [&::-webkit-calendar-picker-indicator]:invert"
+                        {date ? format(date, "MMM d, yyyy") : "Select date"}
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[360px]">
+                      <DialogHeader>
+                        <DialogTitle>Select a date</DialogTitle>
+                      </DialogHeader>
+                      <Calendar
+                        mode="single"
+                        selected={date}
+                        onSelect={setDate}
+                        disabled={(d) => d < new Date() || d > addDays(new Date(), 90)}
+                        initialFocus
                       />
-                    </>
-                  );
-                })()}
-            </div>
+                    </DialogContent>
+                  </Dialog>
+                </div>
 
-            {/* Submit – same outcome as View Details: go to reservation flow */}
-            <div className="pt-8">
-              <button
-                type="submit"
-                className="w-full bg-[#A33B32] hover:bg-[#A33B32]/90 text-white text-sm font-black px-8 py-5 rounded-full uppercase tracking-widest transition-all"
-              >
-                Find a Table
-              </button>
-            </div>
-          </form>
-            )}
-            
-            {step === "waitlist" && (
-            <form onSubmit={handleWaitlistSubmit} className="p-8 flex flex-col justify-center min-h-[400px]">
-              {/* Waitlist Message */}
-              <p className="text-white/80 text-base leading-relaxed mb-6 text-center max-w-md mx-auto">
-                AfriTable is currently in its private preview phase. We are fine-tuning our booking engine to ensure your experience is as seamless as the traditions we honor.
-              </p>
-              <p className="text-white/80 text-base leading-relaxed mb-10 text-center max-w-md mx-auto">
-                Join the inner circle for VIP access to grand openings, secret menus, and the first seat at the table when we launch.
-              </p>
+                <div>
+                  <label className="mb-2 block text-[10px] font-black uppercase tracking-[0.3em] text-[#C69C2B]">
+                    Time
+                  </label>
+                  {isLoading ? (
+                    <Skeleton className="h-[42px] w-full rounded-xl bg-white/10" />
+                  ) : error ? (
+                    <p className="text-sm text-red-300">Couldn&apos;t load times. Try another date.</p>
+                  ) : slots.length > 0 ? (
+                    <select
+                      value={selectedTime ?? ""}
+                      onChange={(e) => setSelectedTime(e.target.value || null)}
+                      required
+                      className="w-full rounded-xl border border-white/15 bg-white/5 p-3 text-sm font-semibold text-white focus:border-[#C69C2B] focus:outline-none"
+                    >
+                      <option value="" className="bg-[#050A18]">
+                        Select time
+                      </option>
+                      {slots.map((slot) => {
+                        const bookable = slot.status !== "unavailable" && slot.availableTables > 0;
+                        return (
+                          <option
+                            key={slot.time}
+                            value={slot.time}
+                            disabled={!bookable}
+                            className="bg-[#050A18]"
+                          >
+                            {formatTime12h(slot.time)}
+                            {slot.status === "limited" && bookable ? " (Limited)" : ""}
+                            {!bookable ? " (Unavailable)" : ""}
+                          </option>
+                        );
+                      })}
+                    </select>
+                  ) : (
+                    <p className="text-sm text-white/50">No times available for this date.</p>
+                  )}
+                </div>
 
-              {/* Email Input */}
-              <div className="mb-8">
-                <label className="block text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.3em] mb-4">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="your@email.com"
-                  required
-                  className="w-full bg-transparent border-b-2 border-white/20 pb-3 px-0 text-white font-bold text-base placeholder:text-white/30 focus:outline-none focus:border-[#C69C2B] transition-colors"
-                />
-              </div>
-
-              {/* Submit Button */}
-              <div>
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-[#A33B32] hover:bg-[#A33B32]/90 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm font-black px-8 py-5 rounded-full uppercase tracking-widest transition-all"
+                  disabled={!selectedTime || !dateStr || isLoading}
+                  className="w-full rounded-full bg-[#A33B32] px-8 py-4 text-sm font-black uppercase tracking-widest text-white transition-all hover:bg-[#A33B32]/90 disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  {isSubmitting ? "Securing..." : "SECURE MY ACCESS"}
+                  Continue
                 </button>
+              </form>
+            ) : (
+              <div className="rounded-2xl bg-white p-5 text-slate-900 shadow-xl">
+                <GuestCheckoutForm
+                  summary={summary}
+                  restaurantSlug={restaurant.slug}
+                  date={dateStr}
+                  time={selectedTime ?? ""}
+                  party={partySize}
+                  onBack={() => setStep("details")}
+                  onSuccess={handleBookingSuccess}
+                />
               </div>
-            </form>
-            )}
-
-            {step === "thankyou" && (
-            <div className="p-8 flex flex-col justify-center min-h-[400px]">
-              <p className="text-white/80 text-base leading-relaxed mb-6 text-center max-w-md mx-auto">
-                Welcome to the family. We&apos;ve noted your interest in <span className="font-bold text-white">{restaurant.name}</span> and will notify you the moment our booking concierge goes live.
-              </p>
-              
-              {restaurantWebsite ? (
-                <p className="text-white/80 text-base leading-relaxed mb-8 text-center max-w-md mx-auto">
-                  In the meantime, you can explore their current menu here:{" "}
-                  <a
-                    href={restaurantWebsite}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#C69C2B] hover:text-[#C69C2B]/80 underline underline-offset-4 font-bold"
-                  >
-                    {restaurant.name}
-                  </a>
-                </p>
-              ) : (
-                <p className="text-white/60 text-sm leading-relaxed mb-8 text-center max-w-md mx-auto">
-                  We&apos;ll be in touch soon with exclusive access.
-                </p>
-              )}
-            </div>
             )}
           </div>
 
-          {/* Sankofa Branding Footer */}
-          <div className="border-t border-white/10 p-8 flex flex-col items-center gap-4">
-            <div className="relative h-12 w-12">
-              <Image
-                src="/logo.png"
-                alt="Sankofa"
-                fill
-                className="object-contain"
-                style={{ filter: "brightness(0) saturate(100%) invert(67%) sepia(95%) saturate(1352%) hue-rotate(5deg) brightness(102%) contrast(85%)" }}
-              />
+          <div className="flex flex-col items-center gap-3 border-t border-white/10 p-6">
+            <div className="relative h-10 w-10">
+              <Image src="/logo.png" alt="" fill className="object-contain opacity-80" />
             </div>
-            <p className="text-[10px] font-medium text-[#C69C2B] uppercase tracking-[0.2em] text-center">
+            <p className="text-center text-[10px] font-medium uppercase tracking-[0.2em] text-[#C69C2B]/80">
               Honoring the Past, Finding your Table
             </p>
           </div>
-
-          {/* Subtle Background Glow */}
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-blue-900/10 blur-[80px] pointer-events-none"></div>
         </div>
       </div>
     </>

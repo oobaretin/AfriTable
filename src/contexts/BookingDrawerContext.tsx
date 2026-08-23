@@ -1,37 +1,33 @@
 "use client";
 
 import * as React from "react";
-import type { RestaurantRow } from "@/components/restaurant/RestaurantCard";
+import type { OpenBookingDrawerOptions } from "@/lib/booking-drawer-types";
 
 type BookingDrawerContextType = {
-  openDrawer: (restaurant?: RestaurantRow) => void;
+  openDrawer: (options: OpenBookingDrawerOptions) => void;
   closeDrawer: () => void;
-  restaurant: RestaurantRow | null;
+  drawerState: OpenBookingDrawerOptions | null;
   isOpen: boolean;
 };
 
 const BookingDrawerContext = React.createContext<BookingDrawerContextType | undefined>(undefined);
 
 export function BookingDrawerProvider({ children }: { children: React.ReactNode }) {
-  const [restaurant, setRestaurant] = React.useState<RestaurantRow | null>(null);
+  const [drawerState, setDrawerState] = React.useState<OpenBookingDrawerOptions | null>(null);
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const openDrawer = React.useCallback((rest?: RestaurantRow) => {
-    // Store restaurant for potential future use, but modal doesn't need it currently
-    if (rest) {
-      setRestaurant(rest);
-    }
+  const openDrawer = React.useCallback((options: OpenBookingDrawerOptions) => {
+    setDrawerState(options);
     setIsOpen(true);
   }, []);
 
   const closeDrawer = React.useCallback(() => {
     setIsOpen(false);
-    // Clear restaurant after animation completes
-    setTimeout(() => setRestaurant(null), 300);
+    setTimeout(() => setDrawerState(null), 300);
   }, []);
 
   return (
-    <BookingDrawerContext.Provider value={{ openDrawer, closeDrawer, restaurant, isOpen }}>
+    <BookingDrawerContext.Provider value={{ openDrawer, closeDrawer, drawerState, isOpen }}>
       {children}
     </BookingDrawerContext.Provider>
   );

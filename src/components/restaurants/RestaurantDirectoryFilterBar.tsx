@@ -6,6 +6,8 @@ import { CategoryFilter } from "@/components/home/CategoryFilter";
 import { CityFilter } from "@/components/home/CityFilter";
 import { VibeFilter } from "@/components/home/VibeFilter";
 import { ZipCodeSearch } from "@/components/home/ZipCodeSearch";
+import { PriceFilter } from "@/components/home/PriceFilter";
+import { SortFilter } from "@/components/home/SortFilter";
 import { useRestaurantFiltersContext } from "@/contexts/restaurant-filters-context";
 
 function RestaurantNameSearch({
@@ -35,8 +37,18 @@ function RestaurantNameSearch({
 }
 
 function ActiveFilterSummary() {
-  const { filters, setCity, setCuisine, setZip, setVibe, setQ, clearFilters, hasActiveFilters } =
-    useRestaurantFiltersContext();
+  const {
+    filters,
+    setCity,
+    setCuisine,
+    setZip,
+    setVibe,
+    setQ,
+    setPrice,
+    setSort,
+    clearFilters,
+    hasActiveFilters,
+  } = useRestaurantFiltersContext();
 
   if (!hasActiveFilters) {
     return null;
@@ -58,6 +70,15 @@ function ActiveFilterSummary() {
   }
   if (filters.vibe !== "All") {
     pills.push({ label: filters.vibe, onClear: () => setVibe("All") });
+  }
+  if (filters.price != null) {
+    pills.push({
+      label: "$".repeat(filters.price),
+      onClear: () => setPrice(null),
+    });
+  }
+  if (filters.sort !== "default") {
+    pills.push({ label: `Sort: ${filters.sort}`, onClear: () => setSort("default") });
   }
   if (filters.q) {
     pills.push({ label: `"${filters.q}"`, onClear: () => setQ("") });
@@ -89,8 +110,18 @@ function ActiveFilterSummary() {
 }
 
 export function RestaurantDirectoryFilterBar() {
-  const { filters, setCity, setCuisine, setZip, setRadius, setVibe, setQ } =
-    useRestaurantFiltersContext();
+  const {
+    filters,
+    setCity,
+    setCuisine,
+    setZip,
+    setRadius,
+    setVibe,
+    setQ,
+    setPrice,
+    setSort,
+    zipSearchActive,
+  } = useRestaurantFiltersContext();
 
   const [nameQuery, setNameQuery] = React.useState(filters.q);
 
@@ -133,6 +164,15 @@ export function RestaurantDirectoryFilterBar() {
         <div>
           <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-white/40">Vibe</p>
           <VibeFilter selectedVibe={filters.vibe} onVibeChange={setVibe} />
+        </div>
+
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <PriceFilter activePrice={filters.price} setActivePrice={setPrice} />
+          <SortFilter
+            activeSort={filters.sort}
+            setActiveSort={setSort}
+            distanceAvailable={zipSearchActive}
+          />
         </div>
 
         <ActiveFilterSummary />

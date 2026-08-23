@@ -44,9 +44,9 @@ export function resolveBookingAction(
     return {
       mode: "request",
       label: "Request a table",
-      shortLabel: "Request a table",
-      ctaLabel: "Plan a visit →",
-      description: "Directory listing — call them, or send a preferred date and we’ll forward your request.",
+      shortLabel: "Request",
+      ctaLabel: "Request a table →",
+      description: "Directory listing — not instant booking. Call them or send a request and we’ll forward it.",
     };
   }
 
@@ -63,9 +63,9 @@ export function resolveBookingAction(
   return {
     mode: "request",
     label: "Request a table",
-    shortLabel: "Request a table",
-    ctaLabel: "Plan a visit →",
-    description: "Directory listing — send a preferred date and we’ll forward your request.",
+    shortLabel: "Request",
+    ctaLabel: "Request a table →",
+    description: "Directory listing — not instant booking. Send a preferred date and we’ll forward your request.",
   };
 }
 
@@ -73,9 +73,9 @@ export function resolveBookingAction(
 export const DEFAULT_CATALOG_BOOKING_ACTION: BookingAction = {
   mode: "request",
   label: "Request a table",
-  shortLabel: "Request a table",
-  ctaLabel: "Plan a visit →",
-  description: "Directory listing — call them, or send a preferred date and we’ll forward your request.",
+  shortLabel: "Request",
+  ctaLabel: "Request a table →",
+  description: "Directory listing — not instant booking. Send a request and we’ll forward it to the restaurant.",
 };
 
 export { isWeakSpecialty } from "@/lib/catalog-trust";

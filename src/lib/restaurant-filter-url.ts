@@ -1,6 +1,14 @@
 import { cityFromUrlToDisplay, normalizeCityForSearch } from "@/lib/hero-city";
 import type { VibeFilterOption } from "@/lib/restaurant-list-filters";
 
+export type RestaurantSortOption =
+  | "default"
+  | "rating"
+  | "name"
+  | "price-low"
+  | "price-high"
+  | "distance";
+
 export type RestaurantFilterState = {
   city: string;
   cuisine: string;
@@ -8,6 +16,8 @@ export type RestaurantFilterState = {
   radius: number;
   vibe: VibeFilterOption;
   q: string;
+  price: number | null;
+  sort: RestaurantSortOption;
 };
 
 export const DEFAULT_RESTAURANT_FILTERS: RestaurantFilterState = {
@@ -17,6 +27,8 @@ export const DEFAULT_RESTAURANT_FILTERS: RestaurantFilterState = {
   radius: 10,
   vibe: "All",
   q: "",
+  price: null,
+  sort: "default",
 };
 
 const VIBE_SLUGS: Record<string, VibeFilterOption> = {
@@ -65,8 +77,17 @@ export function parseRestaurantFiltersFromSearchParams(
   const radius = clampRadius(Number(searchParams.get("radius") || "10"));
   const vibe = parseVibe(searchParams.get("vibe"));
   const q = searchParams.get("q")?.trim() || "";
+  const priceRaw = searchParams.get("price");
+  const price =
+    priceRaw && Number.isFinite(Number(priceRaw)) ? Number(priceRaw) : null;
+  const sortRaw = searchParams.get("sort")?.trim() as RestaurantSortOption | undefined;
+  const sort: RestaurantSortOption =
+    sortRaw &&
+    ["default", "rating", "name", "price-low", "price-high", "distance"].includes(sortRaw)
+      ? sortRaw
+      : "default";
 
-  return { city, cuisine, zip, radius, vibe, q };
+  return { city, cuisine, zip, radius, vibe, q, price, sort };
 }
 
 export function buildRestaurantFilterSearchParams(
@@ -91,6 +112,12 @@ export function buildRestaurantFilterSearchParams(
   }
   if (filters.q) {
     params.set("q", filters.q);
+  }
+  if (filters.price != null) {
+    params.set("price", String(filters.price));
+  }
+  if (filters.sort !== "default") {
+    params.set("sort", filters.sort);
   }
 
   return params;

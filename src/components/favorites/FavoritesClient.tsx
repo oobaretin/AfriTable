@@ -12,6 +12,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Calendar } from "@/components/ui/calendar";
 import { addDays, format } from "date-fns";
 import { Select as SSelect, SelectContent as SContent, SelectItem as SItem, SelectTrigger as STrigger, SelectValue as SValue } from "@/components/ui/select";
+import { useBookingDrawer } from "@/contexts/BookingDrawerContext";
+import { formatRestaurantAddress } from "@/lib/booking-drawer-types";
 
 type FavoriteRow = {
   created_at: string;
@@ -97,7 +99,7 @@ export function FavoritesClient() {
             <div key={f.restaurant.id} className="relative">
               <RestaurantCard restaurant={f.restaurant} href={`/restaurants/${f.restaurant.slug}`} />
               <div className="mt-2 flex gap-2">
-                <QuickReserve restaurantSlug={f.restaurant.slug} />
+                <QuickReserve restaurant={f.restaurant} />
                 <Button variant="outline" onClick={() => void remove(f.restaurant.id)} type="button" className="w-full">
                   Remove
                 </Button>
@@ -110,13 +112,38 @@ export function FavoritesClient() {
   );
 }
 
-function QuickReserve({ restaurantSlug }: { restaurantSlug: string }) {
+function QuickReserve({
+  restaurant,
+}: {
+  restaurant: { id: string; slug: string; name: string; address?: unknown; phone?: string | null };
+}) {
+  const { openDrawer } = useBookingDrawer();
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   const [party, setParty] = React.useState("2");
   const [time, setTime] = React.useState("19:00");
+  const [open, setOpen] = React.useState(false);
+
+  function handleContinue() {
+    setOpen(false);
+    openDrawer({
+      restaurant: {
+        id: restaurant.id,
+        slug: restaurant.slug,
+        name: restaurant.name,
+        address: formatRestaurantAddress(restaurant.address) || undefined,
+        phone: restaurant.phone,
+      },
+      selection: {
+        date: date ? format(date, "yyyy-MM-dd") : format(new Date(), "yyyy-MM-dd"),
+        time,
+        party,
+      },
+      initialStep: "guest",
+    });
+  }
 
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button className="w-full" type="button">
           Quick Reserve
@@ -169,14 +196,8 @@ function QuickReserve({ restaurantSlug }: { restaurantSlug: string }) {
               </SSelect>
             </div>
           </div>
-          <Button asChild>
-            <Link
-              href={`/reservations/new?restaurant=${encodeURIComponent(restaurantSlug)}&date=${encodeURIComponent(
-                date ? format(date, "yyyy-MM-dd") : format(new Date(), "yyyy-MM-dd"),
-              )}&time=${encodeURIComponent(time)}&party=${encodeURIComponent(party)}`}
-            >
-              Continue
-            </Link>
+          <Button type="button" onClick={handleContinue}>
+            Continue
           </Button>
         </div>
       </DialogContent>
