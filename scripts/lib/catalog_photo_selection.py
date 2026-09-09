@@ -133,6 +133,16 @@ def place_title_matches(catalog_name: str, place_title: str | None) -> bool:
     return False
 
 
+def catalog_entry_matches_place(entry: dict[str, Any], place_title: str | None) -> bool:
+    """Match catalog name or optional search_aliases against a Google Maps title."""
+    if place_title_matches(str(entry.get("name") or ""), place_title):
+        return True
+    for alias in entry.get("search_aliases") or []:
+        if place_title_matches(str(alias), place_title):
+            return True
+    return False
+
+
 def place_title_score(catalog_name: str, place_title: str | None) -> int:
     title = str(place_title or "").strip()
     if not title or not place_title_matches(catalog_name, title):

@@ -321,13 +321,13 @@
   },
   {
     "id": "blaqhaus-atlanta",
-    "name": "Blaqhaus",
+    "name": "BlaqHaus ATL",
     "cuisine": "Southern-Caribbean",
     "region": "Caribbean",
     "price_range": "$$",
     "rating": 4.3,
-    "address": "1167 Joseph E. Boone Blvd NW, Atlanta, GA 30314",
-    "phone": "(470) 225-8941",
+    "address": "16 Atlanta St SE, Marietta, GA 30060",
+    "phone": "(678) 540-6039",
     "website": "https://blaqhaus.co",
     "social": {
       "instagram": "@blaqhaus_atl"
@@ -349,9 +349,18 @@
     "vibe_category": "Authentic Staples",
     "state": "GA",
     "google_search_url": "https://www.google.com/search?q=Blaqhaus%2C%201167%20Joseph%20E.%20Boone%20Blvd%20NW%2C%20Atlanta%2C%20GA%2030314",
-    "google_place_id": "ChIJRTRJIQoF9YgRXrOo7QVI2Rk",
+    "google_place_id": "ChIJRzAMqnIV9YgRJeovUF7M0Yk",
     "special_features": "known for Jerk Chicken & Waffles, Southern Style Oxtails, and Cajun Pasta; island spice and homestyle plates; jerk pit smoke and bold pepper.",
-    "chef_quote": "Jerk Chicken & Waffles tastes like the islands we left and the city we live in now\u2014bold spice, generous portions."
+    "chef_quote": "Jerk Chicken & Waffles tastes like the islands we left and the city we live in now\u2014bold spice, generous portions.",
+    "search_aliases": [
+      "Blaqhaus",
+      "BlaqHaus ATL"
+    ],
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWng-HVhgBm80lmADL7n36rxRrxojgOBjeiuX_wBSty7ha8JABoMoYC62b6jew2K8EjP9vLcS0QINODhuIyO4yFvpR0vJqxivDmS11VrJy1BxCCwqRGcHYO1jEn-rXC5NLEmuIIL=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlHA5jjk00Bz9p_bzmBeNcVwKKpeW0I-QXFaSeeNZfit1GIm1ueQsteW5katT4d99StwBXiSWAZe4-2uCb-_goNAncp6Iea4SLGhfL-5_8H8gttH-Z08HUsVIPIFX4UB4cVikDryA=w3000-h4000-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnPH593Czr3_jCjGxqbaWhtfTepJTu-tPS0YnmJgxQwJ5wSIqVX77jzyHPPXJl9alcS7WxnVRANFOxv4X3oR04vHKlNXtLOvXtBWiFLZuvYLyM8kDkaqJ4Y_4m0BEhyGzTKlzO9=w1816-h3792-k-no"
+    ]
   },
   {
     "id": "callaloo-kitchen",
@@ -704,10 +713,13 @@
     "vibe_category": "Authentic Staples",
     "state": "TX",
     "google_search_url": "https://www.google.com/search?q=Ponti%27s%20Ivorian%20Kitchen%2C%2012450%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077077",
-    "google_place_id": "ChIJS0WQrKrXQIYRHA_bNr_wcl0",
     "website": "https://www.instagram.com/pontiskitchen/",
     "special_features": "known for Grilled Fish with Atti\u00e9k\u00e9, Aloco (Fried Plantains), and Kedjenou (Slow-cooked Chicken); pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Grilled Fish with Atti\u00e9k\u00e9 is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Grilled Fish with Atti\u00e9k\u00e9 is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "search_aliases": [
+      "Ponti's Ivorian Kitchen",
+      "Ponti's Kitchen"
+    ]
   },
   {
     "id": "gold-coast-kitchen-chi",
@@ -748,13 +760,13 @@
   },
   {
     "id": "afrik-che-houston",
-    "name": "Afrik-CHe Kitchen",
+    "name": "Afrikiko Restaurant",
     "cuisine": "West African",
     "region": "West African",
     "price_range": "$",
     "rating": 4.6,
-    "address": "12030 Bissonnet St, Houston, TX 77099",
-    "phone": "(832) 617-8924",
+    "address": "9625 Bissonnet St, Houston, TX 77036",
+    "phone": "(713) 773-1400",
     "social": {
       "instagram": "@afrik_che_houston"
     },
@@ -774,9 +786,18 @@
     "state": "TX",
     "google_search_url": "https://www.google.com/search?q=Afrik-CHe%20Kitchen%2C%2012030%20Bissonnet%20St%2C%20Houston%2C%20TX%2077099",
     "website": "https://afrikikohouston.com",
-    "google_place_id": "ChIJSZVGdATdQIYRQ8kCwkyGbAM",
+    "google_place_id": "ChIJV5B8ranCQIYRW34aZ_L02J8",
     "special_features": "known for Assorted Meat Stew, Okra Soup, and Pounded Yam; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Assorted Meat Stew is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Assorted Meat Stew is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "search_aliases": [
+      "Afrik-CHe Kitchen",
+      "Afrikiko"
+    ],
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=bJ4nVZH40otXX76ODqbSow&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=181.87453&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlBvGZhwliOfpRvrS8tvqs7-RNy2iXq1Cxs8f77OOVx4HgJhbegaejj3PBhpqJOmF92tnEy55jGZROTf6wUcg3U_fRurKUWJ2FdrTK-R_ZPwu5rfVzbr2zcSvkMQ1OfhJUjpI6HDg=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnRLOv2IAzBt7JbJQ3gLqdlHl2vvrYKZgkqGRbMPV8OxDw4ErxoKxmSuSqWS4zEEHbOJbSDfWd7sNZ1od4aieK1B7nXLJPUnzx4FKTHSaVv7cdr8mEawYNvPEp15c9mBAF2_cNX6hrDN_8=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "kulan-cafe",
@@ -1212,7 +1233,7 @@
   },
   {
     "id": "amaweles-san-francisco",
-    "name": "Amawele's",
+    "name": "Amawele's South African Kitchen",
     "cuisine": "South African",
     "region": "South African",
     "price_range": "$$",
@@ -1231,11 +1252,14 @@
     },
     "google_search_url": "https://www.google.com/search?q=Amawele's%2C%20101%20Spear%20St%2C%20San%20Francisco%2C%20CA%2094105",
     "website": "https://amaweles.com",
-    "google_place_id": "ChIJE_x2VGSAhYARoXDSoUvUjkI",
     "our_story": "Amawele's brings South African flavors to San Francisco, CA\u2014braai grills, stews, and fusion plates from the southern tip of the continent.",
     "cultural_roots": "South African braai and township cooking: fire-grilled meats, chakalaka relish, and the multicultural spice of the Rainbow Nation.",
     "special_features": "South African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Signature South African Plate defines what we do at Amawele's\u2014traditional flavor, fresh ingredients, and pride in every plate."
+    "chef_quote": "Signature South African Plate defines what we do at Amawele's\u2014traditional flavor, fresh ingredients, and pride in every plate.",
+    "search_aliases": [
+      "Amawele's",
+      "Amawele's South African Kitchen"
+    ]
   },
   {
     "id": "demera-ethiopian-chicago",
@@ -1834,7 +1858,16 @@
     "our_story": "Lala's Eritrean brings Ethiopian injera platters and traditional wats to Oakland, CA\u2014a Habesha dining room for shared meals and coffee ceremony.",
     "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
     "special_features": "communal injera platters; traditional wats and tibs.",
-    "chef_quote": "Signature Eritrean Plate is why people gather here\u2014berbere, butter, and injera made to share from one platter."
+    "chef_quote": "Signature Eritrean Plate is why people gather here\u2014berbere, butter, and injera made to share from one platter.",
+    "search_aliases": [
+      "Cafe Eritrea D'Afrique",
+      "Lala's Restaurant"
+    ],
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkQCF7nZ4mRPdeq4y7sbYSsgpZslBuGpEY0tfPFWP3Us1je_R-fJVdb_1eo0PfKCz4YUeRZLr73GrZIvauhZt5xkYZfk5ZeRDfvTUdnWgklXZYEp6yWj64zAVAIX6XRTkdRJMgaVpthzuZ4=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn54b3HsOYTVnsOwFPTmjkinQtv5S6Vzw6Pab08Iw_4CHpTZ70ov-SB0Tj9HNgG4GLQBDN6GorkKpe8HI1G5eoaUuMv6HgCSAYrKCISFx0d6OBS4dQzL8qDMYaO5wEu8dHCgf4Z4aRTZHxj=w3072-h4080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlxoAS4z7V5Cd5lLTynAAYHo3o5LHiHF5Lww1LhXKsx7YSQbAHnBIAVptgjP1429Q3idsLltqXdYCVKbBT-3YjdF-DulXBa3AF4KOK_XQQZ0Jelcuj2wVIjp0WdkocdYEpllZZYs8TBr7Ah=w800-h800-k-no"
+    ]
   },
   {
     "id": "nash-riddim-spice",
@@ -1858,7 +1891,12 @@
     "our_story": "Riddim n' Spice keeps Nashville fed with Jamaican jerk, oxtail, and patty-shop soul\u2014island flavor with neighborhood warmth.",
     "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad.",
     "special_features": "island spice and homestyle plates; Caribbean comfort cooking.",
-    "chef_quote": "Signature Jamaican / Caribbean Plate carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot."
+    "chef_quote": "Signature Jamaican / Caribbean Plate carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkb1jDOGrn_hF-BESWIGFI9Z6hNjD2Zis8Zt3x4GCHgVyl_QMiPnLECm2GlH62272ZyCXm9DL5OrsYr5mgle66CPtuuTmk4WEiVFmndUga_kpNdEOIRNh5Pq-l44lGGFGvfkizGoJBsuTk_=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnZH1QeW-pWqETHQNGF7ZU8Tp5-aOHwzYNzE_NjokKHabLsAYuimLPzABiE3Cb441ZJaW_fFoKQcsjrgE5smQie95i9uo8tK40pLlDbdYz_EPX54CbUZWPQlE9AgX-MV1nwuFSJujkU0rI=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlWZsPWQUP8cWhUfa2iQpv-KCw_nBqq7-zRLCc7GiRSx3Gbky9YeO8zfCz4OtJyXPDhXUVQJXJLdBDpbUauIWx8J3NJjnQoeQuboVCDnoroPlGAc57CmvWTiJO-rGBpYZyxkZJf=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "hou-reggae-hut",
@@ -1891,7 +1929,12 @@
     "our_story": "Reggae Hut Cafe has been a Third Ward institution for decades\u2014brown stew fish, jerk chicken, and patties served with the easy warmth of a neighborhood Caribbean kitchen.",
     "cultural_roots": "Houston's Caribbean community on Almeda: Jamaican patty shops, stew pots, and reggae spirit\u2014the everyday dining room where island families gather after church and work.",
     "special_features": "Third Ward institution for decades; brown stew fish, jerk chicken, and Jamaican patties; easy neighborhood warmth.",
-    "chef_quote": "Brown stew fish the way Third Ward taught me\u2014patience in the pot, reggae in the air, love in the portion."
+    "chef_quote": "Brown stew fish the way Third Ward taught me\u2014patience in the pot, reggae in the air, love in the portion.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnKE6KRrJaga0e-UAVHtEI3OeEcSEeUdNMDeHA_ha1Ku5WQ5x8UwzIkjy5Wrw3x4QWNLtB_vzTxc1XMTl8-WVvEHfrqsbjbZfBt-TtnA1mzC4NaE6aZC8q7uTVQjU3FLo9zlEcA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnMvSfE-trQFAW-TZcHzJVFqmApPE1JK9XLvbFibhTa2LE9UmTnx1AW8FWXRoEsogYzriBjj659hriAm8bWz_-kWFZJMjrfdWXGTGjB015bUJar-8sCzDA02JPt5Eas1msOKsYD=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWny-1_BO_WghuCfopc1caktwC1KhMs7RbSz2AusAgiuDk4pCmoeZXeiea_oj4evHKMQooSIV6ldBe-HCnfgleN2IqU6E6XwQUDqWPhuNJuf1BnJi8CpbiJEPNnznGS9kb02hAob=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "jordyns-soul-cafe-houston",
@@ -1929,7 +1972,12 @@
     "google_search_url": "https://www.google.com/search?q=Jordyn%27s%20Soul%20Cafe%2C%204319%20Montrose%20Blvd%2C%20Houston%2C%20TX%2077006",
     "google_place_id": "ChIJg9UxZAC_QIYR0EloPJ_jL8Q",
     "special_features": "known for Jerk Chicken, Island Stews, and Weekend Brunch; island spice and homestyle plates in Montrose; jerk pit smoke and bold pepper.",
-    "chef_quote": "Jerk Chicken tastes like the islands we left and the city we live in now\u2014bold spice, generous portions."
+    "chef_quote": "Jerk Chicken tastes like the islands we left and the city we live in now\u2014bold spice, generous portions.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmFqw7tMhR3jL0rU0FOaLchlV_af70Qfjk53WEkD0MhJlexWl0uVbpju522_oLQ0WgxCcovGKf5iwDfBD1-vM-REp_j0-eLygZQBFZX_0MQGUItimKwRTQSqQZWC9k_btj0OY93l8E29XHo=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnBMG_Tv-ut5aYICm_j0omrgOHMh6LNw8MmiCJ44LRquw01NA2qeMSrnvMCIgyyEz4J2hUf8QuKgp7JzwadF1Y4yQU1PzukhbSP-tQ4r2gMATB7ScquujwcG1qT2Pxa8kX2BpcOIbwHs1WB=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlIgTO6pcb0875K1ixKrNaxCsEvbGJq2FrGOE8sVCHIyHNGu2kT8BdhdzUkHJ6ouY8NS7Mhs5mTFUaOx92a-NlLk5MgIYLwz-aezo2ku2uIqhaSJ4Mczi8ghcIYm23Evrprk4h3d7OBL7w=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "hou-caribbean-hotpot-grill",
@@ -1968,7 +2016,12 @@
     "our_story": "Caribbean Hotpot Grill keeps Houston fed with Jamaican jerk, oxtail, and patty-shop soul\u2014known for Curry Chicken & Stewed Beef\u2014island flavor with neighborhood warmth.",
     "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad.",
     "special_features": "known for Curry Chicken & Stewed Beef; island spice and homestyle plates; Caribbean comfort cooking.",
-    "chef_quote": "Curry Chicken & Stewed Beef carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot."
+    "chef_quote": "Curry Chicken & Stewed Beef carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk2WcJrO4opqUJSVMyRARaav1O2_a6_zBNY1zVeWz4ZhBfLzx03rpfJuyFcXNPZZcvZUxS2amZzCF4YBNph0KQlKhRuLcLtSgJLLXm3-wFaB96oybZkQJn-dD0jv56kVLCIrUs_vA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkieAOssfAog0q8h1MpGV1hEHaim9B0P9mGDBiJmaSRoPsXORSY6BSyOcd0ejL-VAabUFOnTx0dFaBrFxYK5Qvr1cuIvX0CYQJcYpNTQ79OQESLmpkMaC4VOUkGnKO5w2um5GZFng=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlxnj_xAh_xvg8EVUv50BMO2TBhkFYWSseEjji2G84KWULglTLBPRp5FHbTjxPSnwHJ71CB6SWgzKlv93NLNPYTLnp8iH1JMiB2zjD-LDz6MKuhq2VRRSKNXRksyrpV4RIj8hC6=w1000-h1000-c-n"
+    ]
   },
   {
     "social": {},
@@ -2003,7 +2056,12 @@
     "google_search_url": "https://www.google.com/search?q=Dakar%20Street%20Food%2C%202923%20Walnut%20Bend%20Ln%2C%20Houston%2C%20TX%2077042",
     "google_place_id": "ChIJ5XGosm3dQIYRG57mBLZ5zv4",
     "special_features": "known for Thieboudienne & Nem (Spring Rolls); pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Thieboudienne & Nem (Spring Rolls) is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Thieboudienne & Nem (Spring Rolls) is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmS4ib32pUls9zFfSiIH0hQWN6zQX01VZ0fzqqKRjW4J0W9dBpKwn0e6_CzfJ7K07qMxm2aQFYaC-5_58seS9hTYnC8TF_XyDYJmLbtVLGJ9nMtyzkreO6koe561-HGsdbV7dkajNNMrWR1=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn84JnM3GDU9TAYFnZyo5oYNaPDUkUsb3j8zmX8T1VQDMkhm8EzTqjoCcPGLgZejg6TmURNQor1_1ApQs-ZkvxL60g05WRQ7X1MbeX3-RzIWkHIGwHmm6ak6API8IbyHPpLzw45=w3024-h4032-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl8TkHAphb2jEZU6rninuaoaZWSwjwbkD8atxog43u8GEKzl1IsKSiaW6jbhk2AiJWkwWgUyEJSC34VnMJrV21p6BLqNWoJTaQadb_ceTtcbbiLPEGbQqxRNP9_F5DBGsLgo5s8XA=w2480-h3507-k-no"
+    ]
   },
   {
     "id": "atl-spice-house-midtown",
@@ -2035,7 +2093,12 @@
     "our_story": "Spice House Midtown brings Caribbean fusion energy to Atlanta's core\u2014jerk chicken pasta, rum cocktails, and bold island seasoning in a lively Midtown dining room.",
     "cultural_roots": "Caribbean fusion in the American South: jerk spice meets pasta, rum culture meets city nightlife, and island heat seasons Atlanta's dining scene.",
     "special_features": "signature Jerk Chicken Pasta; Caribbean Fusion chef-driven dining in Midtown; elevated dining room.",
-    "chef_quote": "Jerk Chicken Pasta tastes like the islands we left and the city we live in now\u2014bold spice, generous portions."
+    "chef_quote": "Jerk Chicken Pasta tastes like the islands we left and the city we live in now\u2014bold spice, generous portions.",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=KhtzO2CPLlnAL6bh6CCPfQ&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=56.25669&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnGrvf9ALpTrwZd8X4f5NdkYgEmN6hBDAOO3veRTlWRsRNA_b2EdGOk3DZuwTtETh78Jru09QKdQwnpYIcMuAfSKtQJcpTlBEjiVdGUcRVvDR_njncA8YuTOhUY2MKDXXPAb7LXKmP6KOg=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkHRFCQe5lHvhUVy3UkUuq-WBFk8k8XiFt6G5MP6PGXBF-7flniawXoVD7CU-kbM8aHG7XYvV29ZPSXmm2fBhPAYpqOMQvsNZSmEuA2ND8Su6MesYfrGIK4lpEJ2obKl79xaqiC=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "nyc-jasmines-caribbean",
@@ -2065,7 +2128,12 @@
     "our_story": "Jasmine's Caribbean Cuisine turns Hell's Kitchen into a tropical escape\u2014curry shrimp, red snapper escovitch, and island plates that bring warmth to a Manhattan winter.",
     "cultural_roots": "Pan-Caribbean flavors from Jamaica to Trinidad: curry, coconut, scotch bonnet, and the diaspora kitchens that season New York's restaurant scene.",
     "special_features": "known for Curry Shrimp & Red Snapper; island spice and homestyle plates in Hell's Kitchen; Caribbean comfort cooking.",
-    "chef_quote": "Curry Shrimp & Red Snapper tastes like the islands we left and the city we live in now\u2014bold spice, generous portions."
+    "chef_quote": "Curry Shrimp & Red Snapper tastes like the islands we left and the city we live in now\u2014bold spice, generous portions.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk402WjQBL5LEGNNWT2al6nkiGvbfi2IjYDSobA3EtDj2JC7nZ6mzAaAjnOs1fE2Sexk1pydDaIjYI9wS4Sy6ak9CQJpvOW5w7u3mOB_ELu6FHPbg8uW5JxQ4kXKo4I9kURcmcOWg=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmgEjeBQrpSs4tTXhJGmH3Vwhz4YpD4fU8IoUA_1mhiMPhNkiHYV6CH-OPXNfWPY9gpTV3d-ECi75xbgMuNFCvQx4KWnG8RujjGpDzjP67LIsmiqTPeyN29kAjtf4medC7dszRZkEPidqbN=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWka_IIyHBcSlfQAw2InjgFg9QesRW_o9NKF9P3mHm_dKz2ImwctEWN3n7juT7VoJyPeWpLqUP4_ksfUQrTwoQiNZ4PqbTu25j-4Fwgm2vqEk1n_Oj54c5pddv54xRGvNTFpsvc5UvDP-R3a=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "chi-garifuna-flava",
@@ -2099,7 +2167,12 @@
     "our_story": "Garifuna Flava is a family-owned Marquette Park gem\u2014Belizean stew chicken, hudut, and Garifuna recipes passed down through generations on Chicago's South Side.",
     "cultural_roots": "Garifuna heritage: Afro-Indigenous cuisine from Belize and Honduras\u2014coconut stews, cassava, and the coastal foodways of Central America's African diaspora.",
     "special_features": "known for Belizean Stew Chicken; island spice and homestyle plates in Marquette Park; Caribbean comfort cooking.",
-    "chef_quote": "Belizean Stew Chicken tastes like the islands we left and the city we live in now\u2014bold spice, generous portions."
+    "chef_quote": "Belizean Stew Chicken tastes like the islands we left and the city we live in now\u2014bold spice, generous portions.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmDcd0aCdqzr7adumltdI2Wi-Psi-4P9uWg4XiO1AxP82f1Bw_XlHsLQvMjJgmbPQs-ZLxlA0fALiJ2lO9eEEXMm7FhQiPoP2Q_gVKA7ugGzK0YEVBO1H5yVdTQQ8pPTfDvecmbEdD80xo5=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnH97q9Xml1aR054e_had8vyv6StQJwiOdVqJI7URZyRQmut9VnNdKtqhdE5gMrMEWCNqKX8xfbpfd8I2M-y1onxS4P0zt6YawO77_CdbofI_hKjzLf1zzJbeF5hiMEBhUG4o300S0hR_U=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlvcs6rg_LbEGtE5sqjWl6HoU9ZLsxhE7sBhF4hfdcd0_MOFP4HE0sO0tDWAfmvNwFqEg4EGkM8MtJgZw4hDRyb7ps1aKRc2vTlMNnBjehJkvtvzQuyWdSO2bfmmQjaz-Z2QDj1=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "dc-st-james",
@@ -2134,7 +2207,12 @@
     "our_story": "St. James brings modern Caribbean fine dining to U Street\u2014callaloo and crab, rum cocktails, and an elevated room that matches DC's cosmopolitan Caribbean spirit.",
     "cultural_roots": "Modern Caribbean cuisine: callaloo greens, island seafood, and the fusion energy of Caribbean chefs reimagining tradition for a capital-city audience.",
     "special_features": "signature Callaloo & Crab; Modern Caribbean chef-driven dining in U Street / 14th St; elevated dining room.",
-    "chef_quote": "Callaloo & Crab tastes like the islands we left and the city we live in now\u2014bold spice, generous portions."
+    "chef_quote": "Callaloo & Crab tastes like the islands we left and the city we live in now\u2014bold spice, generous portions.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnIXCd_Pqg2Clsuz3uvqbmE2aFeSc_TQ02UGUYIC5jxv08Kr1xsIM4YCFLxu24Jb7Tm15EYkXcOGlIEjwI6xyw9fGTwl8z8d0r9bzh5RroQDtt4-ioX6h1ppr_Oz_ldhcvaP6R1HQ=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlBZXmFTUA7laU8Z70V4PqwlpLDgbT9zgI_Gnz66v564C1v5Bq5sW9uHxkh9oG11LCDVsYTeLXGjgMVPtuopGTNlgJbspVN-gAdB5ZTJebFeOXTWvP9o4Q3Y9Xn8emI862WHgWIVgqR_yl5=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl5o7y7_-PKA7oIpJ2daz2ti9eTJ5eYBAz4BXndI-6x8hd7l3tDguSpITY9IIwT7B-0kHziZYP2SX1S5XKo4Fj4yFXd7SaPYVl_RQAz-9Zi4phzm1Tmn7ObF9mPUkvcz_-RxBKEZw=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "la-dulans-crenshaw",
@@ -2169,7 +2247,12 @@
     "our_story": "Dulan's on Crenshaw serves soul food and Southern comfort in Hyde Park, Los Angeles\u2014known for Smothered Chicken\u2014slow-cooked plates and church-supper warmth.",
     "cultural_roots": "African American soul food: slow braises, greens, cornbread, and the Southern kitchen traditions of the Black diaspora.",
     "special_features": "known for Smothered Chicken; Soul food and Southern comfort in Hyde Park; slow-cooked plates and generous portions.",
-    "chef_quote": "Smothered Chicken is Sunday dinner at Dulan's on Crenshaw\u2014slow-cooked, seasoned deep, and meant to be shared."
+    "chef_quote": "Smothered Chicken is Sunday dinner at Dulan's on Crenshaw\u2014slow-cooked, seasoned deep, and meant to be shared.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWktLa2L1J8VjcHuKhxAygK2aG8OIjIJR6oGuhkv8-aVHlay-SNfi-klELeZc1L_dp24wosqUuuCAmOTJjrFBQDhJKNBJpjggf6FQwqUdQ2JW-bdgVEK6RFRoIz6dOxG87zKlKeq=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlDUE26fhHH6cVmYmNqPFPtLH6WEW6ZkSivbbn0y0AW6cL2M1yCZDQDFhwILDEQi-BBqowZMP9ITtSOOaKe1IBoHaEsZ8PwM0CY2GlE37XgEe2rJu64hSlDaBE_Iu-_AfuNZc8NY2bO0Udy=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkQxwPhf24NVb91umLNa02_DZLMal-XzY0mOc2IfMBkx9tP2IpA6Dw2wbvqOj7tFZkdGDV4vj8pFr2LI-6ECHFkYZen0nwNuHUcSNJu8COu4nHo6Y1431gPGTg7onjvDnEbi5uC=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "mia-chef-creole",
@@ -2213,7 +2296,12 @@
     "our_story": "Chef Creole has served Little Haiti since 1992\u2014griot, pikliz, fried snapper, and generous Creole portions across multiple Miami locations, keeping Haitian cooking accessible and loud with flavor.",
     "cultural_roots": "Haitian-Creole kitchen culture: citrus-marinated griot, fermented pikliz, epis seasoning, and the seafood traditions of Port-au-Prince by way of Miami.",
     "special_features": "known for Griot & Pikliz; island spice and homestyle plates in Little Haiti; Caribbean comfort cooking.",
-    "chef_quote": "Griot & Pikliz is pure Port-au-Prince memory\u2014citrus, epis, and the crunch that makes griot unforgettable."
+    "chef_quote": "Griot & Pikliz is pure Port-au-Prince memory\u2014citrus, epis, and the crunch that makes griot unforgettable.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl-r6NIEkswim8Dv-ndgbJmDALKDHjTF6EVw5fKq-Ykf3YzBfSq226Oi5De-bqj3fGzH7mUXaMUtPIc4Y9ls_-7HX3kI6yRFu9CyQgK9Mo9WBxzBsZJjZ4vVRtaBoQEMYbOxJ5xjA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmhb6ZkkNyOEi58ogMF-K8ItKeBylh2j4fpv4GwIxj_t25jQqLoJI0rsSU9JM9LBX7i3y9KVGg4ijn3FUk-N6SgYc0bcdJYYPy65ZGsCgWOne_Pz4CRQfybc3xh3hvs-wp_8WvdNB9DuOo=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnwAsF4cwuZLS2AGw1HY9SWmVMzvCvY2ieMfQNiHlQSQyguRiqcFrzrrKsmB7KZVm22QxZqdw0OYzJHad4I5rL-5etcNTR9yOLJe5lnxIOs9_CHfhOUqus30IokI_XwYZK5NOdiwQ=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "chef-creole-north-miami-dixie",
@@ -2249,7 +2337,12 @@
     "our_story": "Chef Creole (North Miami \u2013 Dixie Hwy) serves Haitian cooking in North Miami, North Miami\u2014griot, rice-and-beans, and Creole spice in a neighborhood kitchen built for the diaspora.",
     "cultural_roots": "Haitian-Creole traditions: epis seasoning, citrus-marinated griot, and the bakery-and-kitchen culture of Port-au-Prince.",
     "special_features": "known for Griot & Pikliz, Fried Snapper, and Oxtail; island spice and homestyle plates in North Miami; Caribbean comfort cooking.",
-    "chef_quote": "Griot & Pikliz is pure Port-au-Prince memory\u2014citrus, epis, and the crunch that makes griot unforgettable."
+    "chef_quote": "Griot & Pikliz is pure Port-au-Prince memory\u2014citrus, epis, and the crunch that makes griot unforgettable.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlNQHkl-ZlaUjdFqt0F2tg0J9AYcm7Cbh-JtL7GAkP6iIRWJ4fgSI2Xsf4Uogqfiw2e4lkqFTtTtPfT9mAKMQW9OrIiwSIOKg37yRY3bzWCWHx7877lA-b3yasoj_EWsc0ip09g=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnUbPxVU1yK2SGZnNmjyAK8z0L33qrHXXdDvOxhTzhezeg3Nga4gyyQQgQGMWUDIXTYle7rPHfIS_egEGbfajqC-FzSasGRdW5MNLYCoGW_o_WC2OBtgp0WGJwGzLj1kU7IrdT_x5_GphIZ=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmJkY6kr6CuADDJWlh11LyShv_kGbbtZerROdT6vwbwzWJFNGTn4adAPwyRVDdwOaVDM7C-bjxK5Q2Unnu_BfAG_J87YOwnqytLZI5RAhRq2JjVsFVa2rJelGAqfmxqFIFrPiq37w=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "chef-creole-north-miami-7th-ave",
@@ -2327,7 +2420,12 @@
     "our_story": "Chef Creole (Miami Gardens) serves Haitian cooking in Miami Gardens, Miami Gardens\u2014griot, rice-and-beans, and Creole spice in a neighborhood kitchen built for the diaspora.",
     "cultural_roots": "Haitian-Creole traditions: epis seasoning, citrus-marinated griot, and the bakery-and-kitchen culture of Port-au-Prince.",
     "special_features": "known for Griot & Pikliz, Fried Snapper, and Oxtail; island spice and homestyle plates in Miami Gardens; Caribbean comfort cooking.",
-    "chef_quote": "Griot & Pikliz is pure Port-au-Prince memory\u2014citrus, epis, and the crunch that makes griot unforgettable."
+    "chef_quote": "Griot & Pikliz is pure Port-au-Prince memory\u2014citrus, epis, and the crunch that makes griot unforgettable.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm8NekpXKRRjwsmqVOKMm6nWr6yunJvhsbH49LOpuUYKEeJkx_F3pJpUh4a4ob6VQI6Df6VKFf0N0iS7HfspBKaz1pgidcPKRL1zNuNktHi6fNl3EPWAYdYsCx1Dx7Hqh_bN-D2=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnQSHr_64GDjooVkHluQzY1W9GNMCYyjG2Gp87x2BMTtPmb6-9xPm0qLDhrF85UihfjQSPuEz-st2R6FkUgHmKenMBN5JmNPWhuRynaY8yxxkAvLpvkWCZBQNl0kmO8r5L2PGjhKXX03Tgt=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnh51g88uRi9o5gy-2VNVqykgzvvAvTwDNjoH8Rr9edqtWxjeGVrYiIDWqOhactVHYZNAhtF6w-nEjXKtlq-ntUxBFhPdw7BnBA7wXy4TN75qtfVyK3Jjny2XxYlA4XuaMAnxcvWg=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "mia-red-rooster-overtown",
@@ -2369,7 +2467,12 @@
     "our_story": "Marcus Samuelsson's Red Rooster Overtown anchors Historic Overtown with art, music, and plates that honor Black American and Caribbean culinary history\u2014from yardbird to coconut-smoked oxtails.",
     "cultural_roots": "Overtown's legacy as a Black cultural capital meets Afro-Caribbean and Southern traditions: soul, jazz, and the Shrine nights that keep the neighborhood's spirit alive.",
     "special_features": "Historic Overtown dining room; live music and art; Marcus Samuelsson's yardbird, gumbo, and coconut-smoked oxtails.",
-    "chef_quote": "Overtown raised me as a chef\u2014this kitchen honors that history in every yardbird, every gumbo pot, every song night."
+    "chef_quote": "Overtown raised me as a chef\u2014this kitchen honors that history in every yardbird, every gumbo pot, every song night.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkg32fPqmqxJSoE5PIG_TwBy7g5xkhBI9uJ3knNLC-mKgxWJ0TK055vS6XDiFxCSXEGHYc0DiD2-TE8xmio8DnkZ0p99ytwHLad4bVw0OARiDVrhraVKDlONdwLXkd_Cj-yAF2xIQ=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkWKHkAWUmuvbMB9RHNIfpGDnovVxpJbE8yZwYQXjm6KFmhjAIQEzHTxHuUwzv44ebi0IvQXn9evFjk4y6rwTVIUkf6zl649MVjpBEg8NBjwN0sOYNxauWXm0piyOi0Q8sSEP9_gL-lAOOq=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl7C70oZewEvnE5N7TLrP8ooBApK_QtWyahNy354mgpS6sJMMPsuKQp91uxH6YnELNCMp_YFZ0jmAIm1WKE8Hoq1pzRvgGvD9QBVzRXkuqd2G3LJ0hRXxOAxjzMQOXr4umK85jC=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "baobab-fare-detroit",
@@ -2402,7 +2505,12 @@
     "our_story": "Hamissi Mamba and Nadia Nijimbere's Baobab Fare turned New Center into Detroit's Burundian dining destination\u2014Kuku Na Mali, heartfelt hospitality, and James Beard recognition.",
     "cultural_roots": "Burundian home cooking: spinach stews, plantains, and the East African table traditions the siblings brought from Bujumbura to Michigan.",
     "special_features": "James Beard-honored Burundian cooking; New Center neighborhood anchor; Kuku Na Mali and family hospitality.",
-    "chef_quote": "Kuku Na Mali is home on a plate\u2014spinach, chicken, and the Burundian warmth we brought to New Center."
+    "chef_quote": "Kuku Na Mali is home on a plate\u2014spinach, chicken, and the Burundian warmth we brought to New Center.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm5BaSkGK7dmEnNIktqOmvLTJ-2dzVPtyXP0Ycz6fPtDumlmE_Bv5Ta6pTc8ryjYijCA1OHX2WJUqWR3fiEDk67VG2dtxPd7sM-T6hJBcpkNrM2kfJH66uWbRt4RLptVB5ysNhbUw=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnvNuEvqcmymP6EeGUg6c41pGD0IB3CRFMpD3fPX4l443d5irGeFcCpo8K9eyyR9OIVYypCnSSJPkaHlSGL1d2ncUkeUksAqgwvzp8B7CjmTeikXxusrPpsm_7kJUUUIVJrJ-VFpMMl9chW=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlpZ_CCr8LYQlH5rSF1cAeQf9s1br6VSN2sdl1fSh0l3dzCx8oPyV3lrFRzdzmtd2tYSjeXNUP0QGwhwVfwTeVWKnQ2vCqJ3F0FXXPOaazae3NHEIH23Pvm03GYb081IYVOs3Fij21dtDkw=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "lucilles-houston",
@@ -2437,7 +2545,12 @@
     "our_story": "Chef Chris Williams named Lucille's for his great-grandmother, turning a Museum District bungalow into one of Houston's most celebrated Southern fine-dining rooms\u2014chili biscuits, yardbird, and history on every plate.",
     "cultural_roots": "Texas Southern cooking with Black American heritage at its center: comfort food elevated through technique, family memory, and Gulf Coast ingredients.",
     "special_features": "signature Chili Biscuits & Yardbird; Southern / Fine Dining chef-driven dining in Museum District; elevated dining room.",
-    "chef_quote": "Chili Biscuits & Yardbird is Sunday dinner at Lucille's\u2014slow-cooked, seasoned deep, and meant to be shared."
+    "chef_quote": "Chili Biscuits & Yardbird is Sunday dinner at Lucille's\u2014slow-cooked, seasoned deep, and meant to be shared.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmKUuYHM_1oJp28M2A3ndi3y-FStNevMps3Kh206tltluISyoEnE3Zpsh-I3KOx93Chcf2iSkYpCEmJzRp434-rcYaXeZEkHLIkegqM4SdL9F-pMBGNlvhaPr96K6V948XCDW_y=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmkBBLnoso3LQ9aZI5ArFHeDPMKz-Xhbq3Fkm5Q_CbyuC3O9zd-P3sJNnJw5yAmwGUjRTjMgpMAv8e8qG3FKH3P67ZbBF7ESmb5cqrJ_lPkQY2yOCndnRVAKEauYRh8Ws_keePwEUUNUto=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkJPhbbJwK5lRrmqe4mggximvjZq6Hpf8hbU9qP382DvL_vMgakYQCjgXyxYAACqvZQcXQQQNIt4VUr0ABkPgW0Xr1d0Wv94Al7Hx2gs209IAmp77wD9B8ufAJGLhR5T95zcxRM=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "chi-ja-grill-hyde-park",
@@ -2470,7 +2583,12 @@
     "our_story": "Ja' Grill Hyde Park brings upscale Jamaican energy to Chicago's South Side\u2014curry goat, rum punch, and Caribbean plates in a dining room that matches Hyde Park's cosmopolitan spirit.",
     "cultural_roots": "Jamaican yard-food elevated: curry goat slow-cooked, rum culture, and the island spice that Chicago's Caribbean community has seasoned for generations.",
     "special_features": "signature Curry Goat & Ja' Rum Punch; Jamaican chef-driven dining in Hyde Park; elevated dining room.",
-    "chef_quote": "Curry Goat & Ja' Rum Punch carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot."
+    "chef_quote": "Curry Goat & Ja' Rum Punch carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmNPaG_XXbVXTF2NHci8xXRcemn5XRhd8nl0tQfeYY3ZVM1fC_z4d_wSBklvKbYGILwjRbYsXtV9zu520xC4j2cawWEWYUO3RJhlhGkLKDy0j2tvMRYWNVAdd6mBzauZZ0IE1U=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmq_1jJJfjY6fM9OI56tftbCWe3dpSaqdEP2LN-CujpRplIBD9XKGHHOPpwh_MFRhiF9bfFuNmpG1uV3-I1S13bkEt0gD1hAJp8crJDFoZG24zO6QEdtdTyrCls9c26kCsUgH11=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlQ4TbD-dM1swiExtWndZ7wf5uO7a3R_JGKbOa35bYPkhcFcI0ocaRJznXptBaMMKXs2Js1ehNwZx-YtyO1qApPoQR3QrbBToRG1mHt1s1CFM5vJBqXw1Vti60f1Wzprj9kkrC1=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "atl-irie-mon-cafe",
@@ -2504,7 +2622,12 @@
     "our_story": "Irie Mon Cafe keeps Atlanta fed with Jamaican jerk, oxtail, and patty-shop soul\u2014known for Tender Oxtail\u2014island flavor with neighborhood warmth.",
     "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad.",
     "special_features": "known for Tender Oxtail; island spice and homestyle plates in Buckhead; Caribbean comfort cooking.",
-    "chef_quote": "Tender Oxtail carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot."
+    "chef_quote": "Tender Oxtail carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkfb_XMMeNKzeWov-ExTe7HispPiuGUy3TV8jH15s00cYYqALLcMKCcrO9gXrJdCSIgJur20RPxOVcGK3eOE2vENsBUA9udPf146mgpZ-S3vRZGSpk3RkC01rA4KGEAX5EzQFth=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWneXGwuOjK3uXTgRngwM8c9f7y-2c0jlkPM4Twxf7N6c99VPOKUNjNaZfizPvr1gUn-nzpTySamyLFj6y3G8VT7EINoOWDEdj4XxNiPfdEIGKaMt9VLnUCXMgZFWjGmqO1N5_gOn3Y2tQ2-=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk_Za0RzG3xeA36VVdDEMXOyxh3bcTGiR_CgoG57VO_dQEX1CaQVp3TkaslyKxwyoSMXH0BntBOPbrphWMwpfhzd6aGpzNibf7noIpYTpP1oFjVSmdUORoKJTm8Sp9sGgh-G2D7p4-Dlxha=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "d-gon-washington",
@@ -2547,7 +2670,12 @@
     "our_story": "D\u014dgon at The Wharf brings Afro-Caribbean fine dining to the Potomac waterfront\u2014an elegant room where Chesapeake ingredients meet West Indian spice and technique.",
     "cultural_roots": "Named for the historic Dogon heritage, the menu honors African and Caribbean culinary lineages while celebrating Washington's role as a global diaspora capital.",
     "special_features": "Potomac waterfront fine dining; Michelin-recognized Afro-Caribbean plates; elegant Wharf setting with Chesapeake ingredients.",
-    "chef_quote": "We built this menu around the Potomac\u2014Chesapeake catch, West Indian spice, and the elegance a Wharf dinner deserves."
+    "chef_quote": "We built this menu around the Potomac\u2014Chesapeake catch, West Indian spice, and the elegance a Wharf dinner deserves.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnbhw_yp_pFc7fYUyOPjYjGiM-ZFWtEAIElM14C9FPJXXBu_DHuAfh81HPBVBUUFYQANwIw3nCPfZrdlNgp2FkJJrzZDnkDGOj0AZWbmtVqTwlZmDe3VVw7nbaeRpyr7YfrQsB5SgT-Kdkv=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmdDfZnw3FCjTBVaNE0bJmbmW7zwNDGlXyifOoeB5_UQkFuuIIWPGwEKNe1t6WSe73jYd9NuRRBGewqxxgt8MOlBniLUSvryWeGfmedljtEuGvTaoenb8zA1A4FEsR9o3jYQY8ziAb3zU9Y=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnKaLeTk4d7FiKkil32yYWBjs0xI_wziP_hssO949DkKpMERElRc76gsobTcrc2DFQGFIe00eCXvPmd6KvpTz_3wG3LZ0v_1W6862QWEMDwcg7z7Lj8RdDjUe458OMV5g6AErHO=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "nola-dakar",
@@ -2586,7 +2714,12 @@
     "our_story": "Chef Serigne Mbaye's Dakar NOLA traces a tasting menu from Senegal to Louisiana\u2014one seating, one narrative, showing how West African food shaped Creole cuisine.",
     "cultural_roots": "The Senegalese thieboudienne lineage runs through New Orleans gumbo pots: rice, fish, okra, and spice carried across the Atlantic and reborn on Magazine Street.",
     "special_features": "One-seating tasting menu; Senegalese-to-Creole narrative; Magazine Street destination dinner.",
-    "chef_quote": "One seating, one story\u2014from thieboudienne memory to Louisiana gumbo logic on a single progression of plates."
+    "chef_quote": "One seating, one story\u2014from thieboudienne memory to Louisiana gumbo logic on a single progression of plates.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn4WlSMhZbraPnF5p6dUvYIxSzItoBQVyfhNFgUj_mGcNA2vvWdF_RJWcZLUtkLzGijy0OBI5jqNZOjKAc-a0RHJ3Mi_l_A_L3AZf6pLaYtDVarE81_AH-8n0l85RUddJAEauP4vCRSrn05=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmroWvROUOygljw1DfJIIjp2Z380Gw0ByioM8f13sBYsYXdhrBCgkSrbVtJpKHjE8e3ElcaBvOou6MAIOOqKCaSD1x84DwNQwd1ITNqDlz9y9P69YPhO4dhLg5-GlTDev8lgkdLifdfixjP=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlIhtetyNpPAULoQ8uhI3IYrQgEdiUBeJ1xdZJFS4HAt5ixQlElKnog2ORErNJrO_Sy7Hqqnn4rIhg-EanwF-TBAzApTtIRdVGbQOGzK1u-3EKRKJCmqwo6Le1-WBqApIXImGIH=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "sa-jerk-shack",
@@ -2616,7 +2749,12 @@
     "our_story": "Chef Nicola Blaque brought The Jerk Shack to San Antonio to prove Jamaican cooking belongs in the fine-dining conversation\u2014smoke, spice, and patty-shop soul with Michelin recognition.",
     "cultural_roots": "Jerk pit culture from Jamaica: pimento, scotch bonnet, and slow smoke over pimento wood\u2014the flavors that define island cookouts and corner shops alike.",
     "special_features": "San Antonio jerk pit elevated; Michelin-recognized smoke and spice; patty-shop soul with fine-dining polish.",
-    "chef_quote": "Forty-eight hours of seasoning, pimento wood smoke\u2014jerk isn't fast food, it's a love letter to Kingston."
+    "chef_quote": "Forty-eight hours of seasoning, pimento wood smoke\u2014jerk isn't fast food, it's a love letter to Kingston.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkOj48b2EvHQ5oXbv5IkJHJ8I5k8Pt_gt2ksLY8Lve5S4R8BztumkFdMi1t2HxB-gFAiB3CPXYaEmcYRiKg2QWgHhGuBuw1TmLpkDMw5uCX2T5awBN9pFrvBdiTuEFxjQV9P8g=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmIDttHFp3AaKDTkPKCUUcTigjL7Dg0X8S3Q590N9-KfK3DWtPB1sQ0w9SKixjw5pnXR67GvFpZqvTGGCgNeXOCTDZ82cVRfved0n4lfo5wJkdr01SzM9TtQqSqZU6mApKRnIyvqliByU2U=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm12bYTqyE9oD4MJDvJG6_DpniLSzOeGCIve4psJ5NHtnmAryJZKQ3uTrDOoJK9lFRM7uhvz8hqJEP_i88g2ZE_Knels6hY3bn8EncQT_FYInythdAhjHnneu71Ab6_eZtc2d-yu4dNPw=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "kann-portland",
@@ -2659,7 +2797,12 @@
     "our_story": "Chef Gregory Gourdet's Kann is a wood-fired Haitian restaurant that put Portland on the global map\u2014open kitchen, cane sugar glaze, and the pride of a James Beard-winning room.",
     "cultural_roots": "Haitian cuisine at the hearth: wood fire, epis, and island produce; Kann honors Ayiti's culinary independence with every flame-kissed plate.",
     "special_features": "Wood-fired open kitchen; James Beard-winning Haitian hearth cooking; cane sugar glaze and Portland destination status.",
-    "chef_quote": "The wood fire is the heart of this kitchen\u2014Haitian flavor doesn't happen without flame, patience, and pride."
+    "chef_quote": "The wood fire is the heart of this kitchen\u2014Haitian flavor doesn't happen without flame, patience, and pride.",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=3S-jAcyuf2BJL3Zxpx6NVA&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=180.7982&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnH6NgKmPwb6cS2zoOS6ZKJbP4liRv88lc1JtfxOM5jlpWcMTNh2_YRNG0JFDlO5LWMu51I-evJWXxLA639cYudN-ZeAUPD1JWxZ3KCYBHQEHLezG6lyACeYNr7nKGxa35ekWdTe1ARTpa4=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmJ5BWHERN0VcYFWXG9K8nbw4OQ1f7XwDRELP9K9w6pE_-VZYuf9J9JG0OsurwJT6BXAcv_n95HUO50hY6ZOrl5FL_apuK0rlktJymIAkkd5IL6w3CkspbR0hdgz0AWrZbtzJA68neezors=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "atx-fine-001",
@@ -2697,7 +2840,12 @@
     "our_story": "Chef Kevin Falc\u00f3n's Canje takes its name from Guyana's national bird, serving a love letter to the Caribbean\u2014from pepperpot to suya\u2014in a lush East Austin dining room.",
     "cultural_roots": "A pan-Caribbean lens on Guyana, Jamaica, and Puerto Rico: wood fire, tropical produce, and the spice traditions that traveled with island communities to Texas.",
     "special_features": "East Austin tasting-room energy; Guyana-inspired menu named for the national bird; Michelin Guide recognition.",
-    "chef_quote": "Canje is named for Guyana's national bird, and every plate is meant to taste like the Caribbean forest\u2014bright, lush, and unforgettable."
+    "chef_quote": "Canje is named for Guyana's national bird, and every plate is meant to taste like the Caribbean forest\u2014bright, lush, and unforgettable.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkLng6QDyawxIqtU-SbYMy14CZmlRBdKBUmIucWIEYfcrpe7KhkD-INd3qqcKVvTQ0CYTkMu76nUNB8GjFIkV1npygeFAQS3TQzkDk72-R8Tub1TOSzA46oZika4sg9CoHQDbtH=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl3DWxVz9zl24RDzNPCq1RtWLvzinLyxHTV5qa5oKS5XJLC11e-_0dFCuYZwaiW8PbQlnik4KPxoyj1weejGfnhGcYKlg1bmh70bnjZipPPozsshzWnVurMnM1Vap2SWj9YLRScFlnk2Dx_=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmui4b4FkSUBWTrvoSoqqhnwCb8vqhgIABBSdBjDK_pfc2mP5OTvRCl2eeexQFzrtwgmIMjU3LzFv1cSTuvusfWoGIGYbM2xZ8eVzvzz19OQECspkolnC3v1rR8pvuIF3eotSV44OYIvp0=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "atx-fine-002",
@@ -2732,7 +2880,11 @@
     "our_story": "Ember Kitchen is Austin live-fire theater\u2014a Josper oven overlooking Lady Bird Lake, where Latin-Caribbean flavors meet smoke, prawns, and plantain in a moody Seaholm dining room.",
     "cultural_roots": "Caribbean and Latin American fire cooking: charcoal, citrus, and spice at the intersection of Gulf Coast heat and Austin's cosmopolitan dining culture.",
     "special_features": "Austin fine-dining counter; French technique with West African seasoning.",
-    "chef_quote": "French discipline, West African soul\u2014that tension on the plate is exactly what we're chasing in Austin."
+    "chef_quote": "French discipline, West African soul\u2014that tension on the plate is exactly what we're chasing in Austin.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlk184wgO0AGYslbBpWy-9nUm7tE_pxqa2H_yYQOi_nT5FOzkPXiXDyr3ixwbyyVsgDd_QnwZTA6yPzhy_oswfYFA3K30LlkavEb-MaKxeuCmygIuIyhJgFpH8DCGdkkVsM26HT=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkz8j-3zbooqTffv554aRsSXDqaHlNOuh3gNfyyBIAfHQQX1tAoguCYBdqqS6GM7TxbI9N6EjcOL6N_NXlK7ra1n4sjoBDzB_VHrE8VOqzndJplmBBARqvqYjjKq7IrLohffh9SHyNPdtmH=w1915-h2981-k-no"
+    ]
   },
   {
     "id": "dfw-fine-001",
@@ -2767,7 +2919,12 @@
     "our_story": "Aldeez Afribbean's creekside North Dallas lounge blends Gambian benachin with Caribbean classics\u20143,000 square feet of VIP energy and live Afribbean Fridays.",
     "cultural_roots": "West African and Caribbean fusion: one-pot benachin rice, island spice, and the party-kitchen culture that unites Gambian and Caribbean diaspora communities in Texas.",
     "special_features": "signature Gambian Benachin; West African / Caribbean Fusion chef-driven dining in North Dallas; elevated dining room.",
-    "chef_quote": "Gambian Benachin is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Gambian Benachin is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl9YAOV9CtP482QGzWP77SOMCF__yKWKPUVzZ-52MzPxaZBYgx96DnGYxE-yaxczMgyB1c_gRxZhkgs16ri0AEFc4dNQbj0ZHP74eiFFcU_ewOWESEIeWKjGOHe3Aik541UNXYI=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmsIWXXDkb3n5ZsZnoL4gd1OvL6AJ4aFI6Qwtm6VONNsJ0A57oki4AMXxz0vmIKEg08hMOS_7vEfzBEef3hEmyYXLxHYHfuShpmOehOeo0Dsqy7zQDxjj4tO2iiFdVB_TK18fJccMJVO34-=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmYJspVuJVMHLdoCXc1T6UjqUvTGmGnXLZNYCoF8twLFAjdEKm2LCgx8CnnJmK_Ad8KA60bY1lfSbvDLuqF34r3Xd87XIwPOZThN73E1-R_eWfe7cOx-Wyk3payEtmKp70Wx7xk=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "dfw-fine-002",
@@ -2802,7 +2959,12 @@
     "our_story": "The Island Spot (Oak Cliff) keeps Dallas fed with Jamaican jerk, oxtail, and patty-shop soul\u2014known for Mama Joyce's Oxtails & Jerk BBQ Ribs\u2014island flavor with neighborhood warmth.",
     "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad.",
     "special_features": "known for Mama Joyce's Oxtails & Jerk BBQ Ribs; island spice and homestyle plates in Oak Cliff / Bishop Arts; jerk pit smoke and bold pepper.",
-    "chef_quote": "Mama Joyce's Oxtails & Jerk BBQ Ribs carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot."
+    "chef_quote": "Mama Joyce's Oxtails & Jerk BBQ Ribs carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmCJ1dORPJfLqJBZGLY0rCX3TPIkVoQOdjZ0jsPl6UJ09qreVikOwzWR5IvEF374gUMElykvUjwr3yA3scihyGaO5OJYv9pbJUxBrtiU55N9h0wUPtpd1yg7Vrw0tMWcY01C-e-=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWklgVaZWsVgXe2gezWfKt0rpBI0RYAIAKxeSCUu8-griHI3DYe6tdy-PRRVFZl1172Ig1ciVzIFYMG40G8mowKLp92NMhPP9lcMrL-rXrqi43hsRRwtEl39PRgz5Q0AMFFzLxL5=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmuF_OjnJmyBf9eJN8IkEiztBcJU1mPFzOc66fcxbCHSJBudqRn0d7ahUEo8N4lryLiV51NpHAqzhTjtz9QH0am9H2TWyRebGNGGhk_sUSuBrKWW-xoEtLJlem7W1jKeUFvScNf=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "hou-fine-001",
@@ -2837,7 +2999,12 @@
     "our_story": "Island Spice Bar & Grill brings Caribbean flavor to West Houston / Copperfield, Houston\u2014known for Creamy Rasta Pasta & Escovitch Fish\u2014island spices, seafood, and the warmth of a local diaspora gathering place.",
     "cultural_roots": "Pan-Caribbean cooking: curry, coconut, scotch bonnet, and the blended traditions of islands across the West Indies.",
     "special_features": "known for Creamy Rasta Pasta & Escovitch Fish; island spice and homestyle plates in West Houston / Copperfield; Caribbean comfort cooking.",
-    "chef_quote": "Creamy Rasta Pasta & Escovitch Fish tastes like the islands we left and the city we live in now\u2014bold spice, generous portions."
+    "chef_quote": "Creamy Rasta Pasta & Escovitch Fish tastes like the islands we left and the city we live in now\u2014bold spice, generous portions.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmGAFYaOH-yZouHqOrnZ6z53MMLQ-NNqCj8Ry8g2sCrwUBpnKZYBd7D-BR6XnLW_WsoLij92-GpOErK8dcW4WolWTHimqmRf5a5BJT06dJQ-OuBf1qOe5AcBFF277lAlDy__lwv=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnKNLAwAa-sWsBNwzLzxBv5Cf3Yf6zJZkZ3ECix5B9v1SaBIfICIFNFYbyJrugfGb5SUKEE0c90hhzL5PKZ8rHw5Q-l7lBtIPTtnMpfl5ibiyJ807wERm_AwZaz37ijTtPRn5SA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlNHXSBTmvgXkxwUMLeGTuhMf7f0EuhbWNU7NbmjRhjsMUfPZSDR1nLmHuL1oExaP-tAE5QAsjFW1yWzZoyu7BWU-XkdpS5Xdf-rYD-jDUMCT7TePUiGcthXda4VUfNLvZdnvhI0ez19kUt=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "atx-afro-002",
@@ -2872,7 +3039,12 @@
     "our_story": "Habesha Ethiopian brings Ethiopian injera platters and traditional wats to Austin, Austin\u2014known for Doro Wot & Vegetarian Sampler\u2014a Habesha dining room for shared meals and coffee ceremony.",
     "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
     "special_features": "known for Doro Wot & Vegetarian Sampler; communal injera platters in Austin; traditional wats and tibs.",
-    "chef_quote": "Doro Wot & Vegetarian Sampler is why people gather here\u2014berbere, butter, and injera made to share from one platter."
+    "chef_quote": "Doro Wot & Vegetarian Sampler is why people gather here\u2014berbere, butter, and injera made to share from one platter.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl1qTvZwzIL--8ChFVy2KiInRlK8AFDAKd7yQsgSSwFwPvi2T2LBnTtXjKjNJtkAHHYViI9ZcVtstWn_M7XL6bNLZznSPTW8E2J7VxsSLMdAT4w5-x6WOm8AoO95oNLn-f371Js0BT2-TUM=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmt1cAceUMEDEmdqUGp-6hY4zqspGKtBgXlAtKCHPDz5wKCfKb4G_E8EvzHAxVohIZeUlJTw7kaUdW2l2Fu_1byamQEwneXqlXo05S9M4hb0n_4HoO8NYhx6xFCpWPWInAGnOQJCQ=w1124-h1114-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl-v1pkKdvCqXGvZX0rUrFkXtyAEqXhehl_YZ40uXFyXuDJmB0Ctgq2BoPDslBWyPqUTwm7_Cm9dPx70tT0w3odNxVqIfvQQGRJ3L0dYq_LZ8uIH41FB5NCtlQxZqgnObxwE7LAuA=w3024-h4032-k-no"
+    ]
   },
   {
     "id": "megenagna-mart-and-cafe-austin",
@@ -2905,7 +3077,12 @@
     "google_search_url": "https://www.google.com/search?q=Megenagna%20Mart%20%26%20Cafe%2C%202013%20Wells%20Branch%20Pkwy%2C%20Austin%2C%20TX%2078728",
     "google_place_id": "ChIJ8xSvBi_PRIYR4nxgXWPeiac",
     "special_features": "known for Awaze tibs, Veggie combo, and Chechebsa; communal injera platters in Wells Branch; traditional wats and tibs.",
-    "chef_quote": "Awaze tibs is why people gather here\u2014berbere, butter, and injera made to share from one platter."
+    "chef_quote": "Awaze tibs is why people gather here\u2014berbere, butter, and injera made to share from one platter.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlOR4k1zlahDB5ohpMobQAzlkU38HQtwu8_VKWW5Gz2VGvACV0BwjZwopbCIXfamZa290jAcqgillJCXP99gynkgAW1kDyByaM8vQyWxyinQqXhya0hd21muXMrIyPD29EwyKc3JbcqnPzZ=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnUTZEvFYcfDeya_5JJyMWX1PXOq6wdIDWbWS__8f0Yxh0LFaeKzjNZqTdYtv6Yeb83UZk3tLv5Q_HzZqHUANK2CG5wc1EAFi11eTgLTgfwkt9p-F-B40yas_p0PaotqG3z9u8=w824-h824-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmlZxRavyq05E-h6Ob6JnE_bkSofikj6HXbzR93IIrma95hVlNU4eA3SW6yqrgA-mOpqqIwWFJTBycKU9jZ1IVe8r-Nl_uimo5xdJgBlbo5e_v7DWMPPgosZTgGL2JJj43JgyEfEhKFvaE=w4284-h5712-k-no"
+    ]
   },
   {
     "id": "dfw-afro-002",
@@ -2943,7 +3120,12 @@
     "our_story": "Cafe Nubia opened in 2024 as Dallas's African-Mediterranean fusion room\u2014Rasta Pasta, suya, brunch, and live music in a Far North Dallas spot built for celebration.",
     "cultural_roots": "Pan-African and Mediterranean crossover: suya spice, seafood grills, and the diaspora fusion that blends North African, West African, and Caribbean flavors.",
     "special_features": "signature Mediterranean-African Seafood; Global African Fusion chef-driven dining in Far North Dallas; elevated dining room.",
-    "chef_quote": "Mediterranean-African Seafood defines what we do at Cafe Nubia\u2014traditional flavor, fresh ingredients, and pride in every plate."
+    "chef_quote": "Mediterranean-African Seafood defines what we do at Cafe Nubia\u2014traditional flavor, fresh ingredients, and pride in every plate.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlPXpwVn7B-T9zWAPP55g_KrkLO0WuZAbEOd6fCPNhM_P8svvgiLqra4IxOfEKNOEOmjSNi2hnZmAQ7tHcf3nW_vD7TA5aLitC3ybh_K-MZ6r_YpvcepflwigwOqr50qjf-Cww1pw=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnRnN4jHFjE5u8vee9qf9r8eE9oOvFJjUqUrlKLSVGFyCK-Bs0k_EK07XdJJ4ilDekoXVkSzuYSuLjFttdNoy9O2g8UP50Dnjn_y-fOJeHl-O21l_5pb-aX0tLhaIlSGeqAtTOotwVwLXw=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn2DUBm8r3vZsfWD9QR7STeNQ3rjWoi4cZKSNEseVQXJ3vTK29V7m4F-XnZROREksgBz54rwCbViA--mvj_v_A7kDVWcX5AyyhQjt-BBxYsCGRMKXwLBZBNs_GlVM7AVYftAOw=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "dfw-shuri-001",
@@ -2980,7 +3162,12 @@
     "our_story": "Shuri African Restaurant serves Nigerian and West African cooking in Northeast Dallas, Dallas\u2014known for Egusi & jollof\u2014pepper-forward stews, jollof, and chop-bar hospitality.",
     "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses.",
     "special_features": "known for Egusi & jollof; pepper-forward stews and rice plates in Northeast Dallas; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Egusi & jollof is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Egusi & jollof is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmZzfpp3PeUXMciXkx5AFIzr1f5eTqwuMB-4KPGDHyPrl2sijmn8JPnNHGCsAh4olTB4irEUIIQvJgL_rg1bBvrbbQ13HWHfEVi6zR80op4jjnd0EOZXojCwk9q0f7zXQ0g0QKHoYQolEo=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk2-tilMdQmnw6JY4ogNdLTuAst32zXG5AYylnbPbc4EvxfvlIS5rM-AdJJm2mwG8wyo8hUMGEGRRAJCObcXmhc2EtMYDL_9wAzjQ48ot2AfeuBDlfTFPUOJvj7ww3OdHKIZzU=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnKeKU4Rwt5MkwZU0Qz2Rx0NttL3xhMl6PLM5lFTkzVM4hPXtfPdPLEHM1w8K_gUs7L-gIhhhkGGN9hj1X5Wj_Q9iK5dsEb4MyLUQht0EiIT7ajrUnRuR5lPv3Ql121UqDfAiRH=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "den-whittier-001",
@@ -3018,7 +3205,12 @@
     "our_story": "Whittier Cafe is Denver's African espresso bar\u2014Ethiopian and East African coffees, light bites, and a Sunday coffee ceremony that anchors the Whittier and Five Points community.",
     "cultural_roots": "East African coffee ceremony culture: roasting beans tableside, buna served with popcorn, and the social ritual that begins every Ethiopian gathering.",
     "special_features": "known for Sunday East African coffee ceremony; communal injera platters in Whittier / Five Points; vegetarian fasting options and coffee ceremony.",
-    "chef_quote": "Sunday East African coffee ceremony is why people gather here\u2014berbere, butter, and injera made to share from one platter."
+    "chef_quote": "Sunday East African coffee ceremony is why people gather here\u2014berbere, butter, and injera made to share from one platter.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlazhXhDDVNcLTU4cLrOAZfGBYLu9_ZG-iE6lWby2rpM0iulT9I2aaEVsl3O8Iad4mrsh8Ql8yg6IoW8B0R7Ennk-JoFuPRQsKUneQtkvmjONjjHUeKuEkL71AUc5-JuPKM9OfB=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWloN_q82H8wTo3UVaCTTfPgtaBF06kHnI_bFvAraRl5FwRSp7MqCgUeAcL9vLTCEDSY-Zo-Hgn8BDWeh0XMMn8dtIviKVpIEH-UxiaAo21sUP15mkSHxdI8M2jC39wuNoRg9u4Hv0aCdcg=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWld7qtSBXij3s1i_DYyvGMOH9Jy-DFjXpLnEYhAKvOPPhLRqkdcCliSGiKjd_DQoHxroULYgUBhqgeWhfPCjqeZkSExZMbAZuFK6ALYzcNhCLUKK-WNrZ75RKafRzQzXIx5QRRh=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "chs-fine-001",
@@ -3057,7 +3249,12 @@
     "our_story": "Chef Bintou N'Daw opened Bint\u00fc Atelier in Charleston to elevate West African staples\u2014heritage jollof, egusi, and fufu\u2014with the precision of the city's fine-dining scene.",
     "cultural_roots": "Senegalese and broader West African techniques meet Lowcountry hospitality: rice, stew, and spice traditions presented with minimalist, chef-driven elegance.",
     "special_features": "Charleston seafood tasting menus; Lowcountry ingredients with West African spice lines.",
-    "chef_quote": "Lowcountry seafood meets West African spice lines here\u2014this is Charleston through a diaspora lens."
+    "chef_quote": "Lowcountry seafood meets West African spice lines here\u2014this is Charleston through a diaspora lens.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnQIcPBiCrW4So_KML78Mu7FqnlwS0lMrIN_KXeA6CdqfAL8Y_IAELuaqE1_Bz_KVeRv1SLqNdzwO4poIeAHUB0KaTBdLy1AHNCDfYupCla9nvDthALiV513J78n0Y8CPs5IhQZ=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnzJXOFY1utCtarTQbVvzeBCZRZa7aKZCYzzyLNpkcQBB5TYGCykmm3PirKZTWRZLt8XiD-sOubsE9uW38BKGI6dYGRKBmfjo6R-lVbbJpBiLafVY0qIjGe2SkUz7FR5ZH61-l8Gw=w3024-h4032-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnIidZQp2i9OW7KkhqpkC4jORlGdVdib1uhGwr6lADzDX27BcObUEwA4HgrRwus6SvKtIwdil6oTpbdMUTQqhmImESouEbKsYVLY0NF01GLMREN6wByh_9FRGiYWu5e5-IiLE6avq_Kj_53=w2749-h3466-k-no"
+    ]
   },
   {
     "id": "status-hollywood-los-angeles",
@@ -3095,7 +3292,12 @@
     "our_story": "Status Hollywood is where LA glamour meets island heat\u2014sweet chili lamb chops, oxtail egg rolls, and vibe dining in a room where the crowd dresses as well as the plates.",
     "cultural_roots": "Upscale Jamaican and Caribbean flavors: jerk spice refined for Hollywood, oxtail braised low and slow, and the party-dining culture of modern LA.",
     "special_features": "signature Sweet Chili Lamb Chops & Oxtail Egg Rolls; Upscale Jamaican chef-driven dining in Hollywood; elevated dining room.",
-    "chef_quote": "Sweet Chili Lamb Chops & Oxtail Egg Rolls carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot."
+    "chef_quote": "Sweet Chili Lamb Chops & Oxtail Egg Rolls carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk7cf4o_IlblBDEzIV4S6NV-GzjE_4O_dX_mLOmsCZtuycUl53__Uj3ak-fyxGxpZz89vjAMO5-ANoAmoI99316kSr_ktkjyrt_pkhsSwziqXXQZ316AzN988xTJwrSRLnRMghCzf4QZCKp=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmVaERC5KdewGLuVRe3iMfcXI2awaL3wQdLo2jfu_cNcSiOFnyg0lLAXxBYWzGFexDWI5mz5EcBL7eSPKgaH1L2zuCtjDtrO_5ixLDaDnsfMVJGTz_PVrWJncQi-2ReswCPBbeOFA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnlccGgQHoyf50Tko10AY7IlrtSjuI3QQYj9m-mZW4chYJBJWeUtC9-uxApdNrmEq9woYDRgxhXgyoXxM8btXI1w0F1NX0X27QoFCtpAkCTMbIaf7CqepVj_zrjLVUCehXj88jRCZtf1naT=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "atl-fine-001",
@@ -3130,7 +3332,12 @@
     "our_story": "Lucian Books and Wine pairs a curated bookstore with Buckhead fine dining\u2014modern Afro-European plates, heritage pork, and a wine program as intellectual as the shelves.",
     "cultural_roots": "A salon for Atlanta's diaspora: African ingredient stories told beside European technique, with wine and literature framing every meal as conversation.",
     "special_features": "Atlanta tasting-menu room; seasonal Southern and diaspora crossover plates.",
-    "chef_quote": "Seasonal Atlanta produce, diaspora seasoning\u2014we let the South talk through every course."
+    "chef_quote": "Seasonal Atlanta produce, diaspora seasoning\u2014we let the South talk through every course.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmOHD81hmNJTPTrqIL90ZpMKLNh3IZjSNhHeIQs7BMaXtNCX0eH_fzvtG3rfkrPMjf18gKJQPu-L8JBIpubXSUNQXuYf-weYONHml17mcCzsbsZ2DDK3md_klM1Yn6PzzazqFo=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkt9UatLM_LNJwTxFzSnkhbv4TxA54iQlo7wiQXAb3y-l43Jo71a3ol43-tEqKrKLrkq5s3PKKtLviAvrRaSFzBi8JMfaGYFCy5rwYB15jZwYppbV-napbYpm-w5O1E3a6RjrEAEACIiujL=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkQ2IFNaofI4gYUV4dReutMX9lrGUGV-Btlgq385A5YQkoog_YoSK-iza72lBsFiNtsTYhuwCHIALL1FPV_osyfEg4t1bhgrlwU1pBTrmOQtoI-7Rw7r9r-N81mtetR1vMz7-mRVg=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "phi-fine-001",
@@ -3167,7 +3374,12 @@
     "our_story": "Friday Saturday Sunday turns a Rittenhouse rowhouse into an eight-course journey where chefs Jonah and Chad Williams weave West African and Caribbean seasoning into modern American tasting menus.",
     "cultural_roots": "Philadelphia's rowhouse intimacy meets diaspora spice memory\u2014technique from fine dining, flavor from the African and Caribbean communities that season the city's kitchens.",
     "special_features": "Rittenhouse rowhouse eight-course journey; Jonah and Chad Williams' modern American menu with diaspora spice memory.",
-    "chef_quote": "Eight courses in a rowhouse kitchen\u2014each bite carries a spice memory from the diaspora communities that raised us."
+    "chef_quote": "Eight courses in a rowhouse kitchen\u2014each bite carries a spice memory from the diaspora communities that raised us.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnEGspoqGXHjKXzX5C9h3L2AO48Kd7i1YPbwpsHtyi61crzQ1o1vqMjrjg6d_Ek-VSsQ9FKmEol5Y_61FH0aY62UHav0dogQp1nysS-wFJ9QKPim38FV6N54HK8FiQRh3KEbfTscQ=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmiG_NRxVeKA6XigzuGho9FZBUQ0i2YyuwMc7ayP8PBmu0YFKxHhQFC5-ZyuI2xPGUTMDuYx5QRMdEKnh8W-J7IPMpQWcKP6cgZuMiMEdgrhOBIQHZoImUrWa8UYUlSFrR9EIBJ1AKWtng=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnK_NmyHd1mIpXt7amXicQ3TGgF6fyouEO0olAZ1g4kv6pvjXqTU3ChT2raK-cIeH-Dfl9PG-cAtyZsCRZwDjQPWSgbc6sHNEGRzfaZOxSURST-qIkorKxX7mT5HnP0Qi5nHlNkdeis6Jk9=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "sea-fine-002",
@@ -3200,7 +3412,12 @@
     "our_story": "Chef Trey Lamont's Jerk Shack elevates Seattle street food\u2014jerk chicken seasoned for 48 hours and smoked over authentic pimento wood in the Central District.",
     "cultural_roots": "Jamaican jerk pit tradition: pimento wood smoke, scotch bonnet heat, and the street-food culture that Seattle's Caribbean community brings to the Pacific Northwest.",
     "special_features": "signature Pimento Wood Smoked Jerk Chicken; Modern Caribbean chef-driven dining in Central District; elevated dining room.",
-    "chef_quote": "Two days in the rub, pimento wood smoke\u2014this jerk chicken is Seattle Central District pride."
+    "chef_quote": "Two days in the rub, pimento wood smoke\u2014this jerk chicken is Seattle Central District pride.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkgw_uxMU1NiFi53kJnIxjZU8iILFHilxh-aD1gac_quT_R_Y3LAvnIIHFfZNoBLpWBgvQ3c_14xft4ZgULartsyZleHt61bTRSZGgb0dzRWFZ18pjOSJlzDZ3ifsRAp26uNM_Jcg=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlN58WZ7FDiKU8spzy4na00kPRWf9C0y9fZl1t-QEtwCaAzKh9LOK_wGRg4VmYUVAe3mI1u0TfOzB_367_fyABVzePGjpMcYZMOMvapHf5WOrzA4MEkD8bAmXT7zqHKm7lRD1M=w4080-h3072-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn0TvcBH9skGLUhJyzXwKAMGVMNB4T07FtoTUiiA-9U2x1MpMawsH_N7diuFW9c9LFWpbqHiH3JTNTdma-F--OG21jxAoWb1XvVSuJrGkmuXRBb3Nh36UiJmNgQynh0o7ZN14r0_w=w4032-h3024-k-no"
+    ]
   },
   {
     "id": "helens-kitchen-houston",
@@ -3236,7 +3453,12 @@
     "our_story": "Helen's Kitchen keeps Houston fed with Jamaican jerk, oxtail, and patty-shop soul\u2014known for Oxtail & Curry Goat\u2014island flavor with neighborhood warmth.",
     "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad.",
     "special_features": "known for Oxtail & Curry Goat; island spice and homestyle plates in South Post Oak; Caribbean comfort cooking.",
-    "chef_quote": "Oxtail & Curry Goat carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot."
+    "chef_quote": "Oxtail & Curry Goat carries the smoke and heat we grew up on\u2014scotch bonnet, allspice, and time in the pot.",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=3-jH_OnF2ALOdgT7O81JMA&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=280.5557&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk919wGX9Uq9NcN6bRH2KGimZpHzsLnqXjqhzaJ2ma5M4DNoHYIXB6JCWXgwhBSlbmMIJr51bsHYrhNNG8QRQ3hJO5Z0zqVIbvZQFyu1rXwFNcw8zPRZ_GkmcYvi6_g8Tk6OGBLsQ=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWne1ztJmYPE5LfzyqgEk9Qwn6p0b4oAV5Yc64ziq9RFE-QFK4-otvVjMPXl4y2DgiKX0af3ayOLXa6WFAasyNUFof-sP6Z2KSM9Dd2qCEddc3JngNsznYlAnlJ4Hf3Et5xoZke12HcOBfM=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "lucia-los-angeles",
@@ -3271,7 +3493,12 @@
     "our_story": "Lucia brings Afro-Caribbean fine dining to Fairfax\u2014jerk lobster, craft cocktails, and late-night energy that treats island flavor as luxury, not afterthought.",
     "cultural_roots": "Caribbean spice and LA nightlife culture: jerk, rum, and seafood traditions remixed for a city that celebrates bold flavor and late tables.",
     "special_features": "Los Angeles chef-driven dining; Latin and Caribbean crossover flavors.",
-    "chef_quote": "California ingredients, Caribbean memory\u2014this is the flavor of my table at home, scaled for Los Angeles."
+    "chef_quote": "California ingredients, Caribbean memory\u2014this is the flavor of my table at home, scaled for Los Angeles.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmIKtXqcsiINhd8xOTpTr9qbL__2m9o7Nmxgfsrzh3JUvpyYra4u42OdQ4u1YMWnHC_GLJ-B83drbQTbHTBskT0O7VIvC2zDaq_OLo-6qScX9dOd4sBN0T8t45U-a7FOwYeqh-uLd84lpLM=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmeoTzqTfhlFmN_8FJGqgws10OAMj7UJHzkMUIKUgqS9iB3tvEKc1DKyNvvsM2FCi-1sTIjVFp2-QvHDC3Tpbs58f3tv-NhDjB0Dk8lmV4aR8cSHpR05iV0m6BSMxy_HJoZORvXSRLXQQLv=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmyh5NC3RVlvJmA4eMWCGgiN3pa-sBLzl97gftbuof0nYKk-gvJ19Gld83fxvX818OfuIdAtxw9wABYscwQw6UsuVCo4EGhtj15iFgJkmlY37DkNU81jBz848m90KunF0dnBkW7oV2ZhKm7=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "bridgetown-roti-los-angeles",
@@ -3306,7 +3533,12 @@
     "our_story": "Bridgetown Roti keeps Los Angeles fed with Jamaican jerk, oxtail, and patty-shop soul\u2014known for Oxtail Patty & Curry Goat Roti\u2014island flavor with neighborhood warmth.",
     "cultural_roots": "Jamaican cooking: scotch bonnet heat, pimento smoke, and the yard-food culture that defines Caribbean dining abroad.",
     "special_features": "known for Oxtail Patty & Curry Goat Roti; island spice and homestyle plates in Arts District; Caribbean comfort cooking.",
-    "chef_quote": "Oxtail Patty & Curry Goat Roti tastes like the islands we left and the city we live in now\u2014bold spice, generous portions."
+    "chef_quote": "Oxtail Patty & Curry Goat Roti tastes like the islands we left and the city we live in now\u2014bold spice, generous portions.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmON3WT7Xvig8TSFZqh50kKD8qbzXdSH7m8pGSXJTdhw-5hyeowbym-sHTWFyBmzgrDOYMS3c7o7I2QVInHvEVP8wlJUQQWR9Bwu1R5PkqJfdEMF5AraxhtZjk1iqLEEM5Y7dA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkCwnZR-1yMVudVU0fy95RYX8OfaC_NkmYDMxP1k3hLcSY-LPbXSgYxEcjHHIK53s53nd8yVDos1slgDP-xRq_X4iHtcBEFS9vCzk5X0Uxyyn_QERgrscvXyV99KkgJy0FWPhp40Chw18NB=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkA5mGgbsMe_Al3HVv2kR8x-xh6gtrz-A3lYWU6a8q5cTq1zhPy5G1IqxrW9Qcxcf2FlASI_RJYNHHp5QLTq5Uk4U1VCWiBTEAnct15V_MQ1bXRAHc8UlwVOq_BxPkSN2awPuQ0EodVw83M=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "negril-atl-atlanta",
@@ -3378,7 +3610,12 @@
     "our_story": "Taste of Nigeria serves Nigerian and West African cooking in Houston, TX\u2014known for Jollof Rice & Beef Suya\u2014pepper-forward stews, jollof, and chop-bar hospitality.",
     "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses.",
     "special_features": "known for Jollof Rice & Beef Suya; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Jollof Rice & Beef Suya is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Jollof Rice & Beef Suya is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm3dEkOyDVC0F-5W9xJBGkXlY4t9G2F-XcS8Vy1lfsQbcNTzvsyPsT2SKZUuqse0BB9tX8gdEwFQ9l7qq1sZBkY_v4iZ8zjfkhiJuRQcFOzHPEBEADC0w6ljyuT0L_nZcc4Oxwa=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkfpiT9u8L3wlXDq1HnWcLg-5W8Zqkbatt7-X5QMxGnFbHlPD1Yrv8qU_LRyddycmYszE-1THtn7Z_1tCrOIceMrJu7IPEyFQ7i81Oad6q6M6m3flPOP-HX4kLf_hveRs2BJZ_F_7iUoILW=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn1WuqvhA5pIVWc1GJDZgm-aRNByTjj63CFjF23KFnEcUdN1_l6dtMzHJ1UUJ7YvGBFX3Y02Pb9cD4L71VmAcNEWuWsmQ8bo5pzsxETjPG_JNEVbTJBDHjQkdHx6QtGIpl6UFo=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "komchop-houston",
@@ -3414,7 +3651,12 @@
     "our_story": "Komchop serves Nigerian and West African cooking in Houston, TX\u2014known for Grilled Fish & Efo Riro\u2014pepper-forward stews, jollof, and chop-bar hospitality.",
     "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses.",
     "special_features": "known for Grilled Fish & Efo Riro; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Grilled Fish & Efo Riro is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Grilled Fish & Efo Riro is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkWW_U-Dqb0DAWmPJtYsg7gehNCYvWe5cFTQzjbgusOh1i5G3SlvL81_Na8AJX0DCaaVN8PeO6a3R6JFwhHl1wtLUmoIkBnbeKtWCHl2d0Ox9gfaN0f47RsIrXkeBndNKl9dBs=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlVTKlcBEAr8QTVjEIUS0HtkOaQ86GK7wD_7fwTr8AEh5zT0BjILBiDRzQ0Ok96z1mH4PtwEs1EuHcFRCaziQEaIlMHKWJkwg3n2Ezq_GL_kMXZiQ6ymVQLJ-B6wF9qO_VJgLay-aV1CDs=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlruJMKTJz2GoZT9f-DwRv1_Mkse9-ts6VWf8yMbcZcgKCHEhLXgewl51Ljb39NIhr81Q0sDanFg68etXaumpgjH14mmCbhfPNqmiyeY-hB17wkuVOqmgUGuku6WAT07m9voMzi=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "finger-licking-2-0-houston",
@@ -3450,7 +3692,12 @@
     "our_story": "Finger Licking 2.0 serves Nigerian and West African cooking in Houston, TX\u2014known for Pounded Yam & Egusi Soup\u2014pepper-forward stews, jollof, and chop-bar hospitality.",
     "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses.",
     "special_features": "known for Pounded Yam & Egusi Soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Pounded Yam & Egusi Soup is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Pounded Yam & Egusi Soup is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkJghynpO1hFqL1zfLHNilxJ_PpoE9iUnMfXZqfEWbUPXq4una22rEIxlPq7Di1ZH_IyI8kvO9bvQ09gwnGjffMs3yhNkk6Jm8FrRA_BRT-74aLtx_KvbKK3oJoJbMyHPN_F4U=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnWzRBWvmeizdDhnwEZH-STnxhsllbmVduGE9SkI_vrYma9zARviVz5Y4akR0stMQF44rXTeMom27dSfvDyFAZNMgo_K1co_LUoB8pKWG-C-SoSuzXCJzCFQ5fUdmLVYQzmYrZr=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmiwLv-pwPENy5Q4PpyeksI1Xnciqdbi2En-9kBq8VWiJx1fK5-oPR8CLpHGYcIzp2RF5W_93RWR_OC7jCf2UUTrZtBKzJQ9D4K55fR7Stqxq4pLOrkpy0hNkk8QA4YwYWgOzjQNwkVr4g=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "sarabell-calabar-houston",
@@ -3523,7 +3770,12 @@
     "our_story": "Amala Zone serves Nigerian and West African cooking in Houston, TX\u2014known for Abula (Amala, Ewedu, Gbegiri)\u2014pepper-forward stews, jollof, and chop-bar hospitality.",
     "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses.",
     "special_features": "known for Abula (Amala, Ewedu, Gbegiri); pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Abula (Amala, Ewedu, Gbegiri) is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Abula (Amala, Ewedu, Gbegiri) is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWma8_Qd2TjIxGho3u7qpxkKSPn6ZtG2GjmUODnkw5oNlYNpadZtMoXRJ-hnSCwiMWTEKtPWdIkZJt1y9O7_EF-8o-mr3BO-rOOI4KE4Wu59vl4Ds_-w9CUameTTGm5Qc11CwfNPsA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkTYnzhwtismk9tLiqjBmxe9GDB2D7rCvyEhPVoVSjbABQpvRsHQd7E6Wa2e80wqbCjrH6vyJQEOt1SlioIVQtUCahoR3HEiYDr97W8Z-1z37iD29oUYRFfmbx_xc5lsNPJ0U6N=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlXqMZjmUSPvLfHPD8F_Lp-t8rKg59_zBJlWdtM19fLn3_YAS6vN-QQZLa97P6kwkPhYoj_PAv0uRUly6F1Y-1-Unkg86pHKY77gPYBTenY8qCbBhXGqbJPKmYaf3zT7kF2Qtg=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "chef-benny-houston",
@@ -3632,7 +3884,12 @@
     "our_story": "Astor's Table brings South African flavors to Katy, TX\u2014known for Beef Suya Astor & Peri-Peri Chicken\u2014braai grills, stews, and fusion plates from the southern tip of the continent.",
     "cultural_roots": "South African braai and township cooking: fire-grilled meats, chakalaka relish, and the multicultural spice of the Rainbow Nation.",
     "special_features": "signature Beef Suya Astor & Peri-Peri Chicken; South African Fusion chef-driven dining; elevated dining room.",
-    "chef_quote": "Beef Suya Astor & Peri-Peri Chicken defines what we do at Astor's Table\u2014traditional flavor, fresh ingredients, and pride in every plate."
+    "chef_quote": "Beef Suya Astor & Peri-Peri Chicken defines what we do at Astor's Table\u2014traditional flavor, fresh ingredients, and pride in every plate.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnENv8JZhOy1XHpd6uSRsFNP29EYVr5EYlPxlN2VaLskg7DMC_Sruxy1GlJyMwJbL3-gkuhAB-J2kArFg75ReZsgi6KYMo0AxXt_oiCuYpHQpQxTseNBknHH2XiYGjc5Y83MFOG=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl90GCjrkBGWHHGkQuznJ6ASwSEcNW909RVcwLYk2XWJuoEO9pMv7B7hOECfGh8Yz-sB7J5KAQJXchY6qg5yeVk_iDs1AuGDlXQ9oNC3qsC4oZel9CdQ7jcp9nN1XIbl6rJQTyd8k2DZqbZ=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm74MirsgwehRXbPrQPptjwnEiV28bwVEzeN25DzDoBKyd4_1XrKZdjkFmbxT8HjR3tB5K0ozs0i1uhceojBKoXbmnEIcEoe8arKDpN3eFSI9QdNgeSF4EcToJ2tucyKqxa8Rmxvoo1axg=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "suya-hut-meadows-place",
@@ -3665,7 +3922,12 @@
     "our_story": "Suya Hut serves Nigerian and West African cooking in Meadows Place, TX\u2014known for Authentic Beef & Chicken Suya\u2014pepper-forward stews, jollof, and chop-bar hospitality.",
     "cultural_roots": "Nigerian kitchen culture: jollof rice, suya spice, swallow-and-soup pairings, and the bold seasoning of Lagos chop houses.",
     "special_features": "known for Authentic Beef & Chicken Suya; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Authentic Beef & Chicken Suya is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Authentic Beef & Chicken Suya is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=TtbpT0OajCUbI4G4Do5_Dg&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=317.4329&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkR0q9HaTLa6ONb6p_qy9zziA3Jee1i6LkXllOouIaKMMhPMfpQKLijmOdaUbIQkrszYbdN6KZlnLmZWhcm-0FMqsoC5qTLCGJhcCh2dUjErualGbNYO6AtyMtaFFkVy24gs7lKOQ=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkFWHA0Rc2_8wU6iUBGjwXU2VVqtNUK4xLF1cWAH7bOG8DKKg3R3MpRGopyIpAp5-Rhx9qKz84s25ApSZBKJdW0k7VQmSvhORmotMA01WladxzreqZjkDXPcsTfjSI7nL91Lm0=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "blue-nile-ethiopian-houston",
@@ -3698,7 +3960,12 @@
     "our_story": "Blue Nile Ethiopian brings Ethiopian injera platters and traditional wats to Houston, TX\u2014known for Doro Wat & Injera Platters\u2014a Habesha dining room for shared meals and coffee ceremony.",
     "cultural_roots": "Ethiopian communal dining: injera as plate and utensil, berbere-spiced wats, and the hospitality rituals of Addis Ababa kitchens.",
     "special_features": "known for Doro Wat & Injera Platters; communal injera platters; traditional wats and tibs.",
-    "chef_quote": "Doro Wat & Injera Platters is why people gather here\u2014berbere, butter, and injera made to share from one platter."
+    "chef_quote": "Doro Wat & Injera Platters is why people gather here\u2014berbere, butter, and injera made to share from one platter.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnbfCdsnAjJlhy6e5TRsL9SF_Q_2p1IigyNAby6htxmxfkG479AwotkfQPCjI8Dvc8nnbF4JK-VRXxtLAl8VbeUJcxrjUQzQQkldccXU68FfTi5GF2wjB49Bp1zXT6UDSSayfnD=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkoiIoZ0fFwzwTVFTGTOHn1gXcmyPlTxYOTR0Oc73DOB_HOiIMwpxcgDEltEO1lj7rXwiNURppz-LSf4I-4f7zR3bdgNHjyxDlulRx-omKPiEaKqO-OWJgzmf5JGKpJ-LJDwLOP8jEU350=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkZJQ9WDqscY-U3YenJHDfOZw-0gMmhkXMloTMjDffgzFAHVt8InbNfaSm5GOATaKVbqTmsO71KaygFHH-tUVPAL0fi8KctSuMz1xnUeE0ka-VODgbNezeig3DON5AcnPyCf6Y=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "aria-suya-kitchen-houston",
@@ -3737,7 +4004,12 @@
     "our_story": "Aria Suya Kitchen brings Nigerian grill culture to the Galleria corridor\u2014lamb chops, jollof, and suya with a step-up dining room that still feels like a regulars' spot.",
     "cultural_roots": "Northern Nigerian suya tradition: spice-rubbed grilled meats, pepper heat, and jollof rice\u2014the flavors of Lagos chop bars with Galleria polish.",
     "special_features": "known for Grilled Lamb Chops & Jollof; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Grilled Lamb Chops & Jollof is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Grilled Lamb Chops & Jollof is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlRmRl6g6KtWTMdzb7SaObpfRYJtDTL116YGTo3RxqHLFbgmbsbM7bB9fa7PJuseukBaz6JnxZmLTt6U9O6rYXfkbIaWEFxAKW5MpGo0hgk4i5r2_9AC4VKn4jgJDyztMWs7e_Ijw=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlQgzZogHwHxB0MLO5FsrkwUVU2ZcoA8dEFSmenE-wSsreuoGdRl3B3l7fgwzvT-Q3SlBAChG2QhWTQT4EFHXIqy-38i95aeEnToMkbgrq3L0x60DqfeJV7YZ3STkDSMklXZ84ZYA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk7Pk9v-gzdGTN42Dc6LqWIMnm4L1RoPZkdj4ajBtXbAagnKbi68U5F-Bwox6rWYR04Uz9SkF2EjOJ75xaUGznl7MxIMEn7MfIgCuN-P42hcoW8xCFzzDq5ylKn-VpG_JqUNLl2C69G35GY=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "fabaceae-african-cuisine-houston",
@@ -3770,7 +4042,12 @@
     "our_story": "Fabaceae African Cuisine serves Yoruba-style Nigerian food with gourmet daily specials\u2014designer stew, abula, and the kind of pepper-forward plates that keep Houston's West African diners coming back.",
     "cultural_roots": "Nigerian chop-house traditions: swallow and soup pairings, slow-stewed meats, and the bold seasoning of Lagos and southwestern Nigeria.",
     "special_features": "known for Abula & Designer Stew; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Abula & Designer Stew is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Abula & Designer Stew is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmE3yMfhWzysSh-VrDrAJsJrPuK7_AWZBdEaSbqf82IZLhH-vdjIi4DjmmIZnFGaCZvQDNZev2kWwrDh12m9s4J_8G0UwjSN6Ol0DyfMTJxKMvqob2yV-TSGr0Z6W35ZYbt_uYuiA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkcoOmNMsh-Mb9IDieYgXMz6nyWo0AtFQH1AsVkcaGg1h7O2WBNrf3My3hRNRoMVdOxfcy69OQ7s3VrISnljU59-SHh2KB9DNu4ffFadQ7VRu6ndi8kMTjLp7kGFtlx7axdr1TyFA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkG34N8wAFR9LaA6cI2AVo50hSWpvn7tFBUnEf-sI65566l1LDD7kY8SvmdErc6T4AjCx1UmMAQAOT7AvVVdS5De307o_zn7UwijjwcF6vhNdfJTt01sTdkPJ_jn4Vwjqbxw5T8=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "lucy-ethiopian-restaurant-lounge-houston",

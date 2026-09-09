@@ -30,6 +30,7 @@ from lib.catalog_photo_selection import (  # noqa: E402
     category_id_for_title,
     normalize_photo_url,
     pick_photos_from_place,
+    catalog_entry_matches_place,
     place_title_matches,
     place_title_score,
 )
@@ -423,7 +424,7 @@ def main() -> int:
                     continue
 
                 place_title = str(match.get("title") or "")
-                if not place_title_matches(str(entry.get("name") or ""), place_title):
+                if not catalog_entry_matches_place(entry, place_title):
                     report["skippedWrongPlace"] += 1
                     report["details"].append(
                         {
@@ -455,7 +456,7 @@ def main() -> int:
                 details = fetch_place_details(api_key, place_id)
                 local_searches[0] += 1
                 place = (details or {}).get("place_results") if details else None
-                if place and not place_title_matches(str(entry.get("name") or ""), str(place.get("title") or "")):
+                if place and not catalog_entry_matches_place(entry, str(place.get("title") or "")):
                     report["skippedWrongPlace"] += 1
                     report["details"].append(
                         {
