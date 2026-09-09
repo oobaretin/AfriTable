@@ -2,7 +2,11 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { isAfriTableBrandImage, RESTAURANT_BRAND_PLACEHOLDER } from "@/lib/restaurant-image";
+import {
+  isAfriTableBrandImage,
+  RESTAURANT_BRAND_PLACEHOLDER,
+  useNativeRestaurantImage,
+} from "@/lib/restaurant-image";
 
 const BLUR_DATA_URL =
   "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
@@ -55,10 +59,30 @@ export function RestaurantCoverImage({
 
   const currentSrc = candidates[Math.min(index, candidates.length - 1)] ?? RESTAURANT_BRAND_PLACEHOLDER;
   const brand = isAfriTableBrandImage(currentSrc);
+  const native = useNativeRestaurantImage(currentSrc);
 
   const handleError = React.useCallback(() => {
     setIndex((current) => (current + 1 < candidates.length ? current + 1 : current));
   }, [candidates.length]);
+
+  if (native) {
+    const imgClass = fill
+      ? `absolute inset-0 h-full w-full ${className}`
+      : className;
+    return (
+      // eslint-disable-next-line @next/next/no-img-element -- arbitrary restaurant website hosts
+      <img
+        src={currentSrc}
+        alt={alt}
+        className={imgClass}
+        loading={priority ? "eager" : loading ?? "lazy"}
+        decoding="async"
+        onError={handleError}
+        width={fill ? undefined : width ?? 128}
+        height={fill ? undefined : height ?? 128}
+      />
+    );
+  }
 
   const shared = {
     src: currentSrc,

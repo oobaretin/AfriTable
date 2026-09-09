@@ -42,6 +42,7 @@
     "backfill:images": "tsx scripts/backfill-catalog-images-serpapi.ts",
     "backfill:images:py": "python3 scripts/backfill-catalog-images-serpapi.py",
     "validate:images": "node scripts/validate-catalog-images.mjs",
+    "backfill:images:website": "node scripts/backfill-catalog-images-website.mjs",
     "fix:wrong-place-listings": "python3 scripts/fix-wrong-place-listings.py",
     "scrape:city:py": "python3 scripts/scrape-cities-serpapi.py",
     "cleanup:scrape-batch": "python3 scripts/cleanup-scrape-batch.py",

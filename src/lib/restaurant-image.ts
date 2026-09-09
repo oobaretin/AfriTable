@@ -30,6 +30,20 @@ export function isStreetViewImage(url: string): boolean {
   return STREET_VIEW_RE.test(url.trim());
 }
 
+/** Restaurant website/CDN URLs use a native img tag (arbitrary hostnames). */
+export function useNativeRestaurantImage(url: string): boolean {
+  const s = url.trim();
+  if (!s || isAfriTableBrandImage(s)) return false;
+  if (s.startsWith("/") || s.startsWith("data:")) return false;
+  if (!/^https?:\/\//i.test(s)) return false;
+  if (s.startsWith(STOCK_UNSPLASH_PREFIX)) return false;
+  if (/source\.unsplash\.com|via\.placeholder\.com/i.test(s)) return false;
+  if (/\.supabase\.co/i.test(s)) return false;
+  if (/googleusercontent\.com/i.test(s)) return false;
+  if (isStreetViewImage(s)) return false;
+  return true;
+}
+
 export function classifyPhotoUrl(url: string | null | undefined): PhotoQuality {
   const trimmed = String(url || "").trim();
   if (!trimmed) return "empty";
