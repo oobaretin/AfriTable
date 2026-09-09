@@ -2,6 +2,7 @@
 """Fix wrong-place catalog entries and backfill photos for specific IDs."""
 from __future__ import annotations
 
+import argparse
 import importlib.util
 import json
 import os
@@ -57,6 +58,7 @@ CATALOG_PATCHES: list[dict[str, Any]] = [
         "name": "Amawele's South African Kitchen",
         "search_aliases": ["Amawele's", "Amawele's South African Kitchen"],
         "search_query": "Amawele's South African Kitchen San Francisco",
+        "title_keywords": ["amawele"],
     },
     {
         "id": "oak-lala-eritrean",
@@ -64,10 +66,17 @@ CATALOG_PATCHES: list[dict[str, Any]] = [
         "google_place_id": "ChIJ_RtOt-J9hYARrro9RaXE7DY",
         "accept_place_titles": ["Cafe Eritrea D'Afrique", "Lala's Eritrean"],
     },
+    {
+        "id": "negril-atl-atlanta",
+        "search_aliases": ["Negril ATL", "Negril Village", "BARA"],
+        "google_place_id": "ChIJ7ULvb2UE9YgR3IpD59Lzy3U",
+        "accept_place_titles": ["BARA", "Negril ATL", "Negril Village Atlanta", "Negril Village"],
+        "google_maps_note": "Google Maps lists the 999 Chattahoochee Ave tenant as BARA; photos sourced from current Maps listing.",
+    },
 ]
 
 
-def resolve_search_place_id(api_key: str, query: str) -> str | None:
+def resolve_search_place_id(api_key: str, query: str, *, title_keywords: list[str] | None = None) -> str | None:
     data = fetch_maps_search(api_key, query)
     if not data:
         return None
@@ -78,9 +87,10 @@ def resolve_search_place_id(api_key: str, query: str) -> str | None:
     for item in data.get("local_results") or []:
         if isinstance(item, dict) and item.get("place_id"):
             candidates.append(item)
+    keywords = [k.lower() for k in (title_keywords or [])]
     for item in candidates:
         title = str(item.get("title") or "").lower()
-        if "amawele" in title:
+        if keywords and any(k in title for k in keywords):
             return str(item["place_id"])
     return None
 
@@ -97,7 +107,7 @@ def title_ok(entry: dict[str, Any], place: dict[str, Any]) -> bool:
 
 def apply_patch(entry: dict[str, Any], patch: dict[str, Any]) -> None:
     for key, value in patch.items():
-        if key in ("clear_place_id", "search_query", "accept_place_titles"):
+        if key in ("clear_place_id", "search_query", "accept_place_titles", "google_maps_note"):
             continue
         if value is not None:
             entry[key] = value
@@ -106,6 +116,10 @@ def apply_patch(entry: dict[str, Any], patch: dict[str, Any]) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--ids", nargs="*", help="Only fix these catalog IDs")
+    args = parser.parse_args()
+
     env = load_env(ENV_PATH)
     api_key = env.get("SERPAPI_KEY") or os.environ.get("SERPAPI_KEY", "")
     if not api_key:
@@ -113,17 +127,29 @@ def main() -> int:
         return 1
 
     catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
-    patches = {p["id"]: p for p in CATALOG_PATCHES}
+    selected = [p for p in CATALOG_PATCHES if not args.ids or p["id"] in args.ids]
+    if not selected:
+        print("No matching patch entries")
+        return 1
+    patches = {p["id"]: p for p in selected}
 
-    amawele_query = patches["amaweles-san-francisco"].get("search_query")
-    if amawele_query:
-        amawele_id = resolve_search_place_id(api_key, amawele_query)
-        if amawele_id:
-            patches["amaweles-san-francisco"]["google_place_id"] = amawele_id
-            print(f"Amawele's resolved place_id: {amawele_id}")
-        else:
-            patches["amaweles-san-francisco"]["clear_place_id"] = True
+    for patch_id, patch in patches.items():
+        query = patch.get("search_query")
+        if not query:
+            continue
+        resolved = resolve_search_place_id(
+            api_key,
+            query,
+            title_keywords=patch.get("title_keywords"),
+        )
+        if resolved:
+            patch["google_place_id"] = resolved
+            print(f"{patch_id}: resolved place_id {resolved}")
+        elif patch_id == "amaweles-san-francisco":
+            patch["clear_place_id"] = True
             print("Amawele's: no Google listing — cleared stale place_id")
+        elif patch_id == "negril-atl-atlanta":
+            print(f"{patch_id}: no Google match from search")
 
     photos_updated = 0
     for entry in catalog:

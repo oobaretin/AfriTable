@@ -3569,11 +3569,24 @@
     "vibe_category": "Fine Dining",
     "state": "GA",
     "google_search_url": "https://www.google.com/search?q=Negril%20ATL%2C%20999%20Chattahoochee%20Ave%2C%20Atlanta%2C%20GA%2030318",
-    "google_place_id": "ChIJ7ULvb2UE9YgR3IpD59Lzy3U",
     "our_story": "Negril ATL reimagines Caribbean classics on Atlanta's Upper West Side\u2014ackee and saltfish spring rolls, creative cocktails, and island flavors with a modern Atlanta twist.",
     "cultural_roots": "Jamaican and wider Caribbean cooking reinvented: ackee fruit, jerk spice, and the fusion spirit of Atlanta's innovative diaspora chefs.",
     "special_features": "signature Ackee & Saltfish Spring Rolls; Innovative Caribbean chef-driven dining in Upper West Side; elevated dining room.",
-    "chef_quote": "Ackee & Saltfish Spring Rolls tastes like the islands we left and the city we live in now\u2014bold spice, generous portions."
+    "chef_quote": "Ackee & Saltfish Spring Rolls tastes like the islands we left and the city we live in now\u2014bold spice, generous portions.",
+    "search_aliases": [
+      "Negril ATL",
+      "Negril Village",
+      "BARA"
+    ],
+    "title_keywords": [
+      "negril"
+    ],
+    "google_place_id": "ChIJ7ULvb2UE9YgR3IpD59Lzy3U",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmRO3Rl4Uv7BgLZgm4iXBBiWgiLMXVKHuF2b7y7YnMn-iiV2A66Xobd6k2kiAX6HgTEAgBNKHZyZMOKpWrwXuPqZjM4DrLgtvPfzW0FisjMppbBo5OiGj0q81Q_-Nfzw1NU0VcAPA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWluPBGSHx-8JjdvdI20ZBxGcOfqbNun7HCdUdwqcXe3-oiogPgpXJF073yCG5Oi6y3gI72-rh2k2Rh-f_iEAHMPmn8lNzFMtP6ZwM9pqB_qNs68nedthx_tyLuLcCFOVEe_RjYwskpQEoNO=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmLLHyyLMRRV2cWwgT1sBGPawvNTA2PePV3jA9yjrRzksoL3ge9fhzndeVuAOVt4i7tNA2UKFiCf1CWrdwmPx2QFQfAPM755l05krNK-9bmtPk5ErCGmABCwgicqkKxO8Weya_D_7U0ykS1=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "taste-of-nigeria-houston",
@@ -5983,7 +5996,12 @@
     "google_search_url": "https://www.google.com/search?q=Molyd%20African%20Cuisine%2C%20752%20E%20Northfield%20Blvd%2C%20Murfreesboro%2C%20TN%2037130",
     "website": "https://www.molydroyale.com",
     "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Jollof rice defines what we do at Molyd African Cuisine\u2014traditional flavor, fresh ingredients, and pride in every plate."
+    "chef_quote": "Jollof rice defines what we do at Molyd African Cuisine\u2014traditional flavor, fresh ingredients, and pride in every plate.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl4Ank4T_j7LHU3F-sqXo8zPuSmRrJV6xaQbaFe9ZUU2rPcyLM91C6WxKF6Y_xk23KBoJ1szBDUsEWSIHkO2FQOPIuF0yzNo17CmHITVU5s_iVwQl7U_nA_nwUMNbSsgRREUBCsdQ5iuh70=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmMICBGQmXrB0tUsLkXRFcH1M5nipEsxtRpQ2M7iGkr9vSXmLncaO97B_RCwFn6oPHlIQ2cTniX7TzilHQK9beZuV2ccsE-FIsENDIPM1tiAj3YSTacHsGh3s1Vo9P2PPN1vWgORnwGXjI=w1000-h1000-c-n",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=rA1xfe8c1m8ts70rJ3U57Q&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=84.84042&pitch=0&thumbfov=100"
+    ]
   },
   {
     "id": "nicos-lounge-restaurant-and-bar-nashville",
@@ -6014,7 +6032,12 @@
     "google_search_url": "https://www.google.com/search?q=Nico%27s%20Lounge%20Restaurant%20and%20Bar%2C%204750%20Nolensville%20Pk%2C%20Nashville%2C%20TN%2037211",
     "website": "https://www.facebook.com/408503469331333",
     "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Jollof rice defines what we do at Nico's Lounge Restaurant and Bar\u2014traditional flavor, fresh ingredients, and pride in every plate."
+    "chef_quote": "Jollof rice defines what we do at Nico's Lounge Restaurant and Bar\u2014traditional flavor, fresh ingredients, and pride in every plate.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkSXhvCi0bfXu-2FPQPpv8_w6g6CRterWUfVhGUmtA_hkiLt10-t9leEWAsQAcdFYw0O396B0mSykrphztiyuccVS81aE2BBrRK_9CxDqnIFaO-VkGlTIsIyTwAYd6B2jfduWzwwQ=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmTWd9PdAX2P8w-xt5HmDhCqs35ngu4xKGwAjhgIfjecmp1f8fBIrYyisvMxqCxxEhE03iZtA0HJUh8xoLU9Rljw4rNYWSwnlm8oQZdmo2WIVfEmry4VN2aelv9FOo2txxngz4=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnBbYN6yTsUvbDYG7Vt2ISxvUKo-aDWuE6AMAwk1cpX73be7EQm55yVraJfH1zRnrvgrSIucF-GjrO0r0WCnYaRVuSpTLbVdG8JOgdWHeDgCNGRgLV2o6u_qj7BHVHobVzkKGLnQw=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "peekay-restaurant-burlington",
@@ -6045,7 +6068,12 @@
     "google_search_url": "https://www.google.com/search?q=Peekay%20Restaurant%2C%20710%20Sunset%20Rd%2C%20Burlington%2C%20NJ%2008016",
     "website": "https://peekay-restaurant.nearmee.net",
     "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Jollof rice defines what we do at Peekay Restaurant\u2014traditional flavor, fresh ingredients, and pride in every plate."
+    "chef_quote": "Jollof rice defines what we do at Peekay Restaurant\u2014traditional flavor, fresh ingredients, and pride in every plate.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlyQComFLmiOgDJ-vKaB0dY-Ibtmb15eIwn22Lu5n3mc_TZmCRHkrq0Ibo9S_tX8J-CQKWkpR5aAXsKS2mJlA0Fn2xfjV4KVeToidrL49DL_w_Ei8frlnzKiAJ46zH3mQLxU0SmYA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnaPE03esa-b55KbwE7yLhLDlSoDkqsTCru-tQUjRxERvW1yiEQ7ZvciZKoL30x6JiPIktrFdda80JkpqlITBNpcnP8CqknvUMFRkOsOULhGjbatIuW3hXncprSrffCSizTvx7N9A=w4032-h3024-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmglLQ9mJeVKFQdgCfkwpiqudjrDWKrPHDk2Z1KKKKbMHkZtHgkAQ0u1LrkyO6Ca8AxJ97C0J61UNg9fL08UpNjJnRV3PAI314j7kzN9jwNBcR_S1rRMx1_wzGpIorAAxHpT6k=w1230-h948-k-no"
+    ]
   },
   {
     "id": "divine-time-nigerian-cusinie-upper-darby-township",
@@ -6076,7 +6104,12 @@
     "lng": -75.2620568,
     "google_search_url": "https://www.google.com/search?q=Divine%20Time%20Nigerian%20Cusinie%2C%2048%20Garrett%20Rd%2C%20Upper%20Darby%20Township%2C%20PA%2019082",
     "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlVqcZRQDd5Z62sKnRVWF3ptEb_Nye9kpdwdDxSPiKuH2h3le_20PastkihLuI9dbCu4adJttYKtQf2z4wlQ0_3GGegUYNt2xUhOzuuhmEr4VIBTuYnQu6bEvFb66HwyagLCQAvuA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmKoCEeYhCdhqh8U9Eomr5zNq4MhjgalGlcjWGIi9W1M2KY6xkSEjnso-ylUdU_eWecrwbxqngStFVyYWjjuv4yNamEkfAFPjnoih_yv1X4bFXW6ciVd2CEQ1rsyqJyJjrbk8Y=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlrlAZ79PQuzVL3MMBFzUVMRWresuko0j2GE9TzgswyLNIvp376lyb3VxNs4Tt9CpILMavr-uVbD_M4c8I7R02iL66XAZk0yEEmRQJ6qcqurt0-JBfsZfImWA3W-xB0Jos_dImY=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "adji-jollof-rice-kitchen-camden",
@@ -6107,7 +6140,12 @@
     "google_search_url": "https://www.google.com/search?q=Adji%20jollof%20rice%20kitchen%2C%201152%20Haddon%20Ave%2C%20Camden%2C%20NJ%2008103",
     "website": "https://thejollofkitchen.com",
     "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Jollof rice defines what we do at Adji jollof rice kitchen\u2014traditional flavor, fresh ingredients, and pride in every plate."
+    "chef_quote": "Jollof rice defines what we do at Adji jollof rice kitchen\u2014traditional flavor, fresh ingredients, and pride in every plate.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmFo4cUmARyhRvPXamgh2RtZZDrDjIPYz_5hKkL0J-IEp0oxW_XjlYPpRji8K-eLK_BdqpGMk0Mp0Kff6RrLmEZ-nroU_5Ln8Ke2vKGx98uvabdacdBRmIC8Uj1QTwkaVibc5vmOAt88Nc=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmDZ0fwE4XMt0Slwgs1WzSwwi7UIENhjfC2qPPPjgG4UixB9uL2r4GwZ5PhANe2xrdTeGKVuw0Y1koEgAFeZ-t6T43UwMK_Hgy8ryl7biuWwqGfNuq9mKers-28FioU1VQpVYV4H07N6QtR=w1000-h1000-c-n",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=FGQitHXD4jcyUd6dXEyCZg&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=42.313274&pitch=0&thumbfov=100"
+    ]
   },
   {
     "id": "kokomma-nigerian-african-cuisine-lynn",
@@ -6139,7 +6177,12 @@
     "lng": -70.9451897,
     "google_search_url": "https://www.google.com/search?q=Kokomma%20Nigerian%20African%20Cuisine%2C%2056%20Central%20Square%2C%20Lynn%2C%20MA%2001901",
     "special_features": "known for Jollof Rice, Egusi Soup, and Pepper Soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Jollof Rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Jollof Rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkySaT_tJXJq-xvQv-pu3eeZ0FfOrPK-PtJPj_2zo_uGjzyIUT9zJSh1R0yhUkc1_El1BFIZTg_Z-6x5_wobbd2tMXKh-WgZ49-QzJLrKy51PSzxptZ0X4o0E4SJdpFkSoZY3085ILsnkKd=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkSTRo-VaetgnjKN9ekAhAoMyUNF9ussbr0YnegxjtvVXWT0Nbax-THWZYkXF72UW3KgHW5hbw6dfB2LZzh0vvlmjWg6FiWkAAkb2-Dsg16W6EBMDUOn68NE9hw5AmXEKdN23p6oGLDquqS=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnLl-puat6xiPRBX9k9Ukr2xlPtnhOpgL2UMnQbucGkBHHPew0P4_si8kPFVjJsDghyDHPzktjFtRanZthL25ojvpbGaPZOU8Ki1gyc8c6gPIHmSqi4DMFnfpLZCFlqZggCQxkKrgg7HJk=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "obosa-restaurant-roslindale",
@@ -6170,7 +6213,12 @@
     "google_search_url": "https://www.google.com/search?q=Obosa%20Restaurant%2C%20146%20Belgrade%20Ave%2C%20Roslindale%2C%20MA%2002131",
     "website": "http://www.obosafoods.net",
     "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Jollof rice defines what we do at Obosa Restaurant\u2014traditional flavor, fresh ingredients, and pride in every plate."
+    "chef_quote": "Jollof rice defines what we do at Obosa Restaurant\u2014traditional flavor, fresh ingredients, and pride in every plate.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWluzvqP02Tr6Wp0wjgExtkP8fMSS8doi1CJs5eHgWY5aKi8UmCwP16k5YFfsKPTwWqNb_OH3eJtBA2WlNpG-MOFL9y_a1pWXyUp__SO-OSHVDRDTEQ673doGtWAabNo0vsurRI1=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlPpMU48JNE6-jOC2M5N9zuyHh22C-80knzNWjnU_XKf1-SSgvATan6MCNF2Tsf0NwXfGCrcFprirbX1VYyzSsjXhqIprKYJF4rf0E0PbUKUmivCB-6oMoUwAEqCdIlN4Hg3vT-=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlHjArTn8Is4SQxw6zJpaBEGLTUSwl5_Ds2SPHEEgND-9t9FC9k2iNHVwiATiJ-r9Szvy5h3Z53LvL-QhSNrYnA1nFnKNCkYrTf0RVpdPmF5HxEBzsqIQKHIuQhu5gVacdysY7OSRj00-VN=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "pelloma-nigerian-cuisine-mattapan",
@@ -6201,7 +6249,12 @@
     "lng": -71.0828368,
     "google_search_url": "https://www.google.com/search?q=Pelloma%20Nigerian%20Cuisine%2C%20924%20Morton%20St%2C%20Mattapan%2C%20MA%2002126",
     "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkgRXoNkps9WTNCVYntI8vUt1OdiapW_J6dPmrH6_8lxD0l-xJ9vwhXGY4DdQYELb5oUrWOOQFIhIyVgB4tjADC2abmuwycBYUu7dJaTaR_8RV611mP4cPdd3Iz1E8UaGAGDymeEw=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkbqqF0Zlg2Ax_8aZTZw-1mzzDt8cWB5Q__t9h_KYEsBa3XaR2rD_hbqs2kfE0kRD4xEG5yF7m6LNbv-AHoVRZ14yG0STU7hXf2ZKZ-SL34zaCOUSBTfzz5P425C5QF36FtxkNJ=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkS4FluKztvEP9h07jpiMgZ3GP0H79OE24suElWVHAkRyDFcVLrCBd5xXyxYYMpNAcdZyvZYHR5XhVAvqi2hl1tmgWg_EwBFA6SNXljHU7u0J37tPpWVaKY4txa-QOV8bW9lZcoHA=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "sentie-s-kitchen-southborough",
@@ -6232,7 +6285,12 @@
     "lng": -71.49630379999999,
     "google_search_url": "https://www.google.com/search?q=Sentie%E2%80%99s%20Kitchen%2C%2021%20Turnpike%20Rd%2C%20Southborough%2C%20MA%2001772",
     "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Jollof rice defines what we do at Sentie\u2019s Kitchen\u2014traditional flavor, fresh ingredients, and pride in every plate."
+    "chef_quote": "Jollof rice defines what we do at Sentie\u2019s Kitchen\u2014traditional flavor, fresh ingredients, and pride in every plate.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlwpvc1pOHFYkQ2Gwh19yyI6IDE89QfospnXbwXQqynuur-IZVG8Iv1bjiovVOOIjLvT_LhiPFkPHeVTVWAZqrjkV9o_g-tC7ZwyPkE6BdA459HpQt7V0BPOIbbQCiKxMozD18-=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm9cw5nPpC7PnY7dVSL4U74lO6jxP0rO0OApkCg5Dx1BWuf3UwGcMuERujhdaNUJqU7QoT9yPte4pBahUvIxkk6Rf2RMpCwYoEP4q0dECLnQc1RmmwG_WrHOlLQkGARZ6ele9cl=w1000-h1000-c-n",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=SuNDUwnm8YroqtAmv57siw&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=316.0907&pitch=0&thumbfov=100"
+    ]
   },
   {
     "id": "9jagrills-oakland",
@@ -6263,7 +6321,12 @@
     "lng": -122.2760113,
     "google_search_url": "https://www.google.com/search?q=9JAGRILLS%2C%20303%20Broadway%2C%20Oakland%2C%20CA%2094607",
     "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmsrg9Y3YspkQvoZYREdatQxG-LZHMBAH836CWWyVd85Yl93RPnlCXMSQjFco33aaCXRcFvGznC6hP5-avEgwcX75ur7KbdkYC1GyLZC2lMpV_vipTGOjyfu9cSp92Wk_2hqfKlXA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn5TnPTRuYufJ2EdHGUgt-husz3QpiASAj_uWdsetBp7i9yfn_vU2PeNpw8hB4D7JdMTTm7gpex_vhdeBkSgypADt2dQT3iHOQCiTK_7UfbttD0PxIylo7H3dRBypQgJu3Srvg8fEgWKCZD=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmlXbAG3K7QXFsjjpPfmV5fAmeKVq5wnL6zSyZCPZokLzclARdSRwxTzvrmcEsVjNMzAoar2mF_e8PljgfKLu2S8uFQUnYQolWkN3eMuzh13SxrY-p3Kpuduc7XWm9cDyw665DRF9TtWuA=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "swahili-spot-oakland",
@@ -6294,7 +6357,12 @@
     "lng": -122.29424909999999,
     "google_search_url": "https://www.google.com/search?q=Swahili%20Spot%2C%201327%20Peralta%20St%2C%20Oakland%2C%20CA%2094607",
     "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Injera platters honors the hearth\u2014spice, stew, and the hospitality of our community table."
+    "chef_quote": "Injera platters honors the hearth\u2014spice, stew, and the hospitality of our community table.",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=HqQZxTAtqxRRPp9cKP_9pg&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=307.36777&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmts6d82C9z8jN1rERhuBg3Nv33HNRr8GQbXYBAYAPQi9NIYISqusiytWj9yuvsYi_G426ogRTRc-9lZO_MdNVJif7wFHI-jc4jMzBpi29dn-ghl7dNynS0QCUgtdZFXLrS3-QP_fU3zg6x=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWklGK6DrBPRSrKO4FS-poAckaSGwNeg2j1BCuSdkrxYAiun4IcmFmFiOBxSVY4-xF5_NS7bX6cDFUImhbilEl6DCGri46jABTaW2mUUsjzOVs9oT9EdsrrNx-nRNPTAWmzp5QkdEmW_KO4=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "ruths-buka-oakland",
@@ -6326,7 +6394,12 @@
     "lng": -122.2017862,
     "google_search_url": "https://www.google.com/search?q=Ruth's%20Buka%2C%205250%20Foothill%20Blvd%2C%20Oakland%2C%20CA%2094601",
     "special_features": "known for Jollof rice, Stewed meats, and Seasonal specials; African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Jollof rice defines what we do at Ruth's Buka\u2014traditional flavor, fresh ingredients, and pride in every plate."
+    "chef_quote": "Jollof rice defines what we do at Ruth's Buka\u2014traditional flavor, fresh ingredients, and pride in every plate.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlo4iZi_zX0rwApkury412FN2kKK33OusMxlfd7Q-tOgRX3ZeQMMSlbKb8eD7VfneKRHMhVXNavvdJkYA2X3w8QfFdQF2mD96hx3HlTDxulUH3qDaw5Vdv0p72CgOPyy8yZc0G2admprfI=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWluLU3_G44K_OpfJVm9Vw9HT-p7ECIQ4tQrJpxKrNga-ZdrXLpwSKrzzhlo3aGyTEoGL4wgruKDVzHpPtZnoh4p53mzpN7RfNnB9KijzD9qawZcemCTWUlvm0iYOiXbn2bnU5jDlXuO9x2n=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnpyWLv_--AxpvJiBth6TuJHG676-yOZ5Lcw-NInDvOVD9iesMAkfkJ4G2ty0sizA-JfVcVEvBblhBf1uh-xpK20HQ64cow2LSR5md4iIMZR4XJ88UkCE98hIEmJPortYIgxsA66dD_BaG8=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "kendejah-restaurant-san-leandro",
@@ -6357,7 +6430,12 @@
     "google_search_url": "https://www.google.com/search?q=Kendejah%20Restaurant%2C%20197%20Pelton%20Center%20Way%2C%20San%20Leandro%2C%20CA%2094577",
     "website": "https://kendejahrestaurant.com",
     "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnYWVUKyBc0dCutAcGCEpOUW0sMuXHIWWTQj7akCDTSeru3gLk8d_8OmQa8UqQ09n1SjcFLwO1GB7XVAT-4gywOxGlkrqJGGCYE0tV4qhuQQqHVVHkYKYRf-SP00PgIFVcH8eLN=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmrO2YbmDku0Qkq-PR00knitolgtirZckWNxFMF7MCUkT7ItH_ZDIhr7cSbIZBRtwYq0mTpAVkpbN4ezAe5Ll9M4UysXyByHeIUKp5I6Bz-V7ST48PFRbTXx31h9cn_HZZ6wK9eBVWDhiM=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnYYrwjozDdWPffQEmO9r_BiKkBdmG2DdI6Ngj5CwzxJE7BbPVpTJhCUSa1JDL5coLJurVqQ68HG0T5scGe0zZuA1wHtK2djqQSJJ-L86ftCK4N_r8xIBhVmeQsUT8dM5SmCcv_-g=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "mimi-s-nook-nigerian-cuisine-livonia",
@@ -6388,7 +6466,12 @@
     "google_search_url": "https://www.google.com/search?q=Mimi%E2%80%99s%20Nook%20Nigerian%20Cuisine%2C%2019586%20Middlebelt%20Rd%2C%20Livonia%2C%20MI%2048152",
     "website": "https://mimisnook.com",
     "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmtSMWiDgJ5NH2idbO0i3uNpczra1EKnMagIVqDHms5eBmaeZOoDus5PIbACN66rmXVVt6Dw-kAWBgNbdcBfwP5Xf1pOWusr2Oeh4WINRD8Enql1a0W8EKpaol5fOivooFq4mAvlnpHSUk=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkUfifkya05An4j9FGYFVJ48Cn0qfuzge-R8ptPVNhqpAlMk076pCvLGuRQYyFEqNoiJ4SGuTklCSczbdL9MUdr2MCe5C35atpqX2X4e4INRDJyLwe9olsWgT47eTs2PCuaaKhQVftk_aYd=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkVa5iFd5AGQztz5iN_0L4e0sTSkmAMNEiZAlNyP4ZIXKO8vgCeMj9ckeKHA_qUOHnDEnj6d69sMB6kL2GKaCopx-kRervbwWFgdKoWpVhR92IsnfpY3UaXq0kjtwuB9msEClgwG9NHEidg=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "detroit-jollof-nigerian-cuisine-detroit",
@@ -6419,7 +6502,11 @@
     "google_search_url": "https://www.google.com/search?q=Detroit%20Jollof%20Nigerian%20Cuisine%2C%203181%203rd%20Ave%2C%20Detroit%2C%20MI%2048201",
     "website": "https://www.detroitjollof.com",
     "special_features": "known for Jollof rice, Suya skewers, and Egusi soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=q3vDOlmbgTOv8y4yIjqTWQ&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=219.72409&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmWMs1dZwOEGSgK0xSiKSZWLeKITuAPIzdGzIyZl-G105P7WDZz0xvAXmgPalbE3wQZ-9bdwbq9DqPqFIW36g9cS3RTDombX6A-7jpYyEZV6mCcylQBp02fmNhEqKEUge5qUF6cpWfjYusK=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "fork-in-nigeria-detroit",
@@ -6450,7 +6537,12 @@
     "lng": -83.141295,
     "google_search_url": "https://www.google.com/search?q=Fork%20In%20Nigeria%2C%2019228%20Livernois%2C%20Detroit%2C%20MI%2048221",
     "special_features": "known for Injera platters, Tibs, and Lentil stews; East African flavors; Authentic Staples; warm diaspora hospitality.",
-    "chef_quote": "Injera platters honors the hearth\u2014spice, stew, and the hospitality of our community table."
+    "chef_quote": "Injera platters honors the hearth\u2014spice, stew, and the hospitality of our community table.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnno_Oq3JSITuYh7eI9ucbOGvwSenySTFso9JaoFw8pg1R8queHANjMvv4Lo2m9UDaFwXArrN-CrJl72L2_WWwQqAqBiTtRSyk-ZvdL1se_LNdl-mJXGeKaOIwCcGYCuOiFYX6z=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmZO225_GEX1Zf8KSph-utJ-z0seNyntfHLheMBsmAgMvCJs6EcqZObrlDAwSq1qv8tNunIaiXN0NHg3pDwz3bZF4-zflJyOLpPfjnxjRJafEoSEw5-oxF2FjQxXCV7JbTvGll9=w1000-h1000-c-n",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=x6AvDTEdbdKk_97mPHyhzw&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=240.37854&pitch=0&thumbfov=100"
+    ]
   },
   {
     "id": "matys-cuisine-detroit",
@@ -6481,7 +6573,12 @@
     "google_search_url": "https://www.google.com/search?q=Maty's%20Cuisine%2C%2021611%20Grand%20River%20Ave%2C%20Detroit%2C%20MI%2048219",
     "website": "https://matyscuisine.com",
     "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmQtreeuDE_PSU3mA4V538N41pbKBGuGnkG_BIAn-PIUebUr_soFUz3M84pEFEBtirk99hyKgb-WN1eFyZABNl1nGryZU4XaUkViH6X7aYiR2ilzJpZWi-09ozgzYKb10019AY=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkQ1Ne3-OR6-77JgEXPqPNl_jZdU3_zhVZ3U_NER2Zj_6prQnDhnIS77MECZdk2ojdLh977hotoboMova2fo3jblvZRZMIMNnKh4ukPwIbDnPNzkISV9u0JsNTgXEG5N4yk1CVNBA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnRRg7PPTjK7C1WXiOs5HhbPK7g3jOj2uSFkZEQxNXiLWHmULIdGeSc07gq0q0u3hjbG-zJRsxwtZkF9Gsr7tMqCoJySMyzJOY9peuWONn6ic8prD0Lm2CFOyLUJ8WxEzsU7VXA=w1000-h1000-c-n"
+    ]
   },
   {
     "id": "house-of-naku-seattle",
@@ -6512,7 +6609,12 @@
     "lng": -122.3779386,
     "google_search_url": "https://www.google.com/search?q=House%20of%20Naku%2C%204611%2036th%20Ave%20SW%2C%20Seattle%2C%20WA%2098126",
     "special_features": "known for Jollof rice, Grilled fish, and Pepper soup; pepper-forward stews and rice plates; suya, jollof, and chop-bar hospitality.",
-    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home."
+    "chef_quote": "Jollof rice is the plate regulars order first\u2014pepper, depth, and the chop-bar spirit of home.",
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl8N1DGMOjpPwCzkbYwe9IP57Z8Mjv0EymYbVwuoMS7jB22oRozpXsIVj1ydxCBaJ7ih56EEyMk0qXfCeUGJX26jvkRgJP3dmuuGhsLRBlXwsKgoXGxGAaDrTL4L9Y-bP16wwG3YA=w1000-h1000-c-n",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnkxGnFpJ0jtmXr8bqeWoiIYtjgphqCZ2v-2-YV-wusbFzEQnGmkR8GtPB0DqBXnI5ROCd4685L7hXzJZUXs4QqV9sH4khjj2TCK7UNApDyb8UaIsoE7XfCcBdK8lfy1fVlAjCx=w1000-h1000-c-n",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=DE8sq-ZPURnqhNp2bc8l0g&cb_client=maps_sv.tactile.gps&w=224&h=298&yaw=263.06262&pitch=0&thumbfov=100"
+    ]
   },
   {
     "id": "pdj-pass-d-jollof-nigerian-restaurant-seattle",
