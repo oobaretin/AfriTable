@@ -1,13 +1,16 @@
 "use client";
 
+import * as React from "react";
 import Image from "next/image";
-import { isAfriTableBrandImage } from "@/lib/restaurant-image";
+import { isAfriTableBrandImage, RESTAURANT_BRAND_PLACEHOLDER } from "@/lib/restaurant-image";
 
 const BLUR_DATA_URL =
   "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
 
 type RestaurantCoverImageProps = {
   src: string;
+  /** Additional URLs to try when the primary src fails (e.g. Street View after expired venue photo). */
+  fallbacks?: string[];
   alt: string;
   className?: string;
   sizes?: string;
@@ -18,9 +21,22 @@ type RestaurantCoverImageProps = {
   height?: number;
 };
 
+function buildCandidateList(src: string, fallbacks: string[] | undefined): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const raw of [src, ...(fallbacks ?? []), RESTAURANT_BRAND_PLACEHOLDER]) {
+    const url = String(raw ?? "").trim();
+    if (!url || seen.has(url)) continue;
+    seen.add(url);
+    out.push(url);
+  }
+  return out;
+}
+
 /** Cover image for cards/galleries; local brand SVGs use unoptimized to avoid Next optimizer errors. */
 export function RestaurantCoverImage({
   src,
+  fallbacks,
   alt,
   className = "object-cover",
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
@@ -30,14 +46,28 @@ export function RestaurantCoverImage({
   width,
   height,
 }: RestaurantCoverImageProps) {
-  const brand = isAfriTableBrandImage(src);
+  const candidates = React.useMemo(() => buildCandidateList(src, fallbacks), [src, fallbacks]);
+  const [index, setIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    setIndex(0);
+  }, [candidates]);
+
+  const currentSrc = candidates[Math.min(index, candidates.length - 1)] ?? RESTAURANT_BRAND_PLACEHOLDER;
+  const brand = isAfriTableBrandImage(currentSrc);
+
+  const handleError = React.useCallback(() => {
+    setIndex((current) => (current + 1 < candidates.length ? current + 1 : current));
+  }, [candidates.length]);
+
   const shared = {
-    src,
+    src: currentSrc,
     alt,
     unoptimized: brand,
     priority,
     loading,
     className,
+    onError: handleError,
     ...(brand ? {} : { placeholder: "blur" as const, blurDataURL: BLUR_DATA_URL }),
   };
 

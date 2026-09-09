@@ -41,6 +41,7 @@
     "backfill:google-search": "tsx scripts/backfill-google-search-links.ts",
     "backfill:images": "tsx scripts/backfill-catalog-images-serpapi.ts",
     "backfill:images:py": "python3 scripts/backfill-catalog-images-serpapi.py",
+    "validate:images": "node scripts/validate-catalog-images.mjs",
     "scrape:city:py": "python3 scripts/scrape-cities-serpapi.py",
     "cleanup:scrape-batch": "python3 scripts/cleanup-scrape-batch.py",
     "fix:scrape-copy": "python3 scripts/fix-scrape-templated-copy.py",

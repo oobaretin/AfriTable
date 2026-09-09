@@ -1,0 +1,612 @@
+{
+  "generatedAt": "2026-09-09T00:19:10.918Z",
+  "dryRun": false,
+  "uniqueUrlsInCatalog": 1025,
+  "probed": 1025,
+  "alive": 21,
+  "dead": 1004,
+  "restaurantsTouched": 341,
+  "urlsRemoved": 1005,
+  "details": [
+    {
+      "id": "chez-michelle",
+      "name": "Chez Michelle Restaurant",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "addis-ababa",
+      "name": "Addis Ababa Ethiopian Restaurant",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "famous-princess",
+      "name": "Famous Princess African Kitchen",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "omalicha-kitchen",
+      "name": "Omalicha Kitchen",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "kokomo-nyc",
+      "name": "Kokomo",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "zanmi-nyc",
+      "name": "DJONDJON",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "dukunoo-miami",
+      "name": "Dukunoo Jamaican Kitchen",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "apt4b-atlanta",
+      "name": "Apt 4B",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "blaqhaus-atlanta",
+      "name": "Blaqhaus",
+      "removed": 1,
+      "remaining": 0
+    },
+    {
+      "id": "callaloo-kitchen",
+      "name": "Callaloo Trinidadian Kitchen",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "miss-lilys-nyc",
+      "name": "Miss Lily's 7A",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "cane-dc",
+      "name": "Cane",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "pearls-nyc",
+      "name": "Pearl's",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "appioo-dc",
+      "name": "Appioo African Bar & Grill",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "teranga-nyc",
+      "name": "Teranga",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "mansa-kunda-md",
+      "name": "Mansa Kunda",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "bukom-cafe-dc",
+      "name": "Bukom Cafe",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "ponti-ivorian-houston",
+      "name": "Ponti's Ivorian Kitchen",
+      "removed": 1,
+      "remaining": 0
+    },
+    {
+      "id": "gold-coast-kitchen-chi",
+      "name": "Gold Coast African Restaurant",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "afrik-che-houston",
+      "name": "Afrik-CHe Kitchen",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "kulan-cafe",
+      "name": "Kulan Cafe",
+      "removed": 2,
+      "remaining": 1
+    },
+    {
+      "id": "10-degrees-south-atl",
+      "name": "10 Degrees South",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "tatiana-by-kwame-onwuachi-new-york",
+      "name": "Tatiana by Kwame Onwuachi",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "chopnblok-downtown-houston",
+      "name": "ChòpnBlọk",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "bunna-cafe-nyc",
+      "name": "Bunna Cafe",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "virgils-gullah-kitchen-atlanta",
+      "name": "Virgil's Gullah Kitchen",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "swahili-village-dc",
+      "name": "Swahili Village",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "dc-ethiopic",
+      "name": "Ethiopic",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "desta-atlanta",
+      "name": "Desta",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "atl-busy-bee",
+      "name": "Busy Bee Cafe",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "meals-by-genet-los-angeles",
+      "name": "Meals by Genet",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "la-blaqhaus-noho",
+      "name": "BlaqHaus NoHo",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "amaweles-san-francisco",
+      "name": "Amawele's",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "demera-ethiopian-chicago",
+      "name": "Demera Ethiopian",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "african-small-pot-philadelphia",
+      "name": "African Small Pot",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "gor-e-cuisine-chicago",
+      "name": "Gorée Cuisine",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "kilimandjaro-philadelphia",
+      "name": "Kilimandjaro",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "iyanze-chicago",
+      "name": "Iyanze",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "chi-yassa",
+      "name": "Yassa African Restaurant",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "quality-taste-philadelphia",
+      "name": "Quality Taste",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "communion-r-b-seattle",
+      "name": "Communion R&B",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "sea-meskel",
+      "name": "Meskel Ethiopian",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "cesaria-boston",
+      "name": "Cesaria",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "cafe-selam-seattle",
+      "name": "Cafe Selam",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "suya-joint-boston",
+      "name": "Suya Joint",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "jebena-cafe-seattle",
+      "name": "Jebena Cafe",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "cool-runnings-jamaican-grill-houston",
+      "name": "Cool Runnings Jamaican Grill",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "nola-bennachin",
+      "name": "Bennachin",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "nola-dooky-chase",
+      "name": "Dooky Chase's",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "sf-teranga-village",
+      "name": "Teranga (The Village)",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "oak-lala-eritrean",
+      "name": "Lala's Eritrean",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "nash-riddim-spice",
+      "name": "Riddim n' Spice",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "hou-reggae-hut",
+      "name": "Reggae Hut Cafe",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "jordyns-soul-cafe-houston",
+      "name": "Jordyn's Soul Cafe",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "hou-caribbean-hotpot-grill",
+      "name": "Caribbean Hotpot Grill",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "dakar-street-food-hou",
+      "name": "Dakar Street Food",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "atl-spice-house-midtown",
+      "name": "Spice House Midtown",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "nyc-jasmines-caribbean",
+      "name": "Jasmine's Caribbean Cuisine",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "chi-garifuna-flava",
+      "name": "Garifuna Flava",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "dc-st-james",
+      "name": "St. James - Modern Caribbean",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "la-dulans-crenshaw",
+      "name": "Dulan's on Crenshaw",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "mia-chef-creole",
+      "name": "Chef Creole",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "chef-creole-north-miami-dixie",
+      "name": "Chef Creole (North Miami – Dixie Hwy)",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "chef-creole-north-miami-7th-ave",
+      "name": "Chef Creole (North Miami – 7th Ave)",
+      "removed": 1,
+      "remaining": 1
+    },
+    {
+      "id": "chef-creole-miami-gardens",
+      "name": "Chef Creole (Miami Gardens)",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "mia-red-rooster-overtown",
+      "name": "Red Rooster Overtown",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "baobab-fare-detroit",
+      "name": "Baobab Fare",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "lucilles-houston",
+      "name": "Lucille's",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "chi-ja-grill-hyde-park",
+      "name": "Ja' Grill Hyde Park",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "atl-irie-mon-cafe",
+      "name": "Irie Mon Cafe",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "d-gon-washington",
+      "name": "Dōgon",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "nola-dakar",
+      "name": "Dakar NOLA",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "sa-jerk-shack",
+      "name": "The Jerk Shack",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "kann-portland",
+      "name": "Kann",
+      "removed": 4,
+      "remaining": 0
+    },
+    {
+      "id": "atx-fine-001",
+      "name": "Canje",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "atx-fine-002",
+      "name": "Ember Kitchen",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "dfw-fine-001",
+      "name": "Aldeez Afribbean",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "dfw-fine-002",
+      "name": "The Island Spot (Oak Cliff)",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "hou-fine-001",
+      "name": "Island Spice Bar & Grill",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "atx-afro-002",
+      "name": "Habesha Ethiopian",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "megenagna-mart-and-cafe-austin",
+      "name": "Megenagna Mart & Cafe",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "dfw-afro-002",
+      "name": "Cafe Nubia",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "dfw-shuri-001",
+      "name": "Shuri African Restaurant",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "den-whittier-001",
+      "name": "Whittier Cafe",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "chs-fine-001",
+      "name": "Bintü Atelier",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "status-hollywood-los-angeles",
+      "name": "Status Hollywood",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "atl-fine-001",
+      "name": "Lucian Books and Wine",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "phi-fine-001",
+      "name": "Friday Saturday Sunday",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "sea-fine-002",
+      "name": "Jerk Shack",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "helens-kitchen-houston",
+      "name": "Helen's Kitchen",
+      "removed": 4,
+      "remaining": 0
+    },
+    {
+      "id": "lucia-los-angeles",
+      "name": "Lucia",
+      "removed": 4,
+      "remaining": 0
+    },
+    {
+      "id": "bridgetown-roti-los-angeles",
+      "name": "Bridgetown Roti",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "negril-atl-atlanta",
+      "name": "Negril ATL",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "taste-of-nigeria-houston",
+      "name": "Taste of Nigeria",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "komchop-houston",
+      "name": "Komchop",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "finger-licking-2-0-houston",
+      "name": "Finger Licking 2.0",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "sarabell-calabar-houston",
+      "name": "Sarabell Calabar",
+      "removed": 2,
+      "remaining": 1
+    },
+    {
+      "id": "amala-zone-houston",
+      "name": "Amala Zone",
+      "removed": 3,
+      "remaining": 0
+    },
+    {
+      "id": "chef-benny-houston",
+      "name": "Chef Benny",
+      "removed": 2,
+      "remaining": 1
+    },
+    {
+      "id": "afrikiko-houston",
+      "name": "Afrikiko",
+      "removed": 2,
+      "remaining": 1
+    }
+  ]
+}

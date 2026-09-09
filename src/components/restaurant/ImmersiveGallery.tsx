@@ -192,7 +192,7 @@ export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryPro
                       type="button"
                       onClick={() => setActiveIndex(idx)}
                       className={cn(
-                        "h-14 w-20 shrink-0 overflow-hidden rounded-lg border-2",
+                        "relative h-14 w-20 shrink-0 overflow-hidden rounded-lg border-2",
                         idx === activeIndex ? "border-brand-bronze" : "border-transparent opacity-70",
                       )}
                       aria-label={`View photo ${idx + 1}`}

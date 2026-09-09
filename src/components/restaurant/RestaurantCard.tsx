@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import type { Database } from "@db/database.types";
-import { resolveRestaurantImageUrl } from "@/lib/restaurant-image";
+import { rankRestaurantImages, resolveRestaurantImageUrl } from "@/lib/restaurant-image";
 import { RestaurantCoverImage } from "@/components/restaurant/RestaurantCoverImage";
 import { BookingStatusBadge } from "@/components/restaurant/BookingStatusBadge";
 import { CatalogTrustBadge } from "@/components/restaurant/CatalogTrustBadge";
@@ -86,11 +86,15 @@ export function RestaurantCard({
   const safeHref = href ?? `/restaurants/${encodeURIComponent(restaurant.slug || restaurant.id)}`;
   const cuisines = Array.isArray(restaurant.cuisine_types) ? restaurant.cuisine_types : [];
   const price = "$".repeat(Math.max(1, Math.min(4, restaurant.price_range ?? 1)));
-  const imgSrc = resolveRestaurantImageUrl({
-    images: restaurant.images,
-    region: (restaurant as { region?: string | null }).region,
-    cuisine_types: cuisines,
-  });
+  const rankedImages = rankRestaurantImages(restaurant.images);
+  const imgSrc =
+    rankedImages[0] ??
+    resolveRestaurantImageUrl({
+      images: restaurant.images,
+      region: (restaurant as { region?: string | null }).region,
+      cuisine_types: cuisines,
+    });
+  const imageFallbacks = rankedImages.slice(1);
   const cityFromAddress = (restaurant.address as any)?.city as string | undefined;
   const cityLabel = city ?? cityFromAddress;
   
@@ -208,6 +212,7 @@ export function RestaurantCard({
         <div className="relative w-full overflow-hidden aspect-[4/3] bg-white/5">
           <RestaurantCoverImage
             src={imgSrc}
+            fallbacks={imageFallbacks}
             alt={restaurant.name}
             className="object-cover transition-transform duration-500 group-hover:scale-110"
             priority={shouldPriorityLoad}

@@ -28,6 +28,8 @@ const nextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "**.supabase.co" },
       { protocol: "https", hostname: "**.googleusercontent.com" },
+      { protocol: "https", hostname: "streetviewpixels-pa.googleapis.com" },
+      { protocol: "https", hostname: "maps.googleapis.com" },
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "source.unsplash.com" },
       { protocol: "https", hostname: "via.placeholder.com" },
