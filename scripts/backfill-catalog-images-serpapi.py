@@ -6,6 +6,7 @@ Picks diverse photos per listing: storefront, menu, interior vibe.
 Skips duplicate URLs, food tabs with empty plates, and wrong-place matches.
 
 Usage:
+  python3 scripts/backfill-catalog-images-serpapi.py --mode place-id --upgrade-venue-photos --limit 50 --photos 3
   python3 scripts/backfill-catalog-images-serpapi.py --mode search --limit 40 --photos 3
   python3 scripts/backfill-catalog-images-serpapi.py --refresh-duplicates --limit 10
 """
@@ -15,6 +16,7 @@ import argparse
 import importlib.util
 import json
 import os
+import re
 import sys
 import time
 import urllib.parse
@@ -44,6 +46,11 @@ SESSION_ID = "3435b4"
 BRAND_PLACEHOLDER = "/restaurant-card-placeholder.svg"
 LEGACY_PLACEHOLDER = "/og-image.svg"
 STOCK_PREFIX = "https://images.unsplash.com/"
+
+STREET_VIEW_RE = re.compile(
+    r"streetviewpixels-pa\.googleapis\.com|maps\.googleapis\.com/maps/api/streetview|googlestreetview",
+    re.I,
+)
 
 FALLBACK_CATEGORY_IDS = {
     "By owner": "CgIgARICEAE",
@@ -90,6 +97,18 @@ def load_env(path: Path) -> dict[str, str]:
         key, value = line.split("=", 1)
         env[key.strip()] = value.strip()
     return env
+
+
+def has_google_venue_photo(images: list | None) -> bool:
+    """True when catalog has a non-Street-View Google Maps venue photo."""
+    for raw in images or []:
+        url = str(raw or "").strip()
+        if not url or "googleusercontent.com" not in url:
+            continue
+        if STREET_VIEW_RE.search(url):
+            continue
+        return True
+    return False
 
 
 def has_real_images(images: list | None) -> bool:
@@ -281,12 +300,19 @@ def select_candidates(
     refresh: bool,
     refresh_duplicates: bool,
     refresh_partial: bool,
+    upgrade_venue_photos: bool,
     min_photos: int,
 ) -> list[dict]:
     out: list[dict] = []
     for r in catalog:
         if refresh_duplicates:
             if has_duplicate_images(r.get("images")):
+                out.append(r)
+            continue
+        if upgrade_venue_photos:
+            if mode == "place-id" and r.get("google_place_id") and not has_google_venue_photo(
+                r.get("images")
+            ):
                 out.append(r)
             continue
         if refresh_partial:
@@ -346,6 +372,11 @@ def main() -> int:
         action="store_true",
         help="Re-fetch listings with fewer than --photos real images",
     )
+    parser.add_argument(
+        "--upgrade-venue-photos",
+        action="store_true",
+        help="Replace website/Street View/empty images with Google Maps venue photos",
+    )
     args = parser.parse_args()
     quality = not args.no_quality
 
@@ -363,6 +394,7 @@ def main() -> int:
         refresh=args.refresh,
         refresh_duplicates=args.refresh_duplicates,
         refresh_partial=args.refresh_partial,
+        upgrade_venue_photos=args.upgrade_venue_photos,
         min_photos=args.photos,
     )
     batch = candidates[: max(1, args.limit)]
@@ -371,6 +403,7 @@ def main() -> int:
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "dryRun": args.dry_run,
         "mode": args.mode,
+        "upgradeVenuePhotos": args.upgrade_venue_photos,
         "quality": quality,
         "limit": args.limit,
         "photosPerRestaurant": args.photos,
