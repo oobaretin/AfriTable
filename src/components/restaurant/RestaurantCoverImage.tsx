@@ -4,6 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 import {
   isAfriTableBrandImage,
+  isGoogleMapsPhoto,
   RESTAURANT_BRAND_PLACEHOLDER,
   useNativeRestaurantImage,
 } from "@/lib/restaurant-image";
@@ -60,6 +61,7 @@ export function RestaurantCoverImage({
   const currentSrc = candidates[Math.min(index, candidates.length - 1)] ?? RESTAURANT_BRAND_PLACEHOLDER;
   const brand = isAfriTableBrandImage(currentSrc);
   const native = useNativeRestaurantImage(currentSrc);
+  const googleMaps = isGoogleMapsPhoto(currentSrc);
 
   const handleError = React.useCallback(() => {
     setIndex((current) => (current + 1 < candidates.length ? current + 1 : current));
@@ -77,6 +79,7 @@ export function RestaurantCoverImage({
         className={imgClass}
         loading={priority ? "eager" : loading ?? "lazy"}
         decoding="async"
+        referrerPolicy="no-referrer"
         onError={handleError}
         width={fill ? undefined : width ?? 128}
         height={fill ? undefined : height ?? 128}
@@ -87,12 +90,14 @@ export function RestaurantCoverImage({
   const shared = {
     src: currentSrc,
     alt,
-    unoptimized: brand,
+    unoptimized: brand || googleMaps,
+    referrerPolicy: googleMaps ? ("no-referrer" as const) : undefined,
     priority,
     loading,
     className,
     onError: handleError,
-    ...(brand ? {} : { placeholder: "blur" as const, blurDataURL: BLUR_DATA_URL }),
+    // Blur placeholder on lazy cards looked like a broken/brand placeholder; use empty blur only when prioritized.
+    ...(brand || !priority ? {} : { placeholder: "blur" as const, blurDataURL: BLUR_DATA_URL }),
   };
 
   if (fill) {

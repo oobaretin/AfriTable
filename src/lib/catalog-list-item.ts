@@ -70,11 +70,11 @@ export function toCatalogListItem(restaurant: JSONRestaurant): CatalogListItem {
     lng: restaurant.lng,
     phone: restaurant.phone,
     website: restaurant.website,
-    // Top ranked photos for cards (matches detail gallery order; enables onError fallbacks)
+    // Full ranked gallery for cards (same order as detail; enables onError fallbacks)
     images: ranked.length
-      ? ranked.slice(0, 3)
+      ? ranked
       : restaurant.images?.length
-        ? restaurant.images.filter(Boolean).slice(0, 3)
+        ? restaurant.images.filter(Boolean)
         : undefined,
     vibe_tags: restaurant.vibe_tags,
     vibe_category: restaurant.vibe_category,
