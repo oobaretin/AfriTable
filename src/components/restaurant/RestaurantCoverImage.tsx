@@ -62,17 +62,19 @@ export function RestaurantCoverImage({
   const brand = isAfriTableBrandImage(currentSrc);
   const native = useNativeRestaurantImage(currentSrc);
   const googleMaps = isGoogleMapsPhoto(currentSrc);
+  /** Hotlinked URLs (Maps + restaurant sites): native img avoids next/image prod/dev differences. */
+  const useNativeImg = native || googleMaps;
 
   const handleError = React.useCallback(() => {
     setIndex((current) => (current + 1 < candidates.length ? current + 1 : current));
   }, [candidates.length]);
 
-  if (native) {
+  if (useNativeImg) {
     const imgClass = fill
       ? `absolute inset-0 h-full w-full ${className}`
       : className;
     return (
-      // eslint-disable-next-line @next/next/no-img-element -- arbitrary restaurant website hosts
+      // eslint-disable-next-line @next/next/no-img-element -- Maps + arbitrary website hosts
       <img
         src={currentSrc}
         alt={alt}
@@ -90,8 +92,7 @@ export function RestaurantCoverImage({
   const shared = {
     src: currentSrc,
     alt,
-    unoptimized: brand || googleMaps,
-    referrerPolicy: googleMaps ? ("no-referrer" as const) : undefined,
+    unoptimized: brand,
     priority,
     loading,
     className,
