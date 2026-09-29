@@ -70,8 +70,12 @@ export function toCatalogListItem(restaurant: JSONRestaurant): CatalogListItem {
     lng: restaurant.lng,
     phone: restaurant.phone,
     website: restaurant.website,
-    // Prefer ranked venue photo for cards (not Street View when alternatives exist)
-    images: ranked.length ? [ranked[0]] : restaurant.images?.length ? [restaurant.images[0]] : undefined,
+    // Top ranked photos for cards (matches detail gallery order; enables onError fallbacks)
+    images: ranked.length
+      ? ranked.slice(0, 3)
+      : restaurant.images?.length
+        ? restaurant.images.filter(Boolean).slice(0, 3)
+        : undefined,
     vibe_tags: restaurant.vibe_tags,
     vibe_category: restaurant.vibe_category,
     vibe: restaurant.vibe,
