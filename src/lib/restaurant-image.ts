@@ -73,15 +73,38 @@ function photoRank(quality: PhotoQuality): number {
   }
 }
 
+/** Coerce Supabase/JSON image fields to a string[] (avoids iterating URL strings char-by-char). */
+export function normalizeRestaurantImages(images: unknown): string[] {
+  if (images == null) return [];
+  if (Array.isArray(images)) {
+    return images.map((u) => String(u ?? "").trim()).filter(Boolean);
+  }
+  if (typeof images === "string") {
+    const t = images.trim();
+    if (!t) return [];
+    if (t.startsWith("[")) {
+      try {
+        const parsed = JSON.parse(t) as unknown;
+        if (Array.isArray(parsed)) return normalizeRestaurantImages(parsed);
+      } catch {
+        /* single URL below */
+      }
+    }
+    if (t.startsWith("http") || t.startsWith("/") || t.startsWith("data:")) return [t];
+  }
+  return [];
+}
+
 /**
  * Order images for gallery/hero: venue photos first, Street View last.
  * Drops empty/stock/brand placeholders when venue or street photos exist.
  */
-export function rankRestaurantImages(images: string[] | null | undefined): string[] {
+export function rankRestaurantImages(images: unknown): string[] {
+  const normalized = normalizeRestaurantImages(images);
   const seen = new Set<string>();
   const scored: { url: string; rank: number }[] = [];
 
-  for (const raw of images ?? []) {
+  for (const raw of normalized) {
     const url = String(raw ?? "").trim();
     if (!url || seen.has(url)) continue;
     const quality = classifyPhotoUrl(url);
@@ -94,12 +117,12 @@ export function rankRestaurantImages(images: string[] | null | undefined): strin
   return scored.map((s) => s.url);
 }
 
-export function hasVenuePhoto(images: string[] | null | undefined): boolean {
-  return (images ?? []).some((u) => classifyPhotoUrl(u) === "venue");
+export function hasVenuePhoto(images: unknown): boolean {
+  return normalizeRestaurantImages(images).some((u) => classifyPhotoUrl(u) === "venue");
 }
 
-export function photoOnlyStreetView(images: string[] | null | undefined): boolean {
-  const list = (images ?? [])
+export function photoOnlyStreetView(images: unknown): boolean {
+  const list = normalizeRestaurantImages(images)
     .map((u) => classifyPhotoUrl(u))
     .filter((q) => q !== "empty" && q !== "placeholder" && q !== "stock");
   if (!list.length) return false;
@@ -115,7 +138,7 @@ function normalizeImageUrl(url: string): string | null {
 }
 
 type RestaurantImageInput = {
-  images?: string[] | null;
+  images?: string[] | string | null;
   region?: string | null;
   cuisine_types?: string[] | null;
   cuisine?: string | null;
@@ -129,8 +152,8 @@ export function resolveRestaurantImageUrl(restaurant: RestaurantImageInput): str
   const ranked = rankRestaurantImages(restaurant.images);
   if (ranked.length) return ranked[0];
 
-  for (const raw of restaurant.images ?? []) {
-    const url = normalizeImageUrl(String(raw ?? ""));
+  for (const raw of normalizeRestaurantImages(restaurant.images)) {
+    const url = normalizeImageUrl(raw);
     if (url) return url;
   }
   return RESTAURANT_BRAND_PLACEHOLDER;
@@ -142,8 +165,8 @@ export function resolveRestaurantGalleryImages(restaurant: RestaurantImageInput)
   if (ranked.length) return ranked;
 
   const fallback: string[] = [];
-  for (const raw of restaurant.images ?? []) {
-    const url = normalizeImageUrl(String(raw ?? ""));
+  for (const raw of normalizeRestaurantImages(restaurant.images)) {
+    const url = normalizeImageUrl(raw);
     if (url) fallback.push(url);
   }
   return fallback;

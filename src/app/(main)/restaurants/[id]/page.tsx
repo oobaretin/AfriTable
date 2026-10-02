@@ -416,6 +416,12 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
   if (!similar.length) {
     const fromJson = getSimilarRestaurantsFromJSON(catalogSlug, restaurant.cuisine_types || [], 6);
     similar = fromJson.map((r) => transformJSONRestaurantToDetail(r));
+  } else {
+    similar = similar.map((row: { slug?: string; id?: string; images?: unknown }) => {
+      const catalog = getRestaurantByIdFromJSON(String(row.slug || row.id || ""));
+      if (!catalog?.images?.length) return row;
+      return { ...row, images: catalog.images };
+    });
   }
 
   const addrStr = addressToString(restaurant.address);
