@@ -53,9 +53,11 @@ export function RestaurantCoverImage({
 }: RestaurantCoverImageProps) {
   const candidates = React.useMemo(() => buildCandidateList(src, fallbacks), [src, fallbacks]);
   const [index, setIndex] = React.useState(0);
+  const [remoteLoaded, setRemoteLoaded] = React.useState(false);
 
   React.useEffect(() => {
     setIndex(0);
+    setRemoteLoaded(false);
   }, [candidates]);
 
   const currentSrc = candidates[Math.min(index, candidates.length - 1)] ?? RESTAURANT_BRAND_PLACEHOLDER;
@@ -64,27 +66,76 @@ export function RestaurantCoverImage({
   const useNativeImg =
     !brand && (currentSrc.startsWith("http://") || currentSrc.startsWith("https://"));
 
-  const handleError = React.useCallback(() => {
+  const tryNextCandidate = React.useCallback(() => {
+    setRemoteLoaded(false);
     setIndex((current) => (current + 1 < candidates.length ? current + 1 : current));
   }, [candidates.length]);
+
+  // Probe off-DOM: Google 403 often skips img onError/onLoad in the document.
+  React.useEffect(() => {
+    if (brand || !useNativeImg) return;
+    let cancelled = false;
+    const probe = new window.Image();
+    probe.referrerPolicy = "no-referrer";
+    probe.onload = () => {
+      if (cancelled) return;
+      if (probe.naturalWidth < 2) tryNextCandidate();
+      else setRemoteLoaded(true);
+    };
+    probe.onerror = () => {
+      if (!cancelled) tryNextCandidate();
+    };
+    probe.src = currentSrc;
+    return () => {
+      cancelled = true;
+      probe.onload = null;
+      probe.onerror = null;
+    };
+  }, [brand, useNativeImg, currentSrc, tryNextCandidate]);
+
+  const handleRemoteLoad = React.useCallback(
+    (e: React.SyntheticEvent<HTMLImageElement>) => {
+      const img = e.currentTarget;
+      if (img.naturalWidth < 2) {
+        tryNextCandidate();
+        return;
+      }
+      setRemoteLoaded(true);
+    },
+    [tryNextCandidate],
+  );
 
   if (useNativeImg) {
     const imgClass = fill
       ? `absolute inset-0 h-full w-full ${className}`
       : className;
+    const underlayClass = fill
+      ? `absolute inset-0 h-full w-full object-cover ${className}`
+      : `${className} object-cover`;
     return (
-      // eslint-disable-next-line @next/next/no-img-element -- Maps + arbitrary website hosts
-      <img
-        src={currentSrc}
-        alt={alt}
-        className={imgClass}
-        loading={priority ? "eager" : loading ?? "lazy"}
-        decoding="async"
-        referrerPolicy="no-referrer"
-        onError={handleError}
-        width={fill ? undefined : width ?? 128}
-        height={fill ? undefined : height ?? 128}
-      />
+      <div className={fill ? "absolute inset-0" : "relative"}>
+        <img
+          src={RESTAURANT_BRAND_PLACEHOLDER}
+          alt=""
+          aria-hidden
+          className={underlayClass}
+          decoding="async"
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element -- Maps + arbitrary website hosts */}
+        <img
+          key={currentSrc}
+          src={currentSrc}
+          alt={alt}
+          className={`${imgClass} transition-opacity duration-200 ${remoteLoaded ? "opacity-100" : "opacity-0"}`}
+          loading={priority ? "eager" : loading ?? "lazy"}
+          decoding="async"
+          referrerPolicy="no-referrer"
+          onLoad={handleRemoteLoad}
+          onError={tryNextCandidate}
+          width={fill ? undefined : width ?? 128}
+          height={fill ? undefined : height ?? 128}
+        />
+      </div>
     );
   }
 
@@ -95,8 +146,7 @@ export function RestaurantCoverImage({
     priority,
     loading,
     className,
-    onError: handleError,
-    // Blur placeholder on lazy cards looked like a broken/brand placeholder; use empty blur only when prioritized.
+    onError: tryNextCandidate,
     ...(brand || !priority ? {} : { placeholder: "blur" as const, blurDataURL: BLUR_DATA_URL }),
   };
 
