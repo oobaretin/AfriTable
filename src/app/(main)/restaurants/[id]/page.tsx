@@ -32,6 +32,7 @@ import { transformJSONRestaurantToDetail } from "@/lib/restaurant-json-loader";
 import { parseCatalogHoursToArray } from "@/lib/parse-catalog-hours";
 import { getTodayOperatingHours } from "@/lib/today-operating-hours";
 import {
+  normalizeRestaurantImages,
   resolveRestaurantGalleryImages,
   resolveRestaurantImageUrl,
   resolveRestaurantOgImageUrl,
@@ -411,18 +412,64 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
     getSimilarRestaurants(dbRestaurantId ?? catalogSlug, restaurant.cuisine_types),
   ]);
 
-  // Fallback: when Supabase has no/few restaurants, use JSON for "You might also like"
-  let similar = similarFromDb;
-  if (!similar.length) {
-    const fromJson = getSimilarRestaurantsFromJSON(catalogSlug, restaurant.cuisine_types || [], 6);
-    similar = fromJson.map((r) => transformJSONRestaurantToDetail(r));
-  } else {
-    similar = similar.map((row: { slug?: string; id?: string; images?: unknown }) => {
-      const catalog = getRestaurantByIdFromJSON(String(row.slug || row.id || ""));
-      if (!catalog?.images?.length) return row;
-      return { ...row, images: catalog.images };
-    });
+  // Always prefer catalog JSON for similar cards (same images as directory/detail); overlay live ratings from Supabase.
+  const fromJson = getSimilarRestaurantsFromJSON(catalogSlug, restaurant.cuisine_types || [], 6);
+  let similar = fromJson.map((r) => transformJSONRestaurantToDetail(r));
+  if (!similar.length && similarFromDb.length) {
+    similar = similarFromDb.map((row: { slug?: string; id?: string; images?: unknown }) => ({
+      ...row,
+      slug: row.slug || row.id,
+      images: normalizeRestaurantImages(row.images),
+    }));
+  } else if (similar.length && similarFromDb.length) {
+    const dbBySlug = new Map(
+      similarFromDb.map((r: { slug?: string; avg_rating?: number | null; review_count?: number | null }) => [
+        String(r.slug || "").toLowerCase(),
+        r,
+      ]),
+    );
+    similar = similar.map(
+      (row: { slug?: string; id?: string; avg_rating?: number | null; review_count?: number | null }) => {
+        const db = dbBySlug.get(String(row.slug || row.id || "").toLowerCase());
+        if (!db) return row;
+        return {
+          ...row,
+          avg_rating: db.avg_rating ?? row.avg_rating,
+          review_count: db.review_count ?? row.review_count,
+        };
+      },
+    );
   }
+
+  // #region agent log
+  try {
+    const fs = await import("node:fs");
+    const logPath = "/Users/osagieobaretin/AfriTable/.cursor/debug-c696a7.log";
+    fs.appendFileSync(
+      logPath,
+      `${JSON.stringify({
+        sessionId: "c696a7",
+        runId: "post-fix",
+        hypothesisId: "H11",
+        location: "restaurants/[id]/page.tsx:similar",
+        message: "similar carousel built",
+        data: {
+          source: fromJson.length ? "json" : similarFromDb.length ? "supabase-fallback" : "empty",
+          count: similar.length,
+          samples: similar.slice(0, 3).map((r: { slug?: string; images?: unknown }) => ({
+            slug: r.slug,
+            imagesType: typeof r.images,
+            imageCount: Array.isArray(r.images) ? r.images.length : 0,
+            cover: String(Array.isArray(r.images) ? r.images[0] : r.images || "").slice(0, 48),
+          })),
+        },
+        timestamp: Date.now(),
+      })}\n`,
+    );
+  } catch {
+    /* ignore */
+  }
+  // #endregion
 
   const addrStr = addressToString(restaurant.address);
   const secondaryLocation = restaurant.secondary_location;

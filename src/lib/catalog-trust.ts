@@ -39,7 +39,7 @@ export type CatalogTrustInput = {
   phone?: string | null;
   website?: string | null;
   hours?: unknown;
-  images?: string[] | null;
+  images?: string[] | string | null;
   about?: string | null;
   our_story?: string | null;
   specialty?: string | null;
