@@ -2,7 +2,11 @@
 
 import * as React from "react";
 import type { Database } from "@db/database.types";
-import { rankRestaurantImages, resolveRestaurantImageUrl } from "@/lib/restaurant-image";
+import {
+  normalizeRestaurantImages,
+  rankRestaurantImages,
+  resolveRestaurantImageUrl,
+} from "@/lib/restaurant-image";
 import { RestaurantCoverImage } from "@/components/restaurant/RestaurantCoverImage";
 import { BookingStatusBadge } from "@/components/restaurant/BookingStatusBadge";
 import { CatalogTrustBadge } from "@/components/restaurant/CatalogTrustBadge";
@@ -73,7 +77,7 @@ export function RestaurantCard({
     phone: restaurant.phone,
     website: restaurant.website,
     hours: restaurant.hours,
-    images: restaurant.images,
+    images: normalizeRestaurantImages(restaurant.images),
     specialty: restaurant.specialty,
     menu_highlights: restaurant.menu_highlights,
     address: restaurant.address,
