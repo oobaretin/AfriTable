@@ -35,7 +35,7 @@ export type RestaurantCardRestaurant = {
   cuisine_types?: string[] | null;
   price_range?: number | null;
   address?: unknown;
-  images?: string[] | null;
+  images?: string[] | string | null;
   avg_rating?: number | null;
   review_count?: number | null;
   distance_miles?: number | null;

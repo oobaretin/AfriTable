@@ -43,6 +43,16 @@ function isSkippableUrl(url) {
   return false;
 }
 
+/** Google Maps hotlinks often 403 on server probes but load in browsers with no-referrer. */
+function isProbeUnreliableUrl(url) {
+  const u = String(url || "").trim();
+  return (
+    /googleusercontent\.com/i.test(u) ||
+    /streetviewpixels-pa\.googleapis\.com/i.test(u) ||
+    /maps\.googleapis\.com\/maps\/api\/streetview/i.test(u)
+  );
+}
+
 function probeUrl(url) {
   return new Promise((resolve) => {
     const parsed = new URL(url);
@@ -90,10 +100,15 @@ async function main() {
   const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
 
   const uniqueUrls = new Map();
+  const googleMapsUrls = new Set();
   for (const entry of catalog) {
     for (const raw of entry.images ?? []) {
       const url = String(raw ?? "").trim();
       if (!url || isSkippableUrl(url)) continue;
+      if (isProbeUnreliableUrl(url)) {
+        googleMapsUrls.add(url);
+        continue;
+      }
       if (!uniqueUrls.has(url)) uniqueUrls.set(url, []);
       uniqueUrls.get(url).push(entry.id);
     }
@@ -109,7 +124,16 @@ async function main() {
     return { url, ...result, restaurantIds: uniqueUrls.get(url) };
   });
 
-  const dead = new Set(probeResults.filter((r) => !r.ok).map((r) => r.url));
+  const dead = new Set(
+    probeResults
+      .filter((r) => {
+        if (r.ok) return false;
+        // Rate limits and auth walls are inconclusive — keep URL for browser retry.
+        if (r.status === 403 || r.status === 429) return false;
+        return true;
+      })
+      .map((r) => r.url),
+  );
   const alive = new Set(probeResults.filter((r) => r.ok).map((r) => r.url));
 
   let restaurantsTouched = 0;
@@ -144,6 +168,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     dryRun,
     uniqueUrlsInCatalog: uniqueUrls.size,
+    skippedGoogleMaps: googleMapsUrls.size,
     probed: toProbe.length,
     alive: alive.size,
     dead: dead.size,
