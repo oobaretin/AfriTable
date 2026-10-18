@@ -73,6 +73,16 @@ function photoRank(quality: PhotoQuality): number {
   }
 }
 
+/** Reject single-character / garbage values that become broken `<img src="h">` in the browser. */
+export function isPlausibleRestaurantImageUrl(url: string): boolean {
+  const s = String(url ?? "").trim();
+  if (!s) return false;
+  if (isAfriTableBrandImage(s)) return true;
+  if (s.startsWith("/") && !s.startsWith("//")) return s.length > 1;
+  if (s.startsWith("data:image")) return true;
+  return /^https?:\/\/\S{10,}/i.test(s);
+}
+
 /** Coerce Supabase/JSON image fields to a string[] (avoids iterating URL strings char-by-char). */
 export function normalizeRestaurantImages(images: unknown): string[] {
   if (images == null) return [];
@@ -106,7 +116,7 @@ export function rankRestaurantImages(images: unknown): string[] {
 
   for (const raw of normalized) {
     const url = String(raw ?? "").trim();
-    if (!url || seen.has(url)) continue;
+    if (!url || seen.has(url) || !isPlausibleRestaurantImageUrl(url)) continue;
     const quality = classifyPhotoUrl(url);
     if (quality === "empty" || quality === "stock" || quality === "placeholder") continue;
     seen.add(url);

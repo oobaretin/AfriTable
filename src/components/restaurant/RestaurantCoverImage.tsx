@@ -4,9 +4,8 @@ import * as React from "react";
 import Image from "next/image";
 import {
   isAfriTableBrandImage,
-  isGoogleMapsPhoto,
+  isPlausibleRestaurantImageUrl,
   RESTAURANT_BRAND_PLACEHOLDER,
-  useNativeRestaurantImage,
 } from "@/lib/restaurant-image";
 
 const BLUR_DATA_URL =
@@ -32,6 +31,7 @@ function buildCandidateList(src: string, fallbacks: string[] | undefined): strin
   for (const raw of [src, ...(fallbacks ?? []), RESTAURANT_BRAND_PLACEHOLDER]) {
     const url = String(raw ?? "").trim();
     if (!url || seen.has(url)) continue;
+    if (!isPlausibleRestaurantImageUrl(url) && !isAfriTableBrandImage(url)) continue;
     seen.add(url);
     out.push(url);
   }
@@ -60,10 +60,9 @@ export function RestaurantCoverImage({
 
   const currentSrc = candidates[Math.min(index, candidates.length - 1)] ?? RESTAURANT_BRAND_PLACEHOLDER;
   const brand = isAfriTableBrandImage(currentSrc);
-  const native = useNativeRestaurantImage(currentSrc);
-  const googleMaps = isGoogleMapsPhoto(currentSrc);
-  /** Hotlinked URLs (Maps + restaurant sites): native img avoids next/image prod/dev differences. */
-  const useNativeImg = native || googleMaps;
+  /** All remote http(s) photos use native img + no-referrer (Maps, CDN, restaurant sites). */
+  const useNativeImg =
+    !brand && (currentSrc.startsWith("http://") || currentSrc.startsWith("https://"));
 
   const handleError = React.useCallback(() => {
     setIndex((current) => (current + 1 < candidates.length ? current + 1 : current));

@@ -441,36 +441,6 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
     );
   }
 
-  // #region agent log
-  try {
-    const fs = await import("node:fs");
-    const logPath = "/Users/osagieobaretin/AfriTable/.cursor/debug-c696a7.log";
-    fs.appendFileSync(
-      logPath,
-      `${JSON.stringify({
-        sessionId: "c696a7",
-        runId: "post-fix",
-        hypothesisId: "H11",
-        location: "restaurants/[id]/page.tsx:similar",
-        message: "similar carousel built",
-        data: {
-          source: fromJson.length ? "json" : similarFromDb.length ? "supabase-fallback" : "empty",
-          count: similar.length,
-          samples: similar.slice(0, 3).map((r: { slug?: string; images?: unknown }) => ({
-            slug: r.slug,
-            imagesType: typeof r.images,
-            imageCount: Array.isArray(r.images) ? r.images.length : 0,
-            cover: String(Array.isArray(r.images) ? r.images[0] : r.images || "").slice(0, 48),
-          })),
-        },
-        timestamp: Date.now(),
-      })}\n`,
-    );
-  } catch {
-    /* ignore */
-  }
-  // #endregion
-
   const addrStr = addressToString(restaurant.address);
   const secondaryLocation = restaurant.secondary_location;
   const todays = getTodayOperatingHours(operatingHours, {
