@@ -182,6 +182,23 @@ export function resolveRestaurantGalleryImages(restaurant: RestaurantImageInput)
   return fallback;
 }
 
+/** Fallback URLs for one gallery tile when its primary photo is dead (try siblings before brand placeholder). */
+export function galleryCoverFallbacks(allImages: string[], primaryIndex: number): string[] {
+  if (!allImages.length) return [];
+  const out: string[] = [];
+  const seen = new Set<string>();
+  const primary = allImages[primaryIndex];
+  if (primary) seen.add(primary);
+  for (let i = 0; i < allImages.length; i++) {
+    if (i === primaryIndex) continue;
+    const url = allImages[i];
+    if (!url || seen.has(url)) continue;
+    seen.add(url);
+    out.push(url);
+  }
+  return out;
+}
+
 /** First real venue photo for Open Graph — skip Street View when possible. */
 export function resolveRestaurantOgImageUrl(restaurant: RestaurantImageInput): string | null {
   const ranked = rankRestaurantImages(restaurant.images);

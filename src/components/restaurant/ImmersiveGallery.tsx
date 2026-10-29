@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { RestaurantCoverImage } from "@/components/restaurant/RestaurantCoverImage";
-import { rankRestaurantImages } from "@/lib/restaurant-image";
+import { galleryCoverFallbacks, rankRestaurantImages } from "@/lib/restaurant-image";
 import { cn } from "@/lib/utils";
 
 type ImmersiveGalleryProps = {
@@ -77,6 +77,7 @@ export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryPro
           <div className="relative w-full h-full">
             <RestaurantCoverImage
               src={mainImage}
+              fallbacks={galleryCoverFallbacks(safeImages, 0)}
               alt={`${restaurantName} - Main`}
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -99,6 +100,7 @@ export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryPro
             <div className="relative w-full h-full">
               <RestaurantCoverImage
                 src={secondImage}
+                fallbacks={galleryCoverFallbacks(safeImages, 1)}
                 alt={`${restaurantName} - Interior`}
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 25vw"
@@ -114,6 +116,7 @@ export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryPro
             <div className="relative w-full h-full">
               <RestaurantCoverImage
                 src={thirdImage}
+                fallbacks={galleryCoverFallbacks(safeImages, 2)}
                 alt={`${restaurantName} - Plating`}
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 25vw"
@@ -131,6 +134,7 @@ export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryPro
           <div className="relative w-full h-full">
             <RestaurantCoverImage
               src={fourthImage}
+              fallbacks={galleryCoverFallbacks(safeImages, 3)}
               alt={`${restaurantName} - Atmosphere`}
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="25vw"
@@ -154,6 +158,7 @@ export function ImmersiveGallery({ images, restaurantName }: ImmersiveGalleryPro
             <div className="relative aspect-[16/10] w-full">
               <RestaurantCoverImage
                 src={safeImages[activeIndex]}
+                fallbacks={galleryCoverFallbacks(safeImages, activeIndex)}
                 alt={`${restaurantName} photo ${activeIndex + 1}`}
                 className="object-contain"
                 sizes="100vw"

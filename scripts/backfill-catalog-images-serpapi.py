@@ -51,6 +51,8 @@ STREET_VIEW_RE = re.compile(
     r"streetviewpixels-pa\.googleapis\.com|maps\.googleapis\.com/maps/api/streetview|googlestreetview",
     re.I,
 )
+# Expired catalog import batch (403 in browser); SerpAPI refresh uses ANWiy9 / grass-cs paths.
+STALE_GOOGLE_VENUE_RE = re.compile(r"googleusercontent\.com/gps-cs-s/AHRPT", re.I)
 
 FALLBACK_CATEGORY_IDS = {
     "By owner": "CgIgARICEAE",
@@ -111,6 +113,39 @@ def has_google_venue_photo(images: list | None) -> bool:
     return False
 
 
+def has_street_view_photo(images: list | None) -> bool:
+    return any(STREET_VIEW_RE.search(str(raw or "")) for raw in (images or []))
+
+
+def has_third_party_venue_photo(images: list | None) -> bool:
+    """Non-Google venue URLs (restaurant site, SpotApps CDN, etc.)."""
+    for raw in images or []:
+        url = str(raw or "").strip()
+        if not url.startswith("http"):
+            continue
+        if "googleusercontent.com" in url or STREET_VIEW_RE.search(url):
+            continue
+        if url.startswith(STOCK_PREFIX):
+            continue
+        if "placeholder" in url or url.endswith(".svg"):
+            continue
+        return True
+    return False
+
+
+def has_stale_google_venue_photo(images: list | None) -> bool:
+    return any(STALE_GOOGLE_VENUE_RE.search(str(raw or "")) for raw in (images or []))
+
+
+def is_google_only_venue_catalog(images: list | None) -> bool:
+    """Stale Maps hotlinks: Google-only catalog with expired gps-cs-s/AHRPT URLs."""
+    if not has_google_venue_photo(images):
+        return False
+    if has_street_view_photo(images) or has_third_party_venue_photo(images):
+        return False
+    return has_stale_google_venue_photo(images)
+
+
 def has_real_images(images: list | None) -> bool:
     if not images:
         return False
@@ -150,8 +185,30 @@ def count_real_images(images: list | None) -> int:
 def fetch_serpapi(api_key: str, params: dict[str, str]) -> dict | None:
     query = urllib.parse.urlencode({**params, "api_key": api_key})
     url = f"https://serpapi.com/search.json?{query}"
-    with urllib.request.urlopen(url, timeout=30) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    backoff_s = (0, 4, 12, 30)
+    last_err: Exception | None = None
+    for attempt, wait in enumerate(backoff_s):
+        if wait:
+            time.sleep(wait)
+        try:
+            with urllib.request.urlopen(url, timeout=45) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as err:
+            last_err = err
+            if err.code == 429 and attempt < len(backoff_s) - 1:
+                audit_log(
+                    "serpapi 429 retry",
+                    {"attempt": attempt + 1, "waitNext": backoff_s[attempt + 1]},
+                    "rate-limit",
+                )
+                continue
+            raise
+        except Exception as err:
+            last_err = err
+            raise
+    if last_err:
+        raise last_err
+    return None
 
 
 def fetch_place_details(api_key: str, place_id: str) -> dict | None:
@@ -300,11 +357,18 @@ def select_candidates(
     refresh: bool,
     refresh_duplicates: bool,
     refresh_partial: bool,
+    refresh_google_only: bool,
     upgrade_venue_photos: bool,
     min_photos: int,
 ) -> list[dict]:
     out: list[dict] = []
     for r in catalog:
+        if refresh_google_only:
+            if mode == "place-id" and r.get("google_place_id") and is_google_only_venue_catalog(
+                r.get("images")
+            ):
+                out.append(r)
+            continue
         if refresh_duplicates:
             if has_duplicate_images(r.get("images")):
                 out.append(r)
@@ -377,6 +441,19 @@ def main() -> int:
         action="store_true",
         help="Replace website/Street View/empty images with Google Maps venue photos",
     )
+    parser.add_argument(
+        "--refresh-google-only",
+        action="store_true",
+        help="Re-fetch fresh Maps photos for listings with Google URLs only (often expired hotlinks)",
+    )
+    parser.add_argument(
+        "--catalog-id",
+        action="append",
+        dest="catalog_ids",
+        default=[],
+        metavar="ID",
+        help="Limit to one or more catalog ids (e.g. chez-michelle); repeat flag for multiple",
+    )
     args = parser.parse_args()
     quality = not args.no_quality
 
@@ -394,9 +471,13 @@ def main() -> int:
         refresh=args.refresh,
         refresh_duplicates=args.refresh_duplicates,
         refresh_partial=args.refresh_partial,
+        refresh_google_only=args.refresh_google_only,
         upgrade_venue_photos=args.upgrade_venue_photos,
         min_photos=args.photos,
     )
+    if args.catalog_ids:
+        allow = {str(x).strip() for x in args.catalog_ids if str(x).strip()}
+        candidates = [r for r in candidates if str(r.get("id") or "") in allow]
     batch = candidates[: max(1, args.limit)]
 
     report = {

@@ -52,6 +52,9 @@ const USER_AGENT =
 
 function parseArgs(argv) {
   const dryRun = argv.includes("--dry-run");
+  const includeGoogleVenue = argv.includes("--include-google-venue");
+  const replaceGoogle = argv.includes("--replace-google");
+  const ids = new Set();
   let limit = Infinity;
   let concurrency = 6;
   let maxPhotos = 3;
@@ -65,9 +68,12 @@ function parseArgs(argv) {
     } else if (argv[i] === "--photos" && argv[i + 1]) {
       maxPhotos = Math.min(5, Math.max(1, parseInt(argv[i + 1], 10) || 3));
       i++;
+    } else if (argv[i] === "--id" && argv[i + 1]) {
+      ids.add(String(argv[i + 1]).trim());
+      i++;
     }
   }
-  return { dryRun, limit, concurrency, maxPhotos };
+  return { dryRun, limit, concurrency, maxPhotos, includeGoogleVenue, replaceGoogle, ids };
 }
 
 function hasGoogleVenuePhoto(images) {
@@ -278,11 +284,13 @@ async function mapPool(items, concurrency, fn) {
 }
 
 async function main() {
-  const { dryRun, limit, concurrency, maxPhotos } = parseArgs(process.argv.slice(2));
+  const { dryRun, limit, concurrency, maxPhotos, includeGoogleVenue, replaceGoogle, ids } =
+    parseArgs(process.argv.slice(2));
   const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
 
   const candidates = catalog.filter((entry) => {
-    if (hasGoogleVenuePhoto(entry.images)) return false;
+    if (ids.size && !ids.has(entry.id)) return false;
+    if (hasGoogleVenuePhoto(entry.images) && !includeGoogleVenue) return false;
     return Boolean(normalizeWebsite(entry.website));
   });
 
@@ -343,7 +351,19 @@ async function main() {
 
     if (result.status === "updated" && result.images?.length) {
       report.updated++;
-      if (!dryRun) result.entry.images = result.images;
+      if (!dryRun) {
+        const hadGoogle = hasGoogleVenuePhoto(result.entry.images);
+        if (includeGoogleVenue && hadGoogle && !replaceGoogle) {
+          const merged = [...result.images];
+          for (const u of result.entry.images ?? []) {
+            const t = String(u ?? "").trim();
+            if (t && !merged.includes(t)) merged.push(t);
+          }
+          result.entry.images = merged;
+        } else {
+          result.entry.images = result.images;
+        }
+      }
     } else if (result.status === "fetch_failed") {
       report.fetchFailed++;
     } else {

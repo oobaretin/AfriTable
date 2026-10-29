@@ -25,6 +25,22 @@ type RestaurantCoverImageProps = {
   height?: number;
 };
 
+function agentLog(payload: Record<string, unknown>) {
+  const body = JSON.stringify({ sessionId: "c696a7", timestamp: Date.now(), ...payload });
+  // #region agent log
+  fetch("/api/debug/session-log", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body,
+  }).catch(() => {});
+  fetch("http://127.0.0.1:7334/ingest/db39d61a-a551-4eae-93f4-8f741a47f367", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "c696a7" },
+    body,
+  }).catch(() => {});
+  // #endregion
+}
+
 function buildCandidateList(src: string, fallbacks: string[] | undefined): string[] {
   const seen = new Set<string>();
   const out: string[] = [];
@@ -53,11 +69,12 @@ export function RestaurantCoverImage({
 }: RestaurantCoverImageProps) {
   const candidates = React.useMemo(() => buildCandidateList(src, fallbacks), [src, fallbacks]);
   const [index, setIndex] = React.useState(0);
-  const [remoteLoaded, setRemoteLoaded] = React.useState(false);
+  /** True once off-DOM probe (or onLoad) confirms pixels; avoids mounting dead URLs (broken icon). */
+  const [remoteValidated, setRemoteValidated] = React.useState(false);
 
   React.useEffect(() => {
     setIndex(0);
-    setRemoteLoaded(false);
+    setRemoteValidated(false);
   }, [candidates]);
 
   const currentSrc = candidates[Math.min(index, candidates.length - 1)] ?? RESTAURANT_BRAND_PLACEHOLDER;
@@ -67,9 +84,20 @@ export function RestaurantCoverImage({
     !brand && (currentSrc.startsWith("http://") || currentSrc.startsWith("https://"));
 
   const tryNextCandidate = React.useCallback(() => {
-    setRemoteLoaded(false);
+    setRemoteValidated(false);
     setIndex((current) => (current + 1 < candidates.length ? current + 1 : current));
   }, [candidates.length]);
+
+  React.useEffect(() => {
+    if (!brand || index === 0) return;
+    agentLog({
+      runId: "post-fix-3",
+      hypothesisId: "H4",
+      location: "RestaurantCoverImage.tsx:fallback-brand",
+      message: "showing brand placeholder after remote failures",
+      data: { index, candidateCount: candidates.length, alt: alt.slice(0, 40) },
+    });
+  }, [brand, index, candidates.length, alt]);
 
   // Probe off-DOM: Google 403 often skips img onError/onLoad in the document.
   React.useEffect(() => {
@@ -77,21 +105,57 @@ export function RestaurantCoverImage({
     let cancelled = false;
     const probe = new window.Image();
     probe.referrerPolicy = "no-referrer";
+    const timeoutId = window.setTimeout(() => {
+      if (cancelled) return;
+      agentLog({
+        runId: "post-fix-3",
+        hypothesisId: "H15",
+        location: "RestaurantCoverImage.tsx:probe-timeout",
+        message: "off-DOM probe timed out",
+        data: { index, candidateCount: candidates.length, srcTail: currentSrc.slice(-48) },
+      });
+      tryNextCandidate();
+    }, 10_000);
     probe.onload = () => {
       if (cancelled) return;
-      if (probe.naturalWidth < 2) tryNextCandidate();
-      else setRemoteLoaded(true);
+      window.clearTimeout(timeoutId);
+      const ok = probe.naturalWidth >= 2;
+      agentLog({
+        runId: "post-fix-3",
+        hypothesisId: "H1",
+        location: "RestaurantCoverImage.tsx:probe-onload",
+        message: "off-DOM probe finished",
+        data: {
+          ok,
+          nw: probe.naturalWidth,
+          index,
+          candidateCount: candidates.length,
+          srcTail: currentSrc.slice(-48),
+        },
+      });
+      if (!ok) tryNextCandidate();
+      else setRemoteValidated(true);
     };
     probe.onerror = () => {
-      if (!cancelled) tryNextCandidate();
+      if (cancelled) return;
+      window.clearTimeout(timeoutId);
+      agentLog({
+        runId: "post-fix-3",
+        hypothesisId: "H2",
+        location: "RestaurantCoverImage.tsx:probe-onerror",
+        message: "off-DOM probe error",
+        data: { index, candidateCount: candidates.length, srcTail: currentSrc.slice(-48) },
+      });
+      tryNextCandidate();
     };
     probe.src = currentSrc;
     return () => {
       cancelled = true;
+      window.clearTimeout(timeoutId);
       probe.onload = null;
       probe.onerror = null;
     };
-  }, [brand, useNativeImg, currentSrc, tryNextCandidate]);
+  }, [brand, useNativeImg, currentSrc, tryNextCandidate, index, candidates.length]);
 
   const handleRemoteLoad = React.useCallback(
     (e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -100,7 +164,7 @@ export function RestaurantCoverImage({
         tryNextCandidate();
         return;
       }
-      setRemoteLoaded(true);
+      setRemoteValidated(true);
     },
     [tryNextCandidate],
   );
@@ -121,20 +185,22 @@ export function RestaurantCoverImage({
           className={underlayClass}
           decoding="async"
         />
-        {/* eslint-disable-next-line @next/next/no-img-element -- Maps + arbitrary website hosts */}
-        <img
-          key={currentSrc}
-          src={currentSrc}
-          alt={alt}
-          className={`${imgClass} transition-opacity duration-200 ${remoteLoaded ? "opacity-100" : "opacity-0"}`}
-          loading={priority ? "eager" : loading ?? "lazy"}
-          decoding="async"
-          referrerPolicy="no-referrer"
-          onLoad={handleRemoteLoad}
-          onError={tryNextCandidate}
-          width={fill ? undefined : width ?? 128}
-          height={fill ? undefined : height ?? 128}
-        />
+        {remoteValidated ? (
+          /* eslint-disable-next-line @next/next/no-img-element -- Maps + arbitrary website hosts */
+          <img
+            key={currentSrc}
+            src={currentSrc}
+            alt={alt}
+            className={`${imgClass} transition-opacity duration-200 opacity-100`}
+            loading={priority ? "eager" : loading ?? "lazy"}
+            decoding="async"
+            referrerPolicy="no-referrer"
+            onLoad={handleRemoteLoad}
+            onError={tryNextCandidate}
+            width={fill ? undefined : width ?? 128}
+            height={fill ? undefined : height ?? 128}
+          />
+        ) : null}
       </div>
     );
   }
