@@ -3,6 +3,7 @@
 import * as React from "react";
 import type { Database } from "@db/database.types";
 import {
+  buildCardCoverFallbacks,
   normalizeRestaurantImages,
   rankRestaurantImages,
   resolveRestaurantImageUrl,
@@ -53,6 +54,8 @@ export type RestaurantCardRestaurant = {
   website?: string | null;
   hours?: unknown;
   trust_level?: CatalogTrustLevel;
+  lat?: number | null;
+  lng?: number | null;
 };
 
 export function RestaurantCard({
@@ -98,7 +101,7 @@ export function RestaurantCard({
       region: (restaurant as { region?: string | null }).region,
       cuisine_types: cuisines,
     });
-  const imageFallbacks = rankedImages.slice(1);
+  const imageFallbacks = buildCardCoverFallbacks(restaurant.images);
   const cityFromAddress = (restaurant.address as any)?.city as string | undefined;
   const cityLabel = city ?? cityFromAddress;
   
@@ -237,7 +240,7 @@ export function RestaurantCard({
               <CatalogTrustBadge trust={trustSignals} size="sm" className="bg-white/95 backdrop-blur-sm" />
             ) : null}
             <BookingStatusBadge action={bookingAction} size="sm" className="bg-white/95 backdrop-blur-sm" />
-            <div className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm">
+            <div className="tag rounded-full bg-white/90 px-3 py-1 text-slate-900 backdrop-blur-sm">
               {price}
             </div>
           </div>
@@ -246,12 +249,10 @@ export function RestaurantCard({
         {/* Content */}
         <div className="p-5">
           <div className="mb-2 flex items-center justify-between">
-            <h3 className="text-xl font-bold text-slate-900 truncate uppercase tracking-tight">
-              {restaurant.name}
-            </h3>
+            <h3 className="truncate">{restaurant.name}</h3>
             {rating !== null && (
               <div className="flex items-center gap-1 text-brand-gold">
-                <span className="text-sm font-bold">{rating.toFixed(1)}</span>
+                <span className="rating-num text-sm">{rating.toFixed(1)}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                   <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
                 </svg>
@@ -263,8 +264,8 @@ export function RestaurantCard({
             const specialty = resolveGuestSpecialty(restaurant.specialty, restaurant.menu_highlights);
             if (!specialty) return null;
             return (
-              <p className="mb-2 text-sm font-medium text-slate-700">
-                <span className="text-[#C69C2B] font-bold">Known for:</span> {specialty}
+              <p className="mb-2 text-slate-700">
+                <span className="text-[#C69C2B]">Known for:</span> {specialty}
               </p>
             );
           })()}
@@ -289,10 +290,10 @@ export function RestaurantCard({
             return (
               <div className="mb-4 space-y-1">
                 {neighborhood ? (
-                  <p className="text-[10px] uppercase tracking-wider text-slate-500 font-medium">{neighborhood}</p>
+                  <p className="metadata text-slate-500">{neighborhood}</p>
                 ) : null}
                 {awards && awards.length > 0 ? (
-                  <p className="text-[10px] uppercase tracking-wider text-slate-600 font-bold">
+                  <p className="metadata text-slate-600">
                     {awards.join(" • ")}
                   </p>
                 ) : null}
@@ -322,14 +323,14 @@ export function RestaurantCard({
           <button
             type="button"
             onClick={handleBookClick}
-            className="block w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-20 pointer-events-auto touch-manipulation cursor-pointer"
+            className="btn block w-full rounded-lg bg-brand-mutedRed py-3 text-center text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-20 pointer-events-auto touch-manipulation cursor-pointer"
           >
             {bookingAction.ctaLabel}
           </button>
         ) : (
           <a
             href={safeHref}
-            className="block w-full rounded-lg bg-brand-mutedRed py-3 text-center text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-20 pointer-events-auto touch-manipulation cursor-pointer"
+            className="btn block w-full rounded-lg bg-brand-mutedRed py-3 text-center text-white transition-colors hover:bg-brand-mutedRed/90 active:bg-brand-mutedRed/80 relative z-20 pointer-events-auto touch-manipulation cursor-pointer"
           >
             {bookingAction.ctaLabel}
           </a>

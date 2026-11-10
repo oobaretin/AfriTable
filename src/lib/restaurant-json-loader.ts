@@ -102,6 +102,8 @@ export function transformJSONRestaurantToDetail(jsonRestaurant: CatalogListItem 
     special_features: jsonRestaurant.special_features || null,
     menu: jsonRestaurant.menu_highlights ? { highlights: jsonRestaurant.menu_highlights } : null,
     address: addressObj,
+    lat: jsonRestaurant.lat ?? null,
+    lng: jsonRestaurant.lng ?? null,
     phone: jsonRestaurant.phone || null,
     website: jsonRestaurant.website && jsonRestaurant.website !== "N/A" ? jsonRestaurant.website : null,
     google_search_url: resolveGoogleSearchUrl({

@@ -38,7 +38,7 @@ export default async function MainHomePage() {
   const trendingCityGroups = buildTrendingCityGroups(restaurantsFromJSON, featuredCityKeys);
 
   return (
-    <main>
+    <main className="home-page">
       <LivePartnerSlugsProvider slugs={livePartnerSlugs}>
         <HomeSearchProvider>
         {/* One job: find a real sit-down table */}
@@ -49,11 +49,12 @@ export default async function MainHomePage() {
         </div>
 
         {/* Secondary: city discovery */}
-        <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
+        <section className="city-discovery mx-auto max-w-6xl px-6 py-14 md:py-20">
           <Reveal>
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Explore by city</h2>
-              <p className="mt-2 text-muted-foreground">
+              <p className="eyebrow">City discovery</p>
+              <h2>Explore by city</h2>
+              <p className="lede mt-2 text-muted-foreground">
                 Vetted sit-down African and Caribbean dining across top metros.
               </p>
             </div>
@@ -65,7 +66,7 @@ export default async function MainHomePage() {
           <Reveal className="mt-6 flex justify-center">
             <Link
               href="/restaurants"
-              className="text-sm font-semibold text-brand-mutedRed underline-offset-4 hover:underline"
+              className="text-brand-mutedRed underline-offset-4 hover:underline"
             >
               Browse all restaurants →
             </Link>
@@ -73,15 +74,15 @@ export default async function MainHomePage() {
         </section>
 
         {/* Slim partner path — not competing with diner discovery */}
-        <section className="border-t border-slate-200 bg-brand-paper/60">
+        <section className="partner-strip border-t border-slate-200 bg-brand-paper/60">
           <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 py-10 md:flex-row md:items-center">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-brand-bronze">Restaurant owners</p>
-              <p className="mt-1 text-lg font-semibold text-slate-900">Claim your listing and go live for booking.</p>
+              <p className="eyebrow">Restaurant owners</p>
+              <h3 className="mt-1">Claim your listing and go live for booking.</h3>
             </div>
             <Link
               href="/join-as-restaurant"
-              className="inline-flex rounded-lg bg-brand-mutedRed px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-mutedRed/90"
+              className="btn inline-flex rounded-lg bg-brand-mutedRed px-5 py-2.5 text-white transition-colors hover:bg-brand-mutedRed/90"
             >
               Partner with AfriTable
             </Link>

@@ -1,0 +1,479 @@
+/* AfriTable site typography — type only (scoped under .site-typography via SiteLayout) */
+
+.site-typography {
+  --display: var(--font-fraunces), "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  --fs-display: clamp(2.9rem, 7.2vw, 6.4rem);
+  --fs-h2: clamp(1.9rem, 3.6vw, 3.1rem);
+  --fs-h3: clamp(1.15rem, 1.6vw, 1.4rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-micro: 0.6875rem;
+  --fs-nano: 0.5625rem;
+
+  --landing-ink: #0f172a;
+  --landing-ink-muted: color-mix(in srgb, var(--landing-ink) 66%, transparent);
+  --landing-gold: #c69c2b;
+  --landing-hero-ink: #ffffff;
+}
+
+body:has(.site-typography) {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* —— Display —— */
+.site-typography h1,
+.site-typography .display {
+  font-family: var(--display);
+  font-size: var(--fs-display);
+  font-weight: 380;
+  line-height: 0.94;
+  letter-spacing: -0.025em;
+  font-variation-settings: "SOFT" 30, "WONK" 1;
+  text-wrap: balance;
+  text-transform: none;
+  font-style: normal;
+  color: var(--landing-ink);
+}
+
+.site-typography #hero-search h1 {
+  color: var(--landing-hero-ink);
+}
+
+.site-typography h1 em,
+.site-typography .display em {
+  font-style: italic;
+  font-weight: 340;
+  letter-spacing: -0.03em;
+  color: var(--landing-gold);
+}
+
+.site-typography h2 {
+  font-family: var(--display);
+  font-size: var(--fs-h2);
+  font-weight: 420;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-variation-settings: "SOFT" 20, "WONK" 1;
+  text-transform: none;
+  font-style: normal;
+  color: var(--landing-ink);
+}
+
+.site-typography #hero-search h2 {
+  font-size: var(--fs-display);
+  line-height: 0.94;
+  letter-spacing: -0.025em;
+  font-weight: 380;
+  font-variation-settings: "SOFT" 30, "WONK" 1;
+  color: var(--landing-gold);
+}
+
+.site-typography #restaurants-section > div > .border-l-4 h2,
+.site-typography #restaurants-section > div > .mb-8 h2,
+.site-typography #restaurants-section .text-center h2 {
+  color: var(--landing-hero-ink);
+}
+
+.site-typography #restaurants-section .group h3,
+.site-typography #restaurants-section .group .p-5 h3 {
+  color: var(--landing-ink);
+}
+
+.site-typography [data-slot="card-title"] {
+  font-family: var(--display);
+  font-size: 1.22rem;
+  font-weight: 480;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.site-typography h3 {
+  font-family: var(--display);
+  font-size: 1.22rem;
+  font-weight: 480;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.site-typography blockquote {
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-weight: 340;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+/* —— Body —— */
+.site-typography,
+.site-typography p {
+  font-family: var(--sans);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.site-typography p {
+  max-width: 75ch;
+}
+
+.site-typography .lede {
+  font-family: var(--sans);
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  line-height: 1.65;
+  font-weight: 400;
+  max-width: 34ch;
+  color: var(--landing-ink-muted);
+}
+
+.site-typography #hero-search .lede {
+  color: color-mix(in srgb, var(--landing-hero-ink) 66%, transparent);
+  max-width: 34ch;
+}
+
+/* —— Mono utilities —— */
+.site-typography .eyebrow {
+  font-family: var(--mono);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--landing-gold);
+}
+
+.site-typography #hero-search .eyebrow {
+  color: color-mix(in srgb, var(--landing-gold) 70%, transparent);
+}
+
+.site-typography .type-label,
+.site-typography .type-tail,
+.site-typography .metadata {
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.site-typography .tag,
+.site-typography .badge,
+.site-typography [data-slot="badge"] {
+  font-family: var(--mono);
+  font-size: var(--fs-nano);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.site-typography button,
+.site-typography .btn {
+  font-family: var(--mono);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+.site-typography input[type="text"],
+.site-typography input[type="email"],
+.site-typography input[type="tel"],
+.site-typography input[type="search"],
+.site-typography input[type="url"],
+.site-typography input:not([type]),
+.site-typography textarea,
+.site-typography select,
+.site-typography #hero-search input[type="text"],
+.site-typography #hero-search input:not([type]),
+.site-typography .sticky-hero-search input[type="text"] {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+.site-typography label,
+.site-typography [data-slot="label"] {
+  font-family: var(--mono);
+  font-size: var(--fs-nano);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* —— Homepage (full page) —— */
+.site-typography .home-page .city-discovery .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.site-typography .home-page .city-discovery .lede {
+  color: var(--landing-ink-muted);
+  max-width: 75ch;
+}
+
+.site-typography .home-page #restaurants-section .lede {
+  color: color-mix(in srgb, var(--landing-hero-ink) 66%, transparent);
+  max-width: 75ch;
+}
+
+.site-typography .home-page #restaurants-section h2.text-\[\#C69C2B\] {
+  color: var(--landing-gold);
+}
+
+.site-typography .founders-note h3,
+.site-typography .home-page .founders-note h3 {
+  font-weight: 480;
+  color: var(--landing-ink);
+}
+
+.site-typography .founders-note .eyebrow,
+.site-typography .home-page .founders-note .eyebrow {
+  color: var(--landing-gold);
+}
+
+.site-typography .founders-note blockquote,
+.site-typography .founders-note .founder-quote,
+.site-typography .home-page .founders-note blockquote,
+.site-typography .home-page .founders-note .founder-quote {
+  font-family: var(--display);
+  font-weight: 340;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--landing-ink-muted);
+}
+
+.site-typography #restaurants-section .group .metadata {
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+}
+
+.site-typography #restaurants-section .group .tag {
+  font-family: var(--mono);
+  font-size: var(--fs-nano);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-typography #restaurants-section .group .rating-num {
+  font-family: var(--display);
+  font-weight: 380;
+  font-variant-numeric: tabular-nums;
+}
+
+/* —— Homepage spotlight (dark band) —— */
+
+.site-typography #restaurants-section .border-l-4 h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.05;
+  font-weight: 420;
+}
+
+.site-typography #restaurants-section .type-tail {
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+}
+
+/* —— Listing cards (directory + home) —— */
+.site-typography a.rounded-lg.bg-brand-mutedRed,
+.site-typography button.rounded-lg.bg-brand-mutedRed,
+.site-typography #restaurants-section .rounded-lg.bg-brand-mutedRed {
+  font-family: var(--mono);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* —— City / stat numerals —— */
+.site-typography [data-slot="card-description"],
+.site-typography .stat-num,
+.site-typography h4.stat-num {
+  font-family: var(--display);
+  font-weight: 360;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.site-typography h4.stat-num {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 380;
+  letter-spacing: -0.02em;
+}
+
+/* —— Partner strip (home) —— */
+.site-typography .partner-strip h3 {
+  font-size: var(--fs-h3);
+  color: var(--landing-ink);
+}
+
+/* —— Header chrome —— */
+body:has(.site-typography) header a {
+  font-family: var(--sans);
+  font-size: var(--fs-small);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+body:has(.site-typography) header input[type="search"] {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  text-transform: none;
+}
+
+body:has(.site-typography) header input[type="search"]::placeholder {
+  font-family: var(--sans);
+  font-size: var(--fs-small);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+body:has(.site-typography) header form button[type="button"] {
+  font-family: var(--sans);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+body:has(.site-typography) header [data-slot="button"] {
+  font-family: var(--mono);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+body:has(.site-typography) [data-slot="dialog-content"] [data-slot="dialog-title"] {
+  font-family: var(--display);
+  font-size: var(--fs-h3);
+  font-weight: 480;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+body:has(.site-typography) [data-slot="dialog-content"] a,
+body:has(.site-typography) [data-slot="dialog-content"] button {
+  font-family: var(--sans);
+  font-size: var(--fs-small);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+body:has(.site-typography) [data-slot="dialog-content"] p.text-xs.font-medium.uppercase {
+  font-family: var(--mono);
+  font-size: var(--fs-nano);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* —— Footer chrome (families/tracking only — Tailwind text-sm/text-xs set size) —— */
+body:has(.site-typography) footer .md\:col-span-4 > p.text-sm {
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+body:has(.site-typography) footer .md\:col-span-4 > p.text-xs {
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+body:has(.site-typography) footer .md\:col-span-4 a.font-semibold {
+  font-family: var(--sans);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+body:has(.site-typography) footer .grid.gap-8 .text-xs.font-semibold.uppercase,
+body:has(.site-typography) footer .grid.gap-8 .text-xs.font-semibold.uppercase.tracking-wide {
+  font-family: var(--mono);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+body:has(.site-typography) footer .grid.gap-8 a {
+  font-family: var(--sans);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+body:has(.site-typography) footer .grid.gap-8 p.text-xs {
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+body:has(.site-typography) footer .mt-10.flex.flex-col.gap-3.border-t,
+body:has(.site-typography) footer .mt-10.flex.flex-col.gap-3.border-t .text-xs,
+body:has(.site-typography) footer .mt-10.flex.flex-col.gap-3.border-t a {
+  font-family: var(--mono);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+body:has(.site-typography) #footer-newsletter form > .text-sm.font-medium {
+  font-family: var(--mono);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+body:has(.site-typography) #footer-newsletter form > .text-sm.text-muted-foreground {
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+body:has(.site-typography) #footer-newsletter form > .text-xs.text-muted-foreground {
+  font-family: var(--mono);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.45;
+  text-transform: none;
+}
+
+body:has(.site-typography) #footer-newsletter label,
+body:has(.site-typography) #footer-newsletter [data-slot="label"] {
+  font-family: var(--mono);
+  font-size: unset;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+body:has(.site-typography) #footer-newsletter input {
+  font-family: var(--sans);
+  font-size: unset;
+  font-weight: 400;
+  text-transform: none;
+}
+
+body:has(.site-typography) #footer-newsletter input::placeholder {
+  font-family: var(--sans);
+  font-size: unset;
+  font-weight: 400;
+}
+
+body:has(.site-typography) #footer-newsletter [data-slot="button"] {
+  font-family: var(--mono);
+  font-size: unset;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-shadow: none;
+}

@@ -5,6 +5,7 @@ import Image from "next/image";
 import {
   isAfriTableBrandImage,
   isPlausibleRestaurantImageUrl,
+  isStaleGoogleVenuePhoto,
   RESTAURANT_BRAND_PLACEHOLDER,
 } from "@/lib/restaurant-image";
 
@@ -43,15 +44,17 @@ function agentLog(payload: Record<string, unknown>) {
 
 function buildCandidateList(src: string, fallbacks: string[] | undefined): string[] {
   const seen = new Set<string>();
-  const out: string[] = [];
-  for (const raw of [src, ...(fallbacks ?? []), RESTAURANT_BRAND_PLACEHOLDER]) {
+  const remote: string[] = [];
+  const stale: string[] = [];
+  for (const raw of [src, ...(fallbacks ?? [])]) {
     const url = String(raw ?? "").trim();
     if (!url || seen.has(url)) continue;
-    if (!isPlausibleRestaurantImageUrl(url) && !isAfriTableBrandImage(url)) continue;
+    if (!isPlausibleRestaurantImageUrl(url)) continue;
     seen.add(url);
-    out.push(url);
+    if (isStaleGoogleVenuePhoto(url)) stale.push(url);
+    else remote.push(url);
   }
-  return out;
+  return [...remote, ...stale, RESTAURANT_BRAND_PLACEHOLDER];
 }
 
 /** Cover image for cards/galleries; local brand SVGs use unoptimized to avoid Next optimizer errors. */
@@ -91,7 +94,7 @@ export function RestaurantCoverImage({
   React.useEffect(() => {
     if (!brand || index === 0) return;
     agentLog({
-      runId: "post-fix-3",
+      runId: "post-fix-4",
       hypothesisId: "H4",
       location: "RestaurantCoverImage.tsx:fallback-brand",
       message: "showing brand placeholder after remote failures",

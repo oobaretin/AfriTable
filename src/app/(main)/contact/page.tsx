@@ -21,7 +21,7 @@ export default function ContactPage() {
 
       <section className="bg-slate-50 px-6 py-16">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="mb-6 text-5xl font-black tracking-tight text-slate-900 md:text-6xl">Get in Touch</h1>
+          <h1 className="mb-6">Get in touch</h1>
           <p className="mx-auto max-w-2xl text-xl leading-relaxed text-slate-600">
             Use the inboxes below for direct email. For our story, mission, and team, visit{" "}
             <a href="/about" className="font-semibold text-brand-bronze underline-offset-4 hover:underline">

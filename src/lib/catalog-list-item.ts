@@ -1,5 +1,8 @@
 import type { JSONRestaurant } from "@/lib/restaurant-json-loader";
-import { rankRestaurantImages } from "@/lib/restaurant-image";
+import {
+  hasWorkableCoverImage,
+  rankRestaurantImages,
+} from "@/lib/restaurant-image";
 import {
   evaluateCatalogTrust,
   isWeakAbout,
@@ -70,7 +73,7 @@ export function toCatalogListItem(restaurant: JSONRestaurant): CatalogListItem {
     lng: restaurant.lng,
     phone: restaurant.phone,
     website: restaurant.website,
-    // Full ranked gallery for cards (same order as detail; enables onError fallbacks)
+    // Ranked gallery + geo Street View when venue hotlinks are stale
     images: ranked.length
       ? ranked
       : restaurant.images?.length
@@ -131,8 +134,11 @@ export function pickHomepageSpotlight(restaurants: JSONRestaurant[], limit = 6):
   const usedStates = new Set<string>();
   const usedIds = new Set<string>();
 
+  const pickable = (r: JSONRestaurant) => hasWorkableCoverImage(r.images);
+
   for (const { r } of sorted) {
     if (out.length >= limit) break;
+    if (!pickable(r)) continue;
     const st = extractStateFromAddress(r.address);
     if (st && !usedStates.has(st)) {
       usedStates.add(st);
@@ -143,10 +149,32 @@ export function pickHomepageSpotlight(restaurants: JSONRestaurant[], limit = 6):
 
   for (const { r } of sorted) {
     if (out.length >= limit) break;
-    if (usedIds.has(r.id)) continue;
+    if (usedIds.has(r.id) || !pickable(r)) continue;
     out.push(r);
     usedIds.add(r.id);
   }
+
+  // #region agent log
+  if (typeof fetch !== "undefined") {
+    fetch("http://127.0.0.1:7334/ingest/db39d61a-a551-4eae-93f4-8f741a47f367", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "c696a7" },
+      body: JSON.stringify({
+        sessionId: "c696a7",
+        runId: "post-fix-5",
+        hypothesisId: "H5",
+        location: "catalog-list-item.ts:pickHomepageSpotlight",
+        message: "homepage spotlight picked",
+        data: {
+          count: out.length,
+          ids: out.map((r) => r.id),
+          skippedNoCover: sorted.filter(({ r }) => !pickable(r)).map(({ r }) => r.id).slice(0, 12),
+        },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
+  }
+  // #endregion
 
   return out.slice(0, limit).map(toCatalogListItem);
 }

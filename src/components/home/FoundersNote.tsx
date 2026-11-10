@@ -39,7 +39,7 @@ export function FoundersNote() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 max-w-sm animate-in slide-in-from-right-10 duration-500">
+    <div className="founders-note fixed bottom-6 right-6 z-50 max-w-sm animate-in slide-in-from-right-10 duration-500">
       <div className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-2xl border border-slate-100">
         {/* Top Decorative Bar using your logo colors */}
         <div className="absolute top-0 left-0 right-0 h-1.5 flex">
@@ -62,20 +62,22 @@ export function FoundersNote() {
             <span className="text-xl">✍🏾</span>
           </div>
           <div>
-            <h4 className="text-sm font-black text-slate-900 uppercase tracking-tighter">A Note from the Founder</h4>
-            <p className="text-xs text-brand-bronze font-bold">Welcome to the Table</p>
+            <h3>A note from the founder</h3>
+            <p className="eyebrow">Welcome to the table</p>
           </div>
         </div>
 
-        <p className="text-sm text-slate-600 leading-relaxed mb-4 italic">
-          &quot;I built AfriTable because our food is a language of love, yet it was often the hardest to find and book. This platform is my way of ensuring our heritage always has a seat at the center of the global culinary map.&quot;
-        </p>
+        <blockquote className="founder-quote mb-4">
+          I built AfriTable because our food is a language of love, yet it was often the hardest to find and book. This
+          platform is my way of ensuring our heritage always has a seat at the center of the global culinary map.
+        </blockquote>
 
-        <button 
+        <button
+          type="button"
           onClick={handleDismiss}
-          className="w-full btn-bronze py-2 rounded-lg text-xs font-bold text-white uppercase tracking-widest shadow-md shadow-brand-bronze/20"
+          className="btn btn-bronze w-full py-2 rounded-lg text-white shadow-md shadow-brand-bronze/20"
         >
-          Let&apos;s Explore
+          Let&apos;s explore
         </button>
       </div>
     </div>

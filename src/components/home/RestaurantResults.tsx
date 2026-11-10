@@ -40,10 +40,10 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
       <section className="pt-24 pb-0 bg-[#000814] px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center py-20">
-            <h2 className="text-2xl md:text-3xl font-serif text-[#C69C2B] font-normal mb-4">
-              {isSearchMode ? "No Spots Found" : "Coming Soon to Your Area"}
+            <h2 className="text-[#C69C2B] mb-4">
+              {isSearchMode ? "No spots found" : "Coming soon to your area"}
             </h2>
-            <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="lede mx-auto text-center">
               {isSearchMode
                 ? "Expanding our reach soon! No spots found within this distance."
                 : "We're working on expanding our network of authentic African and Caribbean restaurants. Join our waitlist to be notified when we add restaurants near you."}
@@ -59,23 +59,17 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
       <div className="max-w-7xl mx-auto">
         {isSearchMode ? (
           <div className="mb-8">
-            <h2 className="text-2xl md:text-3xl font-serif text-[#C69C2B] font-normal mb-2">
-              Restaurants Near You
-            </h2>
-            <p className="text-sm text-white/60">
+            <h2 className="text-[#C69C2B] mb-2">Restaurants near you</h2>
+            <p className="metadata text-white/60">
               {displayedRestaurants.length}{" "}
               {displayedRestaurants.length === 1 ? "restaurant" : "restaurants"} found
             </p>
           </div>
         ) : (
           <div className="mb-16 border-l-4 border-[#A33B32] pl-8">
-            <h2 className="text-[10px] font-black text-[#C69C2B] uppercase tracking-[0.5em] mb-2">
-              Nationwide spotlight
-            </h2>
-            <h3 className="text-4xl font-black text-white uppercase tracking-tighter italic">
-              Across the country
-            </h3>
-            <p className="mt-3 max-w-2xl text-sm text-white/60 md:text-base">
+            <p className="eyebrow mb-2">Nationwide spotlight</p>
+            <h2 className="text-white">Across the country</h2>
+            <p className="lede mt-3">
               A rotating slice of highly rated spots from different states—explore every city on AfriTable.
             </p>
           </div>
@@ -120,11 +114,13 @@ export function RestaurantResults({ restaurants }: RestaurantResultsProps) {
           <div className="mt-16 flex justify-center">
             <Link
               href="/restaurants"
-              className="group relative bg-transparent hover:bg-[#C69C2B]/10 border border-[#C69C2B] text-[#C69C2B] text-[10px] font-black px-8 py-4 rounded-full uppercase tracking-widest transition-all duration-500 flex items-center gap-3 hover:shadow-[0_0_15px_rgba(198,156,43,0.4)] cursor-pointer inline-block"
+              className="btn group relative bg-transparent hover:bg-[#C69C2B]/10 border border-[#C69C2B] text-[#C69C2B] px-8 py-4 rounded-full transition-all duration-500 flex items-center gap-3 hover:shadow-[0_0_15px_rgba(198,156,43,0.4)] cursor-pointer inline-block"
               prefetch={false}
             >
-              <span>See All Destinations</span>
-              <span className="text-lg transition-transform duration-500 group-hover:translate-x-1">→</span>
+              <span>See all destinations</span>
+              <span className="transition-transform duration-500 group-hover:translate-x-1" aria-hidden>
+                →
+              </span>
             </Link>
           </div>
         )}

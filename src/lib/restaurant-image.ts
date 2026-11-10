@@ -30,6 +30,49 @@ export function isStreetViewImage(url: string): boolean {
   return STREET_VIEW_RE.test(url.trim());
 }
 
+/** Stale catalog batch: gps-cs-s/AHRPT hotlinks (403 in browser). */
+export function isStaleGoogleVenuePhoto(url: string): boolean {
+  const s = url.trim();
+  return /googleusercontent\.com\/gps-cs-s\/AHRPT/i.test(s) || /googleusercontent\.com\/grass-cs\//i.test(s);
+}
+
+/** True when the listing has at least one non-stale Google venue, Street View, or site CDN photo. */
+export function hasWorkableCoverImage(images: unknown): boolean {
+  for (const raw of normalizeRestaurantImages(images)) {
+    const url = String(raw ?? "").trim();
+    if (!url || !isPlausibleRestaurantImageUrl(url)) continue;
+    const quality = classifyPhotoUrl(url);
+    if (quality === "street_view") return true;
+    if (quality !== "venue") continue;
+    if (!isGoogleMapsPhoto(url)) return true;
+    if (!isStaleGoogleVenuePhoto(url)) return true;
+  }
+  return false;
+}
+
+/**
+ * Card cover fallbacks: sibling photos; stale Google hotlinks trail working URLs.
+ */
+export function buildCardCoverFallbacks(images: unknown): string[] {
+  const ranked = rankRestaurantImages(images);
+  if (ranked.length <= 1) return [];
+
+  const primary = ranked[0];
+  const tail = ranked.slice(1);
+  const stale = tail.filter((u) => isStaleGoogleVenuePhoto(u));
+  const fresh = tail.filter((u) => !isStaleGoogleVenuePhoto(u));
+  if (!stale.length) return tail;
+
+  const seen = new Set<string>([primary]);
+  const out: string[] = [];
+  for (const u of [...fresh, ...stale]) {
+    if (!u || seen.has(u)) continue;
+    seen.add(u);
+    out.push(u);
+  }
+  return out;
+}
+
 /** Google venue / Street View URLs (hotlinked from Maps). */
 export function isGoogleMapsPhoto(url: string): boolean {
   const s = url.trim();
@@ -123,7 +166,12 @@ export function rankRestaurantImages(images: unknown): string[] {
     scored.push({ url, rank: photoRank(quality) });
   }
 
-  scored.sort((a, b) => a.rank - b.rank);
+  scored.sort((a, b) => {
+    if (a.rank !== b.rank) return a.rank - b.rank;
+    const aStale = isStaleGoogleVenuePhoto(a.url) ? 1 : 0;
+    const bStale = isStaleGoogleVenuePhoto(b.url) ? 1 : 0;
+    return aStale - bStale;
+  });
   return scored.map((s) => s.url);
 }
 

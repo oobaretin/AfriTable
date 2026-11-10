@@ -605,9 +605,7 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
           {/* Restaurant Header */}
           <div className="flex justify-between items-start mb-6">
             <div>
-              <h1 className="text-5xl font-black text-brand-dark tracking-tighter uppercase mb-2">
-                {restaurant.name}
-              </h1>
+              <h1 className="mb-2">{restaurant.name}</h1>
               <div className="flex items-center gap-4 text-sm font-bold text-brand-bronze">
                 <span>{restaurant.cuisine_types?.[0] || "African"}</span>
                 <span className="h-1 w-1 rounded-full bg-slate-300"></span>
@@ -643,7 +641,7 @@ export default async function RestaurantProfilePage({ params }: { params: Promis
           <div className="mb-8 lg:hidden">
             <a
               href="#book"
-              className="block w-full rounded-xl bg-brand-mutedRed py-4 text-center text-sm font-bold uppercase tracking-widest text-white"
+              className="btn block w-full rounded-xl bg-brand-mutedRed py-4 text-center text-white"
             >
               {bookingAction.ctaLabel.replace(" →", "")}
             </a>

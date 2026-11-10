@@ -36,7 +36,7 @@ export function TrendingCitiesClient({ cityGroups }: TrendingCitiesClientProps) 
             >
               <Card className="group h-full transition-all hover:shadow-md">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg">{cityGroup.displayName}</CardTitle>
+                  <CardTitle>{cityGroup.displayName}</CardTitle>
                   <CardDescription>
                     {listingCount} {listingCount === 1 ? "listing" : "listings"}
                     {cuisineCount > 0 ? ` · ${cuisineCount} ${cuisineCount === 1 ? "cuisine" : "cuisines"}` : ""}
@@ -45,19 +45,19 @@ export function TrendingCitiesClient({ cityGroups }: TrendingCitiesClientProps) 
                 <CardContent className="space-y-3">
                   <div className="flex flex-wrap gap-1.5">
                     {cuisines.map((cuisine) => (
-                      <Badge key={cuisine} variant="secondary" className="text-xs">
+                      <Badge key={cuisine} variant="secondary" className="tag">
                         {cuisine}
                       </Badge>
                     ))}
                     {extraCuisines > 0 ? (
-                      <Badge variant="secondary" className="text-xs">
+                      <Badge variant="secondary" className="tag">
                         +{extraCuisines} cuisines
                       </Badge>
                     ) : null}
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <span>Price range:</span>
-                    <span className="font-medium">{priceRanges.join(", ")}</span>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <span className="type-label">Price range</span>
+                    <span>{priceRanges.join(", ")}</span>
                   </div>
                 </CardContent>
               </Card>

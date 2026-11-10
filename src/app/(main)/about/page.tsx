@@ -19,8 +19,8 @@ export default function AboutPage() {
     <div className="bg-white">
       <section className="bg-slate-50 px-6 py-20">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="mb-6 text-5xl font-black tracking-tight text-slate-900 md:text-6xl">
-            Our mission is to put <span className="text-orange-600">Culture</span> back at the center of the table.
+          <h1 className="mb-6">
+            Our mission is to put <em>culture</em> back at the center of the table.
           </h1>
           <p className="text-xl leading-relaxed text-slate-600">
             AfriTable was born from a simple observation: African and Caribbean culinary excellence is world-class,
@@ -43,7 +43,7 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="mb-6 text-3xl font-bold text-slate-900">More Than Just a Reservation</h2>
+            <h2 className="mb-6">More than just a reservation</h2>
             <p className="mb-6 text-lg leading-relaxed text-slate-600">
               We started AfriTable because we were tired of &quot;hidden gems&quot; remaining hidden. We saw brilliant
               chefs, vibrant flavors, and generations of tradition being overlooked by mainstream booking apps.
@@ -56,12 +56,12 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-2 gap-6 border-t border-slate-100 pt-8">
               <div>
-                <h4 className="text-3xl font-black text-orange-600">{metroCount}+</h4>
-                <p className="text-sm font-bold uppercase text-slate-500">Metros in our directory</p>
+                <h4 className="stat-num text-brand-ochre">{metroCount}+</h4>
+                <p className="type-tail text-slate-500">Metros in our directory</p>
               </div>
               <div>
-                <h4 className="text-3xl font-black text-orange-600">{restaurantCount}+</h4>
-                <p className="text-sm font-bold uppercase text-slate-500">Vetted listings</p>
+                <h4 className="stat-num text-brand-ochre">{restaurantCount}+</h4>
+                <p className="type-tail text-slate-500">Vetted listings</p>
               </div>
             </div>
             <p className="mt-4 text-xs text-slate-400">Counts reflect our live catalog and grow as we onboard partners.</p>
@@ -72,14 +72,14 @@ export default function AboutPage() {
       <section className="mx-4 mb-20 rounded-[40px] bg-slate-900 px-6 py-24 text-white">
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-black">Our Values</h2>
+            <h2 className="mb-4 text-white">Our values</h2>
             <div className="mx-auto h-1 w-20 bg-orange-600" />
           </div>
 
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
               <div className="mb-4 text-4xl">🥘</div>
-              <h3 className="mb-3 text-xl font-bold">Authenticity First</h3>
+              <h3 className="mb-3 text-white">Authenticity first</h3>
               <p className="text-sm leading-relaxed text-slate-400">
                 We don&apos;t do &quot;fusion&quot; for the sake of trends. we celebrate the raw, real, and ancestral
                 flavors that define our regions.
@@ -88,7 +88,7 @@ export default function AboutPage() {
 
             <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
               <div className="mb-4 text-4xl">🤝</div>
-              <h3 className="mb-3 text-xl font-bold">Community Growth</h3>
+              <h3 className="mb-3 text-white">Community growth</h3>
               <p className="text-sm leading-relaxed text-slate-400">
                 When a restaurant joins AfriTable, they aren&apos;t just a client—they are a partner. We invest in
                 their digital growth.
@@ -97,7 +97,7 @@ export default function AboutPage() {
 
             <div className="rounded-2xl border border-white/10 bg-white/5 p-8">
               <div className="mb-4 text-4xl">🌍</div>
-              <h3 className="mb-3 text-xl font-bold">Cultural Pride</h3>
+              <h3 className="mb-3 text-white">Cultural pride</h3>
               <p className="text-sm leading-relaxed text-slate-400">
                 Every reservation is an act of supporting the diaspora economy and preserving culinary heritage.
               </p>
